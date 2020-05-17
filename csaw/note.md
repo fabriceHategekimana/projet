@@ -151,7 +151,10 @@ Project map
 This section is a sumary about the "physical" structur of the project. We cover here the files, their extentions and there behaviour.
 
 ## A 3 layers project
-This project can be subdivided in 3 layers with their own specifications.
+This project can be subdivided in 3 layers with their own specifications. 
+1. Login
+2. Dashboard
+3. App
 
-
+Each of them has a manager equivalent. 
 	
