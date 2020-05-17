@@ -1,6 +1,0 @@
-
-if [ "$1" == "-u" ]; then #pour effacer tout les fichier de actuel
-	. ~/.bashrc
-else
-	vim ~/.bashrc
-fi
