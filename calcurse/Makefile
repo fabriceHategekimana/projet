@@ -5,8 +5,8 @@ start:
 	clear
 
 savelaptop:
-	cp -r calcurse/todo caclurse/apts calcurse/notes data
+	cd ~/projet/calcurse && cp -r calcurse/todo caclurse/apts calcurse/notes data
 
 savemobile:
-	cp -r data/todo data/apts data/notes cacurse
+	cp -r ~/storage/downloads/projet/calcurse/data/todo ~/storage/downloads/projet/calcurse/data/apts ~/storage/downloads/projet/calcurse/data/notes ~/storage/downloads/projet/calcurse/calcurse
 
