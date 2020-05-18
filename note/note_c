@@ -1,0 +1,19 @@
+
+
+
+PRISE DE NOTE C
+
+-argc: contient le nombre d'éléments en paramètre (il contient toujours au moins un élément
+
+-argv: contient un tableau des valeur passé en paramètre (argv[0] est le premier paramètre et contient le nom de la fonction.
+
+
+-aitoi(str): convertit un string en entier
+
+POUR UTILISER UN FICHIER C EN PLUS AVEC UN FICHIER H
+il faut que le header et le fichier c en question aient le même nom (pas la même extention quand même). Il faut juste écrire les entêtes dans h, mais c'est le fichier c qui les implémente. apprès, il faut inclure le fichier c avec le fichier c principal:
+gcc main.c head.c -o main 
+par exemple
+
+Pour faire l'exercice, il faut installer 
+openssl libssl-doc

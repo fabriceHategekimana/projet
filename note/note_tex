@@ -1,0 +1,160 @@
+
+
+
+Commandes utiles pour latex
+TRANSFORMER UN .TEX EN .PDF
+pdflatex [nom].tex 
+\\
+ Créer une commande personnalisée
+\newcommand{\name}[num]{definition}
+
+COMMANDES
+\<la commande>
+
+ENVIRONNEMENT
+\begin{option}
+\end{option}
+
+importation de package
+\usepackage[]{}
+
+UTILISATION DE PARAGRAPHE
+\par
+
+EFFET DE TEXT
+\textit{en italique}
+\textbf{en gras}
+\textrm{en roman}
+\textsc{en small caps}
+
+MODIFIER LA TAILLE DU TEXT
+\Huge voici le texte le plus grand
+\huge voici du texte vraiment grand
+\LARGE voici du texte bien grand
+\large voici du texte plus grand
+\normalsize voici du texte normal
+\small voici du texte petit
+\footnotesize voici tu texte encore plus petit
+\scriptsize voici du texte vraiment petit
+\tiny Texte le plus petit
+
+ENUMERATION
+\begin{itemize ou enumerate}
+	\item ligne a
+	\item ligne b
+	\item ligne c
+\end{itemize}
+il est à noté que un environnement peut être imbriqué dans un autre (on peut aller jusqu'à trois imbriquation)
+
+ORGANISATION DU TEXTE
+\section{}
+\subsection{}
+\subsubsection{}
+\paragraph{}
+\subparagraph{}
+
+pour aller plus loins avec documentclass{book}
+\chapter{}
+ça marche aussi en utilisant des environnements
+
+EQUATIONS MATHÉMATIQUES
+$mon equation$
+$$mon equation$$
+\(mon equation\)
+\[mon equation\]
+\begin{equation} \end{equation} permet de numéroté les équations
+
+pour que les parentèses se mettent automatiquement à la bonne taille, il faut utiliser \left( et \right)
+
+INSÉRER UNE IMAGE
+\includegraphics{image}
+\includegraphics[scale=0.5]{image}
+
+METTRE DES COMMENTAIRE
+% Il suffit d'utiliser le poucentage
+
+FAIRE UN SAUT DE PAGE
+\clearpage
+
+FAIRE UN TABLEAU
+\begin{center}
+   \begin{tabular}{ l | c || r | }
+     \hline
+     1 & 2 & 3 \\ \hline
+     4 & 5 & 6 \\ \hline
+     7 & 8 & 9 \\
+     \hline
+   \end{tabular}
+ \end{center}
+AUGMENTER LA LARGEUR DE COLONNE
+p{5cm} à la place de c (par exemple)
+AUGMENTER LA HAUTEUR DE LIGNE
+\renewcommand{\arraystretch}{2}
+
+FAIRE UNE MATRICE
+	\begin{pmatrix}
+		   a\_1 & b\_1 \\
+		   a\_2 & b\_2 
+	\end{pmatrix}
+
+SYMBOLES SPÉCIAUX
+~	\sim
+
+SYSTÈME À DEUX ÉQUATIONS
+\[ f(n) =
+  \begin{cases}
+    n/2       & \quad \text{if } n \text{ is even}\\
+    -(n+1)/2  & \quad \text{if } n \text{ is odd}
+  \end{cases}
+\]
+
+SAUT DE PAGE
+\newpage
+
+LES FLÈCHES
+\leftrightarrow
+
+Tourner une image:
+avec le paquet rotating
+\begin{sidewaysfigure}
+\end{sidewaysfigure}
+ou
+\begin{turn}{degre}
+\end{turn}
+
+
+
+TKIZ
+exemple
+\begin{tikzpicture}[node distance=2cm]
+	\shorthandoff{ :;!?}
+	\node (voila) [boite] {Hello world};
+\end{tikzpicture}
+
+à rajouter avant chaque séquence pour gérer la bibliothèque babel\\
+\shorthandoff{ :;!?};}
+points isolés
+\draw (0,0) -- (0,1) -- (1,1)\\
+
+points relatif (au précédent point)
+(0,0) -- ++ (0,1) -- ++ (1,0)\\
+
+dessiner un cercle (se définit par son centre et son rayon)\\
+\draw (0, 0) circle (radius cm) 
+
+couleur\\
+\draw[red] (0,0) -- (1,0)
+
+flèche
+\draw[blue,->] (0,0) -- (1,0)
+
+ligne ou forme rempli\\
+\draw \fill
+
+définir une forme de base
+\tkizstyle{boite}[rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+
+utiliser la forme créer précédemment en invoquant sont nom
+\node (nouveauNom) [boite] {contenu}
+\node (autreNouveauNom) [boite, xshift= -1 cm, yshift= -3 cm] {contenu}
+  

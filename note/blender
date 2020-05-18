@@ -1,0 +1,22 @@
+i
+
+
+COMMANDES ET RACCOURCIS POUR BLENDER
+
+[g] pour faire une translation
+[r] pour faire une rotation
+[s] pour faire un redimentionnement
+
+Avec les touches citées plus haut, on peut appuyer sur les boutons [x], [y] et [z] pour agire selon les axes x, y et z.
+
+[tab] pour passer en edit mode.
+
+[ctrl] + [flèche haut] ou [flèche bas] Pour switcher entre la vue plein écran et la vue normale
+
+Pour mettre une forme 2D en révolution 3D il suffit de:
+1)sélectionner tout les points en edit mode
+2)appuiyer sur le bouton spin qui se trouve dans le menu tool
+
+[ctrl]+[j] pour joindre des 
+[maj]+[s] pour placer le curseur au centre de l'univers blender
+

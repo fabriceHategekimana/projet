@@ -1,0 +1,17 @@
+COMMANDES PRATIQUES POUR TMUX
+
+commande de base: ctrl+b pour faire toutes les prochaines instructions avec
+
+PAGES
+c	crée une nouvelle page
+n	va à la page suivante
+
+Panes
+"	coupe la page en deux horizontalement
+%	coupe la page en deux verticalement
+
+changer de pane par numéro:
+q + numéro
+
+mettre un petit écran en plein écran ou le remettre à sa place
+z

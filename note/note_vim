@@ -1,0 +1,71 @@
+
+
+Commandes vim à apprendre:
+
+GESTION DE FENÊTRES
+[:split] divise la fenêtre
+[ctrl-w] passe à la fenêtre suivante
+[:vsplit] divise de façon verticale
+[ctrl-w <h/j/k/l>] change de fenêtre active (navigation)
+[ctrl-w <H/J/K/L>] échange les fenêtres
+[ctrl-w (deux fois)] passe à la fenêtre suivante
+[:wall] enregistre toutes les fenêtres
+[:qall] quite toutes les fenêtres
+[:<n>split] ouvre une nouvelle fenêtre avec n lignes pour taille
+[ctr-w <+/-> augmente ou diminue la taille de la fenêtre en ligne
+[vim -o <fichiers>] ouvre une fenêtre pour chaque fichier horizontalement
+[vim -O <fichiers>] ouvre une fenêtre pour chaque fichier verticalement
+[vim -p <fichiers>] ouvre une tab pour chaque fichier 
+[:e] remplace le fichier de la fenêtre active le fichier qu'on 
+
+SAUVEGARDE DU PLAN DE TRAVAIL ET UTILISATION D'AUTRES LOGICIELS POUR TERMINAL
+[ctrl-Z] ou :suspend suspend l'activité et revient sur le terminal
+[fg (depuis le terminal)] revient sur le plan en cours]
+:mksession [nom].vim sauvegarde l'édition en cours dans un fichier (nombre de fenêtre, texte en cours, variables, etc.)
+:mks! crée automatiquement une session pour vim nommée Session.vim
+:source [nom].vim ou vim -S [nom].vim restore la session [nom].vim pour reprendre le travail où on s'est arrêté
+on peut faire pareil que les session mais avec des vues (view => fenêtres) :mkview et :loadview 
+[ZZ] enregistre et quite directement sans poser de question
+
+ÉDITION DE TEXTE
+[D] ou [d$] Effacer depuis le curseur, jusqu'à la fin de la ligne
+[y$] Copier depuis le curseur jusqu'à la fin de la ligne
+[c] change ou remplace les éléments sélectionné
+[cw] remplace le mot par une entrée qu'on fait
+[>] et [<] pour l'indentation
+[ci) ou ] ou }] fait le changement entre ces éléments spéciaux
+[cit] fait le changement entre deux balise (HTML)
+
+LIGNES
+[:set number] permet d'afficher les numéros de ligne
+[ctrl-g] permet de connaître le nom du fichier édité ainsi que notre position
+
+
+MOUVEMENTS:
+[%] cherche la parenthèse correspondante
+[] permet de revenir vers la position initiale avant de faire un [G] ou un [gg]
+:m[a-z] permet de mettre un marqueur dans la vue actuelle de la page
+:'[a-z] permet de se déplacer sur le marqueur indiqué
+[num G] permet d'aller à la ligne numéro num
+
+RECHERCHE
+/<élément recherché> permet de chercher dans le texte l'élément souhaité
+n N permet d'alléer respectivement en avant et en arrière dans le texte
+:%s/foo/bar/gc remplace toute les occurences de foo pour les remplacer par bar mais demande la permission avant (retirer c si on veut sans demander)
+
+AUTO COMPLETION
+On doit être en INSERT MODE
+[ctrl-p] peut compléter un mots avec une liste des mots qui l'ont précédé
+[ctrl-x] entre dans le menu d'auto completion
+[ctrl-l] complète une ligne dans le menu d'auto completion
+
+CHANGEMENT DE CASSE DES CARACTÈRES
+[gU] uppercase la sélection
+[gu] lowercase la sélection
+
+ANNULATION
+[u] annule la dernière action
+[ctrl-r] fait le contraire de l'annulation
+
+COMMANDE VIMRC
+map <buffer> commande action

@@ -1,0 +1,56 @@
+##Voila un nouveau projet
+#Voila un nouveau projet
+Je test si les spécifications markdown sont reconnus sur vim  
+Comme par exemple _l'italic_  
+Ou **Le gras** qui semblent super bien fonctionner.  
+Avec ça, je risque d'avoir une meilleur documentation!   
+[voici un lien](www.github.com)
+![voici une image](theorie_de_l_information.png)
+
+>Voila un texte qui attire l'attention.  
+
+Faire une liste:  
+Non numérotée  
+* element 1  
+ * element 1.1  
+  * element1.1.1  
+* element 2  
+* element 3  
+* element 4  
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+
+Numérotée  
+1. element 1  
+2. element 2  
+3. element 3  
+4. element 4  
+
+ligne horizontale
+* * *
+
+Mettre la coloration synthaxique selon le langage indiqué
+```python
+
+```
+
+tables: 
+
+  Right     Left     Center     Default
+-------     ------ ----------   -------
+     12     12        12            12
+    123     123       123          123
+      1     1          1             1
+
+barrer du text
+~~ce text est barré~~
+  
+utilisation de tkzpicture
+\newcommand{\boite}[3]{\node (#1) [boite, xshift= #2, yshift= #3] {#1}}
+\newcommand{\fleche}[2]{\draw[->] (#1) -- (#2);}
+
+\begin{tikzpicture}
+	\rectangle{nom}{x}{y}
+\end{tikzpicture}

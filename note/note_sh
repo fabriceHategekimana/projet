@@ -1,0 +1,42 @@
+DÉFINIR LE CHABANG
+#!/bin/bash
+#paramètres
+$@ #tout les paramètres depuis $1 jusqu'au bout
+#décalage de n paramètres
+shift n
+
+#FONCTION
+hello_world () {
+   echo 'hello, world'
+}
+#valeur de retour
+$?
+
+# Define the menu list here
+select brand in Samsung Sony iphone symphony Walton
+do
+echo "You have chosen $brand"
+done
+
+#Test l'existance d'un fichier
+if [ -f *.vim ]; then
+
+#Permet de faire une sélection
+select projet in *
+do
+	rm -r $projet
+	echo "$projet removed"
+	break;
+done
+
+#Boucler à partir du deuxième argument
+for i in ${@:2};
+
+#saute sur le premier élément de la liste
+for i in $(ls |head -n 1);
+
+#selection
+select project in $projectFolder/*
+do
+	name= $project
+done

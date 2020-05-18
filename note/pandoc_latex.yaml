@@ -1,0 +1,23 @@
+---
+header-includes: 
+        - \usepackage[utf8]{inputenc}
+        - \usepackage[french]{babel}  
+        - \usepackage{graphicx}
+        - \usepackage{rotating}
+        - \usepackage{tikz}
+        - \usetikzlibrary{ shapes.geometric, arrows}
+        - \usepackage[legalpaper, portrait, margin=1in]{geometry}
+        - \graphicspath{{./images/}}
+
+        - \newcommand{\defboite}{\tikzstyle{boite}= [rectangle, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=white]}
+        - \newcommand{\deffleche}{\tikzstyle{fleche} = [thick,->,>=stealth]}
+        - \newcommand{\defligne}{\tikzstyle{ligne} = [thick,-,>=stealth]}
+          
+        - \defboite  
+        - \deffleche
+        - \defligne  
+        title: okay
+        subtitle: -
+        author: Fabrice Hategekimana
+        date: 09 mai 2020
+---

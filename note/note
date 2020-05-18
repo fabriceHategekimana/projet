@@ -1,0 +1,147 @@
+
+FFMPEG (CONVERTIR EN MP4)
+ffmpeg -i video.dvi final.mp4 -hide_banner
+
+FFMPEG (CONVERTIR EN MP4 WHATSAPP)
+ffmpeg -i vidoe.mp4 -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p Final.mp4
+
+FFMPEG (CONVERTIR EN MP4)
+ffmpeg -i audio.wav -acodec libmp3lame final.mp3 
+
+INSTALLER UN DEB FILE
+sudo dpkg -i -R machin.deb 
+sudo apt-get -f install
+
+DEPAQUETER UN .TAR.GZ
+tar -xzf [paquet].tar.gz
+
+DEPAQUETER UN .TAR.XZ
+tar -xf [paquet].tar.xz
+
+KILL UN PROCESSUS
+pkill -x [processus]
+
+MONTER UNE CLÉ USB DANS LE TERMINAL (SI LA CLÉ S'APPEL SDB1 PAR EXEMPLE)
+lsblk //pour afficher tout les périphériques présent, voir si elle a été repérée et si elle dispose d'un emplacement
+sudo mkdir /media/[nom choisit //Créer un répertoir pour la clée usb
+sudo mount -t vfat /dev/sdb1 /media/[nom choisit]
+
+SITE POUR LES API
+programmableweb.com/apis
+
+POUR VISUALISER DES PDFS SUR LE TERMINAL
+pdftotext [nom].pdf - | less ou pdftohtml -stdout -i [nom].pdf  | lynx -stdin
+
+SUPPRIMER UN UTILISATEUR
+sudo deluser nom
+
+METTRE EN VEILLE L'ÉCRAN
+systemctl suspend
+
+CHANGE LE THÈME (GTK) DE SA DISTRIBUTION
+www.noobslab.com
+www.gnome-looks.org
+
+CRÉER DES RACCOURCI POUR DES EMPLACEMENTS À L'AIDE DE VARIABLES D'ENVIRONNEMENT
+//si on est sûr d'ecrire le chemin juste passer à l'etape 2 sinon
+1)Aller dans le répertoire souhaité
+2)Créer la variable qui porte le chemin: export VAR=$(pwd)
+3)Aller dans home
+4)Enregistrer la variable de façon permanante avec: echo "VAR=$VAR" >> .pam_environment
+5)Se deconnecter et se reconnecter
+
+ENREGISTRER UNE COMMANDE PARTICULIÈRE GRÂCE AUX ALIAS
+1)Ouvrir le fichier ~/.bashrc
+2)Aller tout en bas et écrire: alias nouveauNom='commande souhaitée'
+3)fermer et executer . ~/.bashrc
+
+LANCER UN LOGICIEL AU DÉMARRAGE
+Il suffit d'appeler le lanceur et de chercher "applications au démarrage"
+
+SITE D'INFORMATION INFORMATIQUE
+taper la commande geeksforgeek
+
+CONNAÎTRE L'EMPLACEMENT D'UN LOGICIEL
+which [logiciel]
+
+SUPPRIMER DES LIGNES DANS UN DOCUMENT
+sed '$d' file	supprime la dernière ligne d'un fichier
+sed 'nd' file	supprime la nième ligne d'un fichier
+sed '1d' file	supprime la première ligne d'un fichier
+
+SUPPRIMER UN LOGICIEL
+sudo apt-get purge [le logiciel à désinstaller]
+
+AVOIR UNE APP WHATSAPP
+consulter ce lien: https://www.thefanclub.co.za/how-to/whatsapp-webapp-ubuntu
+
+GESTION DES JOBS
+jobs	affiche tout les jobs en cours
+[ctrl-z] met le job actuel en suspend
+%n	pour se référer au n-ième job
+%+	pour se référer au dernier job
+%-	pour se référer au job precédent le dernier job
+fg	pour afficher le dernier job mit en suspend. Équivalent à "commande &"
+bg	pour lancer le dernier job en arrière plan
+fg %n	pour afficher le n-ième job au premier plan
+bg %n	pour lancer le n-ième job en arrière plan
+
+
+
+MAINTENANCE
+Sur le terminal: //supprime les logiciels et le paquets inutilisés
+sudo apt autoclean
+sudo apt-get clean
+sudo apt autoremove
+
+Logiciel:
+gtkorphan[root] //supprime tout les dossier orphelin après la suppression de logiciel.
+
+FAIRE UNE EXÉCUTABLE AVEC PYTHON
+soit faire py-to-exe pour ouvrir une interface graphique
+soit faire pyinstaller -y [fichier.py]
+
+DE PNG/JPG A ICO
+convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico
+
+DE .MD À .TEX
+pandoc -s MANUAL.txt -o example4.tex
+
+CHANGER LE FOND D'ÉCRAN
+feh --bg-scale /path/to/image.file
+
+VOIR LE CODE DES TOUCHES
+xev
+
+RÉFÉRENCE BIBLIOGRAPHIQUE
+zotero
+
+GESTIONNAIRE DE SON
+pavucontrol
+
+DATE D'EXAMEN:
+TP Analyse numérique: 31 mai
+prog sys: 9 juin (à 9h00 sur moodle) 
+ETI: 24-26 juin (sur zoom)
+
+FORMATION DOCUMENTAIRE
+-        Vendredi 15 mai
+
+o   13h30-15h45 : Formation via Zoom
+
+o   15h45-16h45 : Devoirs de votre côté à rendre sur Moodle
+
+-        Vendredi 29 mai
+
+o   14h-15h : Evaluation à rendre sur Moodle
+
+Tâche journalière:
+AN 10 pages
+Prog Sys 15 pages
+Sémantique 1 cours
+Base de données 1 cours
+
+
+Applications à installer
+Rambox
+brave browser
