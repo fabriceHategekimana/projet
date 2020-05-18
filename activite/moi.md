@@ -11,7 +11,7 @@ Travailleur
 Conciliant
 
 ## Mes defauts
-Manque d'imposition
+Manque d'[[imposition]]
 Manque d'honnêteté
 
 ## Au niveau travail

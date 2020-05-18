@@ -11,8 +11,11 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd /data/data/com.termux/files/usr/tmp/calcurse-note.OLGwnO
-edit /data/data/com.termux/files/usr/tmp/calcurse-note.OLGwnO
+$argadd ex3tp10.m
+set stal=2
+tabnew
+tabrewind
+edit ex3tp10.m
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -29,14 +32,40 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 7) / 15)
+let s:l = 102 - ((1 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0129|
-tabnext 1
-badd +0 /data/data/com.termux/files/usr/tmp/calcurse-note.OLGwnO
+102
+normal! 0
+tabnext
+edit matriceGauche.m
+set splitbelow splitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 7 - ((6 * winheight(0) + 7) / 15)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+7
+normal! 027|
+tabnext 2
+set stal=1
+badd +0 ex3tp10.m
+badd +0 matriceGauche.m
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

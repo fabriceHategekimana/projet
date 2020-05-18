@@ -68,3 +68,5 @@ Je suis sidéré de voir autant de personnes avec leur main dans les poche tiran
 Je veux sortir les gens de leur asoupissement et les amener à oeuvrer pour ce qu'il y de meilleur.
 Je suis toujours impressionné par ces "géans" qui ont façonné le monde d'aujourd'hui par l'impacte qu'ils ont eu dans leur génération.
 Je parle des scientifiques, écrivains, révolutionnaires, artistes, etc. Tous on eu un impacte qui dépasse la sphère privée et je nourrit aussi le but d'impacter la vie des gens pour des générations futures.
+
+Dépense ANNUELLES 2700.-
