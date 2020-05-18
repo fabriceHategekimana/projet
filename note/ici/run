@@ -1,0 +1,3 @@
+
+pdflatex ici.tex
+evince ici.pdf

@@ -1,0 +1,5 @@
+Public ip adress
+80.83.45.131
+
+définir la page de départ (index.html ou index.php ou autre.html etc.)
+sudo vim /etc/apache2/mods-enabled/dir.conf

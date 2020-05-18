@@ -1,0 +1,43 @@
+
+
+
+Notes concernant la gestion de Basic
+
+POUR LIBRE OFFICE CALC:
+x.value= //attribut un nombre à la cellule
+x.String= //attribut une chaîne de caractère à la cellule
+x.Formula= //attribut une formule qui sera exécutée à la cellule
+
+x.sheet= //attribut un numéro de feuille à la variable
+x.startColumn= //indique la colonne de départ
+x.EndColumn= //attribut la colonne de fin
+x.StartRow= //attribut la ligne de départ
+x.EndRow= //attribut la ligne de fin
+
+x= StarDesktop.CurrentComponent.sheets.getByName("") //pour trouver la feuille correspondante
+a= x.getCellRangeByName("...,...") //pour récupérer la rangée de cellule
+
+
+RÉCUPÉRER UNE CELLULE
+x= ThisComponent.getsheets.getByName("Feuille1")
+a= x.getCellRangeByName("A5")
+x= StarDesktop.CurrentComponent.Sheets(Num).getCellByPosition(Num, Num)
+
+RÉCUPÉRER LA CELLULE ACTIVE
+x= ThisComponent.getCurrentSelection
+x.CellAdress.Column ou x.CellAddress.Row
+
+DÉCLARATION DE VARIABLES
+String: As String ou $
+Integer: As Integer ou %
+Boolean: As Boolean
+Long: As Long ou &
+float: As single ou !
+double: As Double ou #
+Argent: As Currency ou @
+Date: As Date
+Array: 
+Array(5) //de 0 à 5
+Array(4,5) de 0 à 4 contenant 5 éléments
+Array(5 To 25) de 5 à 25
+

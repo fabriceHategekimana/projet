@@ -1,0 +1,5 @@
+//Format de base
+select from inner join on where
+
+//voir la structure d'une table
+Describe nomTable

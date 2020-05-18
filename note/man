@@ -1,0 +1,15 @@
+
+
+
+
+Comprendre la man page
+Bold		écrire exactement comme s'est écrit
+souligné	remplacer avec les arguments appropriés
+[] 		tout les argument dans les crochets sont optionels
+-a | -b		a et b ne peuvent pas être utilisés ensemble
+argument...	l'argument (s'il est souligné) est répétable
+[expression]	si expression est souligné, il peut être répété
+
+L'ordre des commandes ne change pas
+
+review à 34:38

@@ -1,0 +1,17 @@
+
+
+//Pour cloner un projet dans le répertoire (crée un remote origine)
+git clone nom lien
+
+//pour ajouter un autre remote dans le repertoire
+git add remote nom lien
+
+//pour enregistrer un changement dans le repertoire
+git commit -m "message"
+
+//pour ajouter un fichier à suivre
+git add fichier
+
+//pour voir l'état actuel du projet
+git status
+

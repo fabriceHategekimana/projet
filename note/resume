@@ -1,0 +1,60 @@
+
+Résumé de la réunion du 15 septembre
+
+2 nouveaux membres
+2 nouveaux personnages
+2 modes de jeu
+2 génocides= 1 4e mur
+2 mais en faite c'est plutôt niveau 1
+
+
+2 nouveaux membres
+Nous avons fait un breefing pour les nouvelles arrivantes du projet. Nous avons en effet Romane qui nous aide dans le scénario et 
+Val qui nous aide du côté du graphisme. Il était important de les mettre dans le bain pour que tout le monde soit sur un pied d'égalité.
+
+2 nouveaux personnages
+Nous avons parlé du personnage de Dorian en tant que disciple de Nathaniel et aussi d'un tueur en série. Dorian est un orphelin qui 
+devient le protégé de Nathaniel car ces deux personnages ont vécu la même enfance: leur mère à été violée, torturée et tuée sous leur 
+yeux et le coupable les a marqué d'une même blessure en tant que signature de son oeuvre. Dorian aura aussi perdu son frère dans cette
+histoire et gardera des stigmates psychologique pour le restant de ses jours. De ce fait, il developpe une personnalité bipolaire en 
+étant bon envers les personnes qui lui rappellent sont petit frère, mais féroce envers le reste. Il influence ainsi Nathaniel dans le 
+choix de ses sacrifices. Le tueur en série est un pychopate qui à fait du meurtre un art. Tuer froidement ses victimes ne l'intéresse 
+pas. Ce qu'il veut, c'est savourer les moments, où il torture ses victimes. Pour sa renommé, il laisse toujours une victime comme preuve 
+(comme Zorro) de son passage et la marque d'une blessure pour le confirmer. On est en train de réfléchir pour savoir si on lui met un lien 
+avec Dick Nelson et/ou s'il appartient à une organisation de tueur à gage.
+
+2 modes de jeu
+Nous avons discuté du game play dans son orientation. Le joueur peut le faire en mode génocide ou pacifique. Le mode génocide implique 
+des combats avec les monstres rencontrés (un certain nombre ainsi qu'un boss à chaque niveau) mais les combats se ferront de façon un peu 
+plus originale qu'un simple beat them up et incluera des actions spéciales à faire. La partie pacifique consistera plus à faire résoudre des
+énigmes et à débloquer des actions pour passer le niveau. En ce qui concerne le tutoriel du jeu, et bien, il y en a presque pas, car le joueur 
+devra découvrir son personnage (mouvements et capacités) ainsi que la map tout au long de la partie. Il n'y aura pas d'indication explicite, 
+mais le premier niveau sera acceillant dans le fait qu'il n'aura (presque) aucune incidence sur le reste du jeu. C'est un niveau de découverte.
+On a aussi parlé d'un game play combinatoir, où il faudra faire une succession de touche pour débloquer des choses ou faire des actions spéciales.
+Pour nous aider, nous avons mis dans le groupe discorde des liens portant sur les jeux "Sea of solitude" (game play), "Alice madness return" 
+(thème) ainsi que "The evil within 2" (monstres).
+
+2 génocides= 1 4e mur
+En principe, le terme "briser le 4e mur" désigne le fait qu'un jeu s'adresse plutôt au joueur et agis en dehors du contexte propre d'un jeu.
+Par exemple, le jeu pourrait connaître le vrai nom du joueur (dans la vrai vie), il pourrait aussi être en mesure de prendre le contrôle 
+de l'ordinateur du joueur. 
+Nous avons parlé du 4e mur qui ne s'enclenche pas tout de suite. Cela se produit seulement lorsque le joueur joue au jeu plus d'une fois.
+Alors, le jeu, se comportera progressivement de façon anormale (bug, blocage, screamer).
+
+2 mais en faite c'est plutôt niveau 1
+Nous avons parlé du Niveau 1, car c'est notre prochain objectif commun. Notre but est de construire quelque chose de présentable pour un 
+éventuel testeur. Au niveau du graphisme, il faut faire une ébauche de la map des monstres présents ainsi que du boss. En ce qui concèrne 
+le département musique, il faut trouver des bruitages qui conviendraient au niveau et des éventuels thèmes. Pour le côté scénario, il 
+faut créer le scénario de l'escapade d'Amélia et le diviser en chapitre (1 chapitre = 1 niveau). Pour le code, il faudra répondre aux besoins
+et demandes qui surviendront pendant la créaton de ce premier niveau.
+NIVEAU 1
+boss: Barbara
+nombre de monstres: 3
+lieu: dortoir
+contexte: Amélia se réveille dans sa chambre et ne sait plus qui elle est, elle visite alors son dortoir et découvre que la soeur Barbara rôde dans
+les couloirs. Dans le jeu (real time play), Barbara est un monstre (le boss)  qui se déplace dans la map. Si on la croise et qu'on ne s'echappe pas 
+assez vite, on se fait tuer par elle.
+En mode génocide: Il faut tuer les trois monstres (orphelins) pour obtenir assez de moyen (epx, item) pour pouvoir l'affronter et la vaincre.
+En mode passifique: Il faut aider les trois monstres (orphelins) à résoudre leurs problème et gagner des indice et outils pour s'echapper.
+
+

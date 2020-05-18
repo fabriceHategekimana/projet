@@ -1,0 +1,39 @@
+
+Formalisme
+1.Identification du problème
+2.Faire une abstraction
+3.Proposer un modèle
+4.implémenter le modèle
+5.Faire évoluer le logiciel
+
+Notation informatiques: Diagramme et Pseudo-code
+
+ISO et ANSI: Deux organisations qui donnent leur standards (diagramme)
+
+Notation UML: (compilateur c windows MinGw) gcc prog.c - prog
+
+Pseudo-code:
+-constantes en majuscule:
+-struct: enregistrement
+-^entier p: pointeur
+-p^: valeur pointée
+-affectation: a<-5
+
+TAD (type abstrait de donnée)
+Formaliser un nouveau type
+manipulation globale de données
+
+--------------------------------------------------------
+Nome du TAD
+-Descrition brève avec des mots
+--------------------------------------------------------
+Spécification , déclaration:
+-Préciser les contraintes nécessaires à son élaboration
+--------------------------------------------------------
+Promitives, opérations:
+1.création, initialisation, construction
+2.modification
+3.destruction
+4.accès
+--------------------------------------------------------
+

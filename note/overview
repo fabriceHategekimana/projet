@@ -1,0 +1,179 @@
+
+
+
+
+SYSTÈMES INFORMATIQUES
+Partie 4 du TP3
+
+main.c parametres.c hash.c (parmetre.h, hash.h)
+
+//main.c code à exécuter
+//paramètre.c teste les paramètres donnés
+//hash.c fait le calcul de la fonction de hashage
+
+
+
+CRYPTOGRAPHIE
+Implémentation du DES
+-Comprendre la structure du DES
+-Comprendre les tables de permutation
+-message de 64 bits, clé de 56 bits + 8 bits de parité
+-implémenter la cypherfonction
+
+
+
+PROBABILITÉS ET STATISIQUES POUR INFORMATICIENS
+1)
+on a 1000
+1 pour 500F
+2 pour 100F
+50 pour 10F
+
+2)
+0,6 100'000
+autre 20'000
+Espérance mathématique?
+
+3)
+prouver que E[aX]= aE[X]
+
+4)
+si X=c
+prouver que E[x]= c
+
+
+
+# Homework \#2
+
+In this homework, you will design the model of a classic concurrent problem.
+Then, you will write a few methods to observe the properties of your model.
+
+The submission deadline is set on October the 31th, at 23:59 Geneva local time.
+
+## The Smokers' Problem
+
+The Smokers' Problem is a concurrent problem, defined as follows:
+
+In order to create a cigar, three components are necessary:
+
+1. A sheet of rolling paper
+2. Some tobacco
+3. A match
+
+Three chain smokers sit around a table.
+All of them have an infinite amount of one particular kind of component that they keep in a bag.
+For instance, one smoker can have an infinite stock of tobacco, but miss rolling papers and matches.
+A *referee* also sits at the table, and has in her bag an infinite amount of all kinds of components.
+
+At random times,
+and as long as there are less than two components on the table,
+the referee chooses randomly an ingredient that is not on the table and places it there.
+The smokers wait for the components they miss to build a cigarette and seize them as soon as they are on the table.
+Once they have all three of them, they build a cigar and smoke it.
+All four actors repeat their respective behavior continuously.
+
+### Modeling
+
+You will find in the source file `Sources/HomeworkLib/SmokerModel.swift` an unfinished implementation of the Smoker's Problem.
+Places and transitions have already been fully defined, but the **structure of the model** and its **initial marking** have yet to be completed.
+
+Look carefully at the part of the model that is already defined to deduct how the implementation should be completed.
+Use the comments to understand the existing structure and locate where your your code should be added.
+
+Your code will be tested by attempting to simulate specific behaviors.
+Namely, the tests aim to have each smoker perform one complete cycle of their respective activity, but also check that your model does not feature any unspecified behavior.
+In other words, make sure that you model the problem exactly and only as specified.
+
+Your model **must be** bounded!
+In other words, it should have a finite number of states, otherwise the testing library will not be able to check its correctness.
+
+### Smokers' Deadlock
+
+A deadlock occur when a system is no longer able to progress, due to a situation in which all its sub-systems are unboundedly waiting for a particular resource/event.
+As described above, a correct implementation of the Smokers' Problem should not contain any deadlock, because there should always be a smoker that can take the resource she needs, no matter the order in which the referee places them, and no matter the behavior of the other smokers.
+But what exactly in the problem's specification help guaranteeing this property?
+
+In the source file `Sources/HomeworkLib/SmokerModel.swift`, complete the definition the property `smokerModelInitialMarkingWithDeadlock` with an altered initial state that leads to a deadlock.
+You **must not** modify the structure of the model, only this initial marking.
+
+## Analysis
+
+### `isQuasiAlive(transition:from:)`
+
+In the source file `Sources/HomeworkLib/Analysis.swift`, complete the implementation of the method `isQuasiAlive(transition:from:)`, that accepts a transition and a marking, and returns whether or not the transition is quasi-alive.
+
+Recall that a transition is said quasi-alive if it can be fired at least once.
+
+Here is a usage example:
+
+```swift
+enum P: Place {
+  typealias Content = Int
+  case p0, p1
+}
+
+enum T: Transition {
+  case t0, t1
+}
+
+let model = PetriNet<P, T>(
+  .transition(.t0, arcs: .pre(from: .p0), .post(to: .p1)),
+  .transition(.t1, arcs: .pre(from: .p1)))
+
+// Is the transition `.t0` quasi-alive from the marking `[.p0: 3, .p1: 0]`? Yes it is!
+print(model.isQuasiAlive(transition: .t0, from: [.p0: 3, .p1: 0]))
+
+// Is the transition `.t0` quasi-alive from the marking `[.p0: 0, .p1: 3]`? No it isn't!
+print(model.isQuasiAlive(transition: .t0, from: [.p0: 0, .p1: 3]))
+```
+
+### `deadlocks`
+
+In the source file `Sources/HomeworkLib/Analysis.swift`, complete the implementation of the computed property `deadlocks` that returns the markings that corresponds to a deadlock in a marking graph.
+
+Here is a usage example:
+
+```swift
+enum P: Place {
+  typealias Content = Int
+  case p0
+}
+
+enum T: Transition {
+  case t0, t1
+}
+
+let model = PetriNet<P, T>(
+  .transition(.t0, arcs: .pre (from: .p0), .post(to: .p0)),
+  .transition(.t1, arcs: .pre(to: .p0)))
+
+// Compte the marking graph.
+guard let graph = model.markingGraph(from: [.p0: 0])
+  else { fatalError("unbounded model") }
+
+// Print the deadlocks in `graph`:
+print(graph.deadlocks)
+```
+
+## Package organization
+
+This homework is organized as a standard Swift package.
+Sources are available in the folder `Sources/<Target>`,
+where `<Target>` is the name of a particular target.
+
+For the sake of this homework,
+you will only need to work on the sources inside `Sources/HomeworkLib`,
+but are encouraged to take a look at other the sources.
+In particular, `Sources/Homework/main.swift` shows various usage example of the library.
+You can run the code of this file with the command `swift run`.
+Don't hesitate to play with it.
+Its content won't be part of the final evaluation **as long as it compiles**.
+Remember that a submission that doesn't compile cannot pass any test.
+
+Tests are located in the folder `Tests/HomeworkLibTests`.
+Don't hesitate to take a look, especially if your code fails to pass them.
+However, remember that you **must not** modify those tests.
+You can run the tests with the command `swift test`.
+
+ANALYSE NUMÉRIQUE
+Pour l'instant on ne met rien

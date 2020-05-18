@@ -1,0 +1,19 @@
+
+CREER UNE MATRICE CARRÉ NXN ALÉATOIRE
+rand(n)
+
+TAILLE D'UN VECTEUR (OU D'UNE MATRICE)
+length(A)
+
+MATRICE CARRÉ NXN REMPLIE DE ZÉROS
+zeros(n)
+
+FONCTION ANONYME
+f= @(argument-list) expression
+
+AFFICHER QQCH
+disp("la valeur de x0 est:")
+
+AFFICHER UNE FONCTION
+plot(x, y)
+
