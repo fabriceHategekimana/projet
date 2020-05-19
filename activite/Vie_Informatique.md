@@ -20,3 +20,10 @@ Je veux pouvoir inventer mes propres machines et système pour "prolonger ma mai
 L'informatique est donc un moyen de me developper au niveau de mes capacités.
   
 Mon but final est que l'informatique soit comme un super pouvoir.
+  
+Que peut faire l'informatique?  
+Elle permet de manipuler et gérer l'information.  
+	Elle me permet de répondre à des besoins spécifiques avec les moyens du bord.
+  
+Qu'est-ce que représente une [[information]]?
+

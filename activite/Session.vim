@@ -1,6 +1,6 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
-nnoremap  :!. ~/sh/g.sh 
+nnoremap  :!. ~/sh/g.sh &
 nnoremap  :let collage= Collage(collage)
 nnoremap   .
 nnoremap :w :mks!:w
@@ -76,10 +76,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +10 start.md
-badd +11 ~/projet/activite/buts.md
-badd +4 ~/projet/activite/Vie_sociale.md
-badd +29 ~/projet/activite/cultivé.md
-badd +4 ~/projet/activite/actualité.md
+badd +10 ~/projet/activite/buts.md
+badd +7 ~/projet/activite/Vie_spirituelle.md
+badd +9 ~/projet/activite/chercher_Dieu.md
+badd +18 ~/projet/activite/miséricorde.md
 argglobal
 silent! argdel *
 $argadd start.md
@@ -335,11 +335,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 18) / 37)
+let s:l = 5 - ((4 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
+5
 normal! 0
 tabnext 1
 if exists('s:wipebuf')
