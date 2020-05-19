@@ -63,36 +63,52 @@ set runtimepath=~/.vim,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim
 set smartcase
 set splitbelow
 set splitright
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.asv
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
+set window=16
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/projet/anTP10
+cd ~/projet/semtp4
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +15 labo.m
-badd +83 ex3tp10.m
-badd +15 Euler_Explicite_chaleur.m
-badd +10 Euler_Implicite_chaleur.m
-badd +1 .
+badd +1 README.md
 argglobal
 silent! argdel *
-$argadd labo.m
-edit Euler_Implicite_chaleur.m
+edit README.md
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
+inoremap <buffer> ééfff \flechel{nom1}{nom2}{label}{angleIn}{angleOut}
+inoremap <buffer> ééff \fleche{nom1}{nom2}{label}
+inoremap <buffer> éér \rectangle{nom}{x}{y}
 let s:cpo_save=&cpo
 set cpo&vim
-nnoremap <buffer> <F5> :call RunOctave()
-nnoremap <buffer> <F4> :!octave --no-gui
-nnoremap <buffer> <F2> :call Note("octave")
-nnoremap <buffer> édc ^x 
-nnoremap <buffer> éc ^i%
+inoremap <buffer> ééim ![](images/num.png)^<Right>a
+inoremap <buffer> éél :let liste= ListeMode(liste)
+inoremap <buffer> ééd \begin{tikzpicture}\end{tikzpicture}
+inoremap <buffer> ééta :call MarkdownLigne()
+inoremap <buffer> ééss I#### 
+inoremap <buffer> éés I## 
+inoremap <buffer> ééti # 
+inoremap <buffer> ééit __<Left>
+inoremap <buffer> ééb ****<Left><Left>
+inoremap <buffer> éta :call MarkdownLigne()
+nnoremap <buffer> <F7> :call RunMarkdown3()
+nnoremap <buffer> <F6> :call RunMarkdown2()
+nnoremap <buffer> <F5> :let toc= RunMarkdown(toc)
+nnoremap <buffer> <F4> :let toc= Toc(toc)
+nnoremap <buffer> <F2> :let note= Note(note, "markdown")
+inoremap <buffer>    
+nnoremap <buffer> éb I**A**
+nnoremap <buffer> él :let liste= ListeMode(liste)
+nnoremap <buffer> ésss I#### 
+nnoremap <buffer> éss I### 
+nnoremap <buffer> és I## 
+nnoremap <buffer> ét :call MarkdownTitre()
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
@@ -111,8 +127,8 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
+setlocal comments=fb:*,fb:-,fb:+,n:>
+setlocal commentstring=>\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -128,8 +144,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'matlab'
-setlocal filetype=matlab
+if &filetype != 'markdown'
+setlocal filetype=markdown
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -143,16 +159,16 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatoptions=tcqln
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^[-*+]\\s\\+\\|^\\[^\\ze[^\\]]\\+\\]:
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetMatlabIndent(v:lnum)
-setlocal indentkeys=!,o,O=end,=case,=else,=elseif,=otherwise,=catch
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -162,14 +178,14 @@ setlocal lispwords=
 setlocal nolist
 setlocal makeencoding=
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
+setlocal matchpairs=(:),{:},[:],<:>
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
+setlocal omnifunc=htmlcomplete#CompleteTags
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -189,11 +205,11 @@ setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=
-setlocal suffixesadd=.m
+setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'matlab'
-setlocal syntax=matlab
+if &syntax != 'markdown'
+setlocal syntax=markdown
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -209,12 +225,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 15 - ((14 * winheight(0) + 18) / 37)
+let s:l = 19 - ((15 * winheight(0) + 8) / 16)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-15
-normal! 027|
+19
+normal! 0
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

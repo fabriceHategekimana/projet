@@ -4,7 +4,7 @@ function y= matriceGauche(N)
 		if i < N
 			A(i, i+1)= 1;
 		end
-		if i > 1 && i < N-1
+		if i > 1 && i < N+1
 			A(i, i-1)= 1;
 		end
 	end

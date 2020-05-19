@@ -81,30 +81,32 @@ err_implicite4= max(norm(y4-Y8));
 Nx= 30;
 X= linspace(0, 1, Nx);
 y= @(x) ((x.^2).*(1-x));
-y0= y(X);
+x0= y(X)';
+dx= 1/Nx;
 t0= 0;
-T= 2; 
+T= 2; % pour un interval entre (t0, T)
 tol= 1e-12;
 
 Nt= 1000;
-[T1, Y1]= Euler_Explicite_chaleur(y0, t0, Nt, T);
-[T2, Y2]= Euler_Implicite_chaleur(y0, t0, Nt, T);
+[T1, Y1]= Euler_Explicite_chaleur(x0, t0, Nt, T, dx);
+[T2, Y2]= Euler_Implicite_chaleur(x0, t0, Nt, T, dx);
 U1= Ex3b_ref(X', T1, tol);
 %plot(T1, Y1, T2, Y2, T1, U1);
+plot(T1, Y1);
 err_exp1= max(abs(U1-Y1));
 err_imp1= max(abs(U1-Y2));
 
 Nt= 2000;
-[T3, Y3]= Euler_Explicite_chaleur(y0, t0, Nt, T);
-[T4, Y4]= Euler_Implicite_chaleur(y0, t0, Nt, T);
+[T3, Y3]= Euler_Explicite_chaleur(x0, t0, Nt, T, dx);
+[T4, Y4]= Euler_Implicite_chaleur(x0, t0, Nt, T, dx);
 U2= Ex3b_ref(X', T3, tol);
 %plot(T3, Y3, T4, Y4, T2, U2);
 err_exp2= max(abs(U2-Y3));
 err_imp2= max(abs(U2-Y4));
 
 Nt= 4000;
-[T5, Y5]= Euler_Explicite_chaleur(y0, t0, Nt, T);
-[T6, Y6]= Euler_Implicite_chaleur(y0, t0, Nt, T);
+[T5, Y5]= Euler_Explicite_chaleur(x0, t0, Nt, T, dx);
+[T6, Y6]= Euler_Implicite_chaleur(x0, t0, Nt, T, dx);
 %plot(T5, Y5, T6, Y6, T3, U3);
 U3= Ex3b_ref(X', T5, tol);
 err_exp3= max(abs(U3-Y5));
