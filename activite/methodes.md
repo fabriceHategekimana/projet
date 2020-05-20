@@ -13,3 +13,4 @@ Pour l'instant, je liste les methodes actuelles:
   
 Liste de mes besoins (dans l'acuel)
 -Un système pour sychroniser mes deux calendriers (mobile et laptop)
+

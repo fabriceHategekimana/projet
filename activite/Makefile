@@ -13,3 +13,5 @@ commandes:
 presence:
 	firefox https://esperertoujours.fr/chercher-leternel/ &
 
+modelisation:
+	firefox https://fr.wikipedia.org/wiki/Mod%C3%A9lisation_des_donn%C3%A9es &

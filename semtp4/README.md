@@ -15,5 +15,5 @@ arguments= epsilon | elements
 elements= p | element
 element= epsilon | element
 
-  
+Règle d'inférence de la syntaxe abstraite:  
 

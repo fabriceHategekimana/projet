@@ -5,3 +5,9 @@ Je veux comprendre les styles et les structures et moyens en place qui font qu'u
 
 Finalement, la musique est comme une sorte de pouvoir qui a accès aux sentiment de la personne qui les écoutes.
 
+J'aimerai apprendre de nouvelles choses:
+Le [[piano]]
+Le chant
+La flute_traversière
+Le composition_musicale
+La modulation_sonor

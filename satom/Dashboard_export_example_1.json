@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "dashboard:b26c5150-8b27-11ea-a37c-c5f29c3103e3",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Graph",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"size_x\":6,\"size_y\":3,\"panelIndex\":1,\"type\":\"visualization\",\"id\":\"visualization:47268180-8b28-11ea-a37c-c5f29c3103e3\",\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hideBorders\":false,\"hideSearchBar\":false,\"showTimePicker\":true}",
+      "uiStateJSON": "{\"expandedPanelIndex\":1}",
+      "version": 2,
+      "timeRestore": false,
+      "priority": 0,
+      "coatJSON": "{\"items\":[{\"type\":\"link\",\"id\":\"e9ae1a10-8b2a-11ea-b703-89057b47be11\",\"id1\":\"e6c52af0-8b2a-11ea-b703-89057b47be11\",\"id2\":\"e9ae1a11-8b2a-11ea-b703-89057b47be11\",\"d\":{\"rel\":{\"id\":\"relation:6fd12d70-8b22-11ea-a37c-c5f29c3103e3\"}}},{\"type\":\"link\",\"id\":\"ed147690-8b2a-11ea-b703-89057b47be11\",\"id1\":\"e9ae1a11-8b2a-11ea-b703-89057b47be11\",\"id2\":\"ed147691-8b2a-11ea-b703-89057b47be11\",\"d\":{\"rel\":{\"id\":\"relation: c9eabd00-8b20-11ea-88c5-a1021570e88f\"}}},{\"type\":\"link\",\"id\":\"f123e450-8b2a-11ea-b703-89057b47be11\",\"id1\":\"ed147691-8b2a-11ea-b703-89057b47be11\",\"id2\":\"f123e451-8b2a-11ea-b703-89057b47be11\",\"d\":{\"rel\":{\"id\":\"relation:ca07bae0-8b20-11ea-a37c-c5f29c3103e3\"}}},{\"type\":\"link\",\"id\":\"f5da1960-8b2a-11ea-b703-89057b47be11\",\"id1\":\"e9ae1a11-8b2a-11ea-b703-89057b47be11\",\"id2\":\"f5da1961-8b2a-11ea-b703-89057b47be11\",\"d\":{\"rel\":{\"id\":\"relation: d48ab330-8b22-11ea-88c5-a1021570e88f\"}}},{\"type\":\"node\",\"id\":\"e6c52af0-8b2a-11ea-b703-89057b47be11\",\"d\":{\"entity\":{\"id\":\"search:c8ef30e0-8b1e-11ea-a37c-c5f29c3103e3\",\"useGlobalTimeFilter\":true},\"isRoot\":true,\"widgets\":[]},\"x\":16.500000000000007,\"y\":-245.6},{\"type\":\"node\",\"id\":\"e9ae1a11-8b2a-11ea-b703-89057b47be11\",\"d\":{\"entity\":{\"id\":\"search:545891e0-8af6-11ea-a37c-c5f29c3103e3\",\"useGlobalTimeFilter\":true},\"widgets\":[]},\"x\":16.500000000000007,\"y\":-88},{\"type\":\"node\",\"id\":\"ed147691-8b2a-11ea-b703-89057b47be11\",\"d\":{\"entity\":{\"id\":\"search:69aeeca0-8b1f-11ea-a37c-c5f29c3103e3\",\"useGlobalTimeFilter\":true},\"widgets\":[]},\"x\":-62.29999999999999,\"y\":86},{\"type\":\"node\",\"id\":\"f123e451-8b2a-11ea-b703-89057b47be11\",\"d\":{\"entity\":{\"id\":\"search:cc200900-8b1f-11ea-a37c-c5f29c3103e3\"},\"widgets\":[]},\"x\":-62.29999999999999,\"y\":243.6},{\"type\":\"node\",\"id\":\"f5da1961-8b2a-11ea-b703-89057b47be11\",\"t\":\"eid: City\",\"tc\":false,\"d\":{\"entity\":{\"id\":\"eid:91c3ab10-8b22-11ea-a37c-c5f29c3103e3\",\"label\":\"City\",\"type\":\"VIRTUAL_ENTITY\",\"parentId\":null,\"_objects\":{\"savedEid\":{\"isSaving\":false,\"defaults\":{\"title\":\"New Saved Eid\",\"version\":1,\"siren\":{\"ui\":{\"icon\":\"\",\"color\":\"\",\"shortDescription\":\"\"}}},\"notify\":{\"from\":\"Saved eid\"},\"id\":\"eid:91c3ab10-8b22-11ea-a37c-c5f29c3103e3\",\"copyOnSave\":false,\"rejectedMessages\":[\"Overwrite confirmation was rejected\",\"Save with duplicate title confirmation was rejected\"],\"_source\":{\"title\":\"City\",\"version\":1,\"siren\":{\"ui\":{\"icon\":\"fas fa-city\",\"color\":\"#2f9864\"}}},\"title\":\"City\",\"version\":1,\"siren\":{\"ui\":{\"icon\":\"fas fa-city\",\"color\":\"#2f9864\"}},\"lastSavedTitle\":\"City\"}},\"icon\":\"fas fa-city\",\"color\":\"#2f9864\"},\"selected\":false,\"isRoot\":false,\"widgets\":[]},\"ha0\":{\"c\":\"rgba(47, 152, 100, 0.4)\",\"r\":34,\"w\":3},\"fi\":{\"c\":\"#2f9864\",\"t\":\"\"},\"b\":null,\"bw\":5,\"g\":[{\"c\":\"rgb(96, 121, 162)\",\"p\":\"se\",\"t\":\"+\",\"fb\":true,\"w\":true,\"b\":\"rgb(222, 222, 222)\"},{\"c\":\"rgb(204, 40, 40)\",\"p\":\"sw\",\"fb\":true,\"w\":true,\"b\":\"rgb(222, 222, 222)\",\"fi\":{\"t\":\"\",\"c\":\"rgb(255, 255, 255)\"}}],\"x\":95.30000000000001,\"y\":86}],\"viewSettings\":{\"width\":522.267,\"height\":400,\"zoom\":0.5616174582798459,\"offsetX\":497,\"offsetY\":366},\"datamodelType\":\"SINGLE_SEARCH\",\"joinAlgorithmType\":\"LEFT_FILTER_JOIN\"}",
+      "scriptIds": [],
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"match_all\":{}}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]
