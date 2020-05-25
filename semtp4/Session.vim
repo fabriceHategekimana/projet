@@ -15,7 +15,6 @@ nmap <silent> \wi <Plug>VimwikiDiaryIndex
 nmap <silent> \ws <Plug>VimwikiUISelect
 nmap <silent> \wt <Plug>VimwikiTabIndex
 nmap <silent> \ww <Plug>VimwikiIndex
-nnoremap count :call Comptage()
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
 nnoremap go Go
@@ -26,7 +25,7 @@ vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
 nnoremap <F12> :!clear
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
-nnoremap <F8> :~/sh/images.sh
+nnoremap <F8> :!. ~/sh/images.sh
 nnoremap <F3> :!ranger
 nnoremap <F1> :call Vimrc()
 inoremap  </><Left>
@@ -52,13 +51,12 @@ inoremap {{ {
 inoremap { {}<Left> 
 let &cpo=s:cpo_save
 unlet s:cpo_save
-set autowriteall
 set backspace=indent,eol,start
 set fileencodings=ucs-bom,utf-8,default,latin1
-set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|#\\)\\|\\(\\C\\%(\\d\\+)\\|\\d\\+\\.\\|[ivxlcdm]\\+)\\|[IVXLCDM]\\+)\\|\\l\\{1,2})\\|\\u\\{1,2})\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 set helplang=fr
 set ignorecase
 set incsearch
+set isfname=@,48-57,/,.,-,_,+,,,#,$,%,~,=,:
 set printoptions=paper:a4
 set ruler
 set runtimepath=~/.vim,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim/plugged/vimwiki/,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
@@ -67,7 +65,6 @@ set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
-set window=16
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -76,145 +73,21 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 README.md
+badd +1 SL_TP_4_Hategekimana.pl
 argglobal
 silent! argdel *
-edit README.md
+$argadd SL_TP_4_Hategekimana.pl
+edit SL_TP_4_Hategekimana.pl
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <buffer> <expr> <S-Tab> vimwiki#tbl#kbd_shift_tab()
-inoremap <buffer> <silent> <S-CR> :VimwikiReturn 2 2
-nmap <buffer> <silent> 	 <Plug>VimwikiNextLink
-vmap <buffer> <silent>  <Plug>VimwikiNormalizeLinkVisualCR
-nmap <buffer> <silent>  <Plug>VimwikiFollowLink
-vmap <buffer> <silent> + <Plug>VimwikiNormalizeLinkVisual
-nmap <buffer> <silent> + <Plug>VimwikiNormalizeLink
-nmap <buffer> <silent> - <Plug>VimwikiRemoveHeaderLevel
-nmap <buffer> <silent> <D-CR> <Plug>VimwikiTabnewLink
-nmap <buffer> <silent> = <Plug>VimwikiAddHeaderLevel
-inoremap <buffer> éta :call MarkdownLigne()
-inoremap <buffer> ééfff \flechel{nom1}{nom2}{label}{angleIn}{angleOut}
-inoremap <buffer> ééff \fleche{nom1}{nom2}{label}
-inoremap <buffer> éér \rectangle{nom}{x}{y}
-inoremap <buffer> ééim ![](images/num.png)^<Right>a
-inoremap <buffer> éél :let liste= ListeMode(liste)
-inoremap <buffer> ééd \begin{tikzpicture}\end{tikzpicture}
-inoremap <buffer> ééta :call MarkdownLigne()
-inoremap <buffer> ééss I#### 
-inoremap <buffer> éés I## 
-inoremap <buffer> ééti # 
-inoremap <buffer> ééit __<Left>
-inoremap <buffer> ééb ****<Left><Left>
-nnoremap <buffer> <silent> O :call vimwiki#lst#kbd_O()
-nmap <buffer> <silent> [= <Plug>VimwikiGoToPrevSiblingHeader
-nmap <buffer> <silent> [[ <Plug>VimwikiGoToPrevHeader
-nmap <buffer> <silent> [u <Plug>VimwikiGoToParentHeader
-nmap <buffer> <silent> \wr <Plug>VimwikiRenameLink
-nmap <buffer> <silent> \wd <Plug>VimwikiDeleteLink
-nmap <buffer> \whh <Plug>Vimwiki2HTMLBrowse
-nmap <buffer> \wh <Plug>Vimwiki2HTML
-nmap <buffer> <silent> ]= <Plug>VimwikiGoToNextSiblingHeader
-nmap <buffer> <silent> ]] <Plug>VimwikiGoToNextHeader
-nmap <buffer> <silent> ]u <Plug>VimwikiGoToParentHeader
-vnoremap <buffer> <silent> al :call vimwiki#lst#TO_list_item(0, 1)
-onoremap <buffer> <silent> al :call vimwiki#lst#TO_list_item(0, 0)
-vnoremap <buffer> <silent> ac :call vimwiki#base#TO_table_col(0, 1)
-onoremap <buffer> <silent> ac :call vimwiki#base#TO_table_col(0, 0)
-vnoremap <buffer> <silent> a\ :call vimwiki#base#TO_table_cell(0, 1)
-onoremap <buffer> <silent> a\ :call vimwiki#base#TO_table_cell(0, 0)
-vnoremap <buffer> <silent> aH :call vimwiki#base#TO_header(0, 1, v:count1)
-onoremap <buffer> <silent> aH :call vimwiki#base#TO_header(0, 1, v:count1)
-vnoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
-onoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
-nnoremap <buffer> gww :VimwikiTableAlignW
-nnoremap <buffer> gqq :VimwikiTableAlignQ
-noremap <buffer> <silent> gLA :VimwikiChangeSymbolInListTo A)
-noremap <buffer> <silent> glA :VimwikiChangeSymbolTo A)
-noremap <buffer> <silent> gLa :VimwikiChangeSymbolInListTo a)
-noremap <buffer> <silent> gla :VimwikiChangeSymbolTo a)
-noremap <buffer> <silent> gLI :VimwikiChangeSymbolInListTo I)
-noremap <buffer> <silent> glI :VimwikiChangeSymbolTo I)
-noremap <buffer> <silent> gLi :VimwikiChangeSymbolInListTo i)
-noremap <buffer> <silent> gli :VimwikiChangeSymbolTo i)
-noremap <buffer> <silent> gL1 :VimwikiChangeSymbolInListTo 1.
-noremap <buffer> <silent> gl1 :VimwikiChangeSymbolTo 1.
-noremap <buffer> <silent> gL# :VimwikiChangeSymbolInListTo #
-noremap <buffer> <silent> gl# :VimwikiChangeSymbolTo #
-noremap <buffer> <silent> gL* :VimwikiChangeSymbolInListTo *
-noremap <buffer> <silent> gl* :VimwikiChangeSymbolTo *
-noremap <buffer> <silent> gL- :VimwikiChangeSymbolInListTo -
-noremap <buffer> <silent> gl- :VimwikiChangeSymbolTo -
-map <buffer> <silent> gL  <Plug>VimwikiRemoveCBInList
-map <buffer> <silent> gl  <Plug>VimwikiRemoveSingleCB
-map <buffer> <silent> gLL <Plug>VimwikiIncreaseLvlWholeItem
-map <buffer> <silent> gLl <Plug>VimwikiIncreaseLvlWholeItem
-map <buffer> <silent> gLH <Plug>VimwikiDecreaseLvlWholeItem
-map <buffer> <silent> gLh <Plug>VimwikiDecreaseLvlWholeItem
-map <buffer> <silent> gll <Plug>VimwikiIncreaseLvlSingleItem
-map <buffer> <silent> glh <Plug>VimwikiDecreaseLvlSingleItem
-nmap <buffer> <silent> gLR <Plug>VimwikiRenumberAllLists
-nmap <buffer> <silent> gLr <Plug>VimwikiRenumberAllLists
-nmap <buffer> <silent> glr <Plug>VimwikiRenumberList
-vmap <buffer> <silent> glp <Plug>VimwikiDecrementListItem
-nmap <buffer> <silent> glp <Plug>VimwikiDecrementListItem
-vmap <buffer> <silent> gln <Plug>VimwikiIncrementListItem
-nmap <buffer> <silent> gln <Plug>VimwikiIncrementListItem
-vmap <buffer> <silent> glx <Plug>VimwikiToggleRejectedListItem
-nmap <buffer> <silent> glx <Plug>VimwikiToggleRejectedListItem
-vnoremap <buffer> <silent> il :call vimwiki#lst#TO_list_item(1, 1)
-onoremap <buffer> <silent> il :call vimwiki#lst#TO_list_item(1, 0)
-vnoremap <buffer> <silent> ic :call vimwiki#base#TO_table_col(1, 1)
-onoremap <buffer> <silent> ic :call vimwiki#base#TO_table_col(1, 0)
-vnoremap <buffer> <silent> i\ :call vimwiki#base#TO_table_cell(1, 1)
-onoremap <buffer> <silent> i\ :call vimwiki#base#TO_table_cell(1, 0)
-vnoremap <buffer> <silent> iH :call vimwiki#base#TO_header(1, 1, v:count1)
-onoremap <buffer> <silent> iH :call vimwiki#base#TO_header(1, 1, v:count1)
-vnoremap <buffer> <silent> ih :call vimwiki#base#TO_header(1, 0, v:count1)
-onoremap <buffer> <silent> ih :call vimwiki#base#TO_header(1, 0, v:count1)
-nnoremap <buffer> <silent> o :call vimwiki#lst#kbd_o()
-nnoremap <buffer> <silent> <Plug>VimwikiGoToPrevSiblingHeader :call vimwiki#base#goto_sibling(-1)
-nnoremap <buffer> <silent> <Plug>VimwikiGoToNextSiblingHeader :call vimwiki#base#goto_sibling(+1)
-nnoremap <buffer> <silent> <Plug>VimwikiGoToPrevHeader :call vimwiki#base#goto_prev_header()
-nnoremap <buffer> <silent> <Plug>VimwikiGoToNextHeader :call vimwiki#base#goto_next_header()
-nnoremap <buffer> <silent> <Plug>VimwikiGoToParentHeader :call vimwiki#base#goto_parent_header()
-nnoremap <buffer> <silent> <Plug>VimwikiRemoveHeaderLevel :call vimwiki#base#RemoveHeaderLevel()
-nnoremap <buffer> <silent> <Plug>VimwikiAddHeaderLevel :call vimwiki#base#AddHeaderLevel()
-nmap <buffer> <silent> <M-Right> <Plug>VimwikiTableMoveColumnRight
-nmap <buffer> <silent> <M-Left> <Plug>VimwikiTableMoveColumnLeft
-vmap <buffer> <silent> <Nul> <Plug>VimwikiToggleListItem
-nmap <buffer> <silent> <Nul> <Plug>VimwikiToggleListItem
-vmap <buffer> <silent> <C-Space> <Plug>VimwikiToggleListItem
-nmap <buffer> <silent> <C-Space> <Plug>VimwikiToggleListItem
-nmap <buffer> <silent> <C-Up> <Plug>VimwikiDiaryPrevDay
-nmap <buffer> <silent> <C-Down> <Plug>VimwikiDiaryNextDay
-nmap <buffer> <silent> <S-Tab> <Plug>VimwikiPrevLink
-nmap <buffer> <silent> <BS> <Plug>VimwikiGoBackLink
-nmap <buffer> <silent> <C-S-CR> <Plug>VimwikiTabnewLink
-nmap <buffer> <silent> <C-CR> <Plug>VimwikiVSplitLink
-nmap <buffer> <silent> <S-CR> <Plug>VimwikiSplitLink
-nnoremap <buffer> <F7> :call RunMarkdown3()
-nnoremap <buffer> <F6> :call RunMarkdown2()
-nnoremap <buffer> <F5> :let toc= RunMarkdown(toc)
-nnoremap <buffer> <F4> :let toc= Toc(toc)
-nnoremap <buffer> <F2> :let note= Note(note, "markdown")
-imap <buffer> <silent>  <Plug>VimwikiDecreaseLvlSingleItem
-inoremap <buffer> <expr> 	 vimwiki#tbl#kbd_tab()
-imap <buffer> <silent>  <Plug>VimwikiListToggle
-imap <buffer> <silent>  <Plug>VimwikiListPrevSymbol
-imap <buffer> <silent> <NL> <Plug>VimwikiListNextSymbol
-inoremap <buffer>    
-imap <buffer> <silent>  <Plug>VimwikiIncreaseLvlSingleItem
-nnoremap <buffer> éta :call MarkdownLigne()
-nnoremap <buffer> éb I**A**
-nnoremap <buffer> él :let liste= ListeMode(liste)
-nnoremap <buffer> ésss I#### 
-nnoremap <buffer> éss I### 
-nnoremap <buffer> és I## 
-nnoremap <buffer> ét :call MarkdownTitre()
+nnoremap <buffer> <F2> :let note= Note("pl")
+nnoremap <buffer> <F5> :!swipl %
+nnoremap <buffer> <F4> :!swipl
+nnoremap <buffer> éc I%
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
@@ -233,11 +106,10 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=fb:*,fb:-,fb:+,n:>
-setlocal commentstring=>\ %s
+setlocal comments=:#
+setlocal commentstring=#%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
-set conceallevel=2
 setlocal conceallevel=0
 setlocal completefunc=
 setlocal nocopyindent
@@ -245,14 +117,14 @@ setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
 setlocal nocursorline
-setlocal define=
+setlocal define=[^A-Za-z_]
 setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'markdown'
-setlocal filetype=markdown
+if &filetype != 'perl'
+setlocal filetype=perl
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -266,34 +138,34 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcqln
-setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^[-*+]\\s\\+\\|^\\[^\\ze[^\\]]\\+\\]:
+setlocal formatoptions=crqol
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal include=\\<\\(use\\|require\\)\\>
+setlocal includeexpr=substitute(substitute(substitute(v:fname,'::','/','g'),'->*','',''),'$','.pm','')
+setlocal indentexpr=GetPerlIndent()
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,0=,0),0],0=or,0=and
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
+setlocal iskeyword=@,48-57,_,192-255,:
+setlocal keywordprg=perldoc\ -f
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
 setlocal nolist
 setlocal makeencoding=
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:],<:>
+setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=htmlcomplete#CompleteTags
-setlocal path=
+setlocal omnifunc=
+setlocal path=.,/usr/include,,,/etc/perl,/usr/local/lib/x86_64-linux-gnu/perl/5.26.1,/usr/local/share/perl/5.26.1,/usr/lib/x86_64-linux-gnu/perl5/5.26,/usr/share/perl5,/usr/lib/x86_64-linux-gnu/perl/5.26,/usr/share/perl/5.26,/usr/local/lib/site_perl,/usr/lib/x86_64-linux-gnu/perl-base
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -315,8 +187,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'markdown'
-setlocal syntax=markdown
+if &syntax != 'perl'
+setlocal syntax=perl
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -332,12 +204,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 19 - ((18 * winheight(0) + 18) / 37)
+let s:l = 2 - ((1 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
-normal! 0
+2
+normal! 020|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

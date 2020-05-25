@@ -10,7 +10,7 @@ function [t, x]= Euler_Implicite_chaleur(x0, t0, Nt, T, dx)
 	x= [xn];
 	t= [tn];
 
-	for i= [1:1:Nt]
+	for i= [1:1:Nt+1]
 		%xn= xn+(h*f(tn, xn));
 		xn= inv(I-(h*A))*xn;
 		tn= tn+h;

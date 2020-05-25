@@ -1,6 +1,6 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
-nnoremap  :!. ~/sh/g.sh 
+nnoremap  :!. ~/sh/g.sh &
 nnoremap  :let collage= Collage(collage)
 nnoremap   .
 nnoremap :w :mks!:w
@@ -15,7 +15,6 @@ nmap <silent> \wi <Plug>VimwikiDiaryIndex
 nmap <silent> \ws <Plug>VimwikiUISelect
 nmap <silent> \wt <Plug>VimwikiTabIndex
 nmap <silent> \ww <Plug>VimwikiIndex
-nnoremap count :call Comptage()
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
 nnoremap go Go
@@ -26,7 +25,7 @@ vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
 nnoremap <F12> :!clear
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
-nnoremap <F8> :make screenshot
+nnoremap <F8> :!. ~/sh/images.sh
 nnoremap <F3> :!ranger
 nnoremap <F1> :call Vimrc()
 inoremap  </><Left>
@@ -55,13 +54,13 @@ unlet s:cpo_save
 set autowriteall
 set backspace=indent,eol,start
 set fileencodings=ucs-bom,utf-8,default,latin1
-set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|#\\)\\|\\(\\C\\%(\\d\\+)\\|\\d\\+\\.\\|[ivxlcdm]\\+)\\|[IVXLCDM]\\+)\\|\\l\\{1,2})\\|\\u\\{1,2})\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
+set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|+\\)\\|\\(\\C\\%(\\d\\+\\.\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 set helplang=fr
 set ignorecase
 set incsearch
 set printoptions=paper:a4
 set ruler
-set runtimepath=~/.vim,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim/plugged/vimwiki/,~/.vim/plugged/vim-instant-markdown/,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/vim-instant-markdown/after,~/.vim/after
+set runtimepath=~/.vim,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim/plugged/vimwiki/,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set smartcase
 set splitbelow
 set splitright
@@ -70,16 +69,17 @@ set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/semantique/Cours
+cd ~/projet/semcours
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 note.md
+badd +38 note.md
+badd +0 ~/projet/semcours/syntaxe.md
 argglobal
 silent! argdel *
 $argadd note.md
-edit note.md
+edit ~/projet/semcours/syntaxe.md
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -103,6 +103,7 @@ inoremap <buffer> ééim ![](images/num.png)^<Right>a
 inoremap <buffer> éél :let liste= ListeMode(liste)
 inoremap <buffer> ééd \begin{tikzpicture}\end{tikzpicture}
 inoremap <buffer> ééta :call MarkdownLigne()
+inoremap <buffer> ééss I#### 
 inoremap <buffer> éés I## 
 inoremap <buffer> ééti # 
 inoremap <buffer> ééit __<Left>
@@ -130,18 +131,10 @@ vnoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
 onoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
 nnoremap <buffer> gww :VimwikiTableAlignW
 nnoremap <buffer> gqq :VimwikiTableAlignQ
-noremap <buffer> <silent> gLA :VimwikiChangeSymbolInListTo A)
-noremap <buffer> <silent> glA :VimwikiChangeSymbolTo A)
-noremap <buffer> <silent> gLa :VimwikiChangeSymbolInListTo a)
-noremap <buffer> <silent> gla :VimwikiChangeSymbolTo a)
-noremap <buffer> <silent> gLI :VimwikiChangeSymbolInListTo I)
-noremap <buffer> <silent> glI :VimwikiChangeSymbolTo I)
-noremap <buffer> <silent> gLi :VimwikiChangeSymbolInListTo i)
-noremap <buffer> <silent> gli :VimwikiChangeSymbolTo i)
 noremap <buffer> <silent> gL1 :VimwikiChangeSymbolInListTo 1.
 noremap <buffer> <silent> gl1 :VimwikiChangeSymbolTo 1.
-noremap <buffer> <silent> gL# :VimwikiChangeSymbolInListTo #
-noremap <buffer> <silent> gl# :VimwikiChangeSymbolTo #
+noremap <buffer> <silent> gL+ :VimwikiChangeSymbolInListTo +
+noremap <buffer> <silent> gl+ :VimwikiChangeSymbolTo +
 noremap <buffer> <silent> gL* :VimwikiChangeSymbolInListTo *
 noremap <buffer> <silent> gl* :VimwikiChangeSymbolTo *
 noremap <buffer> <silent> gL- :VimwikiChangeSymbolInListTo -
@@ -194,6 +187,7 @@ nmap <buffer> <silent> <BS> <Plug>VimwikiGoBackLink
 nmap <buffer> <silent> <C-S-CR> <Plug>VimwikiTabnewLink
 nmap <buffer> <silent> <C-CR> <Plug>VimwikiVSplitLink
 nmap <buffer> <silent> <S-CR> <Plug>VimwikiSplitLink
+nnoremap <buffer> <F7> :call RunMarkdown3()
 nnoremap <buffer> <F6> :call RunMarkdown2()
 nnoremap <buffer> <F5> :let toc= RunMarkdown(toc)
 nnoremap <buffer> <F4> :let toc= Toc(toc)
@@ -205,8 +199,11 @@ imap <buffer> <silent>  <Plug>VimwikiListPrevSymbol
 imap <buffer> <silent> <NL> <Plug>VimwikiListNextSymbol
 inoremap <buffer> <silent>  :VimwikiReturn 1 5
 imap <buffer> <silent>  <Plug>VimwikiIncreaseLvlSingleItem
+nnoremap <buffer> éta :call MarkdownLigne()
 nnoremap <buffer> éb I**A**
 nnoremap <buffer> él :let liste= ListeMode(liste)
+nnoremap <buffer> ésss I#### 
+nnoremap <buffer> éss I### 
 nnoremap <buffer> és I## 
 nnoremap <buffer> ét :call MarkdownTitre()
 let &cpo=s:cpo_save
@@ -261,7 +258,7 @@ setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
 setlocal formatoptions=tqn
-setlocal formatlistpat=^\\s*\\%(\\(-\\|\\*\\|#\\)\\|\\(\\C\\%(\\d\\+)\\|\\d\\+\\.\\|[ivxlcdm]\\+)\\|[IVXLCDM]\\+)\\|\\l\\{1,2})\\|\\u\\{1,2})\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
+setlocal formatlistpat=^\\s*\\%(\\(-\\|\\*\\|+\\)\\|\\(\\C\\%(\\d\\+\\.\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
@@ -314,7 +311,7 @@ setlocal syntax=vimwiki
 endif
 setlocal tabstop=8
 setlocal tagcase=
-setlocal tags=./tags,./TAGS,tags,TAGS,~/semantique/Cours/.tags
+setlocal tags=./tags,./TAGS,tags,TAGS,~/.tags
 setlocal termkey=
 setlocal termsize=
 setlocal textwidth=0
@@ -326,12 +323,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 18) / 37)
+let s:l = 39 - ((30 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+39
+normal! 045|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

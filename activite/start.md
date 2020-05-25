@@ -4,7 +4,6 @@ Le but de cette documentation est de pouvoir canalyser ma penser et la diriger d
 Voici quelques liens pour commencer:
 [[methodes]]
 [[moi]]
-[[formation]]
 [[motivation]]
 [[sujets_interessants]]
 [[buts]]
