@@ -7,4 +7,6 @@ listes d'idées intéressante
 	* bio-hacking
 	* Choix du conjoint
 	* gestion du temps
+	* Famille
+	* Expérience
 

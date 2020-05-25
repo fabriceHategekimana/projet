@@ -9,5 +9,7 @@ Voici quelques liens pour commencer:
 [[buts]]
 [[news]]
     
-      
+Quel est le but de cette documentation.
+Elle est comme un carnet: le but est de canalyser mes pensés.
+Cette documentation me permet d'enregistrer et de raisonner sur des choses qui sont importantes pour moi.
 
