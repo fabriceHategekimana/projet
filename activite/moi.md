@@ -16,7 +16,7 @@ Manque d'honnêteté
 
 ## Au niveau travail
 stable (porte drapeau)
-intelligence: musical, logique, developpement personnel
+intelligence: musical, logique, développement personnel
 
 Numéro de matricule: 18-304-394
 

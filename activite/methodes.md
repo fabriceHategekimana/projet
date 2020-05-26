@@ -1,4 +1,4 @@
-Methodes
+Méthodes
 ========
 
 Particularité des méthodes. Jusqu'ici, je ne faisait que de trouver des méthodes qui me semblaient "pratiques" et j'essayais de les appliquer dans ma vie de tout les jours. Mais la pratique doit être autre.
