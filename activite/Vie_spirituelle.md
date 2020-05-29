@@ -1,5 +1,5 @@
 
-Le but pour moi est de pouvoir mener une vie pieuse et seraine.
+Le but pour moi est de pouvoir mener une vie pieuse et sereine.
 
 Je veux entrer plus dans l'intimité avec Dieu et connaître d'avantage sa parole.
 

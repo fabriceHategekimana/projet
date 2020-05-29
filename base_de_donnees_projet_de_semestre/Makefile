@@ -1,12 +1,17 @@
+PROJET=project:bd
 
 all: start
  
-start:
+start: FORCE
 	zathura *.pdf & 2>error
-drive:
+drive: FORCE
 	firefoxe https://docs.google.com/document/d/1GzoJ-4iHJGYdfP03uEElUNLmK6EW5qCX-W28ZUE6p-o/edit# &
-task:
+task: FORCE
 	task project:base_de_données
-
-un deux trois:
-	echo "un deux trois"
+addtask: FORCE
+	task add $(ARGS) $(PROJET)
+summary: FORCE
+	task $(PROJET) summary
+task: FORCE
+	task $(PROJET)
+FORCE:

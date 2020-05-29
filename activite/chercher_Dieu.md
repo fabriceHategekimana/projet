@@ -5,13 +5,13 @@ C'est chercher sa présence dans la prière
 Chercher à [connaître](connaître_sa_parole.md) sa personne dans la parole
 
 **Selon sa parole:**
-Chercher Dieu signifie rechercher une vrai **communion**, une communion de coeur permanante avec Dieu:
+Chercher Dieu signifie rechercher une vrai **communion**, une communion de coeur permanente (à voir [communion_permanente](communion_permanente))avec Dieu:
 * Chercher sa grâce (Es 59:2) [[miséricorde]] pardon bienfaisante présence
 * Chercher son [assistance](assistance) (1 Chroniques 16:11)
-* Chercher à deumeurer en Dieu (Jean 15:5) 
+* Chercher à demeurer en Dieu (Jean 15:5) 
 
-Le chercher de tout notre coeur (De 4:29)
-À tous ceux qui le demandent, le Saint Esprit donne une puissante ardeur et une forte sincériter à chercher Dieu
+Le chercher de tout notre cœur (De 4:29)
+À tous ceux qui le demandent, le Saint Esprit donne une puissante ardeur et une forte sincérités à chercher Dieu
 
 Dans l'humilité et la repentance
 * rejet des idoles (ce qui prend la place de Dieu dans notre emploie du temps)

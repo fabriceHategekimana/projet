@@ -14,6 +14,7 @@ nmap <silent> \wi <Plug>VimwikiDiaryIndex
 nmap <silent> \ws <Plug>VimwikiUISelect
 nmap <silent> \wt <Plug>VimwikiTabIndex
 nmap <silent> \ww <Plug>VimwikiIndex
+nnoremap controlv :let collage= Collage(collage)
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
 nnoremap go Go
@@ -22,7 +23,6 @@ nnoremap tn :tabnew .
 nnoremap vp :vsp .
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
-nnoremap <F10> :let collage= Collage(collage)
 nnoremap <F12> :!clear
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :!. ~/sh/images.sh
@@ -67,6 +67,7 @@ set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
+set window=37
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -76,12 +77,15 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +9 start.md
-badd +9 ~/projet/activite/buts.md
-badd +0 ~/projet/activite/Vie_Universitaire.md
+badd +3 ~/projet/activite/buts.md
+badd +7 ~/projet/activite/Vie_spirituelle.md
+badd +8 ~/projet/activite/chercher_Dieu.md
+badd +9 ~/projet/activite/communion_permanente.md
+badd +7 ~/projet/activite/Vie_administrative.md
 argglobal
 silent! argdel *
 $argadd start.md
-edit ~/projet/activite/Vie_Universitaire.md
+edit start.md
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -327,12 +331,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 15 - ((14 * winheight(0) + 18) / 37)
+let s:l = 9 - ((8 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-15
-normal! 010|
+9
+normal! 0
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
