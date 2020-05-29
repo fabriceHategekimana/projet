@@ -12,7 +12,7 @@ Maîtriser les cours:
 [x]ETI
 []Programmation_des_systèmes
 
-La compréhention et l'usage de ses matières doit être lympide pour moi.
+La compréhension et l'usage de ses matières doit être lympide pour moi.
 
 Exemple:
 Je veux étudier un cours, je dois connaître les grands chapitres qui le composent et faire en sorte de les assimilier.
