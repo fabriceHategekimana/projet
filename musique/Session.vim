@@ -39,6 +39,7 @@ inoremap " ""<Left>
 inoremap ((( (A)
 inoremap (( (
 inoremap ( ()<Left>
+vnoremap ét :call Task()
 nnoremap éé "
 nnoremap éo oO
 nnoremap èè :wqall
@@ -70,19 +71,16 @@ set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/projet/activite
+cd ~/projet/musique
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +9 start.md
-badd +10 ~/projet/activite/buts.md
-badd +6 ~/projet/activite/Vie_spirituelle.md
-badd +4 ~/projet/activite/révélation.md
+badd +0 note.md
 argglobal
 silent! argdel *
-$argadd start.md
-edit ~/projet/activite/Vie_spirituelle.md
+$argadd note.md
+edit note.md
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -328,12 +326,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 3 - ((2 * winheight(0) + 18) / 37)
+let s:l = 6 - ((5 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 0153|
+6
+normal! 0
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

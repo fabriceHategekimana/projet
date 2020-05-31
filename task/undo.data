@@ -2192,3 +2192,306 @@ time 1590790748
 old [description:"finir planning de révision" due:"1590790493" entry:"1590790128" modified:"1590790493" status:"pending" uuid:"ac93e1b4-961b-4171-9740-76af6ff19cd7"]
 new [description:"finir planning de révision" due:"1590841148" entry:"1590790128" modified:"1590790748" status:"pending" uuid:"ac93e1b4-961b-4171-9740-76af6ff19cd7"]
 ---
+time 1590877958
+new [description:"un" entry:"1590877958" modified:"1590877958" status:"pending" uuid:"a7984f87-9872-4dee-b501-0bea89543517"]
+---
+time 1590877963
+new [description:"deux" entry:"1590877963" modified:"1590877963" status:"pending" uuid:"0d16ef40-0e3a-4b08-85b8-22a0c5afce2b"]
+---
+time 1590877964
+new [description:"trois" entry:"1590877964" modified:"1590877964" status:"pending" uuid:"f81be4b2-395c-47b4-a2ca-3d4e261b8c4d"]
+---
+time 1590877973
+new [description:"spirituel" due:"1590953657" entry:"1590877973" imask:"8" modified:"1590789547" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"pending" uuid:"1d579b68-97e0-4f99-9efb-d3c4a3bfaed6"]
+---
+time 1590877973
+old [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"+++++++-" modified:"1590789547" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+new [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+---
+time 1590877973
+new [description:"actualiser cours" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789555" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"pending" uuid:"4067c326-5cb8-4cc4-81f5-f2faf3c2e1fa"]
+---
+time 1590877973
+old [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"+++++++-" modified:"1590789555" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+new [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+---
+time 1590877973
+new [description:"rangement" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789559" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"pending" uuid:"e0b8b1e1-9951-48e6-bf80-cfe17fd163a7"]
+---
+time 1590877973
+old [description:"rangement" due:"1590262463" entry:"1589876638" mask:"+++++++-" modified:"1590789559" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+new [description:"rangement" due:"1590262463" entry:"1589876638" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+---
+time 1590877973
+new [description:"news" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789564" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"pending" uuid:"2b85d1db-86d4-4dc6-92e5-d3efb6dcfa64"]
+---
+time 1590877973
+old [description:"news" due:"1590262463" entry:"1589876649" mask:"+++++++-" modified:"1590789564" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+new [description:"news" due:"1590262463" entry:"1589876649" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+---
+time 1590877973
+new [description:"activite" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789573" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"pending" uuid:"d2be1b90-84d0-430c-8a5f-d8a37e3e88fb"]
+---
+time 1590877973
+old [description:"activite" due:"1590262463" entry:"1589876669" mask:"+++++++-" modified:"1590789573" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+new [description:"activite" due:"1590262463" entry:"1589876669" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+---
+time 1590877973
+new [description:"journal" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789573" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"b6ffb309-90f8-4ed5-b7ba-775da772c940"]
+---
+time 1590877973
+old [description:"journal" due:"1590262463" entry:"1589876701" mask:"+++++++-" modified:"1590789573" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+new [description:"journal" due:"1590262463" entry:"1589876701" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+---
+time 1590877973
+new [description:"planning" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789642" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"4099d7e4-96f9-4bd3-8a25-036308872936"]
+---
+time 1590877973
+old [description:"planning" due:"1590262463" entry:"1589876716" mask:"+++++++-" modified:"1590789642" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+new [description:"planning" due:"1590262463" entry:"1589876716" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+---
+time 1590877973
+new [description:"sac" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789642" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"pending" uuid:"24a0b282-5122-40e7-bc6a-5d4e27ba6209"]
+---
+time 1590877973
+old [description:"sac" due:"1590262463" entry:"1589876720" mask:"+++++++-" modified:"1590789642" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+new [description:"sac" due:"1590262463" entry:"1589876720" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+---
+time 1590877973
+new [description:"kinyarwanda" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789642" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"pending" uuid:"ecd65e2c-054b-43ac-8606-e2ba5f347794"]
+---
+time 1590877973
+old [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"+++++++-" modified:"1590789642" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+new [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+---
+time 1590877973
+new [description:"phantsper" due:"1590953663" entry:"1590877973" imask:"8" modified:"1590789642" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"pending" uuid:"566e41a6-e11f-4886-8291-63a0c53a07ca"]
+---
+time 1590877973
+old [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"+++++++-" modified:"1590789642" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+new [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+---
+time 1590878069
+old [description:"un" entry:"1590877958" modified:"1590877958" status:"pending" uuid:"a7984f87-9872-4dee-b501-0bea89543517"]
+new [description:"un" end:"1590878066" entry:"1590877958" modified:"1590878069" status:"completed" uuid:"a7984f87-9872-4dee-b501-0bea89543517"]
+---
+time 1590878069
+old [description:"deux" entry:"1590877963" modified:"1590877963" status:"pending" uuid:"0d16ef40-0e3a-4b08-85b8-22a0c5afce2b"]
+new [description:"deux" end:"1590878069" entry:"1590877963" modified:"1590878069" status:"completed" uuid:"0d16ef40-0e3a-4b08-85b8-22a0c5afce2b"]
+---
+time 1590878069
+old [description:"trois" entry:"1590877964" modified:"1590877964" status:"pending" uuid:"f81be4b2-395c-47b4-a2ca-3d4e261b8c4d"]
+new [description:"trois" end:"1590878069" entry:"1590877964" modified:"1590878069" status:"completed" uuid:"f81be4b2-395c-47b4-a2ca-3d4e261b8c4d"]
+---
+time 1590878660
+new [description:"aller à cash" entry:"1590878660" modified:"1590878660" project:"musique" status:"pending" uuid:"4d2787bf-7e6d-40a7-b629-d3af7320896a"]
+---
+time 1590878680
+old [description:"aller à cash" entry:"1590878660" modified:"1590878660" project:"musique" status:"pending" uuid:"4d2787bf-7e6d-40a7-b629-d3af7320896a"]
+new [description:"aller à cash" end:"1590878680" entry:"1590878660" modified:"1590878680" project:"musique" status:"completed" uuid:"4d2787bf-7e6d-40a7-b629-d3af7320896a"]
+---
+time 1590881603
+new [description:"table de mix 79.-" entry:"1590881603" modified:"1590881603" status:"pending" uuid:"46c3c79d-ba92-474b-97ed-e6f38ed1701f"]
+---
+time 1590881606
+new [description:"2 câble jack 40.-" entry:"1590881606" modified:"1590881606" status:"pending" uuid:"b7eb3938-84c2-46a1-891b-8a629a42d92e"]
+---
+time 1590881715
+old [description:"table de mix 79.-" entry:"1590881603" modified:"1590881603" status:"pending" uuid:"46c3c79d-ba92-474b-97ed-e6f38ed1701f"]
+new [description:"table de mix 79.-" end:"1590881715" entry:"1590881603" modified:"1590881715" status:"completed" uuid:"46c3c79d-ba92-474b-97ed-e6f38ed1701f"]
+---
+time 1590881721
+old [description:"2 câble jack 40.-" entry:"1590881606" modified:"1590881606" status:"pending" uuid:"b7eb3938-84c2-46a1-891b-8a629a42d92e"]
+new [description:"2 câble jack 40.-" end:"1590881721" entry:"1590881606" modified:"1590881721" status:"completed" uuid:"b7eb3938-84c2-46a1-891b-8a629a42d92e"]
+---
+time 1590881881
+new [description:"table de mix 79.-" entry:"1590881881" modified:"1590881881" status:"pending" uuid:"869e53df-ba8f-4cdb-ad41-6833cfb2818c"]
+---
+time 1590881883
+new [description:"2 câble jack 40.-" entry:"1590881883" modified:"1590881883" status:"pending" uuid:"53ec1e8c-3338-41e4-9bdd-d8be32884fd6"]
+---
+time 1590882013
+old [description:"table de mix 79.-" entry:"1590881881" modified:"1590881881" status:"pending" uuid:"869e53df-ba8f-4cdb-ad41-6833cfb2818c"]
+new [description:"table de mix 79.-" end:"1590882013" entry:"1590881881" modified:"1590882013" status:"completed" uuid:"869e53df-ba8f-4cdb-ad41-6833cfb2818c"]
+---
+time 1590882013
+old [description:"2 câble jack 40.-" entry:"1590881883" modified:"1590881883" status:"pending" uuid:"53ec1e8c-3338-41e4-9bdd-d8be32884fd6"]
+new [description:"2 câble jack 40.-" end:"1590882013" entry:"1590881883" modified:"1590882013" status:"completed" uuid:"53ec1e8c-3338-41e4-9bdd-d8be32884fd6"]
+---
+time 1590882048
+new [description:"table de mix 79.-" entry:"1590882048" modified:"1590882048" status:"pending" uuid:"6acf3974-29bb-4682-8d29-dff878a69ca8"]
+---
+time 1590882051
+new [description:"2 câble jack 40.-" entry:"1590882051" modified:"1590882051" status:"pending" uuid:"e916bd5b-f025-456a-b95b-476195404480"]
+---
+time 1590882306
+old [description:"table de mix 79.-" entry:"1590882048" modified:"1590882048" status:"pending" uuid:"6acf3974-29bb-4682-8d29-dff878a69ca8"]
+new [description:"table de mix 79.-" end:"1590882306" entry:"1590882048" modified:"1590882306" status:"completed" uuid:"6acf3974-29bb-4682-8d29-dff878a69ca8"]
+---
+time 1590882306
+old [description:"2 câble jack 40.-" entry:"1590882051" modified:"1590882051" status:"pending" uuid:"e916bd5b-f025-456a-b95b-476195404480"]
+new [description:"2 câble jack 40.-" end:"1590882306" entry:"1590882051" modified:"1590882306" status:"completed" uuid:"e916bd5b-f025-456a-b95b-476195404480"]
+---
+time 1590882367
+new [description:"table de mix 79.-" entry:"1590882367" modified:"1590882367" status:"pending" uuid:"a55c699e-67ef-44ae-b24d-e76644151c31"]
+---
+time 1590882368
+new [description:"2 câble jack 40.-" entry:"1590882368" modified:"1590882368" status:"pending" uuid:"9b78c52f-1b18-4a41-a1e2-9f89618dbb06"]
+---
+time 1590882425
+old [description:"table de mix 79.-" entry:"1590882367" modified:"1590882367" status:"pending" uuid:"a55c699e-67ef-44ae-b24d-e76644151c31"]
+new [description:"table de mix 79.-" end:"1590882425" entry:"1590882367" modified:"1590882425" status:"completed" uuid:"a55c699e-67ef-44ae-b24d-e76644151c31"]
+---
+time 1590882425
+old [description:"2 câble jack 40.-" entry:"1590882368" modified:"1590882368" status:"pending" uuid:"9b78c52f-1b18-4a41-a1e2-9f89618dbb06"]
+new [description:"2 câble jack 40.-" end:"1590882425" entry:"1590882368" modified:"1590882425" status:"completed" uuid:"9b78c52f-1b18-4a41-a1e2-9f89618dbb06"]
+---
+time 1590882473
+new [description:"table de mix 79.-" entry:"1590882473" modified:"1590882473" status:"pending" uuid:"3460abca-0971-42bf-aa08-a246fb1d14e4"]
+---
+time 1590882474
+new [description:"2 câble jack 40.-" entry:"1590882474" modified:"1590882474" status:"pending" uuid:"6da53624-6954-466d-806b-97c8b581246a"]
+---
+time 1590882514
+old [description:"table de mix 79.-" entry:"1590882473" modified:"1590882473" status:"pending" uuid:"3460abca-0971-42bf-aa08-a246fb1d14e4"]
+new [description:"table de mix 79.-" end:"1590882514" entry:"1590882473" modified:"1590882514" status:"completed" uuid:"3460abca-0971-42bf-aa08-a246fb1d14e4"]
+---
+time 1590882514
+old [description:"2 câble jack 40.-" entry:"1590882474" modified:"1590882474" status:"pending" uuid:"6da53624-6954-466d-806b-97c8b581246a"]
+new [description:"2 câble jack 40.-" end:"1590882514" entry:"1590882474" modified:"1590882514" status:"completed" uuid:"6da53624-6954-466d-806b-97c8b581246a"]
+---
+time 1590882550
+new [description:"synthé" entry:"1590882550" modified:"1590882550" project:"achat" status:"pending" uuid:"57dc8a98-9206-4e51-b579-a0084672fab5"]
+---
+time 1590882589
+old [description:"synthé" entry:"1590882550" modified:"1590882550" project:"achat" status:"pending" uuid:"57dc8a98-9206-4e51-b579-a0084672fab5"]
+new [description:"synthé" end:"1590882589" entry:"1590882550" modified:"1590882589" project:"achat" status:"completed" uuid:"57dc8a98-9206-4e51-b579-a0084672fab5"]
+---
+time 1590882687
+new [description:"table de mix 79.-" entry:"1590882687" modified:"1590882687" status:"pending" uuid:"31e124a0-5401-4bd6-99da-032593629809"]
+---
+time 1590882689
+new [description:"2 câble jack 40.-" entry:"1590882689" modified:"1590882689" status:"pending" uuid:"855fcb32-272d-48c6-9915-7c1d59093cc5"]
+---
+time 1590882753
+old [description:"table de mix 79.-" entry:"1590882687" modified:"1590882687" status:"pending" uuid:"31e124a0-5401-4bd6-99da-032593629809"]
+new [description:"table de mix 79.-" end:"1590882753" entry:"1590882687" modified:"1590882753" status:"completed" uuid:"31e124a0-5401-4bd6-99da-032593629809"]
+---
+time 1590882753
+old [description:"2 câble jack 40.-" entry:"1590882689" modified:"1590882689" status:"pending" uuid:"855fcb32-272d-48c6-9915-7c1d59093cc5"]
+new [description:"2 câble jack 40.-" end:"1590882753" entry:"1590882689" modified:"1590882753" status:"completed" uuid:"855fcb32-272d-48c6-9915-7c1d59093cc5"]
+---
+time 1590883352
+new [description:"table de mix 79.-" entry:"1590883352" modified:"1590883352" status:"pending" uuid:"cae958a3-c752-4b57-9a41-7db5f0c91507"]
+---
+time 1590883354
+new [description:"2 câble jack 40.-" entry:"1590883354" modified:"1590883354" status:"pending" uuid:"d1e17260-209e-4ee8-9775-daf9bf43869c"]
+---
+time 1590883394
+old [description:"table de mix 79.-" entry:"1590883352" modified:"1590883352" status:"pending" uuid:"cae958a3-c752-4b57-9a41-7db5f0c91507"]
+new [description:"table de mix 79.-" end:"1590883394" entry:"1590883352" modified:"1590883394" status:"completed" uuid:"cae958a3-c752-4b57-9a41-7db5f0c91507"]
+---
+time 1590883394
+old [description:"2 câble jack 40.-" entry:"1590883354" modified:"1590883354" status:"pending" uuid:"d1e17260-209e-4ee8-9775-daf9bf43869c"]
+new [description:"2 câble jack 40.-" end:"1590883394" entry:"1590883354" modified:"1590883394" status:"completed" uuid:"d1e17260-209e-4ee8-9775-daf9bf43869c"]
+---
+time 1590883504
+old [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+new [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+---
+time 1590883504
+old [description:"spirituel" due:"1590867257" entry:"1590783427" imask:"7" modified:"1590701336" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"pending" uuid:"d7c84d78-4eaa-47c0-9f75-e9d9b6101665"]
+new [description:"spirituel" due:"1590867257" end:"1590883501" entry:"1590783427" imask:"7" modified:"1590883504" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"completed" uuid:"d7c84d78-4eaa-47c0-9f75-e9d9b6101665"]
+---
+time 1590883504
+old [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+new [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+---
+time 1590883504
+old [description:"actualiser cours" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"pending" uuid:"a42d58c8-70c1-4cd6-9e2c-e6ce156f0685"]
+new [description:"actualiser cours" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"completed" uuid:"a42d58c8-70c1-4cd6-9e2c-e6ce156f0685"]
+---
+time 1590883504
+old [description:"rangement" due:"1590262463" entry:"1589876638" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+new [description:"rangement" due:"1590262463" entry:"1589876638" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+---
+time 1590883504
+old [description:"rangement" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590777334" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"pending" uuid:"bb1863e6-bcc6-4027-9d1f-d9577e93ae5f"]
+new [description:"rangement" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"completed" uuid:"bb1863e6-bcc6-4027-9d1f-d9577e93ae5f"]
+---
+time 1590883504
+old [description:"news" due:"1590262463" entry:"1589876649" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+new [description:"news" due:"1590262463" entry:"1589876649" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+---
+time 1590883504
+old [description:"news" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"pending" uuid:"c30bf298-be83-4e8b-ad75-bdb71293fab0"]
+new [description:"news" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"completed" uuid:"c30bf298-be83-4e8b-ad75-bdb71293fab0"]
+---
+time 1590883504
+old [description:"activite" due:"1590262463" entry:"1589876669" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+new [description:"activite" due:"1590262463" entry:"1589876669" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+---
+time 1590883504
+old [description:"activite" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"pending" uuid:"ad7f4ff7-8b00-4372-a228-7aa06d9948f3"]
+new [description:"activite" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"completed" uuid:"ad7f4ff7-8b00-4372-a228-7aa06d9948f3"]
+---
+time 1590883504
+old [description:"journal" due:"1590262463" entry:"1589876701" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+new [description:"journal" due:"1590262463" entry:"1589876701" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+---
+time 1590883504
+old [description:"journal" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"25333318-fc34-4f82-b52d-61a107cd090c"]
+new [description:"journal" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"25333318-fc34-4f82-b52d-61a107cd090c"]
+---
+time 1590883504
+old [description:"planning" due:"1590262463" entry:"1589876716" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+new [description:"planning" due:"1590262463" entry:"1589876716" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+---
+time 1590883504
+old [description:"planning" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"71ca54d7-86ca-43ee-a908-415b60e72252"]
+new [description:"planning" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"71ca54d7-86ca-43ee-a908-415b60e72252"]
+---
+time 1590883504
+old [description:"sac" due:"1590262463" entry:"1589876720" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+new [description:"sac" due:"1590262463" entry:"1589876720" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+---
+time 1590883504
+old [description:"sac" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"pending" uuid:"4f0d1bd9-1cda-465e-a986-e85283e0436a"]
+new [description:"sac" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"completed" uuid:"4f0d1bd9-1cda-465e-a986-e85283e0436a"]
+---
+time 1590883504
+old [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+new [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+---
+time 1590883504
+old [description:"kinyarwanda" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"pending" uuid:"5a683ca9-9c44-4305-82db-27cb9687d0de"]
+new [description:"kinyarwanda" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"completed" uuid:"5a683ca9-9c44-4305-82db-27cb9687d0de"]
+---
+time 1590883504
+old [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"+++++++--" modified:"1590877973" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+new [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"++++++++-" modified:"1590883504" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+---
+time 1590883504
+old [description:"phantsper" due:"1590867263" entry:"1590783427" imask:"7" modified:"1590701336" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"pending" uuid:"10828503-fc37-42f0-9102-b964b74560b2"]
+new [description:"phantsper" due:"1590867263" end:"1590883504" entry:"1590783427" imask:"7" modified:"1590883504" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"completed" uuid:"10828503-fc37-42f0-9102-b964b74560b2"]
+---
+time 1590883543
+old [description:"expliquer taskwarrior" entry:"1590777588" modified:"1590777648" project:"explication" status:"pending" tags:"truc" uuid:"fe0f7295-5d24-4ce0-88b0-cd0b2a6760ee"]
+new [description:"expliquer taskwarrior" end:"1590883543" entry:"1590777588" modified:"1590883543" project:"explication" status:"completed" tags:"truc" uuid:"fe0f7295-5d24-4ce0-88b0-cd0b2a6760ee"]
+---
+time 1590883594
+old [description:"syntaxe abstraite du langage" entry:"1590253605" modified:"1590253605" project:"semtp4" status:"pending" uuid:"d4de1c3b-7370-4d3f-b61e-ba039f15965e"]
+new [description:"syntaxe abstraite du langage" end:"1590883590" entry:"1590253605" modified:"1590883594" project:"semtp4" status:"completed" uuid:"d4de1c3b-7370-4d3f-b61e-ba039f15965e"]
+---
+time 1590883594
+old [description:"syntaxe concrète 2" entry:"1590253732" modified:"1590253732" project:"semtp4" status:"pending" uuid:"2739c3ec-de05-4fb6-a972-9d02ba087836"]
+new [description:"syntaxe concrète 2" end:"1590883594" entry:"1590253732" modified:"1590883594" project:"semtp4" status:"completed" uuid:"2739c3ec-de05-4fb6-a972-9d02ba087836"]
+---
+time 1590883594
+old [description:"syntaxe abstraite 3" entry:"1590253899" modified:"1590253899" project:"semtp4" status:"pending" uuid:"df104690-74c3-4bbb-9d5c-5089d16751e5"]
+new [description:"syntaxe abstraite 3" end:"1590883594" entry:"1590253899" modified:"1590883594" project:"semtp4" status:"completed" uuid:"df104690-74c3-4bbb-9d5c-5089d16751e5"]
+---
+time 1590883594
+old [description:"prolog 3" entry:"1590253921" modified:"1590253921" project:"semtp4" status:"pending" uuid:"a1e8314a-a7ff-4b24-a732-0f378baab4f0"]
+new [description:"prolog 3" end:"1590883594" entry:"1590253921" modified:"1590883594" project:"semtp4" status:"completed" uuid:"a1e8314a-a7ff-4b24-a732-0f378baab4f0"]
+---
