@@ -10,6 +10,8 @@ summary: FORCE
 	task  summary
 task: FORCE
 	task 
+project: FORCE
+	echo $(PROJET)
 FORCE:
 
 
