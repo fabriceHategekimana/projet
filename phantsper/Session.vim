@@ -28,7 +28,7 @@ nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :!. ~/sh/images.sh
 nnoremap <F3> :!ranger
 nnoremap <F1> :call Vimrc()
-inoremap  </><Left>
+inoremap  <><Left>
 inoremap  <><Left>
 inoremap  <Right>
 inoremap  :w
@@ -39,6 +39,7 @@ inoremap " ""<Left>
 inoremap ((( (A)
 inoremap (( (
 inoremap ( ()<Left>
+vnoremap ét :call Task()
 nnoremap éé "
 nnoremap éo oO
 nnoremap èè :wqall
@@ -73,8 +74,6 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +0 Makefile
-badd +41 ~/sh/cours.sh
-badd +1 ~/sh/
 argglobal
 silent! argdel *
 $argadd Makefile
@@ -198,12 +197,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 18) / 37)
+let s:l = 18 - ((17 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 027|
+18
+normal! 04|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

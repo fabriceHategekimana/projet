@@ -1,6 +1,5 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
-<<<<<<< HEAD
 nnoremap  :!. ~/sh/g.sh --new-window  
 nnoremap   .
 nnoremap :w :mks!:w
@@ -29,7 +28,7 @@ nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :!. ~/sh/images.sh
 nnoremap <F3> :!ranger
 nnoremap <F1> :call Vimrc()
-inoremap  </><Left>
+inoremap  <><Left>
 inoremap  <><Left>
 inoremap  <Right>
 inoremap  :w
@@ -40,6 +39,7 @@ inoremap " ""<Left>
 inoremap ((( (A)
 inoremap (( (
 inoremap ( ()<Left>
+vnoremap ét :call Task()
 nnoremap éé "
 nnoremap éo oO
 nnoremap èè :wqall
@@ -52,10 +52,8 @@ inoremap {{ {
 inoremap { {}<Left> 
 let &cpo=s:cpo_save
 unlet s:cpo_save
-set autowriteall
 set backspace=indent,eol,start
 set fileencodings=ucs-bom,utf-8,default,latin1
-set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|+\\)\\|\\(\\C\\%(\\d\\+\\.\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 set helplang=fr
 set ignorecase
 set incsearch
@@ -63,80 +61,157 @@ set printoptions=paper:a4
 set ruler
 set runtimepath=~/.vim,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim/plugged/vimwiki/,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set smartcase
-set spelllang=fr_ch,en_us
 set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
-=======
->>>>>>> 259493f6d30a2333fe9917391913b1925849ecf8
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-silent tabonly
-cd /storage/emulated/0/Download/projet/activite
+cd ~/projet/activite
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-<<<<<<< HEAD
-badd +9 start.md
-badd +10 ~/projet/activite/buts.md
-badd +6 ~/projet/activite/Vie_spirituelle.md
-badd +4 ~/projet/activite/révélation.md
-=======
->>>>>>> 259493f6d30a2333fe9917391913b1925849ecf8
+badd +0 ~/note/journal
 argglobal
-%argdel
-$argadd start.md
-<<<<<<< HEAD
-edit ~/projet/activite/Vie_spirituelle.md
-=======
-edit start.md
->>>>>>> 259493f6d30a2333fe9917391913b1925849ecf8
+silent! argdel *
+$argadd ~/note/journal
+edit ~/note/journal
 set splitbelow splitright
 wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
+set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != ''
+setlocal filetype=
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+set relativenumber
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=8
+setlocal noshortname
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != ''
+setlocal syntax=
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tags=
+setlocal termkey=
+setlocal termsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
 silent! normal! zE
-<<<<<<< HEAD
-let s:l = 3 - ((2 * winheight(0) + 18) / 37)
+let s:l = 595 - ((8 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 0153|
-=======
-let s:l = 5 - ((4 * winheight(0) + 8) / 16)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-5
-normal! 08|
->>>>>>> 259493f6d30a2333fe9917391913b1925849ecf8
+595
+normal! 01089|
 tabnext 1
-badd +5 start.md
-badd +18 /storage/emulated/0/Download/projet/activite/methodes.md
-badd +14 /storage/emulated/0/Download/projet/activite/illusion.md
-if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
+if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 shortmess=filnxtToOS
+set winheight=1 winwidth=20 shortmess=filnxtToO
 set winminheight=1 winminwidth=1
 let s:sx = expand("<sfile>:p:r")."x.vim"
-if filereadable(s:sx)
+if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save

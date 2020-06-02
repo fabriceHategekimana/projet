@@ -5524,3 +5524,343 @@ time 1590962297
 old [description:"ict journal telephone" due:"1590833909" entry:"1590787842" modified:"1590790709" status:"pending" uuid:"818e6ee0-107e-4488-904b-fe67d48d71be"]
 new [description:"ict journal telephone" due:"1590833909" end:"1590962294" entry:"1590787842" modified:"1590962297" status:"deleted" uuid:"818e6ee0-107e-4488-904b-fe67d48d71be"]
 ---
+time 1591003954
+old [description:"pages 1-40" due:"1591040299" entry:"1590784495" modified:"1590957499" project:"programmation_des_systèmes.cours" status:"pending" uuid:"949a3c85-233f-4da0-a160-0e659bcaefec"]
+new [description:"pages 1-40" due:"1591040299" end:"1591003954" entry:"1590784495" modified:"1591003954" project:"programmation_des_systèmes.cours" status:"completed" uuid:"949a3c85-233f-4da0-a160-0e659bcaefec"]
+---
+time 1591006466
+old [description:"pages 1-10" due:"1591040328" entry:"1590785562" modified:"1590957528" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"pending" uuid:"5152ce08-1723-4d0b-bf63-95b0609303c4"]
+new [description:"pages 1-10" due:"1591040328" end:"1591006466" entry:"1590785562" modified:"1591006466" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"completed" uuid:"5152ce08-1723-4d0b-bf63-95b0609303c4"]
+---
+time 1591008784
+old [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"+++++++++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+new [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"++++++++++" modified:"1591008784" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+---
+time 1591008784
+old [description:"spirituel" due:"1591040057" entry:"1590954411" imask:"9" modified:"1590940367" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"pending" uuid:"dabc657d-013e-43b6-97b6-d4cbf1637b2c"]
+new [description:"spirituel" due:"1591040057" end:"1591008784" entry:"1590954411" imask:"9" modified:"1591008784" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"completed" uuid:"dabc657d-013e-43b6-97b6-d4cbf1637b2c"]
+---
+time 1591008816
+old [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+new [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"++++++-+++" modified:"1591008816" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+---
+time 1591008816
+old [description:"actualiser cours" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"pending" uuid:"46f18014-2242-40d8-8b55-a83868bfa68f"]
+new [description:"actualiser cours" due:"1591040063" end:"1591008816" entry:"1590954411" imask:"9" modified:"1591008816" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"completed" uuid:"46f18014-2242-40d8-8b55-a83868bfa68f"]
+---
+time 1591012848
+old [description:"rangement" due:"1590262463" entry:"1589876638" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+new [description:"rangement" due:"1590262463" entry:"1589876638" mask:"++++++-+++" modified:"1591012848" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+---
+time 1591012848
+old [description:"rangement" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"pending" uuid:"6a3711a7-c56b-4e73-88a9-e079fe67f846"]
+new [description:"rangement" due:"1591040063" end:"1591012848" entry:"1590954411" imask:"9" modified:"1591012848" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"completed" uuid:"6a3711a7-c56b-4e73-88a9-e079fe67f846"]
+---
+time 1591013212
+old [description:"news" due:"1590262463" entry:"1589876649" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+new [description:"news" due:"1590262463" entry:"1589876649" mask:"++++++-+++" modified:"1591013212" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+---
+time 1591013212
+old [description:"news" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"pending" uuid:"643b290e-e9c6-49e4-9652-1b0599ced769"]
+new [description:"news" due:"1591040063" end:"1591013212" entry:"1590954411" imask:"9" modified:"1591013212" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"completed" uuid:"643b290e-e9c6-49e4-9652-1b0599ced769"]
+---
+time 1591013784
+old [description:"activite" due:"1590262463" entry:"1589876669" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+new [description:"activite" due:"1590262463" entry:"1589876669" mask:"++++++-+++" modified:"1591013784" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+---
+time 1591013784
+old [description:"activite" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"pending" uuid:"eba681a5-0709-4b4f-b90f-b3f5fd3036a1"]
+new [description:"activite" due:"1591040063" end:"1591013784" entry:"1590954411" imask:"9" modified:"1591013784" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"completed" uuid:"eba681a5-0709-4b4f-b90f-b3f5fd3036a1"]
+---
+time 1591014069
+old [description:"planning" due:"1590262463" entry:"1589876716" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+new [description:"planning" due:"1590262463" entry:"1589876716" mask:"++++++-+++" modified:"1591014069" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+---
+time 1591014069
+old [description:"planning" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"e77bb3a7-8c1b-4b16-b235-81f3c989d3a9"]
+new [description:"planning" due:"1591040063" end:"1591014069" entry:"1590954411" imask:"9" modified:"1591014069" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"e77bb3a7-8c1b-4b16-b235-81f3c989d3a9"]
+---
+time 1591014090
+old [description:"sac" due:"1590262463" entry:"1589876720" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+new [description:"sac" due:"1590262463" entry:"1589876720" mask:"++++++-+++" modified:"1591014090" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+---
+time 1591014090
+old [description:"sac" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"pending" uuid:"7940271e-6847-434d-a639-7cf52b4b8bba"]
+new [description:"sac" due:"1591040063" end:"1591014090" entry:"1590954411" imask:"9" modified:"1591014090" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"completed" uuid:"7940271e-6847-434d-a639-7cf52b4b8bba"]
+---
+time 1591017507
+new [description:"de mon drive au drive du groupe" entry:"1591017507" modified:"1591017507" project:"phantsper" status:"pending" uuid:"9cec3a36-ded1-4a76-92f9-5f1640a45120"]
+---
+time 1591017579
+old [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+new [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"++++++-+++" modified:"1591017579" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+---
+time 1591017579
+old [description:"kinyarwanda" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"pending" uuid:"0671dd62-2038-470b-bc68-8219b68a764c"]
+new [description:"kinyarwanda" due:"1591040063" end:"1591017579" entry:"1590954411" imask:"9" modified:"1591017579" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"completed" uuid:"0671dd62-2038-470b-bc68-8219b68a764c"]
+---
+time 1591017579
+old [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+new [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"++++++-+++" modified:"1591017579" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+---
+time 1591017579
+old [description:"phantsper" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"pending" uuid:"753c9ec1-2c55-4f81-9e34-5a626d76eccf"]
+new [description:"phantsper" due:"1591040063" end:"1591017579" entry:"1590954411" imask:"9" modified:"1591017579" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"completed" uuid:"753c9ec1-2c55-4f81-9e34-5a626d76eccf"]
+---
+time 1591017687
+old [description:"pages 40-80" due:"1591048800" entry:"1590784523" modified:"1590785220" project:"programmation_des_systèmes.cours" status:"pending" uuid:"2798366e-3072-48bb-8681-88e47a9fc294"]
+new [description:"pages 40-80" due:"1590962400" entry:"1590784523" modified:"1591017687" project:"programmation_des_systèmes.cours" status:"pending" uuid:"2798366e-3072-48bb-8681-88e47a9fc294"]
+---
+time 1591017687
+old [description:"pages 10-20" due:"1591048800" entry:"1590785598" modified:"1590786125" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"pending" uuid:"9659a696-7812-4c70-814a-7063d9c3aecf"]
+new [description:"pages 10-20" due:"1590962400" entry:"1590785598" modified:"1591017687" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"pending" uuid:"9659a696-7812-4c70-814a-7063d9c3aecf"]
+---
+time 1591017687
+old [description:"exercices 1 et 2" due:"1591048800" entry:"1590955805" modified:"1590955805" project:"programmation_des_systèmes.exercices" status:"pending" uuid:"cc29fcc3-a249-4900-b63c-1d359e3b31fd"]
+new [description:"exercices 1 et 2" due:"1590962400" entry:"1590955805" modified:"1591017687" project:"programmation_des_systèmes.exercices" status:"pending" uuid:"cc29fcc3-a249-4900-b63c-1d359e3b31fd"]
+---
+time 1591017687
+old [description:"tps 1 et 2" due:"1591048800" entry:"1590955967" modified:"1590955967" project:"programmation_des_systèmes.tps" status:"pending" uuid:"fd3da38c-050e-4810-8ae1-1cffc344b061"]
+new [description:"tps 1 et 2" due:"1590962400" entry:"1590955967" modified:"1591017687" project:"programmation_des_systèmes.tps" status:"pending" uuid:"fd3da38c-050e-4810-8ae1-1cffc344b061"]
+---
+time 1591017687
+old [description:"questions 1 à 4 .questions" due:"1591048800" entry:"1590958450" modified:"1590958683" project:"semantique" status:"pending" uuid:"3b805d1b-c323-45e5-b679-53cce0b12ad7"]
+new [description:"questions 1 à 4 .questions" due:"1590962400" entry:"1590958450" modified:"1591017687" project:"semantique" status:"pending" uuid:"3b805d1b-c323-45e5-b679-53cce0b12ad7"]
+---
+time 1591017687
+old [description:"question 1" due:"1591048800" entry:"1590959860" modified:"1590959860" project:"eti" status:"pending" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+new [description:"question 1" due:"1590962400" entry:"1590959860" modified:"1591017687" project:"eti" status:"pending" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+---
+time 1591017687
+old [description:"séries 1 à 3" due:"1591048800" entry:"1590962114" modified:"1590962114" project:"AN" status:"pending" uuid:"4e397637-7e94-4b48-9658-767d5d1b2d5e"]
+new [description:"séries 1 à 3" due:"1590962400" entry:"1590962114" modified:"1591017687" project:"AN" status:"pending" uuid:"4e397637-7e94-4b48-9658-767d5d1b2d5e"]
+---
+time 1591017773
+new [description:"cash converter Voltaire" due:"1591048800" entry:"1591017773" modified:"1591017773" status:"pending" uuid:"ed3ef6ed-8e83-4139-8471-7d28a6ab060c"]
+---
+time 1591025888
+old [description:"pages 40-80" due:"1590962400" entry:"1590784523" modified:"1591017687" project:"programmation_des_systèmes.cours" status:"pending" uuid:"2798366e-3072-48bb-8681-88e47a9fc294"]
+new [description:"pages 40-80" due:"1590962400" end:"1591025888" entry:"1590784523" modified:"1591025888" project:"programmation_des_systèmes.cours" status:"completed" uuid:"2798366e-3072-48bb-8681-88e47a9fc294"]
+---
+time 1591027198
+old [description:"pages 10-20" due:"1590962400" entry:"1590785598" modified:"1591017687" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"pending" uuid:"9659a696-7812-4c70-814a-7063d9c3aecf"]
+new [description:"pages 10-20" due:"1590962400" end:"1591027198" entry:"1590785598" modified:"1591027198" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"completed" uuid:"9659a696-7812-4c70-814a-7063d9c3aecf"]
+---
+time 1591027580
+old [description:"exercices 1 et 2" due:"1590962400" entry:"1590955805" modified:"1591017687" project:"programmation_des_systèmes.exercices" status:"pending" uuid:"cc29fcc3-a249-4900-b63c-1d359e3b31fd"]
+new [description:"exercices 1 et 2" due:"1590962400" end:"1591027580" entry:"1590955805" modified:"1591027580" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"cc29fcc3-a249-4900-b63c-1d359e3b31fd"]
+---
+time 1591044906
+new [description:"spirituel" due:"1591126457" entry:"1591044906" imask:"10" modified:"1591008784" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"pending" uuid:"b65e7a49-9a1d-4a90-899b-9bf77b05e499"]
+---
+time 1591044906
+old [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"++++++++++" modified:"1591008784" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+new [description:"spirituel" due:"1590262457" entry:"1589876561" mask:"++++++++++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"0cd612cb-5605-4c8a-8ed2-6332c8195861"]
+---
+time 1591044906
+new [description:"actualiser cours" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591008816" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"pending" uuid:"d2c04a19-dc0f-478f-92ee-af24ced5abe0"]
+---
+time 1591044906
+old [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"++++++-+++" modified:"1591008816" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+new [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+---
+time 1591044906
+new [description:"rangement" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591012848" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"pending" uuid:"42949cdc-0c27-470b-b9a9-3a54d4dd549b"]
+---
+time 1591044906
+old [description:"rangement" due:"1590262463" entry:"1589876638" mask:"++++++-+++" modified:"1591012848" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+new [description:"rangement" due:"1590262463" entry:"1589876638" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2"]
+---
+time 1591044906
+new [description:"news" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591013212" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"pending" uuid:"7c99b479-d326-4b40-9814-1b63d74528db"]
+---
+time 1591044906
+old [description:"news" due:"1590262463" entry:"1589876649" mask:"++++++-+++" modified:"1591013212" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+new [description:"news" due:"1590262463" entry:"1589876649" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"85a1355a-fba7-4838-a973-3cdf8a3c2774"]
+---
+time 1591044906
+new [description:"activite" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591013784" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"pending" uuid:"cf5c5a49-e93e-45a7-93fc-bc858d5319e8"]
+---
+time 1591044906
+old [description:"activite" due:"1590262463" entry:"1589876669" mask:"++++++-+++" modified:"1591013784" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+new [description:"activite" due:"1590262463" entry:"1589876669" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a"]
+---
+time 1591044906
+new [description:"journal" due:"1591126463" entry:"1591044906" imask:"10" modified:"1590954411" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"2b08a9d9-b519-48a6-9607-accbda2e11ec"]
+---
+time 1591044906
+old [description:"journal" due:"1590262463" entry:"1589876701" mask:"++++++-++-" modified:"1590954411" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+new [description:"journal" due:"1590262463" entry:"1589876701" mask:"++++++-++--" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+---
+time 1591044906
+new [description:"planning" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591014069" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"34f5b2e9-c865-4163-9ee7-ce13ccc8169e"]
+---
+time 1591044906
+old [description:"planning" due:"1590262463" entry:"1589876716" mask:"++++++-+++" modified:"1591014069" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+new [description:"planning" due:"1590262463" entry:"1589876716" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f"]
+---
+time 1591044906
+new [description:"sac" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591014090" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"pending" uuid:"27b0c49b-9f52-4445-a5a0-a353d21a2d5b"]
+---
+time 1591044906
+old [description:"sac" due:"1590262463" entry:"1589876720" mask:"++++++-+++" modified:"1591014090" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+new [description:"sac" due:"1590262463" entry:"1589876720" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"f0097465-683e-459f-af1f-562c07f8ce86"]
+---
+time 1591044906
+new [description:"kinyarwanda" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591017579" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"pending" uuid:"ac9c4b6b-2b93-4c84-a7ac-dbd400fbd537"]
+---
+time 1591044906
+old [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"++++++-+++" modified:"1591017579" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+new [description:"kinyarwanda" due:"1590262463" entry:"1589876729" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d"]
+---
+time 1591044906
+new [description:"phantsper" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591017579" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"pending" uuid:"63cfdfa1-6148-4e55-9a12-062d2a3c1146"]
+---
+time 1591044906
+old [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"++++++-+++" modified:"1591017579" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+new [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
+---
+time 1591045363
+old [description:"journal" due:"1590262463" entry:"1589876701" mask:"++++++-++--" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+new [description:"journal" due:"1590262463" entry:"1589876701" mask:"++++++-+++-" modified:"1591045363" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"a0726429-4072-46ec-86cf-eba8c2e0a84f"]
+---
+time 1591045363
+old [description:"journal" due:"1591040063" entry:"1590954411" imask:"9" modified:"1590940367" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"pending" uuid:"d8eee3d8-8208-4c52-946a-b8769db5eb17"]
+new [description:"journal" due:"1591040063" end:"1591045363" entry:"1590954411" imask:"9" modified:"1591045363" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"d8eee3d8-8208-4c52-946a-b8769db5eb17"]
+---
+time 1591048454
+old [description:"tps 1 et 2" due:"1590962400" entry:"1590955967" modified:"1591017687" project:"programmation_des_systèmes.tps" status:"pending" uuid:"fd3da38c-050e-4810-8ae1-1cffc344b061"]
+new [description:"tps 1 et 2" due:"1591048800" entry:"1590955967" modified:"1591048454" project:"programmation_des_systèmes.tps" status:"pending" uuid:"fd3da38c-050e-4810-8ae1-1cffc344b061"]
+---
+time 1591048454
+old [description:"questions 1 à 4 .questions" due:"1590962400" entry:"1590958450" modified:"1591017687" project:"semantique" status:"pending" uuid:"3b805d1b-c323-45e5-b679-53cce0b12ad7"]
+new [description:"questions 1 à 4 .questions" due:"1591048800" entry:"1590958450" modified:"1591048454" project:"semantique" status:"pending" uuid:"3b805d1b-c323-45e5-b679-53cce0b12ad7"]
+---
+time 1591048454
+old [description:"question 1" due:"1590962400" entry:"1590959860" modified:"1591017687" project:"eti" status:"pending" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+new [description:"question 1" due:"1591048800" entry:"1590959860" modified:"1591048454" project:"eti" status:"pending" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+---
+time 1591048454
+old [description:"séries 1 à 3" due:"1590962400" entry:"1590962114" modified:"1591017687" project:"AN" status:"pending" uuid:"4e397637-7e94-4b48-9658-767d5d1b2d5e"]
+new [description:"séries 1 à 3" due:"1591048800" entry:"1590962114" modified:"1591048454" project:"AN" status:"pending" uuid:"4e397637-7e94-4b48-9658-767d5d1b2d5e"]
+---
+time 1591048454
+old [description:"journal" due:"1591040063" end:"1591045363" entry:"1590954411" imask:"9" modified:"1591045363" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"d8eee3d8-8208-4c52-946a-b8769db5eb17"]
+new [description:"journal" due:"1591048800" end:"1591045363" entry:"1590954411" imask:"9" modified:"1591048454" parent:"a0726429-4072-46ec-86cf-eba8c2e0a84f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"d8eee3d8-8208-4c52-946a-b8769db5eb17"]
+---
+time 1591048466
+old [description:"exercices 1 et 2" due:"1590962400" end:"1591027580" entry:"1590955805" modified:"1591027580" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"cc29fcc3-a249-4900-b63c-1d359e3b31fd"]
+new [description:"exercices 1 et 2" due:"1591048800" end:"1591027580" entry:"1590955805" modified:"1591048466" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"cc29fcc3-a249-4900-b63c-1d359e3b31fd"]
+---
+time 1591048466
+old [description:"pages 10-20" due:"1590962400" end:"1591027198" entry:"1590785598" modified:"1591027198" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"completed" uuid:"9659a696-7812-4c70-814a-7063d9c3aecf"]
+new [description:"pages 10-20" due:"1591048800" end:"1591027198" entry:"1590785598" modified:"1591048466" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"completed" uuid:"9659a696-7812-4c70-814a-7063d9c3aecf"]
+---
+time 1591048466
+old [description:"pages 40-80" due:"1590962400" end:"1591025888" entry:"1590784523" modified:"1591025888" project:"programmation_des_systèmes.cours" status:"completed" uuid:"2798366e-3072-48bb-8681-88e47a9fc294"]
+new [description:"pages 40-80" due:"1591048800" end:"1591025888" entry:"1590784523" modified:"1591048466" project:"programmation_des_systèmes.cours" status:"completed" uuid:"2798366e-3072-48bb-8681-88e47a9fc294"]
+---
+time 1591048466
+old [description:"kinyarwanda" due:"1591040063" end:"1591017579" entry:"1590954411" imask:"9" modified:"1591017579" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"completed" uuid:"0671dd62-2038-470b-bc68-8219b68a764c"]
+new [description:"kinyarwanda" due:"1591048800" end:"1591017579" entry:"1590954411" imask:"9" modified:"1591048466" parent:"de1074a8-8fc4-4dba-9ba8-21afc8a8e59d" project:"récapitulatif" recur:"daily" status:"completed" uuid:"0671dd62-2038-470b-bc68-8219b68a764c"]
+---
+time 1591048477
+old [description:"phantsper" due:"1591040063" end:"1591017579" entry:"1590954411" imask:"9" modified:"1591017579" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"completed" uuid:"753c9ec1-2c55-4f81-9e34-5a626d76eccf"]
+new [description:"phantsper" due:"1591048800" end:"1591017579" entry:"1590954411" imask:"9" modified:"1591048477" parent:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4" project:"récapitulatif" recur:"daily" status:"completed" uuid:"753c9ec1-2c55-4f81-9e34-5a626d76eccf"]
+---
+time 1591048479
+old [description:"sac" due:"1591040063" end:"1591014090" entry:"1590954411" imask:"9" modified:"1591014090" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"completed" uuid:"7940271e-6847-434d-a639-7cf52b4b8bba"]
+new [description:"sac" due:"1591048800" end:"1591014090" entry:"1590954411" imask:"9" modified:"1591048479" parent:"f0097465-683e-459f-af1f-562c07f8ce86" project:"récapitulatif" recur:"daily" status:"completed" uuid:"7940271e-6847-434d-a639-7cf52b4b8bba"]
+---
+time 1591048480
+old [description:"planning" due:"1591040063" end:"1591014069" entry:"1590954411" imask:"9" modified:"1591014069" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"e77bb3a7-8c1b-4b16-b235-81f3c989d3a9"]
+new [description:"planning" due:"1591048800" end:"1591014069" entry:"1590954411" imask:"9" modified:"1591048480" parent:"9b8adc60-1c3d-4eb9-b825-ccdb076d998f" project:"récapitulatif" recur:"daily" status:"completed" uuid:"e77bb3a7-8c1b-4b16-b235-81f3c989d3a9"]
+---
+time 1591048481
+old [description:"activite" due:"1591040063" end:"1591013784" entry:"1590954411" imask:"9" modified:"1591013784" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"completed" uuid:"eba681a5-0709-4b4f-b90f-b3f5fd3036a1"]
+new [description:"activite" due:"1591048800" end:"1591013784" entry:"1590954411" imask:"9" modified:"1591048481" parent:"94e7675a-47fc-4d1b-a6eb-bf902e54a20a" project:"récapitulatif" recur:"daily" status:"completed" uuid:"eba681a5-0709-4b4f-b90f-b3f5fd3036a1"]
+---
+time 1591048482
+old [description:"news" due:"1591040063" end:"1591013212" entry:"1590954411" imask:"9" modified:"1591013212" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"completed" uuid:"643b290e-e9c6-49e4-9652-1b0599ced769"]
+new [description:"news" due:"1591048800" end:"1591013212" entry:"1590954411" imask:"9" modified:"1591048482" parent:"85a1355a-fba7-4838-a973-3cdf8a3c2774" project:"récapitulatif" recur:"daily" status:"completed" uuid:"643b290e-e9c6-49e4-9652-1b0599ced769"]
+---
+time 1591048483
+old [description:"rangement" due:"1591040063" end:"1591012848" entry:"1590954411" imask:"9" modified:"1591012848" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"completed" uuid:"6a3711a7-c56b-4e73-88a9-e079fe67f846"]
+new [description:"rangement" due:"1591048800" end:"1591012848" entry:"1590954411" imask:"9" modified:"1591048483" parent:"c8a06bf4-accb-4d1e-9631-89de2b3a12b2" project:"récapitulatif" recur:"daily" status:"completed" uuid:"6a3711a7-c56b-4e73-88a9-e079fe67f846"]
+---
+time 1591048484
+old [description:"actualiser cours" due:"1591040063" end:"1591008816" entry:"1590954411" imask:"9" modified:"1591008816" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"completed" uuid:"46f18014-2242-40d8-8b55-a83868bfa68f"]
+new [description:"actualiser cours" due:"1591048800" end:"1591008816" entry:"1590954411" imask:"9" modified:"1591048484" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"completed" uuid:"46f18014-2242-40d8-8b55-a83868bfa68f"]
+---
+time 1591048485
+old [description:"spirituel" due:"1591040057" end:"1591008784" entry:"1590954411" imask:"9" modified:"1591008784" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"completed" uuid:"dabc657d-013e-43b6-97b6-d4cbf1637b2c"]
+new [description:"spirituel" due:"1591048800" end:"1591008784" entry:"1590954411" imask:"9" modified:"1591048485" parent:"0cd612cb-5605-4c8a-8ed2-6332c8195861" project:"récapitulatif" recur:"daily" status:"completed" uuid:"dabc657d-013e-43b6-97b6-d4cbf1637b2c"]
+---
+time 1591048486
+old [description:"pages 1-10" due:"1591040328" end:"1591006466" entry:"1590785562" modified:"1591006466" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"completed" uuid:"5152ce08-1723-4d0b-bf63-95b0609303c4"]
+new [description:"pages 1-10" due:"1591048800" end:"1591006466" entry:"1590785562" modified:"1591048486" project:"programmation_des_systèmes.structure_de_contrôle_en_assembleurs" status:"completed" uuid:"5152ce08-1723-4d0b-bf63-95b0609303c4"]
+---
+time 1591048486
+old [description:"pages 1-40" due:"1591040299" end:"1591003954" entry:"1590784495" modified:"1591003954" project:"programmation_des_systèmes.cours" status:"completed" uuid:"949a3c85-233f-4da0-a160-0e659bcaefec"]
+new [description:"pages 1-40" due:"1591048800" end:"1591003954" entry:"1590784495" modified:"1591048486" project:"programmation_des_systèmes.cours" status:"completed" uuid:"949a3c85-233f-4da0-a160-0e659bcaefec"]
+---
+time 1591048486
+old [description:"exercices 1 et 2" due:"1590962400" end:"1590955767" entry:"1590955677" modified:"1590955769" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"6e864f82-8a44-4dc2-ba7a-f82443b214eb"]
+new [description:"exercices 1 et 2" due:"1591048800" end:"1590955767" entry:"1590955677" modified:"1591048486" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"6e864f82-8a44-4dc2-ba7a-f82443b214eb"]
+---
+time 1591048486
+old [description:"exercices 3 et 4" due:"1590962400" end:"1590955769" entry:"1590955688" modified:"1590955769" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"2f34f5ca-1a34-4ef1-8fbb-60b12fc3e454"]
+new [description:"exercices 3 et 4" due:"1591048800" end:"1590955769" entry:"1590955688" modified:"1591048486" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"2f34f5ca-1a34-4ef1-8fbb-60b12fc3e454"]
+---
+time 1591048486
+old [description:"exercices 5 et 6" due:"1590962400" end:"1590955769" entry:"1590955697" modified:"1590955769" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"091e7ea2-d530-4f86-8670-ca55e0e0fa85"]
+new [description:"exercices 5 et 6" due:"1591048800" end:"1590955769" entry:"1590955697" modified:"1591048486" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"091e7ea2-d530-4f86-8670-ca55e0e0fa85"]
+---
+time 1591048486
+old [description:"exercices 7 et 8" due:"1590962400" end:"1590955769" entry:"1590955708" modified:"1590955769" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"bed8b8ac-974e-47a6-bada-fb508c64cf30"]
+new [description:"exercices 7 et 8" due:"1591048800" end:"1590955769" entry:"1590955708" modified:"1591048486" project:"programmation_des_systèmes.exercices" status:"completed" uuid:"bed8b8ac-974e-47a6-bada-fb508c64cf30"]
+---
+time 1591085866
+old [description:"tps 1 et 2" due:"1591048800" entry:"1590955967" modified:"1591048454" project:"programmation_des_systèmes.tps" status:"pending" uuid:"fd3da38c-050e-4810-8ae1-1cffc344b061"]
+new [description:"tps 1 et 2" due:"1591048800" end:"1591085866" entry:"1590955967" modified:"1591085866" project:"programmation_des_systèmes.tps" status:"completed" uuid:"fd3da38c-050e-4810-8ae1-1cffc344b061"]
+---
+time 1591091182
+old [description:"questions 1 à 4 .questions" due:"1591048800" entry:"1590958450" modified:"1591048454" project:"semantique" status:"pending" uuid:"3b805d1b-c323-45e5-b679-53cce0b12ad7"]
+new [description:"questions 1 à 4 .questions" due:"1591048800" end:"1591091182" entry:"1590958450" modified:"1591091182" project:"semantique" status:"completed" uuid:"3b805d1b-c323-45e5-b679-53cce0b12ad7"]
+---
+time 1591092100
+old [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"++++++-+++-" modified:"1591044906" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+new [description:"actualiser cours" due:"1590262463" entry:"1589876628" mask:"++++++-++++" modified:"1591092100" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"2104d273-df4a-494b-b706-ee6a6ebc4f51"]
+---
+time 1591092100
+old [description:"actualiser cours" due:"1591126463" entry:"1591044906" imask:"10" modified:"1591008816" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"pending" uuid:"d2c04a19-dc0f-478f-92ee-af24ced5abe0"]
+new [description:"actualiser cours" due:"1591126463" end:"1591092100" entry:"1591044906" imask:"10" modified:"1591092100" parent:"2104d273-df4a-494b-b706-ee6a6ebc4f51" project:"récapitulatif" recur:"daily" status:"completed" uuid:"d2c04a19-dc0f-478f-92ee-af24ced5abe0"]
+---
+time 1591092133
+old [description:"cash converter Voltaire" due:"1591048800" entry:"1591017773" modified:"1591017773" status:"pending" uuid:"ed3ef6ed-8e83-4139-8471-7d28a6ab060c"]
+new [description:"cash converter Voltaire" due:"1591567200" entry:"1591017773" modified:"1591092133" status:"pending" uuid:"ed3ef6ed-8e83-4139-8471-7d28a6ab060c"]
+---
+time 1591092151
+old [description:"cash converter Voltaire" due:"1591567200" entry:"1591017773" modified:"1591092133" status:"pending" uuid:"ed3ef6ed-8e83-4139-8471-7d28a6ab060c"]
+new [description:"cash converter Voltaire" due:"1591048800" entry:"1591017773" modified:"1591092151" status:"pending" uuid:"ed3ef6ed-8e83-4139-8471-7d28a6ab060c"]
+---
+time 1591092174
+old [description:"APG à OCAS" due:"1591134585" entry:"1590788178" modified:"1590961785" status:"pending" tags:"administratif" uuid:"2f908219-1651-455c-ae5d-253c5a6c691b"]
+new [description:"APG à OCAS" due:"1591567200" entry:"1590788178" modified:"1591092174" status:"pending" tags:"administratif" uuid:"2f908219-1651-455c-ae5d-253c5a6c691b"]
+---
+time 1591092272
+old [description:"question 1" due:"1591048800" entry:"1590959860" modified:"1591048454" project:"eti" status:"pending" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+new [description:"question 1" due:"1591135200" entry:"1590959860" modified:"1591092272" project:"eti" status:"pending" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+---
+time 1591094418
+new [description:"retirer ADRESSE, LOCALITE et CODE POSTAL du chantier dans LIVRAISONS" entry:"1591094418" modified:"1591094418" project:"bd" status:"pending" uuid:"3e311c90-1946-4f7f-8a05-6f2125791dd8"]
+---
+time 1591094647
+new [description:"nombre_employer calculable par la sgbd pour CHANTIERS" entry:"1591094647" modified:"1591094647" project:"bd" status:"pending" uuid:"cb4c00c0-2c04-470d-93e4-d6e468fa36cd"]
+---
+time 1591094791
+new [description:"adresse localité code postable entièrment éditable textuellement sinon le reste en double click" entry:"1591094791" modified:"1591094791" status:"pending" uuid:"45c8e7b4-c521-4cb5-a4d3-9bd28934b16e"]
+---
+time 1591096585
+new [description:"convertion xlsx en csv" entry:"1591096585" modified:"1591096585" project:"bd" status:"pending" uuid:"ae350869-a07c-4fa4-ba71-6c0eda9f7e74"]
+---
