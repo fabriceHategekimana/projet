@@ -1,6 +1,6 @@
 Le but du jeu est de gagner dans ma vie de tout les jours.
 
-Commment gagner?
+Comment gagner?
 
 1. Réussir dans tout mes domaines
 2. Faire ce que j'aime et qui m'inspire
@@ -8,7 +8,11 @@ Commment gagner?
 **Réussir dans tout mes domaines**
 [[Vie_Universitaire]]
 [[Vie_spirituelle]]
+<<<<<<< HEAD
+[Vie_administrative](Vie_administrative)
+=======
 [[vie_organisationnelle]]
+>>>>>>> 259493f6d30a2333fe9917391913b1925849ecf8
 [[Vie_sociale]]
 
 **Faire ce que j'aime**
