@@ -1,6 +1,9 @@
 Light Motive
 ============
 
+Rwandais
+Noir (je sais que je ne suis pas avantagé de part mon origine)
+
 [[Visionnaire]]
 Entrainé
 Être un [[parent]]

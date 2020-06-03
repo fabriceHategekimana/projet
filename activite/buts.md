@@ -8,11 +8,7 @@ Comment gagner?
 **Réussir dans tout mes domaines**
 [[Vie_Universitaire]]
 [[Vie_spirituelle]]
-<<<<<<< HEAD
 [Vie_administrative](Vie_administrative)
-=======
-[[vie_organisationnelle]]
->>>>>>> 259493f6d30a2333fe9917391913b1925849ecf8
 [[Vie_sociale]]
 
 **Faire ce que j'aime**
