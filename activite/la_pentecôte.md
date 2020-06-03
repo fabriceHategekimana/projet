@@ -1,10 +1,13 @@
 La pentecôte
+
+## Les deux aspects de la pentecôte (2)
 Il y a la pentecôte (l'aspect général)
 Il y a **ta** pentecôte:
-Cela arrive quand le Saint-Esprit rentre en nous
-**L'empowerment**
-Quand le Saint-Esprit nous rempli et nous comble.
-Il nous amène à notre nature de dominance et de pouvoir sur le monde.
+
+## L'empowerment
+Cela arrive quand le Saint-Esprit rentre en nous: 
+Quand le Saint-Esprit nous remplit et nous comble.
+Il nous amène à notre nature de **dominance** et de **pouvoir sur le monde**, car au commencement, Dieu nous avait donné le pouvoir sur le monde.
 Dieu nous est venu pour nous donner la capacité d'être transformé à l'intérieur et à l'extérieur.
 On ne peut plus subir
 

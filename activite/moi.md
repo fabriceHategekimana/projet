@@ -4,6 +4,8 @@ Light Motive
 Rwandais
 Noir (je sais que je ne suis pas avantagé de part mon origine)
 
+Désir d'être accepté
+
 [[Visionnaire]]
 Entrainé
 Être un [[parent]]
@@ -14,8 +16,9 @@ Travailleur
 Conciliant
 
 ## Mes defauts
-Manque d'[[imposition]]
-Manque d'honnêteté
+[trop_gentil](trop_gentil):
+* Manque d'[[imposition]]
+* Manque d'honnêteté
 
 ## Au niveau travail
 stable (porte drapeau)

@@ -6,7 +6,7 @@ Maîtriser les cours:
 
 **Mes cours en deuxième:**
 []Analyse_numérique
-[]Base_de_données
+[x]Base_de_données
 []Sémantique
 [x]CLOO
 [x]ETI
@@ -21,5 +21,6 @@ J'ai un tp difficile, alors je m'interroge (Interogation du canard en plastique)
 Connaître un cours:
 * les chapitres
 * des exemples d'applications
+* pas hésiter à poser des questions
 
 

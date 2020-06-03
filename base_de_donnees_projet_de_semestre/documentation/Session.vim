@@ -1,7 +1,6 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
-nnoremap  :!. ~/sh/g.sh &
-nnoremap  :let collage= Collage(collage)
+nnoremap  :!. ~/sh/g.sh --new-window  
 nnoremap   .
 nnoremap :w :mks!:w
 let s:cpo_save=&cpo
@@ -15,7 +14,7 @@ nmap <silent> \wi <Plug>VimwikiDiaryIndex
 nmap <silent> \ws <Plug>VimwikiUISelect
 nmap <silent> \wt <Plug>VimwikiTabIndex
 nmap <silent> \ww <Plug>VimwikiIndex
-nnoremap count :call Comptage()
+nnoremap controlv :let collage= Collage(collage)
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
 nnoremap go Go
@@ -26,10 +25,10 @@ vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
 nnoremap <F12> :!clear
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
-nnoremap <F8> :~/sh/images.sh
+nnoremap <F8> :!. ~/sh/images.sh
 nnoremap <F3> :!ranger
 nnoremap <F1> :call Vimrc()
-inoremap  </><Left>
+inoremap  <><Left>
 inoremap  <><Left>
 inoremap  <Right>
 inoremap  :w
@@ -40,6 +39,7 @@ inoremap " ""<Left>
 inoremap ((( (A)
 inoremap (( (
 inoremap ( ()<Left>
+vnoremap ét :call Task()
 nnoremap éé "
 nnoremap éo oO
 nnoremap èè :wqall
@@ -55,7 +55,7 @@ unlet s:cpo_save
 set autowriteall
 set backspace=indent,eol,start
 set fileencodings=ucs-bom,utf-8,default,latin1
-set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|#\\)\\|\\(\\C\\%(\\d\\+)\\|\\d\\+\\.\\|[ivxlcdm]\\+)\\|[IVXLCDM]\\+)\\|\\l\\{1,2})\\|\\u\\{1,2})\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
+set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|+\\)\\|\\(\\C\\%(\\d\\+\\.\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 set helplang=fr
 set ignorecase
 set incsearch
@@ -63,11 +63,11 @@ set printoptions=paper:a4
 set ruler
 set runtimepath=~/.vim,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim/plugged/vimwiki/,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set smartcase
+set spelllang=fr_ch,en_us
 set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
-set window=37
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -132,18 +132,10 @@ vnoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
 onoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
 nnoremap <buffer> gww :VimwikiTableAlignW
 nnoremap <buffer> gqq :VimwikiTableAlignQ
-noremap <buffer> <silent> gLA :VimwikiChangeSymbolInListTo A)
-noremap <buffer> <silent> glA :VimwikiChangeSymbolTo A)
-noremap <buffer> <silent> gLa :VimwikiChangeSymbolInListTo a)
-noremap <buffer> <silent> gla :VimwikiChangeSymbolTo a)
-noremap <buffer> <silent> gLI :VimwikiChangeSymbolInListTo I)
-noremap <buffer> <silent> glI :VimwikiChangeSymbolTo I)
-noremap <buffer> <silent> gLi :VimwikiChangeSymbolInListTo i)
-noremap <buffer> <silent> gli :VimwikiChangeSymbolTo i)
 noremap <buffer> <silent> gL1 :VimwikiChangeSymbolInListTo 1.
 noremap <buffer> <silent> gl1 :VimwikiChangeSymbolTo 1.
-noremap <buffer> <silent> gL# :VimwikiChangeSymbolInListTo #
-noremap <buffer> <silent> gl# :VimwikiChangeSymbolTo #
+noremap <buffer> <silent> gL+ :VimwikiChangeSymbolInListTo +
+noremap <buffer> <silent> gl+ :VimwikiChangeSymbolTo +
 noremap <buffer> <silent> gL* :VimwikiChangeSymbolInListTo *
 noremap <buffer> <silent> gl* :VimwikiChangeSymbolTo *
 noremap <buffer> <silent> gL- :VimwikiChangeSymbolInListTo -
@@ -200,7 +192,7 @@ nnoremap <buffer> <F7> :call RunMarkdown3()
 nnoremap <buffer> <F6> :call RunMarkdown2()
 nnoremap <buffer> <F5> :let toc= RunMarkdown(toc)
 nnoremap <buffer> <F4> :let toc= Toc(toc)
-nnoremap <buffer> <F2> :let note= Note(note, "markdown")
+nnoremap <buffer> <F2> :let note= Note("markdown")
 imap <buffer> <silent>  <Plug>VimwikiDecreaseLvlSingleItem
 inoremap <buffer> <expr> 	 vimwiki#tbl#kbd_tab()
 imap <buffer> <silent>  <Plug>VimwikiListToggle
@@ -267,7 +259,7 @@ setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
 setlocal formatoptions=tqn
-setlocal formatlistpat=^\\s*\\%(\\(-\\|\\*\\|#\\)\\|\\(\\C\\%(\\d\\+)\\|\\d\\+\\.\\|[ivxlcdm]\\+)\\|[IVXLCDM]\\+)\\|\\l\\{1,2})\\|\\u\\{1,2})\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
+setlocal formatlistpat=^\\s*\\%(\\(-\\|\\*\\|+\\)\\|\\(\\C\\%(\\d\\+\\.\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
@@ -298,7 +290,8 @@ setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
-setlocal norelativenumber
+set relativenumber
+setlocal relativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
@@ -307,10 +300,11 @@ setlocal noshortname
 setlocal signcolumn=auto
 setlocal nosmartindent
 setlocal softtabstop=0
-setlocal nospell
+set spell
+setlocal spell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
-setlocal spelllang=en
+setlocal spelllang=fr_ch,en_us
 setlocal statusline=
 setlocal suffixesadd=.md
 setlocal swapfile
@@ -320,7 +314,7 @@ setlocal syntax=vimwiki
 endif
 setlocal tabstop=8
 setlocal tagcase=
-setlocal tags=./tags,./TAGS,tags,TAGS,~/projet/base_de_donnees_projet_de_semestre/documentation/.tags
+setlocal tags=./tags,./TAGS,tags,TAGS,~/.tags
 setlocal termkey=
 setlocal termsize=
 setlocal textwidth=0
@@ -332,12 +326,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 14 - ((13 * winheight(0) + 18) / 37)
+let s:l = 10 - ((9 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
-normal! 038|
+10
+normal! 016|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
