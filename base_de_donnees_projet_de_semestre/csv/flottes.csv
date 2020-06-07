@@ -1,0 +1,22 @@
+VEHICULE,MARQUE,MODELE,NBR_PLACES,SUPP_PUB,SUPP_CARGO,ASSURANCE,PLAQUES,LEASING,LIEU_DEPOT,DATE_ACQUISITION
+Cam. À benne C1,Fiat,Ducato,2,non,oui,Casco partiel,GE 123 800,oui,Route des Jeunes 6,2014
+Van B1,Renault,Trafic,6,oui,oui,Casco complet,GE 271 330,oui,Route de Chancy 28,2014
+Van B2,Nissan,Vanette SK,2,non,oui,non,GE 103 922,non,Route des Jeunes 6,1999
+Van B3,Renault,Trafic,5,non,oui,Casco partiel,GE 294 440,oui,Route de Chancy 28,1994
+Van B4,Renault,Master,3,oui,oui,Casco partiel,GE 104 413,non,Route des Jeunes 6,2008
+Van B5,Renault,Trafic,2,oui,oui,Casco complet,GE 093 238,oui,Route de Chancy 28,2011
+Véh. De fct. A1,Dacia,Sandero,5,oui,non,Casco partiel,GE 451 372,non,Chemin de la Bataille 8,2010
+Véh. De fct. A10,Mercedes-Benz,Coupé,5,non,non,Casco complet,VS 136 060,oui,Route de Sion 81,2013
+Véh. De fct. A11,Volkswagen,Tiguan,5,oui,non,Casco complet,GE 021 111,oui,Chemin de l'Aubépine 2,2014
+Véh. De fct. A12,Alfa Romeo,Mito,2,oui,non,non,GE 456 123,non,Chemin de Pré-Gentil 21,2007
+Véh. De fct. A13,Audi,A3 e-tron,5,non,non,non,GE 777 777,non,Avenue de la Cigogne 13A,2013
+Véh. De fct. A14,Citröen,C-ZERO,4,oui,non,Casco complet,GE 012 128,oui,Avenue de Vaudagne 72,2012
+Véh. De fct. A15,Citröen,Jumpy,4,oui,oui,Casco partiel,Ge 512 215,oui,Chemin de Valavran 12,2006
+Véh. De fct. A2,Renault,Espace III,5,non,oui,Casco partiel,GE 237 260,non,Chemin de la Tepp 77,1996
+Véh. De fct. A3,Renault,Mégane,5,non,non,Casco partiel,GE 238 324,non,Chemin Charles-Borgeaud 32,2012
+Véh. De fct. A4,Volkswagen,Combi,3,non,oui,non,GE 420 069,non,Avenue de Vaudagne 72,1997
+Véh. De fct. A5,Renault,Clio V6,5,non,non,Casco partiel,GE 149 313,non,Chemin des Crêts 19,2010
+Véh. De fct. A6,Smart,EQ fortwo Cabrio,2,non,non,Casco complet,GE 619 960,oui,Chemin du Pastel,2013
+Véh. De fct. A7,Lancia,2000 coupé,5,non,non,non,VD 023 761,non,Chemin de l'Aubépine 2,2009
+Véh. De fct. A8,Abarth,Fiat 500,2,non,non,Casco partiel,GE 321 123,oui,Rue du Mont-Blanc 46,2014
+Véh. De fct. A9,Renault,Twizy,2,non,non,non,GE 701 025,non,Rue du Perron 25,2012
