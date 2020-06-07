@@ -17,3 +17,4 @@ La_Bible_dans_l'actuel
 Autres:  
 Chercher sa volonté plutôt que celle des hommes.
 [la_pentecôte](la_pentecôte)
+culte du mercredi 

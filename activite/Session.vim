@@ -68,7 +68,6 @@ set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
-set window=37
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -77,13 +76,15 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +6 start.md
-badd +19 ~/projet/activite/moi.md
-badd +29 ~/projet/activite/trop_gentil.md
+badd +9 start.md
+badd +10 ~/projet/activite/buts.md
+badd +11 ~/projet/activite/Vie_spirituelle.md
+badd +5 ~/projet/activite/chercher_Dieu.md
+badd +1 ~/projet/activite/connaître_sa_parole.md
 argglobal
 silent! argdel *
 $argadd start.md
-edit start.md
+edit ~/projet/activite/chercher_Dieu.md
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -329,12 +330,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 6 - ((5 * winheight(0) + 18) / 37)
+let s:l = 5 - ((4 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
-normal! 0
+5
+normal! 012|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

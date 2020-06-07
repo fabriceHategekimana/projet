@@ -1,8 +1,0 @@
-N°_CHANTIER;ADRESSE;LOCALITE;CODE_POSTAL;DATE_DEBUT;DUREE;NBR_EMPLOYES;Electroménager;Cuisine;Mobilier;ID_EMPLOYES
-A1;Chemin des Mines 2;Genève;1202;14/03/2014;15 semaines;18;oui;oui;non;1,2,3,4,5,6,7,20,9,10,11,12,13,14,15,16,17,18
-A2;Chemin des Crêts 19;Genève;1209;28/08/2014;4 semaines;6;non;oui;oui;23,24,9,12,2,31
-A3;Chemin de Pré-Gentil 78;Satigny;1242;07/07/2014;1 semaine;2;non;non;oui;4,6
-A4;Rue Emma-Kammacher 9;Meyrin;1217;13/09/2014;2 semaines;2;oui;oui;non;7,2
-B1;Sciences III;Genève;1205;02/03/2015;3 semaines;8;non;non;oui;1,2,3,4,5,6,7,21
-B2;Chemin du Pastel 3;Grand-Saconnex;1218;16/11/2015;1 semaine;1;non;non;oui;3
-C1;Chemin du Pastel 3;Grand-Saconnex;1218;04/05/2016;3 semaines;3;non;oui;non;3,7,5
