@@ -4362,3 +4362,4 @@
 {"description":"rafraichissement des livraisons par calendrier","entry":"20200606T003447Z","modified":"20200606T003447Z","project":"bd","status":"pending","uuid":"7d85c838-7c82-4d71-b772-66e1dc3cf611"}
 {"description":"rafraichissement des livraisons par planning","entry":"20200606T003455Z","modified":"20200606T003455Z","project":"bd","status":"pending","uuid":"f254171a-d409-43b7-96bb-1fb7b3a95766"}
 {"description":"rafraichissement des livraisons par semaine","entry":"20200606T003504Z","modified":"20200606T003504Z","project":"bd","status":"pending","uuid":"bbf25385-4f70-4f91-aaee-575666a53d04"}
+{"description":"prévenir tantine et Vestin pour le bapteme","due":"20200609T220000Z","entry":"20200608T082926Z","modified":"20200608T082926Z","status":"pending","uuid":"f8e875cd-d712-4488-92d8-cc794eaae1a5"}

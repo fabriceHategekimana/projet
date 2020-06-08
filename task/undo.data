@@ -15656,3 +15656,6 @@ new [description:"rafraichissement des livraisons par planning" entry:"159140369
 time 1591403704
 new [description:"rafraichissement des livraisons par semaine" entry:"1591403704" modified:"1591403704" project:"bd" status:"pending" uuid:"bbf25385-4f70-4f91-aaee-575666a53d04"]
 ---
+time 1591604966
+new [description:"prévenir tantine et Vestin pour le bapteme" due:"1591740000" entry:"1591604966" modified:"1591604966" status:"pending" uuid:"f8e875cd-d712-4488-92d8-cc794eaae1a5"]
+---

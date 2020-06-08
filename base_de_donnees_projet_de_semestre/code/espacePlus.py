@@ -2,7 +2,7 @@ import xlsxwriter
 import openpyxl
 from pathlib import Path
 import sys
-from PyQt5.QtWidgets import (QWidget, QLabel, QComboBox, QTableWidget, QTableWidgetItem, QApplication, QGridLayout, QAction, QMainWindow, qApp, QPushButton, QDialog, QVBoxLayout, QTextEdit, QHeaderView, QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog, QCalendarWidget
+from PyQt5.QtWidgets import (QWidget, QLabel, QComboBox, QTableWidget, QTableWidgetItem, QApplication, QGridLayout, QAction, QMainWindow, qApp, QPushButton, QDialog, QVBoxLayout, QTextEdit, QHeaderView, QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog, QCalendarWidget, QRadioButton, QListWidget
 )
 from PyQt5.QtGui import QIcon, QPainter, QColor, QPen
 from PyQt5.QtCore import pyqtSlot, Qt, QDate
@@ -114,16 +114,188 @@ class App(QWidget):
         for i in reversed(range(self.layoutMain.count())): 
                 self.layoutMain.itemAt(i).widget().setParent(None)
 
+    def edit_livraison(self):
+        self.fermer_fenetre()
+        item= self.Item
+        if item.row() > 0:
+            self.colonne_a_modifier= self.livraisons.item(0, item.column()).text()
+            if item.column() in [2, 4, 6]:
+                self.editText(self.editText3)
+            elif item.column() == 0:
+                self.edit_liste_table("chantiers", self.edit_liste_chantier)
+            elif item.column() == 1:
+                self.editCalendar(self.editCalendar3)
+            elif item.column() == 3:
+                self.edit_liste_table("flottes", self.edit_flottes)
+            elif item.column() == 5:
+                self.edit_liste_table("fournisseurs", self.edit_fournisseurs)
+
+    def edit_flottes(self, item):
+        self.fermer_fenetre()
+        nouveau= self.liste_table.item(item.row(), 0).text()
+        self.data.modify("update livraisons set "+self.colonne_a_modifier+"='"+nouveau+"' where ID_LIVRAISON='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+
+    def edit_liste_chantier(self, item):
+        self.fermer_fenetre()
+        nouveau= self.liste_table.item(item.row(), 0).text()
+        self.data.modify("update livraisons set "+self.colonne_a_modifier+"='"+nouveau+"' where ID_LIVRAISON='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+
+
+    def edit_fournisseurs(self, item):
+        self.fermer_fenetre()
+        nouveau= self.liste_table.item(item.row(), 1).text()
+        self.data.modify("update livraisons set "+self.colonne_a_modifier+"='"+nouveau+"' where ID_LIVRAISON='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+        
+
+    def edit_liste_table(self, table, callback):
+        tab= self.data.getTab("select * from "+table, True) 
+        self.liste_table= self.table(tab, 1000, 400)
+        self.liste_table.itemDoubleClicked.connect(callback)
+        layout= QGridLayout()
+        layout.addWidget(self.liste_table)
+        self.fenetre(layout, 1050, 450)
+
+    def editCalendar3(self):
+        self.fermer_fenetre()
+        self.data.modify("update livraisons set "+self.colonne_a_modifier+"='"+self.date_retenue+"' where ID_LIVRAISON='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+
+    def editText3(self):
+        self.fermer_fenetre()
+        nouveau= str(self.et.toPlainText())
+        self.data.modify("update livraisons set "+self.colonne_a_modifier+"='"+nouveau+"' where ID_LIVRAISON='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+
+    def edit_chantier(self, item):
+        self.fermer_fenetre()
+        if item.row() > 0:
+            self.colonne_a_modifier= self.table_detail_chantier.item(0, item.column()).text()
+            if item.column() in [1, 2, 3, 5]:
+                self.editText(self.editText2)
+            elif item.column() == 4:
+                self.editCalendar(self.editCalendar2)
+            elif item.column() in [6, 7, 8]:
+                self.binarySwitch(item.text())
+            elif item.column() == 9:
+                self.check_employes(item.text())
+
+    def check_employes(self, text):
+        vbox= QVBoxLayout()
+        self.tabSelected= []
+        if text not in [" ", "-"]:
+            self.tabSelected= text.split(",")
+        tabAll= self.data.getTab("select ID_EMPLOYES from employes", False)
+        tab= []
+        layout= QGridLayout()
+        i=0
+        self.liste = QListWidget()
+        self.liste.setSortingEnabled(True)
+        self.liste.setMaximumWidth(50)
+        self.liste.setMaximumHeight(400)
+        for employe in self.tabSelected:
+            self.liste.insertItem(0, employe[0])
+        tab= self.data.getTab("select * from employes", True)
+        self.table_employe= self.table(tab, 1000, 400)
+        self.table_employe.itemDoubleClicked.connect(self.update_liste_employes)
+        self.Valider= self.initButton("valider", self.save_liste_employes)
+        layout.addWidget(self.liste, 0, 0)
+        layout.addWidget(self.table_employe, 0, 1)
+        layout.addWidget(self.Valider, 1, 1)
+        self.fenetre(layout, 1100, 500)
+
+    def save_liste_employes(self):
+        self.fermer_fenetre()
+        nouveau= ",".join(self.tabSelected)
+        self.data.modify("update chantiers set "+self.colonne_a_modifier+"='"+nouveau+"' where NUM_CHANTIER='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+        self.detail_chantier()
+         
+
+    def update_liste_employes(self, item):
+        self.fermer_fenetre()
+        nouveauID= self.table_employe.item(item.row(), 0).text()
+        if nouveauID in self.tabSelected:
+            self.tabSelected.pop(self.tabSelected.index(nouveauID))
+        else:
+            self.tabSelected.append(nouveauID)
+        self.liste = QListWidget()
+        self.liste.setSortingEnabled(True)
+        self.liste.setMaximumWidth(50)
+        self.liste.setMaximumHeight(400)
+        for employe in self.tabSelected:
+            self.liste.insertItem(0, employe[0])
+        self.Valider= self.initButton("valider", self.save_liste_employes)
+        layout= QGridLayout()
+        layout.addWidget(self.liste, 0, 0)
+        layout.addWidget(self.table_employe, 0, 1)
+        layout.addWidget(self.Valider, 1, 1)
+        self.fenetre(layout, 1100, 500)
+
+          
+    def binarySwitch(self, text):
+        if text == "oui":
+            text= "non"
+        else:
+            text= "oui"
+        self.data.modify("update chantiers set "+self.colonne_a_modifier+"='"+text+"' where NUM_CHANTIER='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+        self.detail_chantier()
+
+    def editCalendar2(self):
+        self.fermer_fenetre()
+        self.data.modify("update chantiers set "+self.colonne_a_modifier+"='"+self.date_retenue+"' where NUM_CHANTIER='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+        self.detail_chantier()
+
+    def set_date_retenue(self, date):
+        self.date_retenue= self.date(date)
+
+    def editCalendar(self, callback):
+        cal= self.get_calendar(200, 200)
+        cal.clicked.connect(self.set_date_retenue)
+        valider= self.initButton("valider", callback)
+        layout= QGridLayout()
+        layout.addWidget(cal, 0, 0)
+        layout.addWidget(valider, 1, 0)
+        self.fenetre(layout, 200, 200)
+
+    def editText2(self):
+        self.fermer_fenetre()
+        nouveau= str(self.et.toPlainText())
+        self.data.modify("update chantiers set "+self.colonne_a_modifier+"='"+nouveau+"' where NUM_CHANTIER='"+self.ID+"'")
+        self.load("tables")
+        self.display()
+        self.detail_chantier()
+
+    def editText(self, callback):
+        layout= self.get_editText(callback)
+        self.fenetre(layout, 200, 200)
+
     def mini_menu_livraison(self, item):
         self.ID= self.livraisons.item(item.row(), 7).text()
+        self.Item= item
         addB= self.initButton("add", self.add_livraison)
         deleteB= self.initButton("delete", self.delete_livraison)
+        editB= self.initButton("edit", self.edit_livraison)
         layout= QGridLayout()
         layout.addWidget(addB, 0, 0)
         layout.addWidget(deleteB, 1, 0)
+        layout.addWidget(editB, 2, 0)
         self.fenetre(layout, 100, 100)
 
     def add_livraison(self):
+        self.fermer_fenetre()
         dic={"A":"B","B":"C","C":"A"}
         #je fais un double pop car la liste est de la forme [[content]]
         lastID= self.data.getTab("select ID_LIVRAISON from livraisons", False).pop().pop()
@@ -142,6 +314,7 @@ class App(QWidget):
         self.display()
 
     def delete_livraison(self):
+        self.fermer_fenetre()
         self.data.modify("delete from livraisons where ID_LIVRAISON='"+self.ID+"'")
         self.load("table")
         self.display()
@@ -158,6 +331,7 @@ class App(QWidget):
         self.fenetre(layout, 100, 100)
 
     def add_chantier(self):
+        self.fermer_fenetre()
         tabAnnee=["A", "B", "C", "D", "E", "F", "G"]
         lettre= tabAnnee[int(self.annee)-2014]
         #je fais un double pop car la liste est de la forme [[content]]
@@ -170,15 +344,18 @@ class App(QWidget):
         self.display()
 
     def delete_chantier(self):
+        self.fermer_fenetre()
         self.data.modify("delete from chantiers where NUM_CHANTIER='"+self.ID+"'")
         self.load("table")
         self.display()
 
     def detail_chantier(self):
+        self.fermer_fenetre()
         tab= self.data.getTab("select * from chantiers where NUM_CHANTIER='"+self.ID+"'", True)
-        table= self.table(tab, 1000, 100)
+        self.table_detail_chantier= self.table(tab, 1000, 100)
         layout= QGridLayout()
-        layout.addWidget(table, 0, 0)
+        layout.addWidget(self.table_detail_chantier, 0, 0)
+        self.table_detail_chantier.itemDoubleClicked.connect(self.edit_chantier)
         self.fenetre(layout, 1050, 150)
 
     def changer_annee(self):
@@ -245,7 +422,8 @@ class App(QWidget):
             semaineDebut= date.weekNumber()[0]-1
             semaineFin=date.addDays(duree*7).weekNumber()[0]-1
             for j in range(semaineDebut, semaineFin):
-                tab.append([i, j])
+                if j < 52:
+                    tab.append([i, j])
             i= i+1
         return tab
 
@@ -358,11 +536,23 @@ class App(QWidget):
         #combobox.currentTextChanged.connect(self.comboSemaine)
 
     def fenetre(self, layoutContenu, largeur, longueur):
-        fenetre = QDialog(self)
-        fenetre.setLayout(layoutContenu)
-        fenetre.setGeometry(100, 100, largeur, longueur)
-        fenetre.setWindowTitle('window')
-        fenetre.exec() 
+        self.fen = QDialog(self)
+        self.fen.setAttribute(Qt.WA_DeleteOnClose)
+        self.fen.setLayout(layoutContenu)
+        self.fen.setGeometry(100, 100, largeur, longueur)
+        self.fen.setWindowTitle('window')
+        self.fen.exec() 
+
+    def fermer_fenetre(self):
+        self.fen.done(0)
+
+    def get_editText(self, callback):
+        self.et= QTextEdit() 
+        valider= self.initButton("valider", callback)
+        box= QGridLayout()
+        box.addWidget(self.et, 0, 0)
+        box.addWidget(valider, 1, 0)
+        return box
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

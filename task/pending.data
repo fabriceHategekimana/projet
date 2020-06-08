@@ -244,3 +244,4 @@
 [description:"rafraichissement des livraisons par calendrier" entry:"1591403687" modified:"1591403687" project:"bd" status:"pending" uuid:"7d85c838-7c82-4d71-b772-66e1dc3cf611"]
 [description:"rafraichissement des livraisons par planning" entry:"1591403695" modified:"1591403695" project:"bd" status:"pending" uuid:"f254171a-d409-43b7-96bb-1fb7b3a95766"]
 [description:"rafraichissement des livraisons par semaine" entry:"1591403704" modified:"1591403704" project:"bd" status:"pending" uuid:"bbf25385-4f70-4f91-aaee-575666a53d04"]
+[description:"prévenir tantine et Vestin pour le bapteme" due:"1591740000" entry:"1591604966" modified:"1591604966" status:"pending" uuid:"f8e875cd-d712-4488-92d8-cc794eaae1a5"]
