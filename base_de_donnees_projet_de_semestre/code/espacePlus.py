@@ -108,7 +108,13 @@ class App(QWidget):
         self.calendrier.clicked.connect(self.jours_livraisons)
         self.combo_annee.currentTextChanged.connect(self.changer_annee)
         self.setLayout(self.layoutMain) 
+        self.synchronisation()
         self.show()
+
+    def synchronisation(self):
+        #première synchro table widget à table bas
+        self.date_haut.horizontalScrollBar().valueChanged.connect(self.planning.horizontalScrollBar().setValue)
+        self.planning.horizontalScrollBar().valueChanged.connect(self.date_haut.horizontalScrollBar().setValue)
 
     def clear(self):
         for i in reversed(range(self.layoutMain.count())): 
@@ -122,13 +128,13 @@ class App(QWidget):
             if item.column() in [2, 4, 6]:
                 self.editText(self.editText3)
             elif item.column() == 0:
-                self.edit_liste_table("chantiers", self.edit_liste_chantier)
+                self.edit_liste_table("chantiers", "where DATE_DEBUT like '%/"+self.annee+"'", self.edit_liste_chantier)
             elif item.column() == 1:
                 self.editCalendar(self.editCalendar3)
             elif item.column() == 3:
-                self.edit_liste_table("flottes", self.edit_flottes)
+                self.edit_liste_table("flottes", "", self.edit_flottes)
             elif item.column() == 5:
-                self.edit_liste_table("fournisseurs", self.edit_fournisseurs)
+                self.edit_liste_table("fournisseurs", "", self.edit_fournisseurs)
 
     def edit_flottes(self, item):
         self.fermer_fenetre()
@@ -144,7 +150,6 @@ class App(QWidget):
         self.load("tables")
         self.display()
 
-
     def edit_fournisseurs(self, item):
         self.fermer_fenetre()
         nouveau= self.liste_table.item(item.row(), 1).text()
@@ -153,8 +158,8 @@ class App(QWidget):
         self.display()
         
 
-    def edit_liste_table(self, table, callback):
-        tab= self.data.getTab("select * from "+table, True) 
+    def edit_liste_table(self, table, where, callback):
+        tab= self.data.getTab("select * from "+table+" "+where, True) 
         self.liste_table= self.table(tab, 1000, 400)
         self.liste_table.itemDoubleClicked.connect(callback)
         layout= QGridLayout()
@@ -359,9 +364,9 @@ class App(QWidget):
 
     def changer_annee(self):
         self.clear()
-        #editText juste en bas
-        #self.annee= str(self.combo_annee.toPlainText())
         self.annee= str(self.combo_annee.currentText())
+        self.calendrier.setMaximumDate(QDate(int(self.annee), 12, 30))
+        self.calendrier.setMinimumDate(QDate(int(self.annee), 1, 1))
         self.load("tables")
         self.display() 
 
