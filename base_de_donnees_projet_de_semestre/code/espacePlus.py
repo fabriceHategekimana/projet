@@ -201,11 +201,32 @@ class App(QWidget):
         self.liste.setMaximumWidth(50)
         self.liste.setMaximumHeight(400)
         for employe in self.tabSelected:
-            self.liste.insertItem(0, employe[0])
+            self.liste.insertItem(0, employe)
         tab= self.data.getTab("select * from employes", True)
         self.table_employe= self.table(tab, 1000, 400)
         self.table_employe.itemDoubleClicked.connect(self.update_liste_employes)
         self.Valider= self.initButton("valider", self.save_liste_employes)
+        layout.addWidget(self.liste, 0, 0)
+        layout.addWidget(self.table_employe, 0, 1)
+        layout.addWidget(self.Valider, 1, 1)
+        self.fenetre(layout, 1100, 500)
+         
+    def update_liste_employes(self, item):
+        self.fermer_fenetre()
+        nouveauID= self.table_employe.item(item.row(), 0).text()
+        print("nouveauID: ",nouveauID)
+        if nouveauID in self.tabSelected:
+            self.tabSelected.pop(self.tabSelected.index(nouveauID))
+        else:
+            self.tabSelected.append(nouveauID)
+        self.liste = QListWidget()
+        self.liste.setSortingEnabled(True)
+        self.liste.setMaximumWidth(50)
+        self.liste.setMaximumHeight(400)
+        for employe in self.tabSelected:
+            self.liste.insertItem(0, employe)
+        self.Valider= self.initButton("valider", self.save_liste_employes)
+        layout= QGridLayout()
         layout.addWidget(self.liste, 0, 0)
         layout.addWidget(self.table_employe, 0, 1)
         layout.addWidget(self.Valider, 1, 1)
@@ -218,28 +239,6 @@ class App(QWidget):
         self.load("tables")
         self.display()
         self.detail_chantier()
-         
-
-    def update_liste_employes(self, item):
-        self.fermer_fenetre()
-        nouveauID= self.table_employe.item(item.row(), 0).text()
-        if nouveauID in self.tabSelected:
-            self.tabSelected.pop(self.tabSelected.index(nouveauID))
-        else:
-            self.tabSelected.append(nouveauID)
-        self.liste = QListWidget()
-        self.liste.setSortingEnabled(True)
-        self.liste.setMaximumWidth(50)
-        self.liste.setMaximumHeight(400)
-        for employe in self.tabSelected:
-            self.liste.insertItem(0, employe[0])
-        self.Valider= self.initButton("valider", self.save_liste_employes)
-        layout= QGridLayout()
-        layout.addWidget(self.liste, 0, 0)
-        layout.addWidget(self.table_employe, 0, 1)
-        layout.addWidget(self.Valider, 1, 1)
-        self.fenetre(layout, 1100, 500)
-
           
     def binarySwitch(self, text):
         if text == "oui":
