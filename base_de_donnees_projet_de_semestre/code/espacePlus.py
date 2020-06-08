@@ -32,6 +32,10 @@ class Data():
             tab.append(list(ligne))
         return tab
 
+    def modify(self, commande):
+        self.c.execute(commande)
+        self.conn.commit()
+
     def importMilitaire(self, lieu):
         self.tabGauche= []
         self.tabCentrale= []
@@ -98,7 +102,9 @@ class App(QWidget):
         self.layoutMain.addWidget(self.livraisons, 3, 1) 
         self.layoutMain.addWidget(self.calendrier, 3, 0) 
         self.layoutMain.addWidget(self.combo_annee, 0, 0) 
-        #Début
+        #Début add_chantier et delete_chantier
+        self.colonne_chantiers.itemDoubleClicked.connect(self.mini_menu_chantier)
+        self.livraisons.itemDoubleClicked.connect(self.mini_menu_livraison)
         self.calendrier.clicked.connect(self.jours_livraisons)
         self.combo_annee.currentTextChanged.connect(self.changer_annee)
         self.setLayout(self.layoutMain) 
@@ -107,6 +113,73 @@ class App(QWidget):
     def clear(self):
         for i in reversed(range(self.layoutMain.count())): 
                 self.layoutMain.itemAt(i).widget().setParent(None)
+
+    def mini_menu_livraison(self, item):
+        self.ID= self.livraisons.item(item.row(), 7).text()
+        addB= self.initButton("add", self.add_livraison)
+        deleteB= self.initButton("delete", self.delete_livraison)
+        layout= QGridLayout()
+        layout.addWidget(addB, 0, 0)
+        layout.addWidget(deleteB, 1, 0)
+        self.fenetre(layout, 100, 100)
+
+    def add_livraison(self):
+        dic={"A":"B","B":"C","C":"A"}
+        #je fais un double pop car la liste est de la forme [[content]]
+        lastID= self.data.getTab("select ID_LIVRAISON from livraisons", False).pop().pop()
+        tab= lastID.split("_")
+        gauche= tab[0]
+        droite= tab[1]
+        #on commence
+        droite= dic[droite]
+        if droite == "A":
+            gauche= str(int(gauche)+1)
+        identifiant= gauche+"_"+droite
+        chaine= "'-','"+self.date_livraison[1]+"','08h00','-','-','-','-','"+identifiant+"'"
+        header= self.data.getTab("select * from livraisons where HEURE='rien'", True)
+        self.data.modify("insert into livraisons ("+",".join(header[0])+") values ("+chaine+")")
+        self.load("table")
+        self.display()
+
+    def delete_livraison(self):
+        self.data.modify("delete from livraisons where ID_LIVRAISON='"+self.ID+"'")
+        self.load("table")
+        self.display()
+
+    def mini_menu_chantier(self, item):
+        self.ID= item.text()
+        addB= self.initButton("add", self.add_chantier)
+        deleteB= self.initButton("delete", self.delete_chantier)
+        detailB= self.initButton("detail", self.detail_chantier)
+        layout= QGridLayout()
+        layout.addWidget(addB, 0, 0)
+        layout.addWidget(deleteB, 1, 0)
+        layout.addWidget(detailB, 2, 0)
+        self.fenetre(layout, 100, 100)
+
+    def add_chantier(self):
+        tabAnnee=["A", "B", "C", "D", "E", "F", "G"]
+        lettre= tabAnnee[int(self.annee)-2014]
+        #je fais un double pop car la liste est de la forme [[content]]
+        num= len(self.data.getTab("select NUM_CHANTIER from chantiers where DATE_DEBUT like '%/"+self.annee+"'", False))+1
+        identifiant= lettre+str(num)
+        chaine= "'"+identifiant+"','-','-','-','01/01/"+self.annee+"','1 semaine','non','non','non','-'"
+        header= self.data.getTab("select * from chantiers where ADRESSE='rien'", True)
+        self.data.modify("insert into chantiers ("+",".join(header[0])+") values ("+chaine+")")
+        self.load("tables")
+        self.display()
+
+    def delete_chantier(self):
+        self.data.modify("delete from chantiers where NUM_CHANTIER='"+self.ID+"'")
+        self.load("table")
+        self.display()
+
+    def detail_chantier(self):
+        tab= self.data.getTab("select * from chantiers where NUM_CHANTIER='"+self.ID+"'", True)
+        table= self.table(tab, 1000, 100)
+        layout= QGridLayout()
+        layout.addWidget(table, 0, 0)
+        self.fenetre(layout, 1050, 150)
 
     def changer_annee(self):
         self.clear()
@@ -156,7 +229,6 @@ class App(QWidget):
         table= self.table(tabFinal, largeur, hauteur)
         return table
           
-
     def get_planning(self, largeur, hauteur):
         tab= self.data.getTab("select DATE_DEBUT,DUREE from chantiers where DATE_DEBUT like '%/"+self.annee+"'", False)
         table= self.creerTable(largeur, hauteur, len(tab), 52)
@@ -176,7 +248,6 @@ class App(QWidget):
                 tab.append([i, j])
             i= i+1
         return tab
-            
 
     def date(self, date):
         if type(date) == str:
@@ -233,6 +304,7 @@ class App(QWidget):
             for i in range(ligneTab):
                 for j in range(colonneTab):
                     table.setItem(i, j, QTableWidgetItem(str(tab[i][j])))
+                    table.item(i, j).setFlags(Qt.ItemIsEnabled)
         return table
 
     def creerTable(self, largeur, hauteur, ligne, colonne):
@@ -250,6 +322,7 @@ class App(QWidget):
         for i in range(ligne):
             for j in range(colonne):
                 tableWidget.setItem(i, j, QTableWidgetItem(" "))
+                tableWidget.item(i, j).setFlags(Qt.ItemIsEnabled)
         return tableWidget
 
     def colorier(self, positions, table, couleur):
@@ -283,6 +356,13 @@ class App(QWidget):
         combobox.addItems(tab)
         return combobox
         #combobox.currentTextChanged.connect(self.comboSemaine)
+
+    def fenetre(self, layoutContenu, largeur, longueur):
+        fenetre = QDialog(self)
+        fenetre.setLayout(layoutContenu)
+        fenetre.setGeometry(100, 100, largeur, longueur)
+        fenetre.setWindowTitle('window')
+        fenetre.exec() 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
