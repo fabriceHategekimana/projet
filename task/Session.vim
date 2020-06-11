@@ -1,6 +1,6 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
-nnoremap  :!. ~/sh/g.sh --new-window  
+nnoremap  :!. ~/sh/g.sh 
 nnoremap   .
 nnoremap :w :mks!:w
 let s:cpo_save=&cpo
@@ -197,11 +197,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 205 - ((17 * winheight(0) + 18) / 37)
+let s:l = 57 - ((18 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-205
+57
 normal! 0
 tabnext 1
 if exists('s:wipebuf')
