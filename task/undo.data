@@ -30851,3 +30851,157 @@ time 1591913522
 old [description:"tps 7" due:"1591308000" entry:"1590955996" modified:"1590955996" project:"programmation_des_systèmes.tps" status:"pending" uuid:"b7442029-7527-43dd-8718-d4fb3f27564b"]
 new [description:"tps 7" due:"1591308000" end:"1591913522" entry:"1590955996" modified:"1591913522" project:"programmation_des_systèmes.tps" status:"completed" uuid:"b7442029-7527-43dd-8718-d4fb3f27564b"]
 ---
+time 1592093634
+old [description:"question 1" due:"1591135200" entry:"1590959860" modified:"1591092272" project:"eti" status:"pending" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+new [description:"question 1" due:"1591135200" end:"1592093632" entry:"1590959860" modified:"1592093634" project:"eti" status:"completed" uuid:"2edc79b0-e85c-42c1-af8d-a4f39ae9a7cb"]
+---
+time 1592093634
+old [description:"question 2" due:"1591135200" entry:"1590959863" modified:"1590959863" project:"eti" status:"pending" uuid:"2a979277-5ca3-417b-bbe0-ad346ceb3ad8"]
+new [description:"question 2" due:"1591135200" end:"1592093634" entry:"1590959863" modified:"1592093634" project:"eti" status:"completed" uuid:"2a979277-5ca3-417b-bbe0-ad346ceb3ad8"]
+---
+time 1592093634
+old [description:"question 3" due:"1591221600" entry:"1590959865" modified:"1590959865" project:"eti" status:"pending" uuid:"9767b81a-9e50-4404-a9cc-48a8a6a91331"]
+new [description:"question 3" due:"1591221600" end:"1592093634" entry:"1590959865" modified:"1592093634" project:"eti" status:"completed" uuid:"9767b81a-9e50-4404-a9cc-48a8a6a91331"]
+---
+time 1592093634
+old [description:"question 4" due:"1591308000" entry:"1590959867" modified:"1590959867" project:"eti" status:"pending" uuid:"804ef073-8a29-42a8-9d2f-90ea9dbd9b4f"]
+new [description:"question 4" due:"1591308000" end:"1592093634" entry:"1590959867" modified:"1592093634" project:"eti" status:"completed" uuid:"804ef073-8a29-42a8-9d2f-90ea9dbd9b4f"]
+---
+time 1592093634
+old [description:"question 5" due:"1591394400" entry:"1590959871" modified:"1590959871" project:"eti" status:"pending" uuid:"5e2e9e08-d280-4972-b578-a3dc6d8bf39a"]
+new [description:"question 5" due:"1591394400" end:"1592093634" entry:"1590959871" modified:"1592093634" project:"eti" status:"completed" uuid:"5e2e9e08-d280-4972-b578-a3dc6d8bf39a"]
+---
+time 1592093634
+old [description:"question 6" due:"1591480800" entry:"1590959873" modified:"1590959873" project:"eti" status:"pending" uuid:"92c655c8-2fa6-49aa-8352-d950b0d59d60"]
+new [description:"question 6" due:"1591480800" end:"1592093634" entry:"1590959873" modified:"1592093634" project:"eti" status:"completed" uuid:"92c655c8-2fa6-49aa-8352-d950b0d59d60"]
+---
+time 1592093634
+old [description:"question 7" due:"1591567200" entry:"1590959876" modified:"1590959876" project:"eti" status:"pending" uuid:"19500e10-9a63-454a-8733-be22b9f6fc90"]
+new [description:"question 7" due:"1591567200" end:"1592093634" entry:"1590959876" modified:"1592093634" project:"eti" status:"completed" uuid:"19500e10-9a63-454a-8733-be22b9f6fc90"]
+---
+time 1592093634
+old [description:"question 8" due:"1591653600" entry:"1590959880" modified:"1590959961" project:"eti" status:"pending" uuid:"6f28df09-07fb-4286-8620-5165f1e04f06"]
+new [description:"question 8" due:"1591653600" end:"1592093634" entry:"1590959880" modified:"1592093634" project:"eti" status:"completed" uuid:"6f28df09-07fb-4286-8620-5165f1e04f06"]
+---
+time 1592093634
+old [description:"question 9" due:"1591740000" entry:"1590959889" modified:"1590959889" project:"eti" status:"pending" uuid:"1ce2c5f7-1430-4ad5-b188-e3abb93a07e4"]
+new [description:"question 9" due:"1591740000" end:"1592093634" entry:"1590959889" modified:"1592093634" project:"eti" status:"completed" uuid:"1ce2c5f7-1430-4ad5-b188-e3abb93a07e4"]
+---
+time 1592093634
+old [description:"question 10" due:"1591826400" entry:"1590959892" modified:"1590959892" project:"eti" status:"pending" uuid:"f11e131f-906f-46c6-9ce5-ca71a5870b91"]
+new [description:"question 10" due:"1591826400" end:"1592093634" entry:"1590959892" modified:"1592093634" project:"eti" status:"completed" uuid:"f11e131f-906f-46c6-9ce5-ca71a5870b91"]
+---
+time 1592093634
+old [description:"question 11" due:"1591912800" entry:"1590959894" modified:"1590959894" project:"eti" status:"pending" uuid:"922960cc-1d26-47d2-b2a9-25a1acdf8d35"]
+new [description:"question 11" due:"1591912800" end:"1592093634" entry:"1590959894" modified:"1592093634" project:"eti" status:"completed" uuid:"922960cc-1d26-47d2-b2a9-25a1acdf8d35"]
+---
+time 1592093634
+old [description:"question 12" due:"1591999200" entry:"1590959898" modified:"1590959898" project:"eti" status:"pending" uuid:"6d7c080c-b78e-466e-9c8a-2e1e559ecd46"]
+new [description:"question 12" due:"1591999200" end:"1592093634" entry:"1590959898" modified:"1592093634" project:"eti" status:"completed" uuid:"6d7c080c-b78e-466e-9c8a-2e1e559ecd46"]
+---
+time 1592093634
+old [description:"question 13" due:"1592085600" entry:"1590959900" modified:"1590959900" project:"eti" status:"pending" uuid:"5b81e2db-b044-4e9f-b96f-4dc50ae66774"]
+new [description:"question 13" due:"1592085600" end:"1592093634" entry:"1590959900" modified:"1592093634" project:"eti" status:"completed" uuid:"5b81e2db-b044-4e9f-b96f-4dc50ae66774"]
+---
+time 1592093634
+old [description:"question 14" due:"1592172000" entry:"1590959902" modified:"1590959902" project:"eti" status:"pending" uuid:"026a069c-073d-4a73-8448-3210890e40d5"]
+new [description:"question 14" due:"1592172000" end:"1592093634" entry:"1590959902" modified:"1592093634" project:"eti" status:"completed" uuid:"026a069c-073d-4a73-8448-3210890e40d5"]
+---
+time 1592093634
+old [description:"question 15" due:"1592258400" entry:"1590959904" modified:"1590959904" project:"eti" status:"pending" uuid:"220fecc5-21bb-4908-b339-f63580733532"]
+new [description:"question 15" due:"1592258400" end:"1592093634" entry:"1590959904" modified:"1592093634" project:"eti" status:"completed" uuid:"220fecc5-21bb-4908-b339-f63580733532"]
+---
+time 1592093634
+old [description:"question 16" due:"1592344800" entry:"1590959906" modified:"1590959906" project:"eti" status:"pending" uuid:"88c652d8-2a07-46af-86ed-d43a23118bfe"]
+new [description:"question 16" due:"1592344800" end:"1592093634" entry:"1590959906" modified:"1592093634" project:"eti" status:"completed" uuid:"88c652d8-2a07-46af-86ed-d43a23118bfe"]
+---
+time 1592093634
+old [description:"question 17" due:"1592431200" entry:"1590959908" modified:"1590959908" project:"eti" status:"pending" uuid:"96233071-39c3-4076-9942-ef977eb16127"]
+new [description:"question 17" due:"1592431200" end:"1592093634" entry:"1590959908" modified:"1592093634" project:"eti" status:"completed" uuid:"96233071-39c3-4076-9942-ef977eb16127"]
+---
+time 1592093634
+old [description:"question 18" due:"1592517600" entry:"1590959909" modified:"1590959909" project:"eti" status:"pending" uuid:"de6a6e77-d29e-4acf-b814-d5fb9d7355b1"]
+new [description:"question 18" due:"1592517600" end:"1592093634" entry:"1590959909" modified:"1592093634" project:"eti" status:"completed" uuid:"de6a6e77-d29e-4acf-b814-d5fb9d7355b1"]
+---
+time 1592093793
+old [description:"Le modèle relationnel" entry:"1590006390" modified:"1590006390" project:"base_de_données" status:"pending" uuid:"ec669328-7767-4be1-afa4-6245572cd2bb"]
+new [description:"Le modèle relationnel" end:"1592093791" entry:"1590006390" modified:"1592093793" project:"base_de_données" status:"completed" uuid:"ec669328-7767-4be1-afa4-6245572cd2bb"]
+---
+time 1592093793
+old [description:"Algèbre relationnelle" entry:"1590006413" modified:"1590006413" project:"base_de_données" status:"pending" uuid:"00cb36e9-0cbc-4dbf-a778-4c4a06d13645"]
+new [description:"Algèbre relationnelle" end:"1592093793" entry:"1590006413" modified:"1592093793" project:"base_de_données" status:"completed" uuid:"00cb36e9-0cbc-4dbf-a778-4c4a06d13645"]
+---
+time 1592093793
+old [description:"Le langage SQL" entry:"1590006426" modified:"1590006426" project:"base_de_données" status:"pending" uuid:"bd323aac-383f-492d-862c-2f06cbdd7346"]
+new [description:"Le langage SQL" end:"1592093793" entry:"1590006426" modified:"1592093793" project:"base_de_données" status:"completed" uuid:"bd323aac-383f-492d-862c-2f06cbdd7346"]
+---
+time 1592093793
+old [description:"Les vue" entry:"1590006435" modified:"1590006435" project:"base_de_données" status:"pending" uuid:"b8878ab8-ddd3-46eb-a3df-55af8b5b305d"]
+new [description:"Les vue" end:"1592093793" entry:"1590006435" modified:"1592093793" project:"base_de_données" status:"completed" uuid:"b8878ab8-ddd3-46eb-a3df-55af8b5b305d"]
+---
+time 1592093793
+old [description:"Les formes normales et la normalisation" entry:"1590006459" modified:"1590006459" project:"base_de_données" status:"pending" uuid:"b5a13fec-6ff8-4755-aa48-3538458742f6"]
+new [description:"Les formes normales et la normalisation" end:"1592093793" entry:"1590006459" modified:"1592093793" project:"base_de_données" status:"completed" uuid:"b5a13fec-6ff8-4755-aa48-3538458742f6"]
+---
+time 1592093793
+old [description:"Les transactions" entry:"1590006476" modified:"1590006476" project:"base_de_données" status:"pending" uuid:"9f0c3440-4fe6-4f61-aacf-679b685a0eff"]
+new [description:"Les transactions" end:"1592093793" entry:"1590006476" modified:"1592093793" project:"base_de_données" status:"completed" uuid:"9f0c3440-4fe6-4f61-aacf-679b685a0eff"]
+---
+time 1592093973
+old [description:"APG à OCAS" due:"1591567200" entry:"1590788178" modified:"1591092174" status:"pending" tags:"administratif" uuid:"2f908219-1651-455c-ae5d-253c5a6c691b"]
+new [description:"APG à OCAS" due:"1592776800" entry:"1590788178" modified:"1592093973" status:"pending" tags:"administratif" uuid:"2f908219-1651-455c-ae5d-253c5a6c691b"]
+---
+time 1592094008
+old [description:"prévenir tantine et Vestin pour le bapteme" due:"1591740000" entry:"1591604966" modified:"1591604966" status:"pending" uuid:"f8e875cd-d712-4488-92d8-cc794eaae1a5"]
+new [description:"prévenir tantine et Vestin pour le bapteme" due:"1592776800" entry:"1591604966" modified:"1592094008" status:"pending" uuid:"f8e875cd-d712-4488-92d8-cc794eaae1a5"]
+---
+time 1592094075
+old [description:"examen de base de données" due:"1590616800" entry:"1590358677" modified:"1590358677" status:"pending" uuid:"7189817e-875b-4976-85bb-942daedf38c2"]
+new [description:"examen de base de données" due:"1590616800" end:"1592094072" entry:"1590358677" modified:"1592094075" status:"completed" uuid:"7189817e-875b-4976-85bb-942daedf38c2"]
+---
+time 1592094075
+old [description:"rendre projet base de données" due:"1590962400" entry:"1590358914" modified:"1590358954" status:"pending" uuid:"99648445-fcc9-4922-bd2c-08840da7bf3e"]
+new [description:"rendre projet base de données" due:"1590962400" end:"1592094075" entry:"1590358914" modified:"1592094075" status:"completed" uuid:"99648445-fcc9-4922-bd2c-08840da7bf3e"]
+---
+time 1592094075
+old [description:"rendre analyse tp11" due:"1590616800" entry:"1590359506" modified:"1590359506" status:"pending" uuid:"e6bc96fd-334d-48f3-b237-b96456f3bc45"]
+new [description:"rendre analyse tp11" due:"1590616800" end:"1592094075" entry:"1590359506" modified:"1592094075" status:"completed" uuid:"e6bc96fd-334d-48f3-b237-b96456f3bc45"]
+---
+time 1592094075
+old [description:"rendre projet base de données" due:"1590962400" end:"1592094075" entry:"1590358914" modified:"1592094075" status:"completed" uuid:"99648445-fcc9-4922-bd2c-08840da7bf3e"]
+new [description:"rendre projet base de données" due:"1591567200" end:"1592094075" entry:"1590358914" modified:"1592094075" status:"completed" uuid:"99648445-fcc9-4922-bd2c-08840da7bf3e"]
+---
+time 1592094075
+old [description:"cash converter Voltaire" due:"1591048800" entry:"1591017773" modified:"1591092151" status:"pending" uuid:"ed3ef6ed-8e83-4139-8471-7d28a6ab060c"]
+new [description:"cash converter Voltaire" due:"1591048800" end:"1592094075" entry:"1591017773" modified:"1592094075" status:"completed" uuid:"ed3ef6ed-8e83-4139-8471-7d28a6ab060c"]
+---
+time 1592094093
+old [description:"questions 5 à 6 .questions" due:"1591135200" entry:"1590958484" modified:"1590958683" project:"semantique" status:"pending" uuid:"5cf6a992-bd39-42bc-8c6c-0183650629ff"]
+new [description:"questions 5 à 6 .questions" due:"1591135200" end:"1592094091" entry:"1590958484" modified:"1592094093" project:"semantique" status:"completed" uuid:"5cf6a992-bd39-42bc-8c6c-0183650629ff"]
+---
+time 1592094093
+old [description:"questions 9 à 12 .questions" due:"1591221600" entry:"1590958504" modified:"1590958683" project:"semantique" status:"pending" uuid:"c47cb1b5-1ab6-498a-8595-8723a0c6138d"]
+new [description:"questions 9 à 12 .questions" due:"1591221600" end:"1592094093" entry:"1590958504" modified:"1592094093" project:"semantique" status:"completed" uuid:"c47cb1b5-1ab6-498a-8595-8723a0c6138d"]
+---
+time 1592094093
+old [description:"questions 13 à 16 .questions" due:"1591308000" entry:"1590958530" modified:"1590958683" project:"semantique" status:"pending" uuid:"126afdd3-8576-41f2-9732-164db5e65b47"]
+new [description:"questions 13 à 16 .questions" due:"1591308000" end:"1592094093" entry:"1590958530" modified:"1592094093" project:"semantique" status:"completed" uuid:"126afdd3-8576-41f2-9732-164db5e65b47"]
+---
+time 1592094093
+old [description:"questions 17 à 20 .questions" due:"1591394400" entry:"1590958548" modified:"1590958683" project:"semantique" status:"pending" uuid:"aa9cb836-4e20-438b-a134-6bf2b830eb13"]
+new [description:"questions 17 à 20 .questions" due:"1591394400" end:"1592094093" entry:"1590958548" modified:"1592094093" project:"semantique" status:"completed" uuid:"aa9cb836-4e20-438b-a134-6bf2b830eb13"]
+---
+time 1592094093
+old [description:"questions 21 à 23 .questions" due:"1591480800" entry:"1590958558" modified:"1590958683" project:"semantique" status:"pending" uuid:"f6fa50e5-3c4a-4532-973f-6c120188ec7e"]
+new [description:"questions 21 à 23 .questions" due:"1591480800" end:"1592094093" entry:"1590958558" modified:"1592094093" project:"semantique" status:"completed" uuid:"f6fa50e5-3c4a-4532-973f-6c120188ec7e"]
+---
+time 1592094112
+old [description:"rendre projet base de données" due:"1591567200" entry:"1590358914" modified:"1590783533" status:"pending" uuid:"99648445-fcc9-4922-bd2c-08840da7bf3e"]
+new [description:"rendre projet base de données" due:"1591567200" end:"1592094112" entry:"1590358914" modified:"1592094112" status:"completed" uuid:"99648445-fcc9-4922-bd2c-08840da7bf3e"]
+---
+time 1592094213
+new [description:"question copinage" due:"1592085600" entry:"1592094213" modified:"1592094213" status:"pending" uuid:"f2230d97-b162-45f6-8c71-36aabaeeade0"]
+---
+time 1592094232
+new [description:"doodle prière et répétition" due:"1592085600" entry:"1592094232" modified:"1592094232" status:"pending" uuid:"a55cb921-9377-488b-98d0-a3436e80ba14"]
+---

@@ -52,8 +52,10 @@ inoremap {{ {
 inoremap { {}<Left> 
 let &cpo=s:cpo_save
 unlet s:cpo_save
+set autowriteall
 set backspace=indent,eol,start
 set fileencodings=ucs-bom,utf-8,default,latin1
+set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|+\\)\\|\\(\\C\\%(\\d\\+\\.\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 set helplang=fr
 set ignorecase
 set incsearch
@@ -82,12 +84,22 @@ set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+inoremap <buffer> <expr> <S-Tab> vimwiki#tbl#kbd_shift_tab()
+inoremap <buffer> <silent> <S-CR> :VimwikiReturn 2 2
+nmap <buffer> <silent> 	 <Plug>VimwikiNextLink
+vmap <buffer> <silent>  <Plug>VimwikiNormalizeLinkVisualCR
+nmap <buffer> <silent>  <Plug>VimwikiFollowLink
 nnoremap <buffer>  :!. ~/sh/cs.sh
+vmap <buffer> <silent> + <Plug>VimwikiNormalizeLinkVisual
+nmap <buffer> <silent> + <Plug>VimwikiNormalizeLink
+nmap <buffer> <silent> - <Plug>VimwikiRemoveHeaderLevel
+nmap <buffer> <silent> <D-CR> <Plug>VimwikiTabnewLink
+nmap <buffer> <silent> = <Plug>VimwikiAddHeaderLevel
 inoremap <buffer> ééfff \flechel{nom1}{nom2}{label}{angleIn}{angleOut}
 inoremap <buffer> ééff \fleche{nom1}{nom2}{label}
 inoremap <buffer> éér \rectangle{nom}{x}{y}
-let s:cpo_save=&cpo
-set cpo&vim
 inoremap <buffer> ééim ![](images/num.png)^<Right>a
 inoremap <buffer> éél :let liste= ListeMode(liste)
 inoremap <buffer> ééd \begin{tikzpicture}\end{tikzpicture}
@@ -97,11 +109,97 @@ inoremap <buffer> éés I##
 inoremap <buffer> ééti # 
 inoremap <buffer> ééit __<Left>
 inoremap <buffer> ééb ****<Left><Left>
+nnoremap <buffer> <silent> O :call vimwiki#lst#kbd_O()
+nmap <buffer> <silent> [= <Plug>VimwikiGoToPrevSiblingHeader
+nmap <buffer> <silent> [[ <Plug>VimwikiGoToPrevHeader
+nmap <buffer> <silent> [u <Plug>VimwikiGoToParentHeader
+nmap <buffer> <silent> \wr <Plug>VimwikiRenameLink
+nmap <buffer> <silent> \wd <Plug>VimwikiDeleteLink
+nmap <buffer> \whh <Plug>Vimwiki2HTMLBrowse
+nmap <buffer> \wh <Plug>Vimwiki2HTML
+nmap <buffer> <silent> ]= <Plug>VimwikiGoToNextSiblingHeader
+nmap <buffer> <silent> ]] <Plug>VimwikiGoToNextHeader
+nmap <buffer> <silent> ]u <Plug>VimwikiGoToParentHeader
+vnoremap <buffer> <silent> al :call vimwiki#lst#TO_list_item(0, 1)
+onoremap <buffer> <silent> al :call vimwiki#lst#TO_list_item(0, 0)
+vnoremap <buffer> <silent> ac :call vimwiki#base#TO_table_col(0, 1)
+onoremap <buffer> <silent> ac :call vimwiki#base#TO_table_col(0, 0)
+vnoremap <buffer> <silent> a\ :call vimwiki#base#TO_table_cell(0, 1)
+onoremap <buffer> <silent> a\ :call vimwiki#base#TO_table_cell(0, 0)
+vnoremap <buffer> <silent> aH :call vimwiki#base#TO_header(0, 1, v:count1)
+onoremap <buffer> <silent> aH :call vimwiki#base#TO_header(0, 1, v:count1)
+vnoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
+onoremap <buffer> <silent> ah :call vimwiki#base#TO_header(0, 0, v:count1)
+nnoremap <buffer> gww :VimwikiTableAlignW
+nnoremap <buffer> gqq :VimwikiTableAlignQ
+noremap <buffer> <silent> gL1 :VimwikiChangeSymbolInListTo 1.
+noremap <buffer> <silent> gl1 :VimwikiChangeSymbolTo 1.
+noremap <buffer> <silent> gL+ :VimwikiChangeSymbolInListTo +
+noremap <buffer> <silent> gl+ :VimwikiChangeSymbolTo +
+noremap <buffer> <silent> gL* :VimwikiChangeSymbolInListTo *
+noremap <buffer> <silent> gl* :VimwikiChangeSymbolTo *
+noremap <buffer> <silent> gL- :VimwikiChangeSymbolInListTo -
+noremap <buffer> <silent> gl- :VimwikiChangeSymbolTo -
+map <buffer> <silent> gL  <Plug>VimwikiRemoveCBInList
+map <buffer> <silent> gl  <Plug>VimwikiRemoveSingleCB
+map <buffer> <silent> gLL <Plug>VimwikiIncreaseLvlWholeItem
+map <buffer> <silent> gLl <Plug>VimwikiIncreaseLvlWholeItem
+map <buffer> <silent> gLH <Plug>VimwikiDecreaseLvlWholeItem
+map <buffer> <silent> gLh <Plug>VimwikiDecreaseLvlWholeItem
+map <buffer> <silent> gll <Plug>VimwikiIncreaseLvlSingleItem
+map <buffer> <silent> glh <Plug>VimwikiDecreaseLvlSingleItem
+nmap <buffer> <silent> gLR <Plug>VimwikiRenumberAllLists
+nmap <buffer> <silent> gLr <Plug>VimwikiRenumberAllLists
+nmap <buffer> <silent> glr <Plug>VimwikiRenumberList
+vmap <buffer> <silent> glp <Plug>VimwikiDecrementListItem
+nmap <buffer> <silent> glp <Plug>VimwikiDecrementListItem
+vmap <buffer> <silent> gln <Plug>VimwikiIncrementListItem
+nmap <buffer> <silent> gln <Plug>VimwikiIncrementListItem
+vmap <buffer> <silent> glx <Plug>VimwikiToggleRejectedListItem
+nmap <buffer> <silent> glx <Plug>VimwikiToggleRejectedListItem
+vnoremap <buffer> <silent> il :call vimwiki#lst#TO_list_item(1, 1)
+onoremap <buffer> <silent> il :call vimwiki#lst#TO_list_item(1, 0)
+vnoremap <buffer> <silent> ic :call vimwiki#base#TO_table_col(1, 1)
+onoremap <buffer> <silent> ic :call vimwiki#base#TO_table_col(1, 0)
+vnoremap <buffer> <silent> i\ :call vimwiki#base#TO_table_cell(1, 1)
+onoremap <buffer> <silent> i\ :call vimwiki#base#TO_table_cell(1, 0)
+vnoremap <buffer> <silent> iH :call vimwiki#base#TO_header(1, 1, v:count1)
+onoremap <buffer> <silent> iH :call vimwiki#base#TO_header(1, 1, v:count1)
+vnoremap <buffer> <silent> ih :call vimwiki#base#TO_header(1, 0, v:count1)
+onoremap <buffer> <silent> ih :call vimwiki#base#TO_header(1, 0, v:count1)
+nnoremap <buffer> <silent> o :call vimwiki#lst#kbd_o()
+nnoremap <buffer> <silent> <Plug>VimwikiGoToPrevSiblingHeader :call vimwiki#base#goto_sibling(-1)
+nnoremap <buffer> <silent> <Plug>VimwikiGoToNextSiblingHeader :call vimwiki#base#goto_sibling(+1)
+nnoremap <buffer> <silent> <Plug>VimwikiGoToPrevHeader :call vimwiki#base#goto_prev_header()
+nnoremap <buffer> <silent> <Plug>VimwikiGoToNextHeader :call vimwiki#base#goto_next_header()
+nnoremap <buffer> <silent> <Plug>VimwikiGoToParentHeader :call vimwiki#base#goto_parent_header()
+nnoremap <buffer> <silent> <Plug>VimwikiRemoveHeaderLevel :call vimwiki#base#RemoveHeaderLevel()
+nnoremap <buffer> <silent> <Plug>VimwikiAddHeaderLevel :call vimwiki#base#AddHeaderLevel()
+nmap <buffer> <silent> <M-Right> <Plug>VimwikiTableMoveColumnRight
+nmap <buffer> <silent> <M-Left> <Plug>VimwikiTableMoveColumnLeft
+vmap <buffer> <silent> <Nul> <Plug>VimwikiToggleListItem
+nmap <buffer> <silent> <Nul> <Plug>VimwikiToggleListItem
+vmap <buffer> <silent> <C-Space> <Plug>VimwikiToggleListItem
+nmap <buffer> <silent> <C-Space> <Plug>VimwikiToggleListItem
+nmap <buffer> <silent> <C-Up> <Plug>VimwikiDiaryPrevDay
+nmap <buffer> <silent> <C-Down> <Plug>VimwikiDiaryNextDay
+nmap <buffer> <silent> <S-Tab> <Plug>VimwikiPrevLink
+nmap <buffer> <silent> <BS> <Plug>VimwikiGoBackLink
+nmap <buffer> <silent> <C-S-CR> <Plug>VimwikiTabnewLink
+nmap <buffer> <silent> <C-CR> <Plug>VimwikiVSplitLink
+nmap <buffer> <silent> <S-CR> <Plug>VimwikiSplitLink
 nnoremap <buffer> <F7> :call RunMarkdown3()
 nnoremap <buffer> <F6> :call RunMarkdown2()
 nnoremap <buffer> <F5> :let toc= RunMarkdown(toc)
 nnoremap <buffer> <F4> :let toc= Toc(toc)
 nnoremap <buffer> <F2> :let note= Note("markdown")
+imap <buffer> <silent>  <Plug>VimwikiDecreaseLvlSingleItem
+inoremap <buffer> <expr> 	 vimwiki#tbl#kbd_tab()
+imap <buffer> <silent>  <Plug>VimwikiListToggle
+imap <buffer> <silent>  <Plug>VimwikiListPrevSymbol
+imap <buffer> <silent> <NL> <Plug>VimwikiListNextSymbol
+inoremap <buffer> <silent>  :VimwikiReturn 1 5
+imap <buffer> <silent>  <Plug>VimwikiIncreaseLvlSingleItem
 nnoremap <buffer> éta :call MarkdownLigne()
 nnoremap <buffer> éb I**A**
 nnoremap <buffer> él :let liste= ListeMode(liste)
@@ -131,6 +229,7 @@ setlocal comments=fb:*,fb:-,fb:+,n:>
 setlocal commentstring=>\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
+set conceallevel=2
 setlocal conceallevel=0
 setlocal completefunc=
 setlocal nocopyindent
@@ -227,12 +326,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 18) / 37)
+let s:l = 20 - ((13 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 0142|
+20
+normal! 039|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

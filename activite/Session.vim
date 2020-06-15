@@ -1,6 +1,6 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
-nnoremap  :!. ~/sh/g.sh --new-window  
+nnoremap  :!. ~/sh/g.sh 
 nnoremap   .
 nnoremap :w :mks!:w
 let s:cpo_save=&cpo
@@ -76,15 +76,12 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +9 start.md
-badd +10 ~/projet/activite/buts.md
-badd +11 ~/projet/activite/Vie_spirituelle.md
-badd +5 ~/projet/activite/chercher_Dieu.md
-badd +1 ~/projet/activite/connaître_sa_parole.md
+badd +5 start.md
+badd +0 ~/projet/activite/motivation.md
 argglobal
 silent! argdel *
 $argadd start.md
-edit ~/projet/activite/chercher_Dieu.md
+edit ~/projet/activite/motivation.md
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -96,6 +93,7 @@ inoremap <buffer> <silent> <S-CR> :VimwikiReturn 2 2
 nmap <buffer> <silent> 	 <Plug>VimwikiNextLink
 vmap <buffer> <silent>  <Plug>VimwikiNormalizeLinkVisualCR
 nmap <buffer> <silent>  <Plug>VimwikiFollowLink
+nnoremap <buffer>  :!. ~/sh/cs.sh
 vmap <buffer> <silent> + <Plug>VimwikiNormalizeLinkVisual
 nmap <buffer> <silent> + <Plug>VimwikiNormalizeLink
 nmap <buffer> <silent> - <Plug>VimwikiRemoveHeaderLevel
@@ -330,12 +328,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 18) / 37)
+let s:l = 13 - ((12 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 012|
+13
+normal! 022|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
