@@ -31005,3 +31005,39 @@ new [description:"question copinage" due:"1592085600" entry:"1592094213" modifie
 time 1592094232
 new [description:"doodle prière et répétition" due:"1592085600" entry:"1592094232" modified:"1592094232" status:"pending" uuid:"a55cb921-9377-488b-98d0-a3436e80ba14"]
 ---
+time 1592574451
+old [description:"séries 1 à 3" due:"1591048800" entry:"1590962114" modified:"1591048454" project:"AN" status:"pending" uuid:"4e397637-7e94-4b48-9658-767d5d1b2d5e"]
+new [description:"séries 1 à 3" due:"1591048800" end:"1592574445" entry:"1590962114" modified:"1592574451" project:"AN" status:"completed" uuid:"4e397637-7e94-4b48-9658-767d5d1b2d5e"]
+---
+time 1592574451
+old [description:"séries 4 à 6" due:"1591135200" entry:"1590962130" modified:"1590962130" project:"AN" status:"pending" uuid:"2c741b48-7e62-40b1-8aed-f86765cb2462"]
+new [description:"séries 4 à 6" due:"1591135200" end:"1592574451" entry:"1590962130" modified:"1592574451" project:"AN" status:"completed" uuid:"2c741b48-7e62-40b1-8aed-f86765cb2462"]
+---
+time 1592574451
+old [description:"séries 7 à 9" due:"1591221600" entry:"1590962136" modified:"1590962136" project:"AN" status:"pending" uuid:"f7bbe664-b9cf-49cf-aa73-3eb73cfa3529"]
+new [description:"séries 7 à 9" due:"1591221600" end:"1592574451" entry:"1590962136" modified:"1592574451" project:"AN" status:"completed" uuid:"f7bbe664-b9cf-49cf-aa73-3eb73cfa3529"]
+---
+time 1592574451
+old [description:"séries 10 à 12" due:"1591308000" entry:"1590962142" modified:"1590962142" project:"AN" status:"pending" uuid:"5ba6c213-5fa9-4692-a104-df94d507754f"]
+new [description:"séries 10 à 12" due:"1591308000" end:"1592574451" entry:"1590962142" modified:"1592574451" project:"AN" status:"completed" uuid:"5ba6c213-5fa9-4692-a104-df94d507754f"]
+---
+time 1592574451
+old [description:"séries 13 à 14" due:"1591394400" entry:"1590962147" modified:"1590962147" project:"AN" status:"pending" uuid:"2419ba0a-4ea9-4946-85de-8c83edc6100c"]
+new [description:"séries 13 à 14" due:"1591394400" end:"1592574451" entry:"1590962147" modified:"1592574451" project:"AN" status:"completed" uuid:"2419ba0a-4ea9-4946-85de-8c83edc6100c"]
+---
+time 1592574452
+old [description:"séries 16 à 18" due:"1591480800" entry:"1590962162" modified:"1590962162" project:"AN" status:"pending" uuid:"c30c3979-106a-4e43-85b8-9f88826432dc"]
+new [description:"séries 16 à 18" due:"1591480800" end:"1592574452" entry:"1590962162" modified:"1592574452" project:"AN" status:"completed" uuid:"c30c3979-106a-4e43-85b8-9f88826432dc"]
+---
+time 1592574452
+old [description:"séries 19 à 21" due:"1591567200" entry:"1590962170" modified:"1590962170" project:"AN" status:"pending" uuid:"146ef244-2049-4d88-a0d8-1f2d89593a8c"]
+new [description:"séries 19 à 21" due:"1591567200" end:"1592574452" entry:"1590962170" modified:"1592574452" project:"AN" status:"completed" uuid:"146ef244-2049-4d88-a0d8-1f2d89593a8c"]
+---
+time 1592574452
+old [description:"séries 22 à 23" due:"1591653600" entry:"1590962185" modified:"1590962185" project:"AN" status:"pending" uuid:"d7e20887-5977-48e5-aff3-8776179741b0"]
+new [description:"séries 22 à 23" due:"1591653600" end:"1592574452" entry:"1590962185" modified:"1592574452" project:"AN" status:"completed" uuid:"d7e20887-5977-48e5-aff3-8776179741b0"]
+---
+time 1592574482
+old [description:"sémantique 14h00" due:"1592172000" entry:"1590783734" modified:"1590783734" status:"pending" tags:"examen" uuid:"3f8f8a77-e436-40eb-88e9-e8d553dfa002"]
+new [description:"sémantique 14h00" due:"1592172000" end:"1592574482" entry:"1590783734" modified:"1592574482" status:"completed" tags:"examen" uuid:"3f8f8a77-e436-40eb-88e9-e8d553dfa002"]
+---

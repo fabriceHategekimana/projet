@@ -9,7 +9,7 @@ Qu'est-ce qu'une [révélation](révélation)?
 
 Donc:
 [[chercher_Dieu]]
-[connaître_sa_parole](connaître_sa_parole)
+[[[connaître_sa_parole]]](connaître_sa_parole)
 méditer
 La_Bible_dans_l'actuel
 Évangile
