@@ -8714,3 +8714,21 @@
 {"description":"wiki phantsper","end":"20200809T230321Z","entry":"20200529T215337Z","modified":"20200809T230321Z","project":"phantsper","status":"completed","uuid":"72835587-6b8a-4687-8304-ea73853b0ff8"}
 {"description":"de mon drive au drive du groupe","end":"20200809T230321Z","entry":"20200601T131827Z","modified":"20200809T230321Z","project":"phantsper","status":"completed","uuid":"9cec3a36-ded1-4a76-92f9-5f1640a45120"}
 {"description":"adresse localité code postable entièrment éditable textuellement sinon le reste en double click","end":"20200809T230321Z","entry":"20200602T104631Z","modified":"20200809T230321Z","status":"completed","uuid":"45c8e7b4-c521-4cb5-a4d3-9bd28934b16e"}
+{"description":"bureau","entry":"20200810T074313Z","modified":"20200810T074313Z","status":"pending","uuid":"6d0c162f-c4aa-4215-a5a3-7e0a57d7bbd6"}
+{"description":"bilan colo","entry":"20200810T074323Z","modified":"20200810T074323Z","status":"pending","uuid":"448a04ff-4090-4974-b5c0-ede34b3e0e64"}
+{"description":"examen","entry":"20200810T074327Z","modified":"20200810T074327Z","status":"pending","uuid":"e033025d-aa5a-4295-a70c-b03bef3f4247"}
+{"description":"contacter Satom","entry":"20200810T074341Z","modified":"20200810T074341Z","status":"pending","uuid":"deb192a1-4846-4892-9e74-e8babe384fde"}
+{"description":"maman solange","entry":"20200810T074349Z","modified":"20200810T074349Z","status":"pending","uuid":"9e6dd9cd-5beb-4c3d-b7b4-05ac70d997a6"}
+{"description":"contribution papa","entry":"20200810T074403Z","modified":"20200810T074403Z","status":"pending","uuid":"d503ef31-d04b-465c-9139-98e709278ed1"}
+{"description":"programme task add karon","entry":"20200810T074438Z","modified":"20200810T074438Z","status":"pending","uuid":"dedaf959-718c-44ee-bc9d-9b3ee3baff6f"}
+{"description":"lecture Eli","entry":"20200810T074446Z","modified":"20200810T074446Z","status":"pending","uuid":"02ce80b8-b2cf-4b92-9647-57f235ab3e1d"}
+{"description":"besoin plus sens de vie","entry":"20200810T074456Z","modified":"20200810T074456Z","status":"pending","uuid":"d7b3697c-ef51-4220-ae5e-6fea3bd233cb"}
+{"description":"temps fort","entry":"20200810T074459Z","modified":"20200810T074459Z","status":"pending","uuid":"2716813f-f983-4442-8f5b-1578aab12b82"}
+{"description":"tuto","entry":"20200810T074505Z","modified":"20200810T074505Z","status":"pending","uuid":"73f2907f-4735-4d7f-911d-795dc8029b6d"}
+{"description":"courrier","entry":"20200810T074656Z","modified":"20200810T074656Z","status":"pending","uuid":"7fc7b044-2dc9-44f0-b32e-6c80a9065ddc"}
+{"description":"photo colo","entry":"20200810T081053Z","modified":"20200810T081053Z","status":"pending","uuid":"a5ade83b-bc19-4cfc-918b-87e665706f59"}
+{"description":"cours de synthèse sonor","entry":"20200810T083325Z","modified":"20200810T083325Z","status":"pending","uuid":"7f07eac8-b199-4e5e-bb07-74d2433e565d"}
+{"description":"bureau","end":"20200810T094639Z","entry":"20200810T074313Z","modified":"20200810T094639Z","status":"completed","uuid":"6d0c162f-c4aa-4215-a5a3-7e0a57d7bbd6"}
+{"description":"bilan colo","end":"20200810T101020Z","entry":"20200810T074323Z","modified":"20200810T101020Z","status":"completed","uuid":"448a04ff-4090-4974-b5c0-ede34b3e0e64"}
+{"description":"examen","end":"20200810T101153Z","entry":"20200810T074327Z","modified":"20200810T101153Z","status":"completed","uuid":"e033025d-aa5a-4295-a70c-b03bef3f4247"}
+{"description":"programme task add karon","end":"20200810T101808Z","entry":"20200810T074438Z","modified":"20200810T101808Z","status":"completed","uuid":"dedaf959-718c-44ee-bc9d-9b3ee3baff6f"}
