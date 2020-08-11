@@ -32,7 +32,7 @@ nnoremap <C-G> :!. ~/sh/g.sh
 nnoremap <F12> :!clear
 nnoremap <F9> :call GetMainNote()
 nnoremap <F8> :!. ~/sh/images.sh
-nnoremap <F3> :!ranger
+nnoremap <F3> :call GetPdf()
 nnoremap <F1> :call Vimrc()
 inoremap  <><Left>
 inoremap  <><Left>
@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit start.md
+edit ~/projet/activite/temps_fort.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -355,19 +355,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 19) / 38)
+let s:l = 9 - ((8 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
-normal! 0
+9
+normal! 03|
 tabnext 1
-badd +10 start.md
-badd +17 ~/projet/activite/buts.md
-badd +1 ~/projet/activite/Vie_sociale.md
-badd +7 ~/projet/activite/Vie_Études_sociales.md
-badd +7 ~/projet/activite/philosophie.md
-badd +4 ~/projet/activite/Freud.md
+badd +11 start.md
+badd +0 ~/projet/activite/temps_fort.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

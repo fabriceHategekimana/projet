@@ -8,6 +8,7 @@ Voici quelques liens pour commencer:
 [[sujets_interessants]]
 [[moi]]
 [[buts]]
+[temps_fort](temps_fort)
 
 Quel est le but de cette documentation.
 Elle est comme un carnet: le but est de canaliser mes pensés.
