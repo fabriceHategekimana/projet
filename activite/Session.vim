@@ -30,7 +30,7 @@ vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
 nnoremap <C-G> :!. ~/sh/g.sh 
 nnoremap <F12> :!clear
-nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
+nnoremap <F9> :call GetMainNote()
 nnoremap <F8> :!. ~/sh/images.sh
 nnoremap <F3> :!ranger
 nnoremap <F1> :call Vimrc()
@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit ~/projet/activite/motivation.md
+edit start.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -355,15 +355,19 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 34 - ((33 * winheight(0) + 19) / 38)
+let s:l = 10 - ((9 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-34
+10
 normal! 0
 tabnext 1
-badd +5 start.md
-badd +0 ~/projet/activite/motivation.md
+badd +10 start.md
+badd +17 ~/projet/activite/buts.md
+badd +1 ~/projet/activite/Vie_sociale.md
+badd +7 ~/projet/activite/Vie_Études_sociales.md
+badd +7 ~/projet/activite/philosophie.md
+badd +4 ~/projet/activite/Freud.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

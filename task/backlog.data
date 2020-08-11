@@ -8732,3 +8732,7 @@
 {"description":"bilan colo","end":"20200810T101020Z","entry":"20200810T074323Z","modified":"20200810T101020Z","status":"completed","uuid":"448a04ff-4090-4974-b5c0-ede34b3e0e64"}
 {"description":"examen","end":"20200810T101153Z","entry":"20200810T074327Z","modified":"20200810T101153Z","status":"completed","uuid":"e033025d-aa5a-4295-a70c-b03bef3f4247"}
 {"description":"programme task add karon","end":"20200810T101808Z","entry":"20200810T074438Z","modified":"20200810T101808Z","status":"completed","uuid":"dedaf959-718c-44ee-bc9d-9b3ee3baff6f"}
+{"description":"mettre a jour mon cv","entry":"20200810T131123Z","modified":"20200810T131123Z","status":"pending","uuid":"ae7d4d1d-2586-4bc2-b0b0-c868a379e42b"}
+{"description":"lecture Eli","end":"20200810T222535Z","entry":"20200810T074446Z","modified":"20200810T222535Z","status":"completed","uuid":"02ce80b8-b2cf-4b92-9647-57f235ab3e1d"}
+{"description":"tuto","end":"20200810T222549Z","entry":"20200810T074505Z","modified":"20200810T222549Z","status":"completed","uuid":"73f2907f-4735-4d7f-911d-795dc8029b6d"}
+{"description":"comment mieux reviser","entry":"20200810T231726Z","modified":"20200810T231726Z","status":"pending","uuid":"e3e45397-8e73-4803-b619-7813d90bddba"}

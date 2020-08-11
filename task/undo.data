@@ -31339,3 +31339,17 @@ time 1597054688
 old [description:"programme task add karon" entry:"1597045478" modified:"1597045478" status:"pending" uuid:"dedaf959-718c-44ee-bc9d-9b3ee3baff6f"]
 new [description:"programme task add karon" end:"1597054688" entry:"1597045478" modified:"1597054688" status:"completed" uuid:"dedaf959-718c-44ee-bc9d-9b3ee3baff6f"]
 ---
+time 1597065083
+new [description:"mettre a jour mon cv" entry:"1597065083" modified:"1597065083" status:"pending" uuid:"ae7d4d1d-2586-4bc2-b0b0-c868a379e42b"]
+---
+time 1597098335
+old [description:"lecture Eli" entry:"1597045486" modified:"1597045486" status:"pending" uuid:"02ce80b8-b2cf-4b92-9647-57f235ab3e1d"]
+new [description:"lecture Eli" end:"1597098335" entry:"1597045486" modified:"1597098335" status:"completed" uuid:"02ce80b8-b2cf-4b92-9647-57f235ab3e1d"]
+---
+time 1597098349
+old [description:"tuto" entry:"1597045505" modified:"1597045505" status:"pending" uuid:"73f2907f-4735-4d7f-911d-795dc8029b6d"]
+new [description:"tuto" end:"1597098349" entry:"1597045505" modified:"1597098349" status:"completed" uuid:"73f2907f-4735-4d7f-911d-795dc8029b6d"]
+---
+time 1597101446
+new [description:"comment mieux reviser" entry:"1597101446" modified:"1597101446" status:"pending" uuid:"e3e45397-8e73-4803-b619-7813d90bddba"]
+---
