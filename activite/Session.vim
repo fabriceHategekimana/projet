@@ -30,9 +30,9 @@ vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
 nnoremap <C-G> :!. ~/sh/g.sh 
 nnoremap <F12> :!clear
-nnoremap <F9> :call GetMainNote()
+nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :!. ~/sh/images.sh
-nnoremap <F3> :call GetPdf()
+nnoremap <F3> :!ranger
 nnoremap <F1> :call Vimrc()
 inoremap  <><Left>
 inoremap  <><Left>
@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit ~/projet/activite/temps_fort.md
+edit ~/projet/activite/Gérer_mon_agenda.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -355,15 +355,18 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 19) / 38)
+let s:l = 3 - ((2 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
-normal! 03|
+3
+normal! 089|
 tabnext 1
-badd +11 start.md
-badd +0 ~/projet/activite/temps_fort.md
+badd +5 start.md
+badd +7 ~/projet/activite/buts.md
+badd +4 ~/projet/activite/motivation.md
+badd +35 ~/projet/activite/jeu.md
+badd +0 ~/projet/activite/Gérer_mon_agenda.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

@@ -1,6 +1,8 @@
 Motivation
 ==========
 
+Thème du [jeu](jeu):
+
 ## prochaine étape
 Il en ressort que les activités qui m'intéressent on en général un but en devenir qui amène mon système à un meilleurs état.
 Représenter ma vie comme un système et les transitions comme mes activités.

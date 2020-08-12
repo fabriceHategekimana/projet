@@ -1,24 +1,10 @@
 #
-# Fichier de configuration des raccourcis de Calcurse
+# Fichier de configuration des raccourcis clavier de Calcurse
 #
-# Ce fichier définie les raccourcis clavier utilisés par Calcurse.
-# Les lignes débutant par "#" sont des commentaires ignorés par Calcurse.
-# Pour assigner un raccourci clavier à une action, ce fichier doit contenir une ligne
-# qui respecte la syntaxe suivante :
-#
-#        ACTION  TOUCHE1  TOUCHE2  ...  TOUCHEn
-#
-# Où ACTION désigne la commande à exécuter lorsque TOUCHE1, TOUCHE2, ..., ou TOUCHEn
-# est pressée.
-#
-# Pour définir un raccourci utilisant la touche CONTRÔLE, préfixer la touche avec 'C-'.
-# Les touches échap, espace et tabulation horizontale peuvent être spécifiées en utilisant
-# les mots clefs respectifs ESC, SPC et TAB.
-# Les touches fléchées peuvent aussi être spécifiées avec les mots clefs UP, DWN, LFT, RGT.
-# Enfin les touches Début et Fin peuvent être assignées en utilisant les mots clefs KEY_HOME et KEY_END.
-#
-# Une description de ce que chaque ACTION fait est disponible
-# dans le menu de configuration de calcurse.
+# Les raccourcis utilisés dans Calcurse sont définis dans ce fichier.
+# Il est généré automatiquement par Calcurse et est maintenu
+# via le menu de configuration des raccourcis dans l'interface
+# utilisateur. Il ne doit pas être modifié directement.
 
 generic-cancel  ESC 
 generic-select  SPC 

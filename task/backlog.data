@@ -8744,3 +8744,8 @@
 {"description":"ameliorer le prompt","entry":"20200811T230320Z","modified":"20200811T230320Z","status":"pending","uuid":"792007f2-8c46-4380-b8af-66156e892e94"}
 {"description":"analyse musicale","entry":"20200811T231423Z","modified":"20200811T231423Z","status":"pending","uuid":"5535b174-a289-4f00-b096-0c3f315c7360"}
 {"description":"tester swami editor","entry":"20200811T234603Z","modified":"20200811T234603Z","status":"pending","uuid":"f2c5a590-62a5-4446-8cf0-a9d7189a01ef"}
+{"description":"contacter Satom","end":"20200812T160834Z","entry":"20200810T074341Z","modified":"20200812T160834Z","status":"completed","uuid":"deb192a1-4846-4892-9e74-e8babe384fde"}
+{"description":"maman solange","end":"20200812T160839Z","entry":"20200810T074349Z","modified":"20200812T160839Z","status":"completed","uuid":"9e6dd9cd-5beb-4c3d-b7b4-05ac70d997a6"}
+{"description":"comment mieux reviser","end":"20200812T160857Z","entry":"20200810T231726Z","modified":"20200812T160857Z","status":"completed","uuid":"e3e45397-8e73-4803-b619-7813d90bddba"}
+{"description":"ecrire dans mon journal personnel","end":"20200812T160905Z","entry":"20200811T225953Z","modified":"20200812T160905Z","status":"completed","uuid":"fdf48efd-9e9f-41e9-b9ea-24134974c50c"}
+{"description":"photo masque","entry":"20200812T173202Z","modified":"20200812T173202Z","status":"pending","uuid":"58c045f8-cd15-4cd1-a160-41924403a212"}

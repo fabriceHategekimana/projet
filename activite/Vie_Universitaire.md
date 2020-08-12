@@ -7,9 +7,9 @@ Maîtriser les cours:
 **Mes cours en deuxième:**
 []Analyse_numérique
 [x]Base_de_données
-[]Sémantique
+[x]Sémantique
 [x]CLOO
-[x]ETI
+[]ETI
 []Programmation_des_systèmes
 
 La compréhension et l'usage de ces matières doit être lympide pour moi.

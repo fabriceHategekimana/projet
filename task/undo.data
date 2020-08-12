@@ -31380,3 +31380,22 @@ new [description:"analyse musicale" entry:"1597187663" modified:"1597187663" sta
 time 1597189563
 new [description:"tester swami editor" entry:"1597189563" modified:"1597189563" status:"pending" uuid:"f2c5a590-62a5-4446-8cf0-a9d7189a01ef"]
 ---
+time 1597248514
+old [description:"contacter Satom" entry:"1597045421" modified:"1597045421" status:"pending" uuid:"deb192a1-4846-4892-9e74-e8babe384fde"]
+new [description:"contacter Satom" end:"1597248514" entry:"1597045421" modified:"1597248514" status:"completed" uuid:"deb192a1-4846-4892-9e74-e8babe384fde"]
+---
+time 1597248519
+old [description:"maman solange" entry:"1597045429" modified:"1597045429" status:"pending" uuid:"9e6dd9cd-5beb-4c3d-b7b4-05ac70d997a6"]
+new [description:"maman solange" end:"1597248519" entry:"1597045429" modified:"1597248519" status:"completed" uuid:"9e6dd9cd-5beb-4c3d-b7b4-05ac70d997a6"]
+---
+time 1597248537
+old [description:"comment mieux reviser" entry:"1597101446" modified:"1597101446" status:"pending" uuid:"e3e45397-8e73-4803-b619-7813d90bddba"]
+new [description:"comment mieux reviser" end:"1597248537" entry:"1597101446" modified:"1597248537" status:"completed" uuid:"e3e45397-8e73-4803-b619-7813d90bddba"]
+---
+time 1597248545
+old [description:"ecrire dans mon journal personnel" entry:"1597186793" modified:"1597186793" status:"pending" uuid:"fdf48efd-9e9f-41e9-b9ea-24134974c50c"]
+new [description:"ecrire dans mon journal personnel" end:"1597248545" entry:"1597186793" modified:"1597248545" status:"completed" uuid:"fdf48efd-9e9f-41e9-b9ea-24134974c50c"]
+---
+time 1597253522
+new [description:"photo masque" entry:"1597253522" modified:"1597253522" status:"pending" uuid:"58c045f8-cd15-4cd1-a160-41924403a212"]
+---
