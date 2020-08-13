@@ -1,5 +1,7 @@
 Comment se fait-il qu'ai une folle envie d'optimiser des jeu et pas ma vrai vie?
 
+[Trois_regles](Trois_regles)
+
 ## Raisons:
 Un jeu a un but claire
 Un jeu a un game play simple

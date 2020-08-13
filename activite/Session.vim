@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit ~/projet/activite/Gérer_mon_agenda.md
+edit ~/projet/activite/Trois_regles.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -355,18 +355,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 3 - ((2 * winheight(0) + 27) / 55)
+let s:l = 23 - ((22 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 089|
+23
+normal! 06|
 tabnext 1
 badd +5 start.md
-badd +7 ~/projet/activite/buts.md
 badd +4 ~/projet/activite/motivation.md
-badd +35 ~/projet/activite/jeu.md
-badd +0 ~/projet/activite/Gérer_mon_agenda.md
+badd +3 ~/projet/activite/jeu.md
+badd +0 ~/projet/activite/Trois_regles.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

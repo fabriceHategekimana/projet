@@ -8749,3 +8749,23 @@
 {"description":"comment mieux reviser","end":"20200812T160857Z","entry":"20200810T231726Z","modified":"20200812T160857Z","status":"completed","uuid":"e3e45397-8e73-4803-b619-7813d90bddba"}
 {"description":"ecrire dans mon journal personnel","end":"20200812T160905Z","entry":"20200811T225953Z","modified":"20200812T160905Z","status":"completed","uuid":"fdf48efd-9e9f-41e9-b9ea-24134974c50c"}
 {"description":"photo masque","entry":"20200812T173202Z","modified":"20200812T173202Z","status":"pending","uuid":"58c045f8-cd15-4cd1-a160-41924403a212"}
+{"description":"ameliorer le prompt","end":"20200813T084657Z","entry":"20200811T230320Z","modified":"20200813T084657Z","status":"completed","uuid":"792007f2-8c46-4380-b8af-66156e892e94"}
+{"description":"contribution papa","entry":"20200810T074403Z","modified":"20200813T084926Z","project":"administratif","status":"pending","uuid":"d503ef31-d04b-465c-9139-98e709278ed1"}
+{"description":"courrier","entry":"20200810T074656Z","modified":"20200813T084926Z","project":"administratif","status":"pending","uuid":"7fc7b044-2dc9-44f0-b32e-6c80a9065ddc"}
+{"description":"mettre a jour mon cv","entry":"20200810T131123Z","modified":"20200813T084926Z","project":"administratif","status":"pending","uuid":"ae7d4d1d-2586-4bc2-b0b0-c868a379e42b"}
+{"description":"cours de synthèse sonor","entry":"20200810T083325Z","modified":"20200813T084936Z","project":"musique","status":"pending","uuid":"7f07eac8-b199-4e5e-bb07-74d2433e565d"}
+{"description":"analyse musicale","entry":"20200811T231423Z","modified":"20200813T084936Z","project":"musique","status":"pending","uuid":"5535b174-a289-4f00-b096-0c3f315c7360"}
+{"description":"tester swami editor","entry":"20200811T234603Z","modified":"20200813T084936Z","project":"musique","status":"pending","uuid":"f2c5a590-62a5-4446-8cf0-a9d7189a01ef"}
+{"description":"tutoriel mathematique","entry":"20200811T224924Z","modified":"20200813T085038Z","project":"tuto","status":"pending","uuid":"273c4828-6d15-4525-b1bf-100e8e0290a2"}
+{"description":"faire un journal plus interactif","entry":"20200813T095113Z","modified":"20200813T095113Z","status":"pending","uuid":"aa6c6e66-0feb-445b-aba7-e73a77a278e8"}
+{"description":"définition d un labo","entry":"20200813T103626Z","modified":"20200813T103626Z","status":"pending","uuid":"565bb5f5-ffb8-4000-bc5b-0bf400560adf"}
+{"description":"message gbu","entry":"20200813T105114Z","modified":"20200813T105114Z","status":"pending","uuid":"35e531aa-2309-48c8-a9e8-76dc35f03930"}
+{"description":"creer script make global","entry":"20200813T105302Z","modified":"20200813T105302Z","status":"pending","uuid":"b9de5784-2790-4317-ab91-c54c2635f367"}
+{"description":"script de decompression","entry":"20200813T122911Z","modified":"20200813T122911Z","status":"pending","uuid":"620c8536-61db-48e2-9bc4-2c3e1ec1b86f"}
+{"description":"taskwarrior note","entry":"20200813T122925Z","modified":"20200813T122925Z","status":"pending","uuid":"f25b6337-3091-4cf9-9bde-34df8b306e97"}
+{"description":"faire un journal plus interactif","entry":"20200813T095113Z","modified":"20200813T133216Z","project":"script","status":"pending","uuid":"aa6c6e66-0feb-445b-aba7-e73a77a278e8"}
+{"description":"creer script make global","entry":"20200813T105302Z","modified":"20200813T133216Z","project":"script","status":"pending","uuid":"b9de5784-2790-4317-ab91-c54c2635f367"}
+{"description":"script de decompression","entry":"20200813T122911Z","modified":"20200813T133216Z","project":"script","status":"pending","uuid":"620c8536-61db-48e2-9bc4-2c3e1ec1b86f"}
+{"description":"Dodonnees �a backup direct","entry":"20200813T133357Z","modified":"20200813T133357Z","status":"pending","uuid":"3e14a2bd-170b-4f2c-a253-35eada89485b"}
+{"description":"donnees a bacup moins direct","entry":"20200813T133420Z","modified":"20200813T133420Z","status":"pending","uuid":"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"}
+{"description":"detection projet cours parent","entry":"20200813T133546Z","modified":"20200813T133546Z","project":"script","status":"pending","uuid":"d17381e2-d97f-4ce3-99d9-7341af2cef90"}
