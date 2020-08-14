@@ -31470,3 +31470,38 @@ new [description:"donnees a bacup moins direct" entry:"1597325660" modified:"159
 time 1597325746
 new [description:"detection projet cours parent" entry:"1597325746" modified:"1597325746" project:"script" status:"pending" uuid:"d17381e2-d97f-4ce3-99d9-7341af2cef90"]
 ---
+time 1597329069
+old [description:"courrier" entry:"1597045616" modified:"1597308566" project:"administratif" status:"pending" uuid:"7fc7b044-2dc9-44f0-b32e-6c80a9065ddc"]
+new [description:"courrier" end:"1597329069" entry:"1597045616" modified:"1597329069" project:"administratif" status:"completed" uuid:"7fc7b044-2dc9-44f0-b32e-6c80a9065ddc"]
+---
+time 1597329100
+new [description:"ouvrire lettre" due:"1597356000" entry:"1597329100" modified:"1597329100" status:"pending" uuid:"6313f120-3e53-46a9-a172-3f8773fe3dd9"]
+---
+time 1597329111
+old [description:"contribution papa" entry:"1597045443" modified:"1597308566" project:"administratif" status:"pending" uuid:"d503ef31-d04b-465c-9139-98e709278ed1"]
+new [description:"contribution papa" end:"1597329111" entry:"1597045443" modified:"1597329111" project:"administratif" status:"completed" uuid:"d503ef31-d04b-465c-9139-98e709278ed1"]
+---
+time 1597330214
+old [description:"photo masque" entry:"1597253522" modified:"1597253522" status:"pending" uuid:"58c045f8-cd15-4cd1-a160-41924403a212"]
+new [description:"photo masque" end:"1597330214" entry:"1597253522" modified:"1597330214" status:"completed" uuid:"58c045f8-cd15-4cd1-a160-41924403a212"]
+---
+time 1597330701
+old [description:"d√©finition d un labo" entry:"1597314986" modified:"1597314986" status:"pending" uuid:"565bb5f5-ffb8-4000-bc5b-0bf400560adf"]
+new [description:"d√©finition d un labo" end:"1597330701" entry:"1597314986" modified:"1597330701" status:"completed" uuid:"565bb5f5-ffb8-4000-bc5b-0bf400560adf"]
+---
+time 1597330708
+old [description:"message gbu" entry:"1597315874" modified:"1597315874" status:"pending" uuid:"35e531aa-2309-48c8-a9e8-76dc35f03930"]
+new [description:"message gbu" end:"1597330708" entry:"1597315874" modified:"1597330708" status:"completed" uuid:"35e531aa-2309-48c8-a9e8-76dc35f03930"]
+---
+time 1597330842
+old [description:"taskwarrior note" entry:"1597321765" modified:"1597321765" status:"pending" uuid:"f25b6337-3091-4cf9-9bde-34df8b306e97"]
+new [description:"taskwarrior note" end:"1597330842" entry:"1597321765" modified:"1597330842" status:"completed" uuid:"f25b6337-3091-4cf9-9bde-34df8b306e97"]
+---
+time 1597330868
+old [description:"Dodonnees √a backup direct" entry:"1597325637" modified:"1597325637" status:"pending" uuid:"3e14a2bd-170b-4f2c-a253-35eada89485b"]
+new [description:"Dodonnees √a backup direct" entry:"1597325637" modified:"1597330868" project:"backup" status:"pending" uuid:"3e14a2bd-170b-4f2c-a253-35eada89485b"]
+---
+time 1597330868
+old [description:"donnees a bacup moins direct" entry:"1597325660" modified:"1597325660" status:"pending" uuid:"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"]
+new [description:"donnees a bacup moins direct" entry:"1597325660" modified:"1597330868" project:"backup" status:"pending" uuid:"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"]
+---

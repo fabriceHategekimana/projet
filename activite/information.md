@@ -1,4 +1,6 @@
 L'information
+=============
+
 Au sens éthymologique
 L'information est ce qui donne forme à l'esprit.
 Du latin "informare" qui veut dire donner forme ou se former une idée de.
@@ -25,12 +27,12 @@ Cela donne a un objet perceptible une relation avec une couleur que d'autre obje
 Généralement, la relation se fait entre un élément à perception direct avec un [[vecteur_de_communication]] (souvent un symbole ou un son).
 Grâce à cela la valeur sensorielle est "transportable" (D'où le nom vecteur de communication).
   
-Il y a plusieur niveau d'information (relation). Une information peut mener (in)directement à une sensation.  
+Il y a plusieurs niveau d'information (relation). Une information peut mener (in)directement à une sensation.  
 Par exemple:
 ```
 "Cette pomme est verte." 
 ```
-Renvoit immédiatement à la couleur perçue comme étant le vert (ça a un lien directe avec le sens de la vue).
+Renvoie immédiatement à la couleur perçue comme étant le vert (ça a un lien directe avec le sens de la vue).
 Alors que:
 ```
 "Ce propos est communiste" 
@@ -42,6 +44,11 @@ On comprend aussi que c'est le langage (les vecteurs de communication) qui on fa
 **En conclusion**
 L'information est une relation qu'on fait entre différentes entité "perceptibles", l'axiom étant les sensations. On peut s'imaginer que l'information peut être infinie puisqu'il n'y a pas de restriction sur la cardinalité d'une relation.
   
-Difficultée des notions:  
+Difficultés des notions:  
 C'est pourquoi certainnes choses sont plus difficiles à comprendre que d'autres comme les théorèmes mathématique ou les conceptes physique et la plus par des sciences dur et/ou théorique. Alors que des choses qui traitent directement des sens (vue, ouïe, touché, équilibre, etc) son facilement compréhensibles par tout le monde.
 La meilleur pédagogie est de revenir aux sens.
+
+## Structure
+Une information est une structure mettant en lien deux ou plusieurs éléments qui seront alors appelé propriété ou attribut
+
+Information([propriété])

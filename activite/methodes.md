@@ -21,5 +21,8 @@ Liste de mes besoins (dans l'acuel)
 ## Sujets à débatre
 l'[[illusion]]
 
+Méthode pratique:
+[Labo](Labo)
+
 
 

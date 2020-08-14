@@ -8769,3 +8769,12 @@
 {"description":"Dodonnees √a backup direct","entry":"20200813T133357Z","modified":"20200813T133357Z","status":"pending","uuid":"3e14a2bd-170b-4f2c-a253-35eada89485b"}
 {"description":"donnees a bacup moins direct","entry":"20200813T133420Z","modified":"20200813T133420Z","status":"pending","uuid":"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"}
 {"description":"detection projet cours parent","entry":"20200813T133546Z","modified":"20200813T133546Z","project":"script","status":"pending","uuid":"d17381e2-d97f-4ce3-99d9-7341af2cef90"}
+{"description":"courrier","end":"20200813T143109Z","entry":"20200810T074656Z","modified":"20200813T143109Z","project":"administratif","status":"completed","uuid":"7fc7b044-2dc9-44f0-b32e-6c80a9065ddc"}
+{"description":"ouvrire lettre","due":"20200813T220000Z","entry":"20200813T143140Z","modified":"20200813T143140Z","status":"pending","uuid":"6313f120-3e53-46a9-a172-3f8773fe3dd9"}
+{"description":"contribution papa","end":"20200813T143151Z","entry":"20200810T074403Z","modified":"20200813T143151Z","project":"administratif","status":"completed","uuid":"d503ef31-d04b-465c-9139-98e709278ed1"}
+{"description":"photo masque","end":"20200813T145014Z","entry":"20200812T173202Z","modified":"20200813T145014Z","status":"completed","uuid":"58c045f8-cd15-4cd1-a160-41924403a212"}
+{"description":"d√©finition d un labo","end":"20200813T145821Z","entry":"20200813T103626Z","modified":"20200813T145821Z","status":"completed","uuid":"565bb5f5-ffb8-4000-bc5b-0bf400560adf"}
+{"description":"message gbu","end":"20200813T145828Z","entry":"20200813T105114Z","modified":"20200813T145828Z","status":"completed","uuid":"35e531aa-2309-48c8-a9e8-76dc35f03930"}
+{"description":"taskwarrior note","end":"20200813T150042Z","entry":"20200813T122925Z","modified":"20200813T150042Z","status":"completed","uuid":"f25b6337-3091-4cf9-9bde-34df8b306e97"}
+{"description":"Dodonnees √a backup direct","entry":"20200813T133357Z","modified":"20200813T150108Z","project":"backup","status":"pending","uuid":"3e14a2bd-170b-4f2c-a253-35eada89485b"}
+{"description":"donnees a bacup moins direct","entry":"20200813T133420Z","modified":"20200813T150108Z","project":"backup","status":"pending","uuid":"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"}

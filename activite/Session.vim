@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit ~/projet/activite/Trois_regles.md
+edit start.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -355,17 +355,19 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 23 - ((22 * winheight(0) + 27) / 55)
+let s:l = 12 - ((11 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-23
-normal! 06|
+12
+normal! 0
 tabnext 1
-badd +5 start.md
-badd +4 ~/projet/activite/motivation.md
-badd +3 ~/projet/activite/jeu.md
-badd +0 ~/projet/activite/Trois_regles.md
+badd +10 start.md
+badd +25 ~/projet/activite/methodes.md
+badd +7 ~/projet/activite/Labo.md
+badd +15 ~/projet/activite/buts.md
+badd +29 ~/projet/activite/Vie_Informatique.md
+badd +49 ~/projet/activite/information.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -377,7 +379,6 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
