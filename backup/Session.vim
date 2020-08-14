@@ -32,7 +32,7 @@ nnoremap <C-G> :!. ~/sh/g.sh
 nnoremap <F12> :!clear
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :!. ~/sh/images.sh
-nnoremap <F3> :!ranger
+nnoremap <F3> :! ~/sh/mymake.sh 
 nnoremap <F1> :call Vimrc()
 inoremap  <><Left>
 inoremap  <><Left>
@@ -82,8 +82,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd ~/sh/mytask.sh
-edit ~/sh/mytask.sh
+$argadd ~/sh/projet.sh
+edit ~/sh/projet.sh
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -225,14 +225,16 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 13) / 26)
+let s:l = 55 - ((28 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
-normal! 017|
+55
+normal! 0
 tabnext 1
-badd +0 ~/sh/mytask.sh
+badd +0 ~/sh/projet.sh
+badd +7 ~/sh/cs.sh
+badd +56 ~/sh/cours.sh
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

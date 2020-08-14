@@ -31505,3 +31505,24 @@ time 1597330868
 old [description:"donnees a bacup moins direct" entry:"1597325660" modified:"1597325660" status:"pending" uuid:"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"]
 new [description:"donnees a bacup moins direct" entry:"1597325660" modified:"1597330868" project:"backup" status:"pending" uuid:"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"]
 ---
+time 1597398099
+new [description:"gerer mes labels" entry:"1597398099" modified:"1597398099" status:"pending" uuid:"e0eeb4db-5d06-4518-b766-8e4243e8009f"]
+---
+time 1597400848
+old [description:"creer script make global" entry:"1597315982" modified:"1597325536" project:"script" status:"pending" uuid:"b9de5784-2790-4317-ab91-c54c2635f367"]
+new [description:"creer script make global" end:"1597400848" entry:"1597315982" modified:"1597400848" project:"script" status:"completed" uuid:"b9de5784-2790-4317-ab91-c54c2635f367"]
+---
+time 1597400882
+old [description:"detection projet cours parent" entry:"1597325746" modified:"1597325746" project:"script" status:"pending" uuid:"d17381e2-d97f-4ce3-99d9-7341af2cef90"]
+new [description:"detection projet cours parent" end:"1597400882" entry:"1597325746" modified:"1597400882" project:"script" status:"completed" uuid:"d17381e2-d97f-4ce3-99d9-7341af2cef90"]
+---
+time 1597401857
+old [description:"script de decompression" entry:"1597321751" modified:"1597325536" project:"script" status:"pending" uuid:"620c8536-61db-48e2-9bc4-2c3e1ec1b86f"]
+new [description:"script de decompression" end:"1597401857" entry:"1597321751" modified:"1597401857" project:"script" status:"completed" uuid:"620c8536-61db-48e2-9bc4-2c3e1ec1b86f"]
+---
+time 1597416759
+new [description:"Comprendre Gram-Schmidt" entry:"1597416759" modified:"1597416759" project:"\/home\/fabrice\/cours\/AN" status:"pending" uuid:"f146177e-bf60-4f3b-a357-d41f96f7d926"]
+---
+time 1597418482
+new [description:"facture OCAS" due:"1597442400" entry:"1597418482" modified:"1597418482" status:"pending" uuid:"5247a6bc-6ad2-4103-baab-fe9d8fbad112"]
+---

@@ -32,7 +32,7 @@ nnoremap <C-G> :!. ~/sh/g.sh
 nnoremap <F12> :!clear
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :!. ~/sh/images.sh
-nnoremap <F3> :!ranger
+nnoremap <F3> :! ~/sh/mymake.sh 
 nnoremap <F1> :call Vimrc()
 inoremap  <><Left>
 inoremap  <><Left>
@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit start.md
+edit ~/projet/activite/Vie_sociale.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -220,6 +220,7 @@ imap <buffer> <silent>  <Plug>VimwikiListPrevSymbol
 imap <buffer> <silent> <NL> <Plug>VimwikiListNextSymbol
 inoremap <buffer> <silent>  :VimwikiReturn 1 5
 imap <buffer> <silent>  <Plug>VimwikiIncreaseLvlSingleItem
+nnoremap <buffer> échant :call Chant()
 nnoremap <buffer> éta :call MarkdownLigne()
 nnoremap <buffer> éco i``````<Left><Left><Left><Up>
 nnoremap <buffer> éb I**A**
@@ -355,19 +356,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 27) / 55)
+let s:l = 6 - ((5 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
-normal! 0
+6
+normal! 03|
 tabnext 1
 badd +10 start.md
-badd +25 ~/projet/activite/methodes.md
-badd +7 ~/projet/activite/Labo.md
-badd +15 ~/projet/activite/buts.md
-badd +29 ~/projet/activite/Vie_Informatique.md
-badd +49 ~/projet/activite/information.md
+badd +12 ~/projet/activite/buts.md
+badd +8 ~/projet/activite/Vie_sociale.md
+badd +29 ~/projet/activite/amis.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -379,6 +378,7 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

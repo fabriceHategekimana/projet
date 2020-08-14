@@ -10,8 +10,10 @@ summary: FORCE
 	task $(PROJET) summary
 task: FORCE
 	task $(PROJET)
-close:
+close: FORCE
 	task $(PROJET) done
+note: FORCE
+	vim note/note.md
 FORCE:
 
 

@@ -5,4 +5,4 @@ Je veux devenir qqn d''influent:
 [[drole]]
 [temps_fort](temps_fort)
 mentaliste
-
+[amis](amis)

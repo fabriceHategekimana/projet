@@ -8778,3 +8778,9 @@
 {"description":"taskwarrior note","end":"20200813T150042Z","entry":"20200813T122925Z","modified":"20200813T150042Z","status":"completed","uuid":"f25b6337-3091-4cf9-9bde-34df8b306e97"}
 {"description":"Dodonnees Ãa backup direct","entry":"20200813T133357Z","modified":"20200813T150108Z","project":"backup","status":"pending","uuid":"3e14a2bd-170b-4f2c-a253-35eada89485b"}
 {"description":"donnees a bacup moins direct","entry":"20200813T133420Z","modified":"20200813T150108Z","project":"backup","status":"pending","uuid":"1a50d4ba-3bbe-4232-b03d-2044c5dcc103"}
+{"description":"gerer mes labels","entry":"20200814T094139Z","modified":"20200814T094139Z","status":"pending","uuid":"e0eeb4db-5d06-4518-b766-8e4243e8009f"}
+{"description":"creer script make global","end":"20200814T102728Z","entry":"20200813T105302Z","modified":"20200814T102728Z","project":"script","status":"completed","uuid":"b9de5784-2790-4317-ab91-c54c2635f367"}
+{"description":"detection projet cours parent","end":"20200814T102802Z","entry":"20200813T133546Z","modified":"20200814T102802Z","project":"script","status":"completed","uuid":"d17381e2-d97f-4ce3-99d9-7341af2cef90"}
+{"description":"script de decompression","end":"20200814T104417Z","entry":"20200813T122911Z","modified":"20200814T104417Z","project":"script","status":"completed","uuid":"620c8536-61db-48e2-9bc4-2c3e1ec1b86f"}
+{"description":"Comprendre Gram-Schmidt","entry":"20200814T145239Z","modified":"20200814T145239Z","project":"\/home\/fabrice\/cours\/AN","status":"pending","uuid":"f146177e-bf60-4f3b-a357-d41f96f7d926"}
+{"description":"facture OCAS","due":"20200814T220000Z","entry":"20200814T152122Z","modified":"20200814T152122Z","status":"pending","uuid":"5247a6bc-6ad2-4103-baab-fe9d8fbad112"}
