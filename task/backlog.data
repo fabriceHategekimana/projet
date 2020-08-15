@@ -8784,3 +8784,7 @@
 {"description":"script de decompression","end":"20200814T104417Z","entry":"20200813T122911Z","modified":"20200814T104417Z","project":"script","status":"completed","uuid":"620c8536-61db-48e2-9bc4-2c3e1ec1b86f"}
 {"description":"Comprendre Gram-Schmidt","entry":"20200814T145239Z","modified":"20200814T145239Z","project":"\/home\/fabrice\/cours\/AN","status":"pending","uuid":"f146177e-bf60-4f3b-a357-d41f96f7d926"}
 {"description":"facture OCAS","due":"20200814T220000Z","entry":"20200814T152122Z","modified":"20200814T152122Z","status":"pending","uuid":"5247a6bc-6ad2-4103-baab-fe9d8fbad112"}
+{"description":"ouvrire lettre","due":"20200813T220000Z","end":"20200814T231020Z","entry":"20200813T143140Z","modified":"20200814T231020Z","status":"completed","uuid":"6313f120-3e53-46a9-a172-3f8773fe3dd9"}
+{"description":"examen analyse numérique","due":"20200831T070000Z","entry":"20200814T231355Z","modified":"20200814T231355Z","status":"pending","uuid":"66916a3c-0215-4aa1-9746-c3c7eab904e1"}
+{"description":"examen element de la theory de l information","due":"20200902T070000Z","entry":"20200814T231500Z","modified":"20200814T231500Z","status":"pending","uuid":"e38a836f-817a-4cb6-8ab5-0a59bc344327"}
+{"description":"examen programmation des systèmes","due":"20200903T070000Z","entry":"20200814T231520Z","modified":"20200814T231520Z","status":"pending","uuid":"598c020c-6ec6-48b8-b0f6-47638a146b26"}
