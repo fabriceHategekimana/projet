@@ -31539,3 +31539,52 @@ new [description:"examen element de la theory de l information" due:"1599030000"
 time 1597446920
 new [description:"examen programmation des systèmes" due:"1599116400" entry:"1597446920" modified:"1597446920" status:"pending" uuid:"598c020c-6ec6-48b8-b0f6-47638a146b26"]
 ---
+time 1597475500
+old [description:"gerer mes labels" entry:"1597398099" modified:"1597398099" status:"pending" uuid:"e0eeb4db-5d06-4518-b766-8e4243e8009f"]
+new [description:"gerer mes labels" end:"1597475500" entry:"1597398099" modified:"1597475500" status:"completed" uuid:"e0eeb4db-5d06-4518-b766-8e4243e8009f"]
+---
+time 1597477874
+new [description:"synthé diskette" entry:"1597477874" modified:"1597477874" project:"\/home\/fabrice\/projet\/musique" status:"pending" uuid:"f73de96f-e22d-47b0-b9f4-b31dcc2d30dd"]
+---
+time 1597477882
+new [description:"s�ynthé midi" entry:"1597477882" modified:"1597477882" project:"\/home\/fabrice\/projet\/musique" status:"pending" uuid:"21d4d5d9-24a4-44a2-ac52-6b8169e06319"]
+---
+time 1597477890
+new [description:"synté ordi" entry:"1597477890" modified:"1597477890" project:"\/home\/fabrice\/projet\/musique" status:"pending" uuid:"a8ced170-1a5e-4098-9491-a428a0830dbe"]
+---
+time 1597477911
+new [description:"liste de son" entry:"1597477911" modified:"1597477911" priority:"H" project:"\/home\/fabrice\/projet\/musique" status:"pending" uuid:"f84f37fd-b765-4935-9fc3-a2685d1c7fd2"]
+---
+time 1597477970
+new [description:"libreoffice programme" entry:"1597477970" modified:"1597477970" status:"pending" uuid:"a812f18f-0a3b-4bde-be2f-b73136bbd5bb"]
+---
+time 1597477998
+new [description:"satom état des lieux" entry:"1597477998" modified:"1597477998" status:"pending" uuid:"74ae53bf-9f3a-40e2-8d7d-c3eaa3e86aaa"]
+---
+time 1597490094
+new [description:"prodimex clé windows" due:"1597644000" entry:"1597490094" modified:"1597490094" status:"pending" uuid:"355a804e-162d-494e-8e2b-604909008470"]
+---
+time 1597490446
+old [description:"facture OCAS" due:"1597442400" entry:"1597418482" modified:"1597418482" status:"pending" uuid:"5247a6bc-6ad2-4103-baab-fe9d8fbad112"]
+new [description:"facture OCAS" due:"1597442400" end:"1597490446" entry:"1597418482" modified:"1597490446" status:"completed" uuid:"5247a6bc-6ad2-4103-baab-fe9d8fbad112"]
+---
+time 1597490491
+new [description:"bapteme" due:"1598680800" entry:"1597490491" modified:"1597490491" status:"pending" uuid:"c875c2a8-2133-4a21-b760-db7fb587c175"]
+---
+time 1597620202
+new [description:"back to school jour 1" due:"1597730400" entry:"1597620202" modified:"1597620202" status:"pending" uuid:"d1c51102-5bee-44d7-906c-95c00b3f755a"]
+---
+time 1597620216
+new [description:"back to school jour 2" due:"1597903200" entry:"1597620216" modified:"1597620216" status:"pending" uuid:"7f96314c-1881-489e-b531-98015e860ff5"]
+---
+time 1597620295
+old [description:"libreoffice programme" entry:"1597477970" modified:"1597477970" status:"pending" uuid:"a812f18f-0a3b-4bde-be2f-b73136bbd5bb"]
+new [description:"libreoffice programme" end:"1597620295" entry:"1597477970" modified:"1597620295" status:"completed" uuid:"a812f18f-0a3b-4bde-be2f-b73136bbd5bb"]
+---
+time 1597620358
+old [description:"liste de son" entry:"1597477911" modified:"1597477911" priority:"H" project:"\/home\/fabrice\/projet\/musique" status:"pending" uuid:"f84f37fd-b765-4935-9fc3-a2685d1c7fd2"]
+new [description:"liste de son" end:"1597620358" entry:"1597477911" modified:"1597620358" priority:"H" project:"\/home\/fabrice\/projet\/musique" status:"completed" uuid:"f84f37fd-b765-4935-9fc3-a2685d1c7fd2"]
+---
+time 1597620457
+new [description:"inscription cours de théologie" due:"1597615200" entry:"1597620457" modified:"1597620457" status:"pending" uuid:"c6675cbc-09dd-4a81-b46d-572f2d5444b6"]
+---

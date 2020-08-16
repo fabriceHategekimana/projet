@@ -8788,3 +8788,18 @@
 {"description":"examen analyse numérique","due":"20200831T070000Z","entry":"20200814T231355Z","modified":"20200814T231355Z","status":"pending","uuid":"66916a3c-0215-4aa1-9746-c3c7eab904e1"}
 {"description":"examen element de la theory de l information","due":"20200902T070000Z","entry":"20200814T231500Z","modified":"20200814T231500Z","status":"pending","uuid":"e38a836f-817a-4cb6-8ab5-0a59bc344327"}
 {"description":"examen programmation des systèmes","due":"20200903T070000Z","entry":"20200814T231520Z","modified":"20200814T231520Z","status":"pending","uuid":"598c020c-6ec6-48b8-b0f6-47638a146b26"}
+{"description":"gerer mes labels","end":"20200815T071140Z","entry":"20200814T094139Z","modified":"20200815T071140Z","status":"completed","uuid":"e0eeb4db-5d06-4518-b766-8e4243e8009f"}
+{"description":"synthé diskette","entry":"20200815T075114Z","modified":"20200815T075114Z","project":"\/home\/fabrice\/projet\/musique","status":"pending","uuid":"f73de96f-e22d-47b0-b9f4-b31dcc2d30dd"}
+{"description":"s�ynthé midi","entry":"20200815T075122Z","modified":"20200815T075122Z","project":"\/home\/fabrice\/projet\/musique","status":"pending","uuid":"21d4d5d9-24a4-44a2-ac52-6b8169e06319"}
+{"description":"synté ordi","entry":"20200815T075130Z","modified":"20200815T075130Z","project":"\/home\/fabrice\/projet\/musique","status":"pending","uuid":"a8ced170-1a5e-4098-9491-a428a0830dbe"}
+{"description":"liste de son","entry":"20200815T075151Z","modified":"20200815T075151Z","priority":"H","project":"\/home\/fabrice\/projet\/musique","status":"pending","uuid":"f84f37fd-b765-4935-9fc3-a2685d1c7fd2"}
+{"description":"libreoffice programme","entry":"20200815T075250Z","modified":"20200815T075250Z","status":"pending","uuid":"a812f18f-0a3b-4bde-be2f-b73136bbd5bb"}
+{"description":"satom état des lieux","entry":"20200815T075318Z","modified":"20200815T075318Z","status":"pending","uuid":"74ae53bf-9f3a-40e2-8d7d-c3eaa3e86aaa"}
+{"description":"prodimex clé windows","due":"20200817T060000Z","entry":"20200815T111454Z","modified":"20200815T111454Z","status":"pending","uuid":"355a804e-162d-494e-8e2b-604909008470"}
+{"description":"facture OCAS","due":"20200814T220000Z","end":"20200815T112046Z","entry":"20200814T152122Z","modified":"20200815T112046Z","status":"completed","uuid":"5247a6bc-6ad2-4103-baab-fe9d8fbad112"}
+{"description":"bapteme","due":"20200829T060000Z","entry":"20200815T112131Z","modified":"20200815T112131Z","status":"pending","uuid":"c875c2a8-2133-4a21-b760-db7fb587c175"}
+{"description":"back to school jour 1","due":"20200818T060000Z","entry":"20200816T232322Z","modified":"20200816T232322Z","status":"pending","uuid":"d1c51102-5bee-44d7-906c-95c00b3f755a"}
+{"description":"back to school jour 2","due":"20200820T060000Z","entry":"20200816T232336Z","modified":"20200816T232336Z","status":"pending","uuid":"7f96314c-1881-489e-b531-98015e860ff5"}
+{"description":"libreoffice programme","end":"20200816T232455Z","entry":"20200815T075250Z","modified":"20200816T232455Z","status":"completed","uuid":"a812f18f-0a3b-4bde-be2f-b73136bbd5bb"}
+{"description":"liste de son","end":"20200816T232558Z","entry":"20200815T075151Z","modified":"20200816T232558Z","priority":"H","project":"\/home\/fabrice\/projet\/musique","status":"completed","uuid":"f84f37fd-b765-4935-9fc3-a2685d1c7fd2"}
+{"description":"inscription cours de théologie","due":"20200816T220000Z","entry":"20200816T232737Z","modified":"20200816T232737Z","status":"pending","uuid":"c6675cbc-09dd-4a81-b46d-572f2d5444b6"}
