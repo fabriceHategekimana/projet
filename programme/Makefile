@@ -3,6 +3,8 @@ PROJET=project:programme
 all: start
  
 start: FORCE
+	vim ~/.config/libreoffice/4/user/basic/Standard/Module2.xba
+fait1: FORCE
 	vim ~/.config/libreoffice/4/user/basic/Standard/Module1.xba
 addtask: FORCE
 	. ~/sh/mytask.sh
