@@ -31,8 +31,8 @@ nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw
 nnoremap <C-G> :!. ~/sh/g.sh 
 nnoremap <F12> :!clear
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
-nnoremap <F8> :!. ~/sh/images.sh
-nnoremap <F3> :!ranger
+nnoremap <F8> :call LinkImage()
+nnoremap <F3> :! ~/sh/mymake.sh 
 nnoremap <F1> :call Vimrc()
 inoremap  <><Left>
 inoremap  <><Left>
@@ -75,15 +75,15 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/projet
+cd ~/projet/task/journal
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd ~/sh/projet.sh
-edit ~/sh/projet.sh
+$argadd journal.sh
+edit journal.sh
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -225,14 +225,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 74 - ((8 * winheight(0) + 27) / 55)
+let s:l = 5 - ((4 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-74
-normal! 027|
+5
+normal! 037|
 tabnext 1
-badd +0 ~/sh/projet.sh
+badd +0 journal.sh
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

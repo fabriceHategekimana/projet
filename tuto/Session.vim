@@ -75,15 +75,15 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/projet/activite
+cd ~/projet/tuto
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd ~/.bashrc
-edit ~/.bashrc
+$argadd Makefile
+edit Makefile
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -91,17 +91,6 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-let s:cpo_save=&cpo
-set cpo&vim
-nnoremap <buffer> <F5> :!./%
-nnoremap <buffer> <F2> :call Note("sh")
-nnoremap <buffer> éc ^i#
-inoremap <buffer> [ [  ]<Left><Left>
-inoreabbr <buffer> function (){}<Up><Up>
-inoreabbr <buffer> if if [ ]; thenfi<Up><Up><Right><Right>
-inoreabbr <buffer> elif elif [ ]; then<Up><Right><Right>
-let &cpo=s:cpo_save
-unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -118,8 +107,8 @@ setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=#%s
+setlocal comments=sO:#\ -,mO:#\ \ ,b:#
+setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -136,8 +125,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'sh'
-setlocal filetype=sh
+if &filetype != 'make'
+setlocal filetype=make
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -151,16 +140,16 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
-setlocal include=
+setlocal include=^\\s*include
 setlocal includeexpr=
-setlocal indentexpr=GetShIndent()
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
+setlocal indentexpr=GetMakeIndent()
+setlocal indentkeys=!^F,o,O,<:>,=else,=endif
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -203,8 +192,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'sh'
-setlocal syntax=sh
+if &syntax != 'make'
+setlocal syntax=make
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -225,14 +214,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 279 - ((54 * winheight(0) + 27) / 55)
+let s:l = 20 - ((19 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-279
-normal! 0
+20
+normal! 049|
 tabnext 1
-badd +0 ~/.bashrc
+badd +0 Makefile
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -244,6 +233,7 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

@@ -31605,3 +31605,32 @@ old [description:"bapteme" due:"1598680800" entry:"1597490491" modified:"1597490
 new [description:"bapteme" due:"1598680800" end:"1597751639" entry:"1597490491" modified:"1597751639" status:"completed" uuid:"c875c2a8-2133-4a21-b760-db7fb587c175"]
 >>>>>>> a5e67010ad13b4e8aa9587067fbaacadb0c05e48
 ---
+time 1597762933
+new [description:"reprendre automne 7" entry:"1597762933" modified:"1597762933" project:"\/home\/fabrice\/cours\/AN" status:"pending" uuid:"5ff24a82-d157-4f65-ab13-5ef4fc05f672"]
+---
+time 1597770126
+new [description:"question 9 to do" entry:"1597770126" modified:"1597770126" project:"\/home\/fabrice\/cours\/eti" status:"pending" uuid:"0023da59-62d0-4442-a5ea-7064a3e7aae2"]
+---
+time 1597791395
+old [description:"inscription cours de théologie" due:"1597615200" entry:"1597620457" modified:"1597620457" status:"pending" uuid:"c6675cbc-09dd-4a81-b46d-572f2d5444b6"]
+new [description:"inscription cours de théologie" due:"1597615200" end:"1597791395" entry:"1597620457" modified:"1597791395" status:"completed" uuid:"c6675cbc-09dd-4a81-b46d-572f2d5444b6"]
+---
+time 1597791696
+old [description:"satom état des lieux" entry:"1597477998" modified:"1597477998" status:"pending" uuid:"74ae53bf-9f3a-40e2-8d7d-c3eaa3e86aaa"]
+new [description:"satom état des lieux" end:"1597791696" entry:"1597477998" modified:"1597791696" status:"completed" uuid:"74ae53bf-9f3a-40e2-8d7d-c3eaa3e86aaa"]
+---
+time 1597791696
+old [description:"annoncer qui sont les deux visiteur à maman Carine" entry:"1597738179" modified:"1597738179" status:"pending" uuid:"c9deab8f-4b18-4757-b591-c3304d02324b"]
+new [description:"annoncer qui sont les deux visiteur à maman Carine" end:"1597791696" entry:"1597738179" modified:"1597791696" status:"completed" uuid:"c9deab8f-4b18-4757-b591-c3304d02324b"]
+---
+time 1597791717
+old [description:"synté ordi" entry:"1597477890" modified:"1597477890" project:"\/home\/fabrice\/projet\/musique" status:"pending" uuid:"a8ced170-1a5e-4098-9491-a428a0830dbe"]
+new [description:"synté ordi" end:"1597791717" entry:"1597477890" modified:"1597791717" project:"\/home\/fabrice\/projet\/musique" status:"completed" uuid:"a8ced170-1a5e-4098-9491-a428a0830dbe"]
+---
+time 1597791777
+new [description:"anniversaire maman papa" due:"1598076000" entry:"1597791777" modified:"1597791777" status:"pending" uuid:"6210ab80-b845-4c41-8461-ed85852a0e38"]
+---
+time 1597791793
+old [description:"faire un journal plus interactif" entry:"1597312273" modified:"1597325536" project:"script" status:"pending" uuid:"aa6c6e66-0feb-445b-aba7-e73a77a278e8"]
+new [description:"faire un journal plus interactif" end:"1597791793" entry:"1597312273" modified:"1597791793" project:"script" status:"completed" uuid:"aa6c6e66-0feb-445b-aba7-e73a77a278e8"]
+---

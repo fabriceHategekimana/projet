@@ -8810,3 +8810,11 @@
 {"description":"back to school jour 1","due":"20200818T060000Z","end":"20200818T115342Z","entry":"20200816T232322Z","modified":"20200818T115342Z","status":"completed","uuid":"d1c51102-5bee-44d7-906c-95c00b3f755a"}
 {"description":"bapteme","due":"20200829T060000Z","end":"20200818T115359Z","entry":"20200815T112131Z","modified":"20200818T115359Z","status":"completed","uuid":"c875c2a8-2133-4a21-b760-db7fb587c175"}
 >>>>>>> a5e67010ad13b4e8aa9587067fbaacadb0c05e48
+{"description":"reprendre automne 7","entry":"20200818T150213Z","modified":"20200818T150213Z","project":"\/home\/fabrice\/cours\/AN","status":"pending","uuid":"5ff24a82-d157-4f65-ab13-5ef4fc05f672"}
+{"description":"question 9 to do","entry":"20200818T170206Z","modified":"20200818T170206Z","project":"\/home\/fabrice\/cours\/eti","status":"pending","uuid":"0023da59-62d0-4442-a5ea-7064a3e7aae2"}
+{"description":"inscription cours de théologie","due":"20200816T220000Z","end":"20200818T225635Z","entry":"20200816T232737Z","modified":"20200818T225635Z","status":"completed","uuid":"c6675cbc-09dd-4a81-b46d-572f2d5444b6"}
+{"description":"satom état des lieux","end":"20200818T230136Z","entry":"20200815T075318Z","modified":"20200818T230136Z","status":"completed","uuid":"74ae53bf-9f3a-40e2-8d7d-c3eaa3e86aaa"}
+{"description":"annoncer qui sont les deux visiteur à maman Carine","end":"20200818T230136Z","entry":"20200818T080939Z","modified":"20200818T230136Z","status":"completed","uuid":"c9deab8f-4b18-4757-b591-c3304d02324b"}
+{"description":"synté ordi","end":"20200818T230157Z","entry":"20200815T075130Z","modified":"20200818T230157Z","project":"\/home\/fabrice\/projet\/musique","status":"completed","uuid":"a8ced170-1a5e-4098-9491-a428a0830dbe"}
+{"description":"anniversaire maman papa","due":"20200822T060000Z","entry":"20200818T230257Z","modified":"20200818T230257Z","status":"pending","uuid":"6210ab80-b845-4c41-8461-ed85852a0e38"}
+{"description":"faire un journal plus interactif","end":"20200818T230313Z","entry":"20200813T095113Z","modified":"20200818T230313Z","project":"script","status":"completed","uuid":"aa6c6e66-0feb-445b-aba7-e73a77a278e8"}

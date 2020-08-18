@@ -29,7 +29,7 @@ leftstring C11 = "Siloé"
 leftstring A12 = "20"
 leftstring B12 = "manger"
 leftstring A13 = "21"
-leftstring C13 = "tuto"
+leftstring C13 = "journal"
 leftstring A14 = "22"
 leftstring C14 = "phantsper"
-goto B5
+goto C16
