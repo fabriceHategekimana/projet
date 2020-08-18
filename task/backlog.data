@@ -8804,3 +8804,5 @@
 {"description":"liste de son","end":"20200816T232558Z","entry":"20200815T075151Z","modified":"20200816T232558Z","priority":"H","project":"\/home\/fabrice\/projet\/musique","status":"completed","uuid":"f84f37fd-b765-4935-9fc3-a2685d1c7fd2"}
 {"description":"inscription cours de théologie","due":"20200816T220000Z","entry":"20200816T232737Z","modified":"20200816T232737Z","status":"pending","uuid":"c6675cbc-09dd-4a81-b46d-572f2d5444b6"}
 {"description":"prodimex clé windows","due":"20200817T060000Z","end":"20200817T222401Z","entry":"20200815T111454Z","modified":"20200817T222401Z","status":"completed","uuid":"355a804e-162d-494e-8e2b-604909008470"}
+{"description":"back to school jour 1","due":"20200818T060000Z","end":"20200818T115342Z","entry":"20200816T232322Z","modified":"20200818T115342Z","status":"completed","uuid":"d1c51102-5bee-44d7-906c-95c00b3f755a"}
+{"description":"bapteme","due":"20200829T060000Z","end":"20200818T115359Z","entry":"20200815T112131Z","modified":"20200818T115359Z","status":"completed","uuid":"c875c2a8-2133-4a21-b760-db7fb587c175"}
