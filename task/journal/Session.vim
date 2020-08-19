@@ -82,8 +82,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd journal.sh
-edit journal.sh
+$argadd ~/sh/pull.sh
+edit ~/sh/pull.sh
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -225,14 +225,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 27) / 55)
+let s:l = 11 - ((10 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 037|
+11
+normal! 0
 tabnext 1
-badd +0 journal.sh
+badd +0 ~/sh/pull.sh
+badd +19 ~/sh/push.sh
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
