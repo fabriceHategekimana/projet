@@ -8818,3 +8818,11 @@
 {"description":"synté ordi","end":"20200818T230157Z","entry":"20200815T075130Z","modified":"20200818T230157Z","project":"\/home\/fabrice\/projet\/musique","status":"completed","uuid":"a8ced170-1a5e-4098-9491-a428a0830dbe"}
 {"description":"anniversaire maman papa","due":"20200822T060000Z","entry":"20200818T230257Z","modified":"20200818T230257Z","status":"pending","uuid":"6210ab80-b845-4c41-8461-ed85852a0e38"}
 {"description":"faire un journal plus interactif","end":"20200818T230313Z","entry":"20200813T095113Z","modified":"20200818T230313Z","project":"script","status":"completed","uuid":"aa6c6e66-0feb-445b-aba7-e73a77a278e8"}
+{"description":"Comprendre Gram-Schmidt","end":"20200819T101113Z","entry":"20200814T145239Z","modified":"20200819T101113Z","project":"\/home\/fabrice\/cours\/AN","status":"completed","uuid":"f146177e-bf60-4f3b-a357-d41f96f7d926"}
+{"description":"reprendre automne 7","end":"20200819T101113Z","entry":"20200818T150213Z","modified":"20200819T101113Z","project":"\/home\/fabrice\/cours\/AN","status":"completed","uuid":"5ff24a82-d157-4f65-ab13-5ef4fc05f672"}
+{"description":"Comprendre Gram-schmidt","entry":"20200819T101208Z","modified":"20200819T101208Z","project":"AN","status":"pending","uuid":"8140d36b-5dd6-443a-b0f0-61d5086a515d"}
+{"description":"Relire Interpolation numérique","entry":"20200819T101237Z","modified":"20200819T101237Z","project":"AN","status":"pending","uuid":"faceb0c9-ea74-4bd8-a23f-9c2383e8e386"}
+{"description":"Comprendre Newton-Cotes","entry":"20200819T101321Z","modified":"20200819T101321Z","project":"AN","status":"pending","uuid":"eec56ea3-c779-406f-a277-f2e188884a92"}
+{"description":"gquestion 23","entry":"20200819T111528Z","modified":"20200819T111528Z","project":"AN","status":"pending","uuid":"3777462e-7f7c-4ac0-8af5-9c6d0bc5530e"}
+{"description":"Posa na yo en français","entry":"20200819T153423Z","modified":"20200819T153423Z","project":"Répertoire","status":"pending","uuid":"ea98d3ab-cd76-4e4e-9ece-5b387dc50ba2"}
+{"description":"call avec Yi-Ning et Nicolas","due":"20200820T060000Z","entry":"20200819T160023Z","modified":"20200819T160023Z","status":"pending","uuid":"8f1e8822-67e2-4b4c-9dfb-838f1b6d4ef1"}

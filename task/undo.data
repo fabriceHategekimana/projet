@@ -31634,3 +31634,29 @@ time 1597791793
 old [description:"faire un journal plus interactif" entry:"1597312273" modified:"1597325536" project:"script" status:"pending" uuid:"aa6c6e66-0feb-445b-aba7-e73a77a278e8"]
 new [description:"faire un journal plus interactif" end:"1597791793" entry:"1597312273" modified:"1597791793" project:"script" status:"completed" uuid:"aa6c6e66-0feb-445b-aba7-e73a77a278e8"]
 ---
+time 1597831873
+old [description:"Comprendre Gram-Schmidt" entry:"1597416759" modified:"1597416759" project:"\/home\/fabrice\/cours\/AN" status:"pending" uuid:"f146177e-bf60-4f3b-a357-d41f96f7d926"]
+new [description:"Comprendre Gram-Schmidt" end:"1597831873" entry:"1597416759" modified:"1597831873" project:"\/home\/fabrice\/cours\/AN" status:"completed" uuid:"f146177e-bf60-4f3b-a357-d41f96f7d926"]
+---
+time 1597831873
+old [description:"reprendre automne 7" entry:"1597762933" modified:"1597762933" project:"\/home\/fabrice\/cours\/AN" status:"pending" uuid:"5ff24a82-d157-4f65-ab13-5ef4fc05f672"]
+new [description:"reprendre automne 7" end:"1597831873" entry:"1597762933" modified:"1597831873" project:"\/home\/fabrice\/cours\/AN" status:"completed" uuid:"5ff24a82-d157-4f65-ab13-5ef4fc05f672"]
+---
+time 1597831928
+new [description:"Comprendre Gram-schmidt" entry:"1597831928" modified:"1597831928" project:"AN" status:"pending" uuid:"8140d36b-5dd6-443a-b0f0-61d5086a515d"]
+---
+time 1597831957
+new [description:"Relire Interpolation numérique" entry:"1597831957" modified:"1597831957" project:"AN" status:"pending" uuid:"faceb0c9-ea74-4bd8-a23f-9c2383e8e386"]
+---
+time 1597832001
+new [description:"Comprendre Newton-Cotes" entry:"1597832001" modified:"1597832001" project:"AN" status:"pending" uuid:"eec56ea3-c779-406f-a277-f2e188884a92"]
+---
+time 1597835728
+new [description:"gquestion 23" entry:"1597835728" modified:"1597835728" project:"AN" status:"pending" uuid:"3777462e-7f7c-4ac0-8af5-9c6d0bc5530e"]
+---
+time 1597851263
+new [description:"Posa na yo en français" entry:"1597851263" modified:"1597851263" project:"Répertoire" status:"pending" uuid:"ea98d3ab-cd76-4e4e-9ece-5b387dc50ba2"]
+---
+time 1597852823
+new [description:"call avec Yi-Ning et Nicolas" due:"1597903200" entry:"1597852823" modified:"1597852823" status:"pending" uuid:"8f1e8822-67e2-4b4c-9dfb-838f1b6d4ef1"]
+---
