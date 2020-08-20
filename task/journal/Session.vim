@@ -70,6 +70,7 @@ set smartcase
 set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set wildignore=*.pyc
 set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
@@ -82,8 +83,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd ~/sh/pull.sh
-edit ~/sh/pull.sh
+$argadd journaladd.py
+edit journaladd.py
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -91,20 +92,22 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
+nnoremap <buffer> nf /def 
+nnoremap <buffer> pf ?def 
 let s:cpo_save=&cpo
 set cpo&vim
-nnoremap <buffer> <F5> :!./%
-nnoremap <buffer> <F2> :call Note("sh")
+nnoremap <buffer> <F5> :call RunPython()
+nnoremap <buffer> <F4> :!python3
+nnoremap <buffer> édc ^x 
 nnoremap <buffer> éc ^i#
-inoremap <buffer> [ [  ]<Left><Left>
-inoreabbr <buffer> function (){}<Up><Up>
-inoreabbr <buffer> if if [ ]; thenfi<Up><Up><Right><Right>
-inoreabbr <buffer> elif elif [ ]; then<Up><Right><Right>
+inoremap <buffer> def  def ():F(i
+inoremap <buffer> printg print("")<Left><Left>
+inoremap <buffer> print print()<Left>
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
-setlocal noautoindent
+setlocal autoindent
 setlocal backupcopy=
 setlocal balloonexpr=
 setlocal nobinary
@@ -114,12 +117,12 @@ setlocal bufhidden=
 setlocal buflisted
 setlocal buftype=
 setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinkeys=0{,0},0),0],:,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=#%s
+setlocal comments=b:#,fb:-
+setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -135,9 +138,9 @@ setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'sh'
-setlocal filetype=sh
+setlocal expandtab
+if &filetype != 'python'
+setlocal filetype=python
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -157,13 +160,13 @@ setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=GetShIndent()
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
+setlocal include=^\\s*\\(from\\|import\\)
+setlocal includeexpr=substitute(substitute(substitute(v:fname,b:grandparent_match,b:grandparent_sub,''),b:parent_match,b:parent_sub,''),b:child_match,b:child_sub,'g')
+setlocal indentexpr=GetPythonIndent(v:lnum)
+setlocal indentkeys=0{,0},0),0],:,!^F,o,O,e,<:>,=elif,=except
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
+setlocal keywordprg=pydoc
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
@@ -177,7 +180,7 @@ setlocal nrformats=bin,octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
+setlocal omnifunc=python3complete#Complete
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -189,22 +192,22 @@ setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal scrolloff=-1
-setlocal shiftwidth=8
+setlocal shiftwidth=4
 setlocal noshortname
 setlocal sidescrolloff=-1
 setlocal signcolumn=auto
 setlocal nosmartindent
-setlocal softtabstop=0
+setlocal softtabstop=4
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=
-setlocal suffixesadd=
+setlocal suffixesadd=.py
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'sh'
-setlocal syntax=sh
+if &syntax != 'python'
+setlocal syntax=python
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -225,14 +228,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 15 - ((14 * winheight(0) + 27) / 55)
+let s:l = 6 - ((5 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-15
-normal! 04|
+6
+normal! 0
 tabnext 1
-badd +0 ~/sh/pull.sh
+badd +0 journaladd.py
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
