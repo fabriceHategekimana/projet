@@ -3,35 +3,36 @@
 
 format A 5 2 0
 format B 15 2 0
+format C 11 2 0
 format D 15 2 0
 format E 14 2 0
 format F 12 2 0
-mark a A1
-mark b A1
-mark c A1
-mark d A1
-mark e A1
-mark f A1
-mark g A1
-mark h A1
-mark i A1
-mark j A1
-mark k A1
-mark l A1
-mark m A1
-mark n A1
-mark o A1
-mark p A1
-mark q A1
-mark r A1
-mark s A1
-mark t A1
-mark u A1
-mark v A1
-mark w A1
-mark x A1
-mark y A1
-mark z A1
+mark a A3
+mark b A3
+mark c A3
+mark d A3
+mark e A3
+mark f A3
+mark g A3
+mark h A3
+mark i A3
+mark j A3
+mark k A3
+mark l A3
+mark m A3
+mark n A3
+mark o A3
+mark p A3
+mark q A3
+mark r A3
+mark s A3
+mark t A3
+mark u A3
+mark v A3
+mark w A3
+mark x A3
+mark y A3
+mark z A3
 leftstring B0 = "Lundi"
 leftstring C0 = "Mardi"
 leftstring D0 = "Mercredi"
@@ -39,51 +40,49 @@ leftstring E0 = "Jeudi"
 leftstring F0 = "Vendredi"
 leftstring G0 = "Samedi"
 leftstring H0 = "Dimanche"
-leftstring A1 = "8"
-leftstring D1 = "-"
-leftstring E1 = "préparation"
-leftstring A2 = "9"
-leftstring D2 = "-"
-leftstring E2 = "tuto"
-leftstring A3 = "10"
-leftstring D3 = "-"
-leftstring E3 = "back to school"
-leftstring A4 = "11"
-leftstring D4 = "organisation"
-leftstring E4 = "back to school"
-leftstring A5 = "12"
-leftstring D5 = "AN"
-leftstring E5 = "manger"
-leftstring A6 = "13"
-leftstring D6 = "PS"
-leftstring E6 = "histoire"
-leftstring A7 = "14"
-leftstring D7 = "ETI"
-leftstring E7 = "AN"
-leftstring A8 = "15"
-leftstring D8 = "Siloé"
-leftstring E8 = "PS"
-leftstring A9 = "16"
-leftstring D9 = "satom"
-leftstring E9 = "ETI"
-leftstring A10 = "17"
-leftstring D10 = "tuto"
-leftstring E10 = "backup"
-leftstring A11 = "18"
-leftstring D11 = "phantsper"
-leftstring E11 = "rangement"
-leftstring A12 = "19"
-leftstring D12 = "prière"
-leftstring E12 = "phantpser"
-leftstring A13 = "20"
-leftstring D13 = "prière"
-leftstring E13 = "bible"
-leftstring A14 = "21"
-leftstring D14 = "libre"
-leftstring E14 = "libre"
-leftstring A15 = "22"
-leftstring D15 = "libre"
-leftstring E15 = "libre"
-leftstring B17 = "Wish list"
-leftstring B18 = "synthèse sonore"
-goto E9
+leftstring A1 = "6"
+leftstring B1 = "sport"
+leftstring C1 = "sport"
+leftstring A2 = "7"
+leftstring B2 = "préparation"
+leftstring C2 = "préparation"
+leftstring A3 = "8"
+leftstring B3 = "AN 1, 2, 3"
+leftstring C3 = "AN 1, 2, 3"
+leftstring A4 = "9"
+leftstring B4 = "Tuto"
+leftstring C4 = "Satom"
+leftstring A5 = "10"
+leftstring B5 = "Prog sys"
+leftstring C5 = "Satom"
+leftstring A6 = "11"
+leftstring B6 = "Siloé"
+leftstring C6 = "Satom"
+leftstring A7 = "12"
+leftstring B7 = "manger"
+leftstring C7 = "manger"
+leftstring A8 = "13"
+leftstring B8 = "déplacement"
+leftstring C8 = "déplacement"
+leftstring A9 = "14"
+leftstring B9 = "Vêtements"
+leftstring C9 = "Tuto"
+leftstring A10 = "15"
+leftstring B10 = "Vêtements"
+leftstring C10 = "Prog sys"
+leftstring A11 = "16"
+leftstring B11 = "Finances"
+leftstring C11 = "Siloé"
+leftstring A12 = "17"
+leftstring B12 = "activité"
+leftstring A13 = "18"
+leftstring B13 = "déplacement"
+leftstring A14 = "19"
+leftstring B14 = "prière"
+leftstring A15 = "20"
+leftstring B15 = "prière"
+leftstring A16 = "21"
+leftstring B16 = "manger+prep"
+leftstring B18 = "Wish list"
+leftstring B19 = "phantsper"
+goto D17

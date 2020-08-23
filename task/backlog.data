@@ -8828,3 +8828,10 @@
 {"description":"call avec Yi-Ning et Nicolas","due":"20200820T060000Z","entry":"20200819T160023Z","modified":"20200819T160023Z","status":"pending","uuid":"8f1e8822-67e2-4b4c-9dfb-838f1b6d4ef1"}
 {"description":"tester Videopsalm","entry":"20200820T084022Z","modified":"20200820T084022Z","status":"pending","uuid":"02515adf-6e24-4125-860a-cb1749c2e6cf"}
 {"description":"essayer de faire le calcul du slide 101 du theme 1","entry":"20200820T204403Z","modified":"20200820T204403Z","project":"eti","status":"pending","uuid":"a8a5435a-2b0b-4b7b-b227-dbc9a132d231"}
+{"description":"voir série de taylor","entry":"20200823T184228Z","modified":"20200823T184228Z","project":"AN","status":"pending","uuid":"fa070488-78a3-4cb0-9595-627fc95027bb"}
+{"description":"back to school jour 2","due":"20200820T060000Z","end":"20200823T185608Z","entry":"20200816T232336Z","modified":"20200823T185608Z","status":"completed","uuid":"7f96314c-1881-489e-b531-98015e860ff5"}
+{"description":"call avec Yi-Ning et Nicolas","due":"20200820T060000Z","end":"20200823T185616Z","entry":"20200819T160023Z","modified":"20200823T185616Z","status":"completed","uuid":"8f1e8822-67e2-4b4c-9dfb-838f1b6d4ef1"}
+{"description":"anniversaire maman papa","due":"20200822T060000Z","end":"20200823T185623Z","entry":"20200818T230257Z","modified":"20200823T185623Z","status":"completed","uuid":"6210ab80-b845-4c41-8461-ed85852a0e38"}
+{"description":"question 9 to do","end":"20200823T185815Z","entry":"20200818T170206Z","modified":"20200823T185815Z","project":"\/home\/fabrice\/cours\/eti","status":"completed","uuid":"0023da59-62d0-4442-a5ea-7064a3e7aae2"}
+{"description":"Relire Interpolation numérique","end":"20200823T185832Z","entry":"20200819T101237Z","modified":"20200823T185832Z","project":"AN","status":"completed","uuid":"faceb0c9-ea74-4bd8-a23f-9c2383e8e386"}
+{"description":"rappeller Rachel","entry":"20200823T191426Z","modified":"20200823T191426Z","status":"pending","uuid":"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"}

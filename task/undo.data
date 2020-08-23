@@ -31666,3 +31666,29 @@ new [description:"tester Videopsalm" entry:"1597912822" modified:"1597912822" st
 time 1597956243
 new [description:"essayer de faire le calcul du slide 101 du theme 1" entry:"1597956243" modified:"1597956243" project:"eti" status:"pending" uuid:"a8a5435a-2b0b-4b7b-b227-dbc9a132d231"]
 ---
+time 1598208148
+new [description:"voir série de taylor" entry:"1598208148" modified:"1598208148" project:"AN" status:"pending" uuid:"fa070488-78a3-4cb0-9595-627fc95027bb"]
+---
+time 1598208968
+old [description:"back to school jour 2" due:"1597903200" entry:"1597620216" modified:"1597620216" status:"pending" uuid:"7f96314c-1881-489e-b531-98015e860ff5"]
+new [description:"back to school jour 2" due:"1597903200" end:"1598208968" entry:"1597620216" modified:"1598208968" status:"completed" uuid:"7f96314c-1881-489e-b531-98015e860ff5"]
+---
+time 1598208976
+old [description:"call avec Yi-Ning et Nicolas" due:"1597903200" entry:"1597852823" modified:"1597852823" status:"pending" uuid:"8f1e8822-67e2-4b4c-9dfb-838f1b6d4ef1"]
+new [description:"call avec Yi-Ning et Nicolas" due:"1597903200" end:"1598208976" entry:"1597852823" modified:"1598208976" status:"completed" uuid:"8f1e8822-67e2-4b4c-9dfb-838f1b6d4ef1"]
+---
+time 1598208983
+old [description:"anniversaire maman papa" due:"1598076000" entry:"1597791777" modified:"1597791777" status:"pending" uuid:"6210ab80-b845-4c41-8461-ed85852a0e38"]
+new [description:"anniversaire maman papa" due:"1598076000" end:"1598208983" entry:"1597791777" modified:"1598208983" status:"completed" uuid:"6210ab80-b845-4c41-8461-ed85852a0e38"]
+---
+time 1598209095
+old [description:"question 9 to do" entry:"1597770126" modified:"1597770126" project:"\/home\/fabrice\/cours\/eti" status:"pending" uuid:"0023da59-62d0-4442-a5ea-7064a3e7aae2"]
+new [description:"question 9 to do" end:"1598209095" entry:"1597770126" modified:"1598209095" project:"\/home\/fabrice\/cours\/eti" status:"completed" uuid:"0023da59-62d0-4442-a5ea-7064a3e7aae2"]
+---
+time 1598209112
+old [description:"Relire Interpolation numérique" entry:"1597831957" modified:"1597831957" project:"AN" status:"pending" uuid:"faceb0c9-ea74-4bd8-a23f-9c2383e8e386"]
+new [description:"Relire Interpolation numérique" end:"1598209112" entry:"1597831957" modified:"1598209112" project:"AN" status:"completed" uuid:"faceb0c9-ea74-4bd8-a23f-9c2383e8e386"]
+---
+time 1598210066
+new [description:"rappeller Rachel" entry:"1598210066" modified:"1598210066" status:"pending" uuid:"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"]
+---
