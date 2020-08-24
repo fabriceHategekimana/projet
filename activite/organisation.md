@@ -1,6 +1,0 @@
-essentiel (trop de trucs à faire)
-recul (vu globale)
-multitâche (travail paralelle)
-divide and conquer (division du travail, planning)
-priorité (efficacité)
-batching (regrouper les tâches similaires)

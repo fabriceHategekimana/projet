@@ -6,7 +6,9 @@ Quand je dis décevantes, c'est juste qu'ils avaient du potentiel mais ne l'on p
 Pour moi une bonne histoire et une histoire qui divertie, qui fait rêver mais surtout qui donne à réfléchir et enseigne.
 
 ## Thèmes:
+[[sujets_interessants]]
 [transhumanisme](transhumanisme)
 [eugénisme](eugénisme)
 [éducation](éducation)
 [harcèlement](harcèlement)
+l'[[illusion]]

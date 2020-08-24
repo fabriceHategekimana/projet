@@ -1,7 +1,6 @@
 
 listes d'idées intéressante
 =============================
-
 	* transhumanisme
 	* égalité des chances
 	* bio-hacking
