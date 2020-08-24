@@ -10,8 +10,10 @@ summary: FORCE
 	task $(PROJET) summary
 task: FORCE
 	task $(PROJET)
-close:
+close: Force
 	task $(PROJET) done
+piano: FORCE
+	fluidsynth -a alsa -g 5 giga_piano.sf2
 FORCE:
 
 
