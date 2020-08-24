@@ -8835,3 +8835,5 @@
 {"description":"question 9 to do","end":"20200823T185815Z","entry":"20200818T170206Z","modified":"20200823T185815Z","project":"\/home\/fabrice\/cours\/eti","status":"completed","uuid":"0023da59-62d0-4442-a5ea-7064a3e7aae2"}
 {"description":"Relire Interpolation numérique","end":"20200823T185832Z","entry":"20200819T101237Z","modified":"20200823T185832Z","project":"AN","status":"completed","uuid":"faceb0c9-ea74-4bd8-a23f-9c2383e8e386"}
 {"description":"rappeller Rachel","entry":"20200823T191426Z","modified":"20200823T191426Z","status":"pending","uuid":"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"}
+{"description":"révision cours 3e annee","entry":"20200824T064802Z","modified":"20200824T064802Z","status":"pending","uuid":"6a554e45-a5a4-4ac2-83fa-2aec35f60b14"}
+{"description":"donner aide mémoire à Keren projet:midi","entry":"20200824T080114Z","modified":"20200824T080114Z","status":"pending","uuid":"244b1330-145b-4d3e-9ea3-6faa7f43d81a"}

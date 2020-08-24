@@ -85,4 +85,4 @@ leftstring A16 = "21"
 leftstring B16 = "manger+prep"
 leftstring B18 = "Wish list"
 leftstring B19 = "phantsper"
-goto D17
+goto B7
