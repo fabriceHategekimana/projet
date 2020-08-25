@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit ~/projet/activite/buts.md
+edit ~/projet/activite/motivation.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -116,9 +116,9 @@ inoremap <buffer> ééfff \flechel{nom1}{nom2}{label}{angleIn}{angleOut}
 inoremap <buffer> ééff \fleche{nom1}{nom2}{label}
 inoremap <buffer> éér \rectangle{nom}{x}{y}
 inoremap <buffer> ééim ![](images/num.png)^<Right>a
-inoremap <buffer> éél :let liste= ListeMode(liste)
 inoremap <buffer> ééd \begin{tikzpicture}\end{tikzpicture}
 inoremap <buffer> ééta :call MarkdownLigne()
+inoremap <buffer> éém ``<Left>
 inoremap <buffer> ééco ``````<Left><Left><Left><Up>
 inoremap <buffer> éésss I#### 
 inoremap <buffer> ééss I### 
@@ -126,7 +126,6 @@ inoremap <buffer> éés I##
 inoremap <buffer> ééti # 
 inoremap <buffer> ééit __<Left>
 inoremap <buffer> ééb ****<Left><Left>
-inoremap <buffer> éim i![](images/num.png)^<Right>a
 nnoremap <buffer> <silent> O :call vimwiki#lst#kbd_O()
 nmap <buffer> <silent> [= <Plug>VimwikiGoToPrevSiblingHeader
 nmap <buffer> <silent> [[ <Plug>VimwikiGoToPrevHeader
@@ -222,10 +221,11 @@ imap <buffer> <silent> <NL> <Plug>VimwikiListNextSymbol
 inoremap <buffer> <silent>  :VimwikiReturn 1 5
 imap <buffer> <silent>  <Plug>VimwikiIncreaseLvlSingleItem
 nnoremap <buffer> échant :call Chant()
+nnoremap <buffer> ém bi`ea`
+nnoremap <buffer> éim i![](images/num.png)^<Right>a
 nnoremap <buffer> éta :call MarkdownLigne()
 nnoremap <buffer> éco i``````<Left><Left><Left><Up>
 nnoremap <buffer> éb I**A**
-nnoremap <buffer> él :let liste= ListeMode(liste)
 nnoremap <buffer> ésss I#### 
 nnoremap <buffer> éss I### 
 nnoremap <buffer> és I## 
@@ -357,15 +357,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 13) / 27)
+let s:l = 92 - ((52 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 08|
+92
+normal! 083|
 tabnext 1
-badd +5 start.md
-badd +0 ~/projet/activite/buts.md
+badd +6 start.md
+badd +0 ~/projet/activite/motivation.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

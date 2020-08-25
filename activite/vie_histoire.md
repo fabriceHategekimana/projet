@@ -12,3 +12,16 @@ Pour moi une bonne histoire et une histoire qui divertie, qui fait rêver mais s
 [éducation](éducation)
 [harcèlement](harcèlement)
 l'[[illusion]]
+l'anorexie
+validation sociale
+comparaison sociale
+apprentissage vicariant
+effet zeigarnik
+boite de Skinner
+
+
+## personnages:
+délinquant
+magical girl
+premier de la classe
+
