@@ -5,6 +5,8 @@ Quand je dis décevantes, c'est juste qu'ils avaient du potentiel mais ne l'on p
 
 Pour moi une bonne histoire et une histoire qui divertie, qui fait rêver mais surtout qui donne à réfléchir et enseigne.
 
+Il y a quelques thèmes et éléments ici. Mais maintenant, le développement se déroulera en tant que projet.
+
 ## Thèmes:
 [[sujets_interessants]]
 [transhumanisme](transhumanisme)

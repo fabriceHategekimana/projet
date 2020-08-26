@@ -20,3 +20,8 @@
 [description:"rappeller Rachel" entry:"1598210066" modified:"1598210066" status:"pending" uuid:"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"]
 [description:"révision cours 3e annee" entry:"1598251682" modified:"1598251682" status:"pending" uuid:"6a554e45-a5a4-4ac2-83fa-2aec35f60b14"]
 [description:"donner aide mémoire à Keren projet:midi" entry:"1598256074" modified:"1598256074" status:"pending" uuid:"244b1330-145b-4d3e-9ea3-6faa7f43d81a"]
+[description:"faire une comparaison entre les test de flux en c et en assembleur" entry:"1598439329" modified:"1598439329" project:"programmation_des_systèmes" status:"pending" uuid:"eaba123b-a630-4028-a346-530a25323696"]
+[description:"me renseigner sur les registres" entry:"1598480848" modified:"1598480848" project:"programmation_des_systèmes" status:"pending" uuid:"bc1d1925-cec0-4c8e-aa28-b8e070a15e84"]
+[description:"mode d'adressage du processeur" entry:"1598480997" modified:"1598480997" project:"programmation_des_systèmes" status:"pending" uuid:"1399a763-da9e-45e6-bb8d-b7ce57dceaed"]
+[description:"chercher l'instruction SWI" entry:"1598481025" modified:"1598481025" project:"programmation_des_systèmes" status:"pending" uuid:"9d3533dc-7cca-432d-bf39-72e8fa549a76"]
+[description:"voir les interruptions" entry:"1598481050" modified:"1598481050" project:"programmation_des_systèmes" status:"pending" uuid:"e7ab3909-db58-4817-a0eb-a01c5ae4aca7"]
