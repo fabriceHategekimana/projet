@@ -31713,3 +31713,11 @@ new [description:"chercher l'instruction SWI" entry:"1598481025" modified:"15984
 time 1598481050
 new [description:"voir les interruptions" entry:"1598481050" modified:"1598481050" project:"programmation_des_systèmes" status:"pending" uuid:"e7ab3909-db58-4817-a0eb-a01c5ae4aca7"]
 ---
+time 1598519770
+old [description:"faire une comparaison entre les test de flux en c et en assembleur" entry:"1598439329" modified:"1598439329" project:"programmation_des_systèmes" status:"pending" uuid:"eaba123b-a630-4028-a346-530a25323696"]
+new [description:"faire une comparaison entre les test de flux en c et en assembleur" end:"1598519770" entry:"1598439329" modified:"1598519770" project:"programmation_des_systèmes" status:"completed" uuid:"eaba123b-a630-4028-a346-530a25323696"]
+---
+time 1598519827
+old [description:"rappeller Rachel" entry:"1598210066" modified:"1598210066" status:"pending" uuid:"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"]
+new [description:"rappeller Rachel" end:"1598519827" entry:"1598210066" modified:"1598519827" status:"completed" uuid:"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"]
+---
