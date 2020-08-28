@@ -12,9 +12,21 @@ Se divise en 3 cycle
 
 Explorer les documents aide-mémoire pour les maths et voir quoi en tirer
 
-
 [Aide_mémoire_2011](Aide_mémoire_2011)
 [Aide_mémoire_2019](Aide_mémoire_2019)
 
 Maintenant que j'ai le contenu, je dois trouver un moyen pour le rendre intéressant.
+
+## Linux
+Pourquoi linux
+Le terminal
+Les logiciels:
+	* vim
+	* tmux
+	* ranger
+	* firefox
+	* chromium
+Le bash (commande)
+Le bash (script)
+
 

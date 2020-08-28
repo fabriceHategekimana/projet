@@ -86,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd note/note.md
-edit ~/projet/tuto/note/Aide_mémoire_2011.md
+edit note/note.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -357,16 +357,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 27) / 55)
+let s:l = 30 - ((29 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
+30
 normal! 09|
 tabnext 1
-badd +16 note/note.md
-badd +1 ~/projet/tuto/note/Aide_mémoire_2011.md
-badd +7 ~/projet/tuto/note/Aide_mémoire_2019.md
+badd +0 note/note.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
