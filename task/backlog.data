@@ -8844,3 +8844,5 @@
 {"description":"voir les interruptions","entry":"20200826T223050Z","modified":"20200826T223050Z","project":"programmation_des_systèmes","status":"pending","uuid":"e7ab3909-db58-4817-a0eb-a01c5ae4aca7"}
 {"description":"faire une comparaison entre les test de flux en c et en assembleur","end":"20200827T091610Z","entry":"20200826T105529Z","modified":"20200827T091610Z","project":"programmation_des_systèmes","status":"completed","uuid":"eaba123b-a630-4028-a346-530a25323696"}
 {"description":"rappeller Rachel","end":"20200827T091707Z","entry":"20200823T191426Z","modified":"20200827T091707Z","status":"completed","uuid":"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"}
+{"description":"tester Videopsalm","end":"20200827T223826Z","entry":"20200820T084022Z","modified":"20200827T223826Z","status":"completed","uuid":"02515adf-6e24-4125-860a-cb1749c2e6cf"}
+{"description":"donner aide mémoire à Keren projet:midi","end":"20200827T223830Z","entry":"20200824T080114Z","modified":"20200827T223830Z","status":"completed","uuid":"244b1330-145b-4d3e-9ea3-6faa7f43d81a"}

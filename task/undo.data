@@ -31721,3 +31721,11 @@ time 1598519827
 old [description:"rappeller Rachel" entry:"1598210066" modified:"1598210066" status:"pending" uuid:"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"]
 new [description:"rappeller Rachel" end:"1598519827" entry:"1598210066" modified:"1598519827" status:"completed" uuid:"688a1c7e-8bbb-455b-b6f0-c2926d505e1b"]
 ---
+time 1598567906
+old [description:"tester Videopsalm" entry:"1597912822" modified:"1597912822" status:"pending" uuid:"02515adf-6e24-4125-860a-cb1749c2e6cf"]
+new [description:"tester Videopsalm" end:"1598567906" entry:"1597912822" modified:"1598567906" status:"completed" uuid:"02515adf-6e24-4125-860a-cb1749c2e6cf"]
+---
+time 1598567910
+old [description:"donner aide mémoire à Keren projet:midi" entry:"1598256074" modified:"1598256074" status:"pending" uuid:"244b1330-145b-4d3e-9ea3-6faa7f43d81a"]
+new [description:"donner aide mémoire à Keren projet:midi" end:"1598567910" entry:"1598256074" modified:"1598567910" status:"completed" uuid:"244b1330-145b-4d3e-9ea3-6faa7f43d81a"]
+---
