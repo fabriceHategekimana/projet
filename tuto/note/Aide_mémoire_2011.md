@@ -2,8 +2,7 @@ Aide mémoire 2011
 ==================
 
 ## Nombres et opérations
-Ensembles
-![Ensembles_de_nombres](../images/Ensembles_de_nombres.png)
+[Ensembles](Ensembles)
 Notion d'ordre (croissant, décroissant)
 ![priorité_des_opérations](../images/priorité_des_opérations.png)
 opposé et inverse
