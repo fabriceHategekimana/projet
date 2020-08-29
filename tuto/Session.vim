@@ -357,12 +357,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 27) / 55)
+let s:l = 12 - ((11 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 025|
+12
+normal! 0
 tabnext 1
 badd +15 note/note.md
 badd +5 ~/projet/tuto/note/Aide_mémoire_2011.md
