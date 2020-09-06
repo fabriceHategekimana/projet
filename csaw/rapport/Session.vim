@@ -71,16 +71,16 @@ set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/projet/csaw
+cd ~/projet/csaw/rapport
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 besoins.md
+badd +0 rapport_projet_de_semestre_Fabrice_Hategekimana.md
 argglobal
 silent! argdel *
-$argadd besoins.md
-edit besoins.md
+$argadd rapport_projet_de_semestre_Fabrice_Hategekimana.md
+edit rapport_projet_de_semestre_Fabrice_Hategekimana.md
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -327,12 +327,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 19 - ((18 * winheight(0) + 18) / 37)
+let s:l = 57 - ((27 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
-normal! 048|
+57
+normal! 0130|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

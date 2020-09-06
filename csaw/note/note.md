@@ -1,9 +1,4 @@
 
-\newcommand{\rectangle}[3]{\node (#1) [boite, xshift= #2 cm, yshift= #3 cm] {#1};}
-\newcommand{\fleche}[3]{\draw[thick,->] (#1) -- (#2) node[midway,sloped,below, rotate=0] {#3};}
-\newcommand{\flechel}[5]{\draw[thick,->] (#1) to [out=#4, in=#5] node[midway, sloped, below, rotate=0] {#3} (#2);}
-
-
 Concept and philosophy  
 ======================
 This section explain how the code was thought up. It's important to know the philosophie behind this project to understand and to manipulate properly the project.
@@ -158,3 +153,9 @@ This project can be subdivided in 3 layers with their own specifications.
 
 Each of them has a manager equivalent. 
 	
+
+UML Classes and Database
+========================
+We need to define entities to manage all those task.
+
+
