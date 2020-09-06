@@ -72,4 +72,9 @@ leftstring A15 = "21"
 leftstring B15 = "préparation"
 leftstring B18 = "Wish list"
 leftstring B19 = "bento"
-goto B12
+leftstring B20 = "tuto"
+leftstring B21 = "zynAddSubFx"
+leftstring B22 = "analyse musical"
+leftstring B23 = "histoire"
+leftstring B24 = "phantsper intro"
+goto B4
