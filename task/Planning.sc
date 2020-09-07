@@ -2,7 +2,7 @@
 # You almost certainly shouldn't edit it.
 
 format A 5 2 0
-format B 19 2 0
+format B 15 2 0
 format C 11 2 0
 format D 15 2 0
 format E 14 2 0
@@ -47,7 +47,7 @@ leftstring B2 = "compilateur"
 leftstring A3 = "9"
 leftstring B3 = "concurrence"
 leftstring A4 = "10"
-leftstring B4 = "génie"
+leftstring B4 = "satom"
 leftstring A5 = "11"
 leftstring B5 = "imagerie"
 leftstring A6 = "12"
@@ -77,4 +77,4 @@ leftstring B21 = "zynAddSubFx"
 leftstring B22 = "analyse musical"
 leftstring B23 = "histoire"
 leftstring B24 = "phantsper intro"
-goto B4
+goto A6
