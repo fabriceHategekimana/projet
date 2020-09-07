@@ -29,14 +29,23 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
+<<<<<<< HEAD
 let s:l = 1 - ((0 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
+=======
+let s:l = 8 - ((7 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+8
+>>>>>>> 10721b7936ea8172eb63ffd2ae18823f9d2ccf5e
 normal! 0
 tabnext 1
 badd +0 revenu_brute_Hategekimana_Ganza_Fabrice.md
+badd +250 ~/.vimrc
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
