@@ -1,5 +1,6 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
+<<<<<<< HEAD
 let s:cpo_save=&cpo
 set cpo&vim
 inoremap <C-Y> 
@@ -71,6 +72,8 @@ set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
+=======
+>>>>>>> f61b6a18ce4982dc0dfb8ca16456337c997b2339
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -91,6 +94,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
+<<<<<<< HEAD
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -221,6 +225,30 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 166
+=======
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+<<<<<<< HEAD
+let s:l = 1 - ((0 * winheight(0) + 13) / 26)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+=======
+let s:l = 8 - ((7 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+8
+>>>>>>> 10721b7936ea8172eb63ffd2ae18823f9d2ccf5e
+>>>>>>> f61b6a18ce4982dc0dfb8ca16456337c997b2339
 normal! 0
 tabnext 1
 badd +0 ~/note/note
