@@ -31797,3 +31797,26 @@ time 1599424034
 old [description:"voir les interruptions" entry:"1598481050" modified:"1598481050" project:"programmation_des_systèmes" status:"pending" uuid:"e7ab3909-db58-4817-a0eb-a01c5ae4aca7"]
 new [description:"voir les interruptions" end:"1599424034" entry:"1598481050" modified:"1599424034" project:"programmation_des_systèmes" status:"completed" uuid:"e7ab3909-db58-4817-a0eb-a01c5ae4aca7"]
 ---
+time 1599548801
+new [description:"harmoniser les queries" entry:"1599548801" modified:"1599548801" project:"satom" status:"pending" uuid:"9827b0d5-e6a5-42f0-8492-68641e52c8fd"]
+---
+time 1599548827
+new [description:"épurer app.js" entry:"1599548827" modified:"1599548827" project:"satom" status:"pending" uuid:"2c9b9dd6-47d5-45f9-865b-c481fbfbf3fe"]
+---
+time 1599548847
+new [description:"apprendre le nodejs modulaire et objet" entry:"1599548847" modified:"1599548847" project:"satom" status:"pending" uuid:"ad7367f1-6a74-4be4-b7bd-bff843955bf2"]
+---
+time 1599556386
+old [description:"harmoniser les queries" entry:"1599548801" modified:"1599548801" project:"satom" status:"pending" uuid:"9827b0d5-e6a5-42f0-8492-68641e52c8fd"]
+new [description:"harmoniser les queries" end:"1599556386" entry:"1599548801" modified:"1599556386" project:"satom" status:"completed" uuid:"9827b0d5-e6a5-42f0-8492-68641e52c8fd"]
+---
+time 1599556411
+new [description:"ajouter géolocalisation" entry:"1599556411" modified:"1599556411" project:"satom" status:"pending" uuid:"eeeaff47-0a74-42a8-95e8-32a471ba65c2"]
+---
+time 1599556893
+new [description:"mettre git comme backup dans une branche spécifique" entry:"1599556893" modified:"1599556893" project:"satom" status:"pending" uuid:"d8cbd5b0-957b-462f-af6b-780691280385"]
+---
+time 1599557911
+old [description:"épurer app.js" entry:"1599548827" modified:"1599548827" project:"satom" status:"pending" uuid:"2c9b9dd6-47d5-45f9-865b-c481fbfbf3fe"]
+new [description:"épurer app.js" end:"1599557911" entry:"1599548827" modified:"1599557911" project:"satom" status:"completed" uuid:"2c9b9dd6-47d5-45f9-865b-c481fbfbf3fe"]
+---

@@ -8863,3 +8863,10 @@
 {"description":"mode d'adressage du processeur","end":"20200906T202714Z","entry":"20200826T222957Z","modified":"20200906T202714Z","project":"programmation_des_systèmes","status":"completed","uuid":"1399a763-da9e-45e6-bb8d-b7ce57dceaed"}
 {"description":"chercher l'instruction SWI","end":"20200906T202714Z","entry":"20200826T223025Z","modified":"20200906T202714Z","project":"programmation_des_systèmes","status":"completed","uuid":"9d3533dc-7cca-432d-bf39-72e8fa549a76"}
 {"description":"voir les interruptions","end":"20200906T202714Z","entry":"20200826T223050Z","modified":"20200906T202714Z","project":"programmation_des_systèmes","status":"completed","uuid":"e7ab3909-db58-4817-a0eb-a01c5ae4aca7"}
+{"description":"harmoniser les queries","entry":"20200908T070641Z","modified":"20200908T070641Z","project":"satom","status":"pending","uuid":"9827b0d5-e6a5-42f0-8492-68641e52c8fd"}
+{"description":"épurer app.js","entry":"20200908T070707Z","modified":"20200908T070707Z","project":"satom","status":"pending","uuid":"2c9b9dd6-47d5-45f9-865b-c481fbfbf3fe"}
+{"description":"apprendre le nodejs modulaire et objet","entry":"20200908T070727Z","modified":"20200908T070727Z","project":"satom","status":"pending","uuid":"ad7367f1-6a74-4be4-b7bd-bff843955bf2"}
+{"description":"harmoniser les queries","end":"20200908T091306Z","entry":"20200908T070641Z","modified":"20200908T091306Z","project":"satom","status":"completed","uuid":"9827b0d5-e6a5-42f0-8492-68641e52c8fd"}
+{"description":"ajouter géolocalisation","entry":"20200908T091331Z","modified":"20200908T091331Z","project":"satom","status":"pending","uuid":"eeeaff47-0a74-42a8-95e8-32a471ba65c2"}
+{"description":"mettre git comme backup dans une branche spécifique","entry":"20200908T092133Z","modified":"20200908T092133Z","project":"satom","status":"pending","uuid":"d8cbd5b0-957b-462f-af6b-780691280385"}
+{"description":"épurer app.js","end":"20200908T093831Z","entry":"20200908T070707Z","modified":"20200908T093831Z","project":"satom","status":"completed","uuid":"2c9b9dd6-47d5-45f9-865b-c481fbfbf3fe"}
