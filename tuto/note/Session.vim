@@ -85,8 +85,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd mypdf.md
-edit mypdf.md
+$argadd linux.md
+edit linux.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -359,14 +359,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 35 - ((34 * winheight(0) + 27) / 55)
+let s:l = 15 - ((7 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-35
+15
 normal! 0
 tabnext 1
-badd +0 mypdf.md
+badd +0 linux.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -378,6 +378,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

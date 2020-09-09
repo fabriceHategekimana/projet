@@ -18,7 +18,7 @@ Explorer les documents aide-mémoire pour les maths et voir quoi en tirer
 Maintenant que j'ai le contenu, je dois trouver un moyen pour le rendre intéressant.
 
 ## Linux
-Pourquoi linux
+Pourquoi [linux](linux)
 Le terminal
 Les logiciels:
 	* [vim](vim)

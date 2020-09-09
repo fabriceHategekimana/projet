@@ -7,3 +7,6 @@
 [description:"apprendre le nodejs modulaire et objet" entry:"1599548847" modified:"1599548847" project:"satom" status:"pending" uuid:"ad7367f1-6a74-4be4-b7bd-bff843955bf2"]
 [description:"ajouter géolocalisation" entry:"1599556411" modified:"1599556411" project:"satom" status:"pending" uuid:"eeeaff47-0a74-42a8-95e8-32a471ba65c2"]
 [description:"mettre git comme backup dans une branche spécifique" entry:"1599556893" modified:"1599556893" project:"satom" status:"pending" uuid:"d8cbd5b0-957b-462f-af6b-780691280385"]
+[description:"companies, investements founded date" entry:"1599660578" modified:"1599660578" project:"satom" status:"pending" uuid:"f4d8b1bd-7dcc-4b5e-b83d-b584cc9389e6"]
+[description:"companies, investement coordinate" entry:"1599660593" modified:"1599660593" project:"satom" status:"pending" uuid:"cfbec271-ef40-49bb-ae98-7183119b14e1"]
+[description:"base neo4j" entry:"1599660620" modified:"1599660620" project:"satom" status:"pending" uuid:"ed3a60be-c021-46ab-a857-43a4a89e501e"]

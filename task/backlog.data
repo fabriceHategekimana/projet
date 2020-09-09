@@ -8870,3 +8870,6 @@
 {"description":"ajouter géolocalisation","entry":"20200908T091331Z","modified":"20200908T091331Z","project":"satom","status":"pending","uuid":"eeeaff47-0a74-42a8-95e8-32a471ba65c2"}
 {"description":"mettre git comme backup dans une branche spécifique","entry":"20200908T092133Z","modified":"20200908T092133Z","project":"satom","status":"pending","uuid":"d8cbd5b0-957b-462f-af6b-780691280385"}
 {"description":"épurer app.js","end":"20200908T093831Z","entry":"20200908T070707Z","modified":"20200908T093831Z","project":"satom","status":"completed","uuid":"2c9b9dd6-47d5-45f9-865b-c481fbfbf3fe"}
+{"description":"companies, investements founded date","entry":"20200909T140938Z","modified":"20200909T140938Z","project":"satom","status":"pending","uuid":"f4d8b1bd-7dcc-4b5e-b83d-b584cc9389e6"}
+{"description":"companies, investement coordinate","entry":"20200909T140953Z","modified":"20200909T140953Z","project":"satom","status":"pending","uuid":"cfbec271-ef40-49bb-ae98-7183119b14e1"}
+{"description":"base neo4j","entry":"20200909T141020Z","modified":"20200909T141020Z","project":"satom","status":"pending","uuid":"ed3a60be-c021-46ab-a857-43a4a89e501e"}
