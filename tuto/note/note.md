@@ -1,5 +1,5 @@
-Tutos:
-======
+Tutorial:
+=========
 
 Mes premiers tutos seront des tuto de math.
 Mon objectif: voir le plan de cours pour harmos.
@@ -21,7 +21,7 @@ Maintenant que j'ai le contenu, je dois trouver un moyen pour le rendre intéres
 Pourquoi linux
 Le terminal
 Les logiciels:
-	* vim
+	* [vim](vim)
 	* tmux
 	* ranger
 	* firefox
