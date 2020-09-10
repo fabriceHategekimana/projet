@@ -1,7 +1,3 @@
-![tux_linux](../images/tux_linux.png)
-
----
-
 ## CLI
 
 ![cli](../images/cli.png)
@@ -14,7 +10,7 @@
 
 ---
 
-![old_computer](../images/old_computer.png)
+![](../images/old_computer.png)
 
 ---
 
@@ -40,7 +36,7 @@
 
 ---
 
-![terminal_esthétique](../images/terminal_esthétique.png)
+![](../images/terminal_esthétique.png)
 
 ---
 
