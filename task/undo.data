@@ -31841,3 +31841,27 @@ new [description:"soirée responsables gb" due:"1600898400" entry:"1600082666" m
 time 1600093395
 new [description:"charger config tmux pour le portable" entry:"1600093395" modified:"1600093395" status:"pending" uuid:"936b0d1a-ac24-425d-8973-bcfa94f1a7c9"]
 ---
+time 1600120902
+old [description:"analyse musicale" entry:"1597187663" modified:"1597308576" project:"musique" status:"pending" uuid:"5535b174-a289-4f00-b096-0c3f315c7360"]
+new [description:"analyse musicale" end:"1600120900" entry:"1597187663" modified:"1600120902" project:"musique" status:"completed" uuid:"5535b174-a289-4f00-b096-0c3f315c7360"]
+---
+time 1600120902
+old [description:"tester swami editor" entry:"1597189563" modified:"1597308576" project:"musique" status:"pending" uuid:"f2c5a590-62a5-4446-8cf0-a9d7189a01ef"]
+new [description:"tester swami editor" end:"1600120902" entry:"1597189563" modified:"1600120902" project:"musique" status:"completed" uuid:"f2c5a590-62a5-4446-8cf0-a9d7189a01ef"]
+---
+time 1600120902
+old [description:"Posa na yo en français" entry:"1597851263" modified:"1597851263" project:"Répertoire" status:"pending" uuid:"ea98d3ab-cd76-4e4e-9ece-5b387dc50ba2"]
+new [description:"Posa na yo en français" end:"1600120902" entry:"1597851263" modified:"1600120902" project:"Répertoire" status:"completed" uuid:"ea98d3ab-cd76-4e4e-9ece-5b387dc50ba2"]
+---
+time 1600120902
+old [description:"essayer de faire le calcul du slide 101 du theme 1" entry:"1597956243" modified:"1597956243" project:"eti" status:"pending" uuid:"a8a5435a-2b0b-4b7b-b227-dbc9a132d231"]
+new [description:"essayer de faire le calcul du slide 101 du theme 1" end:"1600120902" entry:"1597956243" modified:"1600120902" project:"eti" status:"completed" uuid:"a8a5435a-2b0b-4b7b-b227-dbc9a132d231"]
+---
+time 1600120902
+old [description:"apprendre le nodejs modulaire et objet" entry:"1599548847" modified:"1599548847" project:"satom" status:"pending" uuid:"ad7367f1-6a74-4be4-b7bd-bff843955bf2"]
+new [description:"apprendre le nodejs modulaire et objet" end:"1600120902" entry:"1599548847" modified:"1600120902" project:"satom" status:"completed" uuid:"ad7367f1-6a74-4be4-b7bd-bff843955bf2"]
+---
+time 1600120919
+old [description:"ajouter géolocalisation" entry:"1599556411" modified:"1599556411" project:"satom" status:"pending" uuid:"eeeaff47-0a74-42a8-95e8-32a471ba65c2"]
+new [description:"ajouter géolocalisation" end:"1600120919" entry:"1599556411" modified:"1600120919" project:"satom" status:"completed" uuid:"eeeaff47-0a74-42a8-95e8-32a471ba65c2"]
+---

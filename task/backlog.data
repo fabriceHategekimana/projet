@@ -8877,3 +8877,9 @@
 {"description":"rentrée date pour mise à jour informatique Simone","due":"20200917T220000Z","entry":"20200914T091745Z","modified":"20200914T091745Z","status":"pending","uuid":"efed67a5-f346-442d-8187-424696b2beda"}
 {"description":"soirée responsables gb","due":"20200923T220000Z","entry":"20200914T112426Z","modified":"20200914T112426Z","status":"pending","uuid":"79a7ff66-6f11-4c5a-8ac4-7ce6b1919126"}
 {"description":"charger config tmux pour le portable","entry":"20200914T142315Z","modified":"20200914T142315Z","status":"pending","uuid":"936b0d1a-ac24-425d-8973-bcfa94f1a7c9"}
+{"description":"analyse musicale","end":"20200914T220140Z","entry":"20200811T231423Z","modified":"20200914T220142Z","project":"musique","status":"completed","uuid":"5535b174-a289-4f00-b096-0c3f315c7360"}
+{"description":"tester swami editor","end":"20200914T220142Z","entry":"20200811T234603Z","modified":"20200914T220142Z","project":"musique","status":"completed","uuid":"f2c5a590-62a5-4446-8cf0-a9d7189a01ef"}
+{"description":"Posa na yo en français","end":"20200914T220142Z","entry":"20200819T153423Z","modified":"20200914T220142Z","project":"Répertoire","status":"completed","uuid":"ea98d3ab-cd76-4e4e-9ece-5b387dc50ba2"}
+{"description":"essayer de faire le calcul du slide 101 du theme 1","end":"20200914T220142Z","entry":"20200820T204403Z","modified":"20200914T220142Z","project":"eti","status":"completed","uuid":"a8a5435a-2b0b-4b7b-b227-dbc9a132d231"}
+{"description":"apprendre le nodejs modulaire et objet","end":"20200914T220142Z","entry":"20200908T070727Z","modified":"20200914T220142Z","project":"satom","status":"completed","uuid":"ad7367f1-6a74-4be4-b7bd-bff843955bf2"}
+{"description":"ajouter géolocalisation","end":"20200914T220159Z","entry":"20200908T091331Z","modified":"20200914T220159Z","project":"satom","status":"completed","uuid":"eeeaff47-0a74-42a8-95e8-32a471ba65c2"}
