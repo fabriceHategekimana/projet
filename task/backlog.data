@@ -8875,3 +8875,4 @@
 {"description":"base neo4j","entry":"20200909T141020Z","modified":"20200909T141020Z","project":"satom","status":"pending","uuid":"ed3a60be-c021-46ab-a857-43a4a89e501e"}
 {"description":"rentrée séminaire théologique","due":"20200917T220000Z","entry":"20200914T091713Z","modified":"20200914T091713Z","status":"pending","uuid":"9419c8a2-3f92-4a26-a44e-5bedbbc4a800"}
 {"description":"rentrée date pour mise à jour informatique Simone","due":"20200917T220000Z","entry":"20200914T091745Z","modified":"20200914T091745Z","status":"pending","uuid":"efed67a5-f346-442d-8187-424696b2beda"}
+{"description":"soirée responsables gb","due":"20200923T220000Z","entry":"20200914T112426Z","modified":"20200914T112426Z","status":"pending","uuid":"79a7ff66-6f11-4c5a-8ac4-7ce6b1919126"}
