@@ -31838,3 +31838,6 @@ new [description:"rentrée date pour mise à jour informatique Simone" due:"1600
 time 1600082666
 new [description:"soirée responsables gb" due:"1600898400" entry:"1600082666" modified:"1600082666" status:"pending" uuid:"79a7ff66-6f11-4c5a-8ac4-7ce6b1919126"]
 ---
+time 1600093395
+new [description:"charger config tmux pour le portable" entry:"1600093395" modified:"1600093395" status:"pending" uuid:"936b0d1a-ac24-425d-8973-bcfa94f1a7c9"]
+---
