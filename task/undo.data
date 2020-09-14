@@ -31829,3 +31829,9 @@ new [description:"companies, investement coordinate" entry:"1599660593" modified
 time 1599660620
 new [description:"base neo4j" entry:"1599660620" modified:"1599660620" project:"satom" status:"pending" uuid:"ed3a60be-c021-46ab-a857-43a4a89e501e"]
 ---
+time 1600075033
+new [description:"rentrée séminaire théologique" due:"1600380000" entry:"1600075033" modified:"1600075033" status:"pending" uuid:"9419c8a2-3f92-4a26-a44e-5bedbbc4a800"]
+---
+time 1600075065
+new [description:"rentrée date pour mise à jour informatique Simone" due:"1600380000" entry:"1600075065" modified:"1600075065" status:"pending" uuid:"efed67a5-f346-442d-8187-424696b2beda"]
+---

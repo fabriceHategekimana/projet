@@ -10,3 +10,5 @@
 [description:"companies, investements founded date" entry:"1599660578" modified:"1599660578" project:"satom" status:"pending" uuid:"f4d8b1bd-7dcc-4b5e-b83d-b584cc9389e6"]
 [description:"companies, investement coordinate" entry:"1599660593" modified:"1599660593" project:"satom" status:"pending" uuid:"cfbec271-ef40-49bb-ae98-7183119b14e1"]
 [description:"base neo4j" entry:"1599660620" modified:"1599660620" project:"satom" status:"pending" uuid:"ed3a60be-c021-46ab-a857-43a4a89e501e"]
+[description:"rentrée séminaire théologique" due:"1600380000" entry:"1600075033" modified:"1600075033" status:"pending" uuid:"9419c8a2-3f92-4a26-a44e-5bedbbc4a800"]
+[description:"rentrée date pour mise à jour informatique Simone" due:"1600380000" entry:"1600075065" modified:"1600075065" status:"pending" uuid:"efed67a5-f346-442d-8187-424696b2beda"]
