@@ -6,7 +6,7 @@ Il faut voir de quoi est composée une histoire:
 -Chronologies
 -Thèmes
 -Message
--Univers
+[Univers](-Univers)
 
 Il faut aussi voir ce qui rend une Histoire géniale:
 	Trouver des exemples d'histoire que j'ai apprécié:
