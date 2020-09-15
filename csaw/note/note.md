@@ -9,8 +9,8 @@ while the entity speaks about what we manipulate, the implementation is more abo
 
 ## entity
 This project manage mainly two type of entity:  
-* users  
-* documents  
+**1. users  **  
+**2. documents  **  
 Those two are the main element managed in this project.    
 
 ### managed entities
@@ -151,11 +151,17 @@ This project can be subdivided in 3 layers with their own specifications.
 2. Dashboard
 3. App
 
+![3_layer](../images/3_layer.png)
+
 Each of them has a manager equivalent. 
-	
+
+## Files
+This is the lifecyle of the program through files:
+![files](../images/files.png)
 
 UML Classes and Database
 ========================
 We need to define entities to manage all those task.
 
+![users_docs_groups](../images/users_docs_groups.png)
 
