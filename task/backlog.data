@@ -8883,3 +8883,13 @@
 {"description":"essayer de faire le calcul du slide 101 du theme 1","end":"20200914T220142Z","entry":"20200820T204403Z","modified":"20200914T220142Z","project":"eti","status":"completed","uuid":"a8a5435a-2b0b-4b7b-b227-dbc9a132d231"}
 {"description":"apprendre le nodejs modulaire et objet","end":"20200914T220142Z","entry":"20200908T070727Z","modified":"20200914T220142Z","project":"satom","status":"completed","uuid":"ad7367f1-6a74-4be4-b7bd-bff843955bf2"}
 {"description":"ajouter géolocalisation","end":"20200914T220159Z","entry":"20200908T091331Z","modified":"20200914T220159Z","project":"satom","status":"completed","uuid":"eeeaff47-0a74-42a8-95e8-32a471ba65c2"}
+{"description":"apprendre le R série de vidéos","entry":"20200916T092623Z","modified":"20200916T092623Z","project":"intelligence_artificielle","status":"pending","uuid":"fc85a622-3086-4223-b3b2-3d07fe593b85"}
+{"description":"Créer une interface pour R","entry":"20200916T092643Z","modified":"20200916T092643Z","project":"intelligence_artificielle","status":"pending","uuid":"1c3caec3-0038-475d-835e-6c270a85eda9"}
+{"description":"Faire le tp1","entry":"20200916T092658Z","modified":"20200916T092658Z","project":"intelligence_artificielle","status":"pending","uuid":"80fec375-6f30-4c2a-a11a-fca2a5c8d4c5"}
+{"description":"revoir le C++","entry":"20200916T092753Z","modified":"20200916T092753Z","project":"parallelisme","status":"pending","uuid":"698034db-3e41-400c-bb81-4cb153a72867"}
+{"description":"apprendre le MPI","entry":"20200916T092802Z","modified":"20200916T092802Z","project":"parallelisme","status":"pending","uuid":"75ecc9fc-0ea9-40ce-92d7-423ee1a0f234"}
+{"description":"Apprendre Baobab","entry":"20200916T092811Z","modified":"20200916T092811Z","project":"parallelisme","status":"pending","uuid":"c5e94557-099c-456c-b023-501b89fc6a11"}
+{"description":"Créer une interface rapide","entry":"20200916T092823Z","modified":"20200916T092823Z","project":"parallelisme","status":"pending","uuid":"e2340b13-28e7-4caa-88c4-5645c5552fe4"}
+{"description":"créer un site pour mes cours","entry":"20200916T092906Z","modified":"20200916T092906Z","status":"pending","uuid":"9ca58e95-868a-4464-9932-758dc5f985d7"}
+{"description":"charger config tmux pour le portable","end":"20200916T110558Z","entry":"20200914T142315Z","modified":"20200916T110558Z","status":"completed","uuid":"936b0d1a-ac24-425d-8973-bcfa94f1a7c9"}
+{"description":"Créer des joint queries","entry":"20200916T110736Z","modified":"20200916T110736Z","project":"satom","status":"pending","uuid":"241ff66b-4556-4a76-b74c-7b199ebfb806"}
