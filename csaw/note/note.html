@@ -588,5 +588,29 @@ It has to align himself to his way of thinking. Why? To have a comprehensible co
 <figure>
 <img src="../images/users_docs_groups.png" alt="users_docs_groups" /><figcaption>users_docs_groups</figcaption>
 </figure>
+<h2 id="définition-of-some-classes">Définition of some classes</h2>
+<h3 id="users-1">Users</h3>
+<pre><code>User
+    id: unique identifier
+    name: user&#39;s email
+    password: user&#39;s password
+    role: user&#39;s role (can be student, teacher or admin)</code></pre>
+<h3 id="teachers-docs">teacher’s docs</h3>
+<pre><code>teacher&#39;s docs
+    owner: email of the document&#39;s owner (it is always a teacher)
+    name: name of the document
+    date_created: date of document&#39;s creation
+    date_modified: date of document&#39;s last modification
+    standard: name of the original document (the teacher&#39;s document can be a duplication of admin or teacher&#39;s documents)
+    status: indicate if the document is published for the student or not (shared or not_shared)
+    description: this is the description of the document written by the teacher
+    template: </code></pre>
+<h3 id="teachers-docs-1">teacher’s docs</h3>
+<pre><code>teacher&#39;s docs
+    owner: email of the document&#39;s owner (it is always a teacher)
+    name: name of the document
+    date_created: date of document&#39;s creation
+    date_modified: date of document&#39;s last modification
+    standard: name of the original document (the teacher&#39;s document can be a duplication of admin or teacher&#39;s documents)</code></pre>
 </body>
 </html>

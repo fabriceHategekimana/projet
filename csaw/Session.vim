@@ -359,12 +359,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 101 - ((0 * winheight(0) + 27) / 55)
+let s:l = 190 - ((42 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-101
-normal! 029|
+190
+normal! 023|
 tabnext 1
 badd +0 note/note.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
@@ -378,7 +378,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

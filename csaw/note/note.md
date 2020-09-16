@@ -165,3 +165,37 @@ We need to define entities to manage all those task.
 
 ![users_docs_groups](../images/users_docs_groups.png)
 
+## Définition of some classes
+
+### Users
+```
+User
+	id: unique identifier
+	name: user's email
+	password: user's password
+	role: user's role (can be student, teacher or admin)
+```
+
+### teacher's docs
+```
+teacher's docs
+	owner: email of the document's owner (it is always a teacher)
+	name: name of the document
+	date_created: date of document's creation
+	date_modified: date of document's last modification
+	standard: name of the original document (the teacher's document can be a duplication of admin or teacher's documents)
+	status: indicate if the document is published for the student or not (shared or not_shared)
+	description: this is the description of the document written by the teacher
+	templates: this is the raw content of the document
+	shared_group: this is the raw content of the document
+```
+
+### teacher's docs
+```
+teacher's docs
+	owner: email of the document's owner (it is always a teacher)
+	name: name of the document
+	date_created: date of document's creation
+	date_modified: date of document's last modification
+	standard: name of the original document (the teacher's document can be a duplication of admin or teacher's documents)
+```
