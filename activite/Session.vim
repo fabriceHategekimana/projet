@@ -74,7 +74,6 @@ set splitbelow
 set splitright
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
-set window=55
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -87,7 +86,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit ~/projet/activite/buts.md
+edit start.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -360,16 +359,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 27) / 55)
+let s:l = 8 - ((7 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
-normal! 03|
+8
+normal! 0
 tabnext 1
-badd +5 start.md
-badd +9 ~/projet/activite/buts.md
-badd +7 ~/projet/activite/Vie_Universitaire.md
+badd +0 start.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
