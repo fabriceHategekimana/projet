@@ -31902,3 +31902,6 @@ new [description:"adopt a skill" due:"1601848800" entry:"1600436101" modified:"1
 time 1600436133
 new [description:"inscription adopt a skill" entry:"1600436133" modified:"1600436133" status:"pending" uuid:"94d0dbd2-1172-499d-9395-70d7cb6ed022"]
 ---
+time 1600446216
+new [description:"STB études bibliques" entry:"1600446216" modified:"1600446216" status:"pending" uuid:"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"]
+---
