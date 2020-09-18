@@ -8893,3 +8893,5 @@
 {"description":"créer un site pour mes cours","entry":"20200916T092906Z","modified":"20200916T092906Z","status":"pending","uuid":"9ca58e95-868a-4464-9932-758dc5f985d7"}
 {"description":"charger config tmux pour le portable","end":"20200916T110558Z","entry":"20200914T142315Z","modified":"20200916T110558Z","status":"completed","uuid":"936b0d1a-ac24-425d-8973-bcfa94f1a7c9"}
 {"description":"Créer des joint queries","entry":"20200916T110736Z","modified":"20200916T110736Z","project":"satom","status":"pending","uuid":"241ff66b-4556-4a76-b74c-7b199ebfb806"}
+{"description":"adopt a skill","due":"20201004T220000Z","entry":"20200918T133501Z","modified":"20200918T133501Z","status":"pending","uuid":"81b9c507-5c35-49a0-a9a4-827fd721f6f2"}
+{"description":"inscription adopt a skill","entry":"20200918T133533Z","modified":"20200918T133533Z","status":"pending","uuid":"94d0dbd2-1172-499d-9395-70d7cb6ed022"}

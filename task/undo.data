@@ -31896,3 +31896,9 @@ new [description:"charger config tmux pour le portable" end:"1600254358" entry:"
 time 1600254456
 new [description:"Créer des joint queries" entry:"1600254456" modified:"1600254456" project:"satom" status:"pending" uuid:"241ff66b-4556-4a76-b74c-7b199ebfb806"]
 ---
+time 1600436101
+new [description:"adopt a skill" due:"1601848800" entry:"1600436101" modified:"1600436101" status:"pending" uuid:"81b9c507-5c35-49a0-a9a4-827fd721f6f2"]
+---
+time 1600436133
+new [description:"inscription adopt a skill" entry:"1600436133" modified:"1600436133" status:"pending" uuid:"94d0dbd2-1172-499d-9395-70d7cb6ed022"]
+---
