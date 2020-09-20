@@ -8896,3 +8896,7 @@
 {"description":"adopt a skill","due":"20201004T220000Z","entry":"20200918T133501Z","modified":"20200918T133501Z","status":"pending","uuid":"81b9c507-5c35-49a0-a9a4-827fd721f6f2"}
 {"description":"inscription adopt a skill","entry":"20200918T133533Z","modified":"20200918T133533Z","status":"pending","uuid":"94d0dbd2-1172-499d-9395-70d7cb6ed022"}
 {"description":"STB études bibliques","entry":"20200918T162336Z","modified":"20200918T162336Z","status":"pending","uuid":"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"}
+{"description":"apprendre le R série de vidéos","end":"20200920T155633Z","entry":"20200916T092623Z","modified":"20200920T155633Z","project":"intelligence_artificielle","status":"completed","uuid":"fc85a622-3086-4223-b3b2-3d07fe593b85"}
+{"description":"rentrée séminaire théologique","due":"20200917T220000Z","end":"20200920T155657Z","entry":"20200914T091713Z","modified":"20200920T155657Z","status":"completed","uuid":"9419c8a2-3f92-4a26-a44e-5bedbbc4a800"}
+{"description":"rentrée date pour mise à jour informatique Simone","due":"20200917T220000Z","end":"20200920T162451Z","entry":"20200914T091745Z","modified":"20200920T162451Z","status":"completed","uuid":"efed67a5-f346-442d-8187-424696b2beda"}
+{"description":"adopt a skill","due":"20201004T220000Z","end":"20200920T185025Z","entry":"20200918T133501Z","modified":"20200920T185025Z","status":"completed","uuid":"81b9c507-5c35-49a0-a9a4-827fd721f6f2"}

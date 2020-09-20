@@ -30,6 +30,7 @@ vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <C-G> :!. ~/sh/g.sh 
 nnoremap <F12> :!clear
+nnoremap <F10> :!gedit %
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :call LinkImage()
 nnoremap <F3> :! ~/sh/mymake.sh 
@@ -227,12 +228,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 13) / 27)
+let s:l = 2 - ((1 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 040|
+2
+normal! 045|
 tabnext 1
 badd +0 ~/sh/planning.sh
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0

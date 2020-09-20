@@ -31905,3 +31905,19 @@ new [description:"inscription adopt a skill" entry:"1600436133" modified:"160043
 time 1600446216
 new [description:"STB études bibliques" entry:"1600446216" modified:"1600446216" status:"pending" uuid:"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"]
 ---
+time 1600617393
+old [description:"apprendre le R série de vidéos" entry:"1600248383" modified:"1600248383" project:"intelligence_artificielle" status:"pending" uuid:"fc85a622-3086-4223-b3b2-3d07fe593b85"]
+new [description:"apprendre le R série de vidéos" end:"1600617393" entry:"1600248383" modified:"1600617393" project:"intelligence_artificielle" status:"completed" uuid:"fc85a622-3086-4223-b3b2-3d07fe593b85"]
+---
+time 1600617417
+old [description:"rentrée séminaire théologique" due:"1600380000" entry:"1600075033" modified:"1600075033" status:"pending" uuid:"9419c8a2-3f92-4a26-a44e-5bedbbc4a800"]
+new [description:"rentrée séminaire théologique" due:"1600380000" end:"1600617417" entry:"1600075033" modified:"1600617417" status:"completed" uuid:"9419c8a2-3f92-4a26-a44e-5bedbbc4a800"]
+---
+time 1600619091
+old [description:"rentrée date pour mise à jour informatique Simone" due:"1600380000" entry:"1600075065" modified:"1600075065" status:"pending" uuid:"efed67a5-f346-442d-8187-424696b2beda"]
+new [description:"rentrée date pour mise à jour informatique Simone" due:"1600380000" end:"1600619091" entry:"1600075065" modified:"1600619091" status:"completed" uuid:"efed67a5-f346-442d-8187-424696b2beda"]
+---
+time 1600627825
+old [description:"adopt a skill" due:"1601848800" entry:"1600436101" modified:"1600436101" status:"pending" uuid:"81b9c507-5c35-49a0-a9a4-827fd721f6f2"]
+new [description:"adopt a skill" due:"1601848800" end:"1600627825" entry:"1600436101" modified:"1600627825" status:"completed" uuid:"81b9c507-5c35-49a0-a9a4-827fd721f6f2"]
+---

@@ -30,6 +30,7 @@ vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nnoremap <C-G> :!. ~/sh/g.sh 
 nnoremap <F12> :!clear
+nnoremap <F10> :!gedit %
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
 nnoremap <F8> :call LinkImage()
 nnoremap <F3> :! ~/sh/mymake.sh 
@@ -86,7 +87,7 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd start.md
-edit start.md
+edit ~/projet/activite/actualité.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -221,10 +222,12 @@ imap <buffer> <silent> <NL> <Plug>VimwikiListNextSymbol
 inoremap <buffer> <silent>  :VimwikiReturn 1 5
 imap <buffer> <silent>  <Plug>VimwikiIncreaseLvlSingleItem
 nnoremap <buffer> échant :call Chant()
+xnoremap <buffer> ém di``<Left>p
 nnoremap <buffer> ém bi`ea`
 nnoremap <buffer> éim i![](images/num.png)^<Right>a
 nnoremap <buffer> éta :call MarkdownLigne()
 nnoremap <buffer> éco i``````<Left><Left><Left><Up>
+xnoremap <buffer> éb di****2<Left>p
 nnoremap <buffer> éb I**A**
 nnoremap <buffer> ésss I#### 
 nnoremap <buffer> éss I### 
@@ -359,14 +362,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 8 - ((7 * winheight(0) + 13) / 27)
+let s:l = 5 - ((4 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
-normal! 0
+5
+normal! 040|
 tabnext 1
-badd +0 start.md
+badd +4 start.md
+badd +0 ~/projet/activite/actualité.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
