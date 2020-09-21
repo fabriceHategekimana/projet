@@ -451,5 +451,28 @@
     raised_amount: raised_amount,
     raised_currency_code: raised_currency_code
 }</code></pre>
+<p>Code qui marche</p>
+<pre><code>GET siren/articles/_search
+{ 
+  &quot;query&quot;: { 
+      &quot;join&quot;: { 
+            &quot;indices&quot;: [
+                  &quot;companies&quot;
+        ],
+      &quot;on&quot;: [
+          &quot;companies&quot;,
+          &quot;id&quot;
+      ],
+      &quot;request&quot;: { 
+            &quot;query&quot;: { 
+            &quot;term&quot;: { 
+                  &quot;label&quot;: &quot;Apple&quot;
+              }
+            }
+        }
+    }
+}
+}</code></pre>
+<p>GET siren/articles/_search</p>
 </body>
 </html>

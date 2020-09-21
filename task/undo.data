@@ -31927,3 +31927,68 @@ new [description:"adopt a skill" due:"1601877600" entry:"1600691230" modified:"1
 time 1600709651
 new [description:"ajouter label cours" entry:"1600709651" modified:"1600709651" status:"pending" uuid:"db62e826-4265-49df-b09b-6af1e7d86e84"]
 ---
+time 1600711501
+new [description:"exercice maman lady" due:"1600840800" entry:"1600711501" modified:"1600711501" status:"pending" uuid:"3fdb2c02-1c94-4771-b3fc-f09b44e8226e"]
+---
+time 1600711508
+new [description:"exercice maman lady" due:"1601100000" entry:"1600711508" modified:"1600711508" status:"pending" uuid:"3d8820d5-f1e8-4d0d-a566-98a967b7b78f"]
+---
+time 1600712121
+new [description:"voila une tâche en exemple" entry:"1600712121" modified:"1600712121" status:"pending" tags:"exemple" uuid:"33bb41de-1836-4df9-bf62-ce9dc7f4cea4"]
+---
+time 1600712136
+old [description:"voila une tâche en exemple" entry:"1600712121" modified:"1600712121" status:"pending" tags:"exemple" uuid:"33bb41de-1836-4df9-bf62-ce9dc7f4cea4"]
+new [description:"voila une tâche en exemple" end:"1600712136" entry:"1600712121" modified:"1600712136" status:"completed" tags:"exemple" uuid:"33bb41de-1836-4df9-bf62-ce9dc7f4cea4"]
+---
+time 1600712588
+new [description:"faire le tp1" entry:"1600712588" modified:"1600712588" project:"concurrence" status:"pending" uuid:"38227e4d-d3cd-4e24-acfa-4ee2b539514e"]
+---
+time 1600712608
+old [description:"faire le tp1" entry:"1600712588" modified:"1600712588" project:"concurrence" status:"pending" uuid:"38227e4d-d3cd-4e24-acfa-4ee2b539514e"]
+new [description:"faire le tp1" end:"1600712608" entry:"1600712588" modified:"1600712608" project:"concurrence" status:"completed" uuid:"38227e4d-d3cd-4e24-acfa-4ee2b539514e"]
+---
+time 1600712640
+new [description:"faire tp1" entry:"1600712640" modified:"1600712640" project:"concurrence" status:"pending" uuid:"0259e483-e019-4ce0-ba62-6a85ba9dabd5"]
+---
+time 1600712699
+old [description:"revoir le C++" entry:"1600248473" modified:"1600248473" project:"parallelisme" status:"pending" uuid:"698034db-3e41-400c-bb81-4cb153a72867"]
+new [description:"revoir le C++" end:"1600712697" entry:"1600248473" modified:"1600712699" project:"parallelisme" status:"completed" uuid:"698034db-3e41-400c-bb81-4cb153a72867"]
+---
+time 1600712699
+old [description:"apprendre le MPI" entry:"1600248482" modified:"1600248482" project:"parallelisme" status:"pending" uuid:"75ecc9fc-0ea9-40ce-92d7-423ee1a0f234"]
+new [description:"apprendre le MPI" end:"1600712699" entry:"1600248482" modified:"1600712699" project:"parallelisme" status:"completed" uuid:"75ecc9fc-0ea9-40ce-92d7-423ee1a0f234"]
+---
+time 1600712699
+old [description:"Apprendre Baobab" entry:"1600248491" modified:"1600248491" project:"parallelisme" status:"pending" uuid:"c5e94557-099c-456c-b023-501b89fc6a11"]
+new [description:"Apprendre Baobab" end:"1600712699" entry:"1600248491" modified:"1600712699" project:"parallelisme" status:"completed" uuid:"c5e94557-099c-456c-b023-501b89fc6a11"]
+---
+time 1600712699
+old [description:"Créer une interface rapide" entry:"1600248503" modified:"1600248503" project:"parallelisme" status:"pending" uuid:"e2340b13-28e7-4caa-88c4-5645c5552fe4"]
+new [description:"Créer une interface rapide" end:"1600712699" entry:"1600248503" modified:"1600712699" project:"parallelisme" status:"completed" uuid:"e2340b13-28e7-4caa-88c4-5645c5552fe4"]
+---
+time 1600712826
+old [description:"faire tp1" entry:"1600712640" modified:"1600712640" project:"concurrence" status:"pending" uuid:"0259e483-e019-4ce0-ba62-6a85ba9dabd5"]
+new [description:"faire tp1" end:"1600712826" entry:"1600712640" modified:"1600712826" project:"concurrence" status:"completed" uuid:"0259e483-e019-4ce0-ba62-6a85ba9dabd5"]
+---
+time 1600713123
+new [description:"+ voir le problème" entry:"1600713123" modified:"1600713123" project:"concurrence" status:"pending" uuid:"3df94ce4-4cf8-4435-a5cf-f3d7ff97e216"]
+---
+time 1600713328
+new [description:"faire tp1" entry:"1600713328" modified:"1600713328" project:"concurrence" status:"pending" tags:"cours" uuid:"eb790943-a122-4e7c-bdf2-794523720a00"]
+---
+time 1600713342
+old [description:"+ voir le problème" entry:"1600713123" modified:"1600713123" project:"concurrence" status:"pending" uuid:"3df94ce4-4cf8-4435-a5cf-f3d7ff97e216"]
+new [description:"+ voir le problème" end:"1600713342" entry:"1600713123" modified:"1600713342" project:"concurrence" status:"completed" uuid:"3df94ce4-4cf8-4435-a5cf-f3d7ff97e216"]
+---
+time 1600713386
+old [description:"créer un site pour mes cours" entry:"1600248546" modified:"1600248546" status:"pending" uuid:"9ca58e95-868a-4464-9932-758dc5f985d7"]
+new [description:"créer un site pour mes cours" end:"1600713386" entry:"1600248546" modified:"1600713386" status:"completed" uuid:"9ca58e95-868a-4464-9932-758dc5f985d7"]
+---
+time 1600713389
+old [description:"inscription adopt a skill" entry:"1600436133" modified:"1600436133" status:"pending" uuid:"94d0dbd2-1172-499d-9395-70d7cb6ed022"]
+new [description:"inscription adopt a skill" end:"1600713389" entry:"1600436133" modified:"1600713389" status:"completed" uuid:"94d0dbd2-1172-499d-9395-70d7cb6ed022"]
+---
+time 1600713403
+old [description:"STB études bibliques" entry:"1600446216" modified:"1600446216" status:"pending" uuid:"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"]
+new [description:"STB études bibliques" end:"1600713403" entry:"1600446216" modified:"1600713403" status:"completed" uuid:"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"]
+---

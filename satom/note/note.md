@@ -32,3 +32,30 @@ investments:{
 	raised_currency_code: raised_currency_code
 }
 ```
+
+Code qui marche
+
+```
+GET siren/articles/_search
+{ 
+  "query": { 
+      "join": { 
+            "indices": [
+	              "companies"
+	    ],
+	  "on": [
+		  "companies",
+		  "id"
+	  ],
+	  "request": { 
+		    "query": { 
+			"term": { 
+			      "label": "Apple"
+			  }
+		    }
+	    }
+	}
+}
+}
+```
+GET siren/articles/_search
