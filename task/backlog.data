@@ -8901,3 +8901,4 @@
 {"description":"rentrée date pour mise à jour informatique Simone","due":"20200917T220000Z","end":"20200920T162451Z","entry":"20200914T091745Z","modified":"20200920T162451Z","status":"completed","uuid":"efed67a5-f346-442d-8187-424696b2beda"}
 {"description":"adopt a skill","due":"20201004T220000Z","end":"20200920T185025Z","entry":"20200918T133501Z","modified":"20200920T185025Z","status":"completed","uuid":"81b9c507-5c35-49a0-a9a4-827fd721f6f2"}
 {"description":"adopt a skill","due":"20201005T060000Z","entry":"20200921T122710Z","modified":"20200921T122710Z","status":"pending","uuid":"19d3006b-6345-4b83-9cea-9d74315213e7"}
+{"description":"ajouter label cours","entry":"20200921T173411Z","modified":"20200921T173411Z","status":"pending","uuid":"db62e826-4265-49df-b09b-6af1e7d86e84"}

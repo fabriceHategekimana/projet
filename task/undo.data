@@ -31924,3 +31924,6 @@ new [description:"adopt a skill" due:"1601848800" end:"1600627825" entry:"160043
 time 1600691230
 new [description:"adopt a skill" due:"1601877600" entry:"1600691230" modified:"1600691230" status:"pending" uuid:"19d3006b-6345-4b83-9cea-9d74315213e7"]
 ---
+time 1600709651
+new [description:"ajouter label cours" entry:"1600709651" modified:"1600709651" status:"pending" uuid:"db62e826-4265-49df-b09b-6af1e7d86e84"]
+---
