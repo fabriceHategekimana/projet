@@ -31921,3 +31921,6 @@ time 1600627825
 old [description:"adopt a skill" due:"1601848800" entry:"1600436101" modified:"1600436101" status:"pending" uuid:"81b9c507-5c35-49a0-a9a4-827fd721f6f2"]
 new [description:"adopt a skill" due:"1601848800" end:"1600627825" entry:"1600436101" modified:"1600627825" status:"completed" uuid:"81b9c507-5c35-49a0-a9a4-827fd721f6f2"]
 ---
+time 1600691230
+new [description:"adopt a skill" due:"1601877600" entry:"1600691230" modified:"1600691230" status:"pending" uuid:"19d3006b-6345-4b83-9cea-9d74315213e7"]
+---
