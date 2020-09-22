@@ -31992,3 +31992,6 @@ time 1600713403
 old [description:"STB études bibliques" entry:"1600446216" modified:"1600446216" status:"pending" uuid:"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"]
 new [description:"STB études bibliques" end:"1600713403" entry:"1600446216" modified:"1600713403" status:"completed" uuid:"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"]
 ---
+time 1600805962
+new [description:"mettre à jour i3" entry:"1600805962" modified:"1600805962" status:"pending" uuid:"53ead448-0b8d-466b-9b9f-70f521de7ac0"]
+---
