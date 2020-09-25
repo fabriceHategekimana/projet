@@ -8921,3 +8921,6 @@
 {"description":"inscription adopt a skill","end":"20200921T183629Z","entry":"20200918T133533Z","modified":"20200921T183629Z","status":"completed","uuid":"94d0dbd2-1172-499d-9395-70d7cb6ed022"}
 {"description":"STB études bibliques","end":"20200921T183643Z","entry":"20200918T162336Z","modified":"20200921T183643Z","status":"completed","uuid":"8c3ab4ff-9a79-4a31-911f-6a44c6fdabdf"}
 {"description":"mettre à jour i3","entry":"20200922T201922Z","modified":"20200922T201922Z","status":"pending","uuid":"53ead448-0b8d-466b-9b9f-70f521de7ac0"}
+{"description":"soirée responsables gb","due":"20200923T220000Z","end":"20200925T062437Z","entry":"20200914T112426Z","modified":"20200925T062437Z","status":"completed","uuid":"79a7ff66-6f11-4c5a-8ac4-7ce6b1919126"}
+{"description":"exercice maman lady","due":"20200923T060000Z","end":"20200925T062437Z","entry":"20200921T180501Z","modified":"20200925T062437Z","status":"completed","uuid":"3fdb2c02-1c94-4771-b3fc-f09b44e8226e"}
+{"description":"ajouter label cours","end":"20200925T064900Z","entry":"20200921T173411Z","modified":"20200925T064900Z","status":"completed","uuid":"db62e826-4265-49df-b09b-6af1e7d86e84"}
