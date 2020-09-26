@@ -1,12 +1,12 @@
 ## CLI
 
-![cli](../images/cli.png)
+![](../images/cli.png)
 
 ---
 
 ## GUI
 
-![gui](../images/gui.png)
+![](../images/gui.png)
 
 ---
 

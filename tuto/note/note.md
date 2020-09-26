@@ -19,7 +19,7 @@ Maintenant que j'ai le contenu, je dois trouver un moyen pour le rendre intéres
 
 ## Linux
 Pourquoi [linux](linux)
-Le terminal
+Le [terminal](terminal)
 Les logiciels:
 	* [vim](vim)
 	* tmux

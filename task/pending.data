@@ -9,5 +9,5 @@
 [description:"Créer des joint queries" entry:"1600254456" modified:"1600254456" project:"satom" status:"pending" uuid:"241ff66b-4556-4a76-b74c-7b199ebfb806"]
 [description:"adopt a skill" due:"1601877600" entry:"1600691230" modified:"1600691230" status:"pending" uuid:"19d3006b-6345-4b83-9cea-9d74315213e7"]
 [description:"exercice maman lady" due:"1601100000" entry:"1600711508" modified:"1600711508" status:"pending" uuid:"3d8820d5-f1e8-4d0d-a566-98a967b7b78f"]
-[description:"faire tp1" entry:"1600713328" modified:"1600713328" project:"concurrence" status:"pending" tags:"cours" uuid:"eb790943-a122-4e7c-bdf2-794523720a00"]
-[description:"mettre à jour i3" entry:"1600805962" modified:"1600805962" status:"pending" uuid:"53ead448-0b8d-466b-9b9f-70f521de7ac0"]
+[description:"mettre à jour mes note" entry:"1601140131" modified:"1601140131" status:"pending" uuid:"fafcd3f4-4c58-422c-8e79-0bca17740a8e"]
+[description:"regarder mes tâches" end:"1601160914" entry:"1601160794" modified:"1601160914" status:"completed" uuid:"cd014df9-1152-42df-853b-fc936a0a3f08"]

@@ -8924,3 +8924,8 @@
 {"description":"soirée responsables gb","due":"20200923T220000Z","end":"20200925T062437Z","entry":"20200914T112426Z","modified":"20200925T062437Z","status":"completed","uuid":"79a7ff66-6f11-4c5a-8ac4-7ce6b1919126"}
 {"description":"exercice maman lady","due":"20200923T060000Z","end":"20200925T062437Z","entry":"20200921T180501Z","modified":"20200925T062437Z","status":"completed","uuid":"3fdb2c02-1c94-4771-b3fc-f09b44e8226e"}
 {"description":"ajouter label cours","end":"20200925T064900Z","entry":"20200921T173411Z","modified":"20200925T064900Z","status":"completed","uuid":"db62e826-4265-49df-b09b-6af1e7d86e84"}
+{"description":"mettre à jour mes note","entry":"20200926T170851Z","modified":"20200926T170851Z","status":"pending","uuid":"fafcd3f4-4c58-422c-8e79-0bca17740a8e"}
+{"description":"regarder mes tâches","entry":"20200926T225314Z","modified":"20200926T225314Z","status":"pending","uuid":"cd014df9-1152-42df-853b-fc936a0a3f08"}
+{"description":"faire tp1","end":"20200926T225418Z","entry":"20200921T183528Z","modified":"20200926T225418Z","project":"concurrence","status":"completed","tags":["cours"],"uuid":"eb790943-a122-4e7c-bdf2-794523720a00"}
+{"description":"mettre à jour i3","end":"20200926T225459Z","entry":"20200922T201922Z","modified":"20200926T225459Z","status":"completed","uuid":"53ead448-0b8d-466b-9b9f-70f521de7ac0"}
+{"description":"regarder mes tâches","end":"20200926T225514Z","entry":"20200926T225314Z","modified":"20200926T225514Z","status":"completed","uuid":"cd014df9-1152-42df-853b-fc936a0a3f08"}
