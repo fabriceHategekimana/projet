@@ -32025,3 +32025,15 @@ time 1601160914
 old [description:"regarder mes tâches" entry:"1601160794" modified:"1601160794" status:"pending" uuid:"cd014df9-1152-42df-853b-fc936a0a3f08"]
 new [description:"regarder mes tâches" end:"1601160914" entry:"1601160794" modified:"1601160914" status:"completed" uuid:"cd014df9-1152-42df-853b-fc936a0a3f08"]
 ---
+time 1601234208
+old [description:"exercice maman lady" due:"1601100000" entry:"1600711508" modified:"1600711508" status:"pending" uuid:"3d8820d5-f1e8-4d0d-a566-98a967b7b78f"]
+new [description:"exercice maman lady" due:"1601100000" end:"1601234208" entry:"1600711508" modified:"1601234208" status:"completed" uuid:"3d8820d5-f1e8-4d0d-a566-98a967b7b78f"]
+---
+time 1601234235
+old [description:"Créer une interface pour R" entry:"1600248403" modified:"1600248403" project:"intelligence_artificielle" status:"pending" uuid:"1c3caec3-0038-475d-835e-6c270a85eda9"]
+new [description:"Créer une interface pour R" end:"1601234235" entry:"1600248403" modified:"1601234235" project:"intelligence_artificielle" status:"completed" uuid:"1c3caec3-0038-475d-835e-6c270a85eda9"]
+---
+time 1601234250
+old [description:"Créer des joint queries" entry:"1600254456" modified:"1600254456" project:"satom" status:"pending" uuid:"241ff66b-4556-4a76-b74c-7b199ebfb806"]
+new [description:"Créer des joint queries" end:"1601234250" entry:"1600254456" modified:"1601234250" project:"satom" status:"completed" uuid:"241ff66b-4556-4a76-b74c-7b199ebfb806"]
+---

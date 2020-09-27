@@ -8929,3 +8929,6 @@
 {"description":"faire tp1","end":"20200926T225418Z","entry":"20200921T183528Z","modified":"20200926T225418Z","project":"concurrence","status":"completed","tags":["cours"],"uuid":"eb790943-a122-4e7c-bdf2-794523720a00"}
 {"description":"mettre à jour i3","end":"20200926T225459Z","entry":"20200922T201922Z","modified":"20200926T225459Z","status":"completed","uuid":"53ead448-0b8d-466b-9b9f-70f521de7ac0"}
 {"description":"regarder mes tâches","end":"20200926T225514Z","entry":"20200926T225314Z","modified":"20200926T225514Z","status":"completed","uuid":"cd014df9-1152-42df-853b-fc936a0a3f08"}
+{"description":"exercice maman lady","due":"20200926T060000Z","end":"20200927T191648Z","entry":"20200921T180508Z","modified":"20200927T191648Z","status":"completed","uuid":"3d8820d5-f1e8-4d0d-a566-98a967b7b78f"}
+{"description":"Créer une interface pour R","end":"20200927T191715Z","entry":"20200916T092643Z","modified":"20200927T191715Z","project":"intelligence_artificielle","status":"completed","uuid":"1c3caec3-0038-475d-835e-6c270a85eda9"}
+{"description":"Créer des joint queries","end":"20200927T191730Z","entry":"20200916T110736Z","modified":"20200927T191730Z","project":"satom","status":"completed","uuid":"241ff66b-4556-4a76-b74c-7b199ebfb806"}
