@@ -8933,3 +8933,6 @@
 {"description":"Créer une interface pour R","end":"20200927T191715Z","entry":"20200916T092643Z","modified":"20200927T191715Z","project":"intelligence_artificielle","status":"completed","uuid":"1c3caec3-0038-475d-835e-6c270a85eda9"}
 {"description":"Créer des joint queries","end":"20200927T191730Z","entry":"20200916T110736Z","modified":"20200927T191730Z","project":"satom","status":"completed","uuid":"241ff66b-4556-4a76-b74c-7b199ebfb806"}
 {"description":"devoir (simple) maman Lady","entry":"20200928T211423Z","modified":"20200928T211423Z","status":"pending","uuid":"23622f0c-ae94-4a60-8dda-36ef435a9d74"}
+{"description":"GL rendre doc NFRs + user stories","due":"20201002T060000Z","entry":"20200928T232137Z","modified":"20200928T232137Z","status":"pending","uuid":"43f51229-1960-470c-aa8c-e183f8f2f175"}
+{"description":"IA rendre formalisme","due":"20201002T060000Z","entry":"20200928T232231Z","modified":"20200928T232231Z","status":"pending","uuid":"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"}
+{"description":"IN tp1","due":"20201008T060000Z","entry":"20200928T232347Z","modified":"20200928T232347Z","status":"pending","uuid":"b255114b-059e-4bba-87dd-f46ee99e06ed"}

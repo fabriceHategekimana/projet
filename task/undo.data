@@ -32040,3 +32040,12 @@ new [description:"Créer des joint queries" end:"1601234250" entry:"1600254456" 
 time 1601327663
 new [description:"devoir (simple) maman Lady" entry:"1601327663" modified:"1601327663" status:"pending" uuid:"23622f0c-ae94-4a60-8dda-36ef435a9d74"]
 ---
+time 1601335297
+new [description:"GL rendre doc NFRs + user stories" due:"1601618400" entry:"1601335297" modified:"1601335297" status:"pending" uuid:"43f51229-1960-470c-aa8c-e183f8f2f175"]
+---
+time 1601335351
+new [description:"IA rendre formalisme" due:"1601618400" entry:"1601335351" modified:"1601335351" status:"pending" uuid:"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"]
+---
+time 1601335427
+new [description:"IN tp1" due:"1602136800" entry:"1601335427" modified:"1601335427" status:"pending" uuid:"b255114b-059e-4bba-87dd-f46ee99e06ed"]
+---
