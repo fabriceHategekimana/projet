@@ -32037,3 +32037,6 @@ time 1601234250
 old [description:"Créer des joint queries" entry:"1600254456" modified:"1600254456" project:"satom" status:"pending" uuid:"241ff66b-4556-4a76-b74c-7b199ebfb806"]
 new [description:"Créer des joint queries" end:"1601234250" entry:"1600254456" modified:"1601234250" project:"satom" status:"completed" uuid:"241ff66b-4556-4a76-b74c-7b199ebfb806"]
 ---
+time 1601327663
+new [description:"devoir (simple) maman Lady" entry:"1601327663" modified:"1601327663" status:"pending" uuid:"23622f0c-ae94-4a60-8dda-36ef435a9d74"]
+---

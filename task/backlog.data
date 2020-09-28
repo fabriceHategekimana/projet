@@ -8932,3 +8932,4 @@
 {"description":"exercice maman lady","due":"20200926T060000Z","end":"20200927T191648Z","entry":"20200921T180508Z","modified":"20200927T191648Z","status":"completed","uuid":"3d8820d5-f1e8-4d0d-a566-98a967b7b78f"}
 {"description":"Créer une interface pour R","end":"20200927T191715Z","entry":"20200916T092643Z","modified":"20200927T191715Z","project":"intelligence_artificielle","status":"completed","uuid":"1c3caec3-0038-475d-835e-6c270a85eda9"}
 {"description":"Créer des joint queries","end":"20200927T191730Z","entry":"20200916T110736Z","modified":"20200927T191730Z","project":"satom","status":"completed","uuid":"241ff66b-4556-4a76-b74c-7b199ebfb806"}
+{"description":"devoir (simple) maman Lady","entry":"20200928T211423Z","modified":"20200928T211423Z","status":"pending","uuid":"23622f0c-ae94-4a60-8dda-36ef435a9d74"}
