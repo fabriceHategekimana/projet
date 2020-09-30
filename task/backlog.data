@@ -8936,3 +8936,4 @@
 {"description":"GL rendre doc NFRs + user stories","due":"20201002T060000Z","entry":"20200928T232137Z","modified":"20200928T232137Z","status":"pending","uuid":"43f51229-1960-470c-aa8c-e183f8f2f175"}
 {"description":"IA rendre formalisme","due":"20201002T060000Z","entry":"20200928T232231Z","modified":"20200928T232231Z","status":"pending","uuid":"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"}
 {"description":"IN tp1","due":"20201008T060000Z","entry":"20200928T232347Z","modified":"20200928T232347Z","status":"pending","uuid":"b255114b-059e-4bba-87dd-f46ee99e06ed"}
+{"description":"géopoointCompanie CountrycodeCityInvestors Neo4j Splunk","entry":"20200930T170153Z","modified":"20200930T170153Z","status":"pending","uuid":"21823c55-fded-4f92-897d-d65a26de94f2"}

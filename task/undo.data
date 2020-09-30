@@ -32049,3 +32049,6 @@ new [description:"IA rendre formalisme" due:"1601618400" entry:"1601335351" modi
 time 1601335427
 new [description:"IN tp1" due:"1602136800" entry:"1601335427" modified:"1601335427" status:"pending" uuid:"b255114b-059e-4bba-87dd-f46ee99e06ed"]
 ---
+time 1601485313
+new [description:"géopoointCompanie CountrycodeCityInvestors Neo4j Splunk" entry:"1601485313" modified:"1601485313" status:"pending" uuid:"21823c55-fded-4f92-897d-d65a26de94f2"]
+---
