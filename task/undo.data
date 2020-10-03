@@ -32055,3 +32055,11 @@ new [description:"géopoointCompanie CountrycodeCityInvestors Neo4j Splunk" entr
 time 1601631618
 new [description:"tp système informatique" due:"1601964000" entry:"1601631618" modified:"1601631618" status:"pending" uuid:"9b66a093-3960-41e4-9db3-78e9590a6c4e"]
 ---
+time 1601767006
+old [description:"GL rendre doc NFRs + user stories" due:"1601618400" entry:"1601335297" modified:"1601335297" status:"pending" uuid:"43f51229-1960-470c-aa8c-e183f8f2f175"]
+new [description:"GL rendre doc NFRs + user stories" due:"1601618400" end:"1601767006" entry:"1601335297" modified:"1601767006" status:"completed" uuid:"43f51229-1960-470c-aa8c-e183f8f2f175"]
+---
+time 1601767021
+old [description:"IA rendre formalisme" due:"1601618400" entry:"1601335351" modified:"1601335351" status:"pending" uuid:"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"]
+new [description:"IA rendre formalisme" due:"1601618400" end:"1601767021" entry:"1601335351" modified:"1601767021" status:"completed" uuid:"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"]
+---
