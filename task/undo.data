@@ -32092,3 +32092,9 @@ time 1601840270
 old [description:"adopt a skill 15h45" entry:"1601830878" modified:"1601830878" priority:"H" status:"pending" uuid:"15806e00-e826-42d0-845d-9331ef2a2e60"]
 new [description:"adopt a skill 15h45" end:"1601840270" entry:"1601830878" modified:"1601840270" priority:"H" status:"completed" uuid:"15806e00-e826-42d0-845d-9331ef2a2e60"]
 ---
+time 1601850319
+new [description:"geopoint" entry:"1601850319" modified:"1601850319" priority:"H" status:"pending" uuid:"519dfe80-e3bf-4ca3-aa97-ba6b3d50706f"]
+---
+time 1601850581
+new [description:"webinaire 17h" due:"1601964000" entry:"1601850581" modified:"1601850581" status:"pending" uuid:"40c08cc3-76f3-49fa-84a9-047555d29276"]
+---

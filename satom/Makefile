@@ -18,6 +18,9 @@ pdf: FORCE
 	cd pdf && bash ~/sh/cs.sh
 mail: FORCE
 	firefox https://outlook.office.com/mail/inbox/id/AAQkAGNiNzI0NDcyLWRlNjAtNDdjNC1iMzEwLTEwM2ZmOGE0OGMzZAAQANauEigVHVpNnxV4tfZXPkU%3D &
+
+site: FORCE
+	firefox https://control.divio.com/
 FORCE:
 
 
