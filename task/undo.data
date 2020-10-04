@@ -32063,3 +32063,32 @@ time 1601767021
 old [description:"IA rendre formalisme" due:"1601618400" entry:"1601335351" modified:"1601335351" status:"pending" uuid:"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"]
 new [description:"IA rendre formalisme" due:"1601618400" end:"1601767021" entry:"1601335351" modified:"1601767021" status:"completed" uuid:"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"]
 ---
+time 1601830878
+new [description:"adopt a skill 15h45" entry:"1601830878" modified:"1601830878" priority:"H" status:"pending" uuid:"15806e00-e826-42d0-845d-9331ef2a2e60"]
+---
+time 1601832461
+new [description:"voir heure maman Melissa mardi soir" entry:"1601832461" modified:"1601832461" priority:"M" status:"pending" uuid:"0ff2a78a-3838-4d1f-8c44-d7f11d582a29"]
+---
+time 1601840012
+new [description:"TP1 Imagerie numérique" due:"1602136800" entry:"1601840012" modified:"1601840012" status:"pending" uuid:"239199c3-4605-4c78-a618-3a91984082b0"]
+---
+time 1601840033
+new [description:"TP3 génie logiciel" due:"1602223200" entry:"1601840033" modified:"1601840033" status:"pending" uuid:"ff9ac97e-160a-4237-bd32-e52887694333"]
+---
+time 1601840063
+new [description:"TP1 paraléllisme" due:"1602655200" entry:"1601840063" modified:"1601840063" status:"pending" uuid:"74469cb8-d31a-4f3b-928b-c9e4613c6a8b"]
+---
+time 1601840246
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" modified:"1601840246" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1601840249
+new [description:"programme Siloé" due:"1601935200" entry:"1601840249" imask:"0" modified:"1601840246" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"dab197d4-b4a9-4e05-b137-b2c97acd2a9c"]
+---
+time 1601840249
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" modified:"1601840246" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"-" modified:"1601840249" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1601840270
+old [description:"adopt a skill 15h45" entry:"1601830878" modified:"1601830878" priority:"H" status:"pending" uuid:"15806e00-e826-42d0-845d-9331ef2a2e60"]
+new [description:"adopt a skill 15h45" end:"1601840270" entry:"1601830878" modified:"1601840270" priority:"H" status:"completed" uuid:"15806e00-e826-42d0-845d-9331ef2a2e60"]
+---

@@ -1,3 +1,0 @@
-
-
-fluidsynth -a alsa -g 5 giga_piano.sf2

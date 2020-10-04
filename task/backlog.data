@@ -8940,3 +8940,12 @@
 {"description":"tp système informatique","due":"20201006T060000Z","entry":"20201002T094018Z","modified":"20201002T094018Z","status":"pending","uuid":"9b66a093-3960-41e4-9db3-78e9590a6c4e"}
 {"description":"GL rendre doc NFRs + user stories","due":"20201002T060000Z","end":"20201003T231646Z","entry":"20200928T232137Z","modified":"20201003T231646Z","status":"completed","uuid":"43f51229-1960-470c-aa8c-e183f8f2f175"}
 {"description":"IA rendre formalisme","due":"20201002T060000Z","end":"20201003T231701Z","entry":"20200928T232231Z","modified":"20201003T231701Z","status":"completed","uuid":"5a804e40-a6db-4ca1-abd3-e44f5ebf0114"}
+{"description":"adopt a skill 15h45","entry":"20201004T170118Z","modified":"20201004T170118Z","priority":"H","status":"pending","uuid":"15806e00-e826-42d0-845d-9331ef2a2e60"}
+{"description":"voir heure maman Melissa mardi soir","entry":"20201004T172741Z","modified":"20201004T172741Z","priority":"M","status":"pending","uuid":"0ff2a78a-3838-4d1f-8c44-d7f11d582a29"}
+{"description":"TP1 Imagerie numérique","due":"20201008T060000Z","entry":"20201004T193332Z","modified":"20201004T193332Z","status":"pending","uuid":"239199c3-4605-4c78-a618-3a91984082b0"}
+{"description":"TP3 génie logiciel","due":"20201009T060000Z","entry":"20201004T193353Z","modified":"20201004T193353Z","status":"pending","uuid":"ff9ac97e-160a-4237-bd32-e52887694333"}
+{"description":"TP1 paraléllisme","due":"20201014T060000Z","entry":"20201004T193423Z","modified":"20201004T193423Z","status":"pending","uuid":"74469cb8-d31a-4f3b-928b-c9e4613c6a8b"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","modified":"20201004T193726Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193729Z","imask":0,"modified":"20201004T193726Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"pending","until":"20201231T230000Z","uuid":"dab197d4-b4a9-4e05-b137-b2c97acd2a9c"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"-","modified":"20201004T193729Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"adopt a skill 15h45","end":"20201004T193750Z","entry":"20201004T170118Z","modified":"20201004T193750Z","priority":"H","status":"completed","uuid":"15806e00-e826-42d0-845d-9331ef2a2e60"}
