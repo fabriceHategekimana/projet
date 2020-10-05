@@ -8956,3 +8956,14 @@
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+","modified":"20201005T125419Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
 {"description":"programme Siloé","due":"20201005T220000Z","end":"20201005T125419Z","entry":"20201004T193729Z","imask":0,"modified":"20201005T125419Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"completed","until":"20201231T230000Z","uuid":"dab197d4-b4a9-4e05-b137-b2c97acd2a9c"}
 {"description":"tp système informatique","due":"20201006T060000Z","end":"20201005T125440Z","entry":"20201002T094018Z","modified":"20201005T125440Z","status":"completed","uuid":"9b66a093-3960-41e4-9db3-78e9590a6c4e"}
+{"description":"adopt a skill","due":"20201005T060000Z","end":"20201005T213528Z","entry":"20200921T122710Z","modified":"20201005T213528Z","status":"completed","uuid":"19d3006b-6345-4b83-9cea-9d74315213e7"}
+{"description":"satom","entry":"20201005T213604Z","modified":"20201005T213604Z","status":"pending","uuid":"e4c7bd29-882e-4ed7-9990-b0202b2d9941"}
+{"description":"satom","entry":"20201005T213604Z","modified":"20201005T213614Z","start":"20201005T213614Z","status":"pending","uuid":"e4c7bd29-882e-4ed7-9990-b0202b2d9941"}
+{"description":"simone","entry":"20201005T213650Z","modified":"20201005T213650Z","status":"pending","uuid":"46e4cd11-66aa-46f0-871d-b707a16aa047"}
+{"description":"phantsper","entry":"20201005T213701Z","modified":"20201005T213701Z","status":"pending","uuid":"74a414be-6c7f-4561-b2ca-01aac6993bf2"}
+{"description":"français","entry":"20201005T213718Z","modified":"20201005T213718Z","status":"pending","uuid":"5873b1a3-79b0-48d5-8b01-eede88a5f7c3"}
+{"description":"spirituel","entry":"20201005T213728Z","modified":"20201005T213728Z","status":"pending","uuid":"22a540c3-9c2d-433e-95a5-4480e734302b"}
+{"description":"simone","entry":"20201005T213650Z","modified":"20201005T213743Z","start":"20201005T213740Z","status":"pending","uuid":"46e4cd11-66aa-46f0-871d-b707a16aa047"}
+{"description":"phantsper","entry":"20201005T213701Z","modified":"20201005T213743Z","start":"20201005T213743Z","status":"pending","uuid":"74a414be-6c7f-4561-b2ca-01aac6993bf2"}
+{"description":"français","entry":"20201005T213718Z","modified":"20201005T213743Z","start":"20201005T213743Z","status":"pending","uuid":"5873b1a3-79b0-48d5-8b01-eede88a5f7c3"}
+{"description":"spirituel","entry":"20201005T213728Z","modified":"20201005T213743Z","start":"20201005T213743Z","status":"pending","uuid":"22a540c3-9c2d-433e-95a5-4480e734302b"}

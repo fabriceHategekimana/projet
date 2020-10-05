@@ -4,6 +4,7 @@ Organisation
 Chercher à faire les choses rapidement (car j'ai appris à les faire correctement)
 Se projeter vers l'avenir assez souvent.
 
+<<<<<<< Updated upstream
 Organisation:
 Représenter mon quotidien comme un système dont l'état est:
 
@@ -25,3 +26,12 @@ Mes activité sont réglés en plusieurs groupes:
 ## Motivation
 Pour ma motivation. Je dois trouver un moyen de mesure pour me permettre de mener à bien mon travail.
 Je sais que ma motivation se base sur les émotions et a certainement une influence sociale (et se base aussi sur mes valeurs). Je dois réserver un petit temps pour ça.
+=======
+établir un checking de mes ressources
+
+temps
+motivation
+pensées
+argent
+espace
+>>>>>>> Stashed changes
