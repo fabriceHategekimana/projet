@@ -8951,3 +8951,8 @@
 {"description":"adopt a skill 15h45","end":"20201004T193750Z","entry":"20201004T170118Z","modified":"20201004T193750Z","priority":"H","status":"completed","uuid":"15806e00-e826-42d0-845d-9331ef2a2e60"}
 {"description":"geopoint","entry":"20201004T222519Z","modified":"20201004T222519Z","priority":"H","status":"pending","uuid":"519dfe80-e3bf-4ca3-aa97-ba6b3d50706f"}
 {"description":"webinaire 17h","due":"20201006T060000Z","entry":"20201004T222941Z","modified":"20201004T222941Z","status":"pending","uuid":"40c08cc3-76f3-49fa-84a9-047555d29276"}
+{"description":"Faire le tp1","end":"20201005T115739Z","entry":"20200916T092658Z","modified":"20201005T115739Z","project":"intelligence_artificielle","status":"completed","uuid":"80fec375-6f30-4c2a-a11a-fca2a5c8d4c5"}
+{"description":"task probabilité loi de poisson","entry":"20201005T121527Z","modified":"20201005T121527Z","priority":"M","status":"pending","uuid":"313712a4-5d12-49a6-85f5-936f6a2ddb6e"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+","modified":"20201005T125419Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"programme Siloé","due":"20201005T220000Z","end":"20201005T125419Z","entry":"20201004T193729Z","imask":0,"modified":"20201005T125419Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"completed","until":"20201231T230000Z","uuid":"dab197d4-b4a9-4e05-b137-b2c97acd2a9c"}
+{"description":"tp système informatique","due":"20201006T060000Z","end":"20201005T125440Z","entry":"20201002T094018Z","modified":"20201005T125440Z","status":"completed","uuid":"9b66a093-3960-41e4-9db3-78e9590a6c4e"}
