@@ -8956,6 +8956,7 @@
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+","modified":"20201005T125419Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
 {"description":"programme Siloé","due":"20201005T220000Z","end":"20201005T125419Z","entry":"20201004T193729Z","imask":0,"modified":"20201005T125419Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"completed","until":"20201231T230000Z","uuid":"dab197d4-b4a9-4e05-b137-b2c97acd2a9c"}
 {"description":"tp système informatique","due":"20201006T060000Z","end":"20201005T125440Z","entry":"20201002T094018Z","modified":"20201005T125440Z","status":"completed","uuid":"9b66a093-3960-41e4-9db3-78e9590a6c4e"}
+<<<<<<< Updated upstream
 {"description":"adopt a skill","due":"20201005T060000Z","end":"20201005T213528Z","entry":"20200921T122710Z","modified":"20201005T213528Z","status":"completed","uuid":"19d3006b-6345-4b83-9cea-9d74315213e7"}
 {"description":"satom","entry":"20201005T213604Z","modified":"20201005T213604Z","status":"pending","uuid":"e4c7bd29-882e-4ed7-9990-b0202b2d9941"}
 {"description":"satom","entry":"20201005T213604Z","modified":"20201005T213614Z","start":"20201005T213614Z","status":"pending","uuid":"e4c7bd29-882e-4ed7-9990-b0202b2d9941"}
@@ -8967,3 +8968,8 @@
 {"description":"phantsper","entry":"20201005T213701Z","modified":"20201005T213743Z","start":"20201005T213743Z","status":"pending","uuid":"74a414be-6c7f-4561-b2ca-01aac6993bf2"}
 {"description":"français","entry":"20201005T213718Z","modified":"20201005T213743Z","start":"20201005T213743Z","status":"pending","uuid":"5873b1a3-79b0-48d5-8b01-eede88a5f7c3"}
 {"description":"spirituel","entry":"20201005T213728Z","modified":"20201005T213743Z","start":"20201005T213743Z","status":"pending","uuid":"22a540c3-9c2d-433e-95a5-4480e734302b"}
+=======
+{"description":"programme Siloé","due":"20201012T220000Z","entry":"20201006T063212Z","imask":1,"modified":"20201005T125419Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"pending","until":"20201231T230000Z","uuid":"6f5c4199-83ea-412c-9e8d-4ecc33abd173"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+-","modified":"20201006T063212Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+>>>>>>> Stashed changes
+{"description":"faire le tableau sprint backlog","entry":"20201006T151415Z","modified":"20201006T151415Z","status":"pending","uuid":"7a8d6cff-9932-4ea3-b507-cc665b808dd5"}
