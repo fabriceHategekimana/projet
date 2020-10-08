@@ -32168,3 +32168,6 @@ new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+-
 time 1601997255
 new [description:"faire le tableau sprint backlog" entry:"1601997255" modified:"1601997255" status:"pending" uuid:"7a8d6cff-9932-4ea3-b507-cc665b808dd5"]
 ---
+time 1602088525
+new [description:"travail stb" entry:"1602088525" modified:"1602088525" priority:"M" status:"pending" uuid:"e47133d8-8580-416e-8fff-06f0e5d1e755"]
+---

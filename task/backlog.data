@@ -8973,3 +8973,4 @@
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+-","modified":"20201006T063212Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
 >>>>>>> Stashed changes
 {"description":"faire le tableau sprint backlog","entry":"20201006T151415Z","modified":"20201006T151415Z","status":"pending","uuid":"7a8d6cff-9932-4ea3-b507-cc665b808dd5"}
+{"description":"travail stb","entry":"20201007T163525Z","modified":"20201007T163525Z","priority":"M","status":"pending","uuid":"e47133d8-8580-416e-8fff-06f0e5d1e755"}
