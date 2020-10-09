@@ -14,7 +14,6 @@
 [description:"TP1 paraléllisme" due:"1602655200" entry:"1601840063" modified:"1601840063" status:"pending" uuid:"74469cb8-d31a-4f3b-928b-c9e4613c6a8b"]
 [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+-" modified:"1601965932" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
 [description:"geopoint" entry:"1601850319" modified:"1601850319" priority:"H" status:"pending" uuid:"519dfe80-e3bf-4ca3-aa97-ba6b3d50706f"]
-[description:"webinaire 17h" due:"1601964000" entry:"1601850581" modified:"1601850581" status:"pending" uuid:"40c08cc3-76f3-49fa-84a9-047555d29276"]
 [description:"task probabilité loi de poisson" entry:"1601900127" modified:"1601900127" priority:"M" status:"pending" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
 [description:"satom" entry:"1601933764" modified:"1601933774" start:"1601933774" status:"pending" uuid:"e4c7bd29-882e-4ed7-9990-b0202b2d9941"]
 [description:"simone" entry:"1601933810" modified:"1601933863" start:"1601933860" status:"pending" uuid:"46e4cd11-66aa-46f0-871d-b707a16aa047"]

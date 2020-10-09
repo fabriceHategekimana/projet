@@ -32171,3 +32171,7 @@ new [description:"faire le tableau sprint backlog" entry:"1601997255" modified:"
 time 1602088525
 new [description:"travail stb" entry:"1602088525" modified:"1602088525" priority:"M" status:"pending" uuid:"e47133d8-8580-416e-8fff-06f0e5d1e755"]
 ---
+time 1602147646
+old [description:"webinaire 17h" due:"1601964000" entry:"1601850581" modified:"1601850581" status:"pending" uuid:"40c08cc3-76f3-49fa-84a9-047555d29276"]
+new [description:"webinaire 17h" due:"1601964000" end:"1602147646" entry:"1601850581" modified:"1602147646" status:"completed" uuid:"40c08cc3-76f3-49fa-84a9-047555d29276"]
+---

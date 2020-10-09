@@ -8974,3 +8974,4 @@
 >>>>>>> Stashed changes
 {"description":"faire le tableau sprint backlog","entry":"20201006T151415Z","modified":"20201006T151415Z","status":"pending","uuid":"7a8d6cff-9932-4ea3-b507-cc665b808dd5"}
 {"description":"travail stb","entry":"20201007T163525Z","modified":"20201007T163525Z","priority":"M","status":"pending","uuid":"e47133d8-8580-416e-8fff-06f0e5d1e755"}
+{"description":"webinaire 17h","due":"20201006T060000Z","end":"20201008T090046Z","entry":"20201004T222941Z","modified":"20201008T090046Z","status":"completed","uuid":"40c08cc3-76f3-49fa-84a9-047555d29276"}

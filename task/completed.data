@@ -1,3 +1,4 @@
+[description:"webinaire 17h" due:"1601964000" end:"1602147646" entry:"1601850581" modified:"1602147646" status:"completed" uuid:"40c08cc3-76f3-49fa-84a9-047555d29276"]
 [description:"adopt a skill" due:"1601877600" end:"1601933728" entry:"1600691230" modified:"1601933728" status:"completed" uuid:"19d3006b-6345-4b83-9cea-9d74315213e7"]
 [description:"tp système informatique" due:"1601964000" end:"1601902480" entry:"1601631618" modified:"1601902480" status:"completed" uuid:"9b66a093-3960-41e4-9db3-78e9590a6c4e"]
 [description:"programme Siloé" due:"1601935200" end:"1601902459" entry:"1601840249" imask:"0" modified:"1601902459" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"dab197d4-b4a9-4e05-b137-b2c97acd2a9c"]

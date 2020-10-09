@@ -1,0 +1,9 @@
+- `On pouvait` sortir seulement pour les courses
+- Ce que j'ai vu aujourd'hui, ce n'était pas `commme` [avant]
+- Je veux passer le message `à` tout le monde.
+- S'ils veu`lent`
+- C'est mieux de venir ici `pour` apprendre
+- Si quelqu'un ~~il~~ vient
+- Ça serait bien
+- ~~Des fois~~, Parfois
+- Un jour, quand ils ~~vont finir~~ auront fini
