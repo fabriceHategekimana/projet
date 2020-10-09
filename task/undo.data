@@ -32175,3 +32175,6 @@ time 1602147646
 old [description:"webinaire 17h" due:"1601964000" entry:"1601850581" modified:"1601850581" status:"pending" uuid:"40c08cc3-76f3-49fa-84a9-047555d29276"]
 new [description:"webinaire 17h" due:"1601964000" end:"1602147646" entry:"1601850581" modified:"1602147646" status:"completed" uuid:"40c08cc3-76f3-49fa-84a9-047555d29276"]
 ---
+time 1602231187
+new [description:"noter nouvelles dates tp" entry:"1602231187" modified:"1602231187" status:"pending" uuid:"259bc184-b666-47a4-a9f9-6e76331ab54b"]
+---
