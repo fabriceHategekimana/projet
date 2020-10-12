@@ -32178,3 +32178,11 @@ new [description:"webinaire 17h" due:"1601964000" end:"1602147646" entry:"160185
 time 1602231187
 new [description:"noter nouvelles dates tp" entry:"1602231187" modified:"1602231187" status:"pending" uuid:"259bc184-b666-47a4-a9f9-6e76331ab54b"]
 ---
+time 1602491227
+old [description:"geopoint" entry:"1601850319" modified:"1601850319" priority:"H" status:"pending" uuid:"519dfe80-e3bf-4ca3-aa97-ba6b3d50706f"]
+new [description:"geopoint" end:"1602491227" entry:"1601850319" modified:"1602491227" priority:"H" status:"completed" uuid:"519dfe80-e3bf-4ca3-aa97-ba6b3d50706f"]
+---
+time 1602491561
+old [description:"voir heure maman Melissa mardi soir" entry:"1601832461" modified:"1601832461" priority:"M" status:"pending" uuid:"0ff2a78a-3838-4d1f-8c44-d7f11d582a29"]
+new [description:"voir heure maman Melissa mardi soir" end:"1602491561" entry:"1601832461" modified:"1602491561" priority:"M" status:"completed" uuid:"0ff2a78a-3838-4d1f-8c44-d7f11d582a29"]
+---
