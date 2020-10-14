@@ -8978,3 +8978,7 @@
 {"description":"noter nouvelles dates tp","entry":"20201009T081307Z","modified":"20201009T081307Z","status":"pending","uuid":"259bc184-b666-47a4-a9f9-6e76331ab54b"}
 {"description":"geopoint","end":"20201012T082707Z","entry":"20201004T222519Z","modified":"20201012T082707Z","priority":"H","status":"completed","uuid":"519dfe80-e3bf-4ca3-aa97-ba6b3d50706f"}
 {"description":"voir heure maman Melissa mardi soir","end":"20201012T083241Z","entry":"20201004T172741Z","modified":"20201012T083241Z","priority":"M","status":"completed","uuid":"0ff2a78a-3838-4d1f-8c44-d7f11d582a29"}
+{"description":"programme Siloé","due":"20201019T220000Z","entry":"20201013T080206Z","imask":2,"modified":"20201006T063212Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"pending","until":"20201231T230000Z","uuid":"079ce56b-e31b-487d-a17a-f105a93e6ed4"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+--","modified":"20201013T080206Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"IN tp1","due":"20201008T060000Z","end":"20201013T080225Z","entry":"20200928T232347Z","modified":"20201013T080225Z","status":"completed","uuid":"b255114b-059e-4bba-87dd-f46ee99e06ed"}
+{"description":"TP1 Imagerie numérique","due":"20201008T060000Z","end":"20201013T080244Z","entry":"20201004T193332Z","modified":"20201013T080244Z","status":"completed","uuid":"239199c3-4605-4c78-a618-3a91984082b0"}

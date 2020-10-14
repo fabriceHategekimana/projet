@@ -32186,3 +32186,18 @@ time 1602491561
 old [description:"voir heure maman Melissa mardi soir" entry:"1601832461" modified:"1601832461" priority:"M" status:"pending" uuid:"0ff2a78a-3838-4d1f-8c44-d7f11d582a29"]
 new [description:"voir heure maman Melissa mardi soir" end:"1602491561" entry:"1601832461" modified:"1602491561" priority:"M" status:"completed" uuid:"0ff2a78a-3838-4d1f-8c44-d7f11d582a29"]
 ---
+time 1602576126
+new [description:"programme Siloé" due:"1603144800" entry:"1602576126" imask:"2" modified:"1601965932" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"079ce56b-e31b-487d-a17a-f105a93e6ed4"]
+---
+time 1602576126
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+-" modified:"1601965932" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+--" modified:"1602576126" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1602576145
+old [description:"IN tp1" due:"1602136800" entry:"1601335427" modified:"1601335427" status:"pending" uuid:"b255114b-059e-4bba-87dd-f46ee99e06ed"]
+new [description:"IN tp1" due:"1602136800" end:"1602576145" entry:"1601335427" modified:"1602576145" status:"completed" uuid:"b255114b-059e-4bba-87dd-f46ee99e06ed"]
+---
+time 1602576164
+old [description:"TP1 Imagerie numérique" due:"1602136800" entry:"1601840012" modified:"1601840012" status:"pending" uuid:"239199c3-4605-4c78-a618-3a91984082b0"]
+new [description:"TP1 Imagerie numérique" due:"1602136800" end:"1602576164" entry:"1601840012" modified:"1602576164" status:"completed" uuid:"239199c3-4605-4c78-a618-3a91984082b0"]
+---
