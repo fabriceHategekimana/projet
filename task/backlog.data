@@ -8982,3 +8982,35 @@
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+--","modified":"20201013T080206Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
 {"description":"IN tp1","due":"20201008T060000Z","end":"20201013T080225Z","entry":"20200928T232347Z","modified":"20201013T080225Z","status":"completed","uuid":"b255114b-059e-4bba-87dd-f46ee99e06ed"}
 {"description":"TP1 Imagerie numérique","due":"20201008T060000Z","end":"20201013T080244Z","entry":"20201004T193332Z","modified":"20201013T080244Z","status":"completed","uuid":"239199c3-4605-4c78-a618-3a91984082b0"}
+{"description":"companies, investement coordinate","end":"20201014T115352Z","entry":"20200909T140953Z","modified":"20201014T115352Z","project":"satom","status":"completed","uuid":"cfbec271-ef40-49bb-ae98-7183119b14e1"}
+{"description":"base neo4j","end":"20201014T115352Z","entry":"20200909T141020Z","modified":"20201014T115352Z","project":"satom","status":"completed","uuid":"ed3a60be-c021-46ab-a857-43a4a89e501e"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"++-","modified":"20201014T124356Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"programme Siloé","due":"20201012T220000Z","end":"20201014T124356Z","entry":"20201006T063212Z","imask":1,"modified":"20201014T124356Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"completed","until":"20201231T230000Z","uuid":"6f5c4199-83ea-412c-9e8d-4ecc33abd173"}
+{"description":"TP1 paraléllisme","due":"20201014T060000Z","end":"20201014T124408Z","entry":"20201004T193423Z","modified":"20201014T124408Z","status":"completed","uuid":"74469cb8-d31a-4f3b-928b-c9e4613c6a8b"}
+{"description":"travail stb","entry":"20201007T163525Z","modified":"20201014T125337Z","priority":"H","status":"pending","uuid":"e47133d8-8580-416e-8fff-06f0e5d1e755"}
+{"description":"mettre a jour mon cv","end":"20201014T125352Z","entry":"20200810T131123Z","modified":"20201014T125352Z","project":"administratif","status":"completed","uuid":"ae7d4d1d-2586-4bc2-b0b0-c868a379e42b"}
+{"description":"liste des chants pour Elmy","entry":"20201014T125621Z","modified":"20201014T125621Z","priority":"M","status":"pending","uuid":"28af3099-7155-4dc0-94fb-fd409aab7cc1"}
+{"description":"prévenir papa Roger pour le nouveau pc","entry":"20201014T125650Z","modified":"20201014T125650Z","priority":"H","status":"pending","uuid":"47358c8b-886d-4ba6-b740-59f49a8dbef6"}
+{"description":"plateforme maman Lady","entry":"20201014T125755Z","modified":"20201014T125755Z","priority":"M","status":"pending","uuid":"897d14cb-3633-4b48-aa87-32b8580acba5"}
+{"description":"site MEP","entry":"20201014T130656Z","modified":"20201014T130656Z","priority":"L","status":"pending","uuid":"db9c04c1-9ddb-43bf-9b13-9814dcc18377"}
+{"description":"Tp2 compilateur et interprète","due":"20201025T070000Z","entry":"20201014T131440Z","modified":"20201014T131440Z","status":"pending","uuid":"2efb5813-a02d-47a2-a7f5-ae56d078dae0"}
+{"description":"sondage adopt a skill 23 octobre","entry":"20201014T133717Z","modified":"20201014T133717Z","priority":"M","status":"pending","uuid":"303053bf-8668-4918-8072-8fca4ed99f23"}
+{"description":"inscription examen 3e","entry":"20201014T133855Z","modified":"20201014T133855Z","status":"pending","uuid":"b550e30c-8fdc-4202-ab6a-545532581a0a"}
+{"description":"inscription examen 3e","entry":"20201014T133855Z","modified":"20201014T133945Z","priority":"H","status":"pending","uuid":"b550e30c-8fdc-4202-ab6a-545532581a0a"}
+{"description":"TP2 Imagerie numérique","due":"20201022T060000Z","entry":"20201014T134029Z","modified":"20201014T134029Z","status":"pending","uuid":"fc3dd6bd-2089-4f82-a61f-01754929ca77"}
+{"description":"tp3 IA","due":"20201022T060000Z","entry":"20201014T134453Z","modified":"20201014T134453Z","status":"pending","uuid":"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"}
+{"description":"TP2 parallelisme","due":"20201028T070000Z","entry":"20201014T135110Z","modified":"20201014T135110Z","status":"pending","uuid":"0c87bb6d-0649-4aed-be98-55da11ba0c29"}
+{"description":"tp4 génie logiciel","due":"20201019T060000Z","entry":"20201014T135254Z","modified":"20201014T135254Z","status":"pending","uuid":"92bc30c3-4d93-4776-9c7b-d3a42f653d0d"}
+{"description":"TP3 génie logiciel","due":"20201009T060000Z","end":"20201014T135418Z","entry":"20201004T193353Z","modified":"20201014T135418Z","status":"completed","uuid":"ff9ac97e-160a-4237-bd32-e52887694333"}
+{"description":"TP2 IA","due":"20201016T060000Z","entry":"20201014T135510Z","modified":"20201014T135510Z","status":"pending","uuid":"344d1b02-5917-439b-9e5f-1fd93cbb3e7e"}
+{"description":"laver bento","due":"20201015T060000Z","entry":"20201014T150951Z","modified":"20201014T150951Z","status":"pending","uuid":"d9795b79-7d90-4249-9ee7-3129092bf086"}
+{"description":"backup satom","entry":"20201014T152927Z","modified":"20201014T152927Z","priority":"H","status":"pending","uuid":"33df809d-536e-4cdd-a2a7-168db3bb36d7"}
+{"description":"noter nouvelles dates tp","end":"20201014T152944Z","entry":"20201009T081307Z","modified":"20201014T152944Z","status":"completed","uuid":"259bc184-b666-47a4-a9f9-6e76331ab54b"}
+{"description":"mettre git comme backup dans une branche spécifique","end":"20201014T153051Z","entry":"20200908T092133Z","modified":"20201014T153051Z","project":"satom","status":"completed","uuid":"d8cbd5b0-957b-462f-af6b-780691280385"}
+{"description":"companies, investements founded date","end":"20201014T153051Z","entry":"20200909T140938Z","modified":"20201014T153051Z","project":"satom","status":"completed","uuid":"f4d8b1bd-7dcc-4b5e-b83d-b584cc9389e6"}
+{"description":"mettre à jour mes note","end":"20201014T153105Z","entry":"20200926T170851Z","modified":"20201014T153105Z","status":"completed","uuid":"fafcd3f4-4c58-422c-8e79-0bca17740a8e"}
+{"description":"tache répétitive devoir maman Lady","entry":"20201014T153152Z","modified":"20201014T153152Z","priority":"M","status":"pending","uuid":"a24b6f2b-2f75-425c-a27d-bf577857d086"}
+{"description":"prévenir maman Lady pas cours jeudi","entry":"20201014T153215Z","modified":"20201014T153215Z","priority":"H","status":"pending","uuid":"5308bf3f-e2b7-4db5-beb6-a41fcebb15cd"}
+{"description":"géopoointCompanie CountrycodeCityInvestors Neo4j Splunk","end":"20201014T153230Z","entry":"20200930T170153Z","modified":"20201014T153230Z","status":"completed","uuid":"21823c55-fded-4f92-897d-d65a26de94f2"}
+{"description":"devoir (simple) maman Lady","end":"20201014T153306Z","entry":"20200928T211423Z","modified":"20201014T153306Z","status":"completed","uuid":"23622f0c-ae94-4a60-8dda-36ef435a9d74"}
+{"description":"faire le tableau sprint backlog","end":"20201014T153306Z","entry":"20201006T151415Z","modified":"20201014T153306Z","status":"completed","uuid":"7a8d6cff-9932-4ea3-b507-cc665b808dd5"}

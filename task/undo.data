@@ -32201,3 +32201,115 @@ time 1602576164
 old [description:"TP1 Imagerie numérique" due:"1602136800" entry:"1601840012" modified:"1601840012" status:"pending" uuid:"239199c3-4605-4c78-a618-3a91984082b0"]
 new [description:"TP1 Imagerie numérique" due:"1602136800" end:"1602576164" entry:"1601840012" modified:"1602576164" status:"completed" uuid:"239199c3-4605-4c78-a618-3a91984082b0"]
 ---
+time 1602676432
+old [description:"companies, investement coordinate" entry:"1599660593" modified:"1599660593" project:"satom" status:"pending" uuid:"cfbec271-ef40-49bb-ae98-7183119b14e1"]
+new [description:"companies, investement coordinate" end:"1602676432" entry:"1599660593" modified:"1602676432" project:"satom" status:"completed" uuid:"cfbec271-ef40-49bb-ae98-7183119b14e1"]
+---
+time 1602676432
+old [description:"base neo4j" entry:"1599660620" modified:"1599660620" project:"satom" status:"pending" uuid:"ed3a60be-c021-46ab-a857-43a4a89e501e"]
+new [description:"base neo4j" end:"1602676432" entry:"1599660620" modified:"1602676432" project:"satom" status:"completed" uuid:"ed3a60be-c021-46ab-a857-43a4a89e501e"]
+---
+time 1602679436
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+--" modified:"1602576126" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-" modified:"1602679436" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1602679436
+old [description:"programme Siloé" due:"1602540000" entry:"1601965932" imask:"1" modified:"1601902459" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"6f5c4199-83ea-412c-9e8d-4ecc33abd173"]
+new [description:"programme Siloé" due:"1602540000" end:"1602679436" entry:"1601965932" imask:"1" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"6f5c4199-83ea-412c-9e8d-4ecc33abd173"]
+---
+time 1602679448
+old [description:"TP1 paraléllisme" due:"1602655200" entry:"1601840063" modified:"1601840063" status:"pending" uuid:"74469cb8-d31a-4f3b-928b-c9e4613c6a8b"]
+new [description:"TP1 paraléllisme" due:"1602655200" end:"1602679448" entry:"1601840063" modified:"1602679448" status:"completed" uuid:"74469cb8-d31a-4f3b-928b-c9e4613c6a8b"]
+---
+time 1602680017
+old [description:"travail stb" entry:"1602088525" modified:"1602088525" priority:"M" status:"pending" uuid:"e47133d8-8580-416e-8fff-06f0e5d1e755"]
+new [description:"travail stb" entry:"1602088525" modified:"1602680017" priority:"H" status:"pending" uuid:"e47133d8-8580-416e-8fff-06f0e5d1e755"]
+---
+time 1602680032
+old [description:"mettre a jour mon cv" entry:"1597065083" modified:"1597308566" project:"administratif" status:"pending" uuid:"ae7d4d1d-2586-4bc2-b0b0-c868a379e42b"]
+new [description:"mettre a jour mon cv" end:"1602680032" entry:"1597065083" modified:"1602680032" project:"administratif" status:"completed" uuid:"ae7d4d1d-2586-4bc2-b0b0-c868a379e42b"]
+---
+time 1602680181
+new [description:"liste des chants pour Elmy" entry:"1602680181" modified:"1602680181" priority:"M" status:"pending" uuid:"28af3099-7155-4dc0-94fb-fd409aab7cc1"]
+---
+time 1602680210
+new [description:"prévenir papa Roger pour le nouveau pc" entry:"1602680210" modified:"1602680210" priority:"H" status:"pending" uuid:"47358c8b-886d-4ba6-b740-59f49a8dbef6"]
+---
+time 1602680275
+new [description:"plateforme maman Lady" entry:"1602680275" modified:"1602680275" priority:"M" status:"pending" uuid:"897d14cb-3633-4b48-aa87-32b8580acba5"]
+---
+time 1602680816
+new [description:"site MEP" entry:"1602680816" modified:"1602680816" priority:"L" status:"pending" uuid:"db9c04c1-9ddb-43bf-9b13-9814dcc18377"]
+---
+time 1602681280
+new [description:"Tp2 compilateur et interprète" due:"1603609200" entry:"1602681280" modified:"1602681280" status:"pending" uuid:"2efb5813-a02d-47a2-a7f5-ae56d078dae0"]
+---
+time 1602682637
+new [description:"sondage adopt a skill 23 octobre" entry:"1602682637" modified:"1602682637" priority:"M" status:"pending" uuid:"303053bf-8668-4918-8072-8fca4ed99f23"]
+---
+time 1602682735
+new [description:"inscription examen 3e" entry:"1602682735" modified:"1602682735" status:"pending" uuid:"b550e30c-8fdc-4202-ab6a-545532581a0a"]
+---
+time 1602682785
+old [description:"inscription examen 3e" entry:"1602682735" modified:"1602682735" status:"pending" uuid:"b550e30c-8fdc-4202-ab6a-545532581a0a"]
+new [description:"inscription examen 3e" entry:"1602682735" modified:"1602682785" priority:"H" status:"pending" uuid:"b550e30c-8fdc-4202-ab6a-545532581a0a"]
+---
+time 1602682829
+new [description:"TP2 Imagerie numérique" due:"1603346400" entry:"1602682829" modified:"1602682829" status:"pending" uuid:"fc3dd6bd-2089-4f82-a61f-01754929ca77"]
+---
+time 1602683093
+new [description:"tp3 IA" due:"1603346400" entry:"1602683093" modified:"1602683093" status:"pending" uuid:"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"]
+---
+time 1602683470
+new [description:"TP2 parallelisme" due:"1603868400" entry:"1602683470" modified:"1602683470" status:"pending" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
+---
+time 1602683574
+new [description:"tp4 génie logiciel" due:"1603087200" entry:"1602683574" modified:"1602683574" status:"pending" uuid:"92bc30c3-4d93-4776-9c7b-d3a42f653d0d"]
+---
+time 1602683658
+old [description:"TP3 génie logiciel" due:"1602223200" entry:"1601840033" modified:"1601840033" status:"pending" uuid:"ff9ac97e-160a-4237-bd32-e52887694333"]
+new [description:"TP3 génie logiciel" due:"1602223200" end:"1602683658" entry:"1601840033" modified:"1602683658" status:"completed" uuid:"ff9ac97e-160a-4237-bd32-e52887694333"]
+---
+time 1602683710
+new [description:"TP2 IA" due:"1602828000" entry:"1602683710" modified:"1602683710" status:"pending" uuid:"344d1b02-5917-439b-9e5f-1fd93cbb3e7e"]
+---
+time 1602688191
+new [description:"laver bento" due:"1602741600" entry:"1602688191" modified:"1602688191" status:"pending" uuid:"d9795b79-7d90-4249-9ee7-3129092bf086"]
+---
+time 1602689367
+new [description:"backup satom" entry:"1602689367" modified:"1602689367" priority:"H" status:"pending" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
+---
+time 1602689384
+old [description:"noter nouvelles dates tp" entry:"1602231187" modified:"1602231187" status:"pending" uuid:"259bc184-b666-47a4-a9f9-6e76331ab54b"]
+new [description:"noter nouvelles dates tp" end:"1602689384" entry:"1602231187" modified:"1602689384" status:"completed" uuid:"259bc184-b666-47a4-a9f9-6e76331ab54b"]
+---
+time 1602689451
+old [description:"mettre git comme backup dans une branche spécifique" entry:"1599556893" modified:"1599556893" project:"satom" status:"pending" uuid:"d8cbd5b0-957b-462f-af6b-780691280385"]
+new [description:"mettre git comme backup dans une branche spécifique" end:"1602689451" entry:"1599556893" modified:"1602689451" project:"satom" status:"completed" uuid:"d8cbd5b0-957b-462f-af6b-780691280385"]
+---
+time 1602689451
+old [description:"companies, investements founded date" entry:"1599660578" modified:"1599660578" project:"satom" status:"pending" uuid:"f4d8b1bd-7dcc-4b5e-b83d-b584cc9389e6"]
+new [description:"companies, investements founded date" end:"1602689451" entry:"1599660578" modified:"1602689451" project:"satom" status:"completed" uuid:"f4d8b1bd-7dcc-4b5e-b83d-b584cc9389e6"]
+---
+time 1602689465
+old [description:"mettre à jour mes note" entry:"1601140131" modified:"1601140131" status:"pending" uuid:"fafcd3f4-4c58-422c-8e79-0bca17740a8e"]
+new [description:"mettre à jour mes note" end:"1602689465" entry:"1601140131" modified:"1602689465" status:"completed" uuid:"fafcd3f4-4c58-422c-8e79-0bca17740a8e"]
+---
+time 1602689512
+new [description:"tache répétitive devoir maman Lady" entry:"1602689512" modified:"1602689512" priority:"M" status:"pending" uuid:"a24b6f2b-2f75-425c-a27d-bf577857d086"]
+---
+time 1602689535
+new [description:"prévenir maman Lady pas cours jeudi" entry:"1602689535" modified:"1602689535" priority:"H" status:"pending" uuid:"5308bf3f-e2b7-4db5-beb6-a41fcebb15cd"]
+---
+time 1602689550
+old [description:"géopoointCompanie CountrycodeCityInvestors Neo4j Splunk" entry:"1601485313" modified:"1601485313" status:"pending" uuid:"21823c55-fded-4f92-897d-d65a26de94f2"]
+new [description:"géopoointCompanie CountrycodeCityInvestors Neo4j Splunk" end:"1602689550" entry:"1601485313" modified:"1602689550" status:"completed" uuid:"21823c55-fded-4f92-897d-d65a26de94f2"]
+---
+time 1602689586
+old [description:"devoir (simple) maman Lady" entry:"1601327663" modified:"1601327663" status:"pending" uuid:"23622f0c-ae94-4a60-8dda-36ef435a9d74"]
+new [description:"devoir (simple) maman Lady" end:"1602689586" entry:"1601327663" modified:"1602689586" status:"completed" uuid:"23622f0c-ae94-4a60-8dda-36ef435a9d74"]
+---
+time 1602689586
+old [description:"faire le tableau sprint backlog" entry:"1601997255" modified:"1601997255" status:"pending" uuid:"7a8d6cff-9932-4ea3-b507-cc665b808dd5"]
+new [description:"faire le tableau sprint backlog" end:"1602689586" entry:"1601997255" modified:"1602689586" status:"completed" uuid:"7a8d6cff-9932-4ea3-b507-cc665b808dd5"]
+---
