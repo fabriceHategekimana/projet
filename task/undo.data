@@ -32313,3 +32313,7 @@ time 1602689586
 old [description:"faire le tableau sprint backlog" entry:"1601997255" modified:"1601997255" status:"pending" uuid:"7a8d6cff-9932-4ea3-b507-cc665b808dd5"]
 new [description:"faire le tableau sprint backlog" end:"1602689586" entry:"1601997255" modified:"1602689586" status:"completed" uuid:"7a8d6cff-9932-4ea3-b507-cc665b808dd5"]
 ---
+time 1602710436
+old [description:"laver bento" due:"1602741600" entry:"1602688191" modified:"1602688191" status:"pending" uuid:"d9795b79-7d90-4249-9ee7-3129092bf086"]
+new [description:"laver bento" due:"1602741600" end:"1602710436" entry:"1602688191" modified:"1602710436" status:"completed" uuid:"d9795b79-7d90-4249-9ee7-3129092bf086"]
+---
