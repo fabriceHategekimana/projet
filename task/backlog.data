@@ -9020,3 +9020,6 @@
 {"description":"cours de parallélisme à la place de la séance de tp","due":"20201107T070000Z","entry":"20201015T100335Z","modified":"20201015T100335Z","status":"pending","uuid":"5733e589-902b-4b11-aa1e-063a0b20ffb6"}
 {"description":"rendre veste de l'église","entry":"20201015T102134Z","modified":"20201015T102134Z","priority":"H","status":"pending","uuid":"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"}
 {"description":"faire abonnement tpg lundi 18","entry":"20201015T125415Z","modified":"20201015T125415Z","status":"pending","uuid":"f6bd76a4-ba74-4e11-8dca-8fa25f6b3a79"}
+{"description":"prévenir maman Lady pas cours jeudi","end":"20201015T132748Z","entry":"20201014T153215Z","modified":"20201015T132748Z","priority":"H","status":"completed","uuid":"5308bf3f-e2b7-4db5-beb6-a41fcebb15cd"}
+{"description":"TP2 IA","due":"20201016T060000Z","end":"20201015T172045Z","entry":"20201014T135510Z","modified":"20201015T172045Z","status":"completed","uuid":"344d1b02-5917-439b-9e5f-1fd93cbb3e7e"}
+{"description":"dactylographier les notes STB","entry":"20201015T173138Z","modified":"20201015T173138Z","status":"pending","uuid":"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"}

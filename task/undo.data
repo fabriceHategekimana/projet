@@ -32333,3 +32333,14 @@ new [description:"rendre veste de l'église" entry:"1602757294" modified:"160275
 time 1602766455
 new [description:"faire abonnement tpg lundi 18" entry:"1602766455" modified:"1602766455" status:"pending" uuid:"f6bd76a4-ba74-4e11-8dca-8fa25f6b3a79"]
 ---
+time 1602768468
+old [description:"prévenir maman Lady pas cours jeudi" entry:"1602689535" modified:"1602689535" priority:"H" status:"pending" uuid:"5308bf3f-e2b7-4db5-beb6-a41fcebb15cd"]
+new [description:"prévenir maman Lady pas cours jeudi" end:"1602768468" entry:"1602689535" modified:"1602768468" priority:"H" status:"completed" uuid:"5308bf3f-e2b7-4db5-beb6-a41fcebb15cd"]
+---
+time 1602782445
+old [description:"TP2 IA" due:"1602828000" entry:"1602683710" modified:"1602683710" status:"pending" uuid:"344d1b02-5917-439b-9e5f-1fd93cbb3e7e"]
+new [description:"TP2 IA" due:"1602828000" end:"1602782445" entry:"1602683710" modified:"1602782445" status:"completed" uuid:"344d1b02-5917-439b-9e5f-1fd93cbb3e7e"]
+---
+time 1602783098
+new [description:"dactylographier les notes STB" entry:"1602783098" modified:"1602783098" status:"pending" uuid:"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"]
+---
