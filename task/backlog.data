@@ -9015,3 +9015,7 @@
 {"description":"devoir (simple) maman Lady","end":"20201014T153306Z","entry":"20200928T211423Z","modified":"20201014T153306Z","status":"completed","uuid":"23622f0c-ae94-4a60-8dda-36ef435a9d74"}
 {"description":"faire le tableau sprint backlog","end":"20201014T153306Z","entry":"20201006T151415Z","modified":"20201014T153306Z","status":"completed","uuid":"7a8d6cff-9932-4ea3-b507-cc665b808dd5"}
 {"description":"laver bento","due":"20201015T060000Z","end":"20201014T212036Z","entry":"20201014T150951Z","modified":"20201014T212036Z","status":"completed","uuid":"d9795b79-7d90-4249-9ee7-3129092bf086"}
+{"description":"inscription examen 3e","end":"20201015T075404Z","entry":"20201014T133855Z","modified":"20201015T075404Z","priority":"H","status":"completed","uuid":"b550e30c-8fdc-4202-ab6a-545532581a0a"}
+{"description":"pas cours de parallélisme","due":"20201022T060000Z","entry":"20201015T100249Z","modified":"20201015T100249Z","status":"pending","uuid":"014465ff-82cf-4cfe-9a6f-fce8003e0657"}
+{"description":"cours de parallélisme à la place de la séance de tp","due":"20201107T070000Z","entry":"20201015T100335Z","modified":"20201015T100335Z","status":"pending","uuid":"5733e589-902b-4b11-aa1e-063a0b20ffb6"}
+{"description":"rendre veste de l'église","entry":"20201015T102134Z","modified":"20201015T102134Z","priority":"H","status":"pending","uuid":"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"}

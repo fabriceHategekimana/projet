@@ -32317,3 +32317,16 @@ time 1602710436
 old [description:"laver bento" due:"1602741600" entry:"1602688191" modified:"1602688191" status:"pending" uuid:"d9795b79-7d90-4249-9ee7-3129092bf086"]
 new [description:"laver bento" due:"1602741600" end:"1602710436" entry:"1602688191" modified:"1602710436" status:"completed" uuid:"d9795b79-7d90-4249-9ee7-3129092bf086"]
 ---
+time 1602748444
+old [description:"inscription examen 3e" entry:"1602682735" modified:"1602682785" priority:"H" status:"pending" uuid:"b550e30c-8fdc-4202-ab6a-545532581a0a"]
+new [description:"inscription examen 3e" end:"1602748444" entry:"1602682735" modified:"1602748444" priority:"H" status:"completed" uuid:"b550e30c-8fdc-4202-ab6a-545532581a0a"]
+---
+time 1602756169
+new [description:"pas cours de parallélisme" due:"1603346400" entry:"1602756169" modified:"1602756169" status:"pending" uuid:"014465ff-82cf-4cfe-9a6f-fce8003e0657"]
+---
+time 1602756215
+new [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" entry:"1602756215" modified:"1602756215" status:"pending" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
+---
+time 1602757294
+new [description:"rendre veste de l'église" entry:"1602757294" modified:"1602757294" priority:"H" status:"pending" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
+---
