@@ -32344,3 +32344,6 @@ new [description:"TP2 IA" due:"1602828000" end:"1602782445" entry:"1602683710" m
 time 1602783098
 new [description:"dactylographier les notes STB" entry:"1602783098" modified:"1602783098" status:"pending" uuid:"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"]
 ---
+time 1602848872
+new [description:"faire un F qui concèrve l'instruction de compilation ou interprétation" entry:"1602848872" modified:"1602848872" status:"pending" uuid:"9a35f4ef-f1ab-4190-8fdb-e2b965bb44bf"]
+---

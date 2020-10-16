@@ -9023,3 +9023,4 @@
 {"description":"prévenir maman Lady pas cours jeudi","end":"20201015T132748Z","entry":"20201014T153215Z","modified":"20201015T132748Z","priority":"H","status":"completed","uuid":"5308bf3f-e2b7-4db5-beb6-a41fcebb15cd"}
 {"description":"TP2 IA","due":"20201016T060000Z","end":"20201015T172045Z","entry":"20201014T135510Z","modified":"20201015T172045Z","status":"completed","uuid":"344d1b02-5917-439b-9e5f-1fd93cbb3e7e"}
 {"description":"dactylographier les notes STB","entry":"20201015T173138Z","modified":"20201015T173138Z","status":"pending","uuid":"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"}
+{"description":"faire un F qui concèrve l'instruction de compilation ou interprétation","entry":"20201016T114752Z","modified":"20201016T114752Z","status":"pending","uuid":"9a35f4ef-f1ab-4190-8fdb-e2b965bb44bf"}
