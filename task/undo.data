@@ -32347,3 +32347,58 @@ new [description:"dactylographier les notes STB" entry:"1602783098" modified:"16
 time 1602848872
 new [description:"faire un F qui concèrve l'instruction de compilation ou interprétation" entry:"1602848872" modified:"1602848872" status:"pending" uuid:"9a35f4ef-f1ab-4190-8fdb-e2b965bb44bf"]
 ---
+time 1602927180
+new [description:"Inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927180" priority:"H" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+---
+time 1602927669
+old [description:"Inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927180" priority:"H" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+new [description:"sheduled:monday" due:"1603087200" entry:"1602927180" modified:"1602927669" priority:"H" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+---
+time 1602927690
+old [description:"sheduled:monday" due:"1603087200" entry:"1602927180" modified:"1602927669" priority:"H" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+new [description:"inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927690" priority:"H" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+---
+time 1602927710
+old [description:"inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927690" priority:"H" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+new [description:"inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927710" priority:"H" scheduled:"1603058400" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+---
+time 1602927859
+old [description:"inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927710" priority:"H" scheduled:"1603058400" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+new [description:"inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927859" priority:"H" scheduled:"1603058400" status:"waiting" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc" wait:"1603058400"]
+---
+time 1602928466
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" modified:"1602928466" status:"pending" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1602928519
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" modified:"1602928466" status:"pending" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" modified:"1602928519" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1602928522
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928522" imask:"0" modified:"1602928519" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
+---
+time 1602928522
+new [description:"Devoir maman Lady" due:"1603519200" entry:"1602928522" imask:"1" modified:"1602928519" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b1391e9d-1ee7-4afb-99cf-a64b68fc10e7"]
+---
+time 1602928522
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" modified:"1602928519" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"--" modified:"1602928522" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1602928541
+old [description:"tache répétitive devoir maman Lady" entry:"1602689512" modified:"1602689512" priority:"M" status:"pending" uuid:"a24b6f2b-2f75-425c-a27d-bf577857d086"]
+new [description:"tache répétitive devoir maman Lady" end:"1602928541" entry:"1602689512" modified:"1602928541" priority:"M" status:"completed" uuid:"a24b6f2b-2f75-425c-a27d-bf577857d086"]
+---
+time 1602936993
+old [description:"liste des chants pour Elmy" entry:"1602680181" modified:"1602680181" priority:"M" status:"pending" uuid:"28af3099-7155-4dc0-94fb-fd409aab7cc1"]
+new [description:"liste des chants pour Elmy" end:"1602936993" entry:"1602680181" modified:"1602936993" priority:"M" status:"completed" uuid:"28af3099-7155-4dc0-94fb-fd409aab7cc1"]
+---
+time 1602936993
+old [description:"prévenir papa Roger pour le nouveau pc" entry:"1602680210" modified:"1602680210" priority:"H" status:"pending" uuid:"47358c8b-886d-4ba6-b740-59f49a8dbef6"]
+new [description:"prévenir papa Roger pour le nouveau pc" end:"1602936993" entry:"1602680210" modified:"1602936993" priority:"H" status:"completed" uuid:"47358c8b-886d-4ba6-b740-59f49a8dbef6"]
+---
+time 1602938959
+old [description:"sondage adopt a skill 23 octobre" entry:"1602682637" modified:"1602682637" priority:"M" status:"pending" uuid:"303053bf-8668-4918-8072-8fca4ed99f23"]
+new [description:"sondage adopt a skill 23 octobre" end:"1602938959" entry:"1602682637" modified:"1602938959" priority:"M" status:"completed" uuid:"303053bf-8668-4918-8072-8fca4ed99f23"]
+---
+time 1602938995
+new [description:"questionnaire adopt a skill" due:"1603432800" entry:"1602938995" modified:"1602938995" status:"pending" uuid:"1071446e-f6b0-4ccd-904c-a1d654a76b1c"]
+---
