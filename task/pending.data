@@ -14,7 +14,6 @@
 [description:"TP2 Imagerie numérique" due:"1603346400" entry:"1602682829" modified:"1602682829" status:"pending" uuid:"fc3dd6bd-2089-4f82-a61f-01754929ca77"]
 [description:"tp3 IA" due:"1603346400" entry:"1602683093" modified:"1602683093" status:"pending" uuid:"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"]
 [description:"TP2 parallelisme" due:"1603868400" entry:"1602683470" modified:"1602683470" status:"pending" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
-[description:"tp4 génie logiciel" due:"1603087200" entry:"1602683574" modified:"1602683574" status:"pending" uuid:"92bc30c3-4d93-4776-9c7b-d3a42f653d0d"]
 [description:"backup satom" entry:"1602689367" modified:"1602689367" priority:"H" status:"pending" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
 [description:"pas cours de parallélisme" due:"1603346400" entry:"1602756169" modified:"1602756169" status:"pending" uuid:"014465ff-82cf-4cfe-9a6f-fce8003e0657"]
 [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" entry:"1602756215" modified:"1602756215" status:"pending" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]

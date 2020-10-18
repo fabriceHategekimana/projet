@@ -32402,3 +32402,7 @@ new [description:"sondage adopt a skill 23 octobre" end:"1602938959" entry:"1602
 time 1602938995
 new [description:"questionnaire adopt a skill" due:"1603432800" entry:"1602938995" modified:"1602938995" status:"pending" uuid:"1071446e-f6b0-4ccd-904c-a1d654a76b1c"]
 ---
+time 1602968255
+old [description:"tp4 génie logiciel" due:"1603087200" entry:"1602683574" modified:"1602683574" status:"pending" uuid:"92bc30c3-4d93-4776-9c7b-d3a42f653d0d"]
+new [description:"tp4 génie logiciel" due:"1603087200" end:"1602968255" entry:"1602683574" modified:"1602968255" status:"completed" uuid:"92bc30c3-4d93-4776-9c7b-d3a42f653d0d"]
+---

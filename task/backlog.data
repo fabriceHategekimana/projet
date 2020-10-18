@@ -9039,3 +9039,4 @@
 {"description":"prévenir papa Roger pour le nouveau pc","end":"20201017T121633Z","entry":"20201014T125650Z","modified":"20201017T121633Z","priority":"H","status":"completed","uuid":"47358c8b-886d-4ba6-b740-59f49a8dbef6"}
 {"description":"sondage adopt a skill 23 octobre","end":"20201017T124919Z","entry":"20201014T133717Z","modified":"20201017T124919Z","priority":"M","status":"completed","uuid":"303053bf-8668-4918-8072-8fca4ed99f23"}
 {"description":"questionnaire adopt a skill","due":"20201023T060000Z","entry":"20201017T124955Z","modified":"20201017T124955Z","status":"pending","uuid":"1071446e-f6b0-4ccd-904c-a1d654a76b1c"}
+{"description":"tp4 génie logiciel","due":"20201019T060000Z","end":"20201017T205735Z","entry":"20201014T135254Z","modified":"20201017T205735Z","status":"completed","uuid":"92bc30c3-4d93-4776-9c7b-d3a42f653d0d"}
