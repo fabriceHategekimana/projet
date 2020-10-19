@@ -16,16 +16,17 @@ Pour le temps, il suffit d'utiliser un planning. Developper une app qui retourne
 pour les activités, il suffit d'utiliser un planning et un gestionnaire des tâches. Le but est de noter toutes les tâches disponibles et de lees dater si cela est possible.
 
 Mes activité sont réglés en plusieurs groupes:
- * personnelle
- * université
- * église
- * travail
- * particulier
+* personnelle
+* université
+* église
+* travail
+* particulier
 
 ## Motivation
 Pour ma motivation. Je dois trouver un moyen de mesure pour me permettre de mener à bien mon travail.
 Je sais que ma motivation se base sur les émotions et a certainement une influence sociale (et se base aussi sur mes valeurs). Je dois réserver un petit temps pour ça.
-=======
+Je l'ai compris en regardant ma mère et certaines femmes, mais on peut trouver une motivation assez puissante dans les émotions négatives. Bien sûr, il faut en détourner leur usages et chercher à sortir les fleurs du mal.
+
 établir un checking de mes ressources
 
 temps
@@ -33,4 +34,11 @@ motivation
 pensées
 argent
 espace
->>>>>>> Stashed changes
+
+## Révision plus efficace
+- C'est quoi
+- Ça sert à quoi
+- Comment
+- Avec quoi
+- Pourquoi
+

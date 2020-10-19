@@ -32417,3 +32417,26 @@ time 1603058822
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928522" imask:"0" modified:"1602928519" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
 new [description:"Devoir maman Lady" due:"1602914400" end:"1603058822" entry:"1602928522" imask:"0" modified:"1603058822" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
 ---
+time 1603135770
+old [description:"inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927859" priority:"H" scheduled:"1603058400" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+new [description:"inscription aux cours" due:"1603087200" end:"1603135770" entry:"1602927180" modified:"1603135770" priority:"H" scheduled:"1603058400" status:"completed" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+---
+time 1603142408
+new [description:"ajouter article" entry:"1603142408" modified:"1603142408" project:"satom" status:"pending" uuid:"93064bad-9bb0-4308-8b42-396471b7d95d"]
+---
+time 1603142512
+new [description:"créer un custom schema" entry:"1603142512" modified:"1603142512" project:"satom" status:"pending" uuid:"05d225cf-d18b-42d2-8d42-b72108f73db9"]
+---
+time 1603142640
+new [description:"fonction de recherche rapide" entry:"1603142640" modified:"1603142640" project:"satom" status:"pending" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+---
+time 1603142679
+new [description:"régler le problème de nombre investors" entry:"1603142679" modified:"1603142679" project:"satom" status:"pending" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+---
+time 1603149431
+new [description:"programme Siloé" due:"1603749600" entry:"1603149431" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+---
+time 1603149431
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-" modified:"1602679436" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++--" modified:"1603149431" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
