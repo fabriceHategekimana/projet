@@ -97,7 +97,7 @@ $user_name= "Alice";
 //Good: the same as before
 $userName= "Alice";
 ```
-  
+
 ### 2.Code like you think/speak  
 There are currently several programming languages. Each one has his own specificity for a given work.  
 For instance, php and javascript have their own way of extracting string:
@@ -108,11 +108,11 @@ substr("abcde", 1, 3);
 ```javascript  
 //geting "bcd" from abcde in javascript
 "abcde".substring(1, 3);
-```  
+```
 There are many other difference between two language and there is even built-in function or option that doesn't exit to certain language.  
 The trick is to adapt to the code and do it on a case-by-case basis. In reality that must be the code who need to adapt to the programmer.  
 It has to align himself to his way of thinking. Why? To have a comprehensible code that can be written to any langage, it must have his own function, modul or data structure that are independent to the language used. It is better to avoid using explicitely buit-in function or methode by encapsulating them in your code architecture.
-  
+
 One of the best way to built a coherent and readable code is to speak/think first and write after that. We just have to think of what we have and what we need. For instance, we want a function that **substract** the 3 first letter of a string an **print** the result we could write in a piece of paper:  
 ```    
 function print_the_first_three_letters(String string)
