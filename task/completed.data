@@ -1,3 +1,6 @@
+[description:"pas cours de parallélisme" due:"1603346400" end:"1603399337" entry:"1602756169" modified:"1603399337" status:"completed" uuid:"014465ff-82cf-4cfe-9a6f-fce8003e0657"]
+[description:"TP2 Imagerie numérique" due:"1603346400" end:"1603399329" entry:"1602682829" modified:"1603399329" status:"completed" uuid:"fc3dd6bd-2089-4f82-a61f-01754929ca77"]
+[description:"tp3 IA" due:"1603346400" end:"1603399323" entry:"1602683093" modified:"1603399323" status:"completed" uuid:"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"]
 [description:"inscription aux cours" due:"1603087200" end:"1603135770" entry:"1602927180" modified:"1603135770" priority:"H" scheduled:"1603058400" status:"completed" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
 [description:"Devoir maman Lady" due:"1602914400" end:"1603058822" entry:"1602928522" imask:"0" modified:"1603058822" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
 [description:"tp4 génie logiciel" due:"1603087200" end:"1602968255" entry:"1602683574" modified:"1602968255" status:"completed" uuid:"92bc30c3-4d93-4776-9c7b-d3a42f653d0d"]

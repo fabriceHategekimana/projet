@@ -32443,3 +32443,15 @@ new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++
 time 1603291356
 new [description:"csaw" entry:"1603291356" modified:"1603291356" status:"pending" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
 ---
+time 1603399323
+old [description:"tp3 IA" due:"1603346400" entry:"1602683093" modified:"1602683093" status:"pending" uuid:"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"]
+new [description:"tp3 IA" due:"1603346400" end:"1603399323" entry:"1602683093" modified:"1603399323" status:"completed" uuid:"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"]
+---
+time 1603399329
+old [description:"TP2 Imagerie numérique" due:"1603346400" entry:"1602682829" modified:"1602682829" status:"pending" uuid:"fc3dd6bd-2089-4f82-a61f-01754929ca77"]
+new [description:"TP2 Imagerie numérique" due:"1603346400" end:"1603399329" entry:"1602682829" modified:"1603399329" status:"completed" uuid:"fc3dd6bd-2089-4f82-a61f-01754929ca77"]
+---
+time 1603399337
+old [description:"pas cours de parallélisme" due:"1603346400" entry:"1602756169" modified:"1602756169" status:"pending" uuid:"014465ff-82cf-4cfe-9a6f-fce8003e0657"]
+new [description:"pas cours de parallélisme" due:"1603346400" end:"1603399337" entry:"1602756169" modified:"1603399337" status:"completed" uuid:"014465ff-82cf-4cfe-9a6f-fce8003e0657"]
+---
