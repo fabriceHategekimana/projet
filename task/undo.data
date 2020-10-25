@@ -32482,3 +32482,7 @@ time 1603522997
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++" modified:"1603458312" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++-" modified:"1603522997" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 ---
+time 1603547767
+old [description:"créer un custom schema" entry:"1603142512" modified:"1603142512" project:"satom" status:"pending" uuid:"05d225cf-d18b-42d2-8d42-b72108f73db9"]
+new [description:"créer un custom schema" end:"1603547767" entry:"1603142512" modified:"1603547767" project:"satom" status:"completed" uuid:"05d225cf-d18b-42d2-8d42-b72108f73db9"]
+---
