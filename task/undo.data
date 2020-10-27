@@ -32417,3 +32417,13 @@ time 1603058822
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928522" imask:"0" modified:"1602928519" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
 new [description:"Devoir maman Lady" due:"1602914400" end:"1603058822" entry:"1602928522" imask:"0" modified:"1603058822" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
 ---
+time 1603193761
+new [description:"programme Siloé" due:"1603749600" entry:"1603193761" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"15d46c01-7776-487c-bd2f-6e27a6c116af"]
+---
+time 1603193761
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-" modified:"1602679436" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++--" modified:"1603193761" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1603193915
+new [description:"definition luminence" entry:"1603193915" modified:"1603193915" status:"pending" uuid:"27333224-6fe8-4e99-ae34-d0aa09362414"]
+---
