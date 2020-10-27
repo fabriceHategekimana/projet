@@ -29,7 +29,8 @@ Quelles sont les points à respecter pour que les venus trouvent un terrain agr�
 2. Prise de possession du lieu de culte (prière de combat)
 3. Prier pour les intervenants
 4. Prier pour la parole (son efficacité et sa permanence)
-5. Sceller le culte (on déclare la victoire, la délivrance, le culte d'aujourd'hui est différent)
+5. Proclamation, sceller le culte (on déclare la victoire, la délivrance, le culte d'aujourd'hui est différent) proclamer ses miracles et le sang du Christ
+6. prière de clôture
 
 
 Modération
