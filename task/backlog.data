@@ -9065,3 +9065,4 @@
 {"description":"Tp2 compilateur et interprète","due":"20201025T070000Z","end":"20201026T104353Z","entry":"20201014T131440Z","modified":"20201026T104353Z","status":"completed","uuid":"2efb5813-a02d-47a2-a7f5-ae56d078dae0"}
 {"description":"programme Siloé","due":"20201102T220000Z","entry":"20201026T225813Z","imask":4,"modified":"20201023T130836Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"pending","until":"20201231T230000Z","uuid":"a46801b0-4d29-44fd-9b71-94cd1d9ed390"}
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+++--","modified":"20201026T225813Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"backup satom","end":"20201027T123340Z","entry":"20201014T152927Z","modified":"20201027T123340Z","priority":"H","status":"completed","uuid":"33df809d-536e-4cdd-a2a7-168db3bb36d7"}

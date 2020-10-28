@@ -10,7 +10,6 @@
 [description:"plateforme maman Lady" entry:"1602680275" modified:"1602680275" priority:"M" status:"pending" uuid:"897d14cb-3633-4b48-aa87-32b8580acba5"]
 [description:"site MEP" entry:"1602680816" modified:"1602680816" priority:"L" status:"pending" uuid:"db9c04c1-9ddb-43bf-9b13-9814dcc18377"]
 [description:"TP2 parallelisme" due:"1603868400" entry:"1602683470" modified:"1602683470" status:"pending" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
-[description:"backup satom" entry:"1602689367" modified:"1602689367" priority:"H" status:"pending" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
 [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" entry:"1602756215" modified:"1602756215" status:"pending" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
 [description:"rendre veste de l'église" entry:"1602757294" modified:"1602757294" priority:"H" status:"pending" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
 [description:"faire abonnement tpg lundi 18" entry:"1602766455" modified:"1602766455" status:"pending" uuid:"f6bd76a4-ba74-4e11-8dca-8fa25f6b3a79"]

@@ -32497,3 +32497,7 @@ time 1603753093
 old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++-" modified:"1603458516" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
 new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++--" modified:"1603753093" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
 ---
+time 1603802020
+old [description:"backup satom" entry:"1602689367" modified:"1602689367" priority:"H" status:"pending" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
+new [description:"backup satom" end:"1603802020" entry:"1602689367" modified:"1603802020" priority:"H" status:"completed" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
+---
