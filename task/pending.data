@@ -9,7 +9,6 @@
 [description:"travail stb" entry:"1602088525" modified:"1602680017" priority:"H" status:"pending" uuid:"e47133d8-8580-416e-8fff-06f0e5d1e755"]
 [description:"plateforme maman Lady" entry:"1602680275" modified:"1602680275" priority:"M" status:"pending" uuid:"897d14cb-3633-4b48-aa87-32b8580acba5"]
 [description:"site MEP" entry:"1602680816" modified:"1602680816" priority:"L" status:"pending" uuid:"db9c04c1-9ddb-43bf-9b13-9814dcc18377"]
-[description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" entry:"1602756215" modified:"1602756215" status:"pending" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
 [description:"faire abonnement tpg lundi 18" entry:"1602766455" modified:"1602766455" status:"pending" uuid:"f6bd76a4-ba74-4e11-8dca-8fa25f6b3a79"]
 [description:"dactylographier les notes STB" entry:"1602783098" modified:"1602783098" status:"pending" uuid:"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"]
 [description:"faire un F qui concèrve l'instruction de compilation ou interprétation" entry:"1602848872" modified:"1602848872" status:"pending" uuid:"9a35f4ef-f1ab-4190-8fdb-e2b965bb44bf"]
@@ -22,3 +21,5 @@
 [description:"csaw" entry:"1603291356" modified:"1603291356" status:"pending" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
 [description:"Devoir maman Lady" due:"1604124000" entry:"1603522997" imask:"2" modified:"1603458312" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"44317f72-2c5d-4231-a6c3-5b7154ad7098"]
 [description:"programme Siloé" due:"1604354400" entry:"1603753093" imask:"4" modified:"1603458516" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+[description:"TD6 GL" due:"1604300400" entry:"1603880701" modified:"1603880701" status:"pending" uuid:"72a288f3-6568-4eb1-a06a-cbc2baa3416c"]
+[description:"TP3 IN" due:"1604559600" entry:"1603881208" modified:"1603881208" status:"pending" uuid:"3e242e2c-df7b-49c5-98e5-77d414c32d3b"]

@@ -9068,3 +9068,6 @@
 {"description":"backup satom","end":"20201027T123340Z","entry":"20201014T152927Z","modified":"20201027T123340Z","priority":"H","status":"completed","uuid":"33df809d-536e-4cdd-a2a7-168db3bb36d7"}
 {"description":"TP2 parallelisme","due":"20201028T070000Z","end":"20201028T094331Z","entry":"20201014T135110Z","modified":"20201028T094331Z","status":"completed","uuid":"0c87bb6d-0649-4aed-be98-55da11ba0c29"}
 {"description":"rendre veste de l'église","end":"20201028T094344Z","entry":"20201015T102134Z","modified":"20201028T094344Z","priority":"H","status":"completed","uuid":"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"}
+{"description":"TD6 GL","due":"20201102T070000Z","entry":"20201028T102501Z","modified":"20201028T102501Z","status":"pending","uuid":"72a288f3-6568-4eb1-a06a-cbc2baa3416c"}
+{"description":"TP3 IN","due":"20201105T070000Z","entry":"20201028T103328Z","modified":"20201028T103328Z","status":"pending","uuid":"3e242e2c-df7b-49c5-98e5-77d414c32d3b"}
+{"description":"cours de parallélisme à la place de la séance de tp","due":"20201107T070000Z","end":"20201028T104047Z","entry":"20201015T100335Z","modified":"20201028T104047Z","status":"completed","uuid":"5733e589-902b-4b11-aa1e-063a0b20ffb6"}

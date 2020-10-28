@@ -14,6 +14,8 @@ wiki: FORCE
 	firefox http://tecfalabs.unige.ch/csaw/dw/doku.php?id=c-saw:c-saw_external_development &
 note: FORCE
 	vim note/note.md
+pdf: FORCE
+	zathura note/csaw_documentation.pdf &
 FORCE:
 
 

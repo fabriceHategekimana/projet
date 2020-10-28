@@ -32509,3 +32509,13 @@ time 1603878224
 old [description:"rendre veste de l'église" entry:"1602757294" modified:"1602757294" priority:"H" status:"pending" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
 new [description:"rendre veste de l'église" end:"1603878224" entry:"1602757294" modified:"1603878224" priority:"H" status:"completed" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
 ---
+time 1603880701
+new [description:"TD6 GL" due:"1604300400" entry:"1603880701" modified:"1603880701" status:"pending" uuid:"72a288f3-6568-4eb1-a06a-cbc2baa3416c"]
+---
+time 1603881208
+new [description:"TP3 IN" due:"1604559600" entry:"1603881208" modified:"1603881208" status:"pending" uuid:"3e242e2c-df7b-49c5-98e5-77d414c32d3b"]
+---
+time 1603881647
+old [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" entry:"1602756215" modified:"1602756215" status:"pending" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
+new [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" end:"1603881647" entry:"1602756215" modified:"1603881647" status:"completed" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
+---

@@ -1,8 +1,14 @@
+Économie
+==========
+[economies](economies)
+
 Organisation
 ============
 
 Chercher à faire les choses rapidement (car j'ai appris à les faire correctement)
 Se projeter vers l'avenir assez souvent.
+Pour faire une chose rapidement, il faut avoir assez de recule, sinon on se casse les dents.
+Toujours trouver la solution la plus rapide et faire des ajustement après.
 
 Organisation:
 Représenter mon quotidien comme un système dont l'état est:
