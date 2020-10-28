@@ -32501,3 +32501,11 @@ time 1603802020
 old [description:"backup satom" entry:"1602689367" modified:"1602689367" priority:"H" status:"pending" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
 new [description:"backup satom" end:"1603802020" entry:"1602689367" modified:"1603802020" priority:"H" status:"completed" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
 ---
+time 1603878211
+old [description:"TP2 parallelisme" due:"1603868400" entry:"1602683470" modified:"1602683470" status:"pending" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
+new [description:"TP2 parallelisme" due:"1603868400" end:"1603878211" entry:"1602683470" modified:"1603878211" status:"completed" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
+---
+time 1603878224
+old [description:"rendre veste de l'église" entry:"1602757294" modified:"1602757294" priority:"H" status:"pending" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
+new [description:"rendre veste de l'église" end:"1603878224" entry:"1602757294" modified:"1603878224" priority:"H" status:"completed" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
+---

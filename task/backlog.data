@@ -9066,3 +9066,5 @@
 {"description":"programme Siloé","due":"20201102T220000Z","entry":"20201026T225813Z","imask":4,"modified":"20201023T130836Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"pending","until":"20201231T230000Z","uuid":"a46801b0-4d29-44fd-9b71-94cd1d9ed390"}
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+++--","modified":"20201026T225813Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
 {"description":"backup satom","end":"20201027T123340Z","entry":"20201014T152927Z","modified":"20201027T123340Z","priority":"H","status":"completed","uuid":"33df809d-536e-4cdd-a2a7-168db3bb36d7"}
+{"description":"TP2 parallelisme","due":"20201028T070000Z","end":"20201028T094331Z","entry":"20201014T135110Z","modified":"20201028T094331Z","status":"completed","uuid":"0c87bb6d-0649-4aed-be98-55da11ba0c29"}
+{"description":"rendre veste de l'église","end":"20201028T094344Z","entry":"20201015T102134Z","modified":"20201028T094344Z","priority":"H","status":"completed","uuid":"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"}

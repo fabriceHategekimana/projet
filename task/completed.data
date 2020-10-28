@@ -1,3 +1,5 @@
+[description:"rendre veste de l'église" end:"1603878224" entry:"1602757294" modified:"1603878224" priority:"H" status:"completed" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
+[description:"TP2 parallelisme" due:"1603868400" end:"1603878211" entry:"1602683470" modified:"1603878211" status:"completed" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
 [description:"backup satom" end:"1603802020" entry:"1602689367" modified:"1603802020" priority:"H" status:"completed" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
 [description:"Tp2 compilateur et interprète" due:"1603609200" end:"1603709033" entry:"1602681280" modified:"1603709033" status:"completed" uuid:"2efb5813-a02d-47a2-a7f5-ae56d078dae0"]
 [description:"créer un custom schema" end:"1603547767" entry:"1603142512" modified:"1603547767" project:"satom" status:"completed" uuid:"05d225cf-d18b-42d2-8d42-b72108f73db9"]
