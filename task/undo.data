@@ -32519,3 +32519,25 @@ time 1603881647
 old [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" entry:"1602756215" modified:"1602756215" status:"pending" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
 new [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" end:"1603881647" entry:"1602756215" modified:"1603881647" status:"completed" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
 ---
+time 1603975388
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++--" modified:"1603753093" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-" modified:"1603975388" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1603975388
+old [description:"programme Siloé" due:"1603749600" entry:"1603149431" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+new [description:"programme Siloé" due:"1603749600" end:"1603975388" entry:"1603149431" imask:"3" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+---
+time 1603981954
+new [description:"zoom gb 20h" due:"1604214000" entry:"1603981954" modified:"1603981954" status:"pending" uuid:"9c3b6986-78c1-470d-88b8-7e558a98a43d"]
+---
+time 1603982709
+new [description:"siloé" entry:"1603982709" modified:"1603982709" status:"pending" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+---
+time 1603982767
+old [description:"siloé" entry:"1603982709" modified:"1603982709" status:"pending" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+new [description:"siloé" entry:"1603982709" modified:"1603982767" start:"1603982767" status:"pending" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+---
+time 1603982781
+old [description:"task probabilité loi de poisson" entry:"1601900127" modified:"1601900127" priority:"M" status:"pending" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
+new [description:"task probabilité loi de poisson" end:"1603982781" entry:"1601900127" modified:"1603982781" priority:"M" status:"completed" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
+---

@@ -1,3 +1,5 @@
+[description:"task probabilité loi de poisson" end:"1603982781" entry:"1601900127" modified:"1603982781" priority:"M" status:"completed" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
+[description:"programme Siloé" due:"1603749600" end:"1603975388" entry:"1603149431" imask:"3" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
 [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" end:"1603881647" entry:"1602756215" modified:"1603881647" status:"completed" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
 [description:"rendre veste de l'église" end:"1603878224" entry:"1602757294" modified:"1603878224" priority:"H" status:"completed" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
 [description:"TP2 parallelisme" due:"1603868400" end:"1603878211" entry:"1602683470" modified:"1603878211" status:"completed" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]

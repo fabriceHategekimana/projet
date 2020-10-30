@@ -9071,3 +9071,9 @@
 {"description":"TD6 GL","due":"20201102T070000Z","entry":"20201028T102501Z","modified":"20201028T102501Z","status":"pending","uuid":"72a288f3-6568-4eb1-a06a-cbc2baa3416c"}
 {"description":"TP3 IN","due":"20201105T070000Z","entry":"20201028T103328Z","modified":"20201028T103328Z","status":"pending","uuid":"3e242e2c-df7b-49c5-98e5-77d414c32d3b"}
 {"description":"cours de parallélisme à la place de la séance de tp","due":"20201107T070000Z","end":"20201028T104047Z","entry":"20201015T100335Z","modified":"20201028T104047Z","status":"completed","uuid":"5733e589-902b-4b11-aa1e-063a0b20ffb6"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"++++-","modified":"20201029T124308Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"programme Siloé","due":"20201026T220000Z","end":"20201029T124308Z","entry":"20201019T231711Z","imask":3,"modified":"20201029T124308Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"completed","until":"20201231T230000Z","uuid":"ea962898-3faf-464e-b26a-674ef9fd23fb"}
+{"description":"zoom gb 20h","due":"20201101T070000Z","entry":"20201029T143234Z","modified":"20201029T143234Z","status":"pending","uuid":"9c3b6986-78c1-470d-88b8-7e558a98a43d"}
+{"description":"siloé","entry":"20201029T144509Z","modified":"20201029T144509Z","status":"pending","uuid":"b7fd7152-67bf-493e-9f46-5ac180264f76"}
+{"description":"siloé","entry":"20201029T144509Z","modified":"20201029T144607Z","start":"20201029T144607Z","status":"pending","uuid":"b7fd7152-67bf-493e-9f46-5ac180264f76"}
+{"description":"task probabilité loi de poisson","end":"20201029T144621Z","entry":"20201005T121527Z","modified":"20201029T144621Z","priority":"M","status":"completed","uuid":"313712a4-5d12-49a6-85f5-936f6a2ddb6e"}
