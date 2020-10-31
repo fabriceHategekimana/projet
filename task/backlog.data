@@ -9132,3 +9132,6 @@
 {"description":"est un dossier","entry":"20201030T153907Z","modified":"20201030T153907Z","project":"systèmes_informatiques","status":"pending","uuid":"81563826-17ee-4dd4-accc-7e9ce8139de8"}
 {"description":"établir les cas possibles","end":"20201030T160641Z","entry":"20201030T153904Z","modified":"20201030T160641Z","project":"systèmes_informatiques","status":"completed","uuid":"1f864de7-9443-424b-84b2-ed53e31cf219"}
 {"description":"fichier dans fichier","end":"20201030T160641Z","entry":"20201030T153906Z","modified":"20201030T160641Z","project":"systèmes_informatiques","status":"completed","uuid":"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"}
+{"description":"Devoir maman Lady","due":"20201107T060000Z","entry":"20201031T082255Z","imask":3,"modified":"20201030T133037Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"b031aef3-4168-49e1-b65c-5262856f4e60"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++-","modified":"20201031T082255Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"régler le problème de nombre investors","end":"20201031T094445Z","entry":"20201019T212439Z","modified":"20201031T094445Z","project":"satom","status":"completed","uuid":"f75f488e-1b2f-4d23-9e19-3e41659639a1"}

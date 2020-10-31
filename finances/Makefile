@@ -1,9 +1,9 @@
 
 PROJET=project:finances
-all: task
+all: start
  
 start: FORCE
-	zathura *.pdf & 2>error && vim -S Session.vim 2>error && rm error
+	sc-im code/general.csv
 addtask: FORCE
 	. ~/sh/mytask.sh
 summary: FORCE

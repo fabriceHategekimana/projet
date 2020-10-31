@@ -32732,3 +32732,14 @@ time 1604074001
 old [description:"fichier dans fichier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"]
 new [description:"fichier dans fichier" end:"1604074001" entry:"1604072346" modified:"1604074001" project:"systèmes_informatiques" status:"completed" uuid:"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"]
 ---
+time 1604132575
+new [description:"Devoir maman Lady" due:"1604728800" entry:"1604132575" imask:"3" modified:"1604064637" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b031aef3-4168-49e1-b65c-5262856f4e60"]
+---
+time 1604132575
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++" modified:"1604064637" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++-" modified:"1604132575" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1604137485
+old [description:"régler le problème de nombre investors" entry:"1603142679" modified:"1603142679" project:"satom" status:"pending" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+new [description:"régler le problème de nombre investors" end:"1604137485" entry:"1603142679" modified:"1604137485" project:"satom" status:"completed" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+---
