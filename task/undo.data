@@ -32746,3 +32746,11 @@ new [description:"régler le problème de nombre investors" end:"1604137485" ent
 time 1604182559
 new [description:"abstract background" entry:"1604182559" modified:"1604182559" status:"pending" uuid:"2d7770ef-b8dd-48cb-82c4-00efc9631511"]
 ---
+time 1604254343
+old [description:"tutoriel mathematique" entry:"1597186164" modified:"1597308638" project:"tuto" status:"pending" uuid:"273c4828-6d15-4525-b1bf-100e8e0290a2"]
+new [description:"tutoriel mathematique" end:"1604254343" entry:"1597186164" modified:"1604254343" project:"tuto" status:"completed" uuid:"273c4828-6d15-4525-b1bf-100e8e0290a2"]
+---
+time 1604254367
+old [description:"fonction de recherche rapide" entry:"1603142640" modified:"1603142640" project:"satom" status:"pending" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+new [description:"fonction de recherche rapide" end:"1604254367" entry:"1603142640" modified:"1604254367" project:"satom" status:"completed" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+---

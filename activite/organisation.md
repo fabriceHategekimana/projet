@@ -1,6 +1,0 @@
-Organisation
-=============
-
-## Vouloir:
-
-## Devoir:

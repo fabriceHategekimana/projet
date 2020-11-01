@@ -1,4 +1,3 @@
-[description:"tutoriel mathematique" entry:"1597186164" modified:"1597308638" project:"tuto" status:"pending" uuid:"273c4828-6d15-4525-b1bf-100e8e0290a2"]
 [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-" modified:"1603975388" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
 [description:"satom" entry:"1601933764" modified:"1601933774" start:"1601933774" status:"pending" uuid:"e4c7bd29-882e-4ed7-9990-b0202b2d9941"]
 [description:"simone" entry:"1601933810" modified:"1601933863" start:"1601933860" status:"pending" uuid:"46e4cd11-66aa-46f0-871d-b707a16aa047"]
@@ -11,7 +10,6 @@
 [description:"faire un F qui concèrve l'instruction de compilation ou interprétation" entry:"1602848872" modified:"1602848872" status:"pending" uuid:"9a35f4ef-f1ab-4190-8fdb-e2b965bb44bf"]
 [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++-" modified:"1604132575" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 [description:"objectif Siloé" entry:"1603058352" modified:"1603058352" priority:"H" status:"pending" uuid:"fd4d7722-33a7-42a6-978a-3fdeb47d0774"]
-[description:"fonction de recherche rapide" entry:"1603142640" modified:"1603142640" project:"satom" status:"pending" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
 [description:"programme Siloé" due:"1604354400" entry:"1603753093" imask:"4" modified:"1603458516" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
 [description:"TD6 GL" due:"1604300400" entry:"1603880701" modified:"1603880701" status:"pending" uuid:"72a288f3-6568-4eb1-a06a-cbc2baa3416c"]
 [description:"TP3 IN" due:"1604559600" entry:"1603881208" modified:"1603881208" status:"pending" uuid:"3e242e2c-df7b-49c5-98e5-77d414c32d3b"]

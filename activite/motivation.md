@@ -1,6 +1,7 @@
 Motivation
 ==========
 
+## Outils
 motivation (vidéo)
 5 minutes (Starteur)
 montre (avance)
@@ -21,44 +22,6 @@ difficulté/accessibilité
 	* variété/nouveauté
 	* mesurabilité/progression
 
-## Thème du jeu
-Exemple du [jeu](jeu):
-
-## Outils de motivation
-
-	### par paramétrisation
-	En somme, pour donner l'envie de faire une activité, il faut trouver une alternative plus attrayante qui tendent vers le même but.
-	Pour cela il faut avoir un but précis et connaitre en detail ce qui nous ennuie pour pouvoir proposer une autre option qui rendrai l'activité moins pénible.
-
-	### par la musique
-	La musique est un bon outils de motivation pour moi.
-	Avantage: Je suis motivé et je travail plus vite
-	Désavantage: Je ne peux pas faire des choses avec un trop gros coût cognitif.
-	
-	### par les modèles
-	Chercher des modèles inspirant qui nous donnent envie de continuer.
-	
-	### par le message
-	Le message doit être motivant pour pousser la personne à l'action.
-
-
-## Rendu
-	### amv training anims
-	C'est un outils qui mêle à la fois les discours encourageants, les modèles et la musique (si elle est au rendez-vous).
-	Cette méthode me permet de conserver ma motivation à faire ce qui est à faire.
-	Pour l'instant je me contente de cette méthode
-	
-## Remarque
-	Je prends conscience que ma façon de voir ma motivation n'est pas si simple ni si joyeuse que ça.
-	Je pensais qu'en m'accrochant à mes rêves, je serai capable de conserver ma motivation.
-	Il est pourtant arrivé des triste jours ou je n'étais carrément plus motivé voir intéressé par ces soit-disant "rêve".
-	Une argumentation basée sur la raison ne pouvait en aucun cas m'aider à remonter mon énergie.
-	C'est alors que j'ai compris que ma raison ne pouvait rien y faire.
-	Je me rends compte que mes buts sont plus "utils" que gratifiants.
-	Or notre chaire est motivé par de la satisfaction égoïste.
-	Je n'échappe pas à cette règle et je doit m'y conformer.
-
-
 ## Labo:
 Comment limiter au mieux manganelo?
 
@@ -67,13 +30,6 @@ Objet: Manganelo
 Description:
 Manganelo est un site de distribution de manga.
 On peut visionner des mangas qui sortent à une certaine fréquence et faire des commentaires dessus.
-
-Le problème est que cette activité est chronophage.
-De plus en faisant un bilan quotidiens, je me rends compte que cela ne m'apporte pas beaucoup.
-Que faire:
-1. Rendre plus stricte mes critères de sélection
-2. Tenir une liste des mangas "qui en valent la peine"
-3. Chercher de nouvelle histoires de façon court et ponctuel
 
 En somme, je limite le temps perdu en m'intéressant l'essentiel sans rechercher le futile.
 Car l'endroit où je perd du temps est pendant le scroll.

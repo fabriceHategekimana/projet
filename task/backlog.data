@@ -9136,3 +9136,5 @@
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++-","modified":"20201031T082255Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
 {"description":"régler le problème de nombre investors","end":"20201031T094445Z","entry":"20201019T212439Z","modified":"20201031T094445Z","project":"satom","status":"completed","uuid":"f75f488e-1b2f-4d23-9e19-3e41659639a1"}
 {"description":"abstract background","entry":"20201031T221559Z","modified":"20201031T221559Z","status":"pending","uuid":"2d7770ef-b8dd-48cb-82c4-00efc9631511"}
+{"description":"tutoriel mathematique","end":"20201101T181223Z","entry":"20200811T224924Z","modified":"20201101T181223Z","project":"tuto","status":"completed","uuid":"273c4828-6d15-4525-b1bf-100e8e0290a2"}
+{"description":"fonction de recherche rapide","end":"20201101T181247Z","entry":"20201019T212400Z","modified":"20201101T181247Z","project":"satom","status":"completed","uuid":"7757c342-000d-4697-b3c7-e4d165a00f65"}

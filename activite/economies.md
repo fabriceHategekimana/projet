@@ -10,9 +10,10 @@ tontine: 160.-
 tel: 9.-
 tpg: 70.-
 essence: 60.-
+dîme: 133.-
 
 ## Bilan:
-Actuellement, je ne peux mettre de côté que `500 CHF` par mois.
+Actuellement, je ne peux mettre de côté que `400 CHF` par mois.
 Je dois surveiller mes dépenses et investir sur Satom.
 
 ## Visée:
