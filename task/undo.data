@@ -32743,3 +32743,6 @@ time 1604137485
 old [description:"régler le problème de nombre investors" entry:"1603142679" modified:"1603142679" project:"satom" status:"pending" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
 new [description:"régler le problème de nombre investors" end:"1604137485" entry:"1603142679" modified:"1604137485" project:"satom" status:"completed" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
 ---
+time 1604182559
+new [description:"abstract background" entry:"1604182559" modified:"1604182559" status:"pending" uuid:"2d7770ef-b8dd-48cb-82c4-00efc9631511"]
+---
