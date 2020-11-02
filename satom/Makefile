@@ -21,6 +21,8 @@ mail: FORCE
 
 site: FORCE
 	firefox https://control.divio.com/
+neo4j: FORCE
+	firefox http://localhost:7474/browser/
 FORCE:
 
 

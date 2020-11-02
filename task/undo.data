@@ -32509,3 +32509,260 @@ old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++
 new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++--" modified:"1603753093" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
 >>>>>>> 0b78eb201cce06dbfbb9646425c8ee1255f7653f
 ---
+time 1603802020
+old [description:"backup satom" entry:"1602689367" modified:"1602689367" priority:"H" status:"pending" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
+new [description:"backup satom" end:"1603802020" entry:"1602689367" modified:"1603802020" priority:"H" status:"completed" uuid:"33df809d-536e-4cdd-a2a7-168db3bb36d7"]
+---
+time 1603878211
+old [description:"TP2 parallelisme" due:"1603868400" entry:"1602683470" modified:"1602683470" status:"pending" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
+new [description:"TP2 parallelisme" due:"1603868400" end:"1603878211" entry:"1602683470" modified:"1603878211" status:"completed" uuid:"0c87bb6d-0649-4aed-be98-55da11ba0c29"]
+---
+time 1603878224
+old [description:"rendre veste de l'église" entry:"1602757294" modified:"1602757294" priority:"H" status:"pending" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
+new [description:"rendre veste de l'église" end:"1603878224" entry:"1602757294" modified:"1603878224" priority:"H" status:"completed" uuid:"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"]
+---
+time 1603880701
+new [description:"TD6 GL" due:"1604300400" entry:"1603880701" modified:"1603880701" status:"pending" uuid:"72a288f3-6568-4eb1-a06a-cbc2baa3416c"]
+---
+time 1603881208
+new [description:"TP3 IN" due:"1604559600" entry:"1603881208" modified:"1603881208" status:"pending" uuid:"3e242e2c-df7b-49c5-98e5-77d414c32d3b"]
+---
+time 1603881647
+old [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" entry:"1602756215" modified:"1602756215" status:"pending" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
+new [description:"cours de parallélisme à la place de la séance de tp" due:"1604732400" end:"1603881647" entry:"1602756215" modified:"1603881647" status:"completed" uuid:"5733e589-902b-4b11-aa1e-063a0b20ffb6"]
+---
+time 1603975388
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++--" modified:"1603753093" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-" modified:"1603975388" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1603975388
+old [description:"programme Siloé" due:"1603749600" entry:"1603149431" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+new [description:"programme Siloé" due:"1603749600" end:"1603975388" entry:"1603149431" imask:"3" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+---
+time 1603981954
+new [description:"zoom gb 20h" due:"1604214000" entry:"1603981954" modified:"1603981954" status:"pending" uuid:"9c3b6986-78c1-470d-88b8-7e558a98a43d"]
+---
+time 1603982709
+new [description:"siloé" entry:"1603982709" modified:"1603982709" status:"pending" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+---
+time 1603982767
+old [description:"siloé" entry:"1603982709" modified:"1603982709" status:"pending" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+new [description:"siloé" entry:"1603982709" modified:"1603982767" start:"1603982767" status:"pending" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+---
+time 1603982781
+old [description:"task probabilité loi de poisson" entry:"1601900127" modified:"1601900127" priority:"M" status:"pending" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
+new [description:"task probabilité loi de poisson" end:"1603982781" entry:"1601900127" modified:"1603982781" priority:"M" status:"completed" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
+---
+time 1604064547
+old [description:"travail stb" entry:"1602088525" modified:"1602680017" priority:"H" status:"pending" uuid:"e47133d8-8580-416e-8fff-06f0e5d1e755"]
+new [description:"travail stb" end:"1604064547" entry:"1602088525" modified:"1604064547" priority:"H" status:"completed" uuid:"e47133d8-8580-416e-8fff-06f0e5d1e755"]
+---
+time 1604064637
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++-" modified:"1603522997" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++" modified:"1604064637" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1604064637
+old [description:"Devoir maman Lady" due:"1604124000" entry:"1603522997" imask:"2" modified:"1603458312" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"44317f72-2c5d-4231-a6c3-5b7154ad7098"]
+new [description:"Devoir maman Lady" due:"1604124000" end:"1604064637" entry:"1603522997" imask:"2" modified:"1604064637" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"44317f72-2c5d-4231-a6c3-5b7154ad7098"]
+---
+time 1604065146
+new [description:"TP3 SI" due:"1604386800" entry:"1604065146" modified:"1604065146" status:"pending" uuid:"49a12c8d-3a5e-4674-a0ba-b06101bf80f0"]
+---
+time 1604065211
+new [description:"1 Panorama" due:"1604473200" entry:"1604065211" modified:"1604065211" status:"pending" uuid:"46053ba2-a430-4c94-a5ce-010f97c52abb"]
+---
+time 1604071984
+new [description:"établir les cas possibles" entry:"1604071984" modified:"1604071984" status:"pending" uuid:"130e8229-ebc6-41f8-84d7-cf3168a5b29f"]
+---
+time 1604071988
+new [description:"copier fichier" entry:"1604071988" modified:"1604071988" status:"pending" uuid:"6fe67f41-53df-4975-911a-1baf3ed1b8cd"]
+---
+time 1604071989
+new [description:"fichier dans dossier" entry:"1604071989" modified:"1604071989" status:"pending" uuid:"328054a0-36c1-44a3-a6f0-5b18e2723de5"]
+---
+time 1604071989
+new [description:"fichier dans fichier" entry:"1604071989" modified:"1604071989" status:"pending" uuid:"3261d7a7-2640-43fc-9775-b23f117d088e"]
+---
+time 1604071989
+new [description:"copier dossier" entry:"1604071989" modified:"1604071989" status:"pending" uuid:"ecad6ce4-4fe4-4bac-aad8-757f80f9d32c"]
+---
+time 1604071990
+new [description:"dossier dans dossier" entry:"1604071990" modified:"1604071990" status:"pending" uuid:"92823468-cec5-472e-a097-a1e89b9bb041"]
+---
+time 1604071990
+new [description:"dossier dans fichier" entry:"1604071990" modified:"1604071990" status:"pending" uuid:"aa1c44eb-77ee-4214-af3b-cfb0a4d6c9bd"]
+---
+time 1604071990
+new [description:"control destination" entry:"1604071990" modified:"1604071990" status:"pending" uuid:"592f79f1-56ee-4d92-98a2-8475e4e73d96"]
+---
+time 1604071991
+new [description:"est un dossier" entry:"1604071991" modified:"1604071991" status:"pending" uuid:"4c0c224f-a810-4311-8f11-4b1b7e0d4aa3"]
+---
+time 1604072095
+old [description:"copier fichier" entry:"1604071988" modified:"1604071988" status:"pending" uuid:"6fe67f41-53df-4975-911a-1baf3ed1b8cd"]
+new [description:"copier fichier" end:"1604072092" entry:"1604071988" modified:"1604072095" status:"completed" uuid:"6fe67f41-53df-4975-911a-1baf3ed1b8cd"]
+---
+time 1604072095
+old [description:"fichier dans dossier" entry:"1604071989" modified:"1604071989" status:"pending" uuid:"328054a0-36c1-44a3-a6f0-5b18e2723de5"]
+new [description:"fichier dans dossier" end:"1604072095" entry:"1604071989" modified:"1604072095" status:"completed" uuid:"328054a0-36c1-44a3-a6f0-5b18e2723de5"]
+---
+time 1604072095
+old [description:"fichier dans fichier" entry:"1604071989" modified:"1604071989" status:"pending" uuid:"3261d7a7-2640-43fc-9775-b23f117d088e"]
+new [description:"fichier dans fichier" end:"1604072095" entry:"1604071989" modified:"1604072095" status:"completed" uuid:"3261d7a7-2640-43fc-9775-b23f117d088e"]
+---
+time 1604072095
+old [description:"copier dossier" entry:"1604071989" modified:"1604071989" status:"pending" uuid:"ecad6ce4-4fe4-4bac-aad8-757f80f9d32c"]
+new [description:"copier dossier" end:"1604072095" entry:"1604071989" modified:"1604072095" status:"completed" uuid:"ecad6ce4-4fe4-4bac-aad8-757f80f9d32c"]
+---
+time 1604072095
+old [description:"dossier dans dossier" entry:"1604071990" modified:"1604071990" status:"pending" uuid:"92823468-cec5-472e-a097-a1e89b9bb041"]
+new [description:"dossier dans dossier" end:"1604072095" entry:"1604071990" modified:"1604072095" status:"completed" uuid:"92823468-cec5-472e-a097-a1e89b9bb041"]
+---
+time 1604072095
+old [description:"dossier dans fichier" entry:"1604071990" modified:"1604071990" status:"pending" uuid:"aa1c44eb-77ee-4214-af3b-cfb0a4d6c9bd"]
+new [description:"dossier dans fichier" end:"1604072095" entry:"1604071990" modified:"1604072095" status:"completed" uuid:"aa1c44eb-77ee-4214-af3b-cfb0a4d6c9bd"]
+---
+time 1604072095
+old [description:"control destination" entry:"1604071990" modified:"1604071990" status:"pending" uuid:"592f79f1-56ee-4d92-98a2-8475e4e73d96"]
+new [description:"control destination" end:"1604072095" entry:"1604071990" modified:"1604072095" status:"completed" uuid:"592f79f1-56ee-4d92-98a2-8475e4e73d96"]
+---
+time 1604072095
+old [description:"est un dossier" entry:"1604071991" modified:"1604071991" status:"pending" uuid:"4c0c224f-a810-4311-8f11-4b1b7e0d4aa3"]
+new [description:"est un dossier" end:"1604072095" entry:"1604071991" modified:"1604072095" status:"completed" uuid:"4c0c224f-a810-4311-8f11-4b1b7e0d4aa3"]
+---
+time 1604072113
+old [description:"ajouter article" entry:"1603142408" modified:"1603142408" project:"satom" status:"pending" uuid:"93064bad-9bb0-4308-8b42-396471b7d95d"]
+new [description:"ajouter article" end:"1604072113" entry:"1603142408" modified:"1604072113" project:"satom" status:"completed" uuid:"93064bad-9bb0-4308-8b42-396471b7d95d"]
+---
+time 1604072122
+old [description:"faire abonnement tpg lundi 18" entry:"1602766455" modified:"1602766455" status:"pending" uuid:"f6bd76a4-ba74-4e11-8dca-8fa25f6b3a79"]
+new [description:"faire abonnement tpg lundi 18" end:"1604072122" entry:"1602766455" modified:"1604072122" status:"completed" uuid:"f6bd76a4-ba74-4e11-8dca-8fa25f6b3a79"]
+---
+time 1604072132
+old [description:"csaw" entry:"1603291356" modified:"1603291356" status:"pending" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
+new [description:"csaw" end:"1604072132" entry:"1603291356" modified:"1604072132" status:"completed" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
+---
+time 1604072150
+old [description:"établir les cas possibles" entry:"1604071984" modified:"1604071984" status:"pending" uuid:"130e8229-ebc6-41f8-84d7-cf3168a5b29f"]
+new [description:"établir les cas possibles" end:"1604072150" entry:"1604071984" modified:"1604072150" status:"completed" uuid:"130e8229-ebc6-41f8-84d7-cf3168a5b29f"]
+---
+time 1604072206
+new [description:"établir les cas possibles" entry:"1604072206" modified:"1604072206" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"a07a2036-02d6-458f-bb7b-6c63dc8d8f13"]
+---
+time 1604072210
+new [description:"copier fichier" entry:"1604072210" modified:"1604072210" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"0335482a-df56-43b9-b21f-1775a4286a55"]
+---
+time 1604072212
+new [description:"fichier dans dossier" entry:"1604072212" modified:"1604072212" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"20d56b3a-1a4c-4fd4-aa29-fcda70cf9ca7"]
+---
+time 1604072213
+new [description:"fichier dans fichier" entry:"1604072213" modified:"1604072213" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"6c0adb70-4eb8-442e-b2d8-29fa28059787"]
+---
+time 1604072213
+new [description:"copier dossier" entry:"1604072213" modified:"1604072213" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"a1a9d187-e239-40a4-8759-7a80dd772b7f"]
+---
+time 1604072214
+new [description:"dossier dans dossier" entry:"1604072214" modified:"1604072214" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"b7b2b146-a924-4882-bfaa-e0ff7aefb57e"]
+---
+time 1604072214
+new [description:"dossier dans fichier" entry:"1604072214" modified:"1604072214" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"6787a68f-05aa-4259-b2f3-c62227021c71"]
+---
+time 1604072215
+new [description:"control destination" entry:"1604072215" modified:"1604072215" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"d945f663-b74b-4310-ab3c-24a7efe35f79"]
+---
+time 1604072215
+new [description:"est un dossier" entry:"1604072215" modified:"1604072215" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"0fe304af-773a-41ed-838b-e3d0ccb722e8"]
+---
+time 1604072264
+old [description:"établir les cas possibles" entry:"1604072206" modified:"1604072206" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"a07a2036-02d6-458f-bb7b-6c63dc8d8f13"]
+new [description:"établir les cas possibles" end:"1604072260" entry:"1604072206" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"a07a2036-02d6-458f-bb7b-6c63dc8d8f13"]
+---
+time 1604072264
+old [description:"copier fichier" entry:"1604072210" modified:"1604072210" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"0335482a-df56-43b9-b21f-1775a4286a55"]
+new [description:"copier fichier" end:"1604072264" entry:"1604072210" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"0335482a-df56-43b9-b21f-1775a4286a55"]
+---
+time 1604072264
+old [description:"fichier dans dossier" entry:"1604072212" modified:"1604072212" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"20d56b3a-1a4c-4fd4-aa29-fcda70cf9ca7"]
+new [description:"fichier dans dossier" end:"1604072264" entry:"1604072212" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"20d56b3a-1a4c-4fd4-aa29-fcda70cf9ca7"]
+---
+time 1604072264
+old [description:"fichier dans fichier" entry:"1604072213" modified:"1604072213" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"6c0adb70-4eb8-442e-b2d8-29fa28059787"]
+new [description:"fichier dans fichier" end:"1604072264" entry:"1604072213" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"6c0adb70-4eb8-442e-b2d8-29fa28059787"]
+---
+time 1604072264
+old [description:"copier dossier" entry:"1604072213" modified:"1604072213" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"a1a9d187-e239-40a4-8759-7a80dd772b7f"]
+new [description:"copier dossier" end:"1604072264" entry:"1604072213" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"a1a9d187-e239-40a4-8759-7a80dd772b7f"]
+---
+time 1604072264
+old [description:"dossier dans dossier" entry:"1604072214" modified:"1604072214" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"b7b2b146-a924-4882-bfaa-e0ff7aefb57e"]
+new [description:"dossier dans dossier" end:"1604072264" entry:"1604072214" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"b7b2b146-a924-4882-bfaa-e0ff7aefb57e"]
+---
+time 1604072264
+old [description:"dossier dans fichier" entry:"1604072214" modified:"1604072214" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"6787a68f-05aa-4259-b2f3-c62227021c71"]
+new [description:"dossier dans fichier" end:"1604072264" entry:"1604072214" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"6787a68f-05aa-4259-b2f3-c62227021c71"]
+---
+time 1604072264
+old [description:"control destination" entry:"1604072215" modified:"1604072215" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"d945f663-b74b-4310-ab3c-24a7efe35f79"]
+new [description:"control destination" end:"1604072264" entry:"1604072215" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"d945f663-b74b-4310-ab3c-24a7efe35f79"]
+---
+time 1604072264
+old [description:"est un dossier" entry:"1604072215" modified:"1604072215" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"pending" uuid:"0fe304af-773a-41ed-838b-e3d0ccb722e8"]
+new [description:"est un dossier" end:"1604072264" entry:"1604072215" modified:"1604072264" project:"home\/fabrice\/cours\/systèmes_informatiques" status:"completed" uuid:"0fe304af-773a-41ed-838b-e3d0ccb722e8"]
+---
+time 1604072344
+new [description:"établir les cas possibles" entry:"1604072344" modified:"1604072344" project:"systèmes_informatiques" status:"pending" uuid:"1f864de7-9443-424b-84b2-ed53e31cf219"]
+---
+time 1604072345
+new [description:"copier fichier" entry:"1604072345" modified:"1604072345" project:"systèmes_informatiques" status:"pending" uuid:"57fc277f-b694-45c7-8ea7-c514df691932"]
+---
+time 1604072346
+new [description:"fichier dans dossier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"5f6affc6-db88-4e03-8440-0d04545fdc32"]
+---
+time 1604072346
+new [description:"fichier dans fichier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"]
+---
+time 1604072346
+new [description:"copier dossier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"8e3aee09-1c3f-4239-a2ea-c18f9aec8575"]
+---
+time 1604072346
+new [description:"dossier dans dossier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"4909a911-f5d8-434f-96d0-f6acfb4a671c"]
+---
+time 1604072347
+new [description:"dossier dans fichier" entry:"1604072347" modified:"1604072347" project:"systèmes_informatiques" status:"pending" uuid:"84ff77d8-ba67-4e34-9256-4ba2c956ec33"]
+---
+time 1604072347
+new [description:"control destination" entry:"1604072347" modified:"1604072347" project:"systèmes_informatiques" status:"pending" uuid:"64dfdd35-99e4-440f-a7d2-da983348c86f"]
+---
+time 1604072347
+new [description:"est un dossier" entry:"1604072347" modified:"1604072347" project:"systèmes_informatiques" status:"pending" uuid:"81563826-17ee-4dd4-accc-7e9ce8139de8"]
+---
+time 1604074001
+old [description:"établir les cas possibles" entry:"1604072344" modified:"1604072344" project:"systèmes_informatiques" status:"pending" uuid:"1f864de7-9443-424b-84b2-ed53e31cf219"]
+new [description:"établir les cas possibles" end:"1604074001" entry:"1604072344" modified:"1604074001" project:"systèmes_informatiques" status:"completed" uuid:"1f864de7-9443-424b-84b2-ed53e31cf219"]
+---
+time 1604074001
+old [description:"fichier dans fichier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"]
+new [description:"fichier dans fichier" end:"1604074001" entry:"1604072346" modified:"1604074001" project:"systèmes_informatiques" status:"completed" uuid:"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"]
+---
+time 1604132575
+new [description:"Devoir maman Lady" due:"1604728800" entry:"1604132575" imask:"3" modified:"1604064637" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b031aef3-4168-49e1-b65c-5262856f4e60"]
+---
+time 1604132575
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++" modified:"1604064637" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++-" modified:"1604132575" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1604137485
+old [description:"régler le problème de nombre investors" entry:"1603142679" modified:"1603142679" project:"satom" status:"pending" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+new [description:"régler le problème de nombre investors" end:"1604137485" entry:"1603142679" modified:"1604137485" project:"satom" status:"completed" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+---
+time 1604182559
+new [description:"abstract background" entry:"1604182559" modified:"1604182559" status:"pending" uuid:"2d7770ef-b8dd-48cb-82c4-00efc9631511"]
+---
+time 1604254343
+old [description:"tutoriel mathematique" entry:"1597186164" modified:"1597308638" project:"tuto" status:"pending" uuid:"273c4828-6d15-4525-b1bf-100e8e0290a2"]
+new [description:"tutoriel mathematique" end:"1604254343" entry:"1597186164" modified:"1604254343" project:"tuto" status:"completed" uuid:"273c4828-6d15-4525-b1bf-100e8e0290a2"]
+---
+time 1604254367
+old [description:"fonction de recherche rapide" entry:"1603142640" modified:"1603142640" project:"satom" status:"pending" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+new [description:"fonction de recherche rapide" end:"1604254367" entry:"1603142640" modified:"1604254367" project:"satom" status:"completed" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+---

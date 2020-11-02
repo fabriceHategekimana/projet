@@ -9070,4 +9070,80 @@
 {"description":"Tp2 compilateur et interprète","due":"20201025T070000Z","end":"20201026T104353Z","entry":"20201014T131440Z","modified":"20201026T104353Z","status":"completed","uuid":"2efb5813-a02d-47a2-a7f5-ae56d078dae0"}
 {"description":"programme Siloé","due":"20201102T220000Z","entry":"20201026T225813Z","imask":4,"modified":"20201023T130836Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"pending","until":"20201231T230000Z","uuid":"a46801b0-4d29-44fd-9b71-94cd1d9ed390"}
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+++--","modified":"20201026T225813Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+<<<<<<< HEAD
 >>>>>>> 0b78eb201cce06dbfbb9646425c8ee1255f7653f
+=======
+{"description":"backup satom","end":"20201027T123340Z","entry":"20201014T152927Z","modified":"20201027T123340Z","priority":"H","status":"completed","uuid":"33df809d-536e-4cdd-a2a7-168db3bb36d7"}
+{"description":"TP2 parallelisme","due":"20201028T070000Z","end":"20201028T094331Z","entry":"20201014T135110Z","modified":"20201028T094331Z","status":"completed","uuid":"0c87bb6d-0649-4aed-be98-55da11ba0c29"}
+{"description":"rendre veste de l'église","end":"20201028T094344Z","entry":"20201015T102134Z","modified":"20201028T094344Z","priority":"H","status":"completed","uuid":"6fe5c4a3-47be-4e49-b10c-4030ecceb8df"}
+{"description":"TD6 GL","due":"20201102T070000Z","entry":"20201028T102501Z","modified":"20201028T102501Z","status":"pending","uuid":"72a288f3-6568-4eb1-a06a-cbc2baa3416c"}
+{"description":"TP3 IN","due":"20201105T070000Z","entry":"20201028T103328Z","modified":"20201028T103328Z","status":"pending","uuid":"3e242e2c-df7b-49c5-98e5-77d414c32d3b"}
+{"description":"cours de parallélisme à la place de la séance de tp","due":"20201107T070000Z","end":"20201028T104047Z","entry":"20201015T100335Z","modified":"20201028T104047Z","status":"completed","uuid":"5733e589-902b-4b11-aa1e-063a0b20ffb6"}
+{"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"++++-","modified":"20201029T124308Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"programme Siloé","due":"20201026T220000Z","end":"20201029T124308Z","entry":"20201019T231711Z","imask":3,"modified":"20201029T124308Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"completed","until":"20201231T230000Z","uuid":"ea962898-3faf-464e-b26a-674ef9fd23fb"}
+{"description":"zoom gb 20h","due":"20201101T070000Z","entry":"20201029T143234Z","modified":"20201029T143234Z","status":"pending","uuid":"9c3b6986-78c1-470d-88b8-7e558a98a43d"}
+{"description":"siloé","entry":"20201029T144509Z","modified":"20201029T144509Z","status":"pending","uuid":"b7fd7152-67bf-493e-9f46-5ac180264f76"}
+{"description":"siloé","entry":"20201029T144509Z","modified":"20201029T144607Z","start":"20201029T144607Z","status":"pending","uuid":"b7fd7152-67bf-493e-9f46-5ac180264f76"}
+{"description":"task probabilité loi de poisson","end":"20201029T144621Z","entry":"20201005T121527Z","modified":"20201029T144621Z","priority":"M","status":"completed","uuid":"313712a4-5d12-49a6-85f5-936f6a2ddb6e"}
+{"description":"travail stb","end":"20201030T132907Z","entry":"20201007T163525Z","modified":"20201030T132907Z","priority":"H","status":"completed","uuid":"e47133d8-8580-416e-8fff-06f0e5d1e755"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++","modified":"20201030T133037Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20201031T060000Z","end":"20201030T133037Z","entry":"20201024T070317Z","imask":2,"modified":"20201030T133037Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"44317f72-2c5d-4231-a6c3-5b7154ad7098"}
+{"description":"TP3 SI","due":"20201103T070000Z","entry":"20201030T133906Z","modified":"20201030T133906Z","status":"pending","uuid":"49a12c8d-3a5e-4674-a0ba-b06101bf80f0"}
+{"description":"1 Panorama","due":"20201104T070000Z","entry":"20201030T134011Z","modified":"20201030T134011Z","status":"pending","uuid":"46053ba2-a430-4c94-a5ce-010f97c52abb"}
+{"description":"établir les cas possibles","entry":"20201030T153304Z","modified":"20201030T153304Z","status":"pending","uuid":"130e8229-ebc6-41f8-84d7-cf3168a5b29f"}
+{"description":"copier fichier","entry":"20201030T153308Z","modified":"20201030T153308Z","status":"pending","uuid":"6fe67f41-53df-4975-911a-1baf3ed1b8cd"}
+{"description":"fichier dans dossier","entry":"20201030T153309Z","modified":"20201030T153309Z","status":"pending","uuid":"328054a0-36c1-44a3-a6f0-5b18e2723de5"}
+{"description":"fichier dans fichier","entry":"20201030T153309Z","modified":"20201030T153309Z","status":"pending","uuid":"3261d7a7-2640-43fc-9775-b23f117d088e"}
+{"description":"copier dossier","entry":"20201030T153309Z","modified":"20201030T153309Z","status":"pending","uuid":"ecad6ce4-4fe4-4bac-aad8-757f80f9d32c"}
+{"description":"dossier dans dossier","entry":"20201030T153310Z","modified":"20201030T153310Z","status":"pending","uuid":"92823468-cec5-472e-a097-a1e89b9bb041"}
+{"description":"dossier dans fichier","entry":"20201030T153310Z","modified":"20201030T153310Z","status":"pending","uuid":"aa1c44eb-77ee-4214-af3b-cfb0a4d6c9bd"}
+{"description":"control destination","entry":"20201030T153310Z","modified":"20201030T153310Z","status":"pending","uuid":"592f79f1-56ee-4d92-98a2-8475e4e73d96"}
+{"description":"est un dossier","entry":"20201030T153311Z","modified":"20201030T153311Z","status":"pending","uuid":"4c0c224f-a810-4311-8f11-4b1b7e0d4aa3"}
+{"description":"copier fichier","end":"20201030T153452Z","entry":"20201030T153308Z","modified":"20201030T153455Z","status":"completed","uuid":"6fe67f41-53df-4975-911a-1baf3ed1b8cd"}
+{"description":"fichier dans dossier","end":"20201030T153455Z","entry":"20201030T153309Z","modified":"20201030T153455Z","status":"completed","uuid":"328054a0-36c1-44a3-a6f0-5b18e2723de5"}
+{"description":"fichier dans fichier","end":"20201030T153455Z","entry":"20201030T153309Z","modified":"20201030T153455Z","status":"completed","uuid":"3261d7a7-2640-43fc-9775-b23f117d088e"}
+{"description":"copier dossier","end":"20201030T153455Z","entry":"20201030T153309Z","modified":"20201030T153455Z","status":"completed","uuid":"ecad6ce4-4fe4-4bac-aad8-757f80f9d32c"}
+{"description":"dossier dans dossier","end":"20201030T153455Z","entry":"20201030T153310Z","modified":"20201030T153455Z","status":"completed","uuid":"92823468-cec5-472e-a097-a1e89b9bb041"}
+{"description":"dossier dans fichier","end":"20201030T153455Z","entry":"20201030T153310Z","modified":"20201030T153455Z","status":"completed","uuid":"aa1c44eb-77ee-4214-af3b-cfb0a4d6c9bd"}
+{"description":"control destination","end":"20201030T153455Z","entry":"20201030T153310Z","modified":"20201030T153455Z","status":"completed","uuid":"592f79f1-56ee-4d92-98a2-8475e4e73d96"}
+{"description":"est un dossier","end":"20201030T153455Z","entry":"20201030T153311Z","modified":"20201030T153455Z","status":"completed","uuid":"4c0c224f-a810-4311-8f11-4b1b7e0d4aa3"}
+{"description":"ajouter article","end":"20201030T153513Z","entry":"20201019T212008Z","modified":"20201030T153513Z","project":"satom","status":"completed","uuid":"93064bad-9bb0-4308-8b42-396471b7d95d"}
+{"description":"faire abonnement tpg lundi 18","end":"20201030T153522Z","entry":"20201015T125415Z","modified":"20201030T153522Z","status":"completed","uuid":"f6bd76a4-ba74-4e11-8dca-8fa25f6b3a79"}
+{"description":"csaw","end":"20201030T153532Z","entry":"20201021T144236Z","modified":"20201030T153532Z","status":"completed","uuid":"d850679d-0cf1-44cf-9949-21cc0d0e3f54"}
+{"description":"établir les cas possibles","end":"20201030T153550Z","entry":"20201030T153304Z","modified":"20201030T153550Z","status":"completed","uuid":"130e8229-ebc6-41f8-84d7-cf3168a5b29f"}
+{"description":"établir les cas possibles","entry":"20201030T153646Z","modified":"20201030T153646Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"a07a2036-02d6-458f-bb7b-6c63dc8d8f13"}
+{"description":"copier fichier","entry":"20201030T153650Z","modified":"20201030T153650Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"0335482a-df56-43b9-b21f-1775a4286a55"}
+{"description":"fichier dans dossier","entry":"20201030T153652Z","modified":"20201030T153652Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"20d56b3a-1a4c-4fd4-aa29-fcda70cf9ca7"}
+{"description":"fichier dans fichier","entry":"20201030T153653Z","modified":"20201030T153653Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"6c0adb70-4eb8-442e-b2d8-29fa28059787"}
+{"description":"copier dossier","entry":"20201030T153653Z","modified":"20201030T153653Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"a1a9d187-e239-40a4-8759-7a80dd772b7f"}
+{"description":"dossier dans dossier","entry":"20201030T153654Z","modified":"20201030T153654Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"b7b2b146-a924-4882-bfaa-e0ff7aefb57e"}
+{"description":"dossier dans fichier","entry":"20201030T153654Z","modified":"20201030T153654Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"6787a68f-05aa-4259-b2f3-c62227021c71"}
+{"description":"control destination","entry":"20201030T153655Z","modified":"20201030T153655Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"d945f663-b74b-4310-ab3c-24a7efe35f79"}
+{"description":"est un dossier","entry":"20201030T153655Z","modified":"20201030T153655Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"pending","uuid":"0fe304af-773a-41ed-838b-e3d0ccb722e8"}
+{"description":"établir les cas possibles","end":"20201030T153740Z","entry":"20201030T153646Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"a07a2036-02d6-458f-bb7b-6c63dc8d8f13"}
+{"description":"copier fichier","end":"20201030T153744Z","entry":"20201030T153650Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"0335482a-df56-43b9-b21f-1775a4286a55"}
+{"description":"fichier dans dossier","end":"20201030T153744Z","entry":"20201030T153652Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"20d56b3a-1a4c-4fd4-aa29-fcda70cf9ca7"}
+{"description":"fichier dans fichier","end":"20201030T153744Z","entry":"20201030T153653Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"6c0adb70-4eb8-442e-b2d8-29fa28059787"}
+{"description":"copier dossier","end":"20201030T153744Z","entry":"20201030T153653Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"a1a9d187-e239-40a4-8759-7a80dd772b7f"}
+{"description":"dossier dans dossier","end":"20201030T153744Z","entry":"20201030T153654Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"b7b2b146-a924-4882-bfaa-e0ff7aefb57e"}
+{"description":"dossier dans fichier","end":"20201030T153744Z","entry":"20201030T153654Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"6787a68f-05aa-4259-b2f3-c62227021c71"}
+{"description":"control destination","end":"20201030T153744Z","entry":"20201030T153655Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"d945f663-b74b-4310-ab3c-24a7efe35f79"}
+{"description":"est un dossier","end":"20201030T153744Z","entry":"20201030T153655Z","modified":"20201030T153744Z","project":"home\/fabrice\/cours\/systèmes_informatiques","status":"completed","uuid":"0fe304af-773a-41ed-838b-e3d0ccb722e8"}
+{"description":"établir les cas possibles","entry":"20201030T153904Z","modified":"20201030T153904Z","project":"systèmes_informatiques","status":"pending","uuid":"1f864de7-9443-424b-84b2-ed53e31cf219"}
+{"description":"copier fichier","entry":"20201030T153905Z","modified":"20201030T153905Z","project":"systèmes_informatiques","status":"pending","uuid":"57fc277f-b694-45c7-8ea7-c514df691932"}
+{"description":"fichier dans dossier","entry":"20201030T153906Z","modified":"20201030T153906Z","project":"systèmes_informatiques","status":"pending","uuid":"5f6affc6-db88-4e03-8440-0d04545fdc32"}
+{"description":"fichier dans fichier","entry":"20201030T153906Z","modified":"20201030T153906Z","project":"systèmes_informatiques","status":"pending","uuid":"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"}
+{"description":"copier dossier","entry":"20201030T153906Z","modified":"20201030T153906Z","project":"systèmes_informatiques","status":"pending","uuid":"8e3aee09-1c3f-4239-a2ea-c18f9aec8575"}
+{"description":"dossier dans dossier","entry":"20201030T153906Z","modified":"20201030T153906Z","project":"systèmes_informatiques","status":"pending","uuid":"4909a911-f5d8-434f-96d0-f6acfb4a671c"}
+{"description":"dossier dans fichier","entry":"20201030T153907Z","modified":"20201030T153907Z","project":"systèmes_informatiques","status":"pending","uuid":"84ff77d8-ba67-4e34-9256-4ba2c956ec33"}
+{"description":"control destination","entry":"20201030T153907Z","modified":"20201030T153907Z","project":"systèmes_informatiques","status":"pending","uuid":"64dfdd35-99e4-440f-a7d2-da983348c86f"}
+{"description":"est un dossier","entry":"20201030T153907Z","modified":"20201030T153907Z","project":"systèmes_informatiques","status":"pending","uuid":"81563826-17ee-4dd4-accc-7e9ce8139de8"}
+{"description":"établir les cas possibles","end":"20201030T160641Z","entry":"20201030T153904Z","modified":"20201030T160641Z","project":"systèmes_informatiques","status":"completed","uuid":"1f864de7-9443-424b-84b2-ed53e31cf219"}
+{"description":"fichier dans fichier","end":"20201030T160641Z","entry":"20201030T153906Z","modified":"20201030T160641Z","project":"systèmes_informatiques","status":"completed","uuid":"1dc7f23d-4be2-48a4-a35c-93cefa9615ca"}
+{"description":"Devoir maman Lady","due":"20201107T060000Z","entry":"20201031T082255Z","imask":3,"modified":"20201030T133037Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"b031aef3-4168-49e1-b65c-5262856f4e60"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++-","modified":"20201031T082255Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"régler le problème de nombre investors","end":"20201031T094445Z","entry":"20201019T212439Z","modified":"20201031T094445Z","project":"satom","status":"completed","uuid":"f75f488e-1b2f-4d23-9e19-3e41659639a1"}
+{"description":"abstract background","entry":"20201031T221559Z","modified":"20201031T221559Z","status":"pending","uuid":"2d7770ef-b8dd-48cb-82c4-00efc9631511"}
+{"description":"tutoriel mathematique","end":"20201101T181223Z","entry":"20200811T224924Z","modified":"20201101T181223Z","project":"tuto","status":"completed","uuid":"273c4828-6d15-4525-b1bf-100e8e0290a2"}
+{"description":"fonction de recherche rapide","end":"20201101T181247Z","entry":"20201019T212400Z","modified":"20201101T181247Z","project":"satom","status":"completed","uuid":"7757c342-000d-4697-b3c7-e4d165a00f65"}
+>>>>>>> 8bb16af7c78333cc5b6c102f5cad7a5452fccc61
