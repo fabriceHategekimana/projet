@@ -32766,3 +32766,106 @@ time 1604254367
 old [description:"fonction de recherche rapide" entry:"1603142640" modified:"1603142640" project:"satom" status:"pending" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
 new [description:"fonction de recherche rapide" end:"1604254367" entry:"1603142640" modified:"1604254367" project:"satom" status:"completed" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
 ---
+time 1604309036
+new [description:"programme Siloé" due:"1604354400" entry:"1604309036" imask:"4" modified:"1603193761" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"2aee4092-934f-4892-8693-57210b4b9c98"]
+---
+time 1604309036
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++--" modified:"1603193761" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++---" modified:"1604309036" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604309068
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++---" modified:"1604309036" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-+-" modified:"1604309068" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604309068
+old [description:"programme Siloé" due:"1603749600" entry:"1603193761" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"15d46c01-7776-487c-bd2f-6e27a6c116af"]
+new [description:"programme Siloé" due:"1603749600" end:"1604309068" entry:"1603193761" imask:"3" modified:"1604309068" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"15d46c01-7776-487c-bd2f-6e27a6c116af"]
+---
+time 1604309068
+old [description:"programme Siloé" due:"1603749600" entry:"1603149431" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+new [description:"programme Siloé" due:"1603749600" end:"1604309068" entry:"1603149431" imask:"3" modified:"1604309068" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+---
+time 1604309141
+old [description:"tutoriel mathematique" entry:"1597186164" modified:"1597308638" project:"tuto" status:"pending" uuid:"273c4828-6d15-4525-b1bf-100e8e0290a2"]
+new [description:"tutoriel mathematique" end:"1604309138" entry:"1597186164" modified:"1604309141" project:"tuto" status:"completed" uuid:"273c4828-6d15-4525-b1bf-100e8e0290a2"]
+---
+time 1604309141
+old [description:"task probabilité loi de poisson" entry:"1601900127" modified:"1601900127" priority:"M" status:"pending" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
+new [description:"task probabilité loi de poisson" end:"1604309141" entry:"1601900127" modified:"1604309141" priority:"M" status:"completed" uuid:"313712a4-5d12-49a6-85f5-936f6a2ddb6e"]
+---
+time 1604309141
+old [description:"ajouter article" entry:"1603142408" modified:"1603142408" project:"satom" status:"pending" uuid:"93064bad-9bb0-4308-8b42-396471b7d95d"]
+new [description:"ajouter article" end:"1604309141" entry:"1603142408" modified:"1604309141" project:"satom" status:"completed" uuid:"93064bad-9bb0-4308-8b42-396471b7d95d"]
+---
+time 1604309141
+old [description:"fonction de recherche rapide" entry:"1603142640" modified:"1603142640" project:"satom" status:"pending" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+new [description:"fonction de recherche rapide" end:"1604309141" entry:"1603142640" modified:"1604309141" project:"satom" status:"completed" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+---
+time 1604309141
+old [description:"régler le problème de nombre investors" entry:"1603142679" modified:"1603142679" project:"satom" status:"pending" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+new [description:"régler le problème de nombre investors" end:"1604309141" entry:"1603142679" modified:"1604309141" project:"satom" status:"completed" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+---
+time 1604309141
+old [description:"Devoir maman Lady" due:"1604124000" entry:"1603522997" imask:"2" modified:"1603458312" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"44317f72-2c5d-4231-a6c3-5b7154ad7098"]
+new [description:"Devoir maman Lady" due:"1604124000" end:"1604309141" entry:"1603522997" imask:"2" modified:"1604309141" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"44317f72-2c5d-4231-a6c3-5b7154ad7098"]
+---
+time 1604309141
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-+-" modified:"1604309068" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-++" modified:"1604309141" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604309141
+old [description:"programme Siloé" due:"1604354400" entry:"1603753093" imask:"4" modified:"1603458516" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+new [description:"programme Siloé" due:"1604354400" end:"1604309141" entry:"1603753093" imask:"4" modified:"1604309141" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+---
+time 1604309141
+old [description:"programme Siloé" due:"1604354400" end:"1604309141" entry:"1603753093" imask:"4" modified:"1604309141" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+new [description:"programme Siloé" due:"1604354400" end:"1604309141" entry:"1603753093" imask:"4" modified:"1604309141" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+---
+time 1604309141
+old [description:"zoom gb 20h" due:"1604214000" entry:"1603981954" modified:"1603981954" status:"pending" uuid:"9c3b6986-78c1-470d-88b8-7e558a98a43d"]
+new [description:"zoom gb 20h" due:"1604214000" end:"1604309141" entry:"1603981954" modified:"1604309141" status:"completed" uuid:"9c3b6986-78c1-470d-88b8-7e558a98a43d"]
+---
+time 1604309141
+old [description:"programme Siloé" due:"1604354400" entry:"1604309036" imask:"4" modified:"1603193761" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"2aee4092-934f-4892-8693-57210b4b9c98"]
+new [description:"programme Siloé" due:"1604354400" end:"1604309141" entry:"1604309036" imask:"4" modified:"1604309141" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"2aee4092-934f-4892-8693-57210b4b9c98"]
+---
+time 1604309158
+old [description:"copier fichier" entry:"1604072345" modified:"1604072345" project:"systèmes_informatiques" status:"pending" uuid:"57fc277f-b694-45c7-8ea7-c514df691932"]
+new [description:"copier fichier" end:"1604309155" entry:"1604072345" modified:"1604309158" project:"systèmes_informatiques" status:"completed" uuid:"57fc277f-b694-45c7-8ea7-c514df691932"]
+---
+time 1604309158
+old [description:"fichier dans dossier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"5f6affc6-db88-4e03-8440-0d04545fdc32"]
+new [description:"fichier dans dossier" end:"1604309158" entry:"1604072346" modified:"1604309158" project:"systèmes_informatiques" status:"completed" uuid:"5f6affc6-db88-4e03-8440-0d04545fdc32"]
+---
+time 1604309158
+old [description:"copier dossier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"8e3aee09-1c3f-4239-a2ea-c18f9aec8575"]
+new [description:"copier dossier" end:"1604309158" entry:"1604072346" modified:"1604309158" project:"systèmes_informatiques" status:"completed" uuid:"8e3aee09-1c3f-4239-a2ea-c18f9aec8575"]
+---
+time 1604309158
+old [description:"dossier dans dossier" entry:"1604072346" modified:"1604072346" project:"systèmes_informatiques" status:"pending" uuid:"4909a911-f5d8-434f-96d0-f6acfb4a671c"]
+new [description:"dossier dans dossier" end:"1604309158" entry:"1604072346" modified:"1604309158" project:"systèmes_informatiques" status:"completed" uuid:"4909a911-f5d8-434f-96d0-f6acfb4a671c"]
+---
+time 1604309158
+old [description:"dossier dans fichier" entry:"1604072347" modified:"1604072347" project:"systèmes_informatiques" status:"pending" uuid:"84ff77d8-ba67-4e34-9256-4ba2c956ec33"]
+new [description:"dossier dans fichier" end:"1604309158" entry:"1604072347" modified:"1604309158" project:"systèmes_informatiques" status:"completed" uuid:"84ff77d8-ba67-4e34-9256-4ba2c956ec33"]
+---
+time 1604309158
+old [description:"control destination" entry:"1604072347" modified:"1604072347" project:"systèmes_informatiques" status:"pending" uuid:"64dfdd35-99e4-440f-a7d2-da983348c86f"]
+new [description:"control destination" end:"1604309158" entry:"1604072347" modified:"1604309158" project:"systèmes_informatiques" status:"completed" uuid:"64dfdd35-99e4-440f-a7d2-da983348c86f"]
+---
+time 1604309158
+old [description:"est un dossier" entry:"1604072347" modified:"1604072347" project:"systèmes_informatiques" status:"pending" uuid:"81563826-17ee-4dd4-accc-7e9ce8139de8"]
+new [description:"est un dossier" end:"1604309158" entry:"1604072347" modified:"1604309158" project:"systèmes_informatiques" status:"completed" uuid:"81563826-17ee-4dd4-accc-7e9ce8139de8"]
+---
+time 1604309224
+old [description:"faire un F qui concèrve l'instruction de compilation ou interprétation" entry:"1602848872" modified:"1602848872" status:"pending" uuid:"9a35f4ef-f1ab-4190-8fdb-e2b965bb44bf"]
+new [description:"faire un F qui concèrve l'instruction de compilation ou interprétation" end:"1604309221" entry:"1602848872" modified:"1604309224" status:"completed" uuid:"9a35f4ef-f1ab-4190-8fdb-e2b965bb44bf"]
+---
+time 1604309224
+old [description:"definition luminence" entry:"1603193915" modified:"1603193915" status:"pending" uuid:"27333224-6fe8-4e99-ae34-d0aa09362414"]
+new [description:"definition luminence" end:"1604309224" entry:"1603193915" modified:"1604309224" status:"completed" uuid:"27333224-6fe8-4e99-ae34-d0aa09362414"]
+---
+time 1604309224
+old [description:"csaw" entry:"1603291356" modified:"1603291356" status:"pending" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
+new [description:"csaw" end:"1604309224" entry:"1603291356" modified:"1604309224" status:"completed" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
+---
