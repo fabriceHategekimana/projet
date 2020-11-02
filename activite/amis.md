@@ -1,8 +1,6 @@
 Comment se faire des amis
 =========================
 
-Mon but est d'être influent et d'avoir des amis.
-Je ne veut pas être famous comme une star ou un influenceur.
 Je veux juste être capable de communiquer avec les gens et pouvoir rassembler les foules quand c'est nécessaire.
 
 ## Outils:

@@ -32417,6 +32417,7 @@ time 1603058822
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928522" imask:"0" modified:"1602928519" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
 new [description:"Devoir maman Lady" due:"1602914400" end:"1603058822" entry:"1602928522" imask:"0" modified:"1603058822" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"4c54c37b-1728-4e3f-b161-2fe3ec696de6"]
 ---
+<<<<<<< HEAD
 time 1603193761
 new [description:"programme Siloé" due:"1603749600" entry:"1603193761" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"15d46c01-7776-487c-bd2f-6e27a6c116af"]
 ---
@@ -32426,4 +32427,85 @@ new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++
 ---
 time 1603193915
 new [description:"definition luminence" entry:"1603193915" modified:"1603193915" status:"pending" uuid:"27333224-6fe8-4e99-ae34-d0aa09362414"]
+=======
+time 1603135770
+old [description:"inscription aux cours" due:"1603087200" entry:"1602927180" modified:"1602927859" priority:"H" scheduled:"1603058400" status:"pending" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+new [description:"inscription aux cours" due:"1603087200" end:"1603135770" entry:"1602927180" modified:"1603135770" priority:"H" scheduled:"1603058400" status:"completed" uuid:"224314a9-4129-4a22-9da3-802a5d5987dc"]
+---
+time 1603142408
+new [description:"ajouter article" entry:"1603142408" modified:"1603142408" project:"satom" status:"pending" uuid:"93064bad-9bb0-4308-8b42-396471b7d95d"]
+---
+time 1603142512
+new [description:"créer un custom schema" entry:"1603142512" modified:"1603142512" project:"satom" status:"pending" uuid:"05d225cf-d18b-42d2-8d42-b72108f73db9"]
+---
+time 1603142640
+new [description:"fonction de recherche rapide" entry:"1603142640" modified:"1603142640" project:"satom" status:"pending" uuid:"7757c342-000d-4697-b3c7-e4d165a00f65"]
+---
+time 1603142679
+new [description:"régler le problème de nombre investors" entry:"1603142679" modified:"1603142679" project:"satom" status:"pending" uuid:"f75f488e-1b2f-4d23-9e19-3e41659639a1"]
+---
+time 1603149431
+new [description:"programme Siloé" due:"1603749600" entry:"1603149431" imask:"3" modified:"1602679436" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"ea962898-3faf-464e-b26a-674ef9fd23fb"]
+---
+time 1603149431
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-" modified:"1602679436" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++--" modified:"1603149431" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1603291356
+new [description:"csaw" entry:"1603291356" modified:"1603291356" status:"pending" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
+---
+time 1603399323
+old [description:"tp3 IA" due:"1603346400" entry:"1602683093" modified:"1602683093" status:"pending" uuid:"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"]
+new [description:"tp3 IA" due:"1603346400" end:"1603399323" entry:"1602683093" modified:"1603399323" status:"completed" uuid:"0d3d548f-cb82-4ba8-a06e-8c40c43e37fd"]
+---
+time 1603399329
+old [description:"TP2 Imagerie numérique" due:"1603346400" entry:"1602682829" modified:"1602682829" status:"pending" uuid:"fc3dd6bd-2089-4f82-a61f-01754929ca77"]
+new [description:"TP2 Imagerie numérique" due:"1603346400" end:"1603399329" entry:"1602682829" modified:"1603399329" status:"completed" uuid:"fc3dd6bd-2089-4f82-a61f-01754929ca77"]
+---
+time 1603399337
+old [description:"pas cours de parallélisme" due:"1603346400" entry:"1602756169" modified:"1602756169" status:"pending" uuid:"014465ff-82cf-4cfe-9a6f-fce8003e0657"]
+new [description:"pas cours de parallélisme" due:"1603346400" end:"1603399337" entry:"1602756169" modified:"1603399337" status:"completed" uuid:"014465ff-82cf-4cfe-9a6f-fce8003e0657"]
+---
+time 1603458187
+old [description:"questionnaire adopt a skill" due:"1603432800" entry:"1602938995" modified:"1602938995" status:"pending" uuid:"1071446e-f6b0-4ccd-904c-a1d654a76b1c"]
+new [description:"questionnaire adopt a skill" due:"1603432800" end:"1603458187" entry:"1602938995" modified:"1603458187" status:"completed" uuid:"1071446e-f6b0-4ccd-904c-a1d654a76b1c"]
+---
+time 1603458312
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+-" modified:"1603058822" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++" modified:"1603458312" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1603458312
+old [description:"Devoir maman Lady" due:"1603519200" entry:"1602928522" imask:"1" modified:"1602928519" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b1391e9d-1ee7-4afb-99cf-a64b68fc10e7"]
+new [description:"Devoir maman Lady" due:"1603519200" end:"1603458312" entry:"1602928522" imask:"1" modified:"1603458312" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"b1391e9d-1ee7-4afb-99cf-a64b68fc10e7"]
+---
+time 1603458516
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++--" modified:"1603149431" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++-" modified:"1603458516" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1603458516
+old [description:"programme Siloé" due:"1603144800" entry:"1602576126" imask:"2" modified:"1601965932" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"079ce56b-e31b-487d-a17a-f105a93e6ed4"]
+new [description:"programme Siloé" due:"1603144800" end:"1603458516" entry:"1602576126" imask:"2" modified:"1603458516" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"079ce56b-e31b-487d-a17a-f105a93e6ed4"]
+---
+time 1603522997
+new [description:"Devoir maman Lady" due:"1604124000" entry:"1603522997" imask:"2" modified:"1603458312" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"44317f72-2c5d-4231-a6c3-5b7154ad7098"]
+---
+time 1603522997
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++" modified:"1603458312" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++-" modified:"1603522997" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1603547767
+old [description:"créer un custom schema" entry:"1603142512" modified:"1603142512" project:"satom" status:"pending" uuid:"05d225cf-d18b-42d2-8d42-b72108f73db9"]
+new [description:"créer un custom schema" end:"1603547767" entry:"1603142512" modified:"1603547767" project:"satom" status:"completed" uuid:"05d225cf-d18b-42d2-8d42-b72108f73db9"]
+---
+time 1603709033
+old [description:"Tp2 compilateur et interprète" due:"1603609200" entry:"1602681280" modified:"1602681280" status:"pending" uuid:"2efb5813-a02d-47a2-a7f5-ae56d078dae0"]
+new [description:"Tp2 compilateur et interprète" due:"1603609200" end:"1603709033" entry:"1602681280" modified:"1603709033" status:"completed" uuid:"2efb5813-a02d-47a2-a7f5-ae56d078dae0"]
+---
+time 1603753093
+new [description:"programme Siloé" due:"1604354400" entry:"1603753093" imask:"4" modified:"1603458516" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+---
+time 1603753093
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++-" modified:"1603458516" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++--" modified:"1603753093" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+>>>>>>> 0b78eb201cce06dbfbb9646425c8ee1255f7653f
 ---

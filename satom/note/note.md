@@ -33,6 +33,21 @@ investments:{
 }
 ```
 
+## articles
+![articles](../images/articles.png)
+```
+articles:{ 
+	title: title,
+	author: author,
+	id: id,
+	companies: list of 'company/[company_Name]',
+	pdate: '2012-06-13',
+	source: journal,
+	title: title,
+	url: url,
+}
+```
+
 Code qui marche
 
 ```
