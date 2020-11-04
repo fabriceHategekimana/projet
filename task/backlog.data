@@ -9264,3 +9264,4 @@
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"+++---","modified":"20201103T125951Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
 {"description":"programme Siloé","due":"20201109T220000Z","entry":"20201103T125951Z","imask":5,"modified":"20201029T124308Z","parent":"54713aeb-e313-4f42-a704-14ff185f756f","recur":"weekly","status":"pending","until":"20201231T230000Z","uuid":"c85780d0-cb5f-4c38-8d85-dbb66e27439d"}
 {"description":"programme Siloé","due":"20201005T220000Z","entry":"20201004T193726Z","mask":"++++--","modified":"20201103T125951Z","recur":"weekly","status":"recurring","until":"20201231T230000Z","uuid":"54713aeb-e313-4f42-a704-14ff185f756f"}
+{"description":"TP4 IA","due":"20201106T070000Z","entry":"20201104T112055Z","modified":"20201104T112055Z","status":"pending","uuid":"1e861917-52b4-4684-8837-abe1a7613ba4"}
