@@ -32869,3 +32869,340 @@ time 1604309224
 old [description:"csaw" entry:"1603291356" modified:"1603291356" status:"pending" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
 new [description:"csaw" end:"1604309224" entry:"1603291356" modified:"1604309224" status:"completed" uuid:"d850679d-0cf1-44cf-9949-21cc0d0e3f54"]
 ---
+time 1604406919
+new [description:"programme Siloé" due:"1604959200" entry:"1604406919" imask:"5" modified:"1604309141" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"4b649a41-b3e8-4e97-a7a8-db301c6a3693"]
+---
+time 1604406919
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-++" modified:"1604309141" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-++-" modified:"1604406919" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604406919
+new [description:"programme Siloé" due:"1604959200" entry:"1604406919" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"c2320c63-5e68-43c3-a9ce-9d2a58b29acc"]
+---
+time 1604406919
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++-++-" modified:"1604406919" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604406919" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604406919
+new [description:"programme Siloé" due:"1604959200" entry:"1604406919" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"db1995eb-eac8-4a94-89cb-c6b740920f8b"]
+---
+time 1604406919
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604406919" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604406919" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408243
+new [description:"programme Siloé" due:"1604959200" entry:"1604408243" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"50ddf741-f88b-4192-89c6-6c9a1637b23c"]
+---
+time 1604408243
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604406919" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408243" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408243
+new [description:"programme Siloé" due:"1604959200" entry:"1604408243" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"70852f87-229f-433a-b87f-1eb2f50cd3a8"]
+---
+time 1604408243
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408243" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408243" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408261
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408243" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408261" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408261
+old [description:"programme Siloé" due:"1604959200" entry:"1604406919" imask:"5" modified:"1604309141" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"4b649a41-b3e8-4e97-a7a8-db301c6a3693"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408255" entry:"1604406919" imask:"5" modified:"1604408261" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"4b649a41-b3e8-4e97-a7a8-db301c6a3693"]
+---
+time 1604408261
+old [description:"programme Siloé" due:"1604959200" entry:"1604406919" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"c2320c63-5e68-43c3-a9ce-9d2a58b29acc"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408261" entry:"1604406919" imask:"5" modified:"1604408261" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"c2320c63-5e68-43c3-a9ce-9d2a58b29acc"]
+---
+time 1604408261
+old [description:"programme Siloé" due:"1604959200" entry:"1604406919" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"db1995eb-eac8-4a94-89cb-c6b740920f8b"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408261" entry:"1604406919" imask:"5" modified:"1604408261" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"db1995eb-eac8-4a94-89cb-c6b740920f8b"]
+---
+time 1604408264
+new [description:"programme Siloé" due:"1604959200" entry:"1604408264" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"dc4b4dc2-d54d-4354-a617-9161251bbac9"]
+---
+time 1604408264
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408261" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408264" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408264
+new [description:"programme Siloé" due:"1604959200" entry:"1604408264" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"d7715e54-9e4e-42ed-abe4-687031b23b37"]
+---
+time 1604408264
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408264" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408264" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408273
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408264" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408273" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408273
+old [description:"programme Siloé" due:"1604959200" entry:"1604408243" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"50ddf741-f88b-4192-89c6-6c9a1637b23c"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408272" entry:"1604408243" imask:"5" modified:"1604408273" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"50ddf741-f88b-4192-89c6-6c9a1637b23c"]
+---
+time 1604408273
+old [description:"programme Siloé" due:"1604959200" entry:"1604408243" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"70852f87-229f-433a-b87f-1eb2f50cd3a8"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408273" entry:"1604408243" imask:"5" modified:"1604408273" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"70852f87-229f-433a-b87f-1eb2f50cd3a8"]
+---
+time 1604408273
+old [description:"programme Siloé" due:"1604959200" entry:"1604408264" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"dc4b4dc2-d54d-4354-a617-9161251bbac9"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408273" entry:"1604408264" imask:"5" modified:"1604408273" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"dc4b4dc2-d54d-4354-a617-9161251bbac9"]
+---
+time 1604408275
+new [description:"programme Siloé" due:"1604959200" entry:"1604408275" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"9c142996-cbec-41b2-90b6-56d6e7ebfa6b"]
+---
+time 1604408275
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408273" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408275" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408275
+new [description:"programme Siloé" due:"1604959200" entry:"1604408275" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"644ab623-b726-43ae-9b16-cb364f40ead5"]
+---
+time 1604408275
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408275" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408275" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408292
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408275" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408292" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408292
+old [description:"programme Siloé" due:"1604959200" entry:"1604408264" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"d7715e54-9e4e-42ed-abe4-687031b23b37"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408290" entry:"1604408264" imask:"5" modified:"1604408292" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"d7715e54-9e4e-42ed-abe4-687031b23b37"]
+---
+time 1604408292
+old [description:"programme Siloé" due:"1604959200" entry:"1604408275" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"9c142996-cbec-41b2-90b6-56d6e7ebfa6b"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408292" entry:"1604408275" imask:"5" modified:"1604408292" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"9c142996-cbec-41b2-90b6-56d6e7ebfa6b"]
+---
+time 1604408292
+old [description:"programme Siloé" due:"1604959200" entry:"1604408275" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"644ab623-b726-43ae-9b16-cb364f40ead5"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408292" entry:"1604408275" imask:"5" modified:"1604408292" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"644ab623-b726-43ae-9b16-cb364f40ead5"]
+---
+time 1604408293
+new [description:"programme Siloé" due:"1604959200" entry:"1604408293" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"992338b6-dda6-41fc-8dbf-999abc33195a"]
+---
+time 1604408293
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408292" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408293" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408293
+new [description:"programme Siloé" due:"1604959200" entry:"1604408293" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"a495e8bd-aa70-4dbd-90aa-0a12a39712eb"]
+---
+time 1604408293
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408293" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408293" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408301
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408293" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408301" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408301
+old [description:"programme Siloé" due:"1604959200" entry:"1604408293" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"992338b6-dda6-41fc-8dbf-999abc33195a"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408301" entry:"1604408293" imask:"5" modified:"1604408301" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"992338b6-dda6-41fc-8dbf-999abc33195a"]
+---
+time 1604408301
+old [description:"programme Siloé" due:"1604959200" entry:"1604408293" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"a495e8bd-aa70-4dbd-90aa-0a12a39712eb"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408301" entry:"1604408293" imask:"5" modified:"1604408301" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"a495e8bd-aa70-4dbd-90aa-0a12a39712eb"]
+---
+time 1604408305
+new [description:"programme Siloé" due:"1604959200" entry:"1604408305" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"d9b9ae57-ec50-4334-b52f-48bf5a4186e9"]
+---
+time 1604408305
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408301" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408305" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408305
+new [description:"programme Siloé" due:"1604959200" entry:"1604408305" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"2b7a1e3e-652d-4e65-8d0c-9b1f55780d75"]
+---
+time 1604408305
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408305" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408305" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408314
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408305" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408314" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408314
+old [description:"programme Siloé" due:"1604959200" entry:"1604408305" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"d9b9ae57-ec50-4334-b52f-48bf5a4186e9"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408314" entry:"1604408305" imask:"5" modified:"1604408314" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"d9b9ae57-ec50-4334-b52f-48bf5a4186e9"]
+---
+time 1604408314
+old [description:"programme Siloé" due:"1604959200" entry:"1604408305" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"2b7a1e3e-652d-4e65-8d0c-9b1f55780d75"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408314" entry:"1604408305" imask:"5" modified:"1604408314" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"2b7a1e3e-652d-4e65-8d0c-9b1f55780d75"]
+---
+time 1604408315
+new [description:"programme Siloé" due:"1604959200" entry:"1604408315" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"ab2b4f8b-9310-427a-baff-f04ee83cc943"]
+---
+time 1604408315
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408314" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408315" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408315
+new [description:"programme Siloé" due:"1604959200" entry:"1604408315" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"e11884d8-268c-4bed-b2db-d46d208f17b3"]
+---
+time 1604408315
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408315" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408315" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408338
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408315" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++++-" modified:"1604408338" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408338
+old [description:"programme Siloé" due:"1604354400" entry:"1603753093" imask:"4" modified:"1603458516" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+new [description:"programme Siloé" due:"1604354400" end:"1604408338" entry:"1603753093" imask:"4" modified:"1604408338" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"a46801b0-4d29-44fd-9b71-94cd1d9ed390"]
+---
+time 1604408338
+old [description:"TD6 GL" due:"1604300400" entry:"1603880701" modified:"1603880701" status:"pending" uuid:"72a288f3-6568-4eb1-a06a-cbc2baa3416c"]
+new [description:"TD6 GL" due:"1604300400" end:"1604408338" entry:"1603880701" modified:"1604408338" status:"completed" uuid:"72a288f3-6568-4eb1-a06a-cbc2baa3416c"]
+---
+time 1604408339
+new [description:"programme Siloé" due:"1604959200" entry:"1604408339" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"fea12c0a-e385-4d94-95e4-2f74b4cf2f7c"]
+---
+time 1604408339
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++++-" modified:"1604408338" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408339" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408339
+new [description:"programme Siloé" due:"1604959200" entry:"1604408339" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"b7e51409-74ec-4de8-8fbb-9c08e4e02bb2"]
+---
+time 1604408339
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408339" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408339" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408356
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408339" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408356" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408356
+old [description:"programme Siloé" due:"1604959200" entry:"1604408315" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"ab2b4f8b-9310-427a-baff-f04ee83cc943"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408354" entry:"1604408315" imask:"5" modified:"1604408356" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"ab2b4f8b-9310-427a-baff-f04ee83cc943"]
+---
+time 1604408356
+old [description:"programme Siloé" due:"1604959200" entry:"1604408315" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"e11884d8-268c-4bed-b2db-d46d208f17b3"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408356" entry:"1604408315" imask:"5" modified:"1604408356" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"e11884d8-268c-4bed-b2db-d46d208f17b3"]
+---
+time 1604408356
+old [description:"programme Siloé" due:"1604959200" entry:"1604408339" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"fea12c0a-e385-4d94-95e4-2f74b4cf2f7c"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408356" entry:"1604408339" imask:"5" modified:"1604408356" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"fea12c0a-e385-4d94-95e4-2f74b4cf2f7c"]
+---
+time 1604408356
+old [description:"programme Siloé" due:"1604959200" entry:"1604408339" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"b7e51409-74ec-4de8-8fbb-9c08e4e02bb2"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408356" entry:"1604408339" imask:"5" modified:"1604408356" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"b7e51409-74ec-4de8-8fbb-9c08e4e02bb2"]
+---
+time 1604408361
+new [description:"programme Siloé" due:"1604959200" entry:"1604408361" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"1508a6b7-942b-447b-b8b4-16652d43b452"]
+---
+time 1604408361
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408356" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408361" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408361
+new [description:"programme Siloé" due:"1604959200" entry:"1604408361" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"7b3e7a27-20ee-493c-9b71-25d99d38e599"]
+---
+time 1604408361
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408361" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408361" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408371
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408361" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408371" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408371
+old [description:"programme Siloé" due:"1604959200" entry:"1604408361" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"1508a6b7-942b-447b-b8b4-16652d43b452"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408371" entry:"1604408361" imask:"5" modified:"1604408371" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"1508a6b7-942b-447b-b8b4-16652d43b452"]
+---
+time 1604408371
+old [description:"programme Siloé" due:"1604959200" entry:"1604408361" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"7b3e7a27-20ee-493c-9b71-25d99d38e599"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408371" entry:"1604408361" imask:"5" modified:"1604408371" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"7b3e7a27-20ee-493c-9b71-25d99d38e599"]
+---
+time 1604408372
+new [description:"programme Siloé" due:"1604959200" entry:"1604408372" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"5fed5e7f-1c3f-4e14-8df9-930f93491b49"]
+---
+time 1604408372
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408371" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408372" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408372
+new [description:"programme Siloé" due:"1604959200" entry:"1604408372" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"29943ad6-44dc-4a02-97a9-8a175895b519"]
+---
+time 1604408372
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408372" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408372" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408377
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408372" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408377" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408377
+old [description:"programme Siloé" due:"1604959200" entry:"1604408372" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"5fed5e7f-1c3f-4e14-8df9-930f93491b49"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408377" entry:"1604408372" imask:"5" modified:"1604408377" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"5fed5e7f-1c3f-4e14-8df9-930f93491b49"]
+---
+time 1604408377
+old [description:"programme Siloé" due:"1604959200" entry:"1604408372" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"29943ad6-44dc-4a02-97a9-8a175895b519"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408377" entry:"1604408372" imask:"5" modified:"1604408377" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"29943ad6-44dc-4a02-97a9-8a175895b519"]
+---
+time 1604408378
+new [description:"programme Siloé" due:"1604959200" entry:"1604408378" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"f5543a38-9f29-4cdb-b17d-f007a8854912"]
+---
+time 1604408378
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408377" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408378" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408378
+new [description:"programme Siloé" due:"1604959200" entry:"1604408378" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"725379b1-13e7-411f-8a75-8104c1c4542c"]
+---
+time 1604408378
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408378" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408378" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408383
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408378" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408383" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408383
+old [description:"programme Siloé" due:"1604959200" entry:"1604408378" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"f5543a38-9f29-4cdb-b17d-f007a8854912"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408383" entry:"1604408378" imask:"5" modified:"1604408383" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"f5543a38-9f29-4cdb-b17d-f007a8854912"]
+---
+time 1604408383
+old [description:"programme Siloé" due:"1604959200" entry:"1604408378" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"725379b1-13e7-411f-8a75-8104c1c4542c"]
+new [description:"programme Siloé" due:"1604959200" end:"1604408383" entry:"1604408378" imask:"5" modified:"1604408383" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"completed" until:"1609455600" uuid:"725379b1-13e7-411f-8a75-8104c1c4542c"]
+---
+time 1604408384
+new [description:"programme Siloé" due:"1604959200" entry:"1604408384" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"9ea0af9b-2e9a-425b-9d31-dc4e11345bd1"]
+---
+time 1604408384
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++-+" modified:"1604408383" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408384" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408384
+new [description:"programme Siloé" due:"1604959200" entry:"1604408384" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"0df8cc24-903e-4a8d-91b5-50eb42e9e39b"]
+---
+time 1604408384
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408384" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408384" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408390
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++-" modified:"1604132575" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++" modified:"1604408390" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1604408390
+old [description:"Devoir maman Lady" due:"1604728800" entry:"1604132575" imask:"3" modified:"1604064637" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b031aef3-4168-49e1-b65c-5262856f4e60"]
+new [description:"Devoir maman Lady" due:"1604728800" end:"1604408390" entry:"1604132575" imask:"3" modified:"1604408390" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"b031aef3-4168-49e1-b65c-5262856f4e60"]
+---
+time 1604408391
+new [description:"programme Siloé" due:"1604959200" entry:"1604408391" imask:"5" modified:"1603753093" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"8be83a14-4fb2-4e29-8488-0f3a7c07035f"]
+---
+time 1604408391
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408384" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408391" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---
+time 1604408391
+new [description:"programme Siloé" due:"1604959200" entry:"1604408391" imask:"5" modified:"1603975388" parent:"54713aeb-e313-4f42-a704-14ff185f756f" recur:"weekly" status:"pending" until:"1609455600" uuid:"c85780d0-cb5f-4c38-8d85-dbb66e27439d"]
+---
+time 1604408391
+old [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"+++---" modified:"1604408391" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+new [description:"programme Siloé" due:"1601935200" entry:"1601840246" mask:"++++--" modified:"1604408391" recur:"weekly" status:"recurring" until:"1609455600" uuid:"54713aeb-e313-4f42-a704-14ff185f756f"]
+---

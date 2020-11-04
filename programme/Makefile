@@ -1,6 +1,6 @@
 
 PROJET=project:programme
-all: start
+all: note
  
 start: FORCE
 	vim ~/.config/libreoffice/4/user/basic/Standard/Module2.xba

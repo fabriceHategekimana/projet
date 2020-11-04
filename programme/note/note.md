@@ -1,6 +1,10 @@
-Le but de ce projet est de créer une macro libreoffice pour créer facilement les diapos des programmes
+## outils pour trouver des suites compatibles
+Cet outils doit permettre de pouvoir trouver des enchaînements compatibles
 
+Pour ce faire, il faut une structure de données
 
-Verse #  v# [empty]
-Chorus	c (=refrain)
-Bridge	b
+- Chants:
+	- Titre
+	- Tessiture
+	- Bornes temporelles ([debut, fin])
+	- Thème 

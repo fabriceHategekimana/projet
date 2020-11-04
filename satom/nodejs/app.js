@@ -1,27 +1,13 @@
-const neo4j = require('neo4j-driver')
-
-const auth= "Jenny";
-const password= "Jenny";
-const uri="localhost:7474/browser/";
-
-const driver = neo4j.driver(uri, neo4j.auth.basic(auth, password))
-const session = driver.session()
-const personName = 'Alice'
-
-async function myFunction(){
-	try {
-		  const result = await session.run(
-			      'CREATE (a:Person {name: $name}) RETURN a',
-			      { name: personName }
-			    )
-
-		  const singleRecord = result.records[0]
-		  const node = singleRecord.get(0)
-
-		  console.log(node.properties.name)
-	} finally {
-		  await session.close()
-	}
-	// on application exit:
-	 await driver.close()
+var r=require("request");
+var txUrl = "http://localhost:7474/";
+function cypher(query,params,cb) {
+	  r.get({uri:txUrl,
+		            json:{statements:[{statement:query,parameters:params}]}},
+		           function(err,res) { cb(err,res.body)}).auth("neo4j", "neo4j")
 }
+
+var query="MATCH (n:User) RETURN n, labels(n) as l LIMIT {limit}"
+var params={limit: 10}
+var cb=function(err,data) { console.log(JSON.stringify(data)) }
+
+cypher(query,params,cb)

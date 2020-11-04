@@ -1,6 +1,45 @@
 Motivation
 ==========
 
+## Ouverture du projet
+**`But`:**
+Comprendre la motivation en profondeur.
+Comment:
+	- Définition:
+	- expérience (liste)
+	- labo
+**`But`:**
+Appliquer ces connaissances sur moi.
+Comment:
+	- Augmenter ma motivation
+	- Maintenir ma motivation
+**`But`:**
+Motiver les autres
+	- Augmenter leur motivation
+	- Maintenir leur motivation
+
+Outils de mesure de la motivation:
+émotions: car réaction par rapport à la fonction.
+
+### Comprendre la motivation en profondeur
+Définition:
+- Dictionnaire: 
+  	- Ce qui motive un acte, un comportement.
+	- Ce qui pousse qqn à agir.
+- Personnel:
+	- Force qui Produit des émotions positives
+- Internet:
+	- Niveau d'engagement dans une activité
+	
+Finalement la motivation est une force intérieur qui pousse au mouvement, à une action particulière.
+En effet, on a besoin de motivation pour faire une action. Comme par exemple j'en cherche car j'en ai besoin pour mon travail (=mes obligations).
+---------------------------------------------
+Ce constat:
+On manque de motivation pour nos obligation.
+On manque de temps pour nos rêves.
+---------------------------------------------
+
+
 ## Outils
 motivation (vidéo)
 5 minutes (Starteur)

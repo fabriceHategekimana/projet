@@ -2,13 +2,10 @@ Light Motive
 ============
 
 ## Connaissance de soi
-
 Rwandais
 Noir (je sais que je ne suis pas avantagé de part mon origine)
+J'étais auparavant un réfugier. J'ai connu la jalousie et l'envie.
 
-Désir d'être accepté
-
-[[Visionnaire]]
 Entrainé
 Être un [[parent]]
 

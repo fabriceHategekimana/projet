@@ -6,7 +6,6 @@ Le but de cette documentation est de pouvoir canaliser ma penser et la diriger d
 Voici quelques liens pour commencer:
 [[buts]]
 [[motivation]]
-[[methodes]]
 [[moi]]
 
 Quel est le but de cette documentation.
