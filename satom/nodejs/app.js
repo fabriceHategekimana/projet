@@ -1,5 +1,5 @@
 var r=require("request");
-var txUrl = "http://localhost:7474/";
+var txUrl = "http://localhost:7474/db/neo4j/tx";
 function cypher(query,params,cb) {
 	  r.get({uri:txUrl,
 		            json:{statements:[{statement:query,parameters:params}]}},

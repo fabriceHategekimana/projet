@@ -4,7 +4,7 @@ neo4j
 `But`:
 Utilisation des panama papers pour importer les datas.
 
-Connaître les bases ISIJ: Base de données pour les fraud
+Connaître les bases ISIJ: Base de données pour les fraude
 Connaître le datamodel 
 Créer la fonction d'import
 Créer la fonction de marshal
