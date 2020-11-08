@@ -33221,3 +33221,33 @@ time 1604673889
 old [description:"TP3 IN" due:"1604559600" entry:"1603881208" modified:"1603881208" status:"pending" uuid:"3e242e2c-df7b-49c5-98e5-77d414c32d3b"]
 new [description:"TP3 IN" due:"1604559600" end:"1604673889" entry:"1603881208" modified:"1604673889" status:"completed" uuid:"3e242e2c-df7b-49c5-98e5-77d414c32d3b"]
 ---
+time 1604736044
+new [description:"Devoir maman Lady" due:"1605333600" entry:"1604736044" imask:"4" modified:"1604408390" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"a6dbf8d1-6494-4381-b67b-3940c0afc803"]
+---
+time 1604736044
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++" modified:"1604408390" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++-" modified:"1604736044" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1604800553
+old [description:"1 Panorama" due:"1604473200" entry:"1604065211" modified:"1604065211" status:"pending" uuid:"46053ba2-a430-4c94-a5ce-010f97c52abb"]
+new [description:"1 Panorama" due:"1604473200" end:"1604800553" entry:"1604065211" modified:"1604800553" status:"completed" uuid:"46053ba2-a430-4c94-a5ce-010f97c52abb"]
+---
+time 1604800678
+new [description:"cours numpy" due:"1605337200" entry:"1604800678" modified:"1604800678" status:"pending" uuid:"b33b8559-7f0b-4b20-a3ec-a9ac86e2a5b8"]
+---
+time 1604800756
+new [description:"TP5 IN" due:"1605250800" entry:"1604800756" modified:"1604800756" status:"pending" uuid:"1cc50b2e-9e32-46df-8bf6-dc2717069d49"]
+---
+time 1604800794
+new [description:"TP3PA" due:"1605682800" entry:"1604800794" modified:"1604800794" status:"pending" uuid:"c61b390e-cea3-4177-8368-c1aeef47835e"]
+---
+time 1604800867
+new [description:"TP4SI" due:"1604991600" entry:"1604800867" modified:"1604800867" status:"pending" uuid:"5844dc68-d820-41a8-ad44-08f0e37451cb"]
+---
+time 1604800988
+old [description:"TP5 IN" due:"1605250800" entry:"1604800756" modified:"1604800756" status:"pending" uuid:"1cc50b2e-9e32-46df-8bf6-dc2717069d49"]
+new [description:"TP5 IA" due:"1605250800" entry:"1604800756" modified:"1604800988" status:"pending" uuid:"1cc50b2e-9e32-46df-8bf6-dc2717069d49"]
+---
+time 1604801290
+new [description:"TP3CI" due:"1605423600" entry:"1604801290" modified:"1604801290" status:"pending" uuid:"0ff218dd-7b36-41dd-b691-d4d980060a28"]
+---

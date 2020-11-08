@@ -9268,3 +9268,12 @@
 {"description":"TP4 IA","due":"20201106T070000Z","end":"20201106T144426Z","entry":"20201104T112055Z","modified":"20201106T144426Z","status":"completed","uuid":"1e861917-52b4-4684-8837-abe1a7613ba4"}
 {"description":"TP3 SI","due":"20201103T070000Z","end":"20201106T144434Z","entry":"20201030T133906Z","modified":"20201106T144434Z","status":"completed","uuid":"49a12c8d-3a5e-4674-a0ba-b06101bf80f0"}
 {"description":"TP3 IN","due":"20201105T070000Z","end":"20201106T144449Z","entry":"20201028T103328Z","modified":"20201106T144449Z","status":"completed","uuid":"3e242e2c-df7b-49c5-98e5-77d414c32d3b"}
+{"description":"Devoir maman Lady","due":"20201114T060000Z","entry":"20201107T080044Z","imask":4,"modified":"20201103T125950Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"a6dbf8d1-6494-4381-b67b-3940c0afc803"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++-","modified":"20201107T080044Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"1 Panorama","due":"20201104T070000Z","end":"20201108T015553Z","entry":"20201030T134011Z","modified":"20201108T015553Z","status":"completed","uuid":"46053ba2-a430-4c94-a5ce-010f97c52abb"}
+{"description":"cours numpy","due":"20201114T070000Z","entry":"20201108T015758Z","modified":"20201108T015758Z","status":"pending","uuid":"b33b8559-7f0b-4b20-a3ec-a9ac86e2a5b8"}
+{"description":"TP5 IN","due":"20201113T070000Z","entry":"20201108T015916Z","modified":"20201108T015916Z","status":"pending","uuid":"1cc50b2e-9e32-46df-8bf6-dc2717069d49"}
+{"description":"TP3PA","due":"20201118T070000Z","entry":"20201108T015954Z","modified":"20201108T015954Z","status":"pending","uuid":"c61b390e-cea3-4177-8368-c1aeef47835e"}
+{"description":"TP4SI","due":"20201110T070000Z","entry":"20201108T020107Z","modified":"20201108T020107Z","status":"pending","uuid":"5844dc68-d820-41a8-ad44-08f0e37451cb"}
+{"description":"TP5 IA","due":"20201113T070000Z","entry":"20201108T015916Z","modified":"20201108T020308Z","status":"pending","uuid":"1cc50b2e-9e32-46df-8bf6-dc2717069d49"}
+{"description":"TP3CI","due":"20201115T070000Z","entry":"20201108T020810Z","modified":"20201108T020810Z","status":"pending","uuid":"0ff218dd-7b36-41dd-b691-d4d980060a28"}
