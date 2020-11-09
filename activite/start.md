@@ -12,3 +12,4 @@ Quel est le but de cette documentation.
 Elle est comme un carnet: le but est de canaliser mes pensés.
 Cette documentation me permet d'enregistrer et de raisonner sur des choses qui sont importantes pour moi.
 
+[messages](messages)

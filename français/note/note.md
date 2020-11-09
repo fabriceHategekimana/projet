@@ -7,7 +7,7 @@ Suffixes et préfixes
 
 Dictée
 Conjugaison
-Expressions
+Débat
 Mois
 
 [Interview](Interview)
