@@ -1,4 +1,4 @@
-const neo4j = require('neo4j-driver')
+const neo4j = require('neo4j-driver');
 var uri = "neo4j://localhost:7687";
 var user = "neo4j";
 var password = "neo4j";
