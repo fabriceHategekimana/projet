@@ -9278,3 +9278,6 @@
 {"description":"TP5 IA","due":"20201113T070000Z","entry":"20201108T015916Z","modified":"20201108T020308Z","status":"pending","uuid":"1cc50b2e-9e32-46df-8bf6-dc2717069d49"}
 {"description":"TP3CI","due":"20201115T070000Z","entry":"20201108T020810Z","modified":"20201108T020810Z","status":"pending","uuid":"0ff218dd-7b36-41dd-b691-d4d980060a28"}
 {"description":"Réu GBU Général","due":"20201123T070000Z","entry":"20201109T150813Z","modified":"20201109T150813Z","status":"pending","uuid":"a0987769-a53e-4bcf-8e85-d5b0500d6f24"}
+{"description":"TP4SI","due":"20201110T070000Z","end":"20201110T160607Z","entry":"20201108T020107Z","modified":"20201110T160607Z","status":"completed","uuid":"5844dc68-d820-41a8-ad44-08f0e37451cb"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++","modified":"20201110T160618Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20201114T060000Z","end":"20201110T160618Z","entry":"20201107T080044Z","imask":4,"modified":"20201110T160618Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"a6dbf8d1-6494-4381-b67b-3940c0afc803"}

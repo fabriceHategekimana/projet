@@ -4,13 +4,18 @@ O: observation
 V: valeur (aime/aime pas)
 E: expérience (vécu/sensation)
 
+## circonstanciel
+température
+Fake news
+Memes
+
 ## Questions intéressantes
 Pourquoi les amitiés s'effondrent?
 Quelle est la meilleure façon de se faire des amis?
 Quel est le pire type d'ami?
 Qu'est-ce qui différencie les vrai amis des connaissances?
 À qui ressembles - tu le plus dans ta famille?
-Quelle est l'importance des lien familiaux?
+Quelle est l'importance des liens familiaux?
 Comment ta famille a-t-elle façonné ta personnalité?
 Quel est l'endroit le plus intéressent que tu ai visité?
 Si tu pouvais vivre n'importe où sur la planet, où irais-tu?

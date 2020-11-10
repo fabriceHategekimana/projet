@@ -33254,3 +33254,15 @@ new [description:"TP3CI" due:"1605423600" entry:"1604801290" modified:"160480129
 time 1604934493
 new [description:"Réu GBU Général" due:"1606114800" entry:"1604934493" modified:"1604934493" status:"pending" uuid:"a0987769-a53e-4bcf-8e85-d5b0500d6f24"]
 ---
+time 1605024367
+old [description:"TP4SI" due:"1604991600" entry:"1604800867" modified:"1604800867" status:"pending" uuid:"5844dc68-d820-41a8-ad44-08f0e37451cb"]
+new [description:"TP4SI" due:"1604991600" end:"1605024367" entry:"1604800867" modified:"1605024367" status:"completed" uuid:"5844dc68-d820-41a8-ad44-08f0e37451cb"]
+---
+time 1605024378
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++-" modified:"1604736044" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++" modified:"1605024378" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1605024378
+old [description:"Devoir maman Lady" due:"1605333600" entry:"1604736044" imask:"4" modified:"1604408390" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"a6dbf8d1-6494-4381-b67b-3940c0afc803"]
+new [description:"Devoir maman Lady" due:"1605333600" end:"1605024378" entry:"1604736044" imask:"4" modified:"1605024378" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"a6dbf8d1-6494-4381-b67b-3940c0afc803"]
+---
