@@ -5,7 +5,7 @@ all: task
 start: FORCE
 	zathura *.pdf & 2>error && vim -S Session.vim 2>error && rm error
 addtask: FORCE
-	. ~/sh/mytask.sh
+	bash ~/sh/mytask.sh
 summary: FORCE
 	task $(PROJET) summary
 task: FORCE

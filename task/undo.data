@@ -33266,3 +33266,35 @@ time 1605024378
 old [description:"Devoir maman Lady" due:"1605333600" entry:"1604736044" imask:"4" modified:"1604408390" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"a6dbf8d1-6494-4381-b67b-3940c0afc803"]
 new [description:"Devoir maman Lady" due:"1605333600" end:"1605024378" entry:"1604736044" imask:"4" modified:"1605024378" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"a6dbf8d1-6494-4381-b67b-3940c0afc803"]
 ---
+time 1605259269
+old [description:"TP5 IA" due:"1605250800" entry:"1604800756" modified:"1604800988" status:"pending" uuid:"1cc50b2e-9e32-46df-8bf6-dc2717069d49"]
+new [description:"TP5 IA" due:"1605250800" end:"1605259269" entry:"1604800756" modified:"1605259269" status:"completed" uuid:"1cc50b2e-9e32-46df-8bf6-dc2717069d49"]
+---
+time 1605264114
+new [description:"ajouter affiliation_name et overviews dans les inverstors" entry:"1605264114" modified:"1605264114" project:"satom" status:"pending" uuid:"f14ff27e-869a-4189-95bd-db3f7dc47e20"]
+---
+time 1605264931
+new [description:"ajouter dans articles snippet, pdate" entry:"1605264931" modified:"1605264931" project:"satom" status:"pending" uuid:"4440b2ce-f49e-40ac-9a9d-db44a8a99ac8"]
+---
+time 1605268277
+new [description:"ajouter à personne description, home_url" entry:"1605268277" modified:"1605268277" project:"satom" status:"pending" uuid:"91a38dbd-1887-4bfa-abc6-fa20c7e85d57"]
+---
+time 1605268388
+new [description:"ajouter aux inverstors investor.category_code" entry:"1605268388" modified:"1605268388" project:"satom" status:"pending" uuid:"02ab5af1-2975-4dc2-823b-d9c6ba6fe630"]
+---
+time 1605281659
+new [description:":wq" entry:"1605281659" modified:"1605281659" project:"satom" status:"pending" uuid:"61e1be54-17bd-4215-a75d-efbd8fca1b69"]
+---
+time 1605286221
+old [description:"cours numpy" due:"1605337200" entry:"1604800678" modified:"1604800678" status:"pending" uuid:"b33b8559-7f0b-4b20-a3ec-a9ac86e2a5b8"]
+new [description:"cours numpy" due:"1605337200" end:"1605286221" entry:"1604800678" modified:"1605286221" status:"completed" uuid:"b33b8559-7f0b-4b20-a3ec-a9ac86e2a5b8"]
+---
+time 1605309317
+new [description:"TD8 GL" due:"1605510000" entry:"1605309317" modified:"1605309317" status:"pending" uuid:"8fb73393-6d14-4f14-aa5c-1a82a88fc786"]
+---
+time 1605309368
+new [description:"TP3 Parallelisme" due:"1605682800" entry:"1605309368" modified:"1605309368" status:"pending" uuid:"33a46cbf-e3da-462d-9619-5bc7c180d815"]
+---
+time 1605309412
+new [description:"TP4 IN" due:"1605769200" entry:"1605309412" modified:"1605309412" status:"pending" uuid:"8f2ddf3d-a74e-4973-8fe7-96f55dfd2413"]
+---
