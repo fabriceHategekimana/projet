@@ -9291,3 +9291,24 @@
 {"description":"TD8 GL","due":"20201116T070000Z","entry":"20201113T231517Z","modified":"20201113T231517Z","status":"pending","uuid":"8fb73393-6d14-4f14-aa5c-1a82a88fc786"}
 {"description":"TP3 Parallelisme","due":"20201118T070000Z","entry":"20201113T231608Z","modified":"20201113T231608Z","status":"pending","uuid":"33a46cbf-e3da-462d-9619-5bc7c180d815"}
 {"description":"TP4 IN","due":"20201119T070000Z","entry":"20201113T231652Z","modified":"20201113T231652Z","status":"pending","uuid":"8f2ddf3d-a74e-4973-8fe7-96f55dfd2413"}
+{"description":"Devoir maman Lady","due":"20201121T060000Z","entry":"20201114T085344Z","imask":5,"modified":"20201110T160618Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"6465f254-ab69-4723-a7e6-e943149b34c0"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++-","modified":"20201114T085344Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"satom","end":"20201115T011835Z","entry":"20201005T213604Z","modified":"20201115T011838Z","status":"completed","uuid":"e4c7bd29-882e-4ed7-9990-b0202b2d9941"}
+{"description":"simone","end":"20201115T011838Z","entry":"20201005T213650Z","modified":"20201115T011838Z","status":"completed","uuid":"46e4cd11-66aa-46f0-871d-b707a16aa047"}
+{"description":"phantsper","end":"20201115T011838Z","entry":"20201005T213701Z","modified":"20201115T011838Z","status":"completed","uuid":"74a414be-6c7f-4561-b2ca-01aac6993bf2"}
+{"description":"français","end":"20201115T011838Z","entry":"20201005T213718Z","modified":"20201115T011838Z","status":"completed","uuid":"5873b1a3-79b0-48d5-8b01-eede88a5f7c3"}
+{"description":"spirituel","end":"20201115T011838Z","entry":"20201005T213728Z","modified":"20201115T011838Z","status":"completed","uuid":"22a540c3-9c2d-433e-95a5-4480e734302b"}
+{"description":"plateforme maman Lady","end":"20201115T011838Z","entry":"20201014T125755Z","modified":"20201115T011838Z","priority":"M","status":"completed","uuid":"897d14cb-3633-4b48-aa87-32b8580acba5"}
+{"description":"site MEP","end":"20201115T011838Z","entry":"20201014T130656Z","modified":"20201115T011838Z","priority":"L","status":"completed","uuid":"db9c04c1-9ddb-43bf-9b13-9814dcc18377"}
+{"description":"dactylographier les notes STB","end":"20201115T011838Z","entry":"20201015T173138Z","modified":"20201115T011838Z","status":"completed","uuid":"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"}
+{"description":"objectif Siloé","end":"20201115T011838Z","entry":"20201018T215912Z","modified":"20201115T011838Z","priority":"H","status":"completed","uuid":"fd4d7722-33a7-42a6-978a-3fdeb47d0774"}
+{"description":"siloé","end":"20201115T011838Z","entry":"20201029T144509Z","modified":"20201115T011838Z","status":"completed","uuid":"b7fd7152-67bf-493e-9f46-5ac180264f76"}
+{"description":"abstract background","end":"20201115T011838Z","entry":"20201031T221559Z","modified":"20201115T011838Z","status":"completed","uuid":"2d7770ef-b8dd-48cb-82c4-00efc9631511"}
+{"description":"TP3PA","due":"20201118T070000Z","end":"20201115T011838Z","entry":"20201108T015954Z","modified":"20201115T011838Z","status":"completed","uuid":"c61b390e-cea3-4177-8368-c1aeef47835e"}
+{"description":"TP3CI","due":"20201115T070000Z","end":"20201115T011838Z","entry":"20201108T020810Z","modified":"20201115T011838Z","status":"completed","uuid":"0ff218dd-7b36-41dd-b691-d4d980060a28"}
+{"description":"Réu GBU Général","due":"20201123T070000Z","end":"20201115T011838Z","entry":"20201109T150813Z","modified":"20201115T011838Z","status":"completed","uuid":"a0987769-a53e-4bcf-8e85-d5b0500d6f24"}
+{"description":"ajouter affiliation_name et overviews dans les inverstors","end":"20201115T011838Z","entry":"20201113T104154Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"f14ff27e-869a-4189-95bd-db3f7dc47e20"}
+{"description":"ajouter dans articles snippet, pdate","end":"20201115T011838Z","entry":"20201113T105531Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"4440b2ce-f49e-40ac-9a9d-db44a8a99ac8"}
+{"description":"ajouter à personne description, home_url","end":"20201115T011838Z","entry":"20201113T115117Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"91a38dbd-1887-4bfa-abc6-fa20c7e85d57"}
+{"description":"ajouter aux inverstors investor.category_code","end":"20201115T011838Z","entry":"20201113T115308Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"02ab5af1-2975-4dc2-823b-d9c6ba6fe630"}
+{"description":":wq","end":"20201115T011838Z","entry":"20201113T153419Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"61e1be54-17bd-4215-a75d-efbd8fca1b69"}

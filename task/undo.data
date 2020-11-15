@@ -33298,3 +33298,86 @@ new [description:"TP3 Parallelisme" due:"1605682800" entry:"1605309368" modified
 time 1605309412
 new [description:"TP4 IN" due:"1605769200" entry:"1605309412" modified:"1605309412" status:"pending" uuid:"8f2ddf3d-a74e-4973-8fe7-96f55dfd2413"]
 ---
+time 1605344024
+new [description:"Devoir maman Lady" due:"1605938400" entry:"1605344024" imask:"5" modified:"1605024378" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"6465f254-ab69-4723-a7e6-e943149b34c0"]
+---
+time 1605344024
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++" modified:"1605024378" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++-" modified:"1605344024" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1605403118
+old [description:"satom" entry:"1601933764" modified:"1601933774" start:"1601933774" status:"pending" uuid:"e4c7bd29-882e-4ed7-9990-b0202b2d9941"]
+new [description:"satom" end:"1605403115" entry:"1601933764" modified:"1605403118" status:"completed" uuid:"e4c7bd29-882e-4ed7-9990-b0202b2d9941"]
+---
+time 1605403118
+old [description:"simone" entry:"1601933810" modified:"1601933863" start:"1601933860" status:"pending" uuid:"46e4cd11-66aa-46f0-871d-b707a16aa047"]
+new [description:"simone" end:"1605403118" entry:"1601933810" modified:"1605403118" status:"completed" uuid:"46e4cd11-66aa-46f0-871d-b707a16aa047"]
+---
+time 1605403118
+old [description:"phantsper" entry:"1601933821" modified:"1601933863" start:"1601933863" status:"pending" uuid:"74a414be-6c7f-4561-b2ca-01aac6993bf2"]
+new [description:"phantsper" end:"1605403118" entry:"1601933821" modified:"1605403118" status:"completed" uuid:"74a414be-6c7f-4561-b2ca-01aac6993bf2"]
+---
+time 1605403118
+old [description:"français" entry:"1601933838" modified:"1601933863" start:"1601933863" status:"pending" uuid:"5873b1a3-79b0-48d5-8b01-eede88a5f7c3"]
+new [description:"français" end:"1605403118" entry:"1601933838" modified:"1605403118" status:"completed" uuid:"5873b1a3-79b0-48d5-8b01-eede88a5f7c3"]
+---
+time 1605403118
+old [description:"spirituel" entry:"1601933848" modified:"1601933863" start:"1601933863" status:"pending" uuid:"22a540c3-9c2d-433e-95a5-4480e734302b"]
+new [description:"spirituel" end:"1605403118" entry:"1601933848" modified:"1605403118" status:"completed" uuid:"22a540c3-9c2d-433e-95a5-4480e734302b"]
+---
+time 1605403118
+old [description:"plateforme maman Lady" entry:"1602680275" modified:"1602680275" priority:"M" status:"pending" uuid:"897d14cb-3633-4b48-aa87-32b8580acba5"]
+new [description:"plateforme maman Lady" end:"1605403118" entry:"1602680275" modified:"1605403118" priority:"M" status:"completed" uuid:"897d14cb-3633-4b48-aa87-32b8580acba5"]
+---
+time 1605403118
+old [description:"site MEP" entry:"1602680816" modified:"1602680816" priority:"L" status:"pending" uuid:"db9c04c1-9ddb-43bf-9b13-9814dcc18377"]
+new [description:"site MEP" end:"1605403118" entry:"1602680816" modified:"1605403118" priority:"L" status:"completed" uuid:"db9c04c1-9ddb-43bf-9b13-9814dcc18377"]
+---
+time 1605403118
+old [description:"dactylographier les notes STB" entry:"1602783098" modified:"1602783098" status:"pending" uuid:"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"]
+new [description:"dactylographier les notes STB" end:"1605403118" entry:"1602783098" modified:"1605403118" status:"completed" uuid:"3c1166a9-b540-4d5d-ac27-628f4e8fc1c0"]
+---
+time 1605403118
+old [description:"objectif Siloé" entry:"1603058352" modified:"1603058352" priority:"H" status:"pending" uuid:"fd4d7722-33a7-42a6-978a-3fdeb47d0774"]
+new [description:"objectif Siloé" end:"1605403118" entry:"1603058352" modified:"1605403118" priority:"H" status:"completed" uuid:"fd4d7722-33a7-42a6-978a-3fdeb47d0774"]
+---
+time 1605403118
+old [description:"siloé" entry:"1603982709" modified:"1603982767" start:"1603982767" status:"pending" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+new [description:"siloé" end:"1605403118" entry:"1603982709" modified:"1605403118" status:"completed" uuid:"b7fd7152-67bf-493e-9f46-5ac180264f76"]
+---
+time 1605403118
+old [description:"abstract background" entry:"1604182559" modified:"1604182559" status:"pending" uuid:"2d7770ef-b8dd-48cb-82c4-00efc9631511"]
+new [description:"abstract background" end:"1605403118" entry:"1604182559" modified:"1605403118" status:"completed" uuid:"2d7770ef-b8dd-48cb-82c4-00efc9631511"]
+---
+time 1605403118
+old [description:"TP3PA" due:"1605682800" entry:"1604800794" modified:"1604800794" status:"pending" uuid:"c61b390e-cea3-4177-8368-c1aeef47835e"]
+new [description:"TP3PA" due:"1605682800" end:"1605403118" entry:"1604800794" modified:"1605403118" status:"completed" uuid:"c61b390e-cea3-4177-8368-c1aeef47835e"]
+---
+time 1605403118
+old [description:"TP3CI" due:"1605423600" entry:"1604801290" modified:"1604801290" status:"pending" uuid:"0ff218dd-7b36-41dd-b691-d4d980060a28"]
+new [description:"TP3CI" due:"1605423600" end:"1605403118" entry:"1604801290" modified:"1605403118" status:"completed" uuid:"0ff218dd-7b36-41dd-b691-d4d980060a28"]
+---
+time 1605403118
+old [description:"Réu GBU Général" due:"1606114800" entry:"1604934493" modified:"1604934493" status:"pending" uuid:"a0987769-a53e-4bcf-8e85-d5b0500d6f24"]
+new [description:"Réu GBU Général" due:"1606114800" end:"1605403118" entry:"1604934493" modified:"1605403118" status:"completed" uuid:"a0987769-a53e-4bcf-8e85-d5b0500d6f24"]
+---
+time 1605403118
+old [description:"ajouter affiliation_name et overviews dans les inverstors" entry:"1605264114" modified:"1605264114" project:"satom" status:"pending" uuid:"f14ff27e-869a-4189-95bd-db3f7dc47e20"]
+new [description:"ajouter affiliation_name et overviews dans les inverstors" end:"1605403118" entry:"1605264114" modified:"1605403118" project:"satom" status:"completed" uuid:"f14ff27e-869a-4189-95bd-db3f7dc47e20"]
+---
+time 1605403118
+old [description:"ajouter dans articles snippet, pdate" entry:"1605264931" modified:"1605264931" project:"satom" status:"pending" uuid:"4440b2ce-f49e-40ac-9a9d-db44a8a99ac8"]
+new [description:"ajouter dans articles snippet, pdate" end:"1605403118" entry:"1605264931" modified:"1605403118" project:"satom" status:"completed" uuid:"4440b2ce-f49e-40ac-9a9d-db44a8a99ac8"]
+---
+time 1605403118
+old [description:"ajouter à personne description, home_url" entry:"1605268277" modified:"1605268277" project:"satom" status:"pending" uuid:"91a38dbd-1887-4bfa-abc6-fa20c7e85d57"]
+new [description:"ajouter à personne description, home_url" end:"1605403118" entry:"1605268277" modified:"1605403118" project:"satom" status:"completed" uuid:"91a38dbd-1887-4bfa-abc6-fa20c7e85d57"]
+---
+time 1605403118
+old [description:"ajouter aux inverstors investor.category_code" entry:"1605268388" modified:"1605268388" project:"satom" status:"pending" uuid:"02ab5af1-2975-4dc2-823b-d9c6ba6fe630"]
+new [description:"ajouter aux inverstors investor.category_code" end:"1605403118" entry:"1605268388" modified:"1605403118" project:"satom" status:"completed" uuid:"02ab5af1-2975-4dc2-823b-d9c6ba6fe630"]
+---
+time 1605403118
+old [description:":wq" entry:"1605281659" modified:"1605281659" project:"satom" status:"pending" uuid:"61e1be54-17bd-4215-a75d-efbd8fca1b69"]
+new [description:":wq" end:"1605403118" entry:"1605281659" modified:"1605403118" project:"satom" status:"completed" uuid:"61e1be54-17bd-4215-a75d-efbd8fca1b69"]
+---
