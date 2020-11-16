@@ -9312,3 +9312,5 @@
 {"description":"ajouter à personne description, home_url","end":"20201115T011838Z","entry":"20201113T115117Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"91a38dbd-1887-4bfa-abc6-fa20c7e85d57"}
 {"description":"ajouter aux inverstors investor.category_code","end":"20201115T011838Z","entry":"20201113T115308Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"02ab5af1-2975-4dc2-823b-d9c6ba6fe630"}
 {"description":":wq","end":"20201115T011838Z","entry":"20201113T153419Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"61e1be54-17bd-4215-a75d-efbd8fca1b69"}
+{"description":"satom","entry":"20201115T150002Z","modified":"20201115T150002Z","status":"pending","uuid":"2e4dd73f-8cd9-4c7c-9a91-d7d060f6d95f"}
+{"description":"AG GBU","due":"20201123T070000Z","entry":"20201115T150346Z","modified":"20201115T150346Z","status":"pending","uuid":"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"}

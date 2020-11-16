@@ -3,3 +3,5 @@
 [description:"TP3 Parallelisme" due:"1605682800" entry:"1605309368" modified:"1605309368" status:"pending" uuid:"33a46cbf-e3da-462d-9619-5bc7c180d815"]
 [description:"TP4 IN" due:"1605769200" entry:"1605309412" modified:"1605309412" status:"pending" uuid:"8f2ddf3d-a74e-4973-8fe7-96f55dfd2413"]
 [description:"Devoir maman Lady" due:"1605938400" entry:"1605344024" imask:"5" modified:"1605024378" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"6465f254-ab69-4723-a7e6-e943149b34c0"]
+[description:"satom" entry:"1605452402" modified:"1605452402" status:"pending" uuid:"2e4dd73f-8cd9-4c7c-9a91-d7d060f6d95f"]
+[description:"AG GBU" due:"1606114800" entry:"1605452626" modified:"1605452626" status:"pending" uuid:"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"]

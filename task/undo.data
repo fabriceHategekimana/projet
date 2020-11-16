@@ -33381,3 +33381,9 @@ time 1605403118
 old [description:":wq" entry:"1605281659" modified:"1605281659" project:"satom" status:"pending" uuid:"61e1be54-17bd-4215-a75d-efbd8fca1b69"]
 new [description:":wq" end:"1605403118" entry:"1605281659" modified:"1605403118" project:"satom" status:"completed" uuid:"61e1be54-17bd-4215-a75d-efbd8fca1b69"]
 ---
+time 1605452402
+new [description:"satom" entry:"1605452402" modified:"1605452402" status:"pending" uuid:"2e4dd73f-8cd9-4c7c-9a91-d7d060f6d95f"]
+---
+time 1605452626
+new [description:"AG GBU" due:"1606114800" entry:"1605452626" modified:"1605452626" status:"pending" uuid:"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"]
+---
