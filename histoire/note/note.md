@@ -22,4 +22,5 @@ Il faut aussi voir ce qui rend une Histoire géniale:
 		- trouver des idées inovantes:
 			- 4e mur
 			- exploiter des outils qu'il n'y a pas normalement dans une histoire.
- 
+
+https://www.dailymotion.com/video/x7wm8aj

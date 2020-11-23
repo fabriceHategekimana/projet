@@ -33387,3 +33387,56 @@ new [description:"satom" entry:"1605452402" modified:"1605452402" status:"pendin
 time 1605452626
 new [description:"AG GBU" due:"1606114800" entry:"1605452626" modified:"1605452626" status:"pending" uuid:"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"]
 ---
+time 1605785259
+old [description:"TD8 GL" due:"1605510000" entry:"1605309317" modified:"1605309317" status:"pending" uuid:"8fb73393-6d14-4f14-aa5c-1a82a88fc786"]
+new [description:"TD8 GL" due:"1605510000" end:"1605785259" entry:"1605309317" modified:"1605785259" status:"completed" uuid:"8fb73393-6d14-4f14-aa5c-1a82a88fc786"]
+---
+time 1605785264
+old [description:"TP3 Parallelisme" due:"1605682800" entry:"1605309368" modified:"1605309368" status:"pending" uuid:"33a46cbf-e3da-462d-9619-5bc7c180d815"]
+new [description:"TP3 Parallelisme" due:"1605682800" end:"1605785264" entry:"1605309368" modified:"1605785264" status:"completed" uuid:"33a46cbf-e3da-462d-9619-5bc7c180d815"]
+---
+time 1605880411
+new [description:"kwoga amegno" entry:"1605880411" modified:"1605880411" priority:"H" status:"pending" uuid:"249f8383-aae0-4ab7-8442-c89de157b778"]
+---
+time 1605880455
+new [description:"livre gb" entry:"1605880455" modified:"1605880455" priority:"H" status:"pending" uuid:"e82faba7-66f3-4eab-8e86-a7b9af1e8452"]
+---
+time 1605889055
+old [description:"kwoga amegno" entry:"1605880411" modified:"1605880411" priority:"H" status:"pending" uuid:"249f8383-aae0-4ab7-8442-c89de157b778"]
+new [description:"kwoga amegno" end:"1605889055" entry:"1605880411" modified:"1605889055" priority:"H" status:"completed" uuid:"249f8383-aae0-4ab7-8442-c89de157b778"]
+---
+time 1605890410
+new [description:"TP9 GL" due:"1606719600" entry:"1605890410" modified:"1605890410" status:"pending" uuid:"a20106f8-ed52-46a8-ba8a-04f9cc861dbf"]
+---
+time 1605890442
+new [description:"TP5 IN" due:"1606978800" entry:"1605890442" modified:"1605890442" status:"pending" uuid:"6022eea3-1247-4182-a7c4-0186d689772f"]
+---
+time 1605890490
+new [description:"TP4 PA" due:"1607497200" entry:"1605890490" modified:"1605890490" status:"pending" uuid:"6a51cdfb-36e3-45a7-99cf-c969b61bc124"]
+---
+time 1605890815
+new [description:"TP5 SI" due:"1606806000" entry:"1605890815" modified:"1605890815" status:"pending" uuid:"2fb523cf-518b-4e34-970d-319f3ce92ed8"]
+---
+time 1605890980
+old [description:"TP4 IN" due:"1605769200" entry:"1605309412" modified:"1605309412" status:"pending" uuid:"8f2ddf3d-a74e-4973-8fe7-96f55dfd2413"]
+new [description:"TP4 IN" due:"1605769200" end:"1605890980" entry:"1605309412" modified:"1605890980" status:"completed" uuid:"8f2ddf3d-a74e-4973-8fe7-96f55dfd2413"]
+---
+time 1605891026
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++-" modified:"1605344024" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++" modified:"1605891026" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1605891026
+old [description:"Devoir maman Lady" due:"1605938400" entry:"1605344024" imask:"5" modified:"1605024378" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"6465f254-ab69-4723-a7e6-e943149b34c0"]
+new [description:"Devoir maman Lady" due:"1605938400" end:"1605891026" entry:"1605344024" imask:"5" modified:"1605891026" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"6465f254-ab69-4723-a7e6-e943149b34c0"]
+---
+time 1605891026
+old [description:"livre gb" entry:"1605880455" modified:"1605880455" priority:"H" status:"pending" uuid:"e82faba7-66f3-4eab-8e86-a7b9af1e8452"]
+new [description:"livre gb" end:"1605891026" entry:"1605880455" modified:"1605891026" priority:"H" status:"completed" uuid:"e82faba7-66f3-4eab-8e86-a7b9af1e8452"]
+---
+time 1605946976
+new [description:"Devoir maman Lady" due:"1606543200" entry:"1605946976" imask:"6" modified:"1605891026" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"460b7e04-56f8-4fda-bc6f-1fe1df3b1ff8"]
+---
+time 1605946976
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++" modified:"1605891026" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++-" modified:"1605946976" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---

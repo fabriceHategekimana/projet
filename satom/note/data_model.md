@@ -45,6 +45,9 @@ articles:{
 }
 ```
 
+Officer Neo4j ICIJ
+![officer](../images/officer.png)
+
 Code qui marche
 
 ```

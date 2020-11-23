@@ -1,39 +1,44 @@
-const neo4j = require('neo4j-driver');
-var uri = "neo4j://localhost:7687";
-var user = "neo4j";
-var password = "neo4j";
+const bodyParser = require("body-parser");
+const { exec } = require("child_process");
 
-const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
-//const session = driver.session()
-//var session = driver.session({  defaultAccessMode: neo4j.session.READ })
-var session = driver.session({ 
-  database: 'neo4j',
-    defaultAccessMode: neo4j.session.WRITE
-    })
+var query="MATCH (o:Officer) RETURN o LIMIT 10;";
+//var texte='{"sourceID": "Panama Papers", "valid_until": "The Panama Papers data is current through 2015", "name": "KIM SOO IN", "country_codes": "KOR", "countries": "South Korea", "node_id": "12000001"}';
+//var val= JSON.parse(texte);
+//console.log(val);
 
-// It is possible to execute read transactions that will benefit from automatic
-// retries on both single instance ('bolt' URI scheme) and Causal Cluster
-// ('neo4j' URI scheme) and will get automatic load balancing in cluster deployments
-var readTxResultPromise = session.readTransaction(txc => {
-  // used transaction will be committed automatically, no need for explicit commit/rollback
+function marshalPerson(person){
+	var res="";
+	if(person[0] != "{"){
+		res={};
+	}	
+	else{ 
+		res= JSON.parse(person);
+	}
+	return res;
+}
 
-  var result = txc.run('MATCH (person:Person) RETURN person LIMIT 1')
-  // at this point it is possible to either return the result or process it and return the
-  // result of processing it is also possible to run more statements in the same transaction
-  return result
-})
+function recherche(){
+	exec('cd "C:\\Users\\Satom2021\\AppData\\Roaming\\Neo4j Desktop for ICIJ\\Application\\neo4jDatabases\\database-159676c6-fff2-4053-b793-5e38acecc39c\\current\\bin\" && cypher-shell.bat \"'+query+'\"', (error, stdout, stderr) => {
+	    if (error) {
+		console.log(`error: ${error.message}`);
+		return;
+	    }
+	    if (stderr) {
+		console.log(`stderr: ${stderr}`);
+		return;
+	    }
+	    //console.log(`stdout: ${stdout}`);
+	    var str= stdout.replace(/\(:Officer\ /g, "");
+	    str= str.replace(/\}\)/g, "}");
+	    str= str.replace(/\{/g, '{"');
+	    str= str.replace(/\:/g, '":');
+	    str= str.replace(/\,\ /g, ', "');
+	    str= str.split("\n");
+	    str= str.map(marshalPerson) ;
+	    console.log(str);
+	});
+}
 
-// returned Promise can be later consumed like this:
-readTxResultPromise
-  .then(result => {
-    console.log(result.records[0]._fields[0].properties);
-    session.close();
-  })
-  .catch(error => {
-    console.log(error)
-  })
-  .then(() => {
-	session.close();
-	driver.close();
-  });
+
+recherche();
 

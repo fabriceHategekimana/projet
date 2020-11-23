@@ -9314,3 +9314,18 @@
 {"description":":wq","end":"20201115T011838Z","entry":"20201113T153419Z","modified":"20201115T011838Z","project":"satom","status":"completed","uuid":"61e1be54-17bd-4215-a75d-efbd8fca1b69"}
 {"description":"satom","entry":"20201115T150002Z","modified":"20201115T150002Z","status":"pending","uuid":"2e4dd73f-8cd9-4c7c-9a91-d7d060f6d95f"}
 {"description":"AG GBU","due":"20201123T070000Z","entry":"20201115T150346Z","modified":"20201115T150346Z","status":"pending","uuid":"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"}
+{"description":"TD8 GL","due":"20201116T070000Z","end":"20201119T112739Z","entry":"20201113T231517Z","modified":"20201119T112739Z","status":"completed","uuid":"8fb73393-6d14-4f14-aa5c-1a82a88fc786"}
+{"description":"TP3 Parallelisme","due":"20201118T070000Z","end":"20201119T112744Z","entry":"20201113T231608Z","modified":"20201119T112744Z","status":"completed","uuid":"33a46cbf-e3da-462d-9619-5bc7c180d815"}
+{"description":"kwoga amegno","entry":"20201120T135331Z","modified":"20201120T135331Z","priority":"H","status":"pending","uuid":"249f8383-aae0-4ab7-8442-c89de157b778"}
+{"description":"livre gb","entry":"20201120T135415Z","modified":"20201120T135415Z","priority":"H","status":"pending","uuid":"e82faba7-66f3-4eab-8e86-a7b9af1e8452"}
+{"description":"kwoga amegno","end":"20201120T161735Z","entry":"20201120T135331Z","modified":"20201120T161735Z","priority":"H","status":"completed","uuid":"249f8383-aae0-4ab7-8442-c89de157b778"}
+{"description":"TP9 GL","due":"20201130T070000Z","entry":"20201120T164010Z","modified":"20201120T164010Z","status":"pending","uuid":"a20106f8-ed52-46a8-ba8a-04f9cc861dbf"}
+{"description":"TP5 IN","due":"20201203T070000Z","entry":"20201120T164042Z","modified":"20201120T164042Z","status":"pending","uuid":"6022eea3-1247-4182-a7c4-0186d689772f"}
+{"description":"TP4 PA","due":"20201209T070000Z","entry":"20201120T164130Z","modified":"20201120T164130Z","status":"pending","uuid":"6a51cdfb-36e3-45a7-99cf-c969b61bc124"}
+{"description":"TP5 SI","due":"20201201T070000Z","entry":"20201120T164655Z","modified":"20201120T164655Z","status":"pending","uuid":"2fb523cf-518b-4e34-970d-319f3ce92ed8"}
+{"description":"TP4 IN","due":"20201119T070000Z","end":"20201120T164940Z","entry":"20201113T231652Z","modified":"20201120T164940Z","status":"completed","uuid":"8f2ddf3d-a74e-4973-8fe7-96f55dfd2413"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++","modified":"20201120T165026Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20201121T060000Z","end":"20201120T165026Z","entry":"20201114T085344Z","imask":5,"modified":"20201120T165026Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"6465f254-ab69-4723-a7e6-e943149b34c0"}
+{"description":"livre gb","end":"20201120T165026Z","entry":"20201120T135415Z","modified":"20201120T165026Z","priority":"H","status":"completed","uuid":"e82faba7-66f3-4eab-8e86-a7b9af1e8452"}
+{"description":"Devoir maman Lady","due":"20201128T060000Z","entry":"20201121T082256Z","imask":6,"modified":"20201120T165026Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"460b7e04-56f8-4fda-bc6f-1fe1df3b1ff8"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++-","modified":"20201121T082256Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
