@@ -1,6 +1,8 @@
 Au programme
 ============
 
+[rédaction](rédaction)
+
 [méthodes](méthodes)
 
 Suffixes et préfixes

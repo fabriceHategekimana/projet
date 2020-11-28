@@ -2,6 +2,12 @@
 ==========
 [economies](economies)
 
+Organisation:
+1. Planning
+2. 10 min
+3. explore
+4. sauvegarde
+
 ## Bible
 lecture du livre de Proverbes:
 Chapitre 1: 7,19

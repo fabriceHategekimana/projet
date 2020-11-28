@@ -9329,3 +9329,39 @@
 {"description":"livre gb","end":"20201120T165026Z","entry":"20201120T135415Z","modified":"20201120T165026Z","priority":"H","status":"completed","uuid":"e82faba7-66f3-4eab-8e86-a7b9af1e8452"}
 {"description":"Devoir maman Lady","due":"20201128T060000Z","entry":"20201121T082256Z","imask":6,"modified":"20201120T165026Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"460b7e04-56f8-4fda-bc6f-1fe1df3b1ff8"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++-","modified":"20201121T082256Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"FR ajouter rédaction","entry":"20201123T175826Z","modified":"20201123T175826Z","status":"pending","uuid":"8536ec96-eef7-40d3-a7bd-236a929ecaef"}
+{"description":"AG GBU","due":"20201123T070000Z","end":"20201124T230307Z","entry":"20201115T150346Z","modified":"20201124T230307Z","status":"completed","uuid":"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"}
+{"description":"sondage biere","entry":"20201125T104738Z","modified":"20201125T104738Z","status":"pending","uuid":"e1ea2563-a52c-4648-8236-1d9b38f2adb6"}
+{"description":"FR ajouter rédaction","end":"20201125T113837Z","entry":"20201123T175826Z","modified":"20201125T113837Z","status":"completed","uuid":"8536ec96-eef7-40d3-a7bd-236a929ecaef"}
+{"description":"sondage biere","end":"20201125T114819Z","entry":"20201125T104738Z","modified":"20201125T114819Z","status":"completed","uuid":"e1ea2563-a52c-4648-8236-1d9b38f2adb6"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++","modified":"20201125T114913Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20201128T060000Z","end":"20201125T114913Z","entry":"20201121T082256Z","imask":6,"modified":"20201125T114913Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"460b7e04-56f8-4fda-bc6f-1fe1df3b1ff8"}
+{"description":"GL accéssibilité données","entry":"20201125T123639Z","modified":"20201125T123639Z","status":"pending","uuid":"a9b0fd48-615d-45dd-864a-3a1f6727b758"}
+{"description":"refaire userstories","entry":"20201125T123802Z","modified":"20201125T123802Z","priority":"L","status":"pending","uuid":"679e20bd-4024-4122-860b-7bdf9422a950"}
+{"description":"concilier planning et 10min","entry":"20201125T123954Z","modified":"20201125T123954Z","status":"pending","uuid":"1295a666-cafd-4bc5-8812-04a6f2942353"}
+{"description":"Traiter courrier","due":"20201126T070000Z","entry":"20201125T124555Z","modified":"20201125T124555Z","status":"pending","uuid":"29b83e52-866b-4fb0-9f24-73f9bc91f5e1"}
+{"description":"poste+comt","due":"20201126T070000Z","entry":"20201125T124615Z","modified":"20201125T124615Z","status":"pending","uuid":"da03ee69-4332-4703-a003-8e68fc7abc78"}
+{"description":"recherche appareil photo","entry":"20201125T124851Z","modified":"20201125T124851Z","status":"pending","uuid":"d184b129-79b7-4477-abd1-e59743a57c8b"}
+{"description":"comment devenir intéressant","entry":"20201125T140246Z","modified":"20201125T140246Z","status":"pending","uuid":"1d4e23d0-091f-471b-8a4b-740ab350e988"}
+{"description":"concilier planning et 10min","end":"20201125T141111Z","entry":"20201125T123954Z","modified":"20201125T141111Z","status":"completed","uuid":"1295a666-cafd-4bc5-8812-04a6f2942353"}
+{"description":"faire montage","entry":"20201125T142252Z","modified":"20201125T142252Z","status":"pending","uuid":"9e31c0ca-f42d-49da-a651-d0bcf8c7f796"}
+{"description":"faire montage","end":"20201125T221837Z","entry":"20201125T142252Z","modified":"20201125T221837Z","status":"completed","uuid":"9e31c0ca-f42d-49da-a651-d0bcf8c7f796"}
+{"description":"recherche appareil photo","end":"20201125T221847Z","entry":"20201125T124851Z","modified":"20201125T221847Z","status":"completed","uuid":"d184b129-79b7-4477-abd1-e59743a57c8b"}
+{"description":"satom","end":"20201125T221858Z","entry":"20201115T150002Z","modified":"20201125T221858Z","status":"completed","uuid":"2e4dd73f-8cd9-4c7c-9a91-d7d060f6d95f"}
+{"description":"comment devenir intéressant","end":"20201125T222326Z","entry":"20201125T140246Z","modified":"20201125T222326Z","status":"completed","uuid":"1d4e23d0-091f-471b-8a4b-740ab350e988"}
+{"description":"Traiter courrier","due":"20201126T070000Z","end":"20201126T134007Z","entry":"20201125T124555Z","modified":"20201126T134007Z","status":"completed","uuid":"29b83e52-866b-4fb0-9f24-73f9bc91f5e1"}
+{"description":"TP5 SI","due":"20201201T070000Z","end":"20201127T164552Z","entry":"20201120T164655Z","modified":"20201127T164552Z","status":"completed","uuid":"2fb523cf-518b-4e34-970d-319f3ce92ed8"}
+{"description":"poste+comt","due":"20201126T070000Z","end":"20201127T164604Z","entry":"20201125T124615Z","modified":"20201127T164604Z","status":"completed","uuid":"da03ee69-4332-4703-a003-8e68fc7abc78"}
+{"description":"ameliorer tilda","entry":"20201127T164701Z","modified":"20201127T164701Z","status":"pending","uuid":"640ef2e7-48fc-4ce6-8058-fe747509e813"}
+{"description":"lf delete direct","entry":"20201127T165850Z","modified":"20201127T165850Z","status":"pending","uuid":"9d0859c4-b05f-4f62-bae2-8ee2a083954e"}
+{"description":"revoir UML","entry":"20201127T172139Z","modified":"20201127T172139Z","status":"pending","uuid":"2dd46711-5095-4e00-b963-750ec0211334"}
+{"description":"bash azure","entry":"20201127T183423Z","modified":"20201127T183423Z","status":"pending","uuid":"c2c45c2b-1d16-4fa3-ba96-07b4f4cfa71f"}
+{"description":"vocliste","entry":"20201127T190608Z","modified":"20201127T190608Z","status":"pending","uuid":"cd107333-fb83-4b90-a278-e7b9594217c0"}
+{"description":"Faire annonce JMEP","entry":"20201127T192542Z","modified":"20201127T192542Z","priority":"H","status":"pending","uuid":"d9250536-c647-43f7-bfef-c1328f581efd"}
+{"description":"Dans patent chercher Roman Szubryt","entry":"20201127T221904Z","modified":"20201127T221904Z","status":"pending","uuid":"d06f1fa9-0f3e-476a-8a45-b20b7abdeae2"}
+{"description":"Faire annonce JMEP","end":"20201127T231212Z","entry":"20201127T192542Z","modified":"20201127T231212Z","priority":"H","status":"completed","uuid":"d9250536-c647-43f7-bfef-c1328f581efd"}
+{"description":"refaire planning reve\/but","entry":"20201127T231441Z","modified":"20201127T231441Z","status":"pending","uuid":"049b5011-da27-4908-90a0-2e7ba85c1242"}
+{"description":"tuto piano","entry":"20201127T231458Z","modified":"20201127T231458Z","status":"pending","uuid":"6c82d6c0-934a-4fa4-bd5f-4fac3c625d0f"}
+{"description":"Devoir maman Lady","due":"20201205T060000Z","entry":"20201128T103747Z","imask":7,"modified":"20201125T114913Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"ddd2334b-641a-421f-8425-669059b3d83e"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++-","modified":"20201128T103747Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"corbeille à papier","entry":"20201128T124728Z","modified":"20201128T124728Z","status":"pending","uuid":"ac258935-f09e-4d44-8772-17b2e01b03c5"}

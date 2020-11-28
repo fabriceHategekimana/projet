@@ -6,6 +6,7 @@ devoirs:
 -toges
 -matériel (je paye la différence)
 [partage_musique](-partage_musique)
+[compo](compo)
 
 désirs:
 -piano

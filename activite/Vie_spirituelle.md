@@ -1,5 +1,13 @@
 Vie spirituelle:
 ================
+
+## Comment maîtriser les bases
+L'ideal est de partir de ce que l'on sait pour agrandir notre arbre
+Cela passe par:
+	- L'exploration de sa connaissance
+	- la remise en question du savoir
+	- Tirer des fondements
+
 Le but pour moi est de pouvoir mener une vie pieuse et sereine.
 Pieuse, car je veux vivre chaque instant dans l'humilité et la présence de Dieu. Sereine car je ne veux plus avoir des soucis et m'inquiéter inutilement.
 L'humilité

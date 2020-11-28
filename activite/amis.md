@@ -3,11 +3,6 @@ Comment se faire des amis
 
 Je veux juste être capable de communiquer avec les gens et pouvoir rassembler les foules quand c'est nécessaire.
 
-## Outils:
-Avoir une bonne communication est importante.
-Jusqu'ici, j'ai toujours cherché à trouver des sujets de conversation intéressants.
-Au final, cela n'est pas suffisant.
-
 ## Quelques principes pour se faire des amis
 
 1. Principe de réciprocité
@@ -27,7 +22,7 @@ Faire des compliment sincères envers la personne. À voir, comment faire un com
 ## But d'une conversation:
 Connaître l'autre et gagner sa confiance. Comment?
 1. Observer. Outre la parole, observer une personne nous permet d'en apprendre plus sur une personne. Ce n'est pas quelques informations supplémentaire, mais une nouvelle dimension de la personne en face de nous: "N'écoute pas ce que les gens te disent, regarde ce qu'ils font".
-2. discerner les faits des interprétations. En effet, les faits sont assez fiables, mais pas forcément toutes les suppositions qu'on en fait. C'est pourquoi il vaut mieux s'appuyer sur des fait lorsqu'on juge/parle d'une personne.
+2. Discerner les faits des interprétations. En effet, les faits sont assez fiables, mais pas forcément toutes les suppositions qu'on en fait. C'est pourquoi il vaut mieux s'appuyer sur des fait lorsqu'on juge/parle d'une personne.
 3. Chercher la similarité. Le but est de se poser constamment cette question: "Qu'est-ce qui me rends similaire à cette personne?". Sans ça, on ne peut pas créer de sympathie.
 
 ## Connaître l'autre:
@@ -38,9 +33,10 @@ Chercher a faire ressortir:
 3. ses valeurs (ce qu'elle aime, déteste)
 4. son expérience (vécu, faits)
 5. nos similarités
+6. nos émotions
 
 ## Étude de quelques questions pour connaître la personne avec qui nous discutons:
-Est-tu plutôt chien ou chat? C'est une question qui fait intervenir la subjectivité de l'autre. Que ce soit l'un ou l'autre, je pense que cette question a pour but de faire intervenir l'expérience et le vécu de la personne.
+Es-tu plutôt chien ou chat? C'est une question qui fait intervenir la subjectivité de l'autre. Que ce soit l'un ou l'autre, je pense que cette question a pour but de faire intervenir l'expérience et le vécu de la personne.
 
 Serais-tu plutôt introverti ou extraverti? Cette question nous permet d'avoir un apperçu assez intéressent sur le mode vie de la personne: Comment elle fait pour se détendre.
 

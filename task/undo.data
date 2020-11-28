@@ -33440,3 +33440,126 @@ time 1605946976
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++" modified:"1605891026" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++-" modified:"1605946976" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 ---
+time 1606154306
+new [description:"FR ajouter rédaction" entry:"1606154306" modified:"1606154306" status:"pending" uuid:"8536ec96-eef7-40d3-a7bd-236a929ecaef"]
+---
+time 1606258987
+old [description:"AG GBU" due:"1606114800" entry:"1605452626" modified:"1605452626" status:"pending" uuid:"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"]
+new [description:"AG GBU" due:"1606114800" end:"1606258987" entry:"1605452626" modified:"1606258987" status:"completed" uuid:"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"]
+---
+time 1606301258
+new [description:"sondage biere" entry:"1606301258" modified:"1606301258" status:"pending" uuid:"e1ea2563-a52c-4648-8236-1d9b38f2adb6"]
+---
+time 1606304317
+old [description:"FR ajouter rédaction" entry:"1606154306" modified:"1606154306" status:"pending" uuid:"8536ec96-eef7-40d3-a7bd-236a929ecaef"]
+new [description:"FR ajouter rédaction" end:"1606304317" entry:"1606154306" modified:"1606304317" status:"completed" uuid:"8536ec96-eef7-40d3-a7bd-236a929ecaef"]
+---
+time 1606304899
+old [description:"sondage biere" entry:"1606301258" modified:"1606301258" status:"pending" uuid:"e1ea2563-a52c-4648-8236-1d9b38f2adb6"]
+new [description:"sondage biere" end:"1606304899" entry:"1606301258" modified:"1606304899" status:"completed" uuid:"e1ea2563-a52c-4648-8236-1d9b38f2adb6"]
+---
+time 1606304953
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++-" modified:"1605946976" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++" modified:"1606304953" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1606304953
+old [description:"Devoir maman Lady" due:"1606543200" entry:"1605946976" imask:"6" modified:"1605891026" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"460b7e04-56f8-4fda-bc6f-1fe1df3b1ff8"]
+new [description:"Devoir maman Lady" due:"1606543200" end:"1606304953" entry:"1605946976" imask:"6" modified:"1606304953" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"460b7e04-56f8-4fda-bc6f-1fe1df3b1ff8"]
+---
+time 1606307799
+new [description:"GL accéssibilité données" entry:"1606307799" modified:"1606307799" status:"pending" uuid:"a9b0fd48-615d-45dd-864a-3a1f6727b758"]
+---
+time 1606307882
+new [description:"refaire userstories" entry:"1606307882" modified:"1606307882" priority:"L" status:"pending" uuid:"679e20bd-4024-4122-860b-7bdf9422a950"]
+---
+time 1606307994
+new [description:"concilier planning et 10min" entry:"1606307994" modified:"1606307994" status:"pending" uuid:"1295a666-cafd-4bc5-8812-04a6f2942353"]
+---
+time 1606308355
+new [description:"Traiter courrier" due:"1606374000" entry:"1606308355" modified:"1606308355" status:"pending" uuid:"29b83e52-866b-4fb0-9f24-73f9bc91f5e1"]
+---
+time 1606308375
+new [description:"poste+comt" due:"1606374000" entry:"1606308375" modified:"1606308375" status:"pending" uuid:"da03ee69-4332-4703-a003-8e68fc7abc78"]
+---
+time 1606308531
+new [description:"recherche appareil photo" entry:"1606308531" modified:"1606308531" status:"pending" uuid:"d184b129-79b7-4477-abd1-e59743a57c8b"]
+---
+time 1606312966
+new [description:"comment devenir intéressant" entry:"1606312966" modified:"1606312966" status:"pending" uuid:"1d4e23d0-091f-471b-8a4b-740ab350e988"]
+---
+time 1606313471
+old [description:"concilier planning et 10min" entry:"1606307994" modified:"1606307994" status:"pending" uuid:"1295a666-cafd-4bc5-8812-04a6f2942353"]
+new [description:"concilier planning et 10min" end:"1606313471" entry:"1606307994" modified:"1606313471" status:"completed" uuid:"1295a666-cafd-4bc5-8812-04a6f2942353"]
+---
+time 1606314172
+new [description:"faire montage" entry:"1606314172" modified:"1606314172" status:"pending" uuid:"9e31c0ca-f42d-49da-a651-d0bcf8c7f796"]
+---
+time 1606342717
+old [description:"faire montage" entry:"1606314172" modified:"1606314172" status:"pending" uuid:"9e31c0ca-f42d-49da-a651-d0bcf8c7f796"]
+new [description:"faire montage" end:"1606342717" entry:"1606314172" modified:"1606342717" status:"completed" uuid:"9e31c0ca-f42d-49da-a651-d0bcf8c7f796"]
+---
+time 1606342727
+old [description:"recherche appareil photo" entry:"1606308531" modified:"1606308531" status:"pending" uuid:"d184b129-79b7-4477-abd1-e59743a57c8b"]
+new [description:"recherche appareil photo" end:"1606342727" entry:"1606308531" modified:"1606342727" status:"completed" uuid:"d184b129-79b7-4477-abd1-e59743a57c8b"]
+---
+time 1606342738
+old [description:"satom" entry:"1605452402" modified:"1605452402" status:"pending" uuid:"2e4dd73f-8cd9-4c7c-9a91-d7d060f6d95f"]
+new [description:"satom" end:"1606342738" entry:"1605452402" modified:"1606342738" status:"completed" uuid:"2e4dd73f-8cd9-4c7c-9a91-d7d060f6d95f"]
+---
+time 1606343006
+old [description:"comment devenir intéressant" entry:"1606312966" modified:"1606312966" status:"pending" uuid:"1d4e23d0-091f-471b-8a4b-740ab350e988"]
+new [description:"comment devenir intéressant" end:"1606343006" entry:"1606312966" modified:"1606343006" status:"completed" uuid:"1d4e23d0-091f-471b-8a4b-740ab350e988"]
+---
+time 1606398007
+old [description:"Traiter courrier" due:"1606374000" entry:"1606308355" modified:"1606308355" status:"pending" uuid:"29b83e52-866b-4fb0-9f24-73f9bc91f5e1"]
+new [description:"Traiter courrier" due:"1606374000" end:"1606398007" entry:"1606308355" modified:"1606398007" status:"completed" uuid:"29b83e52-866b-4fb0-9f24-73f9bc91f5e1"]
+---
+time 1606495552
+old [description:"TP5 SI" due:"1606806000" entry:"1605890815" modified:"1605890815" status:"pending" uuid:"2fb523cf-518b-4e34-970d-319f3ce92ed8"]
+new [description:"TP5 SI" due:"1606806000" end:"1606495552" entry:"1605890815" modified:"1606495552" status:"completed" uuid:"2fb523cf-518b-4e34-970d-319f3ce92ed8"]
+---
+time 1606495564
+old [description:"poste+comt" due:"1606374000" entry:"1606308375" modified:"1606308375" status:"pending" uuid:"da03ee69-4332-4703-a003-8e68fc7abc78"]
+new [description:"poste+comt" due:"1606374000" end:"1606495564" entry:"1606308375" modified:"1606495564" status:"completed" uuid:"da03ee69-4332-4703-a003-8e68fc7abc78"]
+---
+time 1606495621
+new [description:"ameliorer tilda" entry:"1606495621" modified:"1606495621" status:"pending" uuid:"640ef2e7-48fc-4ce6-8058-fe747509e813"]
+---
+time 1606496330
+new [description:"lf delete direct" entry:"1606496330" modified:"1606496330" status:"pending" uuid:"9d0859c4-b05f-4f62-bae2-8ee2a083954e"]
+---
+time 1606497699
+new [description:"revoir UML" entry:"1606497699" modified:"1606497699" status:"pending" uuid:"2dd46711-5095-4e00-b963-750ec0211334"]
+---
+time 1606502063
+new [description:"bash azure" entry:"1606502063" modified:"1606502063" status:"pending" uuid:"c2c45c2b-1d16-4fa3-ba96-07b4f4cfa71f"]
+---
+time 1606503968
+new [description:"vocliste" entry:"1606503968" modified:"1606503968" status:"pending" uuid:"cd107333-fb83-4b90-a278-e7b9594217c0"]
+---
+time 1606505142
+new [description:"Faire annonce JMEP" entry:"1606505142" modified:"1606505142" priority:"H" status:"pending" uuid:"d9250536-c647-43f7-bfef-c1328f581efd"]
+---
+time 1606515544
+new [description:"Dans patent chercher Roman Szubryt" entry:"1606515544" modified:"1606515544" status:"pending" uuid:"d06f1fa9-0f3e-476a-8a45-b20b7abdeae2"]
+---
+time 1606518732
+old [description:"Faire annonce JMEP" entry:"1606505142" modified:"1606505142" priority:"H" status:"pending" uuid:"d9250536-c647-43f7-bfef-c1328f581efd"]
+new [description:"Faire annonce JMEP" end:"1606518732" entry:"1606505142" modified:"1606518732" priority:"H" status:"completed" uuid:"d9250536-c647-43f7-bfef-c1328f581efd"]
+---
+time 1606518881
+new [description:"refaire planning reve\/but" entry:"1606518881" modified:"1606518881" status:"pending" uuid:"049b5011-da27-4908-90a0-2e7ba85c1242"]
+---
+time 1606518898
+new [description:"tuto piano" entry:"1606518898" modified:"1606518898" status:"pending" uuid:"6c82d6c0-934a-4fa4-bd5f-4fac3c625d0f"]
+---
+time 1606559867
+new [description:"Devoir maman Lady" due:"1607148000" entry:"1606559867" imask:"7" modified:"1606304953" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"ddd2334b-641a-421f-8425-669059b3d83e"]
+---
+time 1606559867
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++" modified:"1606304953" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++-" modified:"1606559867" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1606567648
+new [description:"corbeille à papier" entry:"1606567648" modified:"1606567648" status:"pending" uuid:"ac258935-f09e-4d44-8772-17b2e01b03c5"]
+---
