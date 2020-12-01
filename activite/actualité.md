@@ -1,5 +1,6 @@
 Économie
 ==========
+[semantique](semantique)
 [economies](economies)
 
 ## Bible
