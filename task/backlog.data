@@ -9365,3 +9365,18 @@
 {"description":"Devoir maman Lady","due":"20201205T060000Z","entry":"20201128T103747Z","imask":7,"modified":"20201125T114913Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"ddd2334b-641a-421f-8425-669059b3d83e"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++-","modified":"20201128T103747Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
 {"description":"corbeille à papier","entry":"20201128T124728Z","modified":"20201128T124728Z","status":"pending","uuid":"ac258935-f09e-4d44-8772-17b2e01b03c5"}
+{"description":"bash azure","end":"20201129T221622Z","entry":"20201127T183423Z","modified":"20201129T221622Z","status":"completed","uuid":"c2c45c2b-1d16-4fa3-ba96-07b4f4cfa71f"}
+{"description":"revoir UML","end":"20201129T224852Z","entry":"20201127T172139Z","modified":"20201129T224852Z","status":"completed","uuid":"2dd46711-5095-4e00-b963-750ec0211334"}
+{"description":"GL accéssibilité données","end":"20201129T224901Z","entry":"20201125T123639Z","modified":"20201129T224901Z","status":"completed","uuid":"a9b0fd48-615d-45dd-864a-3a1f6727b758"}
+{"description":"ameliorer tilda","end":"20201203T114147Z","entry":"20201127T164701Z","modified":"20201203T114147Z","status":"completed","uuid":"640ef2e7-48fc-4ce6-8058-fe747509e813"}
+{"description":"TP9 GL","due":"20201130T070000Z","end":"20201204T164130Z","entry":"20201120T164010Z","modified":"20201204T164132Z","status":"completed","uuid":"a20106f8-ed52-46a8-ba8a-04f9cc861dbf"}
+{"description":"TP5 IN","due":"20201203T070000Z","end":"20201204T164132Z","entry":"20201120T164042Z","modified":"20201204T164132Z","status":"completed","uuid":"6022eea3-1247-4182-a7c4-0186d689772f"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++","modified":"20201204T164132Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20201205T060000Z","end":"20201204T164132Z","entry":"20201128T103747Z","imask":7,"modified":"20201204T164132Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"ddd2334b-641a-421f-8425-669059b3d83e"}
+{"description":"Devoir maman Lady","due":"20201212T060000Z","entry":"20201205T120211Z","imask":8,"modified":"20201204T164132Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"c724a48e-6335-4b84-a227-123f1f77a542"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++-","modified":"20201205T120211Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"créer gitlab Génie logiciel","entry":"20201205T150812Z","modified":"20201205T150812Z","status":"pending","uuid":"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"}
+{"description":"lf delete direct","end":"20201206T013539Z","entry":"20201127T165850Z","modified":"20201206T013541Z","status":"completed","uuid":"9d0859c4-b05f-4f62-bae2-8ee2a083954e"}
+{"description":"refaire planning reve\/but","end":"20201206T013541Z","entry":"20201127T231441Z","modified":"20201206T013541Z","status":"completed","uuid":"049b5011-da27-4908-90a0-2e7ba85c1242"}
+{"description":"corbeille à papier","end":"20201206T013541Z","entry":"20201128T124728Z","modified":"20201206T013541Z","status":"completed","uuid":"ac258935-f09e-4d44-8772-17b2e01b03c5"}
+{"description":"créer gitlab Génie logiciel","end":"20201206T013541Z","entry":"20201205T150812Z","modified":"20201206T013541Z","status":"completed","uuid":"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"}

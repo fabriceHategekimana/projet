@@ -4,11 +4,13 @@ all: start
  
 start: FORCE
 	zathura *.pdf & 2>error && vim -S Session.vim 2>error && rm error
-addtask:
+addtask: FORCE
 	make add  
-summary:
+summary: FORCE
 	task  summary
-task:
+task: FORCE
 	task 
+note: FORCE
+	vim note.md
 
-
+FORCE:

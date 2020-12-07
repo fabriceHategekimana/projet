@@ -33563,3 +33563,61 @@ new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+
 time 1606567648
 new [description:"corbeille à papier" entry:"1606567648" modified:"1606567648" status:"pending" uuid:"ac258935-f09e-4d44-8772-17b2e01b03c5"]
 ---
+time 1606688182
+old [description:"bash azure" entry:"1606502063" modified:"1606502063" status:"pending" uuid:"c2c45c2b-1d16-4fa3-ba96-07b4f4cfa71f"]
+new [description:"bash azure" end:"1606688182" entry:"1606502063" modified:"1606688182" status:"completed" uuid:"c2c45c2b-1d16-4fa3-ba96-07b4f4cfa71f"]
+---
+time 1606690132
+old [description:"revoir UML" entry:"1606497699" modified:"1606497699" status:"pending" uuid:"2dd46711-5095-4e00-b963-750ec0211334"]
+new [description:"revoir UML" end:"1606690132" entry:"1606497699" modified:"1606690132" status:"completed" uuid:"2dd46711-5095-4e00-b963-750ec0211334"]
+---
+time 1606690141
+old [description:"GL accéssibilité données" entry:"1606307799" modified:"1606307799" status:"pending" uuid:"a9b0fd48-615d-45dd-864a-3a1f6727b758"]
+new [description:"GL accéssibilité données" end:"1606690141" entry:"1606307799" modified:"1606690141" status:"completed" uuid:"a9b0fd48-615d-45dd-864a-3a1f6727b758"]
+---
+time 1606995707
+old [description:"ameliorer tilda" entry:"1606495621" modified:"1606495621" status:"pending" uuid:"640ef2e7-48fc-4ce6-8058-fe747509e813"]
+new [description:"ameliorer tilda" end:"1606995707" entry:"1606495621" modified:"1606995707" status:"completed" uuid:"640ef2e7-48fc-4ce6-8058-fe747509e813"]
+---
+time 1607100092
+old [description:"TP9 GL" due:"1606719600" entry:"1605890410" modified:"1605890410" status:"pending" uuid:"a20106f8-ed52-46a8-ba8a-04f9cc861dbf"]
+new [description:"TP9 GL" due:"1606719600" end:"1607100090" entry:"1605890410" modified:"1607100092" status:"completed" uuid:"a20106f8-ed52-46a8-ba8a-04f9cc861dbf"]
+---
+time 1607100092
+old [description:"TP5 IN" due:"1606978800" entry:"1605890442" modified:"1605890442" status:"pending" uuid:"6022eea3-1247-4182-a7c4-0186d689772f"]
+new [description:"TP5 IN" due:"1606978800" end:"1607100092" entry:"1605890442" modified:"1607100092" status:"completed" uuid:"6022eea3-1247-4182-a7c4-0186d689772f"]
+---
+time 1607100092
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++-" modified:"1606559867" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++" modified:"1607100092" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1607100092
+old [description:"Devoir maman Lady" due:"1607148000" entry:"1606559867" imask:"7" modified:"1606304953" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"ddd2334b-641a-421f-8425-669059b3d83e"]
+new [description:"Devoir maman Lady" due:"1607148000" end:"1607100092" entry:"1606559867" imask:"7" modified:"1607100092" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"ddd2334b-641a-421f-8425-669059b3d83e"]
+---
+time 1607169731
+new [description:"Devoir maman Lady" due:"1607752800" entry:"1607169731" imask:"8" modified:"1607100092" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"c724a48e-6335-4b84-a227-123f1f77a542"]
+---
+time 1607169731
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++" modified:"1607100092" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++-" modified:"1607169731" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1607180892
+new [description:"créer gitlab Génie logiciel" entry:"1607180892" modified:"1607180892" status:"pending" uuid:"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"]
+---
+time 1607218541
+old [description:"lf delete direct" entry:"1606496330" modified:"1606496330" status:"pending" uuid:"9d0859c4-b05f-4f62-bae2-8ee2a083954e"]
+new [description:"lf delete direct" end:"1607218539" entry:"1606496330" modified:"1607218541" status:"completed" uuid:"9d0859c4-b05f-4f62-bae2-8ee2a083954e"]
+---
+time 1607218541
+old [description:"refaire planning reve\/but" entry:"1606518881" modified:"1606518881" status:"pending" uuid:"049b5011-da27-4908-90a0-2e7ba85c1242"]
+new [description:"refaire planning reve\/but" end:"1607218541" entry:"1606518881" modified:"1607218541" status:"completed" uuid:"049b5011-da27-4908-90a0-2e7ba85c1242"]
+---
+time 1607218541
+old [description:"corbeille à papier" entry:"1606567648" modified:"1606567648" status:"pending" uuid:"ac258935-f09e-4d44-8772-17b2e01b03c5"]
+new [description:"corbeille à papier" end:"1607218541" entry:"1606567648" modified:"1607218541" status:"completed" uuid:"ac258935-f09e-4d44-8772-17b2e01b03c5"]
+---
+time 1607218541
+old [description:"créer gitlab Génie logiciel" entry:"1607180892" modified:"1607180892" status:"pending" uuid:"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"]
+new [description:"créer gitlab Génie logiciel" end:"1607218541" entry:"1607180892" modified:"1607218541" status:"completed" uuid:"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"]
+---
