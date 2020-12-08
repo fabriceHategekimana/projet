@@ -9329,6 +9329,7 @@
 {"description":"livre gb","end":"20201120T165026Z","entry":"20201120T135415Z","modified":"20201120T165026Z","priority":"H","status":"completed","uuid":"e82faba7-66f3-4eab-8e86-a7b9af1e8452"}
 {"description":"Devoir maman Lady","due":"20201128T060000Z","entry":"20201121T082256Z","imask":6,"modified":"20201120T165026Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"460b7e04-56f8-4fda-bc6f-1fe1df3b1ff8"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++-","modified":"20201121T082256Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+<<<<<<< HEAD
 {"description":"FR ajouter rédaction","entry":"20201123T175826Z","modified":"20201123T175826Z","status":"pending","uuid":"8536ec96-eef7-40d3-a7bd-236a929ecaef"}
 {"description":"AG GBU","due":"20201123T070000Z","end":"20201124T230307Z","entry":"20201115T150346Z","modified":"20201124T230307Z","status":"completed","uuid":"4ace81ae-1d0c-473e-9d60-ffa5f6e96075"}
 {"description":"sondage biere","entry":"20201125T104738Z","modified":"20201125T104738Z","status":"pending","uuid":"e1ea2563-a52c-4648-8236-1d9b38f2adb6"}
@@ -9380,3 +9381,7 @@
 {"description":"refaire planning reve\/but","end":"20201206T013541Z","entry":"20201127T231441Z","modified":"20201206T013541Z","status":"completed","uuid":"049b5011-da27-4908-90a0-2e7ba85c1242"}
 {"description":"corbeille à papier","end":"20201206T013541Z","entry":"20201128T124728Z","modified":"20201206T013541Z","status":"completed","uuid":"ac258935-f09e-4d44-8772-17b2e01b03c5"}
 {"description":"créer gitlab Génie logiciel","end":"20201206T013541Z","entry":"20201205T150812Z","modified":"20201206T013541Z","status":"completed","uuid":"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"}
+=======
+{"description":"Devoir maman Lady","due":"20201205T060000Z","entry":"20201128T150945Z","imask":7,"modified":"20201121T082256Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"be492d2f-09de-4729-8818-9db72dc09f8c"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++--","modified":"20201128T150945Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+>>>>>>> 99ce43a753b833d430a608a11ab0477b101a8fb7
