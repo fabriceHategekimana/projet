@@ -19,3 +19,5 @@ logique propositionnelle
 programmes= relation + règle de vérification
 
 unification: si on peut trouver une substitution (existante) qui peut concorder les résultats
+
+Expressions régulières

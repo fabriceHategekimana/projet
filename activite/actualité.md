@@ -1,7 +1,9 @@
 Économie
 ==========
+
 [semantique](semantique)
 [economies](economies)
+[vim](vim)
 
 Organisation:
 1. Planning
