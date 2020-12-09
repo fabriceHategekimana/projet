@@ -33621,12 +33621,7 @@ new [description:"corbeille à papier" end:"1607218541" entry:"1606567648" modif
 time 1607218541
 old [description:"créer gitlab Génie logiciel" entry:"1607180892" modified:"1607180892" status:"pending" uuid:"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"]
 new [description:"créer gitlab Génie logiciel" end:"1607218541" entry:"1607180892" modified:"1607218541" status:"completed" uuid:"9dacc7bd-25a8-4a3f-81a0-1ef82326e555"]
-=======
-time 1606576185
-new [description:"Devoir maman Lady" due:"1607148000" entry:"1606576185" imask:"7" modified:"1605946976" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"be492d2f-09de-4729-8818-9db72dc09f8c"]
----
-time 1606576185
-old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++-" modified:"1605946976" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
-new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++--" modified:"1606576185" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
->>>>>>> 99ce43a753b833d430a608a11ab0477b101a8fb7
+time 1607442795
+old [description:"TP4 PA" due:"1607497200" entry:"1605890490" modified:"1605890490" status:"pending" uuid:"6a51cdfb-36e3-45a7-99cf-c969b61bc124"]
+new [description:"TP4 PA" due:"1607497200" end:"1607442795" entry:"1605890490" modified:"1607442795" status:"completed" uuid:"6a51cdfb-36e3-45a7-99cf-c969b61bc124"]
 ---
