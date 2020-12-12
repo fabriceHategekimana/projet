@@ -3,9 +3,9 @@ Histoire
 
 Il faut voir de quoi est composée une histoire:
 [Personnages](-Personnages)
--Chronologies
--Thèmes
--Message
+- Chronologies
+- [Thèmes](Thèmes)
+- Message
 [Univers](-Univers)
 
 Il faut aussi voir ce qui rend une Histoire géniale:
@@ -15,6 +15,7 @@ Il faut aussi voir ce qui rend une Histoire géniale:
 		- Vinland Saga
 		- Berserk
 		- Batman (DC Universe)
+		- Otoyome monogatari
 		- etc...
 	Remarque: Je trouve que ces histoires divergent dans leur qualité et que cette qualité appartient à un domaine.
 	

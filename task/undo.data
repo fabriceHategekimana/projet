@@ -33625,3 +33625,7 @@ time 1607442795
 old [description:"TP4 PA" due:"1607497200" entry:"1605890490" modified:"1605890490" status:"pending" uuid:"6a51cdfb-36e3-45a7-99cf-c969b61bc124"]
 new [description:"TP4 PA" due:"1607497200" end:"1607442795" entry:"1605890490" modified:"1607442795" status:"completed" uuid:"6a51cdfb-36e3-45a7-99cf-c969b61bc124"]
 ---
+time 1607682851
+old [description:"Dans patent chercher Roman Szubryt" entry:"1606515544" modified:"1606515544" status:"pending" uuid:"d06f1fa9-0f3e-476a-8a45-b20b7abdeae2"]
+new [description:"Dans patent chercher Roman Szubryt" end:"1607682851" entry:"1606515544" modified:"1607682851" status:"completed" uuid:"d06f1fa9-0f3e-476a-8a45-b20b7abdeae2"]
+---
