@@ -33629,3 +33629,21 @@ time 1607682851
 old [description:"Dans patent chercher Roman Szubryt" entry:"1606515544" modified:"1606515544" status:"pending" uuid:"d06f1fa9-0f3e-476a-8a45-b20b7abdeae2"]
 new [description:"Dans patent chercher Roman Szubryt" end:"1607682851" entry:"1606515544" modified:"1607682851" status:"completed" uuid:"d06f1fa9-0f3e-476a-8a45-b20b7abdeae2"]
 ---
+time 1607775655
+new [description:"Devoir maman Lady" due:"1608357600" entry:"1607775655" imask:"9" modified:"1607169731" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"fdc3b89a-91f8-4d57-8ade-317d2352a8ab"]
+---
+time 1607775655
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++-" modified:"1607169731" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++--" modified:"1607775655" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1607780718
+new [description:"feed-back liste des personnes" entry:"1607780718" modified:"1607780718" status:"pending" uuid:"4547e014-772e-492e-8d76-07c7233bbdd6"]
+---
+time 1607804794
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++--" modified:"1607775655" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++-" modified:"1607804794" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1607804794
+old [description:"Devoir maman Lady" due:"1607752800" entry:"1607169731" imask:"8" modified:"1607100092" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"c724a48e-6335-4b84-a227-123f1f77a542"]
+new [description:"Devoir maman Lady" due:"1607752800" end:"1607804794" entry:"1607169731" imask:"8" modified:"1607804794" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"c724a48e-6335-4b84-a227-123f1f77a542"]
+---
