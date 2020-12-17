@@ -33650,3 +33650,15 @@ new [description:"Devoir maman Lady" due:"1607752800" end:"1607804794" entry:"16
 time 1607884283
 new [description:"devoir Famille de Mélissa" entry:"1607884283" modified:"1607884283" status:"pending" uuid:"9c6637a8-c19e-4fd5-857f-2d7d45e77ff2"]
 ---
+time 1608220303
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++-" modified:"1607804794" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++" modified:"1608220303" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1608220303
+old [description:"Devoir maman Lady" due:"1608357600" entry:"1607775655" imask:"9" modified:"1607169731" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"fdc3b89a-91f8-4d57-8ade-317d2352a8ab"]
+new [description:"Devoir maman Lady" due:"1608357600" end:"1608220303" entry:"1607775655" imask:"9" modified:"1608220303" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"fdc3b89a-91f8-4d57-8ade-317d2352a8ab"]
+---
+time 1608243119
+old [description:"feed-back liste des personnes" entry:"1607780718" modified:"1607780718" status:"pending" uuid:"4547e014-772e-492e-8d76-07c7233bbdd6"]
+new [description:"feed-back liste des personnes" end:"1608243119" entry:"1607780718" modified:"1608243119" status:"completed" uuid:"4547e014-772e-492e-8d76-07c7233bbdd6"]
+---
