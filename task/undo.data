@@ -33662,3 +33662,10 @@ time 1608243119
 old [description:"feed-back liste des personnes" entry:"1607780718" modified:"1607780718" status:"pending" uuid:"4547e014-772e-492e-8d76-07c7233bbdd6"]
 new [description:"feed-back liste des personnes" end:"1608243119" entry:"1607780718" modified:"1608243119" status:"completed" uuid:"4547e014-772e-492e-8d76-07c7233bbdd6"]
 ---
+time 1608364881
+new [description:"Devoir maman Lady" due:"1608962400" entry:"1608364881" imask:"10" modified:"1608220303" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"6071868c-b50f-4cd1-bf7d-21dd870a9363"]
+---
+time 1608364881
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++" modified:"1608220303" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++-" modified:"1608364881" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
