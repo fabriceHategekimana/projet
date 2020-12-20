@@ -65,3 +65,12 @@ DEVOIRS:
 
 DÉSIRS
 Devenir plus fort, meilleurs, plus mature
+
+## Perso
+Rangement
+Ménage
+Méditation
+Tuto
+Cadeaux
+Activite
+Histoire

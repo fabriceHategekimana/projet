@@ -2,6 +2,15 @@ Personnages:
 ============
 
 [snippet_personnage](snippet_personnage)
+## Goupes :
+principal
+Police
+École
+Révolutionnaire
+Monarchie
+Underground
+Orphelina
+
 
 ## MC (fille):
 Nom:
