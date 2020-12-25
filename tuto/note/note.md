@@ -4,6 +4,10 @@ Tutorial:
 Mes premiers tutos seront des tuto de math.
 Mon objectif: voir le plan de cours pour harmos.
 
+[math](math)
+[vim](vim)
+piano
+
 ## Harmos:
 Se divise en 3 cycle
 1. 1ère à 4e (de 4 a 8 ans) 

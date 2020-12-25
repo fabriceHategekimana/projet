@@ -2,54 +2,90 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <C-Y> 
-inoremap <C-L> <Right>
-inoremap <C-W> :w
-inoremap <C-D><C-D> <><Left>
-inoremap <C-D> <><Left>
-nnoremap  :!. ~/sh/g.sh 
+imap <C-G>S <Plug>ISurround
+imap <C-G>s <Plug>Isurround
+inoremap <C-S> <Right>
+inoremap <C-C> :w
+nnoremap  /
+nnoremap  :tabp
+nnoremap <NL> }
+nnoremap  {
+nnoremap  :tabn
 nnoremap   .
-nnoremap :w :mks!:w
-nmap <silent> \w\m <Plug>VimwikiMakeTomorrowDiaryNote
-nmap <silent> \w\y <Plug>VimwikiMakeYesterdayDiaryNote
-nmap <silent> \w\t <Plug>VimwikiTabMakeDiaryNote
-nmap <silent> \w\w <Plug>VimwikiMakeDiaryNote
-nmap <silent> \w\i <Plug>VimwikiDiaryGenerateLinks
-nmap <silent> \wi <Plug>VimwikiDiaryIndex
-nmap <silent> \ws <Plug>VimwikiUISelect
-nmap <silent> \wt <Plug>VimwikiTabIndex
-nmap <silent> \ww <Plug>VimwikiIndex
-nnoremap controlv :let collage= Collage(collage)
+xmap S <Plug>VSurround
+nmap cS <Plug>CSurround
+nmap cs <Plug>Csurround
+nnoremap cp :CpL 
+nmap ds <Plug>Dsurround
+xmap gS <Plug>VgSurround
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
-nnoremap go Go
-nnoremap gi Gi
-nnoremap tn :tabnew .
+onoremap in( :normal! f(vi(
+nnoremap tn :LfNewTab
+nnoremap vs :sp .
 nnoremap vp :vsp .
+nmap ySS <Plug>YSsurround
+nmap ySs <Plug>YSsurround
+nmap yss <Plug>Yssurround
+nmap yS <Plug>YSurround
+nmap ys <Plug>Ysurround
+nnoremap <silent> <Plug>SurroundRepeat .
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
-nnoremap <C-G> :!. ~/sh/g.sh 
+nnoremap <silent> <Plug>(JavaComplete-Imports-SortImports) :call javacomplete#imports#SortImports()
+nnoremap <silent> <Plug>(JavaComplete-Generate-ClassInFile) :call javacomplete#newclass#CreateInFile()
+nnoremap <silent> <Plug>(JavaComplete-Generate-NewClass) :call javacomplete#newclass#CreateClass()
+nnoremap <silent> <Plug>(JavaComplete-Generate-DefaultConstructor) :call javacomplete#generators#GenerateConstructor(1)
+nnoremap <silent> <Plug>(JavaComplete-Generate-Constructor) :call javacomplete#generators#GenerateConstructor(0)
+nnoremap <silent> <Plug>(JavaComplete-Generate-EqualsAndHashCode) :call javacomplete#generators#GenerateEqualsAndHashCode()
+nnoremap <silent> <Plug>(JavaComplete-Generate-ToString) :call javacomplete#generators#GenerateToString()
+vnoremap <silent> <Plug>(JavaComplete-Generate-AccessorSetterGetter) :call javacomplete#generators#Accessor('sg')
+vnoremap <silent> <Plug>(JavaComplete-Generate-AccessorGetter) :call javacomplete#generators#Accessor('g')
+vnoremap <silent> <Plug>(JavaComplete-Generate-AccessorSetter) :call javacomplete#generators#Accessor('s')
+nnoremap <silent> <Plug>(JavaComplete-Generate-AccessorSetterGetter) :call javacomplete#generators#Accessor('sg')
+nnoremap <silent> <Plug>(JavaComplete-Generate-AccessorGetter) :call javacomplete#generators#Accessor('g')
+nnoremap <silent> <Plug>(JavaComplete-Generate-AccessorSetter) :call javacomplete#generators#Accessor('s')
+nnoremap <silent> <Plug>(JavaComplete-Generate-Accessors) :call javacomplete#generators#Accessors()
+nnoremap <silent> <Plug>(JavaComplete-Generate-AbstractMethods) :call javacomplete#generators#AbstractDeclaration()
+nnoremap <silent> <Plug>(JavaComplete-Imports-AddSmart) :call javacomplete#imports#Add(1)
+nnoremap <silent> <Plug>(JavaComplete-Imports-Add) :call javacomplete#imports#Add()
+nnoremap <silent> <Plug>(JavaComplete-Imports-RemoveUnused) :call javacomplete#imports#RemoveUnused()
+nnoremap <silent> <Plug>(JavaComplete-Imports-AddMissing) :call javacomplete#imports#AddMissing()
+nnoremap <C-F> /
+nnoremap <C-J> }
+nnoremap <C-K> {
+nnoremap <C-H> :tabp
+nnoremap <C-L> :tabn
 nnoremap <F12> :!clear
+nnoremap <F10> :!gedit %
 nnoremap <F9> :so $VIMRUNTIME/syntax/hitest.vim
-nnoremap <F8> :call LinkImage()
-nnoremap <F3> :! ~/sh/mymake.sh 
-nnoremap <F1> :call Vimrc()
-inoremap  <><Left>
-inoremap  <><Left>
-inoremap  <Right>
-inoremap  :w
-inoremap  
+nnoremap <F7> :make 
+nnoremap <F3> :! ~/sh/mymake 
+nnoremap <F1> :tabnew ~/.vimrc
+inoremap  :w
+imap S <Plug>ISurround
+imap s <Plug>Isurround
+inoremap  <Right>
 inoremap """ "A"
 inoremap "" "
 inoremap " ""<Left>
 inoremap ((( (A)
 inoremap (( (
 inoremap ( ()<Left>
-vnoremap ét :call Task()
-nnoremap éé "
-nnoremap éo oO
-nnoremap èè :wqall
-nnoremap è :
+map àf :Lf
+nmap <silent> àwàm <Plug>VimwikiMakeTomorrowDiaryNote
+nmap <silent> àwày <Plug>VimwikiMakeYesterdayDiaryNote
+nmap <silent> àwàt <Plug>VimwikiTabMakeDiaryNote
+nmap <silent> àwàw <Plug>VimwikiMakeDiaryNote
+nmap <silent> àwài <Plug>VimwikiDiaryGenerateLinks
+nmap <silent> àwi <Plug>VimwikiDiaryIndex
+nmap <silent> àws <Plug>VimwikiUISelect
+nmap <silent> àwt <Plug>VimwikiTabIndex
+nmap <silent> àww <Plug>VimwikiIndex
+nnoremap écta :call Ctags()
+nnoremap édb :cope
+nnoremap èè :call Makefile()
+xnoremap éspa :call MakeSpace()
 inoremap [[[ [A] 
 inoremap [[ [
 inoremap [ []<Left>
@@ -59,19 +95,27 @@ inoremap { {}<Left>
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autowriteall
+set background=dark
 set backspace=indent,eol,start
+set cindent
+set complete=.,w,b,u,t,i,kspell
 set fileencodings=ucs-bom,utf-8,default,latin1
 set formatlistpat=^\\s*\\%(\\(-\\|\\*\\|+\\)\\|\\(\\C\\%(\\d\\+\\.\\)\\)\\)\\s\\+\\%(\\[\\([\ .oOX-]\\)\\]\\s\\)\\?
 set helplang=fr
 set ignorecase
 set incsearch
+set laststatus=2
+set omnifunc=syntaxComplete#Complete
+set pastetoggle=<F8>
+set path=.,/usr/include,,,**
 set printoptions=paper:a4
 set ruler
-set runtimepath=~/.vim,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim/plugged/vimwiki/,/var/lib/vim/addons,/etc/vim,/usr/share/vim/vimfiles,/usr/share/vim/vim82,/usr/share/vim/vimfiles/after,/etc/vim/after,/var/lib/vim/addons/after,~/.vim/after
+set runtimepath=~/.vim,~/.vim/pack/tpope/start/surround,~/.vim/plugged/swift.vim/,~/.vim/plugged/nerdtree/,~/.vim/plugged/vimwiki/,~/.vim/plugged/hardmode/,~/.vim/plugged/lf.vim/,~/.vim/plugged/vim-javacomplete2/,/var/lib/vim/addons,/etc/vim,/usr/share/vim/vimfiles,/usr/share/vim/vim82,/usr/share/vim/vimfiles/after,/etc/vim/after,/var/lib/vim/addons/after,~/.vim/after
 set smartcase
 set spelllang=fr_ch,en_us
 set splitbelow
 set splitright
+set statusline=%#Cursor#\ VIM\ \ %#Normal#%{(mode()=='n')?'\ \ NORMAL\ ':''}%#PmenuThumb#%{(mode()=='i')?'\ \ INSERT\ ':''}%#TabLineFill#%{(mode()=='r')?'\ \ REPLACE\ ':''}%#SpellRare#%{(mode()=='v')?'\ \ VISUAL\ ':''}%#LineNr#\ %n\ %#Visual#%#CursorIM#%R%M%#Cursor#%#CursorLine#\ %t\ %=%#LineNr#\ %3l:%-2c\ %#Normal#\ %Y\ %#Cursor#%3p%%\ 
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
@@ -85,8 +129,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd linux.md
-edit linux.md
+$argadd note.md
+edit ~/projet/tuto/note/exercices_compléments_a_10_20_etc.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -115,7 +159,7 @@ nmap <buffer> <silent> = <Plug>VimwikiAddHeaderLevel
 inoremap <buffer> ééfff \flechel{nom1}{nom2}{label}{angleIn}{angleOut}
 inoremap <buffer> ééff \fleche{nom1}{nom2}{label}
 inoremap <buffer> éér \rectangle{nom}{x}{y}
-inoremap <buffer> ééim ![](images/num.png)^<Right>a
+inoremap <buffer> ééim ![](../../images/num.png)^<Right>a
 inoremap <buffer> ééd \begin{tikzpicture}\end{tikzpicture}
 inoremap <buffer> ééta :call MarkdownLigne()
 inoremap <buffer> éém ``<Left>
@@ -130,10 +174,6 @@ nnoremap <buffer> <silent> O :call vimwiki#lst#kbd_O()
 nmap <buffer> <silent> [= <Plug>VimwikiGoToPrevSiblingHeader
 nmap <buffer> <silent> [[ <Plug>VimwikiGoToPrevHeader
 nmap <buffer> <silent> [u <Plug>VimwikiGoToParentHeader
-nmap <buffer> <silent> \wr <Plug>VimwikiRenameLink
-nmap <buffer> <silent> \wd <Plug>VimwikiDeleteLink
-nmap <buffer> \whh <Plug>Vimwiki2HTMLBrowse
-nmap <buffer> \wh <Plug>Vimwiki2HTML
 nmap <buffer> <silent> ]= <Plug>VimwikiGoToNextSiblingHeader
 nmap <buffer> <silent> ]] <Plug>VimwikiGoToNextHeader
 nmap <buffer> <silent> ]u <Plug>VimwikiGoToParentHeader
@@ -207,10 +247,10 @@ nmap <buffer> <silent> <BS> <Plug>VimwikiGoBackLink
 nmap <buffer> <silent> <C-S-CR> <Plug>VimwikiTabnewLink
 nmap <buffer> <silent> <C-CR> <Plug>VimwikiVSplitLink
 nmap <buffer> <silent> <S-CR> <Plug>VimwikiSplitLink
-nnoremap <buffer> <F7> :call RunMarkdown3()
-nnoremap <buffer> <F6> :call RunMarkdown2()
-nnoremap <buffer> <F5> :!bash ~/sh/compmd.sh % 
-nnoremap <buffer> <F4> :let toc= Toc(toc)
+xnoremap <buffer> <F8> y:call AddTask()
+nnoremap <buffer> <F6> :call Imagerie()
+nnoremap <buffer> <F5> :!bash ~/sh/compmd % 
+nnoremap <buffer> <F4> :call LinkImage()
 nnoremap <buffer> <F2> :let note= Note("markdown")
 nnoremap <buffer> <C-P> :!. ~/sh/cs.sh
 imap <buffer> <silent>  <Plug>VimwikiDecreaseLvlSingleItem
@@ -220,15 +260,20 @@ imap <buffer> <silent>  <Plug>VimwikiListPrevSymbol
 imap <buffer> <silent> <NL> <Plug>VimwikiListNextSymbol
 inoremap <buffer> <silent>  :VimwikiReturn 1 5
 imap <buffer> <silent>  <Plug>VimwikiIncreaseLvlSingleItem
-nnoremap <buffer> échant :call Chant()
+nmap <buffer> <silent> àwr <Plug>VimwikiRenameLink
+nmap <buffer> <silent> àwd <Plug>VimwikiDeleteLink
+nmap <buffer> àwhh <Plug>Vimwiki2HTMLBrowse
+nmap <buffer> àwh <Plug>Vimwiki2HTML
+xnoremap <buffer> ém di``<Left>p
 nnoremap <buffer> ém bi`ea`
-nnoremap <buffer> éim i![](images/num.png)^<Right>a
-nnoremap <buffer> éta :call MarkdownLigne()
+nnoremap <buffer> éim i![](../../images/num.png)^<Right>a
 nnoremap <buffer> éco i``````<Left><Left><Left><Up>
+xnoremap <buffer> éb di****2<Left>p
 nnoremap <buffer> éb I**A**
 nnoremap <buffer> ésss I#### 
 nnoremap <buffer> éss I### 
 nnoremap <buffer> és I## 
+nnoremap <buffer> éta :VimwikiTable
 nnoremap <buffer> ét :call MarkdownTitre()
 let &cpo=s:cpo_save
 unlet s:cpo_save
@@ -250,7 +295,7 @@ setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
 setlocal comments=
 setlocal commentstring=%%%s
-setlocal complete=.,w,b,u,t,i
+setlocal complete=.,w,b,u,t,i,kspell
 setlocal concealcursor=
 set conceallevel=2
 setlocal conceallevel=2
@@ -259,7 +304,8 @@ setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
-setlocal nocursorline
+set cursorline
+setlocal cursorline
 setlocal cursorlineopt=both
 setlocal define=
 setlocal dictionary=
@@ -314,8 +360,7 @@ setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
-set relativenumber
-setlocal relativenumber
+setlocal norelativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
@@ -327,8 +372,7 @@ setlocal sidescrolloff=-1
 setlocal signcolumn=auto
 setlocal nosmartindent
 setlocal softtabstop=0
-set spell
-setlocal spell
+setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=fr_ch,en_us
@@ -359,14 +403,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 27 - ((26 * winheight(0) + 27) / 55)
+let s:l = 3 - ((2 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-27
+3
 normal! 0
 tabnext 1
-badd +0 linux.md
+badd +7 note.md
+badd +6 ~/projet/tuto/note/math.md
+badd +20 ~/projet/tuto/note/complément_a_10.md
+badd +3 ~/projet/tuto/note/exercices_compléments_a_10_20_etc.md
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
