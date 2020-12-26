@@ -1,3 +1,4 @@
+Hello world!
 17:08:32 [34;1m[DEBG:default][0m [3mInitializing application[0m
 17:08:32 [32;1m[INFO:default][0m Systems icon theme is: "hicolor"
 17:08:32 [34;1m[DEBG:default][0m [3mCreating IPC server[0m
