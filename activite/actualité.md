@@ -3,7 +3,7 @@
 
 [semantique](semantique)
 [economies](economies)
-[vim](vim)
+[hikigai](hikigai)
 
 Organisation:
 1. Planning
@@ -23,6 +23,7 @@ chap 10: 1, 4, 12, 19
 ## Motivation
 Finalement les instincts et émotions sont les meilleurs carottes et baton pour manipuler ma personne.
 Je peux les manipuler avec des phénomènes extérieurs.
+Q: quel genre de phénomène extérieur?
 Parfois la lecture d'une histoire peu provoquer de différentes émotions.
 Je peux supprimé certaines émotions en trouvant des sources contraires.
 Je cherche souvent des émotions qui me motivent

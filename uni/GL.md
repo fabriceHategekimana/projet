@@ -22,8 +22,8 @@ La pluspart des patterns sont composables.
 5 [Decorator](Decorator)
 6 [Template](Template)
 7 [Flyweight](Flyweight)
-8 Command
-9 Compose
+8 [Command](Command)
+9 [Compose](Compose)
 10 Builder
 11 Facc
 12 Observer
