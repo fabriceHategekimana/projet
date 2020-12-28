@@ -5,6 +5,11 @@ existe?
 Message: Il n'y a personne d'aussi grand que Dieu
 Type: Louange
 
+## Source:
+À qui pourrais-je te comparer?
+Qui trouver de semblable à toi?
+Tu es toujours mon espérance (Ps. 25:5)
+
 Qui: Jésus, Dieu, moi, le monde
 Où: Partout, en tout lieu
 Quand: En tout temps, pour l'éternité 
