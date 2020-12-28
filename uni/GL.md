@@ -24,7 +24,7 @@ La pluspart des patterns sont composables.
 7 [Flyweight](Flyweight)
 8 [Command](Command)
 9 [Compose](Compose)
-10 Builder
+10 [Builder](Builder)
 11 Facc
 12 Observer
 13 State
