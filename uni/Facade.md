@@ -3,26 +3,48 @@ Facade
 
 Structural Pattern
 
-Crée une interface de haut niveau pour rendre l'utilisation d'un système plus facile.
+"On cache la complexité d'un système et son interaction"
+
+Crée une interface de haut niveau pour rendre l'utilisation d'un système complexe plus facile. Ici on a plusieurs formes et on cherche un moyen de les créer simplement. C'est comme la face avant d'une construction. 
+
+public interface Shape {
+public class Rectangle implements Shape {
+public class Square implements Shape {
+public class Circle implements Shape {
+
+public class ShapeMaker {
+
+//MAIN
+main()
+  ShapeMaker shapeMaker = new ShapeMaker();
+
+  shapeMaker.drawCircle();
+  shapeMaker.drawRectangle();
+  shapeMaker.drawSquare();		
 
 ![facade_design_pattern](../../images/facade_design_pattern.png)
 ```java
-//Step 1
+
+//Use the facade to draw various types of shapes.
+//FacadePatternDemo.java
+public class FacadePatternDemo {
+   public static void main(String[] args) {
+      ShapeMaker shapeMaker = new ShapeMaker();
+
+      shapeMaker.drawCircle();
+      shapeMaker.drawRectangle();
+      shapeMaker.drawSquare();		
+   }
+}
 
 //Create an interface.
-
 //Shape.java
-
 public interface Shape {
    void draw();
 }
 
-//Step 2
-
 //Create concrete classes implementing the same interface.
-
 //Rectangle.java
-
 public class Rectangle implements Shape {
 
    @Override
@@ -32,7 +54,6 @@ public class Rectangle implements Shape {
 }
 
 //Square.java
-
 public class Square implements Shape {
 
    @Override
@@ -42,7 +63,6 @@ public class Square implements Shape {
 }
 
 //Circle.java
-
 public class Circle implements Shape {
 
    @Override
@@ -51,12 +71,8 @@ public class Circle implements Shape {
    }
 }
 
-//Step 3
-
 //Create a facade class.
-
 //ShapeMaker.java
-
 public class ShapeMaker {
    private Shape circle;
    private Shape rectangle;
@@ -79,19 +95,4 @@ public class ShapeMaker {
    }
 }
 
-//Step 4
-
-//Use the facade to draw various types of shapes.
-
-//FacadePatternDemo.java
-
-public class FacadePatternDemo {
-   public static void main(String[] args) {
-      ShapeMaker shapeMaker = new ShapeMaker();
-
-      shapeMaker.drawCircle();
-      shapeMaker.drawRectangle();
-      shapeMaker.drawSquare();		
-   }
-}
 ```
