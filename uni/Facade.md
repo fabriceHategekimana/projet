@@ -3,26 +3,32 @@ Facade
 
 Structural Pattern
 
+## Définition
 "On cache la complexité d'un système et son interaction"
 
+![facade_design_pattern](../../images/facade_design_pattern.png)
+
+## Composition:
 Crée une interface de haut niveau pour rendre l'utilisation d'un système complexe plus facile. Ici on a plusieurs formes et on cherche un moyen de les créer simplement. C'est comme la face avant d'une construction. 
 
-public interface Shape {
-public class Rectangle implements Shape {
-public class Square implements Shape {
-public class Circle implements Shape {
+## Exemple:
+## Définitions	
+| classe            | rôle   | description                       |
+|-------------------|--------|-----------------------------------|
+| ShapeMaker        | Facade | Facilite l'utilisation des formes |
+| Shape             | type   | interface                         |
+| Rectangle         | objet  | type de Shape                     |
+| Circle            | objet  | type de Shape                     |
+| Square            | objet  | type de Shape                     |
+| FacadePatternDemo | Client | classe principale                 |
 
-public class ShapeMaker {
-
-//MAIN
+## Pseudocode
 main()
-  ShapeMaker shapeMaker = new ShapeMaker();
+  Créer un ShapeMaker
+  Créer des formes (cercle, rectangle, carré) avec le ShapeMaker
 
-  shapeMaker.drawCircle();
-  shapeMaker.drawRectangle();
-  shapeMaker.drawSquare();		
 
-![facade_design_pattern](../../images/facade_design_pattern.png)
+## Code
 ```java
 
 //Use the facade to draw various types of shapes.

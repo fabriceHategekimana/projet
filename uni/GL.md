@@ -15,17 +15,18 @@ Types (4):
 La pluspart des patterns sont composables.
 
 ## List
-01 [Abstract_Factory](Abstract_Factory)
-02 [Prototype](Prototype)
-03 [Wrapper](Wrapper)
-04 [Proxy](Proxy)
-05 [Decorator](Decorator)
-06 [Template](Template)
-07 [Flyweight](Flyweight)
-08 [Command](Command)
-09 [Compose](Compose)
-10 [Builder](Builder) ~
-11 [Facade](Facade)
-12 [Observer](Observer)
-13 [State](State)
+- [ ] 00 Singleton
+- [X] 01 [Abstract_Factory](Abstract_Factory)
+- [X] 02 [Prototype](Prototype)
+- [X] 03 [Wrapper](Wrapper)
+- [X] 04 [Proxy](Proxy)
+- [ ] 05 [Decorator](Decorator)
+- [ ] 06 [Template](Template)
+- [ ] 07 [Flyweight](Flyweight)
+- [ ] 08 [Command](Command)
+- [ ] 09 [Compose](Compose)
+- [ ] 10 [Builder](Builder)
+- [ ] 11 [Facade](Facade)
+- [ ] 12 [Observer](Observer)
+- [ ] 13 [State](State)
   

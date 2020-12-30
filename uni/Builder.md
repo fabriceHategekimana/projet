@@ -1,16 +1,20 @@
 Builder
+========
 
 Creationnal pattern
 
+## Définition
 For complex object
 
 ![Builder_design_pattern](../../images/Builder_design_pattern.png)
 
+## Composition:
 - Product – define the type of the complex object.
 - Builder – (abstract class or interface) defines all the creation steps. The GetProduct method is used to return the final product.
 - ConcreteBuilder – Inherit from Builder. made to create particular complex products. 
 - Director – The director class controls the algorithm that generates the final product object. Capture the specific concrete builder according to the parameters given at the construction. It calls methods of the concrete builder in the correct order to generate the product object. The GetProduct method of the builder object can be used to return the product.
 
+## Exemple:
 Pour une interface donnée, il faudra aussi mettre en place son interface jumelle Builder
 Pour un objet, on aura plusieur Builder différents.
 
@@ -19,30 +23,25 @@ Pour un objet, on aura plusieur Builder différents.
 On a un ingénieur qui doit construire une maison.
 Nous utilison les buidler pour rendre invisible le détail de construction des maisons.
 
-interface HousePlan -> Interface de l'objet complex 
-class House implements HousePlan -> objet complex
-
-interface HouseBuilder -> Builder
-class IglooHouseBuilder implements HouseBuilder -> concrete builder
-class TipiHouseBuilder implements HouseBuilder -> concrete builder
-
-class CivilEngineer -> Director
-	- private HouseBuilder houseBuilder; 
+## Définitions	
+| classe            | rôle             | description           |
+|-------------------|------------------|-----------------------|
+| HousePlan         | type             | interface             |
+| House             | objet complexe   | définit les maisons   |
+| HouseBuilder      | Builder          | interface             |
+| IglooHouseBuilder | Concrete Builder | type de maison        |
+| TipiHouseBuilder  | Concrete Builder | type de maison        |
+| CivilEngineer     | Director         | Construit les maisons |
 	 
-class Builder
-	- main
-
-//MAIN
+## Pseudocode
 main() 
-{ 
 On construit un Builder igloo
 On construit un ingénieur qui se charge de l'igloo
 
 On demande à l'ingénieur de construire l'igloo
 On demande à l'ingénieur de donner la maison
-} 
 
-
+## Code
 ```java
 class Builder 
 { 

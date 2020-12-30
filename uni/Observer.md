@@ -1,17 +1,55 @@
 Observer
 =========
 
+Behavioral pattern
+
+## Définition
+l'Observer pattern est utilisé quand il y a beaucoup de dépendance entre les objet (si un objet change, tout les autres doivent changer). Les classes dépenantes vont devenir les observers et une classe (ici Subject) sera chargée de mettre à jour les autres.
 ![observer_design_patterns](../../images/observer_design_patterns.png)
+
+## Composition:
+## Point clé:
+Chaque classe observer va prendre le sujet dans son constructeur et va ajouter son addresse dans la liste des observer du sujet. L'observer et le Subject se pointent l'un et l'autre
+
+
+## Exemple:
+## Définitions	
+| classe              | rôle     | description                     |
+|---------------------|----------|---------------------------------|
+| HexaObserver        | Observer | Calcule selon l'état du système |
+| OctalObserver       | Observer | Calcule selon l'état du système |
+| BinaryObserver      | Observer | Calcule selon l'état du système |
+| Observer            | type     | Définit le type des observers   |
+| Subject             | State    | Définit l'état du système       |
+| ObserverPatternDemo | Client   | classe principale               |
+
+## Pseudocode
+main()
+  On crée un nouveau sujet.
+  On crée successivement des observateur Hexa, Octa et Binaire (Ils dépendent tous du sujet)
+
+  On change l'état du sujet (on lui ajoute 15)
+  On change l'état du sujet (on lui ajoute 10)
+
+## Code
 ```java
-//Step 1
+//Use Subject and concrete observer objects.
+public class ObserverPatternDemo {
+   public static void main(String[] args) {
+      Subject subject = new Subject();
+
+      new HexaObserver(subject);
+      new OctalObserver(subject);
+      new BinaryObserver(subject);
+
+      System.out.println("First state change: 15");	
+      subject.setState(15);
+      System.out.println("Second state change: 10");	
+      subject.setState(10);
+   }
+}
 
 //Create Subject class.
-
-//Subject.java
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Subject {
 	
    private List<Observer> observers = new ArrayList<Observer>();
@@ -37,23 +75,15 @@ public class Subject {
    } 	
 }
 
-//Step 2
 
 //Create Observer class.
-
-//Observer.java
-
 public abstract class Observer {
    protected Subject subject;
    public abstract void update();
 }
 
-//Step 3
 
 //Create concrete observer classes
-
-//BinaryObserver.java
-
 public class BinaryObserver extends Observer{
 
    public BinaryObserver(Subject subject){
@@ -67,7 +97,6 @@ public class BinaryObserver extends Observer{
    }
 }
 
-OctalObserver.java
 
 public class OctalObserver extends Observer{
 
@@ -82,8 +111,6 @@ public class OctalObserver extends Observer{
    }
 }
 
-HexaObserver.java
-
 public class HexaObserver extends Observer{
 
    public HexaObserver(Subject subject){
@@ -94,27 +121,6 @@ public class HexaObserver extends Observer{
    @Override
    public void update() {
       System.out.println( "Hex String: " + Integer.toHexString( subject.getState() ).toUpperCase() ); 
-   }
-}
-
-//Step 4
-
-//Use Subject and concrete observer objects.
-
-//ObserverPatternDemo.java
-
-public class ObserverPatternDemo {
-   public static void main(String[] args) {
-      Subject subject = new Subject();
-
-      new HexaObserver(subject);
-      new OctalObserver(subject);
-      new BinaryObserver(subject);
-
-      System.out.println("First state change: 15");	
-      subject.setState(15);
-      System.out.println("Second state change: 10");	
-      subject.setState(10);
    }
 }
 ```
