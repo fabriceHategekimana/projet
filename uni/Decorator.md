@@ -6,25 +6,30 @@ Structural pattern
 ![Decorator_design_pattern](../../images/Decorator_design_pattern.png)
 
 ## Définition
-Les décorateurs ajoute du nouveau contenu sans altéré la structure de l'objet qu'on modifie. Ils font une surcharge.
+Les décorateurs ajoutent du nouveau contenu sans altéré la structure de l'objet qu'on modifie. Ils font une surcharge.
 
 On peut ainsi wrapper la classe tout en gardant la signature de celle-ci.
 
 Le decorator doit être une abstract class qui implémente l'interface en question.
 
 ## Composition:
+Component: Interface ou class abstraite qui définit un comportement
+ConcreteComponent: Implémente le Component
+Decorator: Ajoute des décorations au Component
+ConcreteDecorator: Implément le Decorator
+
 ## Exemple:
 On crée une classe concrète qui étant le décorateur. Cela permet de pouvoir ajouter des fonctionnalité à un groupe d'interface sans en modifier l'interface principale.
 
 ## Définitions	
-| classe               | rôle       | description    |
-|----------------------|------------|----------------|
-| Shape                | Type       | interface      |
-| Circle               | Objet      | interface      |
-| Rectangle            | Objet      | interface      |
-| ShapeDecorator       | Decorator  | abstract class |
-| RedShapeDecorator    | Coloration | concrete class |
-| DecoratorPatternDemo | Main       | interface      |
+| classe               | rôle              | description    |
+|----------------------|-------------------|----------------|
+| Shape                | Component         | interface      |
+| Circle               | ConcreteComponent | interface      |
+| Rectangle            | ConcreteComponent | interface      |
+| ShapeDecorator       | Decorator         | abstract class |
+| RedShapeDecorator    | ConcreteDecorator | concrete class |
+| DecoratorPatternDemo | Client            | interface      |
 
 ## Pseudocode
 main() 

@@ -15,7 +15,9 @@ Si un enfant existe déjà, on le recrée pas, mais on crée un nouveau lien dan
 Le map est inaccessible du client. Hashmap de création d'objet selon les valeurs intrisic.
 Le Hashmap est de type Hashmap.
 
-## Exemple:
+
+
+## Exemple
 Utilisation d'un map qui répertorie tout les objets. Cela se fait à l'aide d'une factorie exécuté du côté client.
 on veut créer un jeu avec plusieurs personnages
 
@@ -34,6 +36,7 @@ main()
 	On crée un Player (avec un type aléatoire)
 	On lui attribut une arme aléatoire
 	On lance le Player en mission
+
 
 ## Code
 ```java

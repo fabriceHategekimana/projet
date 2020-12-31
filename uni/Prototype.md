@@ -1,17 +1,16 @@
-Prototype
-==========
+# Prototype
 
 Creational pattern
 
-![Prototype_design_pattern](../../images/Prototype_design_pattern.png)
+![Prototype_design_pattern](images/Prototype_design_pattern.png)
 
 ## Définition
 Le but est de créer un objet par défaut et de le cloner lorsqu'on demande une nouvelle instance.
 Le clone peut modifier des élément de l'objet original.
 
 ## Composition:
-- Prototype : Le prototype de l'objet
-- Prototype registry (ou interface): registre pour avoir accès à tout les propotypes.
+- Product : L'objet en question
+- Prototype: registre pour avoir accès à tout les propotypes.
 - Client : Utilisera le registre pour gérer les prototype.
 
 ## Exemple:
@@ -19,13 +18,13 @@ On a mit deux couleurs dans ColorStore par défaut (bleu et noir)
 
 
 ## Définitions	
-| classe     | rôle                | description                    |
-|------------|---------------------|--------------------------------|
-| Prototype  | Prototype retistery | retourne les instances         |
-| Color      | AbstractObject      | Clonable                       |
-| blackColor | Prototype           | géré par l'interface Prototype |
-| blueColor  | Prototype           | géré par l'interface Prototype |
-| ColorStore | Client              | Demande différentes couleurs   |
+| classe     | rôle           | description                    |
+|------------|----------------|--------------------------------|
+| Prototype  | Prototype      | retourne les instances         |
+| Color      | AbstractObject | Clonable                       |
+| blackColor | Product        | géré par l'interface Prototype |
+| blueColor  | Product        | géré par l'interface Prototype |
+| ColorStore | Client         | Demande différentes couleurs   |
 
 
 ## Pseudocode

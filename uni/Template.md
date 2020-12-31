@@ -1,7 +1,8 @@
-Template Method
-===============
+# Template Method
 
 Behavioral Pattern
+
+--------------------------
 
 ![Template_design_pattern](../../images/Template_design_pattern.png)
 

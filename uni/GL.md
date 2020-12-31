@@ -20,7 +20,7 @@ La pluspart des patterns sont composables.
 - [X] 02 [Prototype](Prototype)
 - [X] 03 [Wrapper](Wrapper)
 - [X] 04 [Proxy](Proxy)
-- [ ] 05 [Decorator](Decorator)
+- [X] 05 [Decorator](Decorator)
 - [ ] 06 [Template](Template)
 - [ ] 07 [Flyweight](Flyweight)
 - [ ] 08 [Command](Command)

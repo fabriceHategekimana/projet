@@ -14,20 +14,20 @@ Permet aussi de répondre à des non-functionnals requirements.
 
 ## Composition:
 Proxy: agit comme intérmédiaire avec une ressource
-Objet: ressource
-Interface: Utilisé par le client pour manipuler le proxy
+ConcreteObjet: ressource
+Objet: Interface utilisé par le client pour manipuler le proxy
 Client: Manipule l'interface
 
 ## Exemple:
 Pour des raison de sécurité, on aimerait faire un proxy qui nous empêche de nous connecter à des sites dangereux.
 
 ## Définitions	
-| classe        | rôle      | description                     |
-|---------------|-----------|---------------------------------|
-| ProxyInternet | Proxy     | intermédiaire avec internet     |
-| RealInternet  | Objet     | True complicated class          |
-| Internet      | Interface | Define connexion rules          |
-| Client        | Client    | Demande une connexion à un site |
+| classe        | rôle           | description                     |
+|---------------|----------------|---------------------------------|
+| ProxyInternet | Proxy          | intermédiaire avec internet     |
+| RealInternet  | Concrete Objet | True complicated class          |
+| Internet      | Objet          | Define connexion rules          |
+| Client        | Client         | Demande une connexion à un site |
 
 ## Pseudocode
 main () 

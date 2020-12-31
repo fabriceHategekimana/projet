@@ -10,7 +10,9 @@ Change un contract dans un autre contract.
 On enveloppe en fait une classe [nom] dans une wrapper qu'on appelle souvent [nom]Wrapper.
 
 ## Composition:
-- Objet: respecte un certain protocole (des méthodes)
+- Adapted: respecte un certain protocole (des méthodes)
+- ConcreteTarget: respecte un certain protocole (des méthodes) définit par une interface 
+- Target: Définit un contrat
 - Adapter: Convertit les appels pour les faire à l'objet contenu
 - Client: Fait des requête à l'Adapter
  
@@ -18,12 +20,13 @@ On enveloppe en fait une classe [nom] dans une wrapper qu'on appelle souvent [no
 On a une classe PlasticToyDuck qui a ses propres méthodes et on aimerai ajouter une classe Sparrow qui ne respecte pas le même contrat (=qui n'a pas les même méthodes). On va donc lui créer un Adapter BirdAdapter pour qu'il ait les même méthodes que PlasticToyDuck.
 
 ## Définitions	
-| Classe         | rôle    | description       |
-|----------------|---------|-------------------|
-| Main           | Client  | Classe principale |
-| BirdAdapter    | Adapter | Adapte Sparrow    |
-| PlasticToyDuck | Objet   | Classe            |
-| Sparrow        | Objet   | Classe étrangère  |
+| Classe         | rôle            | description       |
+|----------------|-----------------|-------------------|
+| Sparrow        | Adapted         | Classe étrangère  |
+| BirdAdapter    | Adapter         | Adapte Sparrow    |
+| ToyDuck        | Target          | Classe étrangère  |
+| PlasticToyDuck | Concrete Target | Classe            |
+| Main           | Client          | Classe principale |
 
 ## Pseudocode
 main() 

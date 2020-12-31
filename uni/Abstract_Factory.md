@@ -3,20 +3,7 @@ Abstract_Factory
 
 Creationnal pattern.
 
-[Factory_Pattern](Factory_Pattern)
-
-## Définition
-L'utilisateur ne connaîtra que les interfaces et non les objets.
-
-On a des objets de base qu'on veut produire.
-Pour chaque groupe d'objet on constuire une interface abstraite.
-On construit une abstract factory.
-On construit des concrete factory qui vont créer des groupes d'objets.
-C'est les concrete factory qui vont choisir les obets concrès à retourner.
-
-Permet de rendre invisible les détails de création des objets.
-Le client ne connait pas les objets concret mais ne connais que les interface.
-
+![Abstract_Factory_design_pattern](images/Abstract_Factory_design_pattern.png)
 ## Composition:
 - AbstractFactory : Interface qui indique comment construire les objets abstraits
 - ConcreteFactory : Implémente les fonctions de l'AbstractFactory
@@ -48,6 +35,7 @@ Le client pourra toujours choisir son téléphone, mais la factory qui distribue
 | INDIAPhoneFactory    | Concrete Factory | factory               |
 
 | classe         | rôle   | description |
+|----------------------|------------------|-----------------------|
 | AbstractDesign | Client | main class  |
 
 ## Pseudocode
