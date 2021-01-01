@@ -5,8 +5,9 @@ Creational pattern
 ![Prototype_design_pattern](images/Prototype_design_pattern.png)
 
 ## Définition
-Le but est de créer un objet par défaut et de le cloner lorsqu'on demande une nouvelle instance.
-Le clone peut modifier des élément de l'objet original.
+**Problème:** Comment comment éviter de ralentir le code en créan depuis zéro des objets très lourd.
+**Solution:** En créant des prototypes qui seront des copie des éléments déjà existant.
+Le but est de créer un objet par défaut et de le cloner lorsqu'on demande une nouvelle instance. Le clone peut modifier des élément de l'objet original car il pointe au même endroit (attention: ça peut provoquer des effets de bord)
 
 ## Composition:
 - Product : L'objet en question

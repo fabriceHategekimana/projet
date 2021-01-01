@@ -4,20 +4,21 @@ Builder
 Creationnal pattern
 
 ## Définition
-For complex object
+**Problème:** On a des objets qui héritent d'une super classe (ou interface), mais ils sont très compliqué à construire pour le client. On aimerait facilité la construction.
+**Solution:** On crée une interface Builder (soeur jumelle de la super classe) qui définit comment construire les objets. Les Concretes Builders seront les soeurs des objets et on crée un director qui "constuira" les objets grâce aux ConcreteBuilders. 
+Le client aura seulement à utiliser les Builders et le directors pour avoirs ses objets sans rentrer des paramètres super compliqués.
 
-![Builder_design_pattern](../../images/Builder_design_pattern.png)
+![Builder_design_pattern](images/Builder_design_pattern.png)
 
 ## Composition:
-- Product – define the type of the complex object.
-- Builder – (abstract class or interface) defines all the creation steps. The GetProduct method is used to return the final product.
-- ConcreteBuilder – Inherit from Builder. made to create particular complex products. 
-- Director – The director class controls the algorithm that generates the final product object. Capture the specific concrete builder according to the parameters given at the construction. It calls methods of the concrete builder in the correct order to generate the product object. The GetProduct method of the builder object can be used to return the product.
+- Product: Définit le type de l'objet complexe
+- Builder: (abstract class ou interface) définit toute les étape de création et la méthode pour retourner le produit.
+- ConcreteBuilder: Hérite de Builder et est utilisé pour créer des porduits complexes.
+- Director: Contrôle l'algorithme qui va généré le produit final. Choisi le concrète builder. Manipule le builder.
 
 ## Exemple:
 Pour une interface donnée, il faudra aussi mettre en place son interface jumelle Builder
 Pour un objet, on aura plusieur Builder différents.
-
 
 ## Use case:
 On a un ingénieur qui doit construire une maison.

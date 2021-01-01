@@ -3,13 +3,13 @@ Decorator
 
 Structural pattern
 
-![Decorator_design_pattern](../../images/Decorator_design_pattern.png)
+![Decorator_design_pattern](images/Decorator_design_pattern.png)
 
 ## Définition
+**Problème:** On aimerai ajouter une nouvelle fonctionnalité à une super classe ou un interface sans avoir à changer le comportement des classes qui l'implémentent.
+**Solution:** On crée un Décorator qui ajoutera "à la volée" les éléments en plus.
 Les décorateurs ajoutent du nouveau contenu sans altéré la structure de l'objet qu'on modifie. Ils font une surcharge.
-
 On peut ainsi wrapper la classe tout en gardant la signature de celle-ci.
-
 Le decorator doit être une abstract class qui implémente l'interface en question.
 
 ## Composition:

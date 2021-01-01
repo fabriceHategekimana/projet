@@ -1,21 +1,28 @@
-# Template Method
+# Template
 
 Behavioral Pattern
 
 --------------------------
 
-![Template_design_pattern](../../images/Template_design_pattern.png)
+![Template_design_pattern](images/Template_design_pattern.png)
 
 ## Définition
+**Problème:** On a un groupe d'objet qui suivent le même algorithme mais avec quelques différences à certains endroits. 
+**Solution:** On crée une abstract class ou interface Template qui définit l'algorithme que doit suivre les classes qui l'impléments (chaque classe pourra mettre les modifications qu'elle veut).
 Crée une "une recette", un algorithme que vont suivre toute les classes qui l'implémente.
 
 ## Composition:
+Objet: Ont un comportement similaire
+Template: Contient l'algorithme que les Objets vont implémenter
+Client: Appelle les objets de la même façon, mais chacun fait son truc
+
 ## Exemple:
+On a deux objets qui s'occupent de faire les commands, un pour le magasin (=store), un pour le réseaux (=net). Il ont des comportement similaires. C'est pourquoi on peut définir un template qui contiendra l'algorithme pour gérer une commande (sélectionner, payer, emballer, livrer). Chaque objet pourra utiliser l'algorithme et changer les parties dont il a besoin.
 
 ## Définitions	
 | classe                      | rôle     | description             |
 |-----------------------------|----------|-------------------------|
-| TemplateMethodPatternClient | Main     | classe principale       |
+| TemplateMethodPatternClient | Client   | classe principale       |
 | OrderProcessTemplate        | Template | Définit l'algorithme    |
 | StoreOrder                  | Objet    | Implémente l'algorithme |
 | NetOrder                    | Objet    | Implémente l'algorithme |
@@ -39,7 +46,7 @@ class TemplateMethodPatternClient
 	} 
 } 
 
-bstract class OrderProcessTemplate 
+abstract class OrderProcessTemplate 
 { 
 	public boolean isGift; 
 

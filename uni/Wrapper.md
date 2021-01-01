@@ -3,11 +3,12 @@ Wrapper (Adapter)
 
 Behavioral Pattern
 
-![Adapter_design_pattern](../../images/Adapter_design_pattern.png)
+![Adapter_design_pattern](images/Adapter_design_pattern.png)
 
 ## Définition
-Change un contract dans un autre contract.
-On enveloppe en fait une classe [nom] dans une wrapper qu'on appelle souvent [nom]Wrapper.
+**Problème:** On a un ou plusieurs objets qui suivent la "logique" de notre code et on veut ajouter une classe étrangère (par exemple fait par quelqu'un d'autre qui voit les choses autrement) qui suit une autre "logique".
+**Solution:** On peut faire un Adapter (Wrapper) qui va prendre la classe différente et "traduire" le comportement qu'on veut dans son comportement.
+Change un contract dans un autre contract. On enveloppe en fait une classe [nom] dans une wrapper qu'on appelle souvent [nom]Wrapper.
 
 ## Composition:
 - Adapted: respecte un certain protocole (des méthodes)

@@ -4,10 +4,18 @@ Observer
 Behavioral pattern
 
 ## Définition
+**Problème:** On a des objets qui ont beaucoup de comportements différent qu'ils peuvent changer et on aimerai ajouter de nouveau comportement sans faire beaucoup de "if else"
+**Solution:** On transformes ses objets en observer. On définit des états (appellé Subject) qui vont modifier le comportement des objets. Si on veut ajouter un nouveau comportement, on crée un nouveau Subject.
 l'Observer pattern est utilisé quand il y a beaucoup de dépendance entre les objet (si un objet change, tout les autres doivent changer). Les classes dépenantes vont devenir les observers et une classe (ici Subject) sera chargée de mettre à jour les autres.
-![observer_design_patterns](../../images/observer_design_patterns.png)
+
+![observer_design_patterns](images/observer_design_patterns.png)
 
 ## Composition:
+Subject: Interface qui définira un ensemble d'état.
+ConcreteSubject: Implémente Subject et on un "state" (variable d'état)
+Observer: Définit le changement de comportement d'un objet 
+ConcreteObserver: Classes qui vont changer leur comportement selon le ConcreteSubject qu'on leur donne
+
 ## Point clé:
 Chaque classe observer va prendre le sujet dans son constructeur et va ajouter son addresse dans la liste des observer du sujet. L'observer et le Subject se pointent l'un et l'autre
 

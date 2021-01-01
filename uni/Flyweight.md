@@ -3,32 +3,33 @@ Flyweight
 
 Structural design pattern
 
-![Flyweight_design_pattern](../../images/Flyweight_design_pattern.png)
+![Flyweight_design_pattern](images/Flyweight_design_pattern.png)
 
 ## Définition
+**Problème:** On a une structure complexe qui devient facilement lourd à force d'ajouter des éléments.
+**Solution:** On peut alors transformer cette structure en Flyweight qui va supprimé les éléments qui se répètent.
+
 Permet de s'implifier les structures complexes. Quand on a besoin de gérer une grande quantité d'objet similaire.
 Réduire la mémoire occupée en joignant les objets similaire.
 Va utiliser un hashCode pour trouver les similarités.
 Si un enfant existe déjà, on le recrée pas, mais on crée un nouveau lien dans la structure.
+Utilisation d'un map qui répertorie tout les objets. Cela se fait à l'aide d'une factorie exécuté du côté client.
 
 ## Composition:
-Le map est inaccessible du client. Hashmap de création d'objet selon les valeurs intrisic.
-Le Hashmap est de type Hashmap.
-
-
+Client: Appelle la FlyweightFactory et gére les Flyweight
+FlyweightFactory: distribue les Flyweight en évitant les répétitions.
 
 ## Exemple
-Utilisation d'un map qui répertorie tout les objets. Cela se fait à l'aide d'une factorie exécuté du côté client.
-on veut créer un jeu avec plusieurs personnages
+on veut créer un jeu avec deux type de personnage (Terrorist et CounterTerrorist). On va générer àléatoirement des personnages. La FlyweightFactory s'occupera de mapper ou de réutiliser les classes déjà existantes.
 
 ## Définitions	
-| classe           | rôle      | description        |
-|------------------|-----------|--------------------|
-| PlayerFactory    | Flyweight | Gère la mémoire    |
-| CounterStrike    | Conteneur | contient les armes |
-| Player           | Type      | Interface          |
-| CounterTerrorist | Player    | Personnage         |
-| Terrorist        | Player    | Personnage         |
+| classe           | rôle             | description            |
+|------------------|------------------|------------------------|
+| PlayerFactory    | FlyweightFactory | Gère la mémoire        |
+| CounterStrike    | Conteneur        | contient weapon/player |
+| Player           | Type             | Interface Player       |
+| CounterTerrorist | Flyweight        | Player                 |
+| Terrorist        | Flyweight        | Player                 |
 
 ## Pseudocode
 main() 

@@ -3,7 +3,14 @@ Abstract_Factory
 
 Creationnal pattern.
 
+## Définitions	
+**Problème:** On aimerai que le client choisisse ses objets mais que notre code choisisse quel classe de l'objet demandé on lui donne. 
+**Solution:** On crée une abstract factory qui décide quel factory appeller.
+
+
 ![Abstract_Factory_design_pattern](images/Abstract_Factory_design_pattern.png)
+
+
 ## Composition:
 - AbstractFactory : Interface qui indique comment construire les objets abstraits
 - ConcreteFactory : Implémente les fonctions de l'AbstractFactory

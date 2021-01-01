@@ -1,11 +1,10 @@
-Compose Pattern
-================
+# Compose Pattern
 
 ## Définition
-Problème:
-part-whole hierarchie?
+On a une structure et chaque objet a des comportement similaire. On aimerai que le client manipule la structure de la même façon qu'elle manipule un seul de ses objets.
+On crée alors une Interface Component qui sera implémenté par des Composite (noeud de la structure) les objets deviennent des Leaf (feuille).
 
-![composite_design_pattern](../../images/composite_design_pattern.png)
+![Compose_design_pattern](images/Compose_design_pattern.png)
 
 Crée un arbre et fait exécuter des éléments dans les nodes.
 C'est comm si on manipule une un groupe d'objet avec une seule instance seulement.

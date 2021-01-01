@@ -3,9 +3,11 @@ Proxy
 
 Creational pattern.
 
-![Proxy_design_pattern](../../images/Proxy_design_pattern.png)
+![Proxy_design_pattern](images/Proxy_design_pattern.png)
 
 ## Définition
+**Problème:** On a une classe qui a des comportements spéciaux qu'on veut cacher au client.
+**Solution:** Créer un proxy qui va se faire passer pour la vrai classe.
 Permet de cacher des comportement complexes au client. Le client ne connais que l'interface.
 On peut rajouter des comportements sans que le client le sache.
 Les objet ou le contenu complexe et l'objet sont créés de façon invisible au client.

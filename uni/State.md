@@ -4,12 +4,15 @@ State
 Behavioral pattern.
 
 ## Définition
-Donne un état interne à un objet pour modifier son comportement.
+**Problème:** On voudrait donner un état interne à un objet pour modifier son comportement.
+**Solution:** On transforme l'objet désiré en contexte, on crée une interface State qui va être implémenté par toutes les classes qui vont représenté un comportement différent de l'objet. Ça éviter de faire de faire beaucoup de is-else pour un objet.
 
-![state_design_pattern](../../images/state_design_pattern.png)
+![state_design_pattern](images/state_design_pattern.png)
 
 ## Composition:
-On transforme l'objet désiré en contexte, on crée une interface State qui va être implémenté par toutes les classes qui vont représenté un comportement différent de l'objet. Ça éviter de faire de faire beaucoup de is-else pour un objet.
+Context: Définit le contexte du comportement de l'objet
+State: Défini le comportement selon un état
+ConcreteState: Définit des objets qui agiront différemment selon le contexte
 
 ## Exemple:
 - Context: Defines an interface to client to interact. It maintains references to concrete state object which may be used to define current state of object.

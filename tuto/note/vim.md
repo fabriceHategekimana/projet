@@ -15,7 +15,7 @@ Sommaire
 - Vimscript et vimrc
 - Plugins
 - Documentation
-- Autres (marqueurs, buffer, window, tab)
+- Autres (marqueurs, macro, quickfix, buffer, window, global, tab)
 
 Origines
 =========
@@ -43,7 +43,7 @@ Vim est un éditeur modal: plusieurs modes:
 2. insert
 3. visual
 4. select
-5. command
+5. command-line
 6. Ex
 7. Replace
 8. Completion
@@ -52,7 +52,7 @@ Les plus utilisés
 1. normal
 2. insert
 3. visual
-4. command
+4. command-line
 
 Le mode normal
 ===============
@@ -64,13 +64,13 @@ touches: action, mouvement, action+mouvement
 1. mouvements:
 
 - flèches + hjkl
-- words (w,b,e) ("(", ")", "{", "}")
-- recherche (f,t,/,?)
+- spéciaux (w,b,e) ("(", ")", "{", "}")
+- recherche (f,t,F,T,/,?)
 
 2. actions:
 
-- ligne: delete, yank, change, paste
-- changement de mode (insert, commande, visual)
+- ligne (double): delete, yank, change, paste
+- changement de mode (insersion, command-line, visual, etc.)
 - spéciales
 
 3. actions+mouvements (ou objet) 
@@ -88,6 +88,7 @@ mode insert
 commande I<-i<-+->a->A
                |
 	       o
+	      
 Change
 
 mode completion:
@@ -120,11 +121,20 @@ map, function, command, etc.
 Plugin
 ======
 Pour augmenter les possibilités de vim
+Précautions:
+1. Savoir ce qu'il y a dans notre vimrc
+2. Installer un nombre raisonable de plugins
+3. Bien connaître ses plugins
 Vim awesome
 
 Documentation
 =============
 help
 sites
-autre
+communautés
 
+Horizon:
+=========
+Neovim
+Spacevim
+Onivim
