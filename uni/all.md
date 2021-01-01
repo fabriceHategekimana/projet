@@ -9,8 +9,13 @@ Types (4):
 4. concurency
 
 La pluspart des patterns sont composables.
+Avant propos:
 
-## List
+Objet ou Product:
+Définissent souvent des classe concrètes.
+Sauf dans certains cas comme Proxy où on utilise alors "Objet" comme interface et "Concrete Objet" comme classe concrète.
+
+
 # Singleton
 
 ## Définition
@@ -28,7 +33,7 @@ On peut tester le singleton pour voir s'il renvoit toujours la même instance.
 | classe    | rôle      | description                  |
 |-----------|-----------|------------------------------|
 | Singleton | Composite | répartie la companie en bloc |
-
+ 
 ## Pseudocode
 main () 
 	On appelle le singleton 2 fois
@@ -483,7 +488,7 @@ Change un contract dans un autre contract. On enveloppe en fait une classe [nom]
 - Target: Définit un contrat
 - Adapter: Convertit les appels pour les faire à l'objet contenu
 - Client: Fait des requête à l'Adapter
-
+ 
 ## Exemple:
 On a une classe PlasticToyDuck qui a ses propres méthodes et on aimerai ajouter une classe Sparrow qui ne respecte pas le même contrat (=qui n'a pas les même méthodes). On va donc lui créer un Adapter BirdAdapter pour qu'il ait les même méthodes que PlasticToyDuck.
 
@@ -805,6 +810,8 @@ public class RedShapeDecorator extends ShapeDecorator {
 
 Behavioral Pattern
 
+--------------------------
+
 ![Template_design_pattern](images/Template_design_pattern.png)
 
 ## Définition
@@ -977,6 +984,7 @@ on veut créer un jeu avec deux type de personnage (Terrorist et CounterTerroris
 
 ## Pseudocode
 main() 
+    Pour 10 joueurs
 	On crée un Player (avec un type aléatoire)
 	On lui attribut une arme aléatoire
 	On lance le Player en mission
@@ -989,7 +997,9 @@ main()
 	// Driver code 
 	public static void main(String args[]) 
 	{ 
+		/* Assume that we have a total of 10 players 
 		in the game. */
+		for (int i = 0; i < 10; i++) 
 		{ 
 			/* getPlayer() is called simply using the class 
 			name since the method is a static one */
@@ -1138,6 +1148,7 @@ public class CounterStrike
 	private static String[] playerType = 
 					{"Terrorist", "CounterTerrorist"}; 
 	private static String[] weapons = 
+	{"AK-47", "Maverick", "Gut Knife", "Desert Eagle"}; 
 
 }
 ```
@@ -1205,6 +1216,7 @@ public interface Order {
 public class Stock {
 	
    private String name = "ABC";
+   private int quantity = 10;
 
    public void buy(){
       System.out.println("Stock [ Name: "+name+", Quantity: " + quantity +" ] bought");
@@ -1289,7 +1301,7 @@ On peut donc définir une action sur le parent et l'action va être reproduite p
 | Developer        | Leaf      | type d'employé               |
 | Employee         | Component | interface                    |
 | Company          | Client    | interface                    |
-
+ 
 ## Pseudocode
 main () 
     On crée deux Developpers
@@ -1310,10 +1322,14 @@ public class Company
 { 
 	public static void main (String[] args) 
 	{ 
+		Developer dev1 = new Developer(100, "Lokesh Sharma", "Pro Developer"); 
+		Developer dev2 = new Developer(101, "Vinay Sharma", "Developer"); 
 		CompanyDirectory engDirectory = new CompanyDirectory(); 
 		engDirectory.addEmployee(dev1); 
 		engDirectory.addEmployee(dev2); 
 		
+		Manager man1 = new Manager(200, "Kushagra Garg", "SEO Manager"); 
+		Manager man2 = new Manager(201, "Vikram Sharma ", "Kushagra's Manager"); 
 		
 		CompanyDirectory accDirectory = new CompanyDirectory(); 
 		accDirectory.addEmployee(man1); 
@@ -1433,7 +1449,7 @@ Nous utilison les buidler pour rendre invisible le détail de construction des m
 | IglooHouseBuilder | Concrete Builder | type de maison        |
 | TipiHouseBuilder  | Concrete Builder | type de maison        |
 | CivilEngineer     | Director         | Construit les maisons |
-
+	 
 ## Pseudocode
 main() 
 On construit un Builder igloo
@@ -1764,6 +1780,8 @@ main()
   On crée un nouveau sujet.
   On crée successivement des observateur Hexa, Octa et Binaire (Ils dépendent tous du sujet)
 
+  On change l'état du sujet (on lui ajoute 15)
+  On change l'état du sujet (on lui ajoute 10)
 
 ## Code
 ```java
@@ -1776,6 +1794,10 @@ public class ObserverPatternDemo {
       new OctalObserver(subject);
       new BinaryObserver(subject);
 
+      System.out.println("First state change: 15");	
+      subject.setState(15);
+      System.out.println("Second state change: 10");	
+      subject.setState(10);
    }
 }
 

@@ -1,2 +1,0 @@
-Imagerie numérique
-====================
