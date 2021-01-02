@@ -33735,3 +33735,10 @@ time 1609539469
 old [description:"bank" due:"1609196400" entry:"1609190772" modified:"1609190772" status:"pending" uuid:"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"]
 new [description:"bank" due:"1609196400" end:"1609539469" entry:"1609190772" modified:"1609539469" status:"completed" uuid:"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"]
 ---
+time 1609594078
+new [description:"Devoir maman Lady" due:"1610172000" entry:"1609594078" imask:"12" modified:"1609539460" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"43563782-2602-4e06-84bc-60c76a79b610"]
+---
+time 1609594078
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++" modified:"1609539460" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++-" modified:"1609594078" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
