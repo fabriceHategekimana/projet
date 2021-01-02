@@ -4,9 +4,10 @@ Flyweight
 Structural design pattern
 
 ![Flyweight_design_pattern](images/Flyweight_design_pattern.png)
+![Flyweight_meme](images/Flyweight_meme.jpeg)
 
 ## Définition
-**Problème:** On a une structure complexe qui devient facilement lourd à force d'ajouter des éléments.
+**Problème:** On a une structure complexe qui devient facilement lourd à force d'ajouter des éléments.  
 **Solution:** On peut alors transformer cette structure en Flyweight qui va supprimé les éléments qui se répètent.
 
 Permet de s'implifier les structures complexes. Quand on a besoin de gérer une grande quantité d'objet similaire.
@@ -31,12 +32,14 @@ on veut créer un jeu avec deux type de personnage (Terrorist et CounterTerroris
 | CounterTerrorist | Flyweight        | Player                 |
 | Terrorist        | Flyweight        | Player                 |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
     Pour 10 joueurs
 	On crée un Player (avec un type aléatoire)
 	On lui attribut une arme aléatoire
 	On lance le Player en mission
+```
 
 
 ## Code

@@ -1,31 +1,32 @@
 # Chapitre 5-6:
-Design Patterns
+### Design Patterns
 
 ## Design Pattern
-Types (4):
-1. Crational pattern
+**Types (4):**
+
+1. Creational pattern  
 2. Structural pattern
 3. behavioral pattern
-4. concurency
+4. concurrency
 
-La pluspart des patterns sont composables.
-Avant propos:
+La plupart des patterns sont composables.  
 
-Objet ou Product:
-Définissent souvent des classe concrètes.
-Sauf dans certains cas comme Proxy où on utilise alors "Objet" comme interface et "Concrete Objet" comme classe concrète.
-
-
+**Avant propos:**  
+Ces design pattern ont des niveaux de compréhention différents. La meilleur pratique est de s'imaginer une situation de base avec un problème et de voir comment ces design patterns en sont une solution.
 # Singleton
+
+### Creational Pattern
 
 ## Définition
 **Problème:** On a une classe et on aimerai que l'utilisateur manipule toujours la même instance (pas avoir plusieurs instances ayant des "sauvegardes" différentes).
 **Solution:** Il suffit juste de transformer l'objet en Singleton.
 
 ![Singleton_design_pattern](images/Singleton_design_pattern.png)
+![Singleton_meme](images/Singleton_meme.jpeg)
 
 ## Composition:
-- Singleton: La classe qui ne renvoie qu'une seule instance d'elle même
+- Singleton: La classe qui ne renvoie qu'une seule instance d'elle même.
+
 ## Exemple:
 On peut tester le singleton pour voir s'il renvoit toujours la même instance.
 
@@ -33,10 +34,12 @@ On peut tester le singleton pour voir s'il renvoit toujours la même instance.
 | classe    | rôle      | description                  |
 |-----------|-----------|------------------------------|
 | Singleton | Composite | répartie la companie en bloc |
- 
-## Pseudocode
-main () 
-	On appelle le singleton 2 fois
+
+## Pseudo code
+```
+main ()   
+	On appelle le singleton 2 fois  
+``` 
 
 ## Code
 ```java
@@ -62,15 +65,14 @@ public final class Singleton {
 Abstract_Factory
 =================
 
-Creationnal pattern.
+### Creational pattern.
+
+![Abstract_Factory_design_pattern](images/Abstract_Factory_design_pattern.png){ width=70% }
+![Abstract_Factory_meme](images/Abstract_Factory_meme.jpeg){ width=60% }
 
 ## Définitions	
 **Problème:** On aimerai que le client choisisse ses objets mais que notre code choisisse quel classe de l'objet demandé on lui donne. 
 **Solution:** On crée une abstract factory qui décide quel factory appeller.
-
-
-![Abstract_Factory_design_pattern](images/Abstract_Factory_design_pattern.png)
-
 
 ## Composition:
 - AbstractFactory : Interface qui indique comment construire les objets abstraits
@@ -106,13 +108,14 @@ Le client pourra toujours choisir son téléphone, mais la factory qui distribue
 |----------------------|------------------|-----------------------|
 | AbstractDesign | Client | main class  |
 
-## Pseudocode
-main() 
-    grâce à PhoneFactory, on construit des téléphones de trois type:
-	WINDOWS
-	ANDROID
-	IPHONE
-
+## Pseudo code
+```
+main()   
+    grâce à PhoneFactory, on construit des téléphones de trois type:  
+	WINDOWS  
+	ANDROID  
+	IPHONE  
+```
 ## Code
 ```java
 class AbstractDesign 
@@ -344,12 +347,13 @@ class PhoneFactory
 ```
 # Prototype
 
-Creational pattern
+### Creational pattern
 
 ![Prototype_design_pattern](images/Prototype_design_pattern.png)
+![Prototype_meme](images/Prototype_meme.jpeg)
 
 ## Définition
-**Problème:** Comment comment éviter de ralentir le code en créan depuis zéro des objets très lourd.
+**Problème:** Comment comment éviter de ralentir le code en créan depuis zéro des objets très lourd.  
 **Solution:** En créant des prototypes qui seront des copie des éléments déjà existant.
 Le but est de créer un objet par défaut et de le cloner lorsqu'on demande une nouvelle instance. Le clone peut modifier des élément de l'objet original car il pointe au même endroit (attention: ça peut provoquer des effets de bord)
 
@@ -373,11 +377,10 @@ On a mit deux couleurs dans ColorStore par défaut (bleu et noir)
 
 
 ## Pseudocode
+```
 main() 
-    ColorStore.getColor("blue").addColor(); 
-    ColorStore.getColor("black").addColor(); 
-    ColorStore.getColor("black").addColor(); 
-    ColorStore.getColor("blue").addColor(); 
+    On ajoute successivement les couleurs bleu et noir du ColorStore
+```
 
 ## Code
 ```java
@@ -468,17 +471,17 @@ class ColorStore {
 		return (Color) colorMap.get(colorName).clone(); 
 	} 
 } 
-
 ```
 Wrapper (Adapter)
 =================
 
-Behavioral Pattern
+### Behavioral Pattern
 
 ![Adapter_design_pattern](images/Adapter_design_pattern.png)
+![Adapter_meme](images/Adapter_meme.jpeg)
 
 ## Définition
-**Problème:** On a un ou plusieurs objets qui suivent la "logique" de notre code et on veut ajouter une classe étrangère (par exemple fait par quelqu'un d'autre qui voit les choses autrement) qui suit une autre "logique".
+**Problème:** On a un ou plusieurs objets qui suivent la "logique" de notre code et on veut ajouter une classe étrangère (par exemple fait par quelqu'un d'autre qui voit les choses autrement) qui suit une autre "logique".  
 **Solution:** On peut faire un Adapter (Wrapper) qui va prendre la classe différente et "traduire" le comportement qu'on veut dans son comportement.
 Change un contract dans un autre contract. On enveloppe en fait une classe [nom] dans une wrapper qu'on appelle souvent [nom]Wrapper.
 
@@ -501,12 +504,14 @@ On a une classe PlasticToyDuck qui a ses propres méthodes et on aimerai ajouter
 | PlasticToyDuck | Concrete Target | Classe            |
 | Main           | Client          | Classe principale |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
     On crée un Sparrow et un PlasticToyDuck
     on encapsule le Sparrow dans un bird adapter
     Sparrow a toujours ses propres fonctions
     Mais le BirdAdapter a le même comportement que le PlasticToyDuck
+```
 
 ## Code
 ```java
@@ -594,12 +599,13 @@ class BirdAdapter implements ToyDuck
 Proxy
 ======
 
-Creational pattern.
+### Creational pattern.
 
-![Proxy_design_pattern](images/Proxy_design_pattern.png)
+![Proxy_design_pattern](images/Proxy_design_pattern.png){ width=72% }
+![Proxy_meme](images/Proxy_meme.jpeg){ width=72% }
 
 ## Définition
-**Problème:** On a une classe qui a des comportements spéciaux qu'on veut cacher au client.
+**Problème:** On a une classe qui a des comportements spéciaux qu'on veut cacher au client.  
 **Solution:** Créer un proxy qui va se faire passer pour la vrai classe.
 Permet de cacher des comportement complexes au client. Le client ne connais que l'interface.
 On peut rajouter des comportements sans que le client le sache.
@@ -624,10 +630,12 @@ Pour des raison de sécurité, on aimerait faire un proxy qui nous empêche de n
 | Internet      | Objet          | Define connexion rules          |
 | Client        | Client         | Demande une connexion à un site |
 
-## Pseudocode
+## Pseudo code
+```
 main () 
     On crée un nouveau ProxyInternet
     On essaie de se connecter sur deux sites
+```
 
 ## Code
 ```java
@@ -697,12 +705,13 @@ public class ProxyInternet implements Internet
 Decorator
 ==========
 
-Structural pattern
+### Structural pattern
 
-![Decorator_design_pattern](images/Decorator_design_pattern.png)
+![Decorator_design_pattern](images/Decorator_design_pattern.png){ width=70% }
+![Decorator_meme](images/Decorator_meme.jpeg)
 
 ## Définition
-**Problème:** On aimerai ajouter une nouvelle fonctionnalité à une super classe ou un interface sans avoir à changer le comportement des classes qui l'implémentent.
+**Problème:** On aimerai ajouter une nouvelle fonctionnalité à une super classe ou un interface sans avoir à changer le comportement des classes qui l'implémentent.  
 **Solution:** On crée un Décorator qui ajoutera "à la volée" les éléments en plus.
 Les décorateurs ajoutent du nouveau contenu sans altéré la structure de l'objet qu'on modifie. Ils font une surcharge.
 On peut ainsi wrapper la classe tout en gardant la signature de celle-ci.
@@ -727,13 +736,15 @@ On crée une classe concrète qui étant le décorateur. Cela permet de pouvoir 
 | RedShapeDecorator    | ConcreteDecorator | concrete class |
 | DecoratorPatternDemo | Client            | interface      |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
       On crée un Shape Circle
       On crée un Shape redCircle avec RedShapeDecorator et le Circle
       On crée un Shape Rectangle
       On crée un Shape redRectangle avec RedShapeDecorator et le Rectangle
       On déssine les formes et leur version rouge avec la méthode draw
+```
 
 ## Code
 ```java
@@ -808,24 +819,23 @@ public class RedShapeDecorator extends ShapeDecorator {
 ```
 # Template
 
-Behavioral Pattern
-
---------------------------
+### Behavioral Pattern
 
 ![Template_design_pattern](images/Template_design_pattern.png)
+![Template_meme](images/Template_meme.jpeg){ width=110%}
 
 ## Définition
-**Problème:** On a un groupe d'objet qui suivent le même algorithme mais avec quelques différences à certains endroits. 
+**Problème:** On a un groupe d'objet qui suivent le même algorithme mais avec quelques différences à certains endroits.   
 **Solution:** On crée une abstract class ou interface Template qui définit l'algorithme que doit suivre les classes qui l'impléments (chaque classe pourra mettre les modifications qu'elle veut).
 Crée une "une recette", un algorithme que vont suivre toute les classes qui l'implémente.
 
 ## Composition:
-Objet: Ont un comportement similaire
-Template: Contient l'algorithme que les Objets vont implémenter
-Client: Appelle les objets de la même façon, mais chacun fait son truc
+- Objet: Ont un comportement similaire
+- Template: Contient l'algorithme que les Objets vont implémenter
+- Client: Appelle les objets de la même façon, mais chacun fait son truc
 
 ## Exemple:
-On a deux objets qui s'occupent de faire les commands, un pour le magasin (=store), un pour le réseaux (=net). Il ont des comportement similaires. C'est pourquoi on peut définir un template qui contiendra l'algorithme pour gérer une commande (sélectionner, payer, emballer, livrer). Chaque objet pourra utiliser l'algorithme et changer les parties dont il a besoin.
+On a deux objets qui s'occupent de faire les commandes, un pour le magasin (=store), un pour le réseaux (=net). Il ont des comportement similaires. C'est pourquoi on peut définir un template qui contiendra l'algorithme pour gérer une commande (sélectionner, payer, emballer, livrer). Chaque objet pourra utiliser l'algorithme et changer les parties dont il a besoin.
 
 ## Définitions	
 | classe                      | rôle     | description             |
@@ -835,10 +845,12 @@ On a deux objets qui s'occupent de faire les commands, un pour le magasin (=stor
 | StoreOrder                  | Objet    | Implémente l'algorithme |
 | NetOrder                    | Objet    | Implémente l'algorithme |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
     On crée un NetOrder et on applique la méthode processOrder()
     On crée un StoreOrder et on applique la méthode processOrder()
+```
 
 ## Code
 ```java
@@ -955,9 +967,10 @@ Flyweight
 Structural design pattern
 
 ![Flyweight_design_pattern](images/Flyweight_design_pattern.png)
+![Flyweight_meme](images/Flyweight_meme.jpeg)
 
 ## Définition
-**Problème:** On a une structure complexe qui devient facilement lourd à force d'ajouter des éléments.
+**Problème:** On a une structure complexe qui devient facilement lourd à force d'ajouter des éléments.  
 **Solution:** On peut alors transformer cette structure en Flyweight qui va supprimé les éléments qui se répètent.
 
 Permet de s'implifier les structures complexes. Quand on a besoin de gérer une grande quantité d'objet similaire.
@@ -982,12 +995,14 @@ on veut créer un jeu avec deux type de personnage (Terrorist et CounterTerroris
 | CounterTerrorist | Flyweight        | Player                 |
 | Terrorist        | Flyweight        | Player                 |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
     Pour 10 joueurs
 	On crée un Player (avec un type aléatoire)
 	On lui attribut une arme aléatoire
 	On lance le Player en mission
+```
 
 
 ## Code
@@ -1155,21 +1170,22 @@ public class CounterStrike
 Command
 ========
 
-Behavioral pattern
+### Behavioral pattern
+
+![Command_design_pattern](images/Command_design_pattern.png){ width=75% }
+![Command_meme](images/Command_meme.jpeg){ width=120% }
 
 ## Définition
 **Problème:** On veut pouvoir géré une liste de commandes/actions sur des objets. On pourra lancer/annuler les commandes quand on veut.
 **Solution:** On crée une interface Command. Pour chaque objet, on créer des ConcreteCommands. On utilise un Invoker qui les liste et les exécute.
 Permet de créer une liste de commande listable ou annulable.
 
-![Command_design_pattern](images/Command_design_pattern.png)
-
 ## Composition:
-Client: Crée des commande pour des reciever 
-Invoker: Stock est exécute les commandes
-Command: Interface qui défini comment manipuler les commandes
-ConcreteCommande: Implémente Command et seront exécuté par l'Invoker
-Reciever: Sont les objets contrôlés par les commandes.
+- Client: Crée des commande pour des reciever 
+- Invoker: Stock est exécute les commandes
+- Command: Interface qui défini comment manipuler les commandes
+- ConcreteCommande: Implémente Command et seront exécuté par l'Invoker
+- Reciever: Sont les objets contrôlés par les commandes.
 
 ## Exemple:
 On a un Broker (=Courtier, une personne qui gère les transactions financières) qui doit gérer des stocks.
@@ -1273,21 +1289,24 @@ import java.util.List;
 ```
 # Compose Pattern
 
-## Définition
-On a une structure et chaque objet a des comportement similaire. On aimerai que le client manipule la structure de la même façon qu'elle manipule un seul de ses objets.
-On crée alors une Interface Component qui sera implémenté par des Composite (noeud de la structure) les objets deviennent des Leaf (feuille).
+### Structural pattern
 
 ![Compose_design_pattern](images/Compose_design_pattern.png)
+![Compose_meme](images/Compose_meme.jpeg)
+
+## Définition
+**Problème:** On a une structure et chaque objet a des comportement similaire. On aimerai que le client manipule la structure de la même façon qu'elle manipule un seul de ses objets.  
+**Solution:** On crée alors une Interface Component qui sera implémenté par des Composite (noeud de la structure) les objets deviennent des Leaf (feuille).
 
 Crée un arbre et fait exécuter des éléments dans les nodes.
 C'est comm si on manipule une un groupe d'objet avec une seule instance seulement.
 
 ## Composition:
-4 membres:
-1. Component: L'interface qui défini le protocole de comunication
-2. Leaf: définit le comportement des enfants (les plus bas)
-3. Composite: Contient les enfants et fait des actions en rapport avec eux.
-4. Client: manipule les objet de la composition par le biais de l'interface
+- Component: L'interface qui défini le protocole de comunication
+- Leaf: définit le comportement des enfants (les plus bas)
+- Composite: Contient les enfants et fait des actions en rapport avec eux.
+- Client: manipule les objet de la composition par le biais de l'interface
+
 ## Exemple:
 
 On peut donc définir une action sur le parent et l'action va être reproduite par les enfants.
@@ -1302,19 +1321,22 @@ On peut donc définir une action sur le parent et l'action va être reproduite p
 | Employee         | Component | interface                    |
 | Company          | Client    | interface                    |
  
-## Pseudocode
+## Pseudo code
+```
 main () 
     On crée deux Developpers
     on crée une CompanyDirectory
     on ajoute les deux Developpers dans la CompanyDirectory
     
     On crée deux Manager
-    on crée une autre CompanyDirectory
+    on crée une autre CompanyDirectory:
     on ajoute les deux Manager dans la CompanyDirectory
     
     on crée une troisième CompanyDirectory
     on y ajoute les deux précédentes CompanyDirectory
-    On fait un showEmployeeDetails (tout les CompanyDirectory vont appeller les Employee et tout les Employee vont se présenter)
+    On fait un showEmployeeDetails
+    (=toutes les CompanyDirectory vont appeller les Employee et tout les Employee vont se présenter)
+```
 
 ## Code
 ```java
@@ -1417,14 +1439,15 @@ public class CompanyDirectory implements Employee
 Builder
 ========
 
-Creationnal pattern
+### Creationnal pattern
 
 ## Définition
-**Problème:** On a des objets qui héritent d'une super classe (ou interface), mais ils sont très compliqué à construire pour le client. On aimerait facilité la construction.
+**Problème:** On a des objets qui héritent d'une super classe (ou interface), mais ils sont très compliqué à construire pour le client. On aimerait facilité la construction.  
 **Solution:** On crée une interface Builder (soeur jumelle de la super classe) qui définit comment construire les objets. Les Concretes Builders seront les soeurs des objets et on crée un director qui "constuira" les objets grâce aux ConcreteBuilders. 
 Le client aura seulement à utiliser les Builders et le directors pour avoirs ses objets sans rentrer des paramètres super compliqués.
 
 ![Builder_design_pattern](images/Builder_design_pattern.png)
+![Builder_meme](images/Builder_meme.jpeg)
 
 ## Composition:
 - Product: Définit le type de l'objet complexe
@@ -1450,13 +1473,15 @@ Nous utilison les buidler pour rendre invisible le détail de construction des m
 | TipiHouseBuilder  | Concrete Builder | type de maison        |
 | CivilEngineer     | Director         | Construit les maisons |
 	 
-## Pseudocode
+## Pseudo code
+```
 main() 
 On construit un Builder igloo
 On construit un ingénieur qui se charge de l'igloo
 
 On demande à l'ingénieur de construire l'igloo
 On demande à l'ingénieur de donner la maison
+```
 
 ## Code
 ```java
@@ -1634,21 +1659,22 @@ class CivilEngineer
 Facade
 =======
 
-Structural Pattern
+### Structural Pattern
+
+![facade_design_pattern](images/facade_design_pattern.png)
+![Facade_meme](images/Facade_meme.jpeg)
 
 ## Définition
-**Problème:** On a un système (ou une structure) super complexe et on aimerait que le Client puisse intéragir facilement avec.
+**Problème:** On a un système (ou une structure) super complexe et on aimerait que le Client puisse intéragir facilement avec.  
 **Solution:** On crée une facade qui va prendre les instructions du clients et manipuler le système.
 "On cache la complexité d'un système et son interaction"
 Crée une interface de haut niveau pour rendre l'utilisation d'un système complexe plus facile. Ici on a plusieurs formes et on cherche un moyen de les créer simplement. C'est comme la face avant d'une construction. 
 
-![facade_design_pattern](images/facade_design_pattern.png)
-
 ## Composition:
-Facade: Interface qui recevra les demandes du client et executera les Component nécessaire
-ConcreteFacade: exécutera concrètement les commandes.
-Component: Objets divers qui seront appellé par la ConcreteFacade
-
+- Facade: Interface qui recevra les demandes du client et executera les Component nécessaire
+- ConcreteFacade: exécutera concrètement les commandes.
+- Component: Objets divers qui seront appellé par la ConcreteFacade
+  
 ## Exemple:
 Ici, on utilisera pas d'interface mais une classe ConcreteFacade facade (=ShapeMaker) qui va manipuler les différentes formes selon les orderes qu'on lui donnera.
 
@@ -1662,11 +1688,12 @@ Ici, on utilisera pas d'interface mais une classe ConcreteFacade facade (=ShapeM
 | Square            | Component      | type de Shape                     |
 | FacadePatternDemo | Client         | classe principale                 |
 
-## Pseudocode
+## Pseudo code
+```
 main()
   Créer un ShapeMaker
   Créer des formes (cercle, rectangle, carré) avec le ShapeMaker
-
+```
 
 ## Code
 ```java
@@ -1748,7 +1775,7 @@ Observer
 Behavioral pattern
 
 ## Définition
-**Problème:** On a des objets qui ont beaucoup de comportements différent qu'ils peuvent changer et on aimerai ajouter de nouveau comportement sans faire beaucoup de "if else"
+**Problème:** On a des objets qui ont beaucoup de comportements différent qu'ils peuvent changer et on aimerai ajouter de nouveau comportement sans faire beaucoup de "if else"  
 **Solution:** On transformes ses objets en observer. On définit des états (appellé Subject) qui vont modifier le comportement des objets. Si on veut ajouter un nouveau comportement, on crée un nouveau Subject.
 l'Observer pattern est utilisé quand il y a beaucoup de dépendance entre les objet (si un objet change, tout les autres doivent changer). Les classes dépenantes vont devenir les observers et une classe (ici Subject) sera chargée de mettre à jour les autres.
 
@@ -1775,13 +1802,15 @@ Chaque classe observer va prendre le sujet dans son constructeur et va ajouter s
 | Subject             | State    | Définit l'état du système       |
 | ObserverPatternDemo | Client   | classe principale               |
 
-## Pseudocode
+## Pseudo code
+```
 main()
   On crée un nouveau sujet.
   On crée successivement des observateur Hexa, Octa et Binaire (Ils dépendent tous du sujet)
 
   On change l'état du sujet (on lui ajoute 15)
   On change l'état du sujet (on lui ajoute 10)
+```
 
 ## Code
 ```java
@@ -1879,29 +1908,27 @@ public class HexaObserver extends Observer{
 State
 ======
 
-Behavioral pattern.
+### Behavioral pattern.
+
+
+![state_design_pattern](images/state_design_pattern.png){ width=110% }
+![State_meme](images/State_meme.jpeg){ width=75% }
 
 ## Définition
-**Problème:** On voudrait donner un état interne à un objet pour modifier son comportement.
+**Problème:** On voudrait donner un état interne à un objet pour modifier son comportement.  
 **Solution:** On transforme l'objet désiré en contexte, on crée une interface State qui va être implémenté par toutes les classes qui vont représenté un comportement différent de l'objet. Ça éviter de faire de faire beaucoup de is-else pour un objet.
 
-![state_design_pattern](images/state_design_pattern.png)
-
 ## Composition:
-Context: Définit le contexte du comportement de l'objet
-State: Défini le comportement selon un état
-ConcreteState: Définit des objets qui agiront différemment selon le contexte
+- Context: Définit le contexte du comportement de l'objet
+- State: Défini le comportement selon un état
+- ConcreteState: Définit des objets qui agiront différemment selon le contexte
 
 ## Exemple:
-- Context: Defines an interface to client to interact. It maintains references to concrete state object which may be used to define current state of object.
-- State: Defines interface for declaring what each concrete state should do.
-- ConcreteState: Provides implementation for methods defined in State.
-
-## Définitions	
 Exemple avec un AlertStateContext. On peut imaginer un téléphone qui lance des alert, on peut le mettre en mode vibreur, silencieux ou avec du son. 
 Ici, chacun de ces mode d'alert représente une implémentation d'une interface State qu'on crée. Comme ça si, on veut changer le comportement du télépohone on change juste sa classe interne avec Silence, Vibreur, etc.
 
 
+## Définitions	
 | classe            | rôle          | description                      |
 |-------------------|---------------|----------------------------------|
 | Silent            | ConcreteState | met le télépnone en silencieux   |
@@ -1910,12 +1937,14 @@ Ici, chacun de ces mode d'alert représente une implémentation d'une interface 
 | MobileAlertState  | State         | Définit le type d'état           |
 | StatePattern      | Client        | utilise le téléphone             |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
     création d'un AlertStateContext
     On lui fait lancer deux alerts
     On change son état interne grâce à un objet Silence
     On lui fait lancer trois alerts
+```
 
 ## Code
 ```java

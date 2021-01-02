@@ -1,23 +1,22 @@
 # Template
 
-Behavioral Pattern
-
---------------------------
+### Behavioral Pattern
 
 ![Template_design_pattern](images/Template_design_pattern.png)
+![Template_meme](images/Template_meme.jpeg){ width=110%}
 
 ## Définition
-**Problème:** On a un groupe d'objet qui suivent le même algorithme mais avec quelques différences à certains endroits. 
+**Problème:** On a un groupe d'objet qui suivent le même algorithme mais avec quelques différences à certains endroits.   
 **Solution:** On crée une abstract class ou interface Template qui définit l'algorithme que doit suivre les classes qui l'impléments (chaque classe pourra mettre les modifications qu'elle veut).
 Crée une "une recette", un algorithme que vont suivre toute les classes qui l'implémente.
 
 ## Composition:
-Objet: Ont un comportement similaire
-Template: Contient l'algorithme que les Objets vont implémenter
-Client: Appelle les objets de la même façon, mais chacun fait son truc
+- Objet: Ont un comportement similaire
+- Template: Contient l'algorithme que les Objets vont implémenter
+- Client: Appelle les objets de la même façon, mais chacun fait son truc
 
 ## Exemple:
-On a deux objets qui s'occupent de faire les commands, un pour le magasin (=store), un pour le réseaux (=net). Il ont des comportement similaires. C'est pourquoi on peut définir un template qui contiendra l'algorithme pour gérer une commande (sélectionner, payer, emballer, livrer). Chaque objet pourra utiliser l'algorithme et changer les parties dont il a besoin.
+On a deux objets qui s'occupent de faire les commandes, un pour le magasin (=store), un pour le réseaux (=net). Il ont des comportement similaires. C'est pourquoi on peut définir un template qui contiendra l'algorithme pour gérer une commande (sélectionner, payer, emballer, livrer). Chaque objet pourra utiliser l'algorithme et changer les parties dont il a besoin.
 
 ## Définitions	
 | classe                      | rôle     | description             |
@@ -27,10 +26,12 @@ On a deux objets qui s'occupent de faire les commands, un pour le magasin (=stor
 | StoreOrder                  | Objet    | Implémente l'algorithme |
 | NetOrder                    | Objet    | Implémente l'algorithme |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
     On crée un NetOrder et on applique la méthode processOrder()
     On crée un StoreOrder et on applique la méthode processOrder()
+```
 
 ## Code
 ```java

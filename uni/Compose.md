@@ -1,20 +1,23 @@
 # Compose Pattern
 
-## Définition
-On a une structure et chaque objet a des comportement similaire. On aimerai que le client manipule la structure de la même façon qu'elle manipule un seul de ses objets.
-On crée alors une Interface Component qui sera implémenté par des Composite (noeud de la structure) les objets deviennent des Leaf (feuille).
+### Structural pattern
 
 ![Compose_design_pattern](images/Compose_design_pattern.png)
+![Compose_meme](images/Compose_meme.jpeg)
+
+## Définition
+**Problème:** On a une structure et chaque objet a des comportement similaire. On aimerai que le client manipule la structure de la même façon qu'elle manipule un seul de ses objets.  
+**Solution:** On crée alors une Interface Component qui sera implémenté par des Composite (noeud de la structure) les objets deviennent des Leaf (feuille).
 
 Crée un arbre et fait exécuter des éléments dans les nodes.
 C'est comm si on manipule une un groupe d'objet avec une seule instance seulement.
 
 ## Composition:
-4 membres:
-1. Component: L'interface qui défini le protocole de comunication
-2. Leaf: définit le comportement des enfants (les plus bas)
-3. Composite: Contient les enfants et fait des actions en rapport avec eux.
-4. Client: manipule les objet de la composition par le biais de l'interface
+- Component: L'interface qui défini le protocole de comunication
+- Leaf: définit le comportement des enfants (les plus bas)
+- Composite: Contient les enfants et fait des actions en rapport avec eux.
+- Client: manipule les objet de la composition par le biais de l'interface
+
 ## Exemple:
 
 On peut donc définir une action sur le parent et l'action va être reproduite par les enfants.
@@ -29,19 +32,22 @@ On peut donc définir une action sur le parent et l'action va être reproduite p
 | Employee         | Component | interface                    |
 | Company          | Client    | interface                    |
  
-## Pseudocode
+## Pseudo code
+```
 main () 
     On crée deux Developpers
     on crée une CompanyDirectory
     on ajoute les deux Developpers dans la CompanyDirectory
     
     On crée deux Manager
-    on crée une autre CompanyDirectory
+    on crée une autre CompanyDirectory:
     on ajoute les deux Manager dans la CompanyDirectory
     
     on crée une troisième CompanyDirectory
     on y ajoute les deux précédentes CompanyDirectory
-    On fait un showEmployeeDetails (tout les CompanyDirectory vont appeller les Employee et tout les Employee vont se présenter)
+    On fait un showEmployeeDetails
+    (=toutes les CompanyDirectory vont appeller les Employee et tout les Employee vont se présenter)
+```
 
 ## Code
 ```java

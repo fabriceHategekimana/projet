@@ -1,21 +1,22 @@
 Command
 ========
 
-Behavioral pattern
+### Behavioral pattern
+
+![Command_design_pattern](images/Command_design_pattern.png){ width=75% }
+![Command_meme](images/Command_meme.jpeg){ width=120% }
 
 ## Définition
 **Problème:** On veut pouvoir géré une liste de commandes/actions sur des objets. On pourra lancer/annuler les commandes quand on veut.
 **Solution:** On crée une interface Command. Pour chaque objet, on créer des ConcreteCommands. On utilise un Invoker qui les liste et les exécute.
 Permet de créer une liste de commande listable ou annulable.
 
-![Command_design_pattern](images/Command_design_pattern.png)
-
 ## Composition:
-Client: Crée des commande pour des reciever 
-Invoker: Stock est exécute les commandes
-Command: Interface qui défini comment manipuler les commandes
-ConcreteCommande: Implémente Command et seront exécuté par l'Invoker
-Reciever: Sont les objets contrôlés par les commandes.
+- Client: Crée des commande pour des reciever 
+- Invoker: Stock est exécute les commandes
+- Command: Interface qui défini comment manipuler les commandes
+- ConcreteCommande: Implémente Command et seront exécuté par l'Invoker
+- Reciever: Sont les objets contrôlés par les commandes.
 
 ## Exemple:
 On a un Broker (=Courtier, une personne qui gère les transactions financières) qui doit gérer des stocks.

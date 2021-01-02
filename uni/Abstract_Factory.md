@@ -1,15 +1,14 @@
 Abstract_Factory
 =================
 
-Creationnal pattern.
+### Creational pattern.
+
+![Abstract_Factory_design_pattern](images/Abstract_Factory_design_pattern.png){ width=70% }
+![Abstract_Factory_meme](images/Abstract_Factory_meme.jpeg){ width=60% }
 
 ## Définitions	
 **Problème:** On aimerai que le client choisisse ses objets mais que notre code choisisse quel classe de l'objet demandé on lui donne. 
 **Solution:** On crée une abstract factory qui décide quel factory appeller.
-
-
-![Abstract_Factory_design_pattern](images/Abstract_Factory_design_pattern.png)
-
 
 ## Composition:
 - AbstractFactory : Interface qui indique comment construire les objets abstraits
@@ -45,13 +44,14 @@ Le client pourra toujours choisir son téléphone, mais la factory qui distribue
 |----------------------|------------------|-----------------------|
 | AbstractDesign | Client | main class  |
 
-## Pseudocode
-main() 
-    grâce à PhoneFactory, on construit des téléphones de trois type:
-	WINDOWS
-	ANDROID
-	IPHONE
-
+## Pseudo code
+```
+main()   
+    grâce à PhoneFactory, on construit des téléphones de trois type:  
+	WINDOWS  
+	ANDROID  
+	IPHONE  
+```
 ## Code
 ```java
 class AbstractDesign 

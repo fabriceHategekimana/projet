@@ -4,7 +4,7 @@ Observer
 Behavioral pattern
 
 ## Définition
-**Problème:** On a des objets qui ont beaucoup de comportements différent qu'ils peuvent changer et on aimerai ajouter de nouveau comportement sans faire beaucoup de "if else"
+**Problème:** On a des objets qui ont beaucoup de comportements différent qu'ils peuvent changer et on aimerai ajouter de nouveau comportement sans faire beaucoup de "if else"  
 **Solution:** On transformes ses objets en observer. On définit des états (appellé Subject) qui vont modifier le comportement des objets. Si on veut ajouter un nouveau comportement, on crée un nouveau Subject.
 l'Observer pattern est utilisé quand il y a beaucoup de dépendance entre les objet (si un objet change, tout les autres doivent changer). Les classes dépenantes vont devenir les observers et une classe (ici Subject) sera chargée de mettre à jour les autres.
 
@@ -31,13 +31,15 @@ Chaque classe observer va prendre le sujet dans son constructeur et va ajouter s
 | Subject             | State    | Définit l'état du système       |
 | ObserverPatternDemo | Client   | classe principale               |
 
-## Pseudocode
+## Pseudo code
+```
 main()
   On crée un nouveau sujet.
   On crée successivement des observateur Hexa, Octa et Binaire (Ils dépendent tous du sujet)
 
   On change l'état du sujet (on lui ajoute 15)
   On change l'état du sujet (on lui ajoute 10)
+```
 
 ## Code
 ```java

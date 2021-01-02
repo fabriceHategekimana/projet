@@ -1,12 +1,13 @@
 Wrapper (Adapter)
 =================
 
-Behavioral Pattern
+### Behavioral Pattern
 
 ![Adapter_design_pattern](images/Adapter_design_pattern.png)
+![Adapter_meme](images/Adapter_meme.jpeg)
 
 ## Définition
-**Problème:** On a un ou plusieurs objets qui suivent la "logique" de notre code et on veut ajouter une classe étrangère (par exemple fait par quelqu'un d'autre qui voit les choses autrement) qui suit une autre "logique".
+**Problème:** On a un ou plusieurs objets qui suivent la "logique" de notre code et on veut ajouter une classe étrangère (par exemple fait par quelqu'un d'autre qui voit les choses autrement) qui suit une autre "logique".  
 **Solution:** On peut faire un Adapter (Wrapper) qui va prendre la classe différente et "traduire" le comportement qu'on veut dans son comportement.
 Change un contract dans un autre contract. On enveloppe en fait une classe [nom] dans une wrapper qu'on appelle souvent [nom]Wrapper.
 
@@ -29,12 +30,14 @@ On a une classe PlasticToyDuck qui a ses propres méthodes et on aimerai ajouter
 | PlasticToyDuck | Concrete Target | Classe            |
 | Main           | Client          | Classe principale |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
     On crée un Sparrow et un PlasticToyDuck
     on encapsule le Sparrow dans un bird adapter
     Sparrow a toujours ses propres fonctions
     Mais le BirdAdapter a le même comportement que le PlasticToyDuck
+```
 
 ## Code
 ```java

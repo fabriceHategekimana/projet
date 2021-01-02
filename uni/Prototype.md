@@ -1,11 +1,12 @@
 # Prototype
 
-Creational pattern
+### Creational pattern
 
 ![Prototype_design_pattern](images/Prototype_design_pattern.png)
+![Prototype_meme](images/Prototype_meme.jpeg)
 
 ## Définition
-**Problème:** Comment comment éviter de ralentir le code en créan depuis zéro des objets très lourd.
+**Problème:** Comment comment éviter de ralentir le code en créan depuis zéro des objets très lourd.  
 **Solution:** En créant des prototypes qui seront des copie des éléments déjà existant.
 Le but est de créer un objet par défaut et de le cloner lorsqu'on demande une nouvelle instance. Le clone peut modifier des élément de l'objet original car il pointe au même endroit (attention: ça peut provoquer des effets de bord)
 
@@ -29,11 +30,10 @@ On a mit deux couleurs dans ColorStore par défaut (bleu et noir)
 
 
 ## Pseudocode
+```
 main() 
-    ColorStore.getColor("blue").addColor(); 
-    ColorStore.getColor("black").addColor(); 
-    ColorStore.getColor("black").addColor(); 
-    ColorStore.getColor("blue").addColor(); 
+    On ajoute successivement les couleurs bleu et noir du ColorStore
+```
 
 ## Code
 ```java
@@ -124,5 +124,4 @@ class ColorStore {
 		return (Color) colorMap.get(colorName).clone(); 
 	} 
 } 
-
 ```

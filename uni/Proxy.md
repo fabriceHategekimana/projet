@@ -1,12 +1,13 @@
 Proxy
 ======
 
-Creational pattern.
+### Creational pattern.
 
-![Proxy_design_pattern](images/Proxy_design_pattern.png)
+![Proxy_design_pattern](images/Proxy_design_pattern.png){ width=72% }
+![Proxy_meme](images/Proxy_meme.jpeg){ width=72% }
 
 ## Définition
-**Problème:** On a une classe qui a des comportements spéciaux qu'on veut cacher au client.
+**Problème:** On a une classe qui a des comportements spéciaux qu'on veut cacher au client.  
 **Solution:** Créer un proxy qui va se faire passer pour la vrai classe.
 Permet de cacher des comportement complexes au client. Le client ne connais que l'interface.
 On peut rajouter des comportements sans que le client le sache.
@@ -31,10 +32,12 @@ Pour des raison de sécurité, on aimerait faire un proxy qui nous empêche de n
 | Internet      | Objet          | Define connexion rules          |
 | Client        | Client         | Demande une connexion à un site |
 
-## Pseudocode
+## Pseudo code
+```
 main () 
     On crée un nouveau ProxyInternet
     On essaie de se connecter sur deux sites
+```
 
 ## Code
 ```java

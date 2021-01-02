@@ -1,14 +1,15 @@
 Builder
 ========
 
-Creationnal pattern
+### Creationnal pattern
 
 ## Définition
-**Problème:** On a des objets qui héritent d'une super classe (ou interface), mais ils sont très compliqué à construire pour le client. On aimerait facilité la construction.
+**Problème:** On a des objets qui héritent d'une super classe (ou interface), mais ils sont très compliqué à construire pour le client. On aimerait facilité la construction.  
 **Solution:** On crée une interface Builder (soeur jumelle de la super classe) qui définit comment construire les objets. Les Concretes Builders seront les soeurs des objets et on crée un director qui "constuira" les objets grâce aux ConcreteBuilders. 
 Le client aura seulement à utiliser les Builders et le directors pour avoirs ses objets sans rentrer des paramètres super compliqués.
 
 ![Builder_design_pattern](images/Builder_design_pattern.png)
+![Builder_meme](images/Builder_meme.jpeg)
 
 ## Composition:
 - Product: Définit le type de l'objet complexe
@@ -34,13 +35,15 @@ Nous utilison les buidler pour rendre invisible le détail de construction des m
 | TipiHouseBuilder  | Concrete Builder | type de maison        |
 | CivilEngineer     | Director         | Construit les maisons |
 	 
-## Pseudocode
+## Pseudo code
+```
 main() 
 On construit un Builder igloo
 On construit un ingénieur qui se charge de l'igloo
 
 On demande à l'ingénieur de construire l'igloo
 On demande à l'ingénieur de donner la maison
+```
 
 ## Code
 ```java

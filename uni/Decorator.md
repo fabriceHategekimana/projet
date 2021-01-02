@@ -1,12 +1,13 @@
 Decorator
 ==========
 
-Structural pattern
+### Structural pattern
 
-![Decorator_design_pattern](images/Decorator_design_pattern.png)
+![Decorator_design_pattern](images/Decorator_design_pattern.png){ width=70% }
+![Decorator_meme](images/Decorator_meme.jpeg)
 
 ## Définition
-**Problème:** On aimerai ajouter une nouvelle fonctionnalité à une super classe ou un interface sans avoir à changer le comportement des classes qui l'implémentent.
+**Problème:** On aimerai ajouter une nouvelle fonctionnalité à une super classe ou un interface sans avoir à changer le comportement des classes qui l'implémentent.  
 **Solution:** On crée un Décorator qui ajoutera "à la volée" les éléments en plus.
 Les décorateurs ajoutent du nouveau contenu sans altéré la structure de l'objet qu'on modifie. Ils font une surcharge.
 On peut ainsi wrapper la classe tout en gardant la signature de celle-ci.
@@ -31,13 +32,15 @@ On crée une classe concrète qui étant le décorateur. Cela permet de pouvoir 
 | RedShapeDecorator    | ConcreteDecorator | concrete class |
 | DecoratorPatternDemo | Client            | interface      |
 
-## Pseudocode
+## Pseudo code
+```
 main() 
       On crée un Shape Circle
       On crée un Shape redCircle avec RedShapeDecorator et le Circle
       On crée un Shape Rectangle
       On crée un Shape redRectangle avec RedShapeDecorator et le Rectangle
       On déssine les formes et leur version rouge avec la méthode draw
+```
 
 ## Code
 ```java

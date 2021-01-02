@@ -33715,3 +33715,23 @@ new [description:"Examen SI" due:"1613113200" entry:"1609187620" modified:"16091
 time 1609190772
 new [description:"bank" due:"1609196400" entry:"1609190772" modified:"1609190772" status:"pending" uuid:"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"]
 ---
+time 1609539453
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++--" modified:"1608974324" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++-" modified:"1609539453" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1609539453
+old [description:"Devoir maman Lady" due:"1608962400" entry:"1608364881" imask:"10" modified:"1608220303" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"6071868c-b50f-4cd1-bf7d-21dd870a9363"]
+new [description:"Devoir maman Lady" due:"1608962400" end:"1609539453" entry:"1608364881" imask:"10" modified:"1609539453" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"6071868c-b50f-4cd1-bf7d-21dd870a9363"]
+---
+time 1609539460
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++-" modified:"1609539453" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++" modified:"1609539460" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1609539460
+old [description:"Devoir maman Lady" due:"1609567200" entry:"1608974324" imask:"11" modified:"1608364881" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"231fa23d-4f78-44e5-b92c-2a94989c833b"]
+new [description:"Devoir maman Lady" due:"1609567200" end:"1609539460" entry:"1608974324" imask:"11" modified:"1609539460" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"231fa23d-4f78-44e5-b92c-2a94989c833b"]
+---
+time 1609539469
+old [description:"bank" due:"1609196400" entry:"1609190772" modified:"1609190772" status:"pending" uuid:"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"]
+new [description:"bank" due:"1609196400" end:"1609539469" entry:"1609190772" modified:"1609539469" status:"completed" uuid:"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"]
+---

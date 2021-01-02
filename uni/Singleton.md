@@ -1,13 +1,17 @@
 # Singleton
 
+### Creational Pattern
+
 ## Définition
 **Problème:** On a une classe et on aimerai que l'utilisateur manipule toujours la même instance (pas avoir plusieurs instances ayant des "sauvegardes" différentes).
 **Solution:** Il suffit juste de transformer l'objet en Singleton.
 
 ![Singleton_design_pattern](images/Singleton_design_pattern.png)
+![Singleton_meme](images/Singleton_meme.jpeg)
 
 ## Composition:
-- Singleton: La classe qui ne renvoie qu'une seule instance d'elle même
+- Singleton: La classe qui ne renvoie qu'une seule instance d'elle même.
+
 ## Exemple:
 On peut tester le singleton pour voir s'il renvoit toujours la même instance.
 
@@ -15,10 +19,12 @@ On peut tester le singleton pour voir s'il renvoit toujours la même instance.
 | classe    | rôle      | description                  |
 |-----------|-----------|------------------------------|
 | Singleton | Composite | répartie la companie en bloc |
- 
-## Pseudocode
-main () 
-	On appelle le singleton 2 fois
+
+## Pseudo code
+```
+main ()   
+	On appelle le singleton 2 fois  
+``` 
 
 ## Code
 ```java
