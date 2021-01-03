@@ -4,18 +4,15 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/projet/tuto/note
+cd ~/projet/satom/nodejs
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd vim.md
-set stal=2
-tabnew
-tabrewind
-edit vim.md
+$argadd test.js
+edit test.js
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -32,40 +29,18 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 89 - ((17 * winheight(0) + 12) / 25)
+19,20fold
+19
+normal! zo
+let s:l = 29 - ((28 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-89
-normal! 027|
-tabnext
-set splitbelow splitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-if bufexists("/data/data/com.termux/files/usr/share/vim/vim82/doc/motion.txt") | buffer /data/data/com.termux/files/usr/share/vim/vim82/doc/motion.txt | else | edit /data/data/com.termux/files/usr/share/vim/vim82/doc/motion.txt | endif
-balt vim.md
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let s:l = 714 - ((1 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-714
-normal! 057|
+29
+normal! 0
 tabnext 1
-set stal=1
-badd +0 vim.md
+badd +0 test.js
+badd +12 ~/.vimrc
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -77,7 +52,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

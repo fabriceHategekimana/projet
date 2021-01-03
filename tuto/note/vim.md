@@ -86,9 +86,9 @@ actions:
 - ligne: delete, yank, paste, change
 - changement de mode (insert, commande, visual)
 - spéciaux
-actions+mouvements 
+actions+mouvements (objects) 
 
-5
+
 
 préfixes: numéro
 
