@@ -1,2 +1,0 @@
-- [X] Comment faire des inner link dans les pdf
-- [ ] Diagramme de classe

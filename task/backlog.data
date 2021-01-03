@@ -9394,3 +9394,25 @@
 {"description":"feed-back liste des personnes","end":"20201217T221159Z","entry":"20201212T134518Z","modified":"20201217T221159Z","status":"completed","uuid":"4547e014-772e-492e-8d76-07c7233bbdd6"}
 {"description":"Devoir maman Lady","due":"20201226T060000Z","entry":"20201219T080121Z","imask":10,"modified":"20201217T155143Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"6071868c-b50f-4cd1-bf7d-21dd870a9363"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++++-","modified":"20201219T080121Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20210102T060000Z","entry":"20201226T091844Z","imask":11,"modified":"20201219T080121Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"231fa23d-4f78-44e5-b92c-2a94989c833b"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++++--","modified":"20201226T091844Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"contribution du mois","entry":"20201228T202314Z","modified":"20201228T202314Z","status":"pending","uuid":"c6e46810-30b9-4a53-80ee-61bb16cba784"}
+{"description":"finir prise de note","entry":"20201228T202334Z","modified":"20201228T202334Z","status":"pending","uuid":"7c5f15c7-e80c-418d-bc0d-68ebd9dfc95e"}
+{"description":"organisation examen","entry":"20201228T202349Z","modified":"20201228T202349Z","status":"pending","uuid":"69bd39e6-f477-44fe-abae-6f096666b60a"}
+{"description":"papa José","entry":"20201228T202354Z","modified":"20201228T202354Z","status":"pending","uuid":"bbedb147-7862-437c-a7bb-d09d14d42839"}
+{"description":"Examen RI","due":"20210126T070000Z","entry":"20201228T202814Z","modified":"20201228T202814Z","status":"pending","uuid":"625b5a42-893b-4dfc-9dee-81e332f61e5e"}
+{"description":"Examen Pa","due":"20210127T070000Z","entry":"20201228T202913Z","modified":"20201228T202913Z","status":"pending","uuid":"26e84691-1a02-4aaa-9e4b-a6804debbddf"}
+{"description":"Examen IN","due":"20210202T070000Z","entry":"20201228T203003Z","modified":"20201228T203003Z","status":"pending","uuid":"2a9e1baa-85c5-4019-bf01-fd4b95fe2bd6"}
+{"description":"Examen GL","due":"20210205T070000Z","entry":"20201228T203059Z","modified":"20201228T203059Z","status":"pending","uuid":"b03eb3ec-2843-45e9-974f-a830a5755897"}
+{"description":"Examen Co","due":"20210208T070000Z","entry":"20201228T203157Z","modified":"20201228T203157Z","status":"pending","uuid":"e7884ac8-cfa8-4565-8511-b174c8bc1b6a"}
+{"description":"Examen CI","due":"20210210T070000Z","entry":"20201228T203223Z","modified":"20201228T203223Z","status":"pending","uuid":"4fe08581-8031-41a2-ac29-cc781b5833e6"}
+{"description":"Examen IA","due":"20210211T070000Z","entry":"20201228T203304Z","modified":"20201228T203304Z","status":"pending","uuid":"1aec47bc-52c6-40df-87e9-42c591fa253f"}
+{"description":"Examen SI","due":"20210212T070000Z","entry":"20201228T203340Z","modified":"20201228T203340Z","status":"pending","uuid":"1fd74cb5-d42d-4da6-abae-43f88cfaf5e5"}
+{"description":"bank","due":"20201228T230000Z","entry":"20201228T212612Z","modified":"20201228T212612Z","status":"pending","uuid":"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++-","modified":"20210101T221733Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20201226T060000Z","end":"20210101T221733Z","entry":"20201219T080121Z","imask":10,"modified":"20210101T221733Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"6071868c-b50f-4cd1-bf7d-21dd870a9363"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++++++","modified":"20210101T221740Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20210102T060000Z","end":"20210101T221740Z","entry":"20201226T091844Z","imask":11,"modified":"20210101T221740Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"231fa23d-4f78-44e5-b92c-2a94989c833b"}
+{"description":"bank","due":"20201228T230000Z","end":"20210101T221749Z","entry":"20201228T212612Z","modified":"20210101T221749Z","status":"completed","uuid":"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"}
+{"description":"Devoir maman Lady","due":"20210109T060000Z","entry":"20210102T132758Z","imask":12,"modified":"20210101T221740Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"43563782-2602-4e06-84bc-60c76a79b610"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++++++-","modified":"20210102T132758Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}

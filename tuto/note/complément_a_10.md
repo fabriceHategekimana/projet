@@ -18,4 +18,4 @@ Qu'est-ce qui additioné ensemble donne 10?
 C'est pareil pour les compléments à 20  
       
 [exercices_compléments_a_10_20_etc](exercices_compléments_a_10_20_etc)
-
+exercice_compléments_a_10_soustraction

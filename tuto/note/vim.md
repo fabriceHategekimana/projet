@@ -1,57 +1,38 @@
 Vim
 ===
-
-qui: Ces tutos sont adressés à tout les utilisateurs
-ou: Depuis chez vous si vous avez vim
-quand: Pour votre vie de tout les jours
-quoi: un éditeur de code et surtout une façon de penser
-comment: En réduisant la courbe d'apprentissage
-
-Propriétésé
-==============
-cli
-façon de penser
-
-## défauts
-Pas visuellement beau.
-Pas intuitif sans les notions de base
-
-## avantages
-Bon champ d'application
-Personnalisable
+Intro
 
 Sommaire
 ========
 - origines
 - vim c'est quoi?
-- Bagage
+- Bagage utils
 - modes
 - normal
 - insertion
 - visuel
 - commande
-- Sous-modes ou modes moins courrants
 - Vimscript et vimrc
 - Plugins
 - Documentation
-- Autres (marqueurs, buffer, window, tab)
+- Autres (marqueurs, macro, quickfix, buffer, window, global, tab)
 
 Origines
 =========
 - ed 1970 (Ken Thompson) edition ligne par ligne affichage par demande
-- vi (Bill Joy) écran total, premier raccourcis.
-- vim (Bram Moolenaar) 1988 (imitation a -> amélioré)
+- vi (ex) 1976 (Bill Joy) écran total, premier raccourcis.
+- vim (Bram Moolenaar) 1988 (imitation -> amélioré)
 
 Vim c'est quoi?
 ================
-C'est plus qu'un éditeur de code.
-C'est un mode de penser la rédaction:
+C'est plus qu'un éditeur de texte.
+C'est une façon de penser la rédaction:
 - On passe plus de temps à modifier qu'à ajouter
-- On doit être à l'aise sur la homerow
-- langage
+- Clavier + homerow
+- langage (requête)
 
-Les Bagages
-===========
+Les Bagages utils
+=================
 typing
 regexp
 
@@ -62,24 +43,26 @@ Vim est un éditeur modal: plusieurs modes:
 2. insert
 3. visual
 4. select
-5. command
+5. command-line
 6. Ex
 7. Replace
 8. Completion
-9. Recherche
 
 Les plus utilisés
 1. normal
 2. insert
 3. visual
-4. command
+4. command-line
 
 Le mode normal
 ===============
-Mode navigation + édition rapide
+Usage: navigation + édition rapide
+
+touches: action, mouvement, action+mouvement
 
 ## keystrokes:
-mouvements:
+1. mouvements:
+
 - flèches + hjkl
 - words (w,b,e) ("[", "]", "(", ")", "{", "}")
 actions:
@@ -89,13 +72,78 @@ actions:
 actions+mouvements (objects) 
 
 
+=======
+- spéciaux (w,b,e) ("(", ")", "{", "}")
+- recherche (f,t,F,T,/,?)
 
-préfixes: numéro
+2. actions:
 
-les modes (normal, insertion, commande, visuel)
-normal: nav(hjkl,^,$,(,),{, },w,W,b,B,.), retou(yy,pp,dd,x),accès
-insertion: insertion (i,a,I,A,s,cc)
-visuel: selection (v,C-v,V)
-commande: utilisation (:,:,!)
+- ligne (double): delete, yank, change, paste
+- changement de mode (insersion, command-line, visual, etc.)
+- spéciales
 
+3. actions+mouvements (ou objet) 
+ 
+- delete, yank, change
+- objets: iw, i), it, aw, etc.
 
+4. préfixes:
+numérique: 1,...,23,...,2638,etc,...
+
+mode insert
+===========
+               O 
+               |
+commande I<-i<-+->a->A
+               |
+	       o
+	      
+Change
+
+mode completion:
+-mots
+-ligne
+-fichier
+-tags
+-omni
+
+Le mode Visual
+===============
+Selection+action
+v, v, <C-v>
+
+Le mode Command
+===============
+settings
+Gestion de fichier (edit, write, quit, read)
+Navigation ficher (buffer, window, tab)
+terminal
+map,abbrev
+script
+
+Vim script et le vimrc
+======================
+Variables (texte, nombre, boolean, listes)
+echo, operators
+map, function, command, etc.
+
+Plugin
+======
+Pour augmenter les possibilités de vim
+Précautions:
+1. Savoir ce qu'il y a dans notre vimrc
+2. Installer un nombre raisonable de plugins
+3. Bien connaître ses plugins
+Vim awesome
+
+Documentation
+=============
+help
+sites
+communautés
+
+Horizon:
+=========
+Neovim
+Spacevim
+Onivim
