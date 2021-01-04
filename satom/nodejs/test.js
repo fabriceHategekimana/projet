@@ -25,4 +25,5 @@ session
   })
   .then(() => session.close())
 
-driver.close()
+driver.close
+

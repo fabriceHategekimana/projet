@@ -1,5 +1,8 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
+<<<<<<< HEAD
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+=======
 let s:cpo_save=&cpo
 set cpo&vim
 imap <C-G>S <Plug>ISurround
@@ -137,6 +140,7 @@ set timeoutlen=500
 set virtualedit=onemore
 set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+>>>>>>> 4be0360beef225f909937e0e228c38fd31186540
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
@@ -147,8 +151,13 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
+<<<<<<< HEAD
+$argadd semantique.md
+edit semantique.md
+=======
 $argadd note.md
 edit ~/projet/uni/Makefile
+>>>>>>> 4be0360beef225f909937e0e228c38fd31186540
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -156,6 +165,25 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
+<<<<<<< HEAD
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 20 - ((19 * winheight(0) + 13) / 26)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+20
+normal! 025|
+tabnext 1
+badd +0 semantique.md
+=======
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -311,6 +339,7 @@ badd +8 ~/projet/uni/Observer.md
 badd +1 ~/projet/uni/State.md
 badd +2 ~/projet/uni/all.md
 badd +0 ~/projet/uni/courPdf/liens.md
+>>>>>>> 4be0360beef225f909937e0e228c38fd31186540
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -321,7 +350,12 @@ let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
+<<<<<<< HEAD
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+=======
 let &so = s:so_save | let &siso = s:siso_save
+>>>>>>> 4be0360beef225f909937e0e228c38fd31186540
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

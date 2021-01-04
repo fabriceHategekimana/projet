@@ -64,6 +64,15 @@ touches: action, mouvement, action+mouvement
 1. mouvements:
 
 - flèches + hjkl
+- words (w,b,e) ("[", "]", "(", ")", "{", "}")
+actions:
+- ligne: delete, yank, paste, change
+- changement de mode (insert, commande, visual)
+- spéciaux
+actions+mouvements (objects) 
+
+
+=======
 - spéciaux (w,b,e) ("(", ")", "{", "}")
 - recherche (f,t,F,T,/,?)
 
