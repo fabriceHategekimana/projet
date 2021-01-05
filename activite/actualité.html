@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>actualité</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+  /*
+  Copyright (c) 2017 Chris Patuzzo
+  https://twitter.com/chrispatuzzo
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  */
+  
+  body {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding: 30px;
+    color: #333;
+  }
+  
+  body > *:first-child {
+    margin-top: 0 !important;
+  }
+  
+  body > *:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  a {
+    color: #4183C4;
+    text-decoration: none;
+  }
+  
+  a.absent {
+    color: #cc0000;
+  }
+  
+  a.anchor {
+    display: block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0 10px;
+    padding: 0;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    cursor: text;
+    position: relative;
+  }
+  
+  h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+    text-decoration: none;
+  }
+  
+  h1 tt, h1 code {
+    font-size: inherit;
+  }
+  
+  h2 tt, h2 code {
+    font-size: inherit;
+  }
+  
+  h3 tt, h3 code {
+    font-size: inherit;
+  }
+  
+  h4 tt, h4 code {
+    font-size: inherit;
+  }
+  
+  h5 tt, h5 code {
+    font-size: inherit;
+  }
+  
+  h6 tt, h6 code {
+    font-size: inherit;
+  }
+  
+  h1 {
+    font-size: 28px;
+    border-bottom: 1px solid #cccccc;
+    color: black;
+  }
+  
+  h2 {
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+    color: black;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  h4 {
+    font-size: 16px;
+  }
+  
+  h5 {
+    font-size: 14px;
+  }
+  
+  h6 {
+    color: #777777;
+    font-size: 14px;
+  }
+  
+  p, blockquote, ul, ol, dl, li, table, pre {
+    margin: 15px 0;
+  }
+  
+  hr {
+    border: 0 none;
+    color: #cccccc;
+    height: 4px;
+    padding: 0;
+  }
+  
+  body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+    margin-top: 0;
+  }
+  
+  li p.first {
+    display: inline-block;
+  }
+  
+  ul, ol {
+    padding-left: 30px;
+  }
+  
+  ul :first-child, ol :first-child {
+    margin-top: 0;
+  }
+  
+  ul :last-child, ol :last-child {
+    margin-bottom: 0;
+  }
+  
+  dl {
+    padding: 0;
+  }
+  
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px;
+  }
+  
+  dl dt:first-child {
+    padding: 0;
+  }
+  
+  dl dt > :first-child {
+    margin-top: 0;
+  }
+  
+  dl dt > :last-child {
+    margin-bottom: 0;
+  }
+  
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px;
+  }
+  
+  dl dd > :first-child {
+    margin-top: 0;
+  }
+  
+  dl dd > :last-child {
+    margin-bottom: 0;
+  }
+  
+  blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #777777;
+  }
+  
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+  
+  blockquote > :last-child {
+    margin-bottom: 0;
+  }
+  /*
+  table {
+    padding: 0;
+  }
+  table tr {
+    border-top: 1px solid #cccccc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  table tr:nth-child(2n) {
+  }
+  
+  table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr th :first-child, table tr td :first-child {
+    margin-top: 0;
+  }
+  
+  table tr th :last-child, table tr td :last-child {
+    margin-bottom: 0;
+  }
+  */
+  img {
+    max-width: 100%;
+  }
+  
+  span.frame {
+    display: block;
+    overflow: hidden;
+  }
+  
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto;
+  }
+  
+  span.frame span img {
+    display: block;
+    float: left;
+  }
+  
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0;
+  }
+  
+  span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center;
+  }
+  
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right;
+  }
+  
+  span.align-right span img {
+    margin: 0;
+    text-align: right;
+  }
+  
+  span.float-left {
+    display: block;
+    margin-right: 13px;
+    overflow: hidden;
+    float: left;
+  }
+  
+  span.float-left span {
+    margin: 13px 0 0;
+  }
+  
+  span.float-right {
+    display: block;
+    margin-left: 13px;
+    overflow: hidden;
+    float: right;
+  }
+  
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right;
+  }
+  
+  code, tt {
+    margin: 0 2px;
+    padding: 0 5px;
+    white-space: nowrap;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+  }
+  
+  pre code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+  }
+  
+  .highlight pre {
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+  
+  pre {
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+  
+  pre code, pre tt {
+    border: none;
+  }
+  
+  .sourceCode { 
+  	background-color: rgb(30, 20, 30);
+  	border-radius: 5px;
+  	color: white;
+  }
+  
+  table tr th {background:#222; color:#fff; padding:0; border:#111 solid 1px;  text-align: center; font-weight: bold;}  
+  table tr td {border:1px #ccc solid; padding:5px;}  
+  table tr td.rightright {background: #eee;}  
+  table tr td h4 {margin:0; padding:0; font-weight:normal;}  
+  
+  #from here => http://net.tutsplus.com/tutorials/other/building-a-forum-from-scratch-with-ruby-on-rails/
+  
+  
+  
+  table {
+    margin-bottom: 2em;
+    width: 100%;
+  }
+  th {
+    border-bottom: 2px solid #ccc;
+    font-weight: bold;
+    text-align: left;
+  }
+  td { border-bottom: 1px solid #ddd; }
+  caption, th, td {
+    padding: 4px 10px 4px 0;
+  }
+  caption {
+    background: #f1f1f1;
+    padding: 10px 0;
+    margin-bottom: 1em;
+  }
+  
+  tr,td,th {
+    vertical-align: middle;
+  }
+  
+  /*
+                  _        _     _      
+    ___ ___ ___  | |_ __ _| |__ | | ___ 
+   / __/ __/ __| | __/ _` | '_ \| |/ _ \
+  | (__\__ \__ \ | || (_| | |_) | |  __/
+   \___|___/___/  \__\__,_|_.__/|_|\___|
+  */                                     
+  
+  /* Use this if you use span-x classes on th/td. */
+  table .last { padding-right: 0; } 
+  
+  #from http://github.com/thoughtbot/flutie/blob/master/public/stylesheets/tables.css
+  </style>
+</head>
+<body>
+<h1 id="économie">Économie</h1>
+<p><a href="semantique">semantique</a> <a href="economies">economies</a> <a href="hikigai">hikigai</a></p>
+<h1 id="éditeurs-de-text">Éditeurs de text</h1>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Vim</th>
+<th>Vs code</th>
+<th>Sublime</th>
+<th>Atom</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>prise en main</td>
+<td>4</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>extentions/plugins</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>beauté</td>
+<td>4</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>command/palette</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>keybindings</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>légèreté</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Organisation: 1. Planning 2. 10 min 3. explore 4. sauvegarde</p>
+<h2 id="bible">Bible</h2>
+<p>lecture du livre de Proverbes: Chapitre 1: 7,19 chap 2: 6 chap 3: 3, 5-8, 9, 19-20, 21-22, 31 chap 4:chap 4: 23<br />
+chap 5: 21 chap 10: 1, 4, 12, 19</p>
+<h2 id="motivation">Motivation</h2>
+<p>Finalement les instincts et émotions sont les meilleurs carottes et baton pour manipuler ma personne. Je peux les manipuler avec des phénomènes extérieurs. Q: quel genre de phénomène extérieur? Parfois la lecture d’une histoire peu provoquer de différentes émotions. Je peux supprimé certaines émotions en trouvant des sources contraires. Je cherche souvent des émotions qui me motivent Mais souvent on est pas motivé tout cours, on est motivé à [faire qqch]</p>
+<h2 id="révision-plus-efficace">Révision plus efficace</h2>
+<ul>
+<li>C’est quoi</li>
+<li>Ça sert à quoi</li>
+<li>Comment</li>
+<li>Avec quoi</li>
+<li>Pourquoi</li>
+</ul>
+<h2 id="le-labo">Le labo</h2>
+<p>Le labo est un outils efficace car il me permet d’obtenir rapidement des résultats nécessaires pour mes prises de decisions. Sera très utile pour ma gestion du temps. Lors d’un traitement de la tâche à haut niveau, noter mes questions</p>
+<h2 id="le-jeu-optimisation">Le jeu (optimisation)</h2>
+<p>Est une forme de présentation de l’activité de façon plus ludique. Particularité:</p>
+<p>Gameplay: assez simple (de façon général ou axiomatique) But: assez simple</p>
+<h2 id="être-visionnaire">Être visionnaire</h2>
+<p>Avoir un but sur le long terme: Maintenant que je suis plus au contrôle de mon temps, je veux m’essayer sur des projets de long terme.</p>
+<p>Je me rends compte que j’arrive à répartir du “temps” pour mes diverts activités, mais que je n’ai pas encore la “vision” de leur accomplissement sur <code>le long terme</code>. Et c’est ce que je dois chercher.</p>
+<p>DEVOIRS: * rev GL * rev IN</p>
+<ul>
+<li>GL</li>
+<li>SI</li>
+<li>IN</li>
+<li>PA</li>
+</ul>
+<p>DÉSIRS Devenir plus fort, meilleurs, plus mature</p>
+<h2 id="perso">Perso</h2>
+<p>Rangement Ménage Méditation Tuto Cadeaux Activite Histoire</p>
+</body>
+</html>
