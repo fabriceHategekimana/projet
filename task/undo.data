@@ -33742,3 +33742,19 @@ time 1609594078
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++" modified:"1609539460" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++-" modified:"1609594078" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 ---
+time 1609851581
+old [description:"devoir Famille de Mélissa" entry:"1607884283" modified:"1607884283" status:"pending" uuid:"9c6637a8-c19e-4fd5-857f-2d7d45e77ff2"]
+new [description:"devoir Famille de Mélissa" end:"1609851575" entry:"1607884283" modified:"1609851581" status:"completed" uuid:"9c6637a8-c19e-4fd5-857f-2d7d45e77ff2"]
+---
+time 1609851581
+old [description:"contribution du mois" entry:"1609186994" modified:"1609186994" status:"pending" uuid:"c6e46810-30b9-4a53-80ee-61bb16cba784"]
+new [description:"contribution du mois" end:"1609851581" entry:"1609186994" modified:"1609851581" status:"completed" uuid:"c6e46810-30b9-4a53-80ee-61bb16cba784"]
+---
+time 1609851581
+old [description:"finir prise de note" entry:"1609187014" modified:"1609187014" status:"pending" uuid:"7c5f15c7-e80c-418d-bc0d-68ebd9dfc95e"]
+new [description:"finir prise de note" end:"1609851581" entry:"1609187014" modified:"1609851581" status:"completed" uuid:"7c5f15c7-e80c-418d-bc0d-68ebd9dfc95e"]
+---
+time 1609851586
+old [description:"papa José" entry:"1609187034" modified:"1609187034" status:"pending" uuid:"bbedb147-7862-437c-a7bb-d09d14d42839"]
+new [description:"papa José" end:"1609851586" entry:"1609187034" modified:"1609851586" status:"completed" uuid:"bbedb147-7862-437c-a7bb-d09d14d42839"]
+---

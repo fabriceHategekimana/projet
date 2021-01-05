@@ -9416,3 +9416,7 @@
 {"description":"bank","due":"20201228T230000Z","end":"20210101T221749Z","entry":"20201228T212612Z","modified":"20210101T221749Z","status":"completed","uuid":"82334582-aa57-47ef-8f6f-d1fa55dfa7d5"}
 {"description":"Devoir maman Lady","due":"20210109T060000Z","entry":"20210102T132758Z","imask":12,"modified":"20210101T221740Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"43563782-2602-4e06-84bc-60c76a79b610"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++++++-","modified":"20210102T132758Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"devoir Famille de Mélissa","end":"20210105T125935Z","entry":"20201213T183123Z","modified":"20210105T125941Z","status":"completed","uuid":"9c6637a8-c19e-4fd5-857f-2d7d45e77ff2"}
+{"description":"contribution du mois","end":"20210105T125941Z","entry":"20201228T202314Z","modified":"20210105T125941Z","status":"completed","uuid":"c6e46810-30b9-4a53-80ee-61bb16cba784"}
+{"description":"finir prise de note","end":"20210105T125941Z","entry":"20201228T202334Z","modified":"20210105T125941Z","status":"completed","uuid":"7c5f15c7-e80c-418d-bc0d-68ebd9dfc95e"}
+{"description":"papa José","end":"20210105T125946Z","entry":"20201228T202354Z","modified":"20210105T125946Z","status":"completed","uuid":"bbedb147-7862-437c-a7bb-d09d14d42839"}
