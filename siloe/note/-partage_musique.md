@@ -23,7 +23,7 @@ Monene
 https://www.youtube.com/watch?v=dPSYTOJh9Dc&list=PLMr6hABhA0YAC6TL7Z_5fkZTGhffy1Xw9&index=3
 
 Toi seul est digne (11:51-fin)
-https://www.youtube.com/watch?v=dPSYTOJh9Dc&list=PLMr6hABhA0YAC6TL7Z_5fkZTGhffy1Xw9&index=3
+https://www.youtube.com/watch?v=n3c-yvpq1p8
 
 Agape
 https://www.youtube.com/watch?v=L1J5mE3f7HM&list=PLMr6hABhA0YA4Sdlqxcq2cZzbUdWfRtYe&index=2
@@ -36,9 +36,6 @@ https://www.youtube.com/watch?v=k82KhnBGLSU&list=PLMr6hABhA0YB1MsXwz4naM9jQYvbDq
 
 Man of your words
 https://www.youtube.com/watch?v=0TrVCZF-4pI&list=PLMr6hABhA0YB1MsXwz4naM9jQYvbDqB5a&index=2
-
-Dieu a fait grâce (1:45)
-https://www.youtube.com/watch?v=Y-RhTyoFk-o&list=PLMr6hABhA0YB1MsXwz4naM9jQYvbDqB5a&index=3
 
 You made a way (nous avons vaincu simplement par la grâce)
 https://www.youtube.com/watch?v=Y-RhTyoFk-o&list=PLMr6hABhA0YB1MsXwz4naM9jQYvbDqB5a&index=3
