@@ -1,0 +1,135 @@
+Problèmes classiques en
+Propriétés désirées
+Inter blocage
+Les solutions
+Généralités
+Programmation concurrente en
+
+Un moniteur
+Hello world
+Plusieurs threads
+Utilisation de Thread.sleep(t)
+Attente aléatoire
+Remarques
+
+Interface Runnable
+Interface Runnable et classe
+Définition de la méthode start()
+Interruption d’un thread
+Remarques
+Les différents états d’un thread
+Ordonnancement des threads
+
+Fibonacci
+Fibonacci (suite)
+Exclusion mutuelle
+Problème de
+Exclusion mutuelle
+Atomicité
+Section critique
+Verrou
+Exceptions
+
+Programme test
+Algorithme de Peterson
+Algorithme de Lamport
+Lamport’s bakery algorithm
+Preuve de l’algorithme
+Estampilles temporelles
+Instructions atomiques
+TestAndSet
+Exclusion mutuelle avec testAndset
+Remarques
+Exclusion mutuelle en pratique
+Queue bloquante
+Queue blocante
+Preuves des algorithmes
+Preuve des algorithmes
+Invariants
+Invariant - définition
+Preuve de l’exclusion mutuelle
+Remarques
+Synchronisation
+Mécanismes de synchronisations
+Sémaphore booléenne
+SC avec sémaphore
+Remarques
+Retour sur wait()
+Retour sur notify()
+Retour sur interrupt()
+Remarques
+Les différents états d’un thread
+Remarques
+Sémaphore entière
+Invariants pour les sémaphores
+Preuve de SC
+Le problème du
+Utilisation du tampon fini
+Preuve de la synchronisation
+Remarque sur la synchronisation
+Implémentation d’un tampon fini
+Une exécution particulière
+
+Solutions
+Les variables de conditions
+multi-producteur
+multi-consommateur
+Le problème des
+Le problème des philosophes
+Programme de test
+Programme de test (suite)
+Analyse
+symétrie-asymétrie
+Asymétrie
+Impossibilité pour le problème des
+
+Algorithme probabiliste
+Lemme 1
+Lemme 2
+Configuration
+Lemme 3
+Le théorème
+Insuffisance de ressources
+Possibilité d’interblocage
+Swap sans interblocage
+Data Race
+AtomicLong
+Consistance
+Visibilité
+Visibilité - Synchronisation
+Visibilité - Volatile
+Volatile
+Publication
+Spécifications
+Synch-order
+Happen-before
+Programmes correctement
+Synchronisation
+Généralités
+
+Types de registres
+Registres sûrs
+Registre réguliers
+Registres réguliers
+Registres atomiques
+Définitions
+registre atomique
+Preuve
+
+Registres multivalués SRSW
+Registres multivalués MRSW
+Registres multivalués SRSW
+Registres multivalués atomique
+Registre MRSW atomique
+Remarque
+
+Autres solutions
+ThreadLocal
+Consensus
+Consensus – registres atomiques
+Etat initial
+Etats bivalents
+Analyse
+Consensus – test-and-set
+Consensus - Move
+Remarque
