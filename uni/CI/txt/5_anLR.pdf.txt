@@ -1,0 +1,3140 @@
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Analyse ascendante
+Mirabelle Nebut
+Bureau 203 - extension M3
+mirabelle.nebut at lifl.fr
+
+2012-2013
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Introduction
+Analyseurs LR(0)
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+2/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Analyseur ascendant
+
+I
+
+E↵ectue des lectures et des réductions ;
+
+I
+
+construit un arbre en ordre postfixe ;
+
+I
+
+en partant du mot à reconnaı̂tre ;
+
+I
+
+construction d’une dérivation droite ;
+
+I
+
+analyseurs LR(k) (from Left to rigth, Rigth derivation).
+
+On parle aussi :
+I
+
+d’analyse par décalage et réduction
+
+I
+
+shift/reduce analysis.
+3/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple
+
+S ! AD | B
+A ! aAb | b
+B ! aB | c
+D!e
+Cette grammaire n’est pas LL(k) (pourquoi ?)
+On va la traiter en LR(k), avec k=0 pour commencer.
+
+4/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple
+Analyseur LR(0) basé sur une variante de l’automate des items.
+(vous vous rappelez ?)
+) nouvel axiome S 0
+) production S 0 ! S
+S0 ! S
+S ! AD | B
+A ! aAb | b
+B ! aB | c
+D!e
+5/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple de reconnaissance
+
+S0 ! S
+S ! AD | B
+A ! aAb | b
+B ! aB | c
+D!e
+Reconnaı̂tre le mot abbe# ?
+On essaie intuitivement, avec une pile contenant des mots de
+(VT [ VN )⇤.
+6/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple de reconnaissance
+
+a
+
+b
+a
+
+A
+a
+
+b
+A
+a
+
+A
+
+e
+A
+
+D
+A
+
+S
+
+S’
+I
+
+Construction arbre ordre postfixe : lectures et réductions ;
+
+I
+
+Dérivation droite.
+
+7/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Analyse ascendante : défis
+Contenu de la pile :
+I
+I
+I
+
+mot de (VN [ VT )⇤ ;
+
+début de la dérivation droite construite ;
+préfixe viable.
+
+Comment choisir de manière déterministe :
+I
+
+entre lecture et réduction ;
+
+I
+
+quelle partie du sommet de pile réduire ? (= le manche)
+
+I
+
+par quelle production réduire.
+
+Comment faire ?
+8/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Analyse ascendante : solutions
+
+On repart de l’automate des items.
+On explicite l’automate fini sous-jacent :
+I
+
+automate caractéristique (un état = un item) ;
+
+I
+
+on comprend comment l’analyse ascendante fonctionne avec ;
+
+I
+
+mais cet automate est non déterministe.
+
+On le déterminise.
+Et c’est gagné ! On a un analyseur LR(0).
+
+9/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Introduction
+Analyseurs LR(0)
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+10/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Retour à l’automate des items - exemple
+Ex : abbe# ?
+[S 0 ! •S]
+[A ! a • Ab]
+[S ! •AD]
+[S 0 ! •S]
+[A ! aA • b]
+[S ! •AD]
+[S 0 ! •S]
+
+[S ! •AD]
+0
+E
+! [S ! •S]
+
+[A ! •aAb]
+[S ! •AD]
+0
+E
+! [S ! •S]
+
+[A ! •b]
+[A ! a • Ab]
+[S ! •AD]
+E
+[S 0 ! •S]
+!
+
+L
+
+!
+
+[A ! b•]
+[A ! a • Ab]
+[S ! •AD]
+L
+[S 0 ! •S]
+!
+
+[A ! aAb•]
+[S ! •AD]
+0
+0
+L
+R
+! [S ! •S] . . . ! [S ! S•]
+Mirabelle Nebut
+
+Analyse ascendante
+
+R
+
+!
+
+11/93
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Retour à l’automate des items
+
+Trois types de transitions :
+I
+
+I
+
+I
+
+lecture de a :
+( [X ! ↵ • a ] , a ) ! [X ! ↵a • ]
+
+expansion par Y !
+
+:
+
+réduction par Y !
+
+:
+
+( [X ! ↵ • Y ] , ✏ ) ! [X ! ↵ • Y ] [Y ! • ]
+( [X ! ↵ • Y ] [Y ! •] , ✏ ) ! [X ! ↵Y • ]
+
+12/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate caractéristique - exemple
+
+...
+...
+[S ! •B]
+
+✏
+
+[S 0 ! S•]
+
+S
+[S ! •S]
+0
+
+[S ! AD•]
+
+abbe# ?
+
+✏
+
+[A ! •b]
+
+D
+
+[A ! b•]
+
+✏
+
+[S ! •AD] ✏
+A
+
+✏
+
+b
+
+✏
+[A ! •aAb] a
+
+[A ! a • Ab]
+A
+
+[S ! A • D]
+✏
+
+[A ! aA • b]
+b
+
+[D ! •e]
+e
+
+[A ! aAb•]
+
+[D ! e•]
+Mirabelle Nebut
+
+13/93
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate caractéristique - généralités
+Automate à nombre fini d’états :
+I
+
+sous-jacent à l’automate des items ;
+
+I
+
+indique son état courant ;
+
+I
+
+= l’item en sommet de pile.
+
+Pour chaque transition de l’aut des items, l’aut caractéristique :
+I
+
+e↵ectue une transition ;
+
+I
+
+ou, depuis un état puit,
+
+⌧
+
+revient en arrière .
+
+Comment se comporte l’automate caractéristique ?
+14/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate caractéristique et lecture
+
+Idem automate des items.
+VT -transition sur le terminal lu :
+a
+
+[X ! ↵ • a ] ! [X ! ↵a • ]
+Ex lecture de a :
+[A ! •aAb]
+
+a
+
+! [A ! a • Ab]
+
+15/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate caractéristique et expansion
+
+Idem automate des items.
+Expansion par Y !
+
+: ✏-transition
+✏
+
+[X ! ↵ • Y ] ! [Y ! • ]
+Ex expansion par A ! b :
+[A ! a • Ab]
+
+✏
+
+! [A ! •b]
+
+16/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate caractéristique et réduction
+Di↵érent de l’automate des items (✏-production).
+Conséquence d’une réduction par A 2 VN : VN -transition sur A
+Ex : on réduit par A ! aAb :
+I
+I
+
+quand on est dans l’état puit [A ! aAb•] ;
+alors on rebrousse chemin des 4 transitions qui ont amené
+dans cet état :
+I
+I
+
+I
+
+les 3 transitions qui correspondent à aAb ;
+l’✏-transition qui correspond à l’expansion par A ! aAb ;
+
+et on transite sur A (A-transition, on a reconnu un A).
+
+17/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate caractéristique et réduction par une production
+vide
+
+Cas particulier, on réduit par X ! ✏ :
+I
+I
+I
+
+dans l’état puit X ! • ;
+
+on rebrousse chemin d’une transition (|✏| + 1 = 1) ;
+et on transite sur X .
+
+18/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Déterminiser l’automate caractéristique
+
+L’automate caractéristique :
+I
+
+est non déterministe (des ✏-transitions) ;
+
+I
+
+contient des expansions (justement les ✏-transitions).
+
+On veut un analyseur ascendant :
+I
+
+déterministe ;
+
+I
+
+sans expansions explicites (lectures et réductions).
+
+) on déterminise l’automate caractéristique.
+) on obtient un automate dit LR-AFD.
+19/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate LR-AFD, exemple
+E2
+S 0 ! S•
+
+S
+B
+E1
+a
+S 0 ! •S
+S ! •AD
+S ! •B
+A ! •aAb
+A ! •b
+B ! •aB
+B ! •c
+b
+
+A
+E8
+S !A•D
+D ! •e
+D
+
+E9
+S ! AD•
+
+c
+
+E11
+S ! B•
+
+a
+E3
+A ! a • Ab
+B !a•B
+A ! •aAb
+A ! •b
+B ! •aB
+B ! •c
+b
+
+A
+B
+
+E5
+A ! aA • b
+B ! aB•
+
+b
+
+E6
+A ! aAb•
+
+E7
+
+E4
+
+A ! b•
+
+c
+E12
+
+e
+
+B ! c•
+E10
+D ! e•
+Mirabelle Nebut
+
+20/93
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Automate LR(0)
+
+L’automate LR-AFD décrit un automate à pile déterministe appelé
+automate LR(0) e↵ectuant 2 types d’actions :
+I
+
+lecture
+
+I
+
+réduction
+
+Dans un état contenant X ! · · · • a . . . : Lecture de a
+Dans un état contenant X ! ↵• : Réduction par X ! ↵•
+La pile permet de mémoriser les états parcourus lors des lectures et
+des réductions.
+21/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Exemple de fonctionnement
+abbe# ?
+
+E1
+
+E3
+E1
+
+E9
+E8
+E1
+
+E2
+E1
+
+E4
+E3
+E1
+
+E5
+E3
+E1
+
+E6
+E5
+E3
+E1
+
+E8
+E1
+
+E10
+E8
+E1
+
+On a ce qu’on voulait :
+I
+
+l’arbre en ordre postfixe, et la dérivation droite ;
+
+I
+
+avec des lectures et des réductions.
+22/93
+
+Reste à formaliser.
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Définition de l’automate LR(0)
+Un état est un ensemble d’item : si Q est l’ensemble des états
+Q ✓ P(It G )
+L’alphabet de pile est Q.
+L’état initial q0 :
+I
+I
+
+contient l’item initial de la forme [S 0 ! •S] ;
+sert à initialiser la pile.
+
+L’état final qf contient l’item final, de la forme [S 0 ! S•].
+23/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Définition de l’automate LR(0) : relation de transition
+On note
+
+la relation de transition de l’AF LR-AFD.
+
+(q, X ) = q 0 signifie :
+I
+
+si l’état courant est q ;
+
+I
+
+et que X 2 VT [ VN est le symbole courant à traiter ;
+
+I
+
+alors l’état courant devient q 0 .
+
+Exemple :
+S
+
+I
+
+(E1 , S) = E2
+
+ou
+
+I
+
+E1 ! E2
+
+(E1 , b) = E4
+
+ou
+
+E1 ! E2
+
+b
+
+24/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Définition de l’automate LR(0) : relation de transition
+Lecture
+
+Relation de transition de l’automate LR(0) pour une lecture :
+(q, a) ! q (q, a)
+I
+
+si q est en sommet de pile
+
+I
+
+si a est sous la tête de lecture
+
+I
+
+et l’un des items de q est de la forme [X ! · · · • a . . . ] ;
+
+I
+
+alors on empile l’état successeur de q pour a dans .
+
+25/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Définition de l’automate LR(0) : relation de transition
+Réduction
+
+Relation de transition de l’automate LR(0) pour une réduction :
+(qq1 . . . qn , ✏) ! q (q, X )
+I
+
+si qn est en sommet de pile ;
+
+I
+
+si l’un des items de qn est de la forme [X ! ↵•], | ↵ |= n ;
+
+I
+I
+
+alors on dépile n états ;
+
+puis on empile (q, X ) le successeur par X de l’état q en
+sommet de pile.
+26/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Et les expansions ?
+Les ✏-transition d’expansion ont disparu avec la déterminisation.
+Elles se font implicitement à l’intérieur des états.
+E1
+[S 0 ! •S]
+[S ! •AD]
+[S ! •B]
+[A ! •aAb]
+[A ! •b]
+[B ! •aB]
+[B ! •c]
+
+lecture de c possible après expansions
+successives par :
+c
+
+! E12
+
+I
+I
+I
+
+S 0 ! S ; [S 0 ! •S] 2 E 1
+S ! B ; [S ! •B] 2 E 1
+B ! c ; [B ! •c] 2 E 1
+
+27/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Introduction
+Analyseurs LR(0)
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+28/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Construction de LR-AFD - en première approche
+
+On construit Q (les états) et (les transitions) de l’automate
+caractéristique à partir de la grammaire.
+On le déterminise, on obtient LR-AFD.
+En fait, on peut construire directement LR-AFD (ouf !).
+
+29/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Construction algorithmique directe de LR-AFD
+
+Principe :
+I
+
+on sature les états par expansion ;
+
+I
+
+on transite sur chaque symbole Y tel que [· · · ! · · · • Y . . . ].
+
+30/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Saturation des états par expansion
+Un ensemble d’items E est saturé si :
+I
+I
+I
+
+pour tout item [X ! ↵ • Y ] de E , Y 2 VN ;
+pour toute production Y !
+
+de G de membre gauche Y ;
+
+l’item [Y ! • ] appartient aussi à E .
+
+On en déduit la fonction Saturation pour une grammaire G :
+fonction Saturation (s : ensemble d’items) :
+ensemble d’items
+// calcule tous les items d’un état de LR-AFD(G )
+// contenant au moins les items de s
+// retourne cet état.
+31/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Algorithme de construction de Q et
+L’état initial est Saturation([S 0 ! •S]).
+Ensuite, pour chaque état saturé E et chaque symbole
+Y 2 VT [ VN (lecture pour VT , réduction pour VN ) :
+I
+
+I
+
+si E contient un ensemble de n items de la forme
+alors on calcule
+
+{ [X ! ↵i • Y
+
+i]
+
+| 1  i  n}
+
+E 0 = Saturation({[X ! ↵i Y •
+E0
+
+I
+
+si cet état
+
+I
+
+et on définit (E , Y ) = E 0 .
+
+i]
+
+⌧
+
+•Y
+
+:
+
+| 1  i  n} )
+
+n’existe pas, on l’ajoute à Q ;
+
+32/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Exemple et remarque
+Pour ne pas manquer de place sur sa feuille : séparer le contenu
+des états et la relation de transition.
+E1
+
+[S 0 ! •S]
+[S ! •AD]
+[S ! •B]
+[A ! •aAb]
+[A ! •b]
+[B ! •aB]
+[B ! •c]
+
+E3
+[A ! a • Ab]
+[B ! a • B]
+[A ! •aAb]
+[A ! •b]
+[B ! •aB]
+[B ! •c]
+
+E2
+
+E11
+B
+
+S
+A
+D
+
+E9
+
+E8
+e
+
+E1
+c
+
+E10
+
+b
+
+a
+
+a
+A
+
+E3
+b
+
+E4
+E12
+
+c
+
+B
+
+E5
+
+b
+
+E6
+
+E7
+
+33/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Conflits LR(0), grammaire LR(0)
+L’automate LR(0) construit peut ne pas être déterministe (2 cas).
+État autorisant 2 réductions (ou plus) :
+conflit LR(0) reduce/reduce
+
+Ex :
+
+[A ! b•]
+[B ! b•]
+
+État autorisant 1 réduction et 1 lecture (ou plus) :
+conflit LR(0) shift/reduce
+
+Ex :
+
+[A ! •b]
+[B ! c•]
+34/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Conflits LR(0), grammaire LR(0)
+
+Une grammaire est dite LR(0) si aucun de ses états ne contient de
+conflit LR(0) :
+I
+
+ni shift-reduce
+
+I
+
+ni reduce-reduce
+
+Les conflits shift/shift n’existent pas (aucun sens).
+
+35/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Remarque - Cup
+
+On comprend mieux les messages d’erreurs de Cup, notamment en
+cas de grammaire ambiguë.
+[java] Warning : *** Shift/Reduce conflict found
+[java] in state #60
+[java]
+between expr ::= expr MOINS expr (*)
+[java]
+and
+expr ::= expr (*) MOINS expr
+[java]
+under symbol MOINS
+[java]
+Resolved in favor of shifting.
+
+36/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Introduction
+Analyseurs LR(0)
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+37/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Tables d’un analyseur LR(0)
+
+Un analyseur LR(0) est défini par 2 tables :
+I
+
+la table des successeurs ;
+
+I
+
+la table des actions.
+
+38/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Table des successeurs LR(0)
+
+Encode la relation de transition
+
+de LR-AFD :
+
+Q ⇥ (VT [ VN ) ! Q
+
+39/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Exemple, table des successeurs
+Pour tout q 2 Q et X 2 VT [ VN :
+si (q, X ) = q 0 alors mettre q 0 dans la case (q, X )
+a
+b
+c
+e
+S0
+S
+A
+B
+D
+
+E1
+E3
+E4
+E12
+
+E2
+
+E3
+E3
+E4
+E12
+
+E4
+
+E5
+
+E6
+
+E7
+
+E8
+
+E9
+
+E10
+
+E11
+
+E12
+
+E6
+E10
+
+E2
+E8
+E11
+
+E5
+E7
+E9
+Mirabelle Nebut
+
+Analyse ascendante
+
+40/93
+
+Introduction
+Analyseurs LR(0)
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Table des actions LR(0)
+Indique quelle action e↵ectuer :
+I
+I
+
+dans un état q 2 Q ;
+
+si x 2 VT [ {#} est sous la tête de lecture.
+Q ⇥ (VT [ {#}) ! ensemble d’actions
+
+Une action peut être :
+I
+
+la lecture du terminal x (decale) ;
+
+I
+
+la réduction par une production p (red par p) ;
+
+I
+
+l’acceptation (acc).
+41/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Exemple, table des actions
+E1 E2 E3
+a d e d
+b
+
+d
+
+e
+
+d
+
+c
+
+d
+
+e
+
+d
+
+e
+
+e
+
+e
+
+e
+
+# e
+
+a
+
+e
+
+E4
+red
+A!b
+red
+A!b
+red
+A!b
+red
+A!b
+red
+A!b
+
+E5
+e
+d
+e
+e
+e
+
+E6
+red
+A ! aBb B
+red
+A ! aBb B
+red
+A ! aBb B
+red
+A ! aBb B
+red
+A ! aBb B
+
+E7
+red
+! aB
+red
+! aB
+red
+! aB
+red
+! aB
+red
+! aB
+
+E8
+e
+S
+e
+S
+e
+S
+d
+S
+e
+S
+
+E9
+E10
+E11
+E12
+red
+red
+red
+red
+! AD D ! e S ! B B ! c
+red
+red
+red
+red
+! AD D ! e S ! B B ! c
+red
+red
+red
+red
+! AD D ! e S ! B B ! c
+red
+red
+red
+red
+! AD D ! e S ! B B ! c
+red
+red
+red
+red
+! AD D ! e S ! B B ! c
+
+a : acceptation, d : décale, e : erreur, red : réduction par p
+42/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Table des actions, remplissage
+Pour tout a 2 VT et q 2 Q :
+
+si q contient un item de la forme [X ! · · · • a . . . ]
+alors mettre decale dans la case (q, a)
+Pour tout q 2 Q, Q 6= qf :
+I
+I
+
+si q contient un item terminal de la forme [X ! ↵•] ;
+
+alors, pour tout a 2 VT [ {#}, mettre réduction X ! ↵ dans
+la case (q, a).
+
+Mettre acceptation dans la case (qf , #).
+Mettre erreur dans les cases encore vides.
+43/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Table des actions, remarque
+Pour un automate LR(0), cas dégénéré pour le remplissage de la
+table par une réduction.
+k=0 : aucun symbole de prédiction (pas de Premier , Suivant).
+Une réduction est e↵ectuée quelque soit la tête de lecture.
+) colonnes remplies de la même réduction.
+Le cas général est : pour tout a 2 VT [ {#} et q 2 Q :
+I
+
+si q contient un item terminal de la forme X ! ↵• et que la
+réduction peut se faire avec a sous la tête de lecture ;
+
+I
+
+alors, mettre réduction X ! ↵ dans la case (q, a).
+44/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Caractérisation d’une grammaire LR(0)
+
+Une grammaire est LR(0) si sa table des actions contient pour
+chaque case :
+I
+
+une seule action
+
+I
+
+ou erreur.
+
+45/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Exemple, table des actions et conflits
+
+E
+[A ! b•]
+[B ! b•]
+
+E
+[A ! •b]
+[B ! c•]
+
+c
+b
+
+E
+A!b
+B !b
+A!b
+B !b
+
+...
+
+E
+red B ! c
+red B ! c
+decale
+
+...
+
+red
+red
+red
+red
+
+...
+c
+b
+...
+
+46/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Quand une grammaire n’est pas LR(0)
+
+C’est peut-être à cause du 0.
+On peut essayer une analyse LR(1) : beaucoup plus puissante.
+C’est plus facile d’expliquer d’abord les grammaires SLR(1) :
+Simple LR(1).
+
+47/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+
+Exemple
+Soit la grammaire S 0 ! S, S ! a | ✏.
+Conflit shift/reduce dans l’état initial (lire a, réduire par S ! ✏) :
+S 0 ! •S
+S ! •a
+S !•
+Mais si la tête de lecture est :
+I
+I
+
+dans {a}, alors lire a ;
+
+dans {#} = Suivant(S) alors réduire par S ! ✏.
+
+Un automate SLR(1) exploite cette information.
+48/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Introduction
+Analyseurs LR(0)
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+49/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principe : k=1 et exploitation des Suivant
+
+Un analyseur SLR(1) prend en compte le symbole sous la tête de
+lecture (k=1, cf LL(1)) pour décider d’une réduction :
+Réduction par X ! ↵ seulement si tête lecture 2 Suivant(X )
+Repose comme l’analyse LR(0) sur l’automate LR-AFD.
+Permet d’arbitrer certains conflits LR(0) S/R et R/R.
+
+50/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflits shift/reduce au sens SLR(1)
+
+Un état de LR-AFD provoque un conflit S/R au sens SLR(1) s’il
+contient à la fois :
+I
+I
+
+un item de la forme [Y ! · · · • a . . . ]
+
+un item de la forme [X ! ↵•] avec a 2 Suivant(X )
+
+Comparer avec LR(0) : conflit S/R au sens LR(0) si l’état contient
+les items [Y ! · · · • a . . . ] et [X ! ↵•]
+
+51/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflits reduce/reduce au sens SLR(1)
+
+Un état de LR-AFD provoque un conflit R/R au sens SLR(1) s’il
+contient à la fois :
+I
+I
+I
+
+un item de la forme [Y ! •]
+un item de la forme [X ! ↵•]
+
+avec Suivant(X ) \ Suivant(Y ) 6= ;
+
+Comparer avec LR(0) : conflit R/R au sens LR(0) si l’état contient
+les items [Y ! •] et [X ! ↵•]
+
+52/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Grammaire SLR(1)
+
+Une grammaire est dite SLR(1) si l’automate LR-AFD ne contient
+pas de conflits au sens SLR(1).
+
+53/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Grammaire SLR(1), exemple
+
+Listes de x séparés par , et à trou
+L ! E | E ,L
+E ! ✏|x
+S !L
+
+54/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple : automate LR-AFD
+
+E1
+S ! L•
+
+L
+E0
+S ! •L
+L ! •E
+L ! •E , L
+E !•
+E ! •x
+
+E
+
+x
+
+E2
+L ! E•
+L ! E •, L
+E3
+E ! x•
+
+,
+E
+x
+
+E4
+L ! E , •L
+L ! •E
+L ! •E , L
+E !•
+E ! •x
+
+L
+
+E5
+L ! E , L•
+
+55/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple : conflits au sens LR(0)
+I
+I
+I
+
+E 0 : conflit S/R entre lire x et réduire par E ! ✏ ;
+
+E 2 : conflit S/R entre lire ”,” et réduire par L ! E ;
+E 4 : conflit S/R entre lire x et réduire par E ! ✏.
+
+La grammaire n’est donc pas LR(0).
+Pour savoir si ce sont des conflits au sens SLR(1) : calcul des
+Suivant.
+I
+I
+I
+
+Suivant(S) = {#} ;
+
+Suivant(L) = Suivant(S) = {#} ;
+
+Suivant(E ) = Suivant(L) [ {”, ”} = {”, ” , #}.
+56/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple : conflits au sens SLR(1)
+
+I
+I
+I
+
+E 0 : x 62 Suivant(E ) donc pas de conflit entre lire x et réduire
+par E ! ✏ ;
+E 2 : ”, ” 62 Suivant(L) donc pas de conflit entre lire , et
+réduire par L ! E ;
+E 4 : idem E 0.
+
+La grammaire est donc SLR(1).
+
+57/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Construction de la table des actions SLR(1)
+Pour tout a 2 VT et q 2 Q :
+
+si q contient un item de la forme [X ! · · · • a . . . ]
+alors mettre decale dans la case (q, a)
+Pour tout q 2 Q, q 6= qf et tout a 2 VT [ {#} :
+I
+I
+
+si q contient un item terminal de la forme X ! ↵• ;
+
+alors, si a 2 Suivant(X ), mettre réduction X ! ↵ dans la
+case (q, a).
+
+Mettre acceptation dans la case (qf , #).
+Mettre erreur dans les cases encore vides.
+58/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple : table des actions SLR(1)
+
+Suivant(S) = {#}
+Suivant(L) = {#}
+Suivant(E ) = {”, ” , #}
+x
+,
+#
+
+E0
+decale
+red
+E !✏
+red
+E !✏
+
+E1
+erreur
+
+E2
+erreur
+
+erreur
+
+decale
+
+accepte
+
+red
+L!E
+
+E3
+erreur
+red
+E !x
+red
+E !x
+
+E4
+decale
+red
+E !✏
+red
+E !✏
+
+E5
+erreur
+erreur
+red
+L ! E, L
+
+59/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Caractérisation d’une grammaire SLR(1)
+
+La grammaire est SLR(1) si sa table des actions contient pour
+chaque case :
+I
+
+une seule action
+
+I
+
+ou erreur.
+
+60/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Remarques
+
+Une grammaire LR(0) ou SLR(1) n’est pas ambiguë.
+Une grammaire ambiguë n’est ni LR(0) ni SLR(1).
+
+61/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Comparaison SLR(1) - LR(0)
+
+Méthode SLR(1) basée comme LR(0) sur l’automate LR-AFD :
+I
+
+les tables des successeurs LR(0) et SLR(1) sont identiques ;
+
+I
+
+les tables LR(0) et SLR(1) ont le même encombrement
+mémoire.
+
+62/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Comparaison SLR(1) - LR(0)
+
+Grâce au k = 1 :
+I
+
+l’analyse SLR(1) est strictement plus puissante que l’analyse
+LR(0) ;
+
+I
+
+= elle engendre moins de conflits.
+LR(0) ⇢ SLR(1)
+
+Néanmoins beaucoup de grammaires (non ambiguës) ne sont pas
+SLR(1).
+63/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple 1 : G1
+
+S ! A | xb
+A ! aAb | x
+G1 grammaire non ambiguë (mais non LL(1)) :
+I
+I
+
+si xb : S ) xb ;
+
+si an xb n : S ) A )n an Ab n ) an xb n .
+
+64/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Automate LR-AFD de G1
+E2
+S 0 ! S•
+S
+E1
+S 0 ! •S
+S ! •A
+S ! •xb
+A ! •aAb
+A ! •x
+
+A
+x
+
+a
+
+a
+
+E5
+S ! A•
+E3
+S !x •b
+A ! x•
+
+E6
+A ! a • Ab
+A ! •aAb
+A ! •x
+
+b
+
+E4
+S ! xb•
+
+x
+
+E7
+A ! x•
+
+A
+
+A ! aA • b
+E8
+
+b
+
+E9
+A ! aAb•
+
+65/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflit pour G1
+L’automate LR-AFD contient un conflit S/R au sens LR(0) dans
+l’état E3 :
+[S ! x • b]
+[A ! x•]
+Pour savoir si c’est un conflit au sens SLR(1), calcul des Suivant :
+I
+I
+
+Suivant(S 0 ) = Suivant(S) = {#} ;
+
+Suivant(A) = Suivant(S) [ {b} = {#, b} ;
+
+b 2 Suivant(A) donc E3 contient un conflit S/R au sens SLR(1).
+66/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflit SLR(1) pour G1 : origine
+
+Conflit dans E3 car b 2 Suivant(A). Et pourtant. . .
+
+. . . la lecture de b impose la dérivation S 0 ) S ) xb.
+. . . mais Suivant trop imprécis pour le voir.
+Comment être plus précis ?
+
+67/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflit SLR(1) pour G1 : solution
+E1
+[S 0 ! S]
+[S ! •A]
+[S ! •xb]
+[A ! •aAb]
+[A ! •x]
+
+S’
+
+E3
+! [S ! x • b]
+[A ! x•]
+
+x
+
+S
+A
+
+Les A de E 1 et E 3 ne peuvent être suivis que d’un #, pas d’un b.
+Ce A (suivi par b) n’est pas expansé dans E 1 et E 3, mais dans E 6.
+Si on considère les symboles de VT [ {#} qui peuvent suivre A
+dans E3, on fait sauter le conflit.
+68/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Restriction des symboles de look-ahead
+
+L’analyse LR(1) ne considère pas tous l’ensemble Suivant(X ) pour
+réduire par X ! . . . .
+Elle calcule :
+I
+I
+I
+
+pour chaque item [X ! ↵] d’un état E ;
+un ensemble L ✓ Suivant(X ) ;
+
+contenant les symboles qui peuvent suivre X dans E .
+
+L peut parfois être égal à Suivant(X ).
+
+69/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple 2 : G2
+
+S ! G = D |D
+G ! ⇤D | i
+D!G
+Grammaire G2 non ambiguë :
+I
+I
+
+la présence ou l’absence du = indique s’il faut choisir
+S ! G = D ou S ! D ;
+
+la grammaire de productions { G ! ⇤D | i, D ! G } est
+LL(1).
+70/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Automate LR-AFD pour G2
+E2
+S ! D•
+
+S
+
+D
+
+E0
+S 0 ! •S
+S ! •D
+S ! •G = D
+G !•⇤D
+G ! •i
+D ! •G
+G
+
+*
+
+i
+
+E1
+S 0 ! S•
+*
+E3
+G !⇤•D
+D ! •G
+G !•⇤D
+G ! •i
+i
+E4
+G ! i•
+E5 S ! G • = D
+D ! G•
+
+Mirabelle Nebut
+
+D
+G
+*
+i
+=
+
+Analyse ascendante
+
+E6
+G ! ⇤D•
+E7
+D ! G•
+E8 G
+S ! G = •D
+D ! •G
+G !•⇤D
+G ! •i
+D
+E9
+S ! G = D•
+
+71/93
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflit pour G2
+L’automate LR-AFD contient un conflit S/R au sens LR(0) dans
+l’état 5 :
+E5
+[S ! G • = D]
+[D ! G •]
+Pour savoir si c’est un conflit au sens SLR(1), calcul des Suivant :
+I
+I
+I
+
+Suivant(S 0 ) = Suivant(S) = {#} ;
+Suivant(G ) = {=} [ Suivant(D) ;
+
+Suivant(D) = Suivant(S) [ Suivant(G ) ;
+
+D’où Suivant(G ) = Suivant(D) = {#, =}.
+
+=2 Suivant(D) donc E5 contient un conflit S/R au sens SLR(1).
+Mirabelle Nebut
+
+Analyse ascendante
+
+72/93
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflit SLR(1) pour G2 : origine
+Conflit car ”=” 2 Suivant(D).
+
+Pourtant il n’existe pas de dérivation t.q. S )⇤ w1 D = w2
+S’
+
+S’
+
+S
+
+S
+
+D
+G
+
+D
+
+G
+=
+
+Suivant(D) contient ici un ”=” jamais rencontré comme
+look-ahead dans une analyse e↵ective.
+73/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Restriction des symboles de look-ahead
+Si on particularise les symboles de look-ahead aux états E 0 et E 5 :
+E0
+[S 0 ! •S]
+[S ! •D]
+[S ! •G = D]
+[G ! • ⇤ D]
+[G ! •i]
+[D ! •G ]
+
+E5
+! [S ! G • = D]
+[D ! G •]
+
+G
+
+En E 0 et E 5, D ne peut être suivi que par # : levée du conflit.
+74/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Introduction
+Analyseurs LR(0)
+Principes
+Construction de l’automate LR-AFD
+Tables d’analyse LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+75/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principe
+
+Enrichissement des items : items généralisés de la forme
+[X ! ↵•, L], avec L ✓ VT [ {#}
+Dans [X ! ↵1 • ↵2 , L], L contient les symboles qui peuvent suivre
+X à ce stade de l’analyse.
+Remarque : pour [X ! ↵•, L], L ✓ Suivant(X )
+
+76/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Principe
+
+Un analyseur LR(1) réduit par X ! ↵ . . .
+dans un état E contenant [X ! ↵•, L] . . .
+seulement si le symbole sous la tête de lecture appartient à L.
+
+77/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Automate LR(1)
+
+La méthode LR(1) ne repose pas sur l’automate LR-AFD.
+Deux items [X ! ↵ • , L] et [X ! ↵ • , L0 ] sont considérés
+comme di↵érents si L 6= L0 .
+L’automate fini caractéristique d’un analyseur LR(1) (dit automate
+LR(1)) est donc beaucoup plus gros que l’automate LR-AFD, ce
+qui explique sa plus grande puissance.
+
+78/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Algorithme de construction de l’automate LR(1)
+
+On procède comme pour l’automate LR-AFD :
+I
+
+on sature les états par expansion ;
+
+I
+
+on transite sur chaque symbole Y tel que [· · · ! · · · • Y . . . ]
+
+Mais on modifie la saturation pour calculer L.
+
+Plus facile à expliquer si on décompose [X ! ↵, {x1 , . . . , xn }] en
+un ensemble d’items généralisés unitaires :
+[X ! ↵, x1 ], . . ., [X ! ↵, xn ]
+
+79/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Saturation des états LR(1) : intuition
+
+On considère l’item généralisé unitaire [X ! ↵ • Y , a] ;
+I
+
+on cherche à saturer pour Y : qui peut suivre Y ?
+
+I
+
+au moins les Premier ( ) ;
+
+I
+
+mais si
+
+I
+
+Donc Y peut être suivi par Premier ( a).
+
+)⇤ ✏, alors a, qui peut suivre X , peut aussi suivre Y .
+
+80/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Saturation des états LR(1) : définition
+
+Un ensemble d’items généralisés unitaires E est saturé si :
+I
+I
+I
+I
+
+s’il contient l’item généralisé unitaire [X ! ↵ • Y , a] ;
+alors pour toutes les productions Y !
+et pour tout b 2 Premier ( a),
+
+2 P,
+
+on a [Y ! • , b] 2 E .
+
+En fin de saturation on reconstruit les items généralisés.
+
+81/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Algorithme de construction de Q et
+L’état initial est Saturation([S 0 ! •S, {#}]).
+Ensuite, pour chaque état saturé E et chaque symbole
+Y 2 VT [ VN (lecture pour VT , réduction pour VN ) :
+I
+
+I
+
+si E contient un ensemble de n items enrichis de la forme
+⌧•Y
+:
+{ [X ! ↵i • Y
+
+alors on calcule
+
+i , Li ]
+
+| 1  i  n}
+
+E 0 = Saturation({[X ! ↵i Y •
+E0
+
+I
+
+si cet état
+
+I
+
+et on définit (E , Y ) = E 0 .
+
+i , Li ]
+
+n’existe pas, on l’ajoute à Q ;
+
+| 1  i  n} )
+
+82/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple de G1
+
+S0 ! S
+S ! A | xb
+A ! aAb | x
+Premier (S) = Premier (A) [ {x} = {a, x}
+Premier (A) = {a, x}
+
+83/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+État initial de G1
+E0
+E0
+[S 0 ! •S, #]
+[S 0 ! •S, {#}]
+[S ! •A, #]
+[S ! •A, {#}]
+ou
+[S ! •xb, #]
+[S ! •xb, {#}]
+[A ! •aAb, #]
+[A ! •aAb, {#}]
+[A ! •x, #]
+[A ! •x, {#}]
+Transition par x vers E 3 = Saturation(
+E3
+[S ! x • b, {#}]
+[A ! x•, {#}]
+
+[S ! x • b, {#}]
+)
+[A ! x•, {#}]
+
+Conflit au sens LR(1) ?
+84/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Conflits au sens LR(1)
+Un ensemble d’items généralisés provoque un conflit S/R s’il
+contient à la fois :
+I
+I
+
+un item de la forme [Y ! · · · • a . . . , L], avec a 2 VT ;
+un item de la forme [X ! ↵•, L0 ] avec a 2 L0
+
+Un ensemble d’items généralisés provoque un conflit R/R s’il
+contient à la fois :
+I
+I
+
+un item de la forme [X ! ↵•, L] ;
+
+un item de la forme [Y ! •, L0 ] avec L \ L0 6= ;.
+
+) pas de conflit au sens LR(1) en E 3 : G1 est LR(1).
+85/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Automate LR(1) pour G1 , suite
+E2
+S 0 ! S•, {#}
+S
+E1
+S 0 ! •S, {#}
+S ! •A, {#}
+S ! •xb, {#}
+A ! •aAb, {#}
+A ! •x, {#}
+
+A
+
+E5
+S ! A•, {#}
+
+x
+
+E3
+S ! x • b, {#}
+A ! x•, {#}
+
+a
+
+A ! a • Ab, {#}
+A ! •aAb, {b}
+A ! •x, {b}
+E6
+a
+
+E4
+S ! xb•, {#}
+
+b
+
+x
+
+...
+
+A
+...
+
+...
+86/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Automate LR(1) pour G1 , remarque
+[A ! •Ab]
+L’état E 6 de LR-AFD : [A ! •aAb]
+[A ! •x]
+a éclaté en deux états LR(1) :
+[A ! •Ab, {#}]
+[A ! •aAb, {b}]
+[A ! •x, {b}]
+
+et
+
+[A ! •Ab, {b}]
+[A ! •aAb, {b}]
+[A ! •x, {b}]
+
+) automate LR(1) plus gros que LR-AFD.
+87/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Exemple de G2
+
+S0 ! S
+S ! G = D |D
+G ! ⇤D | i
+D!G
+
+88/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+État initial LR(1) pour G2
+
+[S 0 ! •S, #]
+[S ! •G = D, #]
+[S ! •D, #]
+[G ! •⇤D, =]
+[G ! •i, =]
+[D ! •G , #]
+[G ! •⇤D, #]
+[G ! •i, #]
+
+ou
+
+[S 0 ! •S, {#}]
+[S ! •G = D, {#}]
+[S ! •D, {#}]
+[G ! •⇤D, {=, #}]
+[G ! •i, {=, #}]
+[D ! •G , {#}]
+
+89/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Automate LR(1) pour G2
+G
+
+Transition E 0 ! E 5 :
+E5
+[S ! G • = D, {#}]
+[D ! G •, {#}]
+Conflit S/R levé au sens LR(1) : G2 est LR(1).
+L’automate LR(1) comporte 14 états, contre 10 pour l’automate
+LR-AFD.
+
+90/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Construction de la table des actions LR(1)
+
+Pour tout a 2 VT et q 2 Q :
+
+si q contient un item de la forme [X ! · · · • a . . . ]
+alors mettre decale dans la case (q, a)
+Pour tout q 2 Q, q 6= qf et tout a 2 VT [ {#} :
+I
+I
+
+si q contient un item terminal de la forme [X ! ↵•, L] ;
+
+alors, si a 2 L, mettre réduction X ! ↵ dans la case (q, a).
+
+Mettre acceptation dans la case (qf , #).
+
+Mettre erreur dans les cases encore vides.
+91/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Caractérisation d’une grammaire LR(1)
+
+Une grammaire est LR(1) si sa table des actions contient pour
+chaque case :
+I
+
+une seule action
+
+I
+
+ou erreur.
+
+92/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+Introduction
+Analyseurs LR(0)
+Analyseurs SLR(1)
+Analyseurs LR(1)
+
+Au delà des grammaires LR(1)
+Beaucoup de grammaires sont LR(1).
+Mais les tables sont rapidement trop grosses pour tenir en
+mémoire.
+L’analyse utilisée en pratique est l’analyse LALR(1) (Look-Ahead
+LR(1)), avec :
+LR(0) ✓ SLR(1) ✓ LALR(1) ✓ LR(1)
+L’analyse LALR(1) est un bon compromis entre puissance et
+encombrement mémoire.
+Cup est un analyseur LALR(1).
+93/93
+
+Mirabelle Nebut
+
+Analyse ascendante
+
+

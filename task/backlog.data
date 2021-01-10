@@ -9422,3 +9422,5 @@
 {"description":"papa José","end":"20210105T125946Z","entry":"20201228T202354Z","modified":"20210105T125946Z","status":"completed","uuid":"bbedb147-7862-437c-a7bb-d09d14d42839"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++++","modified":"20210106T143521Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
 {"description":"Devoir maman Lady","due":"20210109T060000Z","end":"20210106T143521Z","entry":"20210102T132758Z","imask":12,"modified":"20210106T143521Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"43563782-2602-4e06-84bc-60c76a79b610"}
+{"description":"Devoir maman Lady","due":"20210116T060000Z","entry":"20210109T124031Z","imask":13,"modified":"20210106T143521Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"f0fdc8fd-bb45-4a06-b5ff-7f5ada89db91"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++++-","modified":"20210109T124031Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}

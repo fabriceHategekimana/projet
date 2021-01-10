@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>baptême</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+  /*
+  Copyright (c) 2017 Chris Patuzzo
+  https://twitter.com/chrispatuzzo
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  */
+  
+  body {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding: 30px;
+    color: #333;
+  }
+  
+  body > *:first-child {
+    margin-top: 0 !important;
+  }
+  
+  body > *:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  a {
+    color: #4183C4;
+    text-decoration: none;
+  }
+  
+  a.absent {
+    color: #cc0000;
+  }
+  
+  a.anchor {
+    display: block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0 10px;
+    padding: 0;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    cursor: text;
+    position: relative;
+  }
+  
+  h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+    text-decoration: none;
+  }
+  
+  h1 tt, h1 code {
+    font-size: inherit;
+  }
+  
+  h2 tt, h2 code {
+    font-size: inherit;
+  }
+  
+  h3 tt, h3 code {
+    font-size: inherit;
+  }
+  
+  h4 tt, h4 code {
+    font-size: inherit;
+  }
+  
+  h5 tt, h5 code {
+    font-size: inherit;
+  }
+  
+  h6 tt, h6 code {
+    font-size: inherit;
+  }
+  
+  h1 {
+    font-size: 28px;
+    border-bottom: 1px solid #cccccc;
+    color: black;
+  }
+  
+  h2 {
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+    color: black;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  h4 {
+    font-size: 16px;
+  }
+  
+  h5 {
+    font-size: 14px;
+  }
+  
+  h6 {
+    color: #777777;
+    font-size: 14px;
+  }
+  
+  p, blockquote, ul, ol, dl, li, table, pre {
+    margin: 15px 0;
+  }
+  
+  hr {
+    border: 0 none;
+    color: #cccccc;
+    height: 4px;
+    padding: 0;
+  }
+  
+  body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+    margin-top: 0;
+  }
+  
+  li p.first {
+    display: inline-block;
+  }
+  
+  ul, ol {
+    padding-left: 30px;
+  }
+  
+  ul :first-child, ol :first-child {
+    margin-top: 0;
+  }
+  
+  ul :last-child, ol :last-child {
+    margin-bottom: 0;
+  }
+  
+  dl {
+    padding: 0;
+  }
+  
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px;
+  }
+  
+  dl dt:first-child {
+    padding: 0;
+  }
+  
+  dl dt > :first-child {
+    margin-top: 0;
+  }
+  
+  dl dt > :last-child {
+    margin-bottom: 0;
+  }
+  
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px;
+  }
+  
+  dl dd > :first-child {
+    margin-top: 0;
+  }
+  
+  dl dd > :last-child {
+    margin-bottom: 0;
+  }
+  
+  blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #777777;
+  }
+  
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+  
+  blockquote > :last-child {
+    margin-bottom: 0;
+  }
+  
+  table {
+    padding: 0;
+  }
+  table tr {
+    border-top: 1px solid #cccccc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  table tr:nth-child(2n) {
+  }
+  
+  table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr th :first-child, table tr td :first-child {
+    margin-top: 0;
+  }
+  
+  table tr th :last-child, table tr td :last-child {
+    margin-bottom: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  span.frame {
+    display: block;
+    overflow: hidden;
+  }
+  
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto;
+  }
+  
+  span.frame span img {
+    display: block;
+    float: left;
+  }
+  
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0;
+  }
+  
+  span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center;
+  }
+  
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right;
+  }
+  
+  span.align-right span img {
+    margin: 0;
+    text-align: right;
+  }
+  
+  span.float-left {
+    display: block;
+    margin-right: 13px;
+    overflow: hidden;
+    float: left;
+  }
+  
+  span.float-left span {
+    margin: 13px 0 0;
+  }
+  
+  span.float-right {
+    display: block;
+    margin-left: 13px;
+    overflow: hidden;
+    float: right;
+  }
+  
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right;
+  }
+  
+  code, tt {
+    margin: 0 2px;
+    padding: 0 5px;
+    white-space: nowrap;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+  }
+  
+  pre code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+  }
+  
+  .highlight pre {
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+  
+  pre {
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+  
+  pre code, pre tt {
+    border: none;
+  }
+  
+  .sourceCode { 
+  	background-color: rgb(30, 20, 30);
+  	border-radius: 5px;
+  	color: white;
+  }
+  </style>
+</head>
+<body>
+<h1 id="le-baptême">Le baptême</h1>
+<h2 id="a-un-seul-baptême">a) Un seul baptême</h2>
+<p>Nous commençons par une lecture dans Éphésiens 4:5-6:</p>
+<blockquote>
+<p>“Il y a un seul Seigneur, une seul foi, un seul baptême, un seul Dieu et Père de tous qui est au dessus de tous et parmi tous et en tous.”</p>
+</blockquote>
+<p>La Bible nous le montre bien. Il n’y a qu’un seul baptême. On voit aujourd’hui différents type de baptême qui varient selon les coutumes du temple qui le pratique. Mais on parle ici du vrai baptême qui prend pour source la Bible et qui est indépendant des confessions. C’est pourquoi on appellera ce baptême, le baptême biblique ou le baptême chrétien et c’est celui qui est enseigné ici.</p>
+<h2 id="b-définition-panoramique">b) Définition panoramique</h2>
+<p>On entend par panoramique, une définition qui embrasse tout les aspect de l’objet définit (à savoir ici le baptême) sans passer par tout les détailles. Sinon, la définition précise et complète serai kilométrique et difficile à retenir. Voici Donc la définition panoramique du baptême chrétien:</p>
+<blockquote>
+<p>Le baptême chrétien est un signe de la purification des péchés. C’est un engagement d’alliance avec Dieu prit devant l’Église ou les membres de l’Église suivit d’une promesse de suivre Jésus par la puissance du Saint-Esprit.</p>
+</blockquote>
+<p>C’est un définition un peu obscure (surtout pour le nouvelle personnes qui n’ont pas encore étudié la Bible). On peut déjà faire quelques constats dessus.</p>
+<p>Premièrement, on voit que le baptême chrétien est un signe de la purification des péchéss <a href="et">et</a> non la purification des péchés en elle même.<br />
+L’eau qu’on utilise dans le baptême ne lave pas des péchés. C’est par Jésus qu’on est lavé du péché, le baptême étant un signe.<br />
+La grâce de Dieu n’est pas dans l’eau mais dan l’acte du baptême.</p>
+<p>On ne cessera jamais de le dire, mais le baptême est un engagement <code>personnel</code> prit avec Dieu; un consentement et un accord fait avec lui seul et non un homme.<br />
+C’est un engagement qu’on ne doit en aucun cas rompre car si on peut échapper à un homme, on ne peut pas fuir le regard de Dieu. Il est même dangereux de devenir un chrétien rétrograde. C’est pourquoi cela doit être un engagement prit de bonne conscience pour ne pas alourdir le poids des condamnations qui pèsent déjà sur nous. On en parlera dans le point suivant.</p>
+<p>Il faut être conscient que le baptême est aussi un témoignage prit devant une assemblée ou ses membres. En soit, c’est la porte d’entrée dans la communauté. Par là, les membres de l’Église nous reconnaissent comme faisant partit de la même famille spirituellement parlant. Ce sujet sera abordé dans la suite du cours.</p>
+<h2 id="c-engagement-de-bonne-conscience-envers-dieu">c) Engagement de bonne conscience envers Dieu</h2>
+<p>Comme dit précédemment, un baptême se fait <code>de bonne conscience</code>. Cela commence déjà par savoir ce qu’on fait réellement.<br />
+En effet, c’est après avoir été bien renseigné et bien conscient que chacun prend la décision personnelle et sincère de se faire baptiser. On ne peut pas nous pousser à se baptisé sans quoi celui-ci ne serait pas sincère.</p>
+<p>Après la prise de conscience vient un élément essentiel: la foi. Car c’est une chose d’entendre parler de Jésus mais s’en est une autre de croire. Ce qui est dommage, c’est que le mot français diminue la vrai conviction de la foi. En effet, le terme grec “pisteuo” utilisé environ 200 fois dans le nouveau testament signifie “Penser être vrai, être persuadé de, donner du crédit, placer sa confiance en”. Ce n’est pas une incertitude comme le laisse entendre sa traduction française mais une réelle conviction qu’une chose est vrai.<br />
+Les contemporain de Noé étaient incrédule et ne croyaient pas que la terre serait un jour inondée et se sont fait engloutir par les eaux. On peut en lire une description dans 1 Pierre 3:20-21:<br />
+&gt; L’eau qui a inondé la terre du temps de Noé n’était que l’ombre du baptême. La question qu’on peut se poser est “Aurions-nous cru à l’époque de Noé?”, “Croirons-nous à l’évangile?”, “Où en somme nous dans notre foi?”.<br />
+C’est pourquoi il ne faut pas être incrédule et faire semblant, car on a rien à y gagner. On peut tromper les hommes mais pas Dieu.</p>
+<h2 id="d-jésus-de-lhistoire-ou-le-christ-de-la-foi">d) Jésus de l’histoire ou le Christ de la foi</h2>
+<p>Aujourd’hui, il est pratiquement sûr que tout le monde a déjà entendu parlé de Jésus. Malgré tout, c’est à juste titre qu’on peut se demander si on le connaît vraiment. Tout le monde connaît le Jésus de l’histoire dans l’homme qui est le fils de Dieu qui est né dans une crèche à Noël et qui est mort puis ressuscité.<br />
+Mais le chrétiens fait la différence car il croit que Jésus est le Christ, à savoir l’envoyé de Dieu que les juifs attendaient pour sauver les hommes. On lit dans actes 2:36:</p>
+<blockquote>
+<p>Que toute la maison d’Israël sache donc avec certitude que Dieu a fait Seigneur et Christ ce Jésus que vous avez crucifié.</p>
+</blockquote>
+<p>Ainsi quand Jésus s’est manifesté aux hommes lors de sa première venu, il y eu beaucoup d’incrédules (Jean 1:11-12). Les chrétiens basent leur foi sur cette conviction: Jésus est le Christ, le messie envoyé pour nous délivrer du joug du péché et de la mort.</p>
+<p>Dans son évangile, Matthieu a tenté de montrer à ses pairs juifs que Jésus était bel et bien le Messie en s’appuyant beaucoup sur les écritures. Voici une liste non exhaustive des indices pour reconnaître le Christ:</p>
+<ol type="1">
+<li>Être descendant du roi David (Esaïe 9:7)<br />
+</li>
+<li>Naître à Bethlehem (Luc 2:4-7)<br />
+</li>
+<li>Être un humble prédicateur de la bonne nouvelle (Esaïe 61:1)<br />
+</li>
+<li>Être méprisé et traité sans considération (Esaïe; Matthieu 26:67-68)<br />
+</li>
+<li>Être trahi pour 30 pièce d’argent (Zacharie 11:12-13; Matthieu 26:14-15)</li>
+</ol>
+<p>Finalement, beaucoup connaissent Jésus mais les personnes pouvant être considérées comme enfant de Dieu sont celles qui auront cru et reçu Jésus comme le Christ.</p>
+<h2 id="e-jésus-est-vraiment-mon-sauveur-et-mon-seigneur">e) Jésus est vraiment mon Sauveur et mon Seigneur</h2>
+<p>Pour recevoir Jésus, il faut déjà le reconnaître com Sauveur et Seigneur. Sauveur car par son sacrifice sur la croix, il a fait mourir nos péchés et enlevé le joug de la mort sur nous. Car en continuant sa vie ordinaire sans Dieu, tout personne est amenée à péché et à se condamner pour l’enfer. Mais Jésus a donné sa vie pour enlever cette condamnation. C’est pourquoi il est reconnu comme Sauveur. Nous parlerons encore du péché dans la suite du cours.</p>
+<p>Il est aussi Seigneur, car à ce moment, on lui donne notre vie. En effet, sachant qu’on reconnaît volontairement comme notre Seigneur quelqu’un qu’on considère comme bon et qu’on désir suivre et servir. De là, on se soumet à sa volonté. Jésus ne doit pas être notre Seigneur que dans l’église, il est Seigneur dans tout les domaines de notre vie.</p>
+<h2 id="f-la-conviction-du-péché">f) La conviction du péché</h2>
+<p>C’est un fait et la deuxième des 4 loi spirituelles: L’homme est pécheur et séparé de Dieu. Depuis le péché originel, la mort est entrée dans le monde et l’homme laissé à lui-même en est condamné. Dieu à déjà formé plusieurs alliances avec les hommes et cherche la communion avec tous. Cependant, nous sommes tous incapable par nous même de lui être agréable à cause de la nature du péché qui est en nous.</p>
+<p>La loi ne nous sauvera pas. Elle est un miroir qui reflète notre nature pécheresse. On le voit dans Romains 3:20:</p>
+<blockquote>
+<p>Car nul ne sera justifié devant lui par les oeuvres de la loi, puisque c’est par la loi que vient la connaissance du péché.</p>
+</blockquote>
+<p>De même, les personnes qui ne connaissent pas la loi savent de par leur conscience qu’on a tous une fois mal agit dans notre vie. Il est aussi dit dans Romains 3:23:</p>
+<blockquote>
+<p>Car tous ont péché et son privés de la gloire de Dieu</p>
+</blockquote>
+<p>Aussi on divise le péché en deux catégories:<br />
+1. Le péché par commission:<br />
+* C’est un péché qui survient lorsqu’on commet ce que la loi de la Bible interdit. (Comme par exemple le meurtre, l’adultère, l’idolâtrie,…)<br />
+2. Le péché par omission:<br />
+* C’est un péché qui survient lorsqu’on ne fait pas ce que la loi nous demande de faire. (Comme par exemple aimer son prochain, aider les indigents,…)</p>
+<h2 id="g-la-repentance">g) La repentance</h2>
+<p>C’est une vérité. Il ne peut pas avoir de véritable vie chrétienne, de véritable baptême ou de véritable conversion s’il n’y a pas de repentance. Pourquoi? Car la repentance est le regret sincère de ses fautes et de ses péchés. Plus encore, c’est le regret de sa vie dans le péché. Sans ce mal-être vis-à-vis du péché, il nous est difficile de comprendre la grâce accordé par Dieu au travers de son fils Jésus.<br />
+De plus, une personne qui ne regrette pas sa vie dans le péché sera plus tenté d’y retourné même après son entrée dans la vie chrétienne.</p>
+<p>La repentance est un processus qui suit ici 5 étapes:<br />
+1. Être conscient du péché (2Timothée 3:1-5; Galates 5:19). Cela veut dire, connaître tout les péchés de notre vie quotidienne.<br />
+2. Le regret: on l’a déjà dit. Sans regret, pas de repentance. C’est aussi un manque d’humilité en nous.<br />
+3. La haine du péché: Créer l’inimitié avec la chose, prendre distance avec le péché, en somme haïr le péché<br />
+4. Abandonner: rejeter le mal et le repousser<br />
+5. Se sentir réellement affranchit: se sentir réellement libéré du joug et de l’influence du péché sur nous.</p>
+<p>C’est à ce moment que vient le changement d’attitude et qu’on sent qu’on est devenu une nouvelle créature. On marche en nouveauté de vie. Et après la repentance, vient le baptême, car c’est la troisième étape d’une transformation qui fait de nous des disciples.</p>
+<h2 id="h-le-disciple-et-les-4-persévérances">h) Le disciple et les 4 persévérances</h2>
+<p>Jésus l’a dit dans Matthew 28:19:<br />
+&gt; Allez, faites de toutes les nations des disciples, les baptisant au nom du Père du Fils et du Saint Esprit.<br />
+Après le baptême, on devient des disciples de Jésus. La question: est-ce qu’on s’arrête là? Non, loin de là!<br />
+C’est le début d’une nouvelle vie qui durera jusqu’à notre mort physique.<br />
+Un disciple est celui qui suit les 4 persévérances:<br />
+1. Les enseignements: on cherche à en connaître d’avantage<br />
+2. La communion fraternelle: on se soutient et on se supporte entre frères et sœurs en Christ<br />
+3. La fraction de pain: la sainte cène, le partage et l’aide du prochain<br />
+4. La prière: communion avec le père, intercession</p>
+<p>C’est de même après les persévérances que vient la crainte de Dieu. On le voit dans Proverbes 1:7:</p>
+<blockquote>
+<p>La crainte de Dieu est le commencement de la science (…).</p>
+</blockquote>
+<p>On comprend que le miracle fait partit des dernières étapes dans le cheminement car après la crainte vient le miracle.<br />
+Le miracle s’adresse surtout aux démunis qui ont besoins de l’action du Seigneur dans leur vie. Une personne qui a reçu la grâce d’être bien portante doit prier pour que les miracles soient pour les plus désespérés que pour eux-mêmes.</p>
+<h2 id="i-lentrée-dans-le-corps-du-christ">i) L’entrée dans le corps du Christ</h2>
+<p>Le terme baptême vient du grec. Il signifiait “Immergé” ou “Submergé”, soit être dedans. On dit qu’on est baptisé en Jésus quand nous suivons ces trois étapes:</p>
+<ol type="1">
+<li>Mort avec Jésus<br />
+</li>
+<li>Enseveli avec lui<br />
+</li>
+<li>Ressuscité</li>
+</ol>
+<p>Nous revêtissions Christ et nous changeons de nature. On devient devient alors une nouvelle créature (2 Corinthiens 5:17). C’est pourquoi nous disons que nous somme en Christ si nous sommes baptisé. Nous devenons aussi une part du corps du Christ et tout chrétien devient frère ou sour en Christ. Ainsi chacun de ces membres est invité à vivre selon les recommandations de Christ et témoigné de lui. Or porter le véritable témoignage de Christ est de vivre comme lui et que les gens voient non plus la personne mais Christ dans ses comportements. C’est pourquoi les premières personnes ayant témoigné de Christ étaient appelé chrétiens, car cela signifiait qu’elles suivaient Jésus.</p>
+<h2 id="jquelques-exemples-de-baptême-dans-la-bible">j)Quelques exemples de baptême dans la Bible</h2>
+<p>On peut donner 3 versets qui montrent comment le baptême s’est opéré chez certains personnages bibliques.</p>
+<ol type="1">
+<li>Actes 2:37:41. Ce passage nous montre la conversion réelle de personnes qui ont cru à l’évangile annoncé par Pierre.<br />
+</li>
+<li>Actes 8:9-13. Ce passage nous montre comment notre ancienne vie peut nous rattraper après notre baptême.<br />
+</li>
+<li>Actes 8:26-40. Ce passage nous montre à quel point l’eunuque éthiopien, qui cherchait réellement Dieu, trouva de la joie dans l’évangile et l’acte du baptême.</li>
+</ol>
+</body>
+</html>

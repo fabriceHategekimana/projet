@@ -1,0 +1,1659 @@
+Imagery numérique
+
+S. Voloshynovskiy - Image Processing
+
+1
+
+Theme 4
+Histograms and Point Operations
+
+S. Voloshynovskiy - Image Processing
+
+2
+
+Content of course
+Semester 1
+Theme 1: Introduction to image processing
+Theme 2: The HVS perception and color
+Theme 3: Image acquisition and sensing
+Theme 4: Histograms and point operations
+Theme 5: Geometric operations
+Theme 6: Spatial filters
+
+S. Voloshynovskiy - Image Processing
+
+3
+
+Recommended books
+
+YouTube lectures
+Intro to Digital Image Processing (ECSE-4540) Lectures, Spring 2015
+by Prof. Rich Radke from Rensselaer Polytechnic Institute
+
+S. Voloshynovskiy - Image Processing
+
+4
+
+Histograms and Point operations
+g(x,y) = T ⎡⎣ f (x,y) ⎤⎦
+
+Origin
+
+y
+
+(x,y)
+(3 × 3) neighborhood of (x,y)
+
+Procedure of spatial filtering
+1. Consider the neighborhood of pixel (x,y)
+2. Apply a transformation of pixels T ⎡⎣ . ⎤⎦
+3. Move to a new pixel location
+Spatial filter
+(3 × 3) neighborhood of (x,y)
+
+Image f
+
+x
+
+Spatial domain
+
+S. Voloshynovskiy - Image Processing
+
+Known as:
+•
+•
+
+filter
+kernel
+
+•
+
+template
+
+•
+
+window
+5
+
+Histograms and Point operations
+Simplest form when the size of window is 1×1
+Origin
+
+y
+
+(x,y)
+
+Spatial filtering → point operation
+s = T ⎡⎣ r ⎤⎦
+g(x,y) = T ⎡⎣ f (x,y) ⎤⎦
+
+(1 ×1) neighborhood of (x,y)
+
+output intensity
+
+input intensity
+
+It is a.k.a. intensity transformation
+/link to
+Image f
+
+x
+
+Spatial domain
+
+S. Voloshynovskiy - Image Processing
+
+6
+
+Histograms and Point operations
+Histogram operations
+Definition (histogram): given a discrete image f (x,y) with r ∈ { 0,1,!,R } , the
+histogram is defined as:
+
+hist(r) =
+
+{ f (x,y) f (x,y) = r }
+
+That is the histogram corresponds to the number (cardinality)
+of pixels within the image f (x,y) with the defined intensity r .
+
+S. Voloshynovskiy - Image Processing
+
+7
+
+Matlab example
+
+S. Voloshynovskiy - Image Processing
+
+8
+
+Matlab example
+
+Histogram
+1000
+
+Original image
+
+900
+800
+
+50
+
+700
+600
+
+100
+500
+400
+
+150
+
+300
+200
+
+200
+
+100
+
+250
+
+0
+
+50
+
+S. Voloshynovskiy - Image Processing
+
+100
+
+150
+
+200
+
+250
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+9
+
+Remarks about histogram
+Is histogram informative? Yes
+Is histogram unique? Many images might have the same histogram!
+
+0
+
+L-1
+
+Important: histogram is not a pdf or pmf!
+
+S. Voloshynovskiy - Image Processing
+
+10
+
+Point operations: schematic representation
+g(x,y) = T ⎡⎣ f (x,y) ⎤⎦
+
+Histogram
+1000
+
+s = T ⎡⎣ r ⎤⎦
+
+900
+800
+700
+600
+500
+400
+300
+200
+100
+0
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+Original image
+
+Processed image
+Histogram
+1000
+
+50
+
+50
+900
+800
+
+100
+
+100
+
+700
+600
+
+150
+
+500
+
+150
+400
+300
+
+200
+
+200
+
+200
+100
+
+250
+
+0
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+50
+
+100
+
+150
+
+200
+
+250
+
+g(x,y) = T ⎡⎣ f (x,y) ⎤⎦
+S. Voloshynovskiy - Image Processing
+
+11
+
+Examples of point operations: Thresholding
+s = T ⎡⎣ r ⎤⎦ = step ( r − k )(L − 1)
+
+(L − 1)
+
+⎧
+⎪1, if r ≥ k,
+step ( r − k ) = ⎪
+⎨
+⎪
+⎪
+⎩ 0, otherwise.
+
+S. Voloshynovskiy - Image Processing
+
+12
+
+Examples of point operations: Thresholding
+
+S. Voloshynovskiy - Image Processing
+
+13
+
+Examples of point operations: Thresholding
+
+Output image
+
+Original image
+
+Output image
+
+50
+
+50
+
+50
+
+100
+
+100
+
+100
+
+150
+
+150
+
+150
+
+200
+
+200
+
+200
+
+250
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+S. Voloshynovskiy - Image Processing
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+50
+
+100
+
+150
+
+200
+
+250
+
+14
+
+Examples of point operations: Thresholding
+Where the thresholding is used?
+•
+•
+
+Image is divided according to the graylevels/colors
+Small parts or parts of special graylevels/colors can be filtered
+
+•
+
+Multiple thresholds can be applied
+
+•
+
+The resulting image is binary. This is a sort of compression.
+
+The thresholding is:
+•
+
+Information lossy
+
+•
+
+Non-invertible operation
+
+S. Voloshynovskiy - Image Processing
+
+15
+
+Examples of point operations: Digital negative
+s = T ⎡⎣ r ⎤⎦ = (L − 1) − r
+
+S. Voloshynovskiy - Image Processing
+
+16
+
+Examples of point operations: Digital negative
+Original image
+
+Output image
+
+50
+
+50
+
+100
+
+100
+
+150
+
+150
+
+200
+
+200
+
+250
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+50
+
+100
+
+150
+
+200
+
+250
+
+Why needed? New interesting things might appear to the HVS (which is non-linear)
+especially on the dark background.
+S. Voloshynovskiy - Image Processing
+
+17
+
+Examples of point operations: Contrast stretching
+Histogram
+1000
+
+The dynamic range is very limited.
+
+900
+800
+
+Goal is to stretch it to the full dynamic range.
+
+700
+600
+500
+
+new dynamic range
+
+400
+300
+
+s = T ⎡⎣ r ⎤⎦ =
+
+200
+100
+
+r
+
+0
+
+0
+
+50
+
+100
+
+150
+
+200
+
+!
+255
+H
+−$$L%
+"$$#
+
+(r − L )
+
+old dynamic range
+
+250
+
+H
+
+L
+Histogram
+Histogram
+
+255
+(L − L ) = 0
+H −L
+255
+r = H :s =
+( H − L ) = 255
+H −L
+r = L :s =
+
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+
+s
+
+0
+
+50
+
+0
+
+0
+
+50
+100
+
+100
+
+150
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+200
+
+255
+
+Remark: imshow(im,[]) is doing exactly this mapping
+between 0 and 255
+250
+
+18
+
+Examples of point operations: Contrast stretching
+Histogram
+1000
+900
+
+s = T ⎡⎣ r ⎤⎦ =
+
+800
+700
+600
+
+255
+(r − L )
+H −L
+
+500
+400
+300
+
+Linear mapper
+
+200
+100
+
+r
+
+0
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+H
+
+L
+Histogram
+Histogram
+1000
+900
+800
+700
+600
+500
+400
+300
+200
+100
+
+50
+
+L
+
+s
+
+0
+
+0
+
+0
+
+50
+100
+
+100
+
+150
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+200
+
+255
+
+H
+
+250
+
+19
+
+Point operations: Matlab - imtool
+
+S. Voloshynovskiy - Image Processing
+
+20
+
+Point operations: Matlab - imtool
+
+Unseen details
+
+Remark: it is only for visualization! No new image is produced!
+S. Voloshynovskiy - Image Processing
+
+21
+
+Point operations: imadjust
+
+One provides low_in and high_in in the original image, and low_out and high_out in the
+output image. The chosen method is a linear mapping.
+S. Voloshynovskiy - Image Processing
+
+22
+
+Point operations: imadjust
+We have chosen about the same input and
+output ranges as in the manually chosen
+example.
+Original image
+
+Remark: the dynamic range for
+the input images is (0,1)
+
+Output image
+
+50
+
+50
+
+100
+
+100
+
+150
+
+150
+
+200
+
+200
+
+250
+
+250
+50
+
+S. Voloshynovskiy - Image Processing
+
+100
+
+150
+
+200
+
+250
+
+50
+
+100
+
+150
+
+200
+
+23
+
+250
+
+Point operations: log transformation
+It is very often we need to display the images with a very high dynamic range.
+Example: Fourier transform images due to the energy compaction property posses
+the dynamic range between 0 and 106 or higher. [We will study the Fourier
+transform in Theme 7].
+10 6
+
+Image magnitude spectrum
+
+Original image
+
+7
+
+50
+
+50
+
+100
+
+100
+
+6
+5
+
+DFT
+Magnitude
+
+150
+
+200
+
+4
+
+150
+
+3
+2
+
+200
+
+1
+
+250
+
+250
+50
+
+100
+
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+
+50
+
+100
+
+150
+
+200
+
+250
+
+24
+
+Point operations: log transformation
+
+S. Voloshynovskiy - Image Processing
+
+25
+
+Point operations: log transformation
+10 6
+
+Image magnitude spectrum
+
+7
+
+50
+
+6
+5
+
+100
+
+4
+
+150
+
+3
+2
+
+200
+
+1
+
+250
+50
+
+100
+
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+
+26
+
+Point operations: log transformation
+s = T ⎡⎣ r ⎤⎦ = log ( r + 1 )
+Log image magnitude spectrum
+
+14
+
+50
+12
+
+100
+10
+
+150
+
+8
+
+6
+
+200
+
+4
+
+250
+50
+
+100
+
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+
+27
+
+Point operations: log transformation
+s = T ⎡⎣ r ⎤⎦ = log ( r + 1 )
+
+S. Voloshynovskiy - Image Processing
+
+28
+
+Point operations – gamma (power law) correction
+Problem: every display has a different nonlinear relationship between pixel input
+intensive and display output luminance.
+
+In many cases, such a non-linear relationship can be modeled as a power law
+function:
+s = T ⎡⎣ r ⎤⎦ = cr γ
+
+S. Voloshynovskiy - Image Processing
+
+29
+
+Point operations – gamma (power law) correction
+s = T ⎡⎣ r ⎤⎦ = cr γ
+
+c =1
+
+Solution: if the γ of the display device is known, pre-compensate intensities to get:
+1
+rγ γ
+
+( )
+S. Voloshynovskiy - Image Processing
+
+=r
+30
+
+Point operations – gamma (power law) correction
+
+Gonzalez p. 112
+S. Voloshynovskiy - Image Processing
+
+31
+
+Point operations – gamma (power law) correction
+
+Gonzalez p. 113
+S. Voloshynovskiy - Image Processing
+
+32
+
+Point operations – gamma (power law) correction
+
+Gonzalez p. 114
+S. Voloshynovskiy - Image Processing
+
+33
+
+Point operations: Matlab
+Contrast stretching + Gamma corection
+
+S. Voloshynovskiy - Image Processing
+
+34
+
+Point operations: histogram processing
+General issues with “low quality” images:
+1. Histograms are concentrated in local regions
+2. Histograms are not uniform
+
+If the histogram is uniform, the whole
+dynamic range is used and the image looks
+with more details.
+Gonzalez p. 121
+S. Voloshynovskiy - Image Processing
+
+35
+
+Point operations: histogram processing
+What can be done to correct it?
+To address the issue No 1 one can apply Contrast stretching
+Histogram
+Histogram
+
+Histogram
+1000
+
+1000
+
+1000
+
+900
+
+900
+
+900
+
+800
+
+800
+
+800
+
+700
+
+700
+
+700
+
+600
+
+600
+
+600
+
+500
+
+500
+
+500
+
+400
+
+400
+
+400
+
+300
+
+300
+
+300
+
+200
+
+200
+
+200
+
+100
+
+100
+
+100
+
+r
+
+0
+
+0
+
+50
+
+L
+
+100
+
+150
+
+200
+
+H
+
+250
+
+L
+
+s
+
+0
+
+0
+
+H
+0
+
+50
+
+0
+
+0
+
+50
+100
+
+100
+
+150
+150
+
+200
+
+250
+200
+
+255
+
+However, the issue No 2 is not resolved! The contrast stretching is
+linear and we need a non-linear transform!
+The resulting histogram is stretched but still not uniform.
+What can be done to make the histogram to be more uniform?
+S. Voloshynovskiy - Image Processing
+
+36
+
+Point operations: histogram processing
+A solution is histogram equalization (histeq)
+
+S. Voloshynovskiy - Image Processing
+
+37
+
+Point operations: histogram processing
+To proceed with the histogram processing operations, we will reconsider the definition
+of histogram from slide 8.
+
+Let each pixel intensity f (x,y) of MN -image has an intensity rk .
+The unnormalized histogram of image is defined as:
+
+hist(rk ) = h(rk ) = nk, for k = 0,1, 2,!,L − 1
+
+nk is the number of pixels in image f with intensity rk .
+The normalized histogram of image is defined as:
+
+p(rk ) =
+
+S. Voloshynovskiy - Image Processing
+
+h(rk )
+n
+= k
+MN
+MN
+
+38
+
+Point operations: histogram equalization
+Assume that image has continuous intensities f (x,y) = r ∈ ⎡⎣ 0,L − 1 ⎤⎦
+with r = 0 representing black and r = L − 1 representing white.
+Our goal is to find such a transform s = T ⎡⎣ r ⎤⎦ , 0 ≤ r ≤ L − 1
+
+s = T ⎡⎣ r ⎤⎦
+
+S. Voloshynovskiy - Image Processing
+
+39
+
+Point operations: histogram equalization
+Properties of transform s = T ⎡⎣ r ⎤⎦ , 0 ≤ r ≤ L − 1
+(a) T ⎡⎣ r ⎤⎦ is a monotonically increasing function on the interval 0 ≤ r ≤ L − 1
+(b) 0 ≤ T ⎡⎣ r ⎤⎦ ≤ L − 1, for 0 ≤ r ≤ L − 1
+(c) We might also need the existence of the inverse transform
+r = T −1 ⎡⎣ s ⎤⎦ , 0 ≤ s ≤ L − 1
+
+S. Voloshynovskiy - Image Processing
+
+40
+
+Point operations: histogram equalization
+Why did we assume continuous intensities f (x,y) = r ∈ ⎡⎣ 0,L − 1 ⎤⎦ ?
+We want to explore a link to the transformation of continuous random variables
+characterized by some pdfs.
+Let’s assume that (remember that is not a case in general):
+§ pr (r) is a probability density function (pdf)
+§ T ⎡⎣ r ⎤⎦ is continuous and differentiable over the range of values of interest.
+Recall
+The transformation of variable s = T ⎡⎣ r ⎤⎦ , 0 ≤ r ≤ L − 1 corresponds to the
+transformation of their pdfs:
+ps (s) = pr (r)
+
+Remark:
+
+dr
+ds
+
+dr
+encodes a local information about T ⎡⎣ r ⎤⎦
+ds
+
+S. Voloshynovskiy - Image Processing
+
+41
+
+Point operations: histogram equalization
+Recall: transformation of random variables
+
+X is a discrete r.v. with a pmf px (x)
+§ Find: py (y) with y = f (x)
+§
+
+py (y) =
+
+∑
+
+x:f (x )=y
+
+py (y) =
+
+px (x)
+
+∑
+
+x =f −1(y)
+
+px (x)
+
+Example:
+
+⎧
+⎪ f (x) = 1, if x is even,
+Let y = ⎪
+⎨
+⎪
+⎪
+⎩ f (x) = 0, if x is odd.
+
+For px (x) to be uniform on the set {1,!,10 }
+py (1) =
+py (0) =
+
+∑
+
+x∈{ 2,4,6,8,10 }
+
+∑
+
+x∈{1,3,5,7,9 }
+
+S. Voloshynovskiy - Image Processing
+
+px (x) = 5
+
+px (x) = 5
+
+1
+= 0.5
+10
+
+1
+= 0.5
+10
+42
+
+Point operations: histogram equalization
+Recall: transformation of random variables
+
+X is a continuous r.v. we cannot use the previous case.
+
+§
+
+§
+
+We use a CDF approach CDF
+→
+pdf
+differentiation
+Define
+
+§
+
+CDFy (y) = Fy (y) = Py (y) ! Pr ⎡⎣Y ≤ y ⎤⎦ = Pr ⎡⎣ f (X ) ≤ y ⎤⎦
+Y = f (X )
+For a monotonic and hence invertible function f (x)
+
+§
+
+Py (y) = Pr ⎡⎣ f (X ) ≤ y ⎤⎦ = Pr ⎡⎢ X ≤ f −1(y) ⎤⎥ = Px (f −1(y))
+⎣
+⎦
+§
+
+PDF (we use the same notation as for pmf)
+Chain
+! rule dx d
+d
+d
+dx
+−1
+py (y) !
+Py (y) =
+Px (f (y)) =
+Px (x) =
+px (x)
+dy
+dy
+dy dx
+dy
+!###"###$
+p (x )
+
+x
+dx
+§
+- measures the change in volume. Thus, the sign does not matter.
+dy
+dx
+df −1(y)
+py (y) =
+px (x)
+py (y) =
+px (f −1(y))
+dy
+dy
+
+S. Voloshynovskiy - Image Processing
+
+43
+
+Point operations: histogram equalization
+§ Example (more details)
+Y = f (X )
+px (x)
+
+py (y)
+
+f (b)
+
+f (a)
+
+x
+
+x
+
+dx
+b
+
+Pr ⎡⎣ a ≤ X < b ⎤⎦ =
+
+px (x)dx = py (y)dy
+
+S. Voloshynovskiy - Image Processing
+
+f (b)
+
+∫ px (x)dx = Pr ⎡⎣ f (a) ≤ Y
+a
+
+y
+
+f (a) f (b)
+dy
+
+< f (b) ⎤⎦ =
+
+⇒ py (y) =
+
+∫
+
+py (y)dy
+
+f (a)
+
+dx
+px (x)
+dy
+
+44
+
+Point operations: histogram equalization
+The problem we have considered is:
+§
+§
+
+Given the pdf pr (r) and the transform T ⎡⎣ r ⎤⎦
+dr
+Find: ps (s) using: ps (s) = pr (r)
+ds
+
+The problem of histogram equalization:
+Our goal is to find such a transform s = T ⎡⎣ r ⎤⎦ , 0 ≤ r ≤ L − 1
+given
+
+S. Voloshynovskiy - Image Processing
+
+to find
+s = T ⎡⎣ r ⎤⎦
+
+targeted
+
+45
+
+Point operations: histogram equalization
+Reminder:
+
+Our goal is to find such a transform s = T ⎡⎣ r ⎤⎦ , 0 ≤ r ≤ L − 1
+
+s = T ⎡⎣ r ⎤⎦
+
+ps (s) = pr (r)
+
+dr
+ds
+
+The transform in a form of CDF
+⎡r
+⎤
+dT ⎡⎣ r ⎤⎦
+ds
+d ⎢
+⎥
+=
+= (L − 1) ⎢ ∫ pr (w)dw ⎥ = (L − 1)pr (r)
+dr
+dr
+dr ⎢
+⎥
+0
+⎢
+⎣
+!######"######$⎥⎦
+Leibnitz 's rule
+
+ps (s) = pr (r)
+
+1
+1
+=
+(L − 1)pr (r)
+(L − 1)
+
+S. Voloshynovskiy - Image Processing
+
+always uniform disregarding the initial pr (r)
+46
+
+Point operations: histogram equalization
+Recall:
+
+The normalized histogram of image is defined as:
+
+p(rk ) =
+
+h(rk )
+n
+= k ,k ∈ ⎡⎣ 0,L − 1 ⎤⎦
+MN
+MN
+
+r
+
+k
+
+0
+
+j =0
+
+s = T ⎡⎣ r ⎤⎦ = (L − 1)∫ pr (w)dw ⇒ sr = T ⎡⎣ rk ⎤⎦ = (L − 1)∑ pr (rj ), k = 0,!,L − 1
+k
+
+(L − 1)
+sr =
+∑ n , k = 0,!,L − 1
+MN j =0 j
+
+Example: given a 3-bit image (L=8) of size 64x64 pixels (MN=4096). Its intensity
+distribution is shown below.
+
+S. Voloshynovskiy - Image Processing
+
+47
+
+Point operations: histogram equalization
+Scaled CDF
+
+0
+
+s0 = T ⎡⎣ r0 ⎤⎦ = 7∑ pr (rj ) = 7pr (r0 ) = 1.33
+j 1=0
+
+k
+
+sr = T ⎡⎣ rk ⎤⎦ = (L − 1)∑ pr (rj ), k = 0,!,L − 1
+j =0
+
+s1 = T ⎡⎣ r1 ⎤⎦ = 7∑ pr (rj ) = 7pr (r0 ) + 7pr (r1 ) = 3.08
+j =0
+
+S. Voloshynovskiy - Image Processing
+
+48
+
+Point operations: histogram equalization
+We can only reproduce integers in digital images.
+Thus, we round them to:
+
+Divide by MN
+
+Note: due to the discrete nature and rounding
+§
+§
+
+Some values (like 6:2x and 7:3x) coincide
+Some values (like 2) are missed
+
+Consequence:
+The resulting histogram is not perfectly uniform.
+
+S. Voloshynovskiy - Image Processing
+
+49
+
+Point operations: histogram equalization
+
+Gonzalez, p. 130
+S. Voloshynovskiy - Image Processing
+
+50
+
+Point operations – histogram matching (specification)
+Histogram equalization:
+
+s = T ⎡⎣ r ⎤⎦
+
+Uniform
+
+Histogram specification:
+pz (z)
+
+z = D ⎡⎣ r ⎤⎦
+
+Targeted
+
+z
+S. Voloshynovskiy - Image Processing
+
+51
+
+Point operations – histogram matching (specification)
+Histogram equalization:
+
+We know
+
+Intermediate
+
+s = T ⎡⎣ r ⎤⎦
+
+Histogram specification:
+
+Uniform
+
+z = G −1 ⎡⎣ s ⎤⎦ s = G ⎡⎣ g ⎤⎦
+
+We know
+
+pz (z)
+
+z = D ⎡⎣ r ⎤⎦
+
+Targeted
+
+z
+S. Voloshynovskiy - Image Processing
+
+52
+
+Point operations – histogram matching (specification)
+Histogram equalization:
+
+We know
+
+Intermediate
+
+s = T ⎡⎣ r ⎤⎦
+
+Uniform
+
+r
+
+s = T ⎡⎣ r ⎤⎦ = (L − 1)∫ pr (w)dw
+0
+
+Histogram specification:
+
+z = G −1 ⎡⎣ s ⎤⎦ s = G ⎡⎣ g ⎤⎦
+
+0
+
+Targeted
+
+z
+S. Voloshynovskiy - Image Processing
+
+z
+
+s = G ⎡⎣ z ⎤⎦ = (L − 1)∫ pz (v)dv
+
+pz (z)
+
+z = D ⎡⎣ r ⎤⎦
+
+We know
+
+53
+
+Point operations – histogram matching (specification)
+r
+
+z
+
+s = T ⎡⎣ r ⎤⎦ = (L − 1)∫ pr (w)dw
+
+s = G ⎡⎣ z ⎤⎦ = (L − 1)∫ pz (v)dv
+
+0
+
+0
+
+T ⎡⎣ r ⎤⎦ = s = G ⎡⎣ z ⎤⎦
+
+z = G −1 ⎡⎣T ⎡⎣ r ⎤⎦ ⎤⎦
+
+Summary:
+pr (r)
+
+Histogram
+equalization
+
+S. Voloshynovskiy - Image Processing
+
+Uniform
+
+Inverse hist.
+equalization
+
+pz (z)
+
+54
+
+Point operations – histogram matching (specification)
+Comparison between histogram equalization and histogram specification
+
+Gonzalez, p. 136
+S. Voloshynovskiy - Image Processing
+
+55
+
+Point operations – histogram matching (specification)
+Comparison between histogram equalization and histogram specification
+
+Gonzalez, p. 138
+S. Voloshynovskiy - Image Processing
+
+56
+
+

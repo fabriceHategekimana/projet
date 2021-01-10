@@ -1,0 +1,2123 @@
+Remark
+En raison de l’évolution sanitaire liée au COVID-19, les plans d’études peuvent
+connaître les adaptations suivantes en cours de semestre:
+o
+
+possibilité de passage d’un mode d’enseignement à un autre (présentiel <—>
+à distance, synchrone <—> asynchrone, passage à l’enseignement co-modal
+là où il n’était pas prévu au départ).
+
+o
+
+adaptation des modalités d’évaluation (oral <—> écrit, examen <—>
+validation, travail individuel <—> travail en groupe, travail pratique <—> travail
+théorique, évaluation en présence <—> évaluation en ligne, etc.)
+
+Le port du masque est lié à l’arrêté du Conseil d’Etat du 6 août
+
+Imagery numérique
+
+S. Voloshynovskiy - Image Processing
+
+3
+
+Theme 1
+Introduction to
+Digital Image Processing
+
+S. Voloshynovskiy - Image Processing
+
+4
+
+Miscellanea
+Lecturer:
+Prof. Slava Voloshynovskiy, Stochastic Information Processing (SIP) Group,
+Department of Computer Science, UNIGE
+E-mail: svolos@unige.ch; Office: 215
+Teaching Assistants:
+Olga Taran, PhD student, Stochastic Information Processing (SIP) Group
+E-mail: olga.taran@unige.ch; Office: 223
+Monitor
+Sajaendra Thevamanoharan
+E-mail: Sajaendra.Thevamanoharan@etu.unige.ch
+Lectures:
+• Friday 10:00 – 12:00
+TPs:
+• Friday 13:00 – 15:00
+Web Site: moodle 13x004 «Imagerie numérique»
+S. Voloshynovskiy - Image Processing
+
+5
+
+Organization and evaluation
+Duration:
+§ Two semesters
+§ Semeter 1: Introduction and foundations (14 lectures)
+§ Semester 2: Applications, selected and advanced topics (14 lectures)
+Assestment by the end of each semester:
+§ Oral exam – 2/3
+§ HWs – 1/3
+
+S. Voloshynovskiy - Image Processing
+
+6
+
+Content of course
+Semester 1
+Theme 1: Introduction to image processing
+Theme 2: The HVS perception and color
+Theme 3: Image acquisition and sensing
+Theme 4: Histograms and point operations
+Theme 5: Geometric operations
+Theme 6: Spatial filters
+
+S. Voloshynovskiy - Image Processing
+
+7
+
+Recommended books
+
+YouTube lectures
+Intro to Digital Image Processing (ECSE-4540) Lectures, Spring 2015
+by Prof. Rich Radke from Rensselaer Polytechnic Institute
+
+S. Voloshynovskiy - Image Processing
+
+8
+
+Copyright notice
+This course uses in part some materials from previously mentioned
+recommended sources.
+The usage of the slides in commercial or educational purposes
+is prohibited without authorization of the course leaders and
+permission of the above document authors and copyright owners.
+
+S. Voloshynovskiy - Image Processing
+
+9
+
+Content of this lecture
+In this lecture we will consider:
+§ What is a digital image?
+§ What is digital image processing?
+§ Image processing problems
+§ Material covered in this course
+§ Applications of image processing
+
+S. Voloshynovskiy - Image Processing
+
+10
+
+Digital images – an introduction
+§
+
+A digital image is a representation of a two-dimensional scene as a finite set of
+digital values, called picture elements or pixels
+
+Gonzalez, p. 51
+S. Voloshynovskiy - Image Processing
+
+11
+
+Digital images – an introduction
+§ Pixel values typically represent gray levels, colors, distance from camera, etc.
+§ A digital image is just an approximation of a real scene
+One pixel
+
+Gonzalez, p. 51
+S. Voloshynovskiy - Image Processing
+
+12
+
+Digital images – an introduction
+§ Common image formats include:
+
+Representation
+
+§ 1 sample per point (grayscale)
+§ 3 samples per point (Red, Green, and Blue)
+§ Video (above information plus time)
+
+f (x,y)
+f (x,y,t)
+
+§ Volumetric data (medical imaging, remote sensing)
+
+f (x,y,z,t)
+
+© Suatcanozan | <a href="https://www.stockfreeimages.com/">Stock
+Free Images</a>
+
+Note: we will focus on grayscale images to demonstrate the main principles
+S. Voloshynovskiy - Image Processing
+
+13
+
+Modern image processing and interconnections
+§ “Traditional“ digital image (and video) processing focuses on two major
+problems:
+§ Improvement (denoising, restoration, interpolation, decimation,
+enhancement, inpainting, etc.) of image data for human interpretation
+§ Processing of image data for storage, transmission and representation for
+autonomous machine perception (analysis) in applications such as robotics
+§ Nevertheless, the “modern” digital image processing is closely interconnected
+with:
+§ Computer vision (mostly all CV problems based on hand crafted
+descriptors) and augmented reality
+§ Multimedia applications (indexing, similarity search, recommendation
+systems like Netflix, etc.)
+§ Security at all levels of physical objects, humans (biometrics) and digital
+multimedia (watermarking, steganography, digital forensics)
+§ Machine learning that includes not only traditional recognition/classification,
+regression and detection but also automatic feature extraction for these
+tasks in contrast to traditional CV
+S. Voloshynovskiy - Image Processing
+
+14
+
+Earlier history of DIP
+Early 1920s: One of the first applications of digital imaging was in the newspaper
+industry
+Newspaper printed image
+
+Mid to late 1920s: Improvements resulted in higher quality images: New reproduction
+processes based on photographic techniques and increased number of tones in
+reproduced images
+
+15 tone image
+
+Gonzalez
+S. Voloshynovskiy - Image Processing
+
+15
+
+Earlier hystory of DIP
+1960s: radar technologies and image processing for moon imaging
+
+1970s: Digital image processing begins to be used in medical applications
+1979: Sir Godfrey N. Hounsfield &
+Prof. Allan M. Cormack share the
+Nobel Prize in medicine for the
+invention of tomography,
+the technology behind
+Computerised Axial
+Tomography (CAT) scans
+
+Computerised Axial
+Tomography (CAT)
+
+Gonzalez
+S. Voloshynovskiy - Image Processing
+
+16
+
+Main factors determing image quality
+Number of pixels
+
+256x256
+
+64x64
+
+Number of grascale levels
+
+256 levels
+S. Voloshynovskiy - Image Processing
+
+32 levels
+
+2 levels
+17
+
+Main factors determing image quality
+Number of grascale levels
+Do we need a lot of grayscale levels? See the difference
+
+32 levels
+64 levels
+128 levels
+256 levels
+
+S. Voloshynovskiy - Image Processing
+
+18
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+⇔
+
+Image
+Acquisition
+
+⇔
+
+Image security
+applications
+
+⇔
+
+Steganography
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+Indexing,
+searching
+
+Real life scene
+S. Voloshynovskiy - Image Processing
+
+19
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Compression
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+Image
+Compression
+
+⇔
+
+⇔
+
+Forensics
+
+Analysis and
+feature
+extraction
+
+⇔
+
+⇔
+
+Indexing,
+searching
+
+Theme 2: The HVS perception and color
+Theme 3: Image acquisition and sensing
+
+S. Voloshynovskiy - Image Processing
+
+20
+
+Visual analytics
+
+Real life scene
+
+Steganography
+
+Object
+⇔ detection and
+recoginition
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image security
+applications
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+Image
+Compression
+
+Image security
+applications
+
+⇔
+
+⇔
+
+Forensics
+
+Analysis and
+feature
+extraction
+
+⇔
+
+⇔
+
+Indexing,
+searching
+
+Theme 4: Histograms and point operations
+
+S. Voloshynovskiy - Image Processing
+
+21
+
+Visual analytics
+
+Real life scene
+
+Steganography
+
+Object
+⇔ detection and
+recoginition
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Watermarking
+
+Main elements of image processing systems
+
+Fourier
+Tranform
+
+Image security
+applications
+
+Image
+Compression
+
+Image
+Restoration
+
+Unitary
+Tranform
+
+⇔
+
+⇔
+Original image
+
+Watermarking
+Steganography
+Forensics
+
+Analysis and
+feature
+extraction
+
+50
+
+50
+
+Object
+⇔ detection and
+recoginition
+
+150
+
+150
+
+200
+
+200
+
+250
+
+250
+
+300
+
+50
+
+100
+
+150
+
+200
+
+250
+350
+
+Image
+Acquisition
+
+Real life scene
+
+50
+
+⇔
+
+100
+
+150
+
+200
+
+250
+
+300
+
+Rotated image
+
+350
+
+⇔
+
+Indexing,
+searching
+
+Theme 5: Geometric operations
+
+S. Voloshynovskiy - Image Processing
+
+22
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+100
+
+100
+
+Main elements of image processing systems
+
+Fourier
+Tranform
+
+⇔
+
+⇔
+Original image
+
+Laplacian (-4)
+
+50
+
+50
+
+100
+
+100
+
+100
+
+150
+
+150
+
+150
+
+200
+
+200
+
+200
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+Original image
+
+Real life scene
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+50
+
+100
+
+Laplacian filtering
+applied to image
+
+⇔
+
+Forensics
+
+Laplacian (-8)
+
+50
+
+250
+
+Steganography
+
+⇔
+
+150
+
+200
+
+250
+
+Indexing,
+searching
+
+Convolving images with different filters
+Theme 6: Spatial filters
+
+S. Voloshynovskiy - Image Processing
+
+23
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image security
+applications
+
+Image
+Compression
+
+Image
+Restoration
+
+Unitary
+Tranform
+
+Watermarking
+
+Main elements of image processing systems
+
+Fourier
+Tranform
+
+50
+
+50
+
+100
+
+100
+
+150
+
+150
+
+200
+
+200
+250
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+50
+
+100 150 200 250
+
+⇔
+
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+⇔
+
+Steganography
+
+Indexing,
+searching
+
+Theme 7: The 2D Discrete Fourier Transform
+Theme 8: Frequency domain filtering /sampling and aliasing/
+
+S. Voloshynovskiy - Image Processing
+
+24
+
+Visual analytics
+
+Real life scene
+
+Image security
+applications
+
+Magnitude spectrum
+
+Original image
+
+⇔
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image
+Compression
+
+Image
+Restoration
+
+Unitary
+Tranform
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+⇔
+
+Image
+Acquisition
+
+Real life scene
+
+Other useful transforms such as:
+§ KLT
+§ DCT
+§ Wavelet
+
+Image security
+applications
+
+⇔
+
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+⇔
+
+Steganography
+
+Indexing,
+searching
+
+Lecture 9: Multiresolution Transforms
+
+S. Voloshynovskiy - Image Processing
+
+25
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Compression
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+Image
+Compression
+
+Image security
+applications
+
+⇔
+
+Blurred image
+y = Hx + z
+
+Restored image
+Inverse problem solution
+
+Image
+Acquisition
+
+Deterministic methods
+
+⇔
+
+Probabilistic methods
+
+Steganography
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+Indexing,
+searching
+
+Machine learning methods
+
+Real life scene
+
+Image restoration
+
+S. Voloshynovskiy - Image Processing
+
+26
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+⇔
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+Image security
+applications
+
+⇔
+
+⇔
+
+Noisy image
+y= x+z
+H=I
+
+⇔
+
+Steganography
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+Restored/denoised image
+Inverse problem solution
+Deterministic methods
+Probabilistic methods
+
+⇔
+
+Indexing,
+searching
+
+Machine learning methods
+
+Real life scene
+
+Image denoising
+
+S. Voloshynovskiy - Image Processing
+
+27
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image
+Compression
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+⇔
+
+⇔
+
+Inpainting
+
+Inverse problems
+y = Hx + z
+
+Restored image
+
+difference in the operator H
+
+Steganography
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+Indexing,
+searching
+
+Other inverse problems: super-resolution, compressive sampling
+inpainting, demosaicing
+
+S. Voloshynovskiy - Image Processing
+
+28
+
+Visual analytics
+
+Real life scene
+
+Image security
+applications
+
+⇔
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image
+Compression
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+⇔
+
+Original image
+
+Compressed image
+
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+⇔
+
+Steganography
+
+Indexing,
+searching
+
+Theme 10: Lossless image coding
+Theme 11: Lossy image compression
+
+S. Voloshynovskiy - Image Processing
+
+29
+
+Visual analytics
+
+Real life scene
+
+Image security
+applications
+
+⇔
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image
+Compression
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+⇔
+
+Original image
+
+Copyrighted image
+(secret date inside)
+
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+⇔
+
+Steganography
+
+Indexing,
+searching
+
+Image security applications
+
+S. Voloshynovskiy - Image Processing
+
+30
+
+Visual analytics
+
+Real life scene
+
+Image security
+applications
+
+⇔
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image
+Compression
+
+Watermarking
+
+Main elements of image processing systems
+Unitary
+Tranform
+
+Image
+Restoration
+
+Fourier
+Tranform
+
+Edge detection
+
+⇔
+
+Image
+Acquisition
+
+Real life scene
+
+Edge linking and line detection
+Thresholding
+Morphological image processing
+Local descriptors
+
+Image security
+applications
+
+⇔
+
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+⇔
+
+Steganography
+
+Indexing,
+searching
+
+Analysis and feature extraction
+
+S. Voloshynovskiy - Image Processing
+
+31
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Compression
+
+Watermarking
+
+Main elements of image processing systems
+Image
+Restoration
+
+Unitary
+Tranform
+
+Fourier
+Tranform
+
+Image
+Compression
+
+⇔
+
+⇔
+
+Lena
+
+Real life scene
+
+Digit X
+
+⇔
+
+Steganography
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+Indexing,
+searching
+
+Object detection and recoginition
+
+S. Voloshynovskiy - Image Processing
+
+32
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image
+Acquisition
+
+Image security
+applications
+
+Watermarking
+
+Main elements of image processing systems
+
+Fourier
+Tranform
+
+Image
+Compression
+
+Image
+Restoration
+
+Unitary
+Tranform
+
+Codebook of features
+
+⇔
+
+Probe features
+
+.
+.
+.
+.
+.
+
+Image
+Acquisition
+
+Real life scene
+
+.
+
+⇔
+
+⇔
+
+Steganography
+Forensics
+
+Analysis and
+feature
+extraction
+
+Object
+⇔ detection and
+recoginition
+
+⇔
+
+Indexing,
+searching
+
+Indexing and searching
+
+S. Voloshynovskiy - Image Processing
+
+33
+
+Visual analytics
+
+Image filtering
+⇔
+and
+Enhancement
+
+Image security
+applications
+
+Watermarking
+
+Goal of course
+Despite different applications, existing solutions and used particular methods, there
+are a few powerful, basic principles that can be used to guide the design of image
+processing algorithms.
+
+The goal of this course is to introduce these concepts and to investigate their
+applicability to Image Processing.
+
+S. Voloshynovskiy - Image Processing
+
+34
+
+Applications of image processing
+§ Medical Imaging
+§ Multimedia security, privacy, trust, digital forensics
+§ Biometrics
+§ Astronomy
+§ Industrial inspections
+
+See Appendix A
+
+§ Remote sensing and imaging
+§ Human computer interfaces
+§ Digital photography and more recently mobile imaging
+§ Self-driving cars and robots (as part of artificial intelligence
+systems)
+
+Gonzalez p. 7
+S. Voloshynovskiy - Image Processing
+
+35
+
+Applications of image processing
+
+Gonzalez p. 44
+S. Voloshynovskiy - Image Processing
+
+36
+
+Analytical framework of this course
+Regression problems
+Enhancement
+
+d(f, f̂ )
+Image
+Source
+
+p(f )
+
+Image
+
+Image
+
+f
+
+Sensors
+
+p(g f )
+
+g
+
+Processing
+
+Denoising
+Restoration
+Compression
+
+f̂
+
+…
+
+Label
+Classification problems
+Analysis
+
+L(f, Label)
+
+Detection
+Recognition
+Indexing
+
+S. Voloshynovskiy - Image Processing
+
+37
+
+Analytical framework of this course
+Regression problems: Restoration, Denoising and Enhancement
+
+f
+
+Image
+Sensor
+
+Transform
+g
+
+(T)
+
+Filtering
+
+f̂
+
+T-1
+
+§ Define the cost function or similarity measure d(f, f̂ )
+§ Define transform T
+§ Analytically (Fourier, Wavelets, etc) or hand-crafted approach
+§ Learn from training data – machine learning approach
+§ Define filtering based on statistics of data and distortion
+S. Voloshynovskiy - Image Processing
+
+38
+
+Analytical framework of this course
+Regression problems: Image compression
+
+f
+
+T
+
+Quantization
+
+Entropy
+Coding
+
+Decoding
+
+f̂
+
+T-1
+
+§ Define the cost function or similarity measure d(f, f̂ )
+§ Define transform T
+§ Analytically (Fourier, Wavelets, etc) or hand-crafted approach
+§ Learn from training data – machine learning approach
+§ Define quantization based on statistics of data
+S. Voloshynovskiy - Image Processing
+
+39
+
+Analytical framework of this course
+Classification: detection, recognition, indexing
+Hand-crafted feature design (previous systems mostly in Computer Vision)
+
+f
+
+Feature
+
+T
+
+Extraction
+
+Classifier
+
+Label
+
+ϕ(.)
+φ(f )
+§ Define the cost function or similarity measure L(ϕ ( φ(f ) ), Label)
+§ Define transform T
+§ Define features and their aggregation
+§ Define classifier based on training data
+
+S. Voloshynovskiy - Image Processing
+
+N
+
+{ fi , Labeli }i=1
+40
+
+Analytical framework of this course
+Classification: detection, recognition, indexing
+Modern approach: joint feature extraction and classification
+
+f
+
+Feature
+Extraction
+
+Classifier
+
+Label
+
+§ Joint learning of feature extraction and classification L(ϕ ( φ(f ) ), Label)
+N
+
+using training data { fi , Labeli }i=1
+
+!###"###$
+ϕθ (f )
+
+There is “no separation” on features, transform as such.
+All modules are learned automatically without “human” intervention.
+
+S. Voloshynovskiy - Image Processing
+
+41
+
+What we need to know
+§
+§
+§
+§
+
+Understand the concept of a digital image
+Understand the definition and scope of digital image processing
+Have a general understanding about the image acquisition and processing
+Know the main fields of image processing applications /Appendix A/
+
+S. Voloshynovskiy - Image Processing
+
+42
+
+Appendix A
+
+S. Voloshynovskiy - Image Processing
+
+43
+
+Gamma-ray imaging
+Nuclear medicine imaging:
+(positron emission tomography
+(PET))
+§ Injecting radioactive isotope
+emitting gamma ray
+§ Register gamma rays
+
+Astronomy:
+§ Images are obtained by a
+natural radiation (no added
+isotope)
+
+Gonzalez, p. 8
+S. Voloshynovskiy - Image Processing
+
+44
+
+X-ray imaging
+Medical diagnostics
+Industrial inspections
+X-ray imaging in astronomy
+Registration on:
+§ Emission by special X-ray
+tube (free electrons)
+§ Registration on special films
+(old)
+§ Nowadays, CCD arrays
+Extension to computerized axial
+tomography (CAT) – 3D
+Gonzalez, p. 10
+S. Voloshynovskiy - Image Processing
+
+45
+
+X-ray imaging
+Medical diagnostics
+Industrial inspections
+Extension to computerized
+axial tomography (CAT) –
+3D
+
+Gonzalez, p. 366
+S. Voloshynovskiy - Image Processing
+
+46
+
+X-ray imaging
+Medical diagnostics
+Industrial inspections
+
+Gonzalez, p. 369 and 372
+S. Voloshynovskiy - Image Processing
+
+47
+
+A word on astronomical imaging
+The same physical phenomena might look completely differently in different bands
+
+http://ecuip.lib.uchicago.edu/multiwavelength-astronomy/images/astrophysics/MWA-whirlpool-galaxy.jpg
+S. Voloshynovskiy - Image Processing
+
+48
+
+Ultraviolet imaging
+Industrial inspections
+Microscopy
+Lasers
+Biological imaging
+Astronomical observations
+
+Fluorescence microscopy
+uses directed ultraviolet
+light and observation in the
+same or different band by
+separaing a weak reflected
+light
+Gonzalez, p. 12
+S. Voloshynovskiy - Image Processing
+
+49
+
+Imaging in the visible and infrared bands
+Light microscopy
+
+Gonzalez, p. 13
+S. Voloshynovskiy - Image Processing
+
+50
+
+Imaging in the visible and infrared bands
+Remote sensing in various
+subbands
+
+Gonzalez, p. 14
+S. Voloshynovskiy - Image Processing
+
+51
+
+Imaging in the visible and infrared bands
+Remote sensing in various subbands
+
+Gonzalez, p. 14
+S. Voloshynovskiy - Image Processing
+
+52
+
+Imaging in the visible and infrared bands
+Solar observations
+IRIS
+
+UNIGE project: http://bigastro.unige.ch
+
+Credit: NASA
+S. Voloshynovskiy - Image Processing
+
+53
+
+Imaging in the visible and infrared bands
+Solar observations
+
+Information
+observed from a
+sun flare
+Credit: NASA
+
+Multi wavelengthes
+video of a flare
+observed by SDO
+Credits : NASA
+
+S. Voloshynovskiy - Image Processing
+
+54
+
+Imaging in the visible and infrared bands
+Infrared remote sensing
+
+Gonzalez et al, p 16
+S. Voloshynovskiy - Image Processing
+
+55
+
+Imaging in the visible and infrared bands
+Multicamera smart phones
+iPhone X
+
+http://www.photographybay.com/2017/0
+9/12/apple-unveils-a-trio-of-iphoneswith-impressive-photography-upgrades/
+
+S. Voloshynovskiy - Image Processing
+
+Huawei P20 Pro
+
+https://www.popsci.com/huawei-p20-pro-smartphone-threecameras
+
+56
+
+Imaging in the visible and infrared bands
+Multicamera smart phones
+iPhone 11 pro
+
+S. Voloshynovskiy - Image Processing
+
+57
+
+Imaging in the visible and infrared bands
+Multicamera smart phones
+iPhone 11 pro
+
+S. Voloshynovskiy - Image Processing
+
+58
+
+Imaging in the visible and infrared bands
+Multicamera smart phones
+iPhone 11 pro
+
+S. Voloshynovskiy - Image Processing
+
+59
+
+Imaging in the visible and infrared bands
+Multicamera smart phones
+iPhone 11 pro
+
+S. Voloshynovskiy - Image Processing
+
+60
+
+Imaging in the visible and infrared bands
+Multicamera smart phones
+iPhone 11 pro
+
+S. Voloshynovskiy - Image Processing
+
+61
+
+Imaging in the visible and infrared bands
+Multicamera smart phones
+iPhone 11 pro
+
+S. Voloshynovskiy - Image Processing
+
+62
+
+Imaging in the visible and infrared bands
+Industrial inspection
+
+Gonzalez et al, p. 18
+S. Voloshynovskiy - Image Processing
+
+63
+
+Imaging in the visible and infrared bands
+Security applications
+
+Gonzalez et al, p. 19
+S. Voloshynovskiy - Image Processing
+
+64
+
+Imaging in the visible and infrared bands
+Security applications
+Physical Objects
+
+Humans = biometrics
+
+Electronics
+
+Packages Watches
+
+Physical objects Microstructures Unique PUFs
+
+010100101011
+
+110101100010
+
+00101101010
+
+All physical objects are unique like humans
+S. Voloshynovskiy - Image Processing
+
+65
+
+Imaging in the visible and infrared bands
+Security applications –
+object identification
+Paper microstructures =PUFs
+
+Package 1
+
+Individually unique PUFs
+
+Package 2
+.
+
+= unique identifier for
+
+.
+. M
+Package
+
+Track&Trace
+
+Visibly packages look identical
+S. Voloshynovskiy - Image Processing
+
+66
+
+Imaging in the visible and infrared bands
+Optical sensors for
+autonomous vehicles and
+drons
+
+Apple self driving car 'in autonomous mode'
+rear ended by a Nissan in first reported crash
+of the iPhone maker's secret vehicle
+One of Apple's self-driving cars was involved
+in a minor crash for the first time
+A self-driving Lexus RX 450h attempted to
+merge onto the highway when it was rearended by a 2016 Nissan Leaf, according to a
+filing with California's DMV
+No humans were injured as a result, but both
+of the vehicles were damaged
+The incident shows that Apple is still in the
+race to test autonomous vehicles
+
+http://www.dailymail.co.uk/sciencetech/article-6127299/Appleself-driving-car-autonomous-mode-rear-ended-Nissan-reportedcrash.html
+
+S. Voloshynovskiy - Image Processing
+
+67
+
+Imaging in the visible and infrared bands
+Navigation systems
+-
+
+Google street view
+Google maps
+
+A Street View car parked at a Subaru Service
+Center in Jersey City, New Jersey
+https://www.google.com/streetview/
+
+https://en.wikipedia.org/wiki/Google_Street_View
+S. Voloshynovskiy - Image Processing
+
+68
+
+Imaging in the visible and infrared bands
+Navigation systems
+-
+
+Google street view
+Google maps
+
+Google Street View camera mounted on a
+"trike", on display at the Computer History
+Museum in Mountain View, California
+
+Google Trike in Cambridge Bay, Nunavut,
+August 2012
+
+https://en.wikipedia.org/wiki/Google_Street_View
+S. Voloshynovskiy - Image Processing
+
+69
+
+Imaging in the visible and infrared bands
+New imaging principles
+
+S. Voloshynovskiy - Image Processing
+
+70
+
+Imaging in the visible and infrared bands
+New imaging principles
+
+S. Voloshynovskiy - Image Processing
+
+71
+
+Imaging in the visible and infrared bands
+New imaging principles
+
+S. Voloshynovskiy - Image Processing
+
+72
+
+Imaging in the microwave band
+Radar imaging
+§ all weather (clouds)
+§ all time
+§ any ambient light
+conditions
+§ many surfaces and
+penetrate via clouds,
+ice, vegetation, sand
+Radars use antennas and
+antenna arrays for imaging
+instead of lenses
+
+Radar and Radiometry
+Imaging Systems
+
+...
+Gain
+
+å
+
+.
+
+2
+
+Phase
+
+control control
+
+S. Voloshynovskiy - Image Processing
+
+73
+
+Imaging in the microwave band
+Radar imaging
+§ all weather (clouds, fog)
+§ all time
+§ any ambient light conditions
+§ many surfaces and penetrate
+via clouds, ice, vegetation, sand
+Radars use antennas and antenna
+arrays for imaging instead of lenses
+Radars for:
+Imaging
+Navigation (self-driving cars,
+drones)
+Proc. IEEE, March, 2000
+S. Voloshynovskiy - Image Processing
+
+74
+
+Imaging in the microwave band
+Radar imaging
+§ all weather (clouds, fog)
+§ all time
+§ any ambient light conditions
+§ many surfaces and penetrate
+via clouds, ice, vegetation, sand
+Spotlight-mode synthetic aperture
+radar (SAR)
+
+S. Voloshynovskiy - Image Processing
+
+75
+
+Imaging in the microwave band
+
+Radars use antennas and
+antenna arrays for imaging
+instead of lenses
+
+S. Voloshynovskiy - Image Processing
+
+Various imaging configurations
+
+Radar imaging
+
+ALMA, EVLA, LOFAR, VLBI,…, SKA
+
+76
+
+Imaging in the microwave band
+SKA geometry for
+radioastronomy
+Geometry
+
+S. Voloshynovskiy - Image Processing
+
+Spatial spectrum (uv-plane)
+
+PSF (directional antenna pattern)
+
+77
+
+Imaging in the microwave band
+
+Credits: SKA
+
+The international radio telescope of the 21st century
+
+S. Voloshynovskiy - Image Processing
+
+78
+
+Imaging in the microwave band
+SKA geometry for
+radioastronomy
+
+The SKA will use around 3000 High
+Frequency dishes, each 15 m in
+diameter
+
+Credits: SKA
+S. Voloshynovskiy - Image Processing
+
+Low Frequency Aperture Array in Australia
+
+Mid Frequency Aperture Array
+in South Africa
+79
+
+Imaging in the microwave band
+SKA geometry for radioastronomy
+
+Credits: SKA
+S. Voloshynovskiy - Image Processing
+
+§
+
+Huge amount of data (expected data are about 1 PB per day)
+
+§
+
+Problems with Big Data:
+§ Reconstruction (where? and how?)
+§
+
+Intercontinental data exchange
+
+§
+
+Storage
+
+§
+
+Analytics and Science
+80
+
+Other imaging modalities
+“Sound” imaging
+•
+
+Geological applications
+(around 100 Hz)
+
+•
+
+Marine applications
+
+•
+
+Medical applications (1
+to 5 MHz sound pulses)
+Mine
+
+Mine
+
+Source
+Detector
+
+Gonzalez et al, p. 22, 23
+S. Voloshynovskiy - Image Processing
+
+81
+
+Other imaging modalities
+Transition electron
+microscope (TEM) imaging
+•
+
+“project” a beam of
+electrons through a
+specimen
+
+•
+
+Project to the phosphor
+and obtain a viewable
+image
+
+Scanning electron
+microscopy (SEM)
+•
+
+Scan with the electron
+beam in a raster way
+and register the viewed
+image on the phosphor
+screen (about 10,000x)
+
+Gonzalez et al, p. 21
+S. Voloshynovskiy - Image Processing
+
+82
+
+

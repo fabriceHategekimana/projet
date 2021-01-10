@@ -1,0 +1,3961 @@
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyse descendante LL(k)
+Mirabelle Nebut
+Bureau 203 - M3 extension
+mirabelle.nebut at lifl.fr
+
+2012-2013
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+2/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Objectif du cours
+
+Comprendre le fonctionnement des générateurs de parser
+descendants :
+I
+
+LL(1), ex antLR V1
+
+I
+
+LL(k), ex javaCC
+
+I
+
+LL(*), ex antLR V3
+
+3/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyse descendante
+
+L’automate à pile sous-jacent :
+I
+
+e↵ectue uniquement des lectures et des expansions ;
+
+I
+
+construit un arbre en ordre préfixe (idem aut. items) ;
+
+I
+
+⌧
+
+I
+
+construit une dérivation gauche (idem aut. items).
+
+part
+
+de l’axiome (idem aut. items) ;
+
+4/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Di↵érence avec l’automate des items
+
+Deux di↵érences fondamentales :
+I
+
+analyse déterministe dite prédictive ;
+
+I
+
+plus d’items ni de réductions explicites.
+
+5/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyse déterministe
+
+À chaque expansion l’analyseur sait choisir une production.
+Il ne revient jamais sur ce choix :
+I
+
+en cas de succès le mot appartient au langage ;
+
+I
+
+en cas d’échec on est sûr que mot n’appartient pas au langage.
+
+6/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyse prédictive
+
+L’analyseur ”prédit” quelle production utiliser. . .
+. . . en analysant les k prochains symboles sous la tête de lecture.
+Conséquences :
+I
+
+ne fonctionne qu’avec certaines grammaires, dites LL(k) ;
+
+I
+
+tête de lecture toujours définie : marqueur de fin de mot #.
+
+NB : dans ce cours techniques pour k=1, on regarde uniquement la
+tête de lecture.
+7/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Se passer des items
+Rappel : item de la forme [X ! ↵ • ] :
+I
+
+X est en cours de reconnaissance ;
+
+I
+
+↵ a déjà été reconnu ;
+
+I
+
+il reste à reconnaı̂tre , le futur de l’item
+
+Un analyseur LL :
+I
+
+ne mémorise pas qu’il est en train de reconnaı̂tre X ;
+
+I
+
+ne mémorise pas qu’il a reconnu ↵ ;
+
+I
+
+considère uniquement .
+8/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Se passer des items : conséquences
+Plus besoin d’axiome supplémentaire.
+Dans la pile :
+I
+I
+I
+
+plus d’items mais des mots étendus : mots de (VN [ VT )⇤ ;
+l’alphabet est VN [ VT ;
+
+le symbole de pile initiale est l’axiome.
+
+S
+pile initiale
+
+A
+b
+B
+une pile
+
+pile vide (acceptation)
+9/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Exemple à suivre dans le cours
+Soit la grammaire G = {VT , VN , S, P} avec :
+I
+I
+I
+
+VT = {a, b, d, e} ;
+
+VN = {S, A, B, D} ;
+
+P contient les productions :
+S ! AB | Da
+A ! aAb | ✏
+B ! bB | ✏
+D ! dD | e
+10/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Exemple - les piles pour abb#
+S ! AB | Da
+A ! aAb | ✏
+
+B ! bB | ✏
+D ! dD | e
+
+abb# ?
+
+a
+A
+A
+A
+b
+b
+b
+S
+B
+B
+B
+B
+abb# abb# abb# bb# bb#
+(1)
+(2)
+(3)
+(4)
+(5)
+
+B
+b#
+(6)
+
+b
+B
+b#
+(7)
+
+B
+#
+(8)
+
+#
+(9)
+
+Comparer avec l’automates des items !
+Dérivation gauche, arbre en ordre préfixe.
+11/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Généralisation
+
+I
+
+La configuration initiale est (m#, S) ;
+
+I
+
+La configuration finale est (#, ) : acceptation par pile vide.
+
+On traite systématiquement le sommet de pile.
+
+12/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Transition de lecture
+Si le sommet de pile est un terminal a 2 VT :
+I
+
+on contrôle que a est bien sous la tête de lecture (sinon
+échec) ;
+
+I
+
+on le consomme ;
+
+I
+
+on le dépile.
+
+Lecture de a :
+(am, z1 . . . zn a) ` (m, z1 . . . zn )
+13/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Transition d’expansion
+Si le sommet de pile est un non terminal X 2 VN . . .
+. . . et que la tête de lecture est y 2 VT [ {#}. . .
+si Table[X , y ] contient X ! X1 . . . Xn :
+I
+
+on dépile X ;
+
+I
+
+on empile à sa place X1 . . . Xn , avec X1 au sommet.
+(m, z1 . . . zn X ) ` (m, z1 . . . zn Xn . . . X1 )
+
+sinon erreur.
+14/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Transition d’expansion : remarque
+
+Expansion par X ! X1 . . . Xn :
+(m, z1 . . . zn X ) ` (m, z1 . . . zn Xn . . . X1 )
+I
+
+X1 sera traité en premier.
+
+I
+
+on assure ainsi la construction d’une dérivation gauche ;
+
+15/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Construction de l’arbre syntaxique : ordre préfixe
+Transition d’expansion par X ! X1 . . . Xn :
+I
+
+X est le ⌧ prochain
+l’ordre préfixe) ;
+
+I
+
+on lui rajoute les fils X1 . . . Xn de la gauche vers la droite ;
+
+I
+
+le prochain nœud à traiter devient X1 .
+
+nœud à traiter dans l’arbre (pour
+
+Transition de a-lecture :
+I
+
+a est le ⌧ prochain
+préfixe) ;
+
+I
+
+on vérifie que a concorde bien avec la tête de lecture ;
+
+I
+
+et on passe au nœud suivant.
+
+nœud à traiter dans l’arbre (pour l’ordre
+
+16/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Mise en œuvre
+
+Les outils n’implantent pas un automate à pile.
+Ils utilisent une implémentation récursive.
+Dans tous les cas, le choix de l’expansion est indiqué par une table
+d’analyse.
+
+17/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Table d’analyse - exemple
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+B
+erreur
+B ! bB
+erreur
+erreur
+B !✏
+
+D
+erreur
+erreur
+D ! dD
+D!e
+erreur
+
+18/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Table d’analyse LL(1)
+
+Contient toute l’intelligence de l’analyseur syntaxique.
+
+Definition
+La table d’analyse Table est un tableau à deux dimensions tel que :
+I
+I
+I
+
+chaque colonne est indicée par un non-terminal 2 VN ;
+chaque ligne est indicée par un terminal 2 VT ou # ;
+chaque case contient une production 2 P ou erreur.
+
+On verra plus tard comment remplir cette table.
+19/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Interprétation de Table[a, X ]
+
+I
+I
+
+si le terminal a 2 VT est sous la tête de lecture ;
+
+et si le non-terminal en cours de traitement est X 2 VN ;
+
+alors on consulte Table[a, X ].
+Si Table[X , a] contient
+I
+I
+
+X !
+
+alors on choisit une expansion par cette production ;
+
+erreur alors erreur de syntaxe : X et a ne s’accordent pas.
+
+20/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+21/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyseur descendant récursif
+Principe :
+I
+
+analyseur LL codé par un ensemble de fonctions ;
+
+I
+
+ces fonctions s’appellent les unes les autres ;
+
+I
+
+n’utilise pas de pile explicite : pile implicite des appels.
+
+Codage des fonctions :
+I
+I
+I
+
+une fonction X() par non-terminal X 2 VN de la grammaire ;
+X() reconnaı̂t un mot engendré par X ;
+
+la fonction X() code les productions Table[X , y ] de la table
+d’analyse, pour tout y 2 VT [ #.
+22/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Exemple
+Écrire un analyseur syntaxique récursif LL(1) Parser pour G :
+S ! AB | Da
+A ! aAb | ✏
+B ! bB | ✏
+D ! dD | e
+À voir :
+I
+
+écriture de S(), A(), B(), D() ;
+
+I
+
+collaboration avec un analyseur lexical.
+23/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Collaboration avec un analyseur lexical
+On reprend les conventions utilisées en TP :
+I
+
+un an. lexical anLex de type Scanner (supposé donné) ;
+
+I
+
+symboles de type Symbole ;
+
+I
+
+codage entier du type des symboles dans TypeSymboles
+(noté TS dans les transparents) ;
+
+I
+
+méthode int getType() de Symbole pour obtenir ce type ;
+méthode Symbole next token() de Scanner :
+
+I
+
+I
+I
+
+I
+
+avance la tête de lecture teteLect ;
+retourne le symbole lu, de type Symbole.
+
+on remplace le marqueur # par TS.EOF.
+24/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Construction de l’analyseur syntaxique
+...
+public class Parser {
+// analyseur lexical
+private Scanner anLex;
+// symbole courant reçu de l’analyseur lexical
+private Symbole teteLect;
+public Parser (Scanner anLex) {
+this.anLex = anLex;
+}
+25/119
+
+...
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Lancement de l’analyseur syntaxique
+Dans la classe Parser :
+
+public void analyser() throws ScannerException, ParserExcep
+// positionnement tete de lecture
+this.teteLect = (Symbole) this.anLex.next_token();
+this.S(); // je veux reconna^
+ıtre l’axiome
+// et uniquement l’axiome
+if (this.teteLect.getType() != TS.EOF)
+throw new ParserException();
+}
+
+26/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code de S()
+La tête de lecture est déjà positionnée sur le symbole de prédiction.
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+private void S() throws ... {
+if (this.teteLect.getType() == TS.a)
+... // S -> AB
+else if (this.teteLect.getType() == TS.b)
+... // S -> AB
+else if (this.teteLect.getType() == TS.d)
+... // S -> Da
+else if (this.teteLect.getType() == TS.e)
+... // S -> Da
+else if (this.teteLect.getType() == TS.EOF)
+... // S -> AB
+else throw new ParserException();
+27/119
+}
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code de S()
+On factorise.
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+private void S() throws ... {
+if (this.teteLect.getType() == TS.a
+|| this.teteLect.getType() == TS.b
+|| this.teteLect.getType() == TS.EOF)
+... // S -> AB
+else if (this.teteLect.getType() == TS.d
+|| this.teteLect.getType() == TS.e)
+... // S -> Da
+else throw new ParserException();
+}
+28/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code des productions de S()
+
+Code pour S ! AB :
+I
+
+je veux reconnaı̂tre A puis B ;
+
+I
+
+) A() ; B() ;
+
+Code pour S ! Da :
+I
+
+je veux reconnaı̂tre D. . .
+
+I
+
+. . . puis vérifier que a est bien sous la tête de lecture ;
+
+I
+
+et consommer a.
+29/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Terminaux : vérification et consommation
+Méthode consommer dédiée à la gestion des terminaux :
+private void consommer(int type)
+throws ScannerException, ParserException {
+if (this.teteLect.getType() == type)
+this.teteLect = (Symbole) this.anLex.next_token();
+else throw new ParserException();
+}
+Code pour S ! Da : D(); this.consommer(TS.a);.
+30/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code final de S()
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+private void S() throws ... {
+if (this.teteLect.getType() == TS.a
+|| this.teteLect.getType() == TS.b
+|| this.teteLect.getType() == TS.EOF) {
+A(); B(); // S -> AB
+} else if (this.teteLect.getType() == TS.d
+|| this.teteLect.getType() == TS.e) {
+D(); this.consommer(TS.a); // S -> Da
+} else throw new ParserException();
+}
+
+Quand S() termine, pour un mot accepté, la tête de lecture est sur
+TS.EOF.
+31/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code de A()
+
+La tête de lecture est déjà positionnée sur le symbole de prédiction.
+
+a
+b
+d
+e
+#
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+private void A() throws ... {
+if (this.teteLect.getType() == TS.a)
+... // A -> aAb
+else if (this.teteLect.getType() == TS.b
+|| this.teteLect.getType() == TS.EOF)
+... // A ->
+else // erreur
+throw new ParserException();
+}
+32/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code des productions de A()
+
+Code pour A ! aAb :
+this.consommer(TS.a); A(); this.consommer(TS.b);
+Code pour A ! ✏ :
+I
+
+le mot vide est immédiatement reconnu ;
+
+I
+
+sans toucher à la tête de lecture ;
+
+I
+
+on ne fait rien.
+
+33/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code final de A()
+
+a
+b
+d
+e
+#
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+private void A() throws ... {
+if (this.teteLect.getType() == TS.a) {
+// A -> aAb
+this.consommer(TS.a); A();
+this.consommer(TS.b);
+} else if (this.teteLect.getType() == TS.b
+|| this.teteLect.getType() == TS.EOF)
+// rien, A ->
+} else // erreur
+throw new ParserException();
+}
+
+Quand A() termine, pour un mot accepté, la tête de lecture est
+positionnée pour reconnaı̂tre un B ou lire un b.
+34/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code final de B()
+
+a
+b
+d
+e
+#
+
+B
+erreur
+B ! bB
+erreur
+erreur
+B !✏
+
+private void B() throws ... {
+if (this.teteLect.getType() == TS.b) {
+// B -> bB
+this.consommer(TS.b); B();
+} else if (this.teteLect.getType() == TS.EOF)
+// rien, B ->
+} else // erreur
+throw new ParserException();
+}
+
+35/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Code final de D()
+
+a
+b
+d
+e
+#
+
+D
+erreur
+erreur
+D ! dD
+D!e
+erreur
+
+private void D() throws ... {
+if (this.teteLect.getType() == TS.d) {
+// D -> dD
+this.consommer(TS.d); D();
+} else if (this.teteLect.getType() == TS.e)
+// D -> e
+this.consommer(TS.e);
+else // erreur
+throw new ParserException();
+}
+
+36/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Exemple d’exécution
+
+Reconnaı̂tre abb# ?
+
+37/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+38/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+39/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Outils pour l’analyse prédictive, intuition - 1
+
+Comment choisir entre S ! AB et S ! Da ?
+Supposons que je sache que :
+I
+
+AB ne permet de dériver que des mots préfixés par a ou par b ;
+
+I
+
+AB )⇤ au et AB )⇤ bu, pour u 2 VT ⇤ ;
+
+I
+I
+
+Da ne permet de dériver que des mots préfixés par d ou par e ;
+Da )⇤ du et Da )⇤ eu, pour u 2 VT ⇤ .
+
+40/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Outils pour l’analyse prédictive, intuition - 1
+Maintenant je sais (partiellement) choisir entre S ! AB et
+S ! Da :
+I
+I
+
+si tête lecture 2 {a, b} : choisir S ! AB ;
+si tête lecture 2 {d, e} : choisir S ! Da.
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+?
+41/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Ensemble Premier - définition
+On dit que Premier (AB) = {a, b} et Premier (Da) = {d, e}.
+
+Pour ↵ 2 (VT [ VN )+ , Premier (↵) contient l’ensemble des
+terminaux de VT susceptibles de commencer un mot de VT +
+dérivé de ↵.
+Si ↵ = ✏, cet ensemble est vide.
+
+Definition
+Soit une grammaire algébrique. On définit :
+Premier : (VT [ VN )⇤ ! P(VT )
+↵ 7! {a 2 VT | ↵ )⇤ au, u 2 VT ⇤ }
+42/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Les Premier sur les arbres syntaxiques
+S
+
+S
+
+A
+
+B
+
+A
+
+B
+
+A
+a
+
+S
+A
+
+B
+
+B
+b
+
+b
+
+S
+
+↵ 2 (VT [ VN )⇤
+
+S
+
+D
+
+D
+D
+
+d
+
+a
+
+e
+Mirabelle Nebut
+
+a
+
+2 Premier (↵)
+Analyse descendante LL(k)
+
+43/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Premier - 0
+Soit ↵ 2 (VN [ VT )⇤ :
+cas
+↵ = ✏ :?
+↵ = a, a 2 VT : ?
+↵ = a , a 2 VT ,
+
+2 (VN [ VT )⇤ : ?
+
+↵ = X , X 2 VN ,
+
+2 (VN [ VT )⇤ :
+
+↵ = X , X 2 VN :
+fcas
+
+?
+
+?
+
+44/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Premier - 1
+Soit ↵ 2 (VN [ VT )⇤ :
+cas
+↵=✏:;
+
+↵ = a, a 2 VT : {a}
+↵ = a , a 2 VT ,
+
+↵ = X , X 2 VN :
+fcas
+
+↵ = X , X 2 VN ,
+
+2 (VN [ VT )⇤ : {a}
+?
+
+2 (VN [ VT )⇤ :
+
+?
+
+45/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul de Premier (X ), X 2 VN
+Si l’ensemble des productions de membre gauche S est :
+S ! AB | Da
+alors on a :
+Premier (S) = Premier (AB) [ Premier (Da)
+Cas général : Si la grammaire contient les productions de membre
+gauche X :
+X !
+alorsPremier (X ) =
+
+S
+
+1|
+
+... |
+
+n
+
+{Premier ( i ) | X !
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+i
+
+2 P}
+
+46/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Premier - 2
+Soit ↵ 2 (VN [ VT )⇤ :
+cas
+↵=✏:;
+
+↵ = a, a 2 VT : {a}
+
+2 (VN [ VT )⇤ : {a}
+S
+↵ = X , X 2 VN : {Premier ( i ) | X !
+↵ = a , a 2 VT ,
+
+fcas
+
+↵ = X , X 2 VN ,
+
+2 (VN [ VT
+
+)⇤
+
+:
+
+?
+
+i
+
+2 P}
+
+47/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Premier , ↵ = X , X 2 VN
+
+Deux cas selon que X peut
+
+⌧
+
+s’e↵acer
+
+ou non :
+
+X )⇤ ✏ ?
+Si X )⇤ ✏ on dit que X est ✏-productif : X 2 ✏-Prod
+
+48/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Premier , ↵ = X , X 62 ✏-Prod - exemple
+S
+
+Par exemple D 62 ✏-productif :
+
+D
+
+D ! dD | e
+alors Premier (Da) = Premier (D)
+
+S
+D
+
+D
+d
+
+a
+
+e
+
+a
+
+Donc, si X 62 ✏-Prod, Premier (X ) = Premier (X )
+
+49/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Premier , ↵ = X , X 2 ✏-Prod - exemple
+Par exemple A 2 ✏-productif :
+
+S
+
+A ! ✏ | aAb
+Premier (AB) = Premier (A) [
+Premier (B)
+Premier (ABS) = Premier (A) [
+Premier (BS)
+
+A
+
+S
+B
+
+A
+
+B
+
+A
+a
+
+B
+b
+
+b
+
+Donc, si X )⇤ ✏ alors Premier (X ) = Premier (X ) [ Premier ( )
+50/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Premier
+Soit ↵ 2 (VN [ VT )⇤ :
+cas
+↵=✏:;
+
+↵ = a, a 2 VT : {a}
+
+2 (VN [ VT )⇤ : {a}
+S
+↵ = X , X 2 VN : {Premier ( i ) | X !
+↵ = a , a 2 VT ,
+
+↵ = X , X 2 VN \ ✏-Prod,
+
+↵ = X , X 2 VN \ ✏-Prod,
+fcas
+
+i
+
+2 P}
+
+2 (VN [ VT )⇤ : Premier (X )
+
+2 (VN [ VT )⇤ :
+Premier (X ) [ Premier ( )
+51/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul e↵ectif des ensembles Premier
+
+On procède en deux étapes :
+1. on pose un système d’équations pour Premier ;
+2. on calcule par itération de point fixe les plus petits ensembles
+qui satisfont ces équations.
+Pour le moment on suppose donné ✏-Prod, l’ensemble des
+✏-productifs.
+
+52/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple
+S ! AB | Da
+A ! aAb | ✏
+B ! bB | ✏
+D ! dD | e
+✏-Prod = {A, B, S}
+Premier (S) = ?
+Premier (A) = ?
+Premier (B) = ?
+Premier (D) = ?
+
+↵=✏:;
+↵ = a, a 2 VT : {a}
+↵ = a , a 2 VT ,
+
+2 (VN [ VT )⇤ : {a}
+
+↵ = X , X 2 VN :
+S
+{Premier ( i ) | X !
+
+i
+
+2 P}
+
+↵ = X , X 2 VN \ ✏-Prod,
+Premier (X )
+
+2 (VN [ VT )⇤ :
+
+↵ = X , X 2 VN \✏-Prod,
+Premier (X ) [ Premier ( )
+
+2 (VN [VT )⇤ :
+53/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple
+Premier (S) = Premier (A) [ Premier (B) [ Premier (D)
+Premier (A) = {a}
+Premier (B) = {b}
+Premier (D) = {d, e}
+D’où
+Premier (S) = {a, b, d, e}
+Premier (A) = {a}
+Premier (B) = {b}
+Premier (D) = {d, e}
+Premier (AB) = {a, b}
+Premier (Da) = {d, e}
+
+Premier (aAb) = {a}
+Premier (bB) = {b}
+Premier (dD) = {d}
+Premier (e) = {e}
+Premier (✏) = ;
+
+Mirabelle Nebut
+
+54/119
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple : remplissage de la table
+A ! aAb et Premier (aAb) = {a}
+A ! ✏ et Premier (✏) = ;
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+B
+erreur
+B ! bB
+erreur
+erreur
+B !✏
+
+D
+erreur
+erreur
+D ! dD
+D!e
+erreur
+55/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple : remplissage de la table
+S ! AB et Premier (AB) = {a, b}
+S ! Da et Premier (Da) = {d, e}
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+B
+erreur
+B ! bB
+erreur
+erreur
+B !✏
+
+D
+erreur
+erreur
+D ! dD
+D!e
+erreur
+56/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Remarque : résolution du système
+
+Premier (S) = Premier (A) [ Premier (B) [ Premier (D)
+Premier (A) = {a}
+Premier (B) = {b}
+Premier (D) = {d, e}
+Se résoud sans itération de point fixe : système d’équations non
+récursif.
+Ce n’est pas toujours le cas.
+
+57/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Résolution du système : autre exemple
+Premier (S) = Premier (S1 ) [ {a}
+Premier (S1 ) = Premier (S) [ {b}
+Premier (S2 ) = {c}
+
+S ! S1 S2 | a
+S1 ! S | b
+S2 ! c
+iter
+0
+1
+2
+3
+
+Premier (S)
+;
+{a}
+{a, b}
+{a, b}
+
+stabilisation
+
+Premier (S1 )
+;
+{b}
+{b, a}
+{b, a}
+
+Premier (S2 )
+;
+{c}
+{c}
+{c}
+58/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+59/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Définition des ✏-prod
+Definition
+Un non terminal X 2 VN est dit ✏-productif si X )⇤ ✏.
+L’ensemble des ✏-productif est ✏-Prod.
+X est ✏-productif si la grammaire contient la production :
+I
+I
+
+X ! ✏;
+
+ou X ! Y1 Y2 . . . Yn telle que l’ensemble des non-terminaux
+{Y1 , Y2 , . . . , Yn } ✓ VN ne contient que des non-terminaux
+✏-productifs.
+
+Algorithme de calcul similaire à celui qui calcule les productifs.
+60/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple
+
+S ! AB | Da
+A ! aAb | ✏
+B ! bB | ✏
+D ! dD | e
+
+✏-Prod ?
+
+61/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+62/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Outils pour l’analyse prédictive, intuition - 2
+
+Pour choisir entre S ! AB et S ! Da :
+I
+I
+
+si tête lecture 2 {a, b} : choisir S ! AB ;
+si tête lecture 2 {d, e} : choisir S ! Da.
+
+Et si la tête de lecture est # ? # 62 Premier (AB) [ Premier (Da).
+Comment choisir entre A ! aAb et A ! ✏ ? Premier (✏) = ;
+) les ensembles Premier ne suffisent pas.
+63/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Ensembles Suivant, intuition
+Quand appliquer A ! ✏ ?
+Quand la tête de lect. correspond à un terminal qui peut suivre A.
+S
+
+A
+A
+
+a
+
+A
+
+B
+
+b
+
+b 2 Suivant(A)
+
+Suivant(A) ◆ Premier (B)
+64/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Ensembles Suivant, intuition
+On a donc b 2 Suivant(A)
+
+a
+b
+d
+e
+#
+
+A
+A ! aAb
+A!✏
+?
+?
+?
+
+65/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Ensembles Suivant, intuition
+
+Pour ↵ 2 (VT [ VN )+ , Suivant(↵) contient l’ensemble des
+terminaux de VT susceptibles de suivre ↵ dans un mot de VT +
+dérivé de l’axiome S.
+Si ↵ = ✏, cet ensemble est vide.
+Par convention, Suivant(S) ◆ {#}.
+
+66/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Ensembles Suivant, définitions équivalentes
+Definition
+Soit une grammaire algébrique d’axiome S. On définit :
+Suivant : (VT [ VN )⇤ ! P(VT )
+↵ 7! {a 2 VT | S )⇤ ↵a ,
+pour , 2 (VN [ VT )⇤ }
+
+Definition
+Suivant : (VT [ VN )⇤ ! P(VT )
+↵ 7! {a 2 Premier ( ) | S )⇤ ↵ ,
+pour , 2 (VN [ VT )⇤ }
+67/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 1
+Pour calculer Suivant(X ), on regarde les productions dans
+lesquelles X apparaı̂t en partie droite (di↵érent du calcul des
+Premier ).
+Pour Suivant(A) :
+S ! AB
+
+A ! aAb
+
+S
+
+A
+
+A
+
+a
+
+A
+
+B
+
+b
+68/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 2
+
+Soit PX ✓ P l’ensemble des productions p dans lesquelles X
+apparaı̂t en partie droite :
+S
+Suivant(X ) = p2PX Suivant p (X )
+Ex : PA = {S ! AB, A ! aAb}
+Suivant(A) = Suivant(A)S!AB [ Suivant(A)A!aAb
+
+69/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant, cas de l’axiome
+
+Pour l’axiome, on ajoute le marqueur de fin de mot :
+S
+Suivant(S) = {#} [ p2PS Suivant p (S)
+Ex : pour X ! aXb | ✏
+
+PX = {X ! aX b}
+Suivant(X ) = {#} [ Suivant(X )X !aX b
+
+70/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 3 - exemple
+Suivant(A)S!AB ? (exemple précédent)
+Cas déjà vu :
+S
+A
+
+B
+
+Suivant(A) ◆ Premier (B)
+71/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 3 - exemple
+Suivant(A)S!AB ? (exemple précédent)
+mais B est ✏-Prod !
+S
+A
+
+B
+
+Suivant(A) ◆ Suivant(S)
+72/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 3 - exemple
+
+Puisque B est ✏-Prod :
+Suivant(A)S!AB = Premier (B) [ Suivant(S)
+
+73/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 4
+Quand une production est de la forme . . .! X ↵ :
+I
+
+pour calculer Suivant(X ) ;
+
+I
+
+Il faut pouvoir dire si ↵ 2 (VN [ VT )⇤ est ✏-productif ou pas.
+
+Definition
+↵ 2 (VN [ VT )⇤ est ✏-productif si ↵ )⇤ ✏. On définit la fonction :
+Eps : (VN [ VT )⇤ ! {vrai, faux}
+↵ 7! ↵ est ✏-productif
+On verra après comment calculer Eps.
+74/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 5
+Pour calculer Suivant p (X ) avec :
+p = Y ! ↵X
+
+et Eps( ) = faux, ↵,
+
+2 (VN [ VT )⇤
+
+Y
+X
+
+Suivant p (X ) = Premier ( )
+
+Ex : pour Y ! Xb, Suivant(X )Y !Xb = {b}.
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+75/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 6
+Pour calculer Suivant p (X ) avec :
+p = Y ! ↵X
+Y
+
+↵
+
+X
+
+Suivant p (X ) = Suivant(Y )
+76/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant - 7
+Pour calculer Suivant p (X ) avec :
+p = Y ! ↵X
+
+et Eps( ) = vrai, ↵,
+
+2 (VN [ VT )⇤
+
+Y
+X
+
+Suivant p (X ) =
+Premier ( ) [ Suivant(Y )
+
+Ex : pour S ! AB, Suivant(A)S!AB = Premier (B) [ Suivant(S).
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+77/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Remarque - 1
+
+Si X apparaı̂t plusieurs fois en partie droite d’une production, il
+faut prendre en compte toutes ses occurrences dans le calcul de
+Suivant(X ).
+Ex : Y ! X aX aX c
+Suivant Y !X aX aX c (X ) = {a, c}
+
+78/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Remarque - 2
+Pourquoi pas Suivant(X )Y !X = Premier ( ) [ Suivant( ) ?
+Parce que Suivant(Y ) ✓ Suivant( ).
+Ex :
+S ! Y |Z
+Y ! X1 X2
+X1 ! a
+X2 ! ✏ | b
+Z ! X2 c
+
+Suivant(S) = {#}
+Suivant(Y ) = Suivant(S) = {#}
+Suivant(Z ) = Suivant(S) = {#}
+Suivant(X2 ) = {c} [ Suivant(Y ) = {c, #}
+Suivant(X1 ) = Premier (X2 ) [ Suivant(Y )
+79/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des Suivant, récapitulons !
+# 2 Suivant(axiome)
+Soit PX ✓ P l’ensemble des productions p dans lesquelles X
+apparaı̂t en partie droite :
+S
+Suivant(X ) = p2PX Suivant p (X )
+
+avec : Suivant p (X ) =
+cas
+p = Y ! ↵X : Suivant(Y )
+p = Y ! ↵X et Eps( ) = faux : Premier ( )
+p = Y ! ↵X et Eps( ) = vrai : Premier ( ) [ Suivant(Y )
+fincas
+80/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul e↵ectif des ensembles Suivant
+
+On procède en deux étapes :
+I
+
+on pose un système d’équations pour Suivant ;
+
+I
+
+on calcule par itération de point fixe les plus petits ensembles
+qui satisfont ces équations.
+
+I
+
+avec initialement Suivant(S) = {#}, et pour les autres
+non-terminaux Suivant(X ) = ;.
+
+81/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple
+S ! AB | Da
+A ! aAb | ✏
+B ! bB | ✏
+D ! dD | e
+Eps(B) = vrai
+Suivant ?
+
+# 2 Suivant(axiome)
+S
+Suivant(X ) = p2PX Suivant p (X )
+avec :
+cas
+p=
+p=
+p=
+
+fincas
+
+Suivant p (X ) =
+
+Y ! ↵X : Suivant(Y )
+Y ! ↵X et Eps( ) = faux : Premier ( )
+Y ! ↵X et Eps( ) = vrai : Premier ( )
+[Suivant(Y )
+82/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple de remplissage de table
+A ! ✏ et Suivant(A) = {b, #}
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+B
+erreur
+B ! bB
+erreur
+erreur
+B !✏
+
+D
+erreur
+erreur
+D ! dD
+D!e
+erreur
+
+83/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple de remplissage de table
+S ! AB et Suivant(S) = {#}
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+B
+erreur
+B ! bB
+erreur
+erreur
+B !✏
+
+D
+erreur
+erreur
+D ! dD
+D!e
+erreur
+
+84/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Calcul des ✏-productifs
+On connaı̂t déjà ✏-Prod, ens. des non-terminaux ✏-productifs.
+Pour calculer Eps(↵) :
+Eps(↵) =
+cas
+↵ = ✏ : vrai
+↵ = X1 . . . Xn , n
+
+1 avec {X1 , . . . , Xn } ✓ VN et
+{X1 , . . . , Xn } ✓ ✏-Prod : vrai
+autre : faux // ↵ contient un terminal
+fincas
+85/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple
+
+Sachant que ✏-Prod = {A, B, S} :
+Eps(Da) ?
+Eps(AB) ?
+Eps(✏) ?
+Eps(B) ?
+
+86/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+87/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Table d’analyse : au préalable
+
+On calcule :
+I
+
+les ✏-productifs ;
+
+I
+
+les ensembles Premier ;
+
+I
+
+les ensembles Suivant.
+
+88/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Remplissage de la table
+Entrée : une gram. alg. G , ses ensembles Premier et Suivant
+Sortie : la table d’analyse Table
+pour toute production X ! 2 P
+faire pour tout a 2 Premier ( )
+faire ajouter X ! à Table[X , a] fait
+si Eps( ) = vrai alors pour tout b 2 Suivant(X )
+faire Table[X , b] = X !
+fait
+finsi
+fait
+Ajouter erreur dans les entrées de Table restées vides
+89/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple
+S ! AB :
+I
+I
+I
+
+Premier (AB) = {a, b} ;
+Eps(AB) = vrai ;
+
+Suivant(S) = {#}.
+
+S ! Da :
+I
+I
+
+Premier (Da) = {d, e} ;
+Eps(Da) = faux.
+
+a
+b
+d
+e
+#
+
+S
+S ! AB
+S ! AB
+S ! Da
+S ! Da
+S ! AB
+
+Rien à compléter par erreur.
+90/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+
+Exemple
+A ! aAb :
+I
+I
+
+Premier (aAb) = {a} ;
+Eps(aAb) = faux.
+
+A!✏:
+I
+I
+I
+
+Premier (✏) = ; ;
+Eps(✏) = vrai ;
+
+Suivant(A) = {b, #}.
+
+a
+b
+d
+e
+#
+
+A
+A ! aAb
+A!✏
+erreur
+erreur
+A!✏
+
+On complète par erreur.
+
+91/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+92/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyseur LL(1)
+Un analyseur LL(1) est déterministe et piloté par le sommet de
+pile :
+I
+
+si terminal a : lecture de a (ou erreur) ;
+
+I
+
+si non terminal X avec a sous la tête de lecture : expansion
+selon Table[X , a].
+
+Et si Table[X , a] contient plus d’une production ?
+Non-déterminisme :
+I
+
+la grammaire n’est pas LL(1) ;
+
+I
+
+on ne peut pas appliquer une analyse LL(1).
+93/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Caractérisation d’une grammaire LL(1)
+Caractérisation par table d’analyse : une grammaire est LL(1) si
+chaque case contient exactement une production ou erreur.
+Caractérisation ⌧ par contre-exemple : une grammaire n’est pas
+LL(1) s’il existe 2 productions X ! ↵ et X ! telles que :
+1. soit Premier (↵) \ Premier ( ) 6= ; ;
+Ex : S ! aS | A, A ! a
+
+2. soit Eps(↵) = vrai et Premier ( ) \ Suivant(X ) 6= ; ;
+Ex : S ! aS | Ab, A ! ✏ | b
+
+3. soit Eps(↵) = vrai et Eps( ) = vrai (la grammaire est
+ambiguë)
+Ex : S ! A | B, A ! ✏, B ! ✏
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+94/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+LL(1) et ambiguı̈té
+
+Une grammaire LL(1) n’est pas ambiguë.
+Une grammaire ambiguë n’est pas LL(1).
+
+95/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Cas classiques non LL(1)
+Dans les cas suivants, la grammaire n’est pas LL(1) :
+I
+I
+
+ambiguı̈té ;
+récursivité gauche : A ! Aa | ✏ ;
+I
+
+I
+
+intuitivement récursivité infinie de A().
+
+non factorisation gauche : S ! aA | aB
+
+Solutions : :
+I
+
+factorisation à gauche (parfois) ;
+
+I
+
+suppression de la récursivité gauche (parfois) ;
+
+I
+
+utiliser un générateur de parser plus puissant !
+96/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+97/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+98/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Factorisation à gauche : exemple - 1
+
+Les listes d’identificateur de Init :
+listeIdent ! IDENT | IDENT SEPVAR listeIdent
+On factorise IDENT et on obtient :
+listeIdent ! IDENT suiteListeIdent
+suiteListeIdent ! ✏ | SEPVAR listeIdent
+
+99/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Factorisation à gauche : exemple - 2
+
+X ! ab | abbX | abbbX
+Factorisation de ab : on prend le plus grand préfixe commun.
+X ! abY
+Y ! ✏ | bX | bbX
+Puis à nouveau factorisation de b.
+
+100/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Factorisation à gauche - algorithme
+On remplace les règles de la forme :
+X !↵
+
+1|
+
+... |↵
+
+n
+
+|
+
+1|
+
+... |
+
+m
+
+où
+↵ 2 (VT [ VN )+ et i , j 2 (VT [ VN )⇤ ;
+I le préfixe commun ↵ est choisi le plus grand possible ;
+I ↵ n’est pas préfixe de j .
+par les règles :
+I
+
+X ! ↵X 0 | 1 | . . . |
+X0 ! 1 | ... | n
+
+m
+
+où X 0 est un nouveau non-terminal.
+On réitère ce processus tant que nécessaire.
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+101/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+102/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Suppression de la récursivité à gauche
+
+Récursivité gauche :
+I
+I
+
+immédiate : production A!A↵, ↵ 2 (VT [ VN )+ ;
+
+générale : il existe une dérivation A)⇤ A↵, ↵ 2 (VT [ VN )+ .
+
+Il est possible de supprimer les deux cas.
+On ne verra que la récursivité immédiate.
+
+103/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Suppression de la récursivité gauche immédiate
+On remplace les règles de la forme
+X ! X ↵1 | . . . | X ↵n |
+
+1|
+
+... |
+
+m
+
+où
+I
+I
+
+↵i 2 (VT [ VN )+ et
+les
+
+j
+
+j
+
+2 (VT [ VN )⇤ ;
+
+ne commencent pas par X .
+
+par les règles :
+X ! 1X 0 | . . . | mX 0
+X 0 ! ↵1 X 0 | . . . | ↵n X 0 | ✏
+où X 0 est un nouveau non-terminal.
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+104/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Suppression de la récursivité gauche : exemple
+
+Grammaire non ambiguë
+des expressions arithmétiques :
+E ! E + T |T
+T ! T ⇤ F |F
+F ! i | (E )
+X ! X ↵1 | . . . | X ↵n
+| 1| ... | m
+
+Après suppression
+gauche :
+
+de
+
+la
+
+rec
+
+E ! TE 0
+E 0 ! +TE 0 | ✏
+T ! FT 0
+T 0 ! ⇤FT 0 | ✏
+F ! i | (E )
+X ! 1X 0 | . . . | mX 0
+X 0 ! ↵1 X 0 | . . . | ↵n X 0 | ✏
+105/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Parfois ça ne suffit pas
+
+La grammaire ({a, b}, {S, A}, S, P) avec
+P = {S ! aSb | A, A ! aA | ✏}
+I
+
+n’est pas ambiguë ;
+
+I
+
+n’est pas récursive gauche ;
+
+I
+
+est factorisée à gauche ;
+
+mais elle n’est pas LL(1).
+
+106/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Factorisation à gauche
+Suppression de la récursivité à gauche
+
+Au delà des grammaires LL(1) - 1
+
+La grammaire ({a, b}, {A, B}, A, P) avec
+P = {A ! abB | ✏, B ! Aaa | b}
+n’est pas LL(1).
+En e↵et Eps(A) = vrai et a 2 Premier (A) \ Suivant(A).
+
+107/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Ensembles Premier
+Ensemble des ✏-prod
+Ensembles Suivant
+Remplissage de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Factorisation à gauche
+Suppression de la récursivité à gauche
+Analyseurs LL(k), LL(*)
+108/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Grammaires LL(k), exemple
+La grammaire :
+declaration ! DECLINT listeIdent FININSTR
+listeIdent ! IDENT | IDENT SEPVAR listeIdent
+n’est pas LL(1).
+Elle est LL(2), et acceptée par un analyseur LL(k).
+En regardant 2 symboles sous la tête de lecture :
+I
+I
+
+si IDENT FININSTR : choisir listeIdent ! IDENT
+
+si IDENT SEPVAR : choisir listeIdent ! IDENT SEPVAR
+listeIdent
+109/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Grammaire LL(k), autre exemple
+
+P = {A ! abB | ✏, B ! Aaa | b}
+Cette grammaire est LL(2) :
+Premier 2 (A) = {ab}
+Premier 2 (B) = {ab, aa, b}
+Suivant 2 (A) = {aa, #}
+
+110/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Table d’analyse LL(2)
+
+A ! abB | ✏
+B ! Aaa | b
+A
+B
+
+aa
+A!✏
+B ! Aaa
+
+ab
+A ! abB
+B ! Aaa
+
+b
+erreur
+B !b
+
+#
+A!✏
+erreur
+
+111/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyseurs LL(k), principe
+
+E↵ectuent une prédiction basée sur k symboles.
+k borné.
+Ex : javaCC
+
+112/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Insuffisance de l’approche LL(k), [antLR]
+
+method ! type ID [ args ] ;
+| type ID [ args ] { body }
+args ! unarg | unarg , args
+unarg ! INT ID
+...
+Cette grammaire n’est pas LL(k), mais est acceptée par antLR.
+
+113/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Analyseurs LL(*)
+
+Ne fixent pas une taille de look-ahead a priori.
+Représentent par un AFD le langage de look-ahead, pourvu qu’il
+soit régulier.
+
+114/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Vers les formes eBNF
+
+Même un analyseur LL(*) refuse la récursivité gauche.
+Fâcheux pour les grammaires à opérateurs !
+Solution : grammaires dites en forme eBNF.
+E ! T ( + T) *
+T ! F ( * T) *
+F ! ( E ) | id
+
+E !E +T | T
+T !F *T | F
+F ! ( E ) | id
+
+115/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Grammaires sous forme eBNF
+Grammaires algébriques avec facilités d’écriture.
+En partie droite de production : opérateurs à la expression régulière
+Refusé par Cup et tout générateur de parseur n’acceptant pas les
+eBNF
+Accepté par la majorité des analyeurs LL(k).
+Semble plus simple, attention à l’attribution.
+Ne pas utiliser en DS sauf si explicitement demandé.
+116/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Grammaires non LL(*) [antLR]
+s : label ID ’=’ expr
+| label ’return’ expr
+;
+label : ID ’:’ label
+|
+;
+n’est pas LL(*) : [fatal] rule s has non-LL(*) decision
+due to recursive rule invocations from alts 1,2.
+[...]
+Version LL(*) :
+label : ( ID ’:’)*
+Mirabelle Nebut
+
+117/119
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Génération de code à la eBNF
+E ! T ( + T) *
+E() {
+T();
+tant que tetelect est ’+’ {
+consommer(+);
+T();
+}
+}
+Clôture de Kleene ) itération dans le code
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+118/119
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+Génération de code à la eBNF
+listeA ! a*
+listeA() {
+tant que tetelect est ’a’ {
+consommer(a);
+}
+}
+plus efficace que le code récursif généré par :
+listeA ! a listeA | ✏
+119/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+Principes
+Analyseur récursif
+Construction de la table d’analyse
+Caractérisation d’une grammaire LL(1)
+Quand une grammaire n’est pas LL(1)
+Analyseurs LL(k), LL(*)
+
+AntLR
+
+Outil très riche.
+Décrit dans le même formalisme eBNF les entités lexicales et la
+syntaxe.
+Lit toute l’entrée avant de lancer l’analyse lexicale.
+
+120/119
+
+Mirabelle Nebut
+
+Analyse descendante LL(k)
+
+

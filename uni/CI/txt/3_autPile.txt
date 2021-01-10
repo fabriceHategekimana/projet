@@ -1,0 +1,2151 @@
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Automates à pile
+Mirabelle Nebut
+Bureau 203 - extension M3
+mirabelle.nebut at lifl.fr
+
+2012-2013
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+But de ce cours
+
+On sait maintenant écrire une grammaire algébrique. . . mais pas
+l’analyseur syntaxique qui va avec !
+langage
+régulier
+algébrique
+
+spécification
+expression régulière
+grammaire algébrique
+
+modèle exécutable
+AFD
+automate à pile
+
+Dans un premier temps : découverte des automates à pile.
+Plus tard : comment on s’en sert pour l’analyse syntaxique.
+2/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Plan du cours
+
+Automates à pile généraux
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+3/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Reconnaı̂tre un langage algébrique, intuition - 1
+Pour reconnaı̂tre {an b n | n
+
+0} :
+
+I
+
+un automate à nombre fini d’états pour lire des a puis des b ;
+
+I
+
+un compteur c pour compter les a et décompter les b ;
+
+I
+
+arrêt quand le ruban est vide et état final et c vaut 0 .
+a / c := c+1
+c:=0
+
+qa
+
+b [ c 1] / c := c-1
+
+b [ c 1] / c := c-1
+qb
+
+[c=0]
+
+[c=0]
+4/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Reconnaı̂tre un langage algébrique, intuition - 2
+Pour reconnaı̂tre {m 2 ⌃⇤ | m est un palindrome } :
+I
+
+un compteur ne suffit pas !
+
+I
+
+il faut mémoriser les symboles lus puis les consulter ;
+
+I
+
+mémorisation par empilement, vérification par dépilement.
+a / empiler luA
+
+a [top = luA] / depiler luA
+
+a,b
+pile
+vide
+
+q1
+
+[pile vide]
+q2
+
+✏
+b / empiler luB
+
+b [top = luB] / depiler luB
+5/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Reconnaı̂tre un langage algébrique, intuition - 3
+Ça marche aussi pour reconnaı̂tre {an b n |n
+
+0} :
+
+I
+
+on empile luA quand on lit un a ;
+
+I
+
+on dépile luA quand on lit un b ;
+
+I
+
+arrêt quand le ruban est vide et état final et la pile est vide.
+a / empiler luA
+pile
+vide
+
+qa
+
+b [top = luA] / depiler luA
+
+b [top = luA] / depiler luA
+
+[pile vide]
+
+qb
+
+[pile vide]
+
+Et ça marche pour tous les langages algébriques !
+Mirabelle Nebut
+
+Automates à pile
+
+6/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automates à pile généraux
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+7/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automate à pile, intuition
+
+un automate à nombre fini d’états classique
++
+une pile non bornée
+Et voilà notre mémoire non bornée !
+
+8/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automate à pile, intuition
+
+Automate à nombre fini d’états
+
+ex des palindromes :
+
+I
+
+ensemble d’état Q ;
+
+I
+
+état initial q0 ;
+
+I
+
+ensemble d’états finaux F ✓ Q ;
+
+I
+
+ex : {q1 , q2 }
+ex : q1
+
+alphabet d’entrée ⌃.
+
+ex : {q2 }
+
+ex : {a,b}
+
+Pile
+I
+
+contient des éléments de l’alphabet de pile Z ex : {luA, luB}
+
+Relation de transition ?
+9/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Transitions, intuition - 1
+
+Pour un AF, une transition c’est :
+I
+I
+I
+I
+
+quand je suis dans l’état q 2 Q
+
+et que j’ai a 2 ⌃ sous la tête de lecture
+ou que je transite sur ✏
+
+alors je passe dans l’état q 0 2 Q
+q, a ! q 0
+q, ✏ ! q 0
+
+10/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Transitions, intuition - 2
+Pour un automate à pile, une transition c’est :
+I
+I
+I
+I
+I
+I
+
+quand je suis dans l’état q 2 Q
+
+et que j’ai a 2 ⌃ sous la tête de lecture
+ou que j’e↵ectue une ✏-transition
+
+et que le sommet de pile est z 2 Z
+je passe dans l’état q 0 2 Q
+
+et je modifie le sommet de pile en le remplaçant par des
+éléments de Z ou ✏.
+q, a, z
+q, ✏, z
+q, a, z
+Mirabelle Nebut
+
+! q 0 , z1 z2
+! q0, z
+! q0, ✏
+Automates à pile
+
+11/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Modification de la pile, exemples
+
+q, a, z1
+q, ✏, z
+q, a, z
+
+!
+!
+!
+
+q 0 , z1 z2
+q0, z
+q0, ✏
+
+empiler z2
+ne pas toucher à la pile
+dépiler z
+
+12/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Notation graphique
+a [luA] / empiler luA
+(q1 , a, luA) ! (q2 , luAluA)
+
+,
+
+q1
+
+a [luA] / empiler luA
+q1
+
+q2
+
+a [luA,luB] / empiler luA
+,
+
+q1
+
+a [luB] / empiler luA
+Mirabelle Nebut
+
+q2
+
+q2
+13/64
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exemple des palindromes - 1
+a [luA, luB, z? ] / empiler luA
+
+a [luA] / depiler luA
+
+a,b[luA,luB,z? ]
+q1
+
+q2
+
+✏[z? ] / depiler z?
+
+✏ [luA,luB,z? ]
+b [luA, luB, z? ] / empiler luB
+I
+I
+I
+I
+I
+
+b [luB] / depiler luB
+
+dans l’état q2 2 Q ;
+avec a 2 ⌃ sous la tête de lecture (⌃-transition) ;
+et avec luA 2 Z en sommet de pile ;
+alors on reste dans l’état q2 2 Q ;
+et on dépile : on remplace luA par ✏.
+q2 , a, luA ! q2 , ✏
+Mirabelle Nebut
+
+Automates à pile
+
+14/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exemple des palindromes - 2
+a [luA, luB, z? ] / empiler luA
+
+a [luA] / depiler luA
+
+a,b[luA,luB,z? ]
+q1
+
+q2
+
+✏[z? ] / depiler z?
+
+✏ [luA,luB,z? ]
+b [luA, luB, z? ] / empiler luB
+I
+I
+
+b [luB] / depiler luB
+
+dans l’état q1 2 Q et avec a sous la tête de lecture ;
+et quel que soit le sommet de pile. . . quel peut-il être ?
+I
+I
+
+si je viens de lire un a (resp. b) : luA (resp. luB) ;
+si je n’ai encore rien lu : pile initiale (vide)
+
+Pas de transition sur pile vide : symbole initial de pile z? 2 Z
+Mirabelle Nebut
+
+Automates à pile
+
+15/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exemple des palindromes - 3
+a [luA, luB, z? ] / empiler luA
+
+a [luA] / depiler luA
+
+a,b[luA,luB,z? ]
+q1
+
+q2
+
+✏[z? ] / depiler z?
+
+✏ [luA,luB,z? ]
+b [luA, luB, z? ] / empiler luB
+I
+I
+I
+I
+
+b [luB] / depiler luB
+
+dans l’état q1 2 Q, avec a sous la tête de lecture ;
+et avec luA, luB ou z? en sommet de pile ;
+alors on reste dans q1 2 Q ;
+et on empile luA : on remplace le sommet x par x luA
+q1 , a, luA ! q1 , luA luA
+q1 , a, luB ! q1 , luB luA
+Mirabelle Nebut
+
+q1 , a, z? ! q1 , z? luA
+(lecture bas vers haut de pile)
+Automates à pile
+
+16/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exemple des palindromes - 4
+a [luA, luB, z? ] / empiler luA
+
+a [luA] / depiler luA
+
+a,b[luA,luB,z? ]
+q1
+
+q2
+
+✏[z? ] / depiler z?
+
+✏ [luA,luB,z? ]
+b [luA, luB, z? ] / empiler luB
+I
+I
+I
+I
+
+b [luB] / depiler luB
+
+dans l’état q1 2 Q ;
+sans toucher la tête de lecture (✏-transition) ;
+et avec luA, luB ou z? en sommet de pile ;
+alors on passe dans q2 2 Q et on ne touche pas à la pile.
+q1 , ✏, luA ! q2 , luA
+q1 , ✏, luB ! q2 , luB
+Mirabelle Nebut
+
+q1 , ✏, z? ! q2 , z?
+
+Automates à pile
+
+17/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exemple des palindromes - 5
+a [luA, luB, z? ] / empiler luA
+
+a [luA] / depiler luA
+
+a,b[luA,luB,z? ]
+q1
+
+q2
+
+✏[z? ] / depiler z?
+
+✏ [luA,luB,z? ]
+b [luA, luB, z? ] / empiler luB
+
+b [luB] / depiler luB
+
+Pour terminer on vide la pile (✏-transition) :
+q2 , ✏, z? ! q2 , ✏
+18/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exemple des palindromes, récapitulatif
+a [luA, luB, z? ] / empiler luA
+
+a [luA] / depiler luA
+
+a,b[luA,luB,z? ]
+q1
+
+q2
+
+✏[z? ] / depiler z?
+
+✏ [luA,luB,z? ]
+b [luA, luB, z? ] / empiler luB
+
+b [luB] / depiler luB
+
+q1 , a, luA ! q1 , luA luA q1 , a, z? ! q1 , z? luA q1 , a, luB ! q1 , luB luA
+q1 , b, luA ! q1 , luA luB q1 , b, z? ! q1 , z? luB q1 , b, luB ! q1 , luB luB
+q1 , a, luA ! q2 , luA
+q1 , b, luA ! q2 , luA
+q1 , ✏, luA ! q2 , luA
+q2 , a, luA ! q2 , ✏
+
+q1 , a, z? ! q2 , z?
+q1 , b, z? ! q2 , z?
+q1 , ✏, z? ! q2 , z?
+q2 , b, luB ! q2 , ✏
+
+Mirabelle Nebut
+
+q1 , a, luB ! q2 , luB
+q1 , b, luB ! q2 , luB
+q1 , ✏, luB ! q2 , luB
+q2 , ✏, z? ! q2 , ✏
+
+Automates à pile
+
+19/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Définition formelle
+Definition (Automate à pile (AP))
+Un automate à pile A est un tuple (⌃, Z , z? , Q, q0 , F ,
+I
+
+⌃ est un alphabet d’entrée fini (les terminaux) ;
+
+I
+
+Z est un alphabet de pile fini ;
+
+I
+
+z? 2 Z est le symbole initial de pile,
+
+I
+I
+I
+I
+
+) où :
+
+Q est un ensemble fini d’états,
+q0 2 Q est l’état initial ;
+
+F ✓ Q est l’ensemble des états finaux ;
+
+✓ Q ⇥ (⌃ [ {✏}) ⇥ Z ⇥ Q ⇥ Z ⇤ est la relation de transition.
+
+NB : on pourrait choisir
+
+✓ Q ⇥ (⌃ [ {✏}) ⇥ Z ⇤ ⇥ Q ⇥ Z ⇤ .
+
+20/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exécution et configurations
+Une exécution est une suite de configurations.
+Pour un AF, une configuration est :
+I
+I
+
+mot restant à lire m 2 ⌃⇤ ;
+état courant q 2 Q ;
+
+(abbb, q)
+Pour un AP, configuration définie par :
+I
+I
+I
+
+le mot restant à lire m 2 ⌃⇤ ;
+l’état courant q 2 Q ;
+
+le contenu de la pile de Z ⇤ , lu du bas vers le haut de la pile.
+21/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exécution et configurations
+
+Ex : (abbb, q1 , z? luA luA)
+
+luA
+pour la pile luA
+z?
+
+Definition (configuration)
+Une configuration c d’un AP (⌃, Z , z? , Q, q0 , F ,
+de ⌃⇤ ⇥ Q ⇥ Z ⇤ .
+
+) est un élément
+
+22/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Transiter d’une configuration à une autre
+
+Le passage dans A d’une configuration c1 à une configuration c2
+s’écrit :
+c 1 `A c 2
+On note `⇤A la clôture réflexive et transitive de `A .
+Deux modes de transition pour changer de configuration :
+I
+
+sur une ⌃-transition ;
+
+I
+
+sur une ✏-transition.
+
+23/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Changement de configuration sur ⌃-transition : exemple
+
+Transition q1 , b, luA ! q1 , luA luB
+Configuration (bba, q1 , z? luA)
+On aura alors :
+(bba, q1 , z? luA) `A (ba, q1 , z? luA luB)
+
+24/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Changement de configuration sur ⌃-transition
+Definition (c1 `A c2 sur ⌃-transition)
+
+A passe d’une config c1 = (m1 , q1 , ↵1 ) à c2 = (m2 , q2 , ↵2 ) si :
+I
+I
+
+0
+
+il existe une transition (q1 , x, z) ! (q2 ,
+m1 est de la forme xm2 ;
+
+I
+
+↵1 est de la forme
+
+1z
+
+I
+
+↵2 est de la forme
+
+1 2.
+
+B
+B xm2 , q1 ,
+@
+
+↵1
+z
+1
+
+2)
+
+2
+
+;
+
+;
+
+1
+
+0
+
+B
+B
+C
+B
+C `A B m 2 , q 2 ,
+B
+A
+B
+@
+
+Mirabelle Nebut
+
+Automates à pile
+
+↵2
+2
+
+1
+
+1
+C
+C
+C
+C
+C
+C
+A
+
+25/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Changement de configuration sur ⌃-transition - exemple
+Transition q1 , b, luA ! q1 , luA luB
+Configuration (bba, q1 , z? luA)
+m1
+
+m2
+
+0
+
+2
+
+1
+1
+z }| {
+z}|{
+z}|{ z }| {
+( b |{z}
+ba , q1 , z? luA ) ` ( |{z}
+ba , q1 , z? luA luB )
+| {z }
+|
+{z
+}
+
+B
+B xm2 , q1 ,
+@
+
+m2
+
+↵1
+
+↵1
+z
+1
+
+1
+
+0
+
+B
+B
+C
+B
+C `A B m 2 , q 2 ,
+B
+A
+B
+@
+
+Mirabelle Nebut
+
+Automates à pile
+
+↵2
+
+↵2
+2
+
+1
+
+1
+C
+C
+C
+C
+C
+C
+A
+
+26/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Changement de configuration sur ✏-transition - exemple
+
+Transition q1 , ✏, luB ! q2 , luB
+Configuration (ba, q1 , z? luA luB)
+On aura alors :
+(ba, q1 , z? luA luB) ` (ba, q2 , z? luA luB)
+On ne touche pas à la tête de lecture.
+
+27/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Changement de configuration sur ✏-transition
+Definition (c1 `A c2 sur ✏-transition)
+
+A passe d’une config c1 = (m, q1 , ↵1 ) à c2 = (m, q2 , ↵2 ) si :
+I
+I
+I
+
+0
+
+il existe une transition (q1 , ✏, z) ! (q2 ,
+↵1 est de la forme
+
+1z
+
+↵2 est de la forme
+
+1 2.
+
+B
+B m , q1 ,
+@
+
+↵1
+z
+1
+
+2)
+
+2
+
+;
+
+(z sommet de pile) ;
+
+1
+
+0
+
+↵2
+
+B
+B
+C
+B
+C `A B m , q 2 ,
+B
+A
+B
+@
+
+Mirabelle Nebut
+
+Automates à pile
+
+2
+
+1
+
+1
+C
+C
+C
+C
+C
+C
+A
+
+28/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Exécution - exemple
+Pour le langage {an b n | n
+
+0} :
+
+8
+< qa , a, z? ! qa , z? luA
+qa , b, luA ! qb , ✏
+=
+:
+qb , b, luA ! qb , ✏
+
+a [z? ,luA] / empiler luA
+qa
+
+b [luA] / depiler luA
+
+b [luA] / depiler luA
+
+✏ [z? ] / depiler z?
+
+9
+qa , a, luA ! qa , luA luA =
+qa , ✏, z? ! qa , ✏
+;
+qb , ✏, z? ! qb , ✏
+
+qb
+
+✏ [z? ] / depiler z?
+
+(qa , aabb, z? ) `⇤A (qb , ✏, )
+(qa , ✏, z? ) `⇤A (qa , ✏, )
+
+29/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automates à pile généraux
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+30/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Critère d’acceptation
+
+Dans nos exemples, on accepte un mot si ruban vide et et pile vide.
+Ce sont des cas particuliers.
+Il y a deux critères d’acceptation possibles :
+I
+
+acceptation par état final (pour toute pile quand on s’arrête) ;
+
+I
+
+acceptation par pile vide (pour tout état quand on s’arrête).
+
+Ces deux critères sont équivalents.
+
+31/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Acceptation par état final - exemple
+L’exemple des palindromes sans vider la pile en q2 :
+a [luA, luB, z? ] / empiler luA
+
+a [luA] / depiler luA
+
+a,b[luA,luB,z? ]
+q1
+
+q2
+
+✏[z? ]
+
+qf
+
+✏ [luA,luB,z? ]
+b [luA, luB, z? ] / empiler luB
+
+b [luB] / depiler luB
+
+On remplace q2 , ✏, z? ! q2 , ✏ par q2 , ✏, z? ! qf , z?
+(q1 , abba, z? ) `⇤ (qf , ✏, z? ) : acceptation.
+
+32/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Acceptation par état final - définition
+Definition (Acceptation par état final)
+Un mot m 2 ⌃⇤ est accepté par état final par un AP
+A = (⌃, Z , z? , Q, q0 , F , ) si pour la configuration (m, q0 , z? ), il
+existe un état qf 2 F et un mot z 2 Z ⇤ tel que
+(m, q0 , z? ) `⇤A (✏, qf , z)
+
+Definition (Langage accepté)
+Le langage accepté par état final par un AP est l’ensemble des
+mots acceptés par cet automate.
+LF (A) = {m 2 ⌃⇤ | (m, q0 , z? ) `⇤A (✏, qf , z)}
+33/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Acceptation par pile vide - exemple
+
+Reconnaı̂tre {m 2 {a, b}⇤ | |m|a = |m|b } ?
+
+=
+
+8
+(q, a, z? ) ! (q, z? luA)
+>
+>
+>
+>
+(q, b, z? ) ! (q, z? luB)
+>
+>
+>
+< (q, a, luA) ! (q, z? luA luA)
+
+(q, b, luB) ! (q, z? luB luB)
+
+>
+>
+(q, a, luB) ! (q, ✏)
+>
+>
+>
+>
+(q, b, luA) ! (q, ✏)
+>
+:
+(q, ✏, z? ) ! (q, ✏)
+
+empilerluA
+empilerluB
+empilerluA
+empilerluB
+aconsommeluB
+bconsommeluA
+viderlapile
+
+a
+q
+b
+
+34/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Acceptation par pile vide - définition
+Definition (Acceptation par pile vide)
+Un mot m 2 ⌃⇤ est accepté par pile vide par un AP
+A = (⌃, Z , z? , Q, q0 , F , ) si pour la configuration (m, q0 , z? ), il
+existe un état q 2 Q tel que (m, q0 , z? ) `⇤A (✏, q, ✏)
+
+Definition (Langage accepté)
+Le langage accepté par pile vide par un AP est l’ensemble des mots
+acceptés par cet automate.
+LV (A) = {m 2 ⌃⇤ | (m, q0 , z? ) `⇤A (✏, q, ✏)}
+35/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automates à pile et langages algébriques
+
+Theorem
+L est un langage algébrique si et seulement s’il existe un AP A
+(acceptant par pile vide) tel que L = LV (A).
+
+36/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automates à pile généraux
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+37/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automates déterministes
+Les AP définis précédemment sont indéterministes (APND) :
+I
+
+un mot est accepté s’il existe au moins une suite de
+configurations conduisant à l’acceptation ;
+
+I
+
+mais il peut en avoir plusieurs ;
+
+I
+
+et il peut y avoir des suites conduisant à l’échec ;
+
+) automate à pile déterministe ?
+
+Definition (intuitive, APD)
+
+Un AP (acceptant par état final) est déterministe (APD) si, dans
+chaque configuration, il n’y a qu’une seule transition possible.
+38/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Automates déterministes vs non déterministes
+
+Les automates à pile non déterministes :
+I
+
+sont strictement plus puissants que les APD ;
+
+I
+
+ne sont pas tous déterminisables.
+APD 6, APND
+
+Di↵érent des AF : AFD , AFND.
+
+39/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Langage algébrique déterministe
+
+Definition
+Un langage algébrique L est déterministe s’il existe un AP A
+(acceptant par état final) déterministe tel que LF (A) = L.
+Exemple1 : {m 2 (a + b)⇤ | m est un palindrome} est algébrique,
+non ambigu, mais. . . n’est pas déterministe.
+Intuitivement, on ne sait pas deviner où est le milieu du mot.
+Exemple1 : {m1 cm2 | m1 m2 2 {a, b}⇤ est un palindrome } est un
+langage algébrique déterministe.
+
+40/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+
+Associer un AP à une grammaire algébrique
+I
+
+Les AP sont nécessaires pour reconnaı̂tre les langages
+algébriques. . .
+
+I
+
+. . . mais les AP ne sont pas si faciles à concevoir ;
+
+I
+
+et on ne voit pas bien le lien entre dérivations d’une
+grammaire et exécution d’un AP.
+
+Les langages algébriques sont spécifiés par des grammaires
+algébriques :
+I
+
+dériver automatiquement un AP à partir d’une grammaire
+algébrique ?
+
+I
+
+) automate des items (malheureusement pas déterministe).
+41/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Automates à pile généraux
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+42/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Automate des items, présentation
+
+Automate à pile particulier :
+I
+
+dérivé à partir d’une grammaire algébrique ;
+
+I
+
+non déterministe donc inutilisable en pratique ;
+permet de définir les automates réellement utilisés par les
+analyseurs syntaxiques ;
+
+I
+
+I
+I
+
+I
+
+analyse descendante par simplification ;
+surtout analyse ascendante.
+
+repose sur la notion d’item.
+
+43/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Item, définition
+
+Un item d’une grammaire G est de la forme :
+[X ! ↵ • ] avec X ! ↵ 2 P et ↵,
+
+2 (VN [ VT )⇤
+
+Ex : [S ! aS • b], [S ! a • Sb]
+Interprété comme :
+”en cherchant à dériver de X un mot m = uv 2 VT ⇤ , on a déjà
+dérivé un mot u de ↵, et il reste à dériver v de ”
+L’ensemble des items de G est noté It G .
+
+44/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Association des items aux productions de G
+
+À X ! ↵ on associe :
+I
+I
+
+[X ! •↵] :
+
+⌧
+
+on cherche à reconnaı̂tre un mot pour X
+
+[X ! ↵•] (item terminal) :
+
+⌧
+
+;
+
+on a reconnu un mot pour X
+
+À X ! ↵ on associe [X ! ↵ • ].
+À X ! ✏ est associé par convention l’unique item [X ! •].
+Ex : S ! ✏ | aSb
+It G = {[S ! •], [S ! •aSb], [S ! a • Sb], [S ! aS • b],
+[S ! aSb•]}
+45/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Extension de la grammaire
+
+Ex : S ! ✏ | aSb
+Récursivité sur l’axiome S.
+) reconnaı̂tre un mot pour S ne signifie pas forcément avoir fini !
+) extension de la grammaire avec un nouvel axiome S 0 :
+S 0 ! S, S ! aSb | ✏
+It G = {[S 0 ! •S], [S 0 ! S•], [S ! •], [S ! •aSb],
+[S ! a • Sb], [S ! aS • b], [S ! aSb•]}
+46/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Automate des items, intuition
+Tout est item !
+I
+
+les états de l’automate sont les items de It G ;
+
+I
+
+l’alphabet de pile est aussi l’ensemble It G
+) la pile sert à mémoriser des séquences d’états ;
+
+I
+
+l’état courant de l’automate est l’item de sommet de pile.
+
+Pour le moment on n’explicitera pas l’automate à nombre fini
+d’états sous-jacent.
+États particuliers :
+I
+I
+
+[S 0 ! •S] : item initial = état initial, sert de z? ;
+
+[S 0 ! S•] : item final = unique état final (arrêt par état final).
+47/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Exemple
+
+G = (VT , VN , S, P) avec VT = {a, b, d}, VN = {S, D} et :
+S0 ! S
+S ! aSbD | b
+D!d | ✏
+Reconnaı̂tre abbd ?
+Reconnaı̂tre abb ?
+Lien avec dérivation / arbre syntaxique ?
+
+48/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Configurations et transitions de l’automate - 1
+
+État courant indiqué par sommet de pile.
+) Configurations simplifiées du type (m 2 ⌃⇤ , z1 . . . zn 2 It ⇤ )
+Trois types de transitions :
+Lecture (⌃-transition) : lire a et avancer la tête de lecture ;
+Expansion (✏-transition) par une production X ! ↵ : tenter de
+reconnaı̂tre X en reconnaissant ↵ ;
+Réduction (✏-transition) par une production X ! ↵ : indiquer
+qu’on a reconnu X en reconnaissant ↵.
+
+49/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Configurations et transitions de l’automate - 2
+On simplifie / modifie un peu la forme de la relation de transition :
+I
+
+AP classique :
+
+I
+
+aut des items :
+
+✓ Q ⇥ (⌃ [ {✏}) ⇥ Z ⇥ Q ⇥ Z ⇤ ;
+
+✓ (⌃ [ {✏}) ⇥ (Z [ (Z ⇥ Z )) ⇥ Z ⇤
+
+Trois types de transitions :
+
+Lecture ⌃-transition :
+(a, [· · · • . . . ]) ! [· · · • . . . ] . . . [· · · • . . . ]
+
+Expansion ✏-transition :
+
+(✏, [· · · • . . . ]) ! [· · · • . . . ] . . . [· · · • . . . ]
+
+Réduction ✏-transition :
+
+(✏, [· · · • . . . ][· · · • . . . ]) ! [· · · • . . . ] . . . [· · · • . . . ]
+
+qui fait intervenir le sous-sommet de pile.
+
+50/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Transition de lecture, définition
+
+I
+I
+I
+I
+
+si le sommet de pile est [X ! ↵ • a ] ;
+et que a est sous la tête de lecture ;
+
+alors remplacer le sommet de pile par [X ! ↵a • ] ;
+et avancer la tête de lecture.
+
+( a , [X ! ↵ • a ] ) ! [X ! ↵a • ]
+
+( am , z1 . . . zn [X ! ↵ • a ] ) ` ( m , z1 . . . zn [X ! ↵a • ] )
+
+51/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Transition d’expansion par Y ! , définition
+
+I
+I
+I
+
+si le sommet de pile est [X ! ↵ • Y ] ;
+et que la production Y !
+
+appartient à la grammaire ;
+
+alors remplacer le sommet de pile par [X ! ↵ • Y ] [Y ! • ]
+( ✏ , [X ! ↵ • Y ] ) ! [X ! ↵ • Y ] [Y ! • ]
+
+( m , z1 . . . zn [X ! ↵ • Y ] ) `
+( m , z1 . . . zn [X ! ↵ • Y ] [Y ! • ] )
+52/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Transition d’expansion par Y ! , intuition
+Remplacer le sommet de pile [X ! ↵ • Y ] par
+[X ! ↵ • Y ] [Y ! • ] pour une production Y !
+Intuitivement :
+I
+
+pour reconnaı̂tre un mot pour X il faut reconnaı̂tre un mot
+pour Y ;
+
+I
+
+on a le choix (non-déterministe) entre toutes les productions
+de la forme Y ! ;
+
+I
+
+on garde en mémoire dans la pile qu’on est en train de
+reconnaı̂tre un mot pour X .
+
+53/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Transition de réduction par Y ! , définition
+
+I
+I
+
+si la partie supérieure de pile est [X ! ↵ • Y ] [Y ! •] ;
+alors la remplacer par [X ! ↵Y • ].
+
+( ✏ , [X ! ↵ • Y ] [Y ! •] ) ! [X ! ↵Y • ]
+( m , z1 . . . zn [X ! ↵ • Y ] [Y ! •] ) `
+( m , z1 . . . zn [X ! ↵Y • ] )
+
+54/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Transition de réduction par Y ! , intuition
+Remplacer la partie supérieure de pile [X ! ↵ • Y ] [Y ! •]
+par [X ! ↵Y • ].
+Intuitivement :
+I
+
+si pour reconnaı̂tre un mot pour X il fallait reconnaı̂tre un
+mot pour Y ;
+
+I
+
+et qu’on a e↵ectivement reconnu un mot pour Y ;
+
+I
+
+alors on passe Y ;
+
+I
+
+et on continue la reconnaissance de X .
+
+55/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Lien avec L(G )
+
+Theorem
+Le langage reconnu par l’automate des items de G est L(G ).
+
+56/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Automates à pile généraux
+Définitions
+Les critères d’acceptation
+Langages et automates déterministes
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+57/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Qu’est-ce que l’analyse syntaxique ?
+
+Étant donnés une grammaire G (ou par ex. son automate des
+items) et un mot m 2 VT ⇤ :
+I
+I
+
+a-t-on m 2 L(G ) ?
+
+si oui : arbre syntaxique pour m / dérivation pour m ?
+
+Comment faire ?
+
+58/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Approche (très) naı̈ve - 1
+
+On essaie toutes les dérivations possibles partant de l’axiome, en
+essayant de tomber sur m.
+Problème :
+I
+
+quand s’arrête-t-on ?
+
+I
+
+le langage engendré peut être infini ;
+
+I
+
+et si ça boucle ? Allongement inutile des dérivations.
+
+Ex (td) : E ! aEb | bEa | EE | ✏
+Ex : S ! X | a, X ! S
+
+et
+
+et
+
+E ) EE ) E ) EE ) . . .
+
+S ) X ) S ) ...
+59/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Approche (très) naı̈ve - 2
+On peut éliminer les productions qui
+I
+I
+
+⌧
+
+causent les boucles
+
+:
+
+X !✏
+
+X ! Y (Y 2 VN )
+
+On obtient alors une grammaire G 0 propre telle que :
+⇢
+L(G ) \ {✏} si ✏ 2 L(G )
+0
+L(G ) =
+L(G ) sinon
+Propriétés des grammaires propres = corrélation entre :
+I
+
+longueur de m
+
+I
+
+longueur de la dérivation pour m
+si S )k m alors k  |m|
+Mirabelle Nebut
+
+Automates à pile
+
+60/64
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Approche (très) naı̈ve - 3
+
+Pour le mot m et la grammaire G : m 2 G ?
+Si m = ✏, on regarde si S )⇤ ✏ (facile).
+Si m =
+6 ✏:
+I
+
+on transforme G en G 0 réduite et propre ;
+
+I
+
+on essaye toutes les dérivations possibles de taille  |m|.
+
+Complexité : O(n|m| ) avec n le nombre de règles de production.
+Bref, c’est naı̈f et pas efficace du tout ! Il faut chercher plus futé.
+
+61/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+En pratique
+On supprime tout indéterminisme.
+Il faut savoir à tout instant quelle expansion e↵ectuer.
+Plus de tentatives inutiles :
+I
+
+construction d’une unique dérivation ;
+
+I
+
+si la dérivation échoue, le mot est rejeté, il est accepté sinon.
+
+2 approches :
+I
+
+analyses universelles ;
+
+I
+
+analyses dédiées à certaines classes de grammaires.
+62/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Analyses
+
+⌧
+
+universelles
+
+Fonctionnent pour toute grammaire algébrique :
+I
+
+algorithme de Cocke-Younger-Kasami pour des grammaires en
+forme normale de Chomsky ;
+
+I
+
+algorithme de Earley pour des grammaires algébriques
+quelconques.
+
+Complexité en o(n3 ), où n est la longueur du mot à analyser.
+On préférerait o(n). . . quitte à se restreindre à certains types de
+grammaires.
+
+63/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+Automates à pile généraux
+L’automate des items
+Les di↵érents types d’analyse syntaxique
+
+Analyses dédiées à certaines grammaires
+
+nom
+dérivation construite
+ordre constr arbre
+opérations
+on part
+outil
+
+Analyse descendante
+LL(k)
+gauche
+préfixe
+lecture et expansion
+de l’axiome
+javaCC
+
+Analyse ascendante
+LR(k)
+droite
+postfixe
+lecture et réduction
+du mot à reconnaı̂tre
+Cup
+
+I
+
+plus efficaces ;
+
+I
+
+cas particulier de l’automate des items ;
+
+I
+
+ne fonctionnent que pour certaines classes de grammaires.
+64/64
+
+Mirabelle Nebut
+
+Automates à pile
+
+

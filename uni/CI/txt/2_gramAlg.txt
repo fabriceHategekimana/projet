@@ -1,0 +1,3658 @@
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+But de ce cours
+
+type de
+langage
+description
+formalisme
+sous-jacent
+
+outils pour
+l’analyse lexicale
+langage
+régulier
+expressions
+régulières
+
+outils pour
+l’analyse syntaxique
+langage
+algébrique
+grammaires
+algébriques
+
+AF(N)D
+
+automates à pile
+
+3/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires
+
+⌧
+
+pathologiques
+
+Les algébriques. . . et les autres
+4/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Principes de l’analyse syntaxique
+I
+
+reçoit de l’analyseur lexical une suite de symboles ;
+
+I
+
+reconnaı̂t dans cette suite la structure d’un texte.
+
+Ex :
+
+...
+
+...
+while (true) {
+while (true) {
+...
+}
+}
+...
+
+instruction
+
+PO
+
+TRUE
+
+WHILE
+
+cond
+
+listeInstr
+...
+
+PF AO ... AO ... AF ... AF
+5/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Décrire/reconnaı̂tre la structure d’un texte
+
+Les langages réguliers / expressions régulières ne suffisent pas.
+exemple archi-typique : {an b n |n
+I
+I
+
+parenthésage imbriqué
+pour le reconnaı̂tre :
+I
+I
+
+I
+
+0}
+
+compter/mémoriser le nombre de a ;
+compter /mémoriser le nombre de b.
+
+pas régulier.
+
+6/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+an b n pas régulier, argument intuitif - 1
+
+Dans un AF(fini)D : états = mémoire (finie)
+Ex langages réguliers finis :
+I
+I
+I
+
+AFD
+
+{an b n |n  3} ;
+
+{an b n |n  9045} ;
+
+...
+
+{an b n |n  k} pour k fixé ;
+
+Ex langage régulier infini : a⇤
+
+a
+
+7/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+an b n pas régulier, argument intuitif - 2
+
+{an b n | n
+
+0}
+
+AFD mémoire finie
+
+) il suffit de prendre n plus grand que la taille de la mémoire.
+
+8/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+an b n pas régulier, argument intuitif - 3
+
+Pour reconnaı̂tre {an b n |n
+
+0} :
+
+I
+
+mémoriser un nombre non borné de symboles a et b ;
+
+I
+
+) langage non régulier.
+
+Pour reconnaı̂tre {an b n |n  32} :
+I
+
+il faut mémoriser au pire 32 a et 32 b ;
+
+I
+
+mémorisation bornée ) régulier.
+
+9/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+an b n pas régulier, argument formel
+Theorem (Lemme de pompage)
+Soit L un langage régulier. Alors il existe un entier k tq pour tout
+mot m de L de longueur k, il existe des mots x, u, y 2 ⌃⇤ avec
+m = xuv , u 6= ✏ et pour tout n, xu n y 2 L.
+
+q0
+
+qf
+
+q
+x
+
+u
+
+y
+
+Pour an b n : où placer u ?
+Mirabelle Nebut
+
+10/112
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+Arbres syntaxiques
+Grammaires
+
+⌧
+
+pathologiques
+
+Les algébriques. . . et les autres
+11/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Grammaire algébrique pour Init
+programme ! entete listDecl listInst
+entete ! PROG ID PV
+listInst ! ✏
+listInst ! instr listInst
+instr ! lecture PV
+instr ! a↵ect PV
+lecture ! READ ID
+...
+
+une production
+une production vide
+
+TERMINAUX 2 VT
+non-terminaux 2 VN
+axiome 2 VN
+12/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Grammaire algébrique pour Init
+programme ! entete listDecl listInst
+entete ! PROG ID PV
+listInst ! ✏
+listInst ! instr listInst
+instr ! lecture PV | a↵ect PV
+// équivalent !
+lecture ! READ ID
+...
+TERMINAUX 2 VT
+non-terminaux 2 VN
+axiome 2 VN
+
+une production
+une production vide
+
+On écrit X ! ↵ |
+X !↵
+X !
+
+pour
+
+12/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Définition formelle
+Definition (grammaire algébrique)
+Une grammaire algébrique ou hors-contexte est un quadruplet
+G = (VT , VN , P, S)
+I
+
+VT et VN sont des vocabulaires disjoints : VT est l’ensemble
+des terminaux, VN l’ensemble des non-terminaux ;
+
+I
+
+S 2 VN est l’axiome, ou symbole de départ (Start) ;
+
+I
+
+P ✓ VN ⇥ (VN [ VT )⇤ est l’ensemble des (règles de)
+productions.
+13/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Remarques
+
+⌧
+
+P ✓ VN ⇥ (VN [ VT )⇤ est l’ensemble des productions
+
+:
+
+instr ! a↵ect PV
+est une notation pour
+(instr, a↵ect PV) 2 P
+Terminaux de VT = unités lexicales fixées à l’analyse lexicale.
+La grammaire engendre des mots de VT ⇤ .
+14/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Comment engendrer des mots ?
+Problème : engendrer des mots de VT ⇤ à partir :
+I
+
+de l’axiome ;
+
+I
+
+et des productions de la grammaire.
+
+Ex : engendrer le mot PROG ID PV à partir de GI :
+(1)
+(2)
+
+programme ! entete listDecl listInst
+entete ! PROG ID PV
+
+(3)
+(4)
+
+listDecl ! ✏
+listInst ! ✏
+
+Moyen : dérivations directes successives, à partir de l’axiome.
+15/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Comment engendrer des mots - dérivations directes
+
+(1)
+(2)
+
+programme ! entete listDecl listInst
+entete ! PROG ID PV
+
+programme )GI entete listDecl listInst
+
+(3)
+(4)
+
+listDecl ! ✏
+listInst ! ✏
+
+(dér. directe par (1))
+
+entete listDecl listeInst )GI PROG ID PV listDecl listInst par (2)
+PROG ID PV listDecl listInst )GI PROG ID PV listDecl
+
+par (4)
+
+PROG ID PV listDecl )GI PROG ID PV
+
+par (3)
+16/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Dérivation : définition
+Une dérivation est une suite de dérivations directes :
+programme )GI entete listDecl listInst
+)GI PROG ID PV listDecl listInst )GI PROG ID PV listDecl
+)GI PROG ID PV
+
+Cette dérivation est de longueur 4 : programme )4GI PROG ID PV
+Notation : programme )⇤GI PROG ID PV
+
+Pour une grammaire G d’axiome S, une dérivation pour le mot m
+désigne une dérivation de S à m.
+17/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Langage engendré par une grammaire
+Definition (langage engendré)
+Soit G une grammaire algébrique d’axiome S. Le langage engendré
+par G est défini par :
+L(G ) = {m 2 VT ⇤ | S )⇤ m}
+Déterminer si un mot m appartient au langage engendré, c’est
+déterminer si :
+S )⇤G m ?
+18/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Autre exemple - une grammaire des additions - 1
+
+GA = (VT , VN , P, A) où
+I
+I
+I
+
+VT = {id, +}
+VN = { A }
+
+P = { A ! A + A | id }
+
+19/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Autre exemple - une grammaire des additions - 2
+
+A ! A + A | id
+Une dérivation possible pour le mot id + id + id :
+A ) A + A ) A + A + A ) A + id + A ) id + id + A )
+id + id + id
+Donc A )⇤ id + id + id, ou A )5 id + id + id
+
+20/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Mon voisin a trouvé une dérivation di↵érente !
+
+On peut souvent trouver plusieurs dérivations pour un mot.
+Deux sources de choix :
+I
+
+choix du non-terminal à dériver ;
+
+I
+
+choix de la production à appliquer, de membre gauche le
+non-terminal choisi.
+
+21/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Dérivation directe (formellement) - 1
+Definition (dérivation directe)
+Soient , 0 2 (VN [ VT )⇤ . se dérive directement en 0 selon G ,
+noté )G 0 , s’il existe des mots , 0 2 (VN [ VT )⇤ et une
+0
+production X ! ↵ tels que :
+=
+X
+0 =
+0
+↵
+0
+
+X
+
+↵
+z }| {
+z
+}|
+{
+z}|{
+z}|{
+Ex : A + A + A ) A + id + A par A ! id
+
+A
+A +
+id +
+| {z+} |{z}
+| {zA} ) A
+| {z+} |{z}
+| {zA}
+X
+
+0
+
+Mirabelle Nebut
+
+↵
+
+0
+
+Langages et grammaires algébriques
+
+22/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Dérivation directe (formellement) - 2
+Definition (dérivation directe)
+Soient , 0 2 (VN [ VT )⇤ . se dérive directement en 0 selon G ,
+noté )G 0 , s’il existe des mots , 0 2 (VN [ VT )⇤ et une
+0
+production X ! ↵ tels que :
+=
+X
+0 =
+0
+↵
+0
+
+X
+
+↵
+
+z }| {
+z }| {
+z}|{
+z }| {
+Ex : A + A ) A + A + A par A ! A + A
+A
++} |{z}
+A |{z} ) A
++} A
++ A} |{z}
+| {z
+| {z
+| {z
+X
+
+0 =✏
+
+Mirabelle Nebut
+
+↵
+
+0 =✏
+
+Langages et grammaires algébriques
+
+23/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Encore un exemple, et un piège
+
+VT = {a, b}, VN = {S, B}, axiome S,
+P = {S ! BB, B ! a | b }.
+Dérivation pour aa ?
+De longueur 3, pas 2 !
+
+24/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Dérivation (formellement)
+Definition (dérivation)
+Soient , 0 2 (VN [ VT )⇤ . Une suite de mots 0 , 1 , . . .,
+(n 0) est une dérivation de en 0 selon G si 0 = ,
+et
+0
+
+)
+
+1
+
+) ··· )
+
+n
+n
+
+=
+
+0,
+
+n
+
+Definition (relation de dérivation)
+La relation de dérivation )⇤G est la fermeture réflexive et transitive
+de la relation de dérivation directe )G .
+25/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Mon voisin a trouvé une grammaire di↵érente !
+
+On peut trouver 2 grammaires algébriques qui engendrent le même
+langage.
+
+Definition (grammaires équivalentes)
+Deux grammaires sont équivalentes si elles engendrent le même
+langage.
+
+26/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Langages algébriques
+
+Definition (langage algébrique)
+Les langages engendrés par les grammaires algébriques sont
+appelés langages algébriques.
+
+27/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Comparaison avec les réguliers
+
+réguliers
+
+régulier ) algébrique
+algébrique 6) régulier
+
+algébriques
+
+Tout langage régulier est algébrique :
+I
+
+possible d’utiliser une grammaire algébrique au lieu
+d’expressions régulières ;
+
+I
+
+mais AF plus efficaces.
+
+Il existe des algébriques qui ne sont pas réguliers : {an b n |n
+
+0}
+28/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Un exemple pour la route
+
+Une première grammaire des expressions arithmétiques :
+GE = (VT , VN , P, E ) :
+I
+I
+I
+
+VT = {id, +, *, (, )}
+VN = { E }
+
+P = { E ! E + E | E * E | ( E ) | id }
+
+Montrer que id * (id + id) est un mot de L(GE ).
+Langage algébrique ? régulier ?
+29/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+
+Générateurs d’analyseurs syntaxiques
+erreur
+gram
+alg
+
+générateur
+AnSynt.java
+
+javac
+java
+
+suite
+symboles
+analyseur
+syntaxique
+
+erreur
+
+30/112
+
+On verra 2 outils : Cup et antLR
+Mirabelle Nebut
+
+dérivation
+arbre synt
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires
+
+⌧
+
+pathologiques
+
+Les algébriques. . . et les autres
+
+31/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique
+
+Arbre résultant de l’analyse syntaxique.
+Fait apparaı̂tre la structure syntaxique d’un mot.
+Notion très importante, on le verra plus tard.
+On parle aussi d’arbre de dérivation.
+
+32/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique : exemple - 1
+Arbre syntaxique pour id * (id + id) selon GE :
+E
+E
+E
+E
+
+id
+
+E
+
+*
+
+(
+
+id
+
+E
+
++
+
+id
+
+)
+33/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique : exemple - 2
+
+Arbre syntaxique pour PROG ID PV selon GI :
+
+program
+entete
+PROG ID
+
+PV
+
+listDecl
+✏
+
+listInst
+✏
+
+34/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Schématiquement
+Pour une grammaire G :
+I
+
+la racine : l’axiome de G ;
+
+I
+
+le mot des feuilles : le mot qui nous intéresse ;
+
+I
+
+les noeuds internes sont agencés selon les productions de G :
+A ! N1 N2 . . . Nk
+
+A
+
+N1
+
+...
+
+Nk
+
+A!✏
+
+A
+✏
+
+35/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique et appartenance à L(G )
+
+Theorem
+
+Soit m 2 VT ⇤ . m 2 L(G ) ss’il existe un arbre syntaxique selon G
+dont le mot aux feuilles est m.
+On dit alors que cet arbre est un arbre syntaxique pour m, ou que
+m admet cet arbre.
+Répondre à m 2 L(G ) = chercher un arbre syntaxique pour m.
+
+36/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+En pratique
+
+Les analyseurs syntaxiques ne construisent pas un arbre syntaxique.
+L’arbre est une représentation commode pour comprendre l’analyse
+syntaxique.
+Ils construisent une dérivation particulière, appelée gauche ou
+droite.
+) lien entre arbre syntaxique et dérivation ?
+
+37/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique et dérivations - 1
+Facile de construire un arbre syntaxique à partir d’une dérivation.
+E
+
+E )E *E
+) id * E
+) id * ( E )
+) id * ( E + E )
+) id * ( id + E ) E
+) id * ( id + id )
+
+id
+
+E
+E
+E
+
+*
+
+(
+
+id
+
+E
+
++
+
+id
+
+)
+
+À une dérivation correspond un seul arbre.
+38/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique et dérivations - 2
+À un arbre correspondent potentiellement plusieurs dérivations.
+
+E
+E
+
+E
+id
+
++
+
+id
+
+Ces 2 dérivations sont
+même arbre :
+
+⌧
+
+E )GI E + E )GI id + E
+)GI id + id
+E )GI E + E )GI E + id
+)GI id + id
+
+équivalentes
+
+: elles correspondent au
+
+I
+
+mêmes productions appliquées aux mêmes non-taux ;
+
+I
+
+seul l’ordre des dérivations directes varie.
+39/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique et dérivations : dérivations gauche/droite
+
+On peut fixer l’ordre des dérivations directes en choisissant
+systématiquement :
+I
+I
+
+soit le non-terminal le plus à gauche ;
+E )GI E + E )GI id + E )GI id + id
+
+soit le non-terminal le plus à droite.
+E )GI E + E )GI E + id )GI id + id
+
+dérivation gauche
+dérivation droite
+
+À chaque arbre syntaxique correspond une unique dérivation
+gauche et une unique dérivation droite.
+
+40/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Dérivation gauche/droite, formellement
+
+Definition
+Soient , 0 2 (VN [ VT )⇤ et 0 ) 1 ) · · · ) n une dérivation
+de en 0 . Si à chaque étape on choisit de remplacer dans i le
+non-terminal :
+I
+
+le plus à gauche : c’est une dérivation gauche (leftmost
+lm ⇤ 0
+;
+
+derivation) notée =)
+I
+
+le plus à droite : c’est une dérivation droite (rightmost
+rm ⇤
+derivation) notée =) 0 .
+
+41/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Arbre syntaxique et dérivations - 3
+Certaines dérivations ne correspondent pas au même arbre.
+(1) E ) E * E ) E * E + E )⇤ id * id + id
+(2) E ) E + E ) E * E + E )⇤ id * id + id
+E
+
+(1)
+
+E
+
+E
+E
+
+id
+
+E
+
+(2)
+
+*
+
+id
+
+E
+E
+
++
+
+E
+id
+
+id
+
+E
+E
+
+*
+
+id
+
++
+
+id
+
+À un mot correspondent potentiellement plusieurs arbres.
+42/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Récapitulatif
+
+I
+
+À une dérivation correspond un seul arbre.
+
+I
+
+À un arbre correspondent potentiellement plusieurs
+dérivations.
+
+I
+
+À un arbre correspond une unique dérivation gauche et une
+unique dérivation droite.
+
+I
+
+À un mot correspondent potentiellement plusieurs
+arbres/interprétations.
+
+43/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Ambiguı̈té
+Grammaires réduites
+Les algébriques. . . et les autres
+44/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaire refusée par le générateur
+
+erreur
+gram
+alg
+
+générateur
+
+2 cas possibles :
+I
+
+la grammaire est pathologique : le concepteur doit la réviser
+
+I
+
+la grammaire ne convient pas à la méthode d’analyse
+syntaxique implantée par l’outil : autre problème, cf suite du
+cours
+45/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Pathologies vues dans ce cours
+Les grammaires ambiguës :
+I
+
+elles sont rejetées par le générateur
+
+I
+
+avec un message d’erreur pas forcément explicite
+
+I
+
+il faut trouver une grammaire équivalente
+
+Les grammaires non réduites :
+I
+
+acceptées par le générateur, éventuellement avec warning
+
+I
+
+mais le générateur calcule en fait une autre grammaire
+
+I
+
+signale souvent une erreur de conception
+
+I
+
+il faut savoir comprendre et réparer
+46/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Ambiguı̈té
+Grammaires réduites
+Les algébriques. . . et les autres
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+Mirabelle Nebut
+
+47/112
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Interprétation d’un mot et ambiguı̈té
+Deux interprétations (sémantiques) di↵érentes de id * id + id :
+ce mot est ambigu.
+E
+
+E
+
+E
+E
+id
+
+E
+
+E
+
+*
+
+E
++
+
+id
+
+E
+id
+
++ prio sur *
+
+id
+
+E
+E
+
+*
+
+id
+
++
+
+id
+
+* prio sur +
+48/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Définition
+
+Definition
+(ambiguı̈té) Un mot w 2 L(G ) est ambigu s’il admet plusieurs
+arbres syntaxiques.
+
+49/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Récapitulatif
+I
+
+À une dérivation correspond un seul arbre.
+
+I
+
+À un arbre correspondent potentiellement plusieurs
+dérivations.
+
+I
+
+À un arbre correspond une unique dérivation gauche et une
+unique dérivation droite.
+
+I
+
+À un mot correspondent potentiellement plusieurs
+arbres/interprétations.
+
+I
+
+À un mot non ambigu correspond un(e) unique
+arbre/interprétation.
+50/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Définitions
+
+Definition
+Une grammaire est ambiguë si elle permet de dériver au moins un
+mot ambigu.
+
+Definition
+Un langage est ambigu si toutes les grammaires qui l’engendrent
+sont ambiguës.
+
+51/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Le problème des interprétations multiples
+
+Un programme ayant plusieurs interprétations ?
+Désastreux pour un programme souhaité déterministe !
+On ne travaille qu’avec des grammaires dites non ambiguës, pour
+lequelles tout mot admet un unique arbre syntaxique.
+) il faut savoir repérer les grammaires ambiguës.
+
+52/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Détecter l’ambiguı̈té - 1
+Certaines grammaires sont ⌧ clairement ambiguës, repérable
+avec de l’expérience.
+Ex de production récursive symétrique : E ! E + E .
+E
+
+E
+
+E
+
+E
+
++
+
+E
+
+E
+
++
+
+E
+
+E
+
++
+
+E
+
+E
+
++
+53/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Détecter l’ambiguı̈té - 2
+Certaines grammaires sont mal conçues
+Ex grammaire Init G1 non ambiguë :
+listInst ! ✏ | inst listInst
+inst ! a↵ect PV | lecture PV
+lecture ! READ IDENT
+listInst
+inst
+
+listInst
+
+lecture
+
+READ IDENT PV. . .
+Mirabelle Nebut
+
+PV
+Langages et grammaires algébriques
+
+54/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Détecter l’ambiguı̈té - 3
+
+Déplacement de la production vide.
+Ex grammaire Init G2 ambiguë :
+listInst ! inst listInst | inst
+inst ! ✏ | a↵ect PV | lecture PV
+Voyez-vous pourquoi G2 est ambiguë ?
+
+55/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Prouver une ambiguı̈té
+
+Prouver qu’une grammaire est ambiguë = trouver un mot qui
+admet au moins 2 arbres syntaxiques.
+L’utilisation d’un générateur d’analyseur syntaxique peut aider.
+Prouver qu’une grammaire n’est pas ambiguë = faire une preuve.
+Décider de l’ambiguı̈té d’une grammaire est difficile : c’est un
+problème indécidable.
+
+56/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaires ambiguës, en pratique
+
+Quand un langage L est intuitivement non ambigü. . .
+et qu’une grammaire engendrant L l’est. . . on peut essayer de la
+rendre non ambiguë :
+I
+
+le plus souvent : on réfléchit et on change peu de choses ;
+
+I
+
+cas particulier : les grammaires à opérateurs.
+
+57/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaires à opérateurs
+
+Grammaires faisant intervenir des opérateurs avec :
+I
+
+associativité ;
+
+I
+
+priorités.
+
+Ex : grammaire (ambiguë) des expressions arithmétiques
+E ! E + E | E * E | ( E ) | id
+
+58/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Associativité des opérateurs
+Première source d’ambiguı̈té : l’associativité de + et *.
+E
+
+E
+
+E
+
+id
+
+E
+
++ id
+
+E
+
++
+
+E
+
+E
+
+id
+
+id
+
+associativité droite
+
+E
+
++
+
+E
+
+E
+
+id
+
++
+
+id
+
+associativité gauche
+59/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Priorité des opérateurs
+Seconde source d’ambiguı̈té : priorité de + et *.
+E
+
+E
+
+E
+E
+id
+
+E
+
+E
+
+*
+
+E
++
+
+id
+
+E
+id
+
++ prio sur *
+
+id
+
+E
+E
+
+*
+
+id
+
++
+
+id
+
+* prio sur +
+
+NB : plus prioritaire = dérivé du E le plus bas dans l’arbre
+60/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Principes - 1
+E ! E + E | E * E | ( E ) | id
+Dans cette grammaire l’axiome E représente potentiellement :
+I
+
+une somme : opérateur + ;
+
+I
+
+un produit : opérateur * ;
+
+I
+
+une expression atomique : id ;
+
+I
+
+une expression parenthésée.
+
+Pour refléter les priorités des opérateurs dans la grammaire :
+I
+
+on repère la structure d’une expression ;
+
+I
+
+on structure la grammaire en conséquence.
+61/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Principes - 2
+Structure d’une expression : somme de produits de facteurs
+X Y
+xij
+i=0...n j=0...m
+
+Rmq : d’abord la somme, la moins prioritaire.
+Les facteurs xij sont soit :
+I un atome id ;
+I une expression parenthésée.
+Pour imiter cette structure dans la grammaire, on lui ajoute :
+I S 2 VN pour une somme ;
+I P 2 VN pour un produit ;
+I F 2 VN pour un facteur.
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+62/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Traitement de l’associativité, ex des produits - 1
+F ! id | ( E )
+
+P !? *?
+
+Un opérande d’un produit peut être :
+I
+
+un autre produit : récursivité sur P ;
+
+I
+
+un facteur F (ne permettant pas de dériver un produit).
+
+Par ailleurs :
+I
+
+on ne veut pas d’un produit P * P !
+
+I
+
+il faut un
+
+⌧
+
+cas d’arrêt
+
+P !F | P *F?
+F ! id | ( E )
+
+:P !F
+P ! F | F * P?
+F ! id | ( E )
+
+Récursivité gauche ?
+
+Récursivité droite ?
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+63/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Traitement de l’associativité, ex des produits - 2
+P !F | P *F
+F ! ...
+récursivité gauche
+
+P !F | F *P
+F ! ...
+récursivité droite
+
+P
+
+P
+
+P
+P
+
+P
+F
+
+F
+
+F
+
+F
+id * id
+
+P
+
+F
+
+F
+* id
+
+id * id * id
+
+associativité gauche
+
+associativité droite
+Ici on choisira donc une récursivité gauche.
+64/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Traitement des priorités - 1
+En traitant la somme (de produits) de la même manière : OK
+E
+
+E
+S
+P
+F
+
+S
+
+!S
+!P | S +P
+!F | P *F
+! id | ( E )
+
+S
+P
+
+P
+P
+
+F
+id
+
+F
+* id
+
+F
++ id
+65/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Traitement des priorités - 2
+Rmq : en inversant somme et produit : KO
+E !S
+S en haut
+S !P | S +P
+P ! F | P * F ...
+
+E !P
+P en haut
+P !S | P *S
+S ! F | S + F ...
+
+E
+
+E
+
+P
+
+S
+
+P
+
+S
+P
+
+P
+P
+
+F
+id
+
+F
+* id
+
+F
++ id
+Mirabelle Nebut
+
+S
+
+S
+
+S
+
+F
+
+F
+
+F
+
+id * id
+
++ id
+
+Langages et grammaires algébriques
+
+66/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Systématisation
+
+Pour rendre une grammaire à opérateur non ambiguë :
+I
+
+on ajoute un non terminal par niveau de priorité (S pour +, P
+pour *, etc) ;
+
+I
+
+les moins prioritaires en haut de l’arbre, proches de l’axiome ;
+
+I
+
+les plus prioritaires en bas de l’arbre, proches des feuilles ;
+
+I
+
+les
+
+I
+
+associativité gauche/droite ) récursivité gauche/droite.
+
+⌧
+
+atomes
+
+tout en bas ;
+
+67/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Exemple plus gros
+
+E ! E + E | E - E | E * E | E / E | - E | ( E ) | id
+{+, b } prio {⇤, /} prio {-u } prio {()}
+| {z }
+| {z }
+| {z }
+| {z }
+S
+
+P
+
+U
+
+A
+
+E !S
+S !P | S +P | S -P
+P !U | P *U | P /U
+U !-U | A
+A ! ( E ) | id
+
+68/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaires à opérateurs, bilan
+
+Version ambiguë : très intuitive. . . mais ambiguë !
+Version non ambiguë : opérationnalisable. . .
+I
+
+mais complètement illisible !
+
+I
+
+taille arbre beaucoup plus grande.
+
+69/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaires à opérateurs, automatisation
+
+On a un algorithme qui calcule une grammaire non
+ambiguë équivalente.
+Il prend en entrée :
+I
+
+une grammaire à opérateurs ambiguë ;
+
+I
+
+et les niveaux de priorité + associativité des opérateurs.
+
+70/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaires à opérateurs, outillage
+Cup :
+I
+
+on spécifie (et décore) uniquement la grammaire ambiguë ;
+
+I
+
+on spécifie les niveaux de priorité + associativité des
+opérateurs.
+
+I
+
+la version non-ambiguë est automatiquement calculée, mais
+reste implicite.
+
+antLR :
+I
+
+il faut écrire la grammaire non-ambiguë à la main
+
+I
+
+donc maı̂triser l’algorithme de calcul. . .
+71/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Les grammaires algébriques
+Langage engendré, dérivations
+Langages algébriques, comparaison avec les réguliers
+Outillage
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Ambiguı̈té
+Grammaires réduites
+Les algébriques. . . et les autres
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+Mirabelle Nebut
+
+72/112
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Aparté : parallèle code/grammaire - 1
+Quand on code. . . :
+I
+
+on écrit des bêtises (bugs) ;
+
+I
+
+on écrit du code mort ;
+
+I
+
+on écrit des choses simplifiables, genre if (x == true) ;
+
+I
+
+etc.
+
+Pour détecter ces bêtises :
+I analyses statiques possibles (à la compilation) :
+I
+
+I
+
+détecte des erreurs de typages, de syntaxe, code mort, etc.
+
+test (à l’exécution) :
+I
+I
+
+on essaie pour voir si ça marche ;
+détecte les erreurs ⌧ sémantiques (le programme est
+syntaxiquement correct mais ne répond pas à sa spécification).
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+73/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Aparté : parallèle code/grammaire - 2
+Quand on écrit une grammaire : c’est pareil ! on peut se tromper :
+I
+
+on a oublié une production ;
+
+I
+
+on s’est trompé dans l’écriture d’une production ;
+
+I
+
+etc.
+
+Certaines erreurs sont détectables statiquement :
+I
+
+détection de productions et non-taux inutiles (⇠ code mort) ;
+
+I
+
+) obtention d’une grammaire dite réduite (cf cours).
+
+Erreurs sémantiques (la grammaire ne dit pas ce qu’on pense) :
+I
+
+on teste en exécutant l’analyseur syntaxique.
+74/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Aparté : parallèle code/grammaire - 3
+On souhaite parfois réusiner (refactoring) un programme. . .
+. . . de même on peut souhaiter transformer une grammaire pour :
+I
+
+obtenir des arbres syntaxiques plus compacts ;
+I
+I
+
+I
+
+obtenir une forme de grammaire particulière propice à
+certaines analyses ;
+I
+I
+
+I
+
+suppression des règles X ! Y et X ! ✏ ;
+) grammaires propres ;
+forme normale de Chomsky (FNC) ;
+X ! a ou X ! YZ ;
+
+mettre à part ✏.
+
+Pas dans ce cours, cf la littérature.
+75/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaires réduites
+Certaines grammaires sont ⌧ pathologiques
+non-terminaux ne servent à rien.
+
+car certains
+
+Souvent dû à une erreur de conception : cf code mort.
+En pratique :
+I
+
+les générateurs signalent au mieux le problème par un warning
+à la génération
+
+I
+
+on décèle souvent le problème en testant l’analyseur
+syntaxique.
+
+Definition
+Une grammaire est dite réduite si elle ne contient pas de
+non-terminal improductif ou inaccessible.
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+76/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Non-terminaux improductifs : exemple
+
+liste ! elt ; liste
+elt ! a | b
+
+liste est improductif : il ne permet pas de dériver un mot de
+{a, b, ; }⇤ .
+En fait on voulait dire : liste ! elt ; liste | elt
+elt ! a | b
+
+77/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Ce qu’en disent les outils
+
+liste ! elt ; liste
+elt ! a | b
+
+Rien ! Pas de warning à la génération.
+Mais l’analyseur syntaxique généré signale une erreur syntaxique
+dès qu’on termine l’entrée par EOF.
+) on se doute qu’il y a une erreur qqpart !
+
+78/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Définition d’un improductif
+
+Definition
+Un non-terminal X 2 VN est improductif s’il n’existe pas de mot
+u 2 VT ⇤ tel que X )⇤ u (le langage engendré par X est vide). Il
+est productif sinon.
+
+79/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Calcul des improductifs
+
+1. on calcule les productifs ;
+2. par complémentaire on a les improductifs.
+Ensuite on répare la grammaire pour que les improductifs ne le
+soient plus.
+NB : on obtiendrait une grammaire équivalente à celle de départ en
+supprimant toutes les productions contenant un improductif en
+partie gauche ou droite.
+
+80/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Calcul des productifs : idée
+
+X est productif :
+I
+I
+
+s’il existe une production X ! u avec u 2 VT ⇤ ;
+
+ou s’il existe une production X ! ↵ avec ↵ 2 (VN [ VT )⇤ tel
+que tous les non-terminaux apparaissant dans ↵ sont
+productifs.
+
+81/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Calcul des productifs : plus petit point fixe
+
+Algorithme naı̈f pour calculer un plus petit point fixe par itérations
+successives :
+I
+
+on part d’un ensemble initial ;
+
+I
+
+on le fait grossir itérativement ;
+
+I
+
+jusqu’à stabilisation.
+
+82/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Exemple
+
+G1 telle que VN = {S, X , Y , Z , W } (axiome S), VT = {a, b, d} et
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+
+S !aX
+S !d W
+X !bS
+X !aY bY
+Y !ba
+Y !aZ
+Z !aZ X
+W !aS
+83/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Exemple, résolution
+
+no itération
+0 (init)
+1
+2
+3
+...
+
+Prod
+
+84/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Algorithme de calcul des productifs
+
+Entrée : une grammaire algébrique G
+Sortie : l’ensemble Prod
+de ses non-terminaux productifs
+// Init
+Prod = ;
+pour toute production X ! u, u 2 VT ⇤
+faire Prod = Prod [ {X } // noté Prod [ = {X }
+fait
+
+85/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Algorithme de calcul des productifs
+// Itérations
+faire jqa stabilisation de Prod
+New = ; // les productifs découverts
+// pendant l’itération
+pour toute production X ! u1 X1 u2 . . . Xn un
+tq X 62 Prod // X pas encore traité
+et {X1 , . . . , Xn } ✓ Prod // X productif
+faire New [ = {X }
+fait
+Prod [ = New
+fait
+86/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Exemple, solution
+On trouve Prod = {Y ,X ,S,W }, donc Z est improductif.
+En supprimant Z partout on obtient la grammaire équivalente à
+G1 :
+G10 telle que VN = {S, X , Y , W } et
+(1)
+(2)
+(3)
+(4)
+(5)
+(8)
+
+S !aX
+S !d W
+X !bS
+X !aY bY
+Y !ba
+W !aS
+87/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Non-terminaux inaccessibles : exemple
+
+Ex : instr ! if | while | do
+a↵ect ! IDAFFID
+L’axiome ne permet pas
+
+⌧
+
+d’attraper
+
+a↵ect, qui est inutile.
+
+En fait on voulait dire : instr ! if | while | do | a↵ect
+a↵ect ! . . .
+
+88/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Ce qu’en disent les outils
+instr ! if | while | do
+a↵ect ! IDAFFID
+
+Cup affiche un warning :
+*** Production ”a↵ect : := ID AFF ID” never reduced
+antLR ne signale rien.
+Dans les 2 cas l’analyseur syntaxique généré n’accepte aucune
+a↵ectation.
+) on se doute qu’il y a une erreur qqpart !
+89/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Définition d’un inaccessible
+
+Definition
+Soit G une grammaire algébrique d’axiome S. Un non-terminal
+X 2 VN est inaccessible s’il n’existe pas de mots
+↵, 2 (VN [ VT )⇤ tels que S )⇤ ↵X . Il est accessible sinon.
+
+90/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Calcul des inaccessibles
+
+1. on calcule les accessibles ;
+2. on a par complémentaire les inaccessibles ;
+Ensuite on répare la grammaire pour que les inaccessibles ne le
+soient plus.
+NB : on obtiendrait une grammaire équivalente à celle de départ
+ensupprimant toutes les productions contenant un inaccessible en
+partie gauche (suffisant, supprime automatiquement les
+inaccessibles en partie droite).
+91/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Calcul des accessibles : idée
+
+X est accessible si :
+I
+
+c’est l’axiome ;
+
+I
+
+ou il existe une production Y ! ↵X
+accessible.
+
+telle que Y est
+
+Même principe d’itération de point fixe que pour les accessibles
+mais on cherche les candidats en partie droite de production.
+
+92/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Exemple
+G2 telle que VN = {S, Y , U, V , X , Z } (axiome S),
+VT = {a, b, d, e} et
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+(9)
+
+S !Y
+Y !Y Z
+Y !Y a
+Y !b
+U !V
+X !e
+V !V d
+V !d
+Z !Z X
+93/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Exemple, solution
+Acc = {S, Y , Z , X }
+En supprimant U et V partout on obtient la grammaire
+équivalente à G2 :
+G20 telle que VN = {S, X , Y , Z } et
+(1)
+(2)
+(3)
+(4)
+(6)
+(9)
+
+S
+Y
+Y
+Y
+X
+Z
+
+!Y
+!Y Z
+!Y a
+!b
+!e
+!Z X
+94/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Algorithme de calcul des accessibles
+
+Entrée : une grammaire algébrique G d’axiome S
+Sortie : l’ensemble Acc
+de ses non-terminaux accessibles
+// Init
+Acc = {S}
+
+95/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Algorithme de calcul des accessibles
+// Itérations
+faire jqa stabilisation de Acc
+New = ; // les accessibles découverts
+// pendant l’itération
+pour toute production Y ! ↵X , {X , Y } ✓ VN
+tq X 62 Acc // X pas encore traité
+et Y 2 Acc // X accessible
+faire New [ = {X }
+fait
+Acc [ = New
+fait
+96/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Ambiguı̈té
+Grammaires réduites
+
+Grammaire réduite : attention
+Si on souhaite calculer une grammaire réduite :
+Il faut supprimer d’abord les improductifs puis les inaccessibles.
+Ex : Improductifs de G20 : {Z }
+Si on supprime Z . . . X devient inaccessible !
+La grammaire réduite équivalente est donc :
+(1) S ! Y
+(3) Y ! Y a
+(4) Y ! b
+97/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires
+
+⌧
+
+pathologiques
+
+Les algébriques. . . et les autres
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+98/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Propriétés de clôture
+réguliers ⇢ algébriques
+Les algébriques sont plus expressifs que les réguliers. Ils ont donc
+des propriétés moins fortes :
+clôture par
+Union
+Concaténation
+Etoile
+Intersection
+Complémentaire
+
+langages réguliers
+Oui
+Oui
+Oui
+Oui
+Oui
+
+langages algébriques
+Oui
+Oui
+Oui
+Non
+Non
+99/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Régulier ? Algébrique ?
+Description de déplacements sur h et b.
+L1 = {w 2 {h, b}⇤ }
+L2 = {hn b p | n
+L3 = {hn b p | n
+
+0, p
+p
+
+0}
+0}
+
+L4 = {w 2 {h, b}⇤ | |w |h = |w |b }
+
+L5 = {w 2 {h, b}⇤ | w est un palindrome }
+L6 = {ww | w 2 {h, b}⇤ }
+
+100/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Limitation des algébriques
+L6 = {ww | w 2 {h, b}⇤ } n’est pas algébrique.
+Les grammaires algébriques expriment :
+I
+
+les propriétés structurelles des langages ;
+
+I
+
+mais pas leurs propriétés contextuelles ;
+
+I
+
+on les appelle aussi
+
+⌧
+
+grammaires hors contexte
+
+.
+
+Par ex, on ne peut pas exprimer par une grammaire algébrique :
+I
+
+que toute variable utilisée a été déclarée ;
+
+I
+
+les vérifications de typage, etc.
+
+Ces propriétés relèvent de l’analyse sémantique.
+101/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Limitation des algébriques
+Étant donné :
+I
+I
+
+un mot m de (VT [ VN )⇤ contenant X 2 VN
+une production X ! ↵
+
+la dérivation remplace X par ↵ indépendamment de m, le contexte
+de X .
+
+m
+X
+
+102/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Ex de propriété structurelle
+Toute accolade ouverte est fermée : S ! ✏ | aSb
+S
+S
+
+b
+
+a
+
+a et b sont dans le même arbre issu de S
+) propriété indépendante du contexte.
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+103/112
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Ex de propriété contextuelle
+{ww | w 2 {h, b}⇤ } : essai. . .
+
+S
+
+S ! S1 S2
+S1 )⇤ w1
+S2 )⇤ w2
+
+S1
+
+w1
+
+S2
+
+w2
+
+w1 et w2 sont dans deux arbres indépendants :
+I
+
+on ne peut pas forcer w1 = w2 ;
+
+I
+
+propriété dépendante du contexte.
+104/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Autre exemple
+
+{an b n c n | n
+
+0}
+
+Comment forcer autant de a que de b que de c ?
+Impossible avec des dérivations indépendantes les unes des autres.
+) {an b n c n | n
+
+0} n’est pas algébrique.
+
+105/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Justification théorique : lemme fondamental des
+algébriques
+Soient u1 , u2 , v 2 (VT [ VN )⇤ .
+
+Si u1 u2 !k v alors il existe v1 , v2 2 (VT [ VN )⇤ tels que :
+I
+
+v = v1 v 2
+
+I
+
+u1 !k1 v1 et u2 !k2 v2
+
+I
+
+k1 + k2 = k.
+
+Ce lemme ou sa généralisation sert dans les preuves, par exemple
+pour montrer que le langage engendré par S ! aSb | ✏ est
+{an b n | n 0}.
+106/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Comment être sensible au contexte ?
+En utilisant une grammaire contextuelle.
+Productions de la forme : ↵ ! avec |↵|  | |
+avec ↵, 2 (VN [ VT )⇤
+Ex : AB ! BA
+
+Les grammaires contextuelles :
+I
+
+engendrent les langages contextuels ;
+
+I
+
+ne sont pas utilisées lors de l’analyse syntaxique ;
+
+I
+
+pas d’algorithme polynomial connu qui, pour tout mot,
+détermine si ce mot est engendré par une grammaire
+contextuelle donnée.
+107/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Si on continue à généraliser. . .
+
+Il existe des grammaires arbitraires.
+Productions de la forme : ↵ !
+avec ↵,
+Ex : AB ! ✏
+
+2 (VN [ VT )⇤
+
+Ces grammaires engendrent l’ensemble de tous les langages.
+
+108/112
+
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+Limites des langages réguliers
+Langages et grammaires algébriques
+Arbres syntaxiques
+Grammaires ⌧ pathologiques
+Les algébriques. . . et les autres
+
+Comparaison avec les réguliers
+Limitation des algébriques
+Les autres
+
+Hiérarchie des langages et des grammaires
+
+régulier
+
+contextuel
+
+algébrique
+arbitraire
+
+Chaque type de langage est généré par un type de grammaire
+particulier. . . y compris les réguliers.
+Classification de Chomsky pour les grammaires :
+régulière ⇢ algébrique ⇢ contextuelle ⇢ quelconque
+Mirabelle Nebut
+
+Langages et grammaires algébriques
+
+109/112
+
+

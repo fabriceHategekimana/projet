@@ -3,6 +3,7 @@ Histoire
 
 Il faut voir de quoi est composée une histoire:
 [Personnages](-Personnages)
+- [Groupes](Groupes)
 - [Chronologies](Chronologies)
 - [Thèmes](Thèmes)
 - Message

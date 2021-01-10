@@ -1,0 +1,2136 @@
+Imagery numérique
+
+S. Voloshynovskiy - Image Processing
+
+1
+
+Theme 5
+Geometric Transformations
+
+S. Voloshynovskiy - Image Processing
+
+2
+
+Content of course
+Semester 1
+Theme 1: Introduction to image processing
+Theme 2: The HVS perception and color
+Theme 3: Image acquisition and sensing
+Theme 4: Histograms and point operations
+Theme 5: Geometric operations
+Theme 6: Spatial filters
+
+S. Voloshynovskiy - Image Processing
+
+3
+
+Recommended books
+
+YouTube lectures
+Intro to Digital Image Processing (ECSE-4540) Lectures, Spring 2015
+by Prof. Rich Radk from Rensselaer Polytechnic Institute
+
+S. Voloshynovskiy - Image Processing
+
+4
+
+Geometric operations
+There are several types of transformations
+§ Point or filtering operations are applied to pixel intensities g(x,y) = T ⎡⎣ f (x,y) ⎤⎦
+§ Geometric transformation are applied to pixel coordinates (x,y) = T ⎡⎣ (w,z) ⎤⎦
+(w,z) - input space
+(x,y) - output space
+Geometric transforms:
+§ forward transform (x,y) = T ⎡⎣ (w,z) ⎤⎦
+§ inverse transform (if exists) (w,z) = T −1 ⎡⎣ (x,y) ⎤⎦
+w
+
+x
+
+(x,y) = T ⎡⎣ (w,z) ⎤⎦
+
+⎛
+⎞⎟
+⎜⎜
+⎟
+g(x,y) = f ⎜⎜T −1 ⎡⎣ (x,y) ⎤⎦ ⎟⎟⎟
+⎜⎜ !####"####$ ⎟⎟
+⎟⎠
+⎜⎝
+(w,z)
+
+(w,z) = T −1 ⎡⎣ (x,y) ⎤⎦
+
+z
+
+Input space
+
+S. Voloshynovskiy - Image Processing
+
+y
+
+Output space
+
+5
+
+Translation or shift
+(x,y) = T ⎡⎣ (w,z) ⎤⎦ = (w + a,z)
+(w,z) = T
+
+−1
+
+⎡ (x,y) ⎤ = (x − a,y)
+⎣
+⎦
+
+(
+
+−1
+⇒ g(x,y) = f T ⎡⎣ (x,y) ⎤⎦
+
+a=2
+
+w
+
+)
+
+⇒ g(x,y) = f (x − a,y)
+
+Translation by a pixels
+
+x
+
+g(x,y) = f (x − a,y)
+g(4, 0) = f (4 − 2, 0)
+
+F
+
+(0, 0)
+
+(2, 0)
+
+f (w,z)
+
+a=2
+
+z
+
+F
+
+(4, 0) y
+
+g(2, 0) = f (2 − 2, 0)
+
+(2, 0)
+
+g(x,y)
+
+⎡ ⎤
+
+w
+Remark: T ⎡⎣ (w,z) ⎤⎦ should be interpreted as a transform T ⎡⎣ . ⎤⎦ applied to a vector T ⎢⎢ ⎥⎥
+z
+⎣ ⎦
+
+S. Voloshynovskiy - Image Processing
+
+6
+
+Translation or shift
+(x,y) = T ⎡⎣ (w,z) ⎤⎦ = (w,z + b)
+(w,z) = T
+
+−1
+
+⎡ (x,y) ⎤ = (x,y − b)
+⎣
+⎦
+
+(
+
+−1
+⇒ g(x,y) = f T ⎡⎣ (x,y) ⎤⎦
+
+w
+
+b=3
+
+)
+
+⇒
+
+g(x,y) = f (x,y − b)
+
+Translation up by b pixels
+
+x
+
+F
+
+g(x,y) = f (x,y − b)
+g(0, 0) = f (0, 0 − 3)
+
+(0, 3)
+
+F
+
+(0, 0)
+
+z
+
+b=3
+
+g(0, 3) = f (0, 3 − 3)
+y
+
+(0, 0)
+
+(0,−3)
+
+f (w,z) = g(w,z + 3)
+
+S. Voloshynovskiy - Image Processing
+
+g(x,y) = f (x,y − 3)
+
+7
+
+Scaling down
+(x,y) = T ⎡⎣ (w,z) ⎤⎦ = (w 2,z 2)
+(w,z) = T
+
+−1
+
+⎡ (x,y) ⎤ = (2x, 2y)
+⎣
+⎦
+
+(
+
+−1
+⇒ g(x,y) = f T ⎡⎣ (x,y) ⎤⎦
+
+)
+
+⇒
+
+g(x,y) = f (2x, 2y)
+
+x
+
+w
+
+g(x,y) = f (2x, 2y)
+g(0, 0) = f (0, 0)
+
+(2, 2)
+
+F
+
+(0, 0)
+
+f (w,z) = g(w 2,z 2)
+
+S. Voloshynovskiy - Image Processing
+
+z
+
+(1,1)
+
+(0, 0) F
+
+g(1,1) = f (2, 2)
+y
+
+g(x,y) = f (2x, 2y)
+
+8
+
+Scaling up
+(x,y) = T ⎡⎣ (w,z) ⎤⎦ = (2w, 2z)
+(w,z) = T
+
+−1
+
+⎡ (x,y) ⎤ = (x 2,y 2)
+⎣
+⎦
+
+(
+
+−1
+⇒ g(x,y) = f T ⎡⎣ (x,y) ⎤⎦
+
+)
+
+⇒ g(x,y) = f (x 2,y 2)
+
+x
+
+w
+
+g(x,y) = f (0.5x, 0.5y)
+
+F
+
+f (w,z) = g(2w, 2z)
+
+S. Voloshynovskiy - Image Processing
+
+F
+
+(4, 4)
+
+(2, 2)
+
+(0, 0)
+
+g(0, 0) = f (0, 0)
+
+z
+
+g(4, 4) = f (2, 2)
+y
+
+(0, 0)
+
+g(x,y) = f (0.5x, 0.5y)
+
+9
+
+Change of aspect ratio
+(x,y) = T ⎡⎣ (w,z) ⎤⎦ = (0.5w, 2z)
+(w,z) = T
+
+−1
+
+⎡ (x,y) ⎤ = (2x, 0.5y)
+⎣
+⎦
+
+(
+
+−1
+⇒ g(x,y) = f T ⎡⎣ (x,y) ⎤⎦
+
+)
+
+⇒ g(x,y) = f (2x, 0.5y)
+
+x
+
+w
+
+g(x,y) = f (2x, 0.5y)
+g(0, 0) = f (0, 0)
+(1, 4)
+
+(2, 2)
+
+F
+
+(0, 0)
+
+f (w,z) = g(0.5w, 2z)
+
+S. Voloshynovskiy - Image Processing
+
+z
+
+g(1, 4) = f (2, 2)
+y
+
+(0, 0)
+
+g(x,y) = f (2x, 0.5y)
+
+10
+
+Flip or reflection across an axe
+(x,y) = T ⎡⎣ (w,z) ⎤⎦ = (−w,z)
+(w,z) = T
+
+−1
+
+⎡ (x,y) ⎤ = (−x,y)
+⎣
+⎦
+
+(
+
+−1
+⇒ g(x,y) = f T ⎡⎣ (x,y) ⎤⎦
+
+)
+
+⇒
+
+g(x,y) = f (−x,y)
+
+x
+
+w
+
+g(x,y) = f (−x,y)
+g(0, 0) = f (0, 0)
+
+F
+
+(0, 0)
+
+f (w,z) = g(−w,z)
+
+S. Voloshynovskiy - Image Processing
+
+g(−2, 2) = f (2, 2)
+
+(−2, 2)
+
+(2, 2)
+
+y
+
+z
+
+(0, 0)
+
+g(x,y) = f (−x,y)
+
+11
+
+Forward transform in matrix form
+Affine transformation
+
+⎡ x ⎤ ⎡⎢ a11 a12 ⎤⎥ ⎡ w ⎤ ⎡ b1 ⎤
+⎢ ⎥=⎢
+⎢ ⎥+⎢ ⎥
+⎥
+⎢y ⎥ ⎢ a
+⎢ ⎥ ⎢ ⎥
+⎣ ⎦ ⎣ 21 a22 ⎥⎦ ⎣ z ⎦ ⎣ b2 ⎦
+!#####"#####$
+
+x = a11w + a12z + b1
+y = a21w + a22z + b2
+
+A
+
+For mathematical convenience (also for Matlab), it is often defined as a
+single matrix multiplication – a.k.a. augmented matrix
+
+⎡x ⎤ ⎡ a
+⎢ ⎥ ⎢ 11 a12 b1
+⎢y ⎥ = ⎢
+⎢ ⎥ ⎢ a21 a22 b2
+⎢1 ⎥ ⎢
+⎢⎣ ⎥⎦ ⎢⎣ 0
+0 1
+
+S. Voloshynovskiy - Image Processing
+
+⎤ ⎡w ⎤
+⎥⎢ ⎥
+⎥ ⎢z ⎥
+⎥⎢ ⎥
+⎥⎢ ⎥
+⎥⎦ ⎢⎣ 1 ⎥⎦
+
+⎡ x′ ⎤ ⎡ A b ⎤ ⎡ x ⎤
+!x
+! ′ = A!
+x
+⎥⎢ ⎥ ⇒
+⎢ ⎥=⎢
+⎢ 1 ⎥ ⎢⎢ 0 1 ⎥⎥ ⎢ 1 ⎥
+x′ = Ax + b
+⎣ ⎦ ⎣#%%%%$%%%%&⎦ "
+⎣ ⎦
+"
+!′
+x
+
+!
+A
+
+!
+x
+
+12
+
+Intermediate summary
+Translation
+
+⎡ x ⎤ ⎡ 1 0 ⎤ ⎡ w ⎤ ⎡ b1 ⎤
+⎢ ⎥=⎢
+⎥⎢ ⎥ + ⎢ ⎥
+⎢ y ⎥ ⎢ 0 1 ⎥ ⎢ z ⎥ ⎢b ⎥
+⎦⎣ ⎦ ⎣ 2⎦
+⎣ ⎦ ⎣
+
+⎡ 1 0 b
+⎢
+1
+⎢
+!
+A=⎢ 0 1 b
+2
+⎢
+⎢⎣ 0 0 1
+
+Scale
+
+⎡x ⎤ ⎡ α 0 ⎤ ⎡w ⎤ ⎡ 0 ⎤
+⎥⎢ ⎥ + ⎢ ⎥
+⎢ ⎥=⎢
+⎢
+⎥⎢ ⎥ ⎢ ⎥
+⎢y ⎥
+⎣ ⎦ ⎣ 0 β ⎦ ⎣z ⎦ ⎣0⎦
+
+⎡ α 0 0 ⎤
+⎢
+⎥
+!
+⎢
+A= 0 β 0 ⎥
+⎢
+⎥
+⎢ 0 0 1 ⎥
+⎣
+⎦
+
+Flip
+
+⎡ x ⎤ ⎡ −1 0 ⎤ ⎡ w ⎤ ⎡ 0 ⎤
+⎢ ⎥=⎢
+⎥⎢ ⎥ + ⎢ ⎥
+⎢y ⎥ ⎢ 0 1 ⎥ ⎢z ⎥ ⎢ 0 ⎥
+⎦⎣ ⎦ ⎣ ⎦
+⎣ ⎦ ⎣
+
+⎡ −1 0 0 ⎤
+⎢
+⎥
+!
+A=⎢ 0 1 0 ⎥
+⎢
+⎥
+⎢⎣ 0 0 1 ⎥⎦
+
+S. Voloshynovskiy - Image Processing
+
+⎤
+⎥
+⎥
+⎥
+⎥
+⎥⎦
+
+13
+
+Rotation
+Rotation by an angle θ counterclockwise (around the origin)
+Direction of rotation
+
+x
+
+w
+
+F
+f (w,z)
+
+S. Voloshynovskiy - Image Processing
+
+θ
+
+z
+
+y
+
+g(x,y)
+
+14
+
+Rotation
+Definition
+
+⎡ x ⎤ ⎡⎢ a11 a12
+⎢ ⎥=⎢
+⎢y ⎥ ⎢ a
+⎣ ⎦ ⎣ 21 a22
+
+⎤⎡ ⎤ ⎡ ⎤
+⎥ ⎢w ⎥ + ⎢ 0 ⎥
+⎥⎢ ⎥ ⎢ ⎥
+⎥⎦ ⎣ z ⎦ ⎣ 0 ⎦
+w
+
+Consider two points
+
+⎡ w ⎤ ⎡1 ⎤
+⎢ ⎥=⎢ ⎥
+⎢z ⎥ ⎢0⎥
+⎣ ⎦ ⎣ ⎦
+⎡w ⎤ ⎡ 0 ⎤
+⎢ ⎥=⎢ ⎥
+⎢ z ⎥ ⎢1 ⎥
+⎣ ⎦ ⎣ ⎦
+
+⎡ x ⎤ ⎡⎢ a11 a12
+⎢ ⎥=⎢
+⎢y ⎥ ⎢ a
+⎣ ⎦ ⎣ 21 a22
+⎡ x ⎤ ⎡⎢ a11 a12
+⎢ ⎥=⎢
+⎢y ⎥ ⎢ a
+⎣ ⎦ ⎣ 21 a22
+
+⎤ ⎡1 ⎤ ⎡a ⎤
+⎥ ⎢ ⎥ = ⎢ 11 ⎥
+⎥⎢ ⎥ ⎢ ⎥
+⎥⎦ ⎣ 0 ⎦ ⎣ a21 ⎦
+
+(0,1)
+
+ℓ=1
+ℓ=1
+(1, 0)
+
+⎤ ⎡ 0 ⎤ ⎡a ⎤
+⎥ ⎢ ⎥ = ⎢ 12 ⎥
+⎥⎢ ⎥ ⎢ ⎥
+⎥⎦ ⎣ 1 ⎦ ⎣ a22 ⎦
+f (w,z)
+
+S. Voloshynovskiy - Image Processing
+
+15
+
+z
+
+Rotation
+Rotation by an angle
+
+θ counterclockwise (around the origin)
+Direction of rotation
+
+x
+
+w
+
+(0,1)
+
+ℓ=1
+ℓ=1
+(1, 0)
+
+f (w,z)
+
+S. Voloshynovskiy - Image Processing
+
+θ sin(θ) y
+
+z
+
+cos(θ)
+
+( cos(θ), sin(θ))
+
+g(x,y)
+
+16
+
+Rotation
+Rotation by an angle
+
+⎛π
+⎞
+sin(θ) = cos ⎜⎜ − θ ⎟⎟⎟
+⎜⎝ 2
+⎟⎠
+⎛π
+⎞
+cos(θ) = sin ⎜⎜ − θ ⎟⎟⎟
+⎜⎝ 2
+⎟⎠
+
+θ counterclockwise (around the origin)
+Direction of rotation
+
+x
+
+180 − (90 + θ) = 90 − θ
+90o
+sin(90 − θ) = cos(θ)
+
+θ sin(θ) y
+
+cos(θ)
+
+( cos(θ), sin(θ))
+
+( −sin(θ), cos(θ))
+cos(90 − θ) = sin(θ)
+
+g(x,y)
+
+S. Voloshynovskiy - Image Processing
+
+17
+
+Rotation
+Rotation by an angle
+
+θ counterclockwise (around the origin)
+
+⎡ w ⎤ ⎡1 ⎤
+⎡ cos(θ) ⎤
+⎢ ⎥=⎢ ⎥→⎢
+⎥
+⎢z ⎥ ⎢0⎥
+⎢ sin(θ) ⎥
+⎣ ⎦ ⎣ ⎦
+⎣
+⎦
+⎡w ⎤ ⎡ 0 ⎤
+⎡ −sin(θ) ⎤
+⎢ ⎥=⎢ ⎥→⎢
+⎥
+⎢ z ⎥ ⎢1 ⎥
+⎢ cos(θ) ⎥
+⎣ ⎦ ⎣ ⎦
+⎣
+⎦
+
+⎡ x ⎤ ⎡⎢ cos(θ) −sin(θ) ⎤⎥ ⎡ w ⎤ ⎡ 0 ⎤
+⎢ ⎥=⎢
+⎢ ⎥+⎢ ⎥
+⎢ y ⎥ ⎢ sin(θ) cos(θ) ⎥⎥ ⎢ z ⎥ ⎢ 0 ⎥
+⎣ ⎦ ⎣!########"########$⎦ ⎣ ⎦ ⎣ ⎦
+A
+
+Remark: AT A = I
+
+A−1 = AT
+
+S. Voloshynovskiy - Image Processing
+
+18
+
+Properties of considered transforms
+§ Any combination of scale, shift, flip and rotation is called a similarity transform
+It preserves parallel lines.
+§ If a11,a 2,2 = ±1 , then this transform is also called isometric transform.
+Wiki: the Greek – isometric stands for “equal measures”, reflecting that the scale
+along each axis of transform is the same.
+
+S. Voloshynovskiy - Image Processing
+
+19
+
+“Bending”
+⎡ x ⎤ ⎡⎢ a11 a12
+⎢ ⎥=⎢
+⎢y ⎥ ⎢ a
+⎣ ⎦ ⎣ 21 a22
+
+⎤⎡ ⎤ ⎡ ⎤
+⎥ ⎢w ⎥ + ⎢ 0 ⎥
+⎥⎢ ⎥ ⎢ ⎥
+⎥⎦ ⎣ z ⎦ ⎣ 0 ⎦
+
+Suppose we have the dependence on the axes
+
+⎡ x ⎤ ⎡ 1 b ⎤ ⎡ w ⎤ ⎡ w + bz ⎤
+⎢ ⎥=⎢
+⎥
+⎥⎢ ⎥ = ⎢
+⎢y ⎥ ⎢ 0 1 ⎥ ⎢z ⎥ ⎢ z ⎥
+⎦⎣ ⎦ ⎣
+⎣ ⎦ ⎣
+⎦
+
+S. Voloshynovskiy - Image Processing
+
+20
+
+“Bending” via horizontal shearing
+⎡ x ⎤ ⎡ w + bz ⎤
+⎢ ⎥=⎢
+⎥
+⎢y ⎥ ⎢ z ⎥
+⎣ ⎦ ⎣
+⎦
+
+⎡0⎤
+⎡0⎤
+⎢ ⎥→⎢ ⎥
+⎢0⎥
+⎢0⎥
+⎣ ⎦
+⎣ ⎦
+⎡1 ⎤
+⎡1 ⎤
+⎢ ⎥→⎢ ⎥
+⎢0⎥
+⎢0⎥
+⎣ ⎦
+⎣ ⎦
+⎡0⎤
+⎡b ⎤
+⎢ ⎥→⎢ ⎥
+⎢1 ⎥
+⎢1 ⎥
+⎣ ⎦
+⎣ ⎦
+etc.
+
+(−1,1)
+
+(0,1)
+
+w
+
+F
+
+(−1, 0)
+
+(−1,−1)
+
+(0,−1)
+f (w,z)
+
+(1,1)
+
+(1, 0)
+z
+
+(1,−1)
+
+x
+
+(−1 + b,1)
+
+(1 + b,1)
+
+(b,1)
+
+(−1, 0)
+
+y
+
+(−1 − b,−1) (b,−1)
+
+(1, 0)
+
+(1 − b,−1)
+
+g(x,y)
+
+If b is negative, the shear will be in the opposite direction.
+
+S. Voloshynovskiy - Image Processing
+
+21
+
+“Bending” via vertical shearing
+⎡x ⎤ ⎡ 1 0 ⎤ ⎡w ⎤
+⎢ ⎥=⎢
+⎥⎢ ⎥
+⎢y ⎥ ⎢ c 1 ⎥ ⎢z ⎥
+⎦⎣ ⎦
+⎣ ⎦ ⎣
+
+x
+
+w
+
+F
+f (w,z)
+
+z
+
+y
+
+g(x,y)
+
+Joint shear
+
+⎡x ⎤ ⎡ 1 b ⎤ ⎡w ⎤
+⎢ ⎥=⎢
+⎥⎢ ⎥
+⎢y ⎥ ⎢ c 1 ⎥ ⎢z ⎥
+⎦⎣ ⎦
+⎣ ⎦ ⎣
+S. Voloshynovskiy - Image Processing
+
+22
+
+Summary
+
+⎡x ⎤ ⎡ a
+⎢ ⎥ ⎢ 11 a12 b1
+⎢y ⎥ = ⎢
+⎢ ⎥ ⎢ a21 a22 b2
+⎢1 ⎥ ⎢
+⎢⎣ ⎥⎦ ⎢⎣ 0
+0 1
+
+⎤ ⎡w ⎤
+⎥⎢ ⎥
+⎥ ⎢z ⎥
+⎥⎢ ⎥
+⎥⎢ ⎥
+⎥⎦ ⎢⎣ 1 ⎥⎦
+
+Note: pay attention how θ and φ are defined;
+directions of rotation and shearing.
+
+https://en.wikipedia.org/wiki/Affine_transformation#/media/File:2
+D_affine_transformation_matrix.svg
+S. Voloshynovskiy - Image Processing
+
+23
+
+Matlab demo of
+affine transformations
+
+S. Voloshynovskiy - Image Processing
+
+24
+
+5.1. Demo in Matlab
+Image rotation
+
+S. Voloshynovskiy - Image Processing
+
+25
+
+5.1. Demo in Matlab
+Rotated image
+
+Original image
+50
+
+50
+100
+
+100
+150
+
+150
+
+200
+
+200
+
+250
+
+300
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+350
+50
+
+100
+
+150
+
+200
+
+250
+
+300
+
+350
+
+Remarks:
+
+S. Voloshynovskiy - Image Processing
+
+•
+
+Padding of rotated figure by zeros
+
+•
+
+Quality of rotated image
+26
+
+5.1. Demo in Matlab
+Original image
+
+Rotated and cropped image
+
+50
+
+50
+
+100
+
+100
+
+150
+
+150
+
+200
+
+200
+
+250
+
+250
+50
+
+100
+
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+
+50
+
+100
+
+150
+
+200
+
+250
+
+27
+
+5.1. Demo in Matlab
+Original image
+
+Rotated and cropped image with bilinear interpolation
+
+50
+
+50
+
+100
+
+100
+
+150
+
+150
+
+200
+
+200
+
+250
+
+250
+50
+
+100
+
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+
+50
+
+100
+
+150
+
+200
+
+250
+
+28
+
+5.1. Demo in Matlab
+
+S. Voloshynovskiy - Image Processing
+
+29
+
+Demo in Matlab - Alternative way of image
+rotation
+Note the difference in notations in Matlab:
+
+S. Voloshynovskiy - Image Processing
+
+30
+
+Demo in Matlab - Alternative way of image
+rotation
+Our notation
+
+⎡ x ⎤ ⎡⎢ a11 a12
+⎢ ⎥=⎢
+⎢y ⎥ ⎢ a
+⎣ ⎦ ⎣ 21 a22
+
+⎤ ⎡ ⎤ ⎡b ⎤
+⎥ ⎢w ⎥ + ⎢ 1 ⎥
+⎥⎢ ⎥ ⎢ ⎥
+⎥⎦ ⎣ z ⎦ ⎣ b2 ⎦
+
+x = a11w + a12z + b1
+y = a21w + a22z + b2
+
+Matlab uses a transposed version
+
+⎛⎡ a
+⎡ x ⎤T
+a
+⎢ ⎥ = ⎜⎜⎜ ⎢⎢ 11 12
+⎢y ⎥
+⎜⎜ ⎢ a
+⎣ ⎦
+⎝ ⎣ 21 a22
+
+T ⎡
+⎤ ⎡ w ⎤ ⎡ b ⎤ ⎞⎟T
+⎡
+⎤
+w
+⎥ ⎢ ⎥ + ⎢ 1 ⎥ ⎟⎟ = ⎢ ⎥ ⎢ a11 a12
+⎥ ⎢ ⎥ ⎢ ⎥ ⎟⎟
+⎢ z ⎥ ⎢⎢ a
+⎥⎦ ⎣ z ⎦ ⎣ b2 ⎦ ⎟⎠
+⎣ ⎦ ⎣ 21 a22
+
+⎡ a
+⎡ x y ⎤ = ⎡ w z ⎤ ⎢ 11 a21
+⎢⎣
+⎥⎦ ⎣
+⎦⎢ a
+⎢⎣ 12 a22
+
+S. Voloshynovskiy - Image Processing
+
+⎤
+⎥+⎡
+⎤
+⎥ ⎢⎣ b1 b2 ⎥⎦
+⎥⎦
+
+⎤T ⎡ b ⎤T
+⎥ +⎢ 1⎥
+⎥
+⎢b ⎥
+⎥⎦
+⎣ 2⎦
+
+x = a11w + a12z + b1
+y = a21w + a22z + b2
+
+31
+
+Demo in Matlab - Alternative way of image
+rotation
+Matlab affine matrixes
+
+Our notation
+
+⎡x ⎤ ⎡ a
+⎢ ⎥ ⎢ 11 a12 b1
+⎢y ⎥ = ⎢
+⎢ ⎥ ⎢ a21 a22 b2
+⎢1 ⎥ ⎢
+⎢⎣ ⎥⎦ ⎢⎣ 0
+0 1
+
+⎤ ⎡w ⎤
+⎥⎢ ⎥
+⎥ ⎢z ⎥
+⎥⎢ ⎥
+⎥⎢ ⎥
+⎥⎦ ⎢⎣ 1 ⎥⎦
+
+Matlab
+
+⎡ a
+⎤
+⎢ 11 a21 0 ⎥
+⎥
+⎡ x y 1 ⎤ = ⎡ w z 1 ⎤ ⎢⎢ a
+a
+0
+⎥
+⎢⎣
+⎥⎦ ⎣
+⎦ ⎢ 12 22
+⎥
+⎢ b1 b2 1 ⎥
+⎣
+⎦
+
+Gonzalez, p. 286
+S. Voloshynovskiy - Image Processing
+
+32
+
+Affine2d description
+
+⎡ a
+⎤
+⎢ 11 a21 0 ⎥
+⎥
+⎡ x y 1 ⎤ = ⎡ w z 1 ⎤ ⎢⎢ a
+a
+0
+⎥
+⎢⎣
+⎥⎦ ⎣
+⎦ ⎢ 12 22
+⎥
+⎢ b1 b2 1 ⎥
+⎣
+⎦
+
+S. Voloshynovskiy - Image Processing
+
+33
+
+5.1. Demo in Matlab
+x
+
+θ
+y
+
+g(x,y)
+
+⎡ x ⎤ ⎡ cos(θ) −sin(θ) 0 ⎤ ⎡ w ⎤
+⎡ cos(θ) sin(θ) 0 ⎤
+⎥⎢ ⎥
+⎢ ⎥ ⎢
+⎢
+⎥
+⎥ ⎢z ⎥ ⎡
+⎢y ⎥ = ⎢
+⎢
+⎥
+⎤
+⎢ ⎥ ⎢ sin(θ) cos(θ) 0 ⎥ ⎢ ⎥ ⎢⎣ x y ⎥⎦ = ⎡⎣ w z ⎤⎦ ⎢ −sin(θ) cos(θ) 0 ⎥
+⎥⎢ ⎥
+⎢1 ⎥ ⎢
+⎢
+⎥
+⎢⎣ ⎥⎦ ⎢⎣
+0
+0
+1 ⎥⎦ ⎢⎣ 1 ⎥⎦
+0
+0
+1 ⎥⎦
+⎢⎣
+S. Voloshynovskiy - Image Processing
+
+34
+
+5.1. Demo in Matlab
+Original image
+50
+
+50
+
+300
+
+100
+
+100
+
+150
+
+150
+
+200
+
+200
+
+250
+
+250
+
+300
+
+50
+
+100
+
+150
+
+200
+
+250
+350
+50
+
+100
+
+150
+
+200
+
+250
+
+300
+
+350
+
+Remark: Matlab defines the angle of rotation clockwise!
+and 90 degree “minus” our definition
+S. Voloshynovskiy - Image Processing
+
+35
+
+5.1. Demo in Matlab
+
+⎡ x ⎤ ⎡ cos(θ) −sin(θ) 0 ⎤ ⎡ w ⎤
+⎡ cos(θ) −sin(θ) 0 ⎤
+⎥⎢ ⎥
+⎢ ⎥ ⎢
+⎢
+⎥
+⎥ ⎢z ⎥ ⎡
+⎢y ⎥ = ⎢
+⎢
+⎥
+⎤
+⎢ ⎥ ⎢ sin(θ) cos(θ) 0 ⎥ ⎢ ⎥ ⎢⎣ x y ⎥⎦ = ⎡⎣ w z ⎤⎦ ⎢ sin(θ) cos(θ) 0 ⎥
+⎥⎢ ⎥
+⎢1 ⎥ ⎢
+⎢
+⎥
+⎢⎣ ⎥⎦ ⎢⎣
+0
+0
+1 ⎥⎦ ⎢⎣ 1 ⎥⎦
+0
+0
+1 ⎥⎦
+⎢⎣
+S. Voloshynovskiy - Image Processing
+
+36
+
+5.1. Demo in Matlab
+Rotated image
+
+Original image
+50
+
+50
+100
+
+100
+150
+
+150
+200
+
+200
+250
+
+300
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+300
+
+350
+50
+
+S. Voloshynovskiy - Image Processing
+
+100
+
+150
+
+200
+
+250
+
+300
+
+350
+
+37
+
+Projective transformations
+We considered affine transformations of form
+
+⎡ x ⎤ ⎡⎢ a11 a12
+⎢ ⎥=⎢
+⎢y ⎥ ⎢ a
+⎣ ⎦ ⎣ 21 a22
+
+⎤ ⎡ ⎤ ⎡b ⎤
+⎥ ⎢w ⎥ + ⎢ 1 ⎥
+⎥⎢ ⎥ ⎢ ⎥
+⎥⎦ ⎣ z ⎦ ⎣ b2 ⎦
+
+Max degree of distortion is in a form of parallelogram
+(parallel lines stay parallel)
+Projective transformations – more general form
+
+S. Voloshynovskiy - Image Processing
+
+38
+
+Projective transformations
+We considered affine transformations of form
+
+⎡ x ⎤ ⎡ a11w + a12z + b1 ⎤
+⎥
+⎢ ⎥=⎢
+⎢ y ⎥ ⎢a w + a z + b ⎥
+⎣!##########
+⎦ ⎣ 21 "##########
+22
+2#$⎦
+affine
+
+⎡a w + a z + b ⎤
+12
+1 ⎥
+⎢ 11
+⎡ x ⎤ ⎢ c1w + c2z + 1 ⎥
+⎥
+⎢ ⎥=⎢
+⎢
+⎥
+⎢y ⎥
+a
+w
++
+a
+z
++
+b
+⎣ ⎦ ⎢ 21
+22
+2⎥
+⎢
+⎥
+c
+w
++
+c
+z
++
+1
+⎢
+⎣ 1#"##########
+2
+!##########
+#$⎥⎦
+
+Affine part
+
+projective
+
+Generalization
+
+⎡x ⎤ ⎡ a
+⎢ ⎥ ⎢ 11 a12 b1
+⎢y ⎥ = ⎢
+⎢ ⎥ ⎢ a21 a22 b2
+⎢1 ⎥ ⎢
+⎢⎣ ⎥⎦ ⎢⎣ 0
+0 1
+
+⎤ ⎡w ⎤
+⎥⎢ ⎥
+⎥ ⎢z ⎥
+⎥⎢ ⎥
+⎥⎢ ⎥
+⎥⎦ ⎢⎣ 1 ⎥⎦
+
+⎡ x! ⎤ ⎡⎢ a11 a12 b1
+⎢ ⎥ ⎢
+⎢ y! ⎥ = ⎢ a
+⎢ ⎥ ⎢ 21 a22 b2
+⎢ p! ⎥ ⎢
+⎢⎣ ⎥⎦ ⎣ c1 c2 1
+p! = c1w + c2z + 1
+
+S. Voloshynovskiy - Image Processing
+
+⎤ ⎡w ⎤
+⎥⎢ ⎥
+⎥⎢ ⎥
+⎥ ⎢z ⎥
+⎥⎢ ⎥
+⎥ ⎢⎣ 1 ⎥⎦
+⎦
+
+⎡ x! ⎤
+⎢ ⎥
+⎡ x ⎤ ⎢ p! ⎥
+⎢ ⎥=⎢ ⎥
+⎢ y ⎥ ⎢ y! ⎥
+⎣ ⎦ ⎢ ⎥
+⎢⎣ p! ⎥⎦
+"$$$#$$$
+%
+projective
+
+39
+
+Projective transformations
+
+⎡ x! ⎤ ⎡⎢ a11 a12 b1
+⎢ ⎥ ⎢
+⎢ y! ⎥ = ⎢ a
+⎢ ⎥ ⎢ 21 a22 b2
+⎢p ⎥ ⎢
+⎢⎣ 1 ⎥⎦ ⎣ c1 c2 1
+
+⎤ ⎡w ⎤
+⎥⎢ ⎥
+⎥⎢ ⎥
+⎥ ⎢z ⎥
+⎥⎢ ⎥
+⎥ ⎢⎣ 1 ⎥⎦
+⎦
+
+In the transposed form!
+
+⎡ a
+⎢ 11 a21 c1
+⎡ x! y! p ⎤ = ⎡ w z 1 ⎤ ⎢⎢ a
+1⎦
+⎣
+⎣
+⎦ ⎢ 12 a22 c2
+⎢ b1 b2 1
+⎣
+S. Voloshynovskiy - Image Processing
+
+40
+
+⎤
+⎥
+⎥
+⎥
+⎥
+⎥
+⎦
+
+5.1. Demo in Matlab
+
+S. Voloshynovskiy - Image Processing
+
+41
+
+5.1. Demo in Matlab
+Projected image
+
+Original image
+
+50
+
+50
+
+100
+
+100
+
+150
+
+150
+
+200
+
+200
+
+250
+50
+
+100
+
+150
+
+200
+
+250
+
+250
+20
+
+S. Voloshynovskiy - Image Processing
+
+40
+
+60
+
+80 100 120 140
+
+42
+
+5.1. Demo in Matlab
+
+S. Voloshynovskiy - Image Processing
+
+43
+
+5.1. Demo in Matlab
+Projected image
+
+Original image
+
+20
+50
+
+40
+60
+
+100
+
+80
+150
+
+100
+120
+
+200
+
+140
+160
+
+250
+50
+
+100
+
+150
+
+200
+
+S. Voloshynovskiy - Image Processing
+
+250
+
+20 40 60 80 100 120 140
+
+44
+
+5.1. Demo in Matlab
+
+S. Voloshynovskiy - Image Processing
+
+45
+
+5.1. Demo in Matlab
+Projected image
+
+Original image
+
+100
+
+50
+
+200
+
+100
+
+300
+
+150
+
+400
+
+200
+
+500
+
+250
+
+600
+
+50
+
+100
+
+150
+
+200
+
+250
+
+700
+
+800
+
+100
+
+S. Voloshynovskiy - Image Processing
+
+200
+
+300
+
+400
+
+500
+
+600
+
+700
+
+800
+
+46
+
+5.1. Interpretation of projective transform
+
+Gonzalez, p.288
+S. Voloshynovskiy - Image Processing
+
+47
+
+5.1. Interpretation of projective transform
+
+Gonzalez, p.289
+S. Voloshynovskiy - Image Processing
+
+48
+
+Operations in Python: skimage
+
+S. Voloshynovskiy - Image Processing
+
+49
+
+Details about the output image
+Real situation
+
+⎡ x ⎤ ⎡ 0.1 1 ⎤ ⎡ w ⎤ ⎡ −1.2 ⎤
+⎢ ⎥=⎢
+⎥
+⎥⎢ ⎥ + ⎢
+⎢ y ⎥ ⎢ 2 0.4 ⎥ ⎢ z ⎥ ⎢ 5.3 ⎥
+⎦⎣ ⎦ ⎣
+⎣ ⎦ ⎣
+⎦
+⎡1⎤
+⎡ −0.1 ⎤
+⎢ ⎥→⎢
+⎥
+⎢1⎥
+⎢ 7.7 ⎥
+⎣ ⎦
+⎣
+⎦
+Problem: Integer grid goes to real grid but we have only integer grid representation.
+
+S. Voloshynovskiy - Image Processing
+
+50
+
+Interpolation
+Forward approach
+
+T
+
+w
+
+z
+
+y
+
+x
+
+Points are on the integer grid
+
+New points are not on the integer grid!
+
+How to estimate image intensity/color on the new grid?
+Solution 1: find the closest point on the new (circle) and assign the intensity from the input
+image to it. Problem: low image quality.
+Solution 2: use “backward” mapping assuming that the geometrical transform is invertible
+S. Voloshynovskiy - Image Processing
+
+51
+
+Interpolation
+“Backward” approach
+
+⎡ x ⎤ ⎡⎢ a11 a12
+⎢ ⎥=⎢
+⎢y ⎥ ⎢ a
+⎣ ⎦ ⎣ 21 a22
+
+⎤ ⎡ ⎤ ⎡b ⎤
+⎥ ⎢ w ⎥ + ⎢ 1 ⎥ → ⎡⎢ x ⎤⎥ = A ⎡⎢ w ⎤⎥ + b
+⎥⎢ ⎥ ⎢ ⎥
+! ⎢ ⎥
+!
+⎢y ⎥
+z
+⎥⎦ ⎣ z ⎦ ⎣ b2 ⎦
+⎣ ⎦ 2×2 ⎣ ⎦ 2×1
+⎡w ⎤
+⎛ ⎡x ⎤
+⎞⎟
+−1
+⎜
+⎢ ⎥ = A ⎜ ⎢ ⎥ − b ⎟⎟
+⎜⎝ ⎢ y ⎥
+⎢z ⎥
+⎟⎠
+⎣ ⎦
+⎣ ⎦
+⎡ ⎤
+−1 ⎢ x ⎥
+=A
+− A−1b
+⎢y ⎥
+⎣ ⎦
+
+Note: the affine transform is invertible!
+
+S. Voloshynovskiy - Image Processing
+
+52
+
+Interpolation
+“Backward” approach
+
+T −1
+
+w
+
+y
+
+z
+
+x
+
+New desired image
+= ϕ(!,!,!,!) - the resulting intensity is a function of NN pixels
+
+As a result we have a regular grid coverage without holes.
+S. Voloshynovskiy - Image Processing
+
+53
+
+Methods of interpolation
+
+Note: we have used ‘bilinear’ already in imrotate example
+S. Voloshynovskiy - Image Processing
+
+54
+
+Recall our example on image rotation
+Image rotation
+
+Remark: ‘nearest’ is used by definition.
+
+S. Voloshynovskiy - Image Processing
+
+55
+
+5.1. Demo in Matlab: nearest interpolation
+Rotated image
+
+Rotated image
+80
+
+50
+
+100
+
+100
+
+120
+
+150
+
+140
+
+200
+
+160
+
+250
+
+180
+
+300
+
+200
+
+350
+50
+
+100
+
+150
+
+200
+
+250
+
+300
+
+350
+
+220
+80
+
+•
+
+Quality of rotated image
+
+100
+
+120
+
+140
+
+160
+
+180
+
+200
+
+220
+
+Reason: the pixel is replaced by the NN one
+in the original domain.
+
+S. Voloshynovskiy - Image Processing
+
+56
+
+Bilinear interpolation
+(1 − α )a + αb
+a
+
+α
+
+1−α
+
+b
+
+x = (1 − α)(1 − β)a
++α(1 − β)b
+
+β
+
+(1 − β )a + βc
+
+x = ϕ(a,b,c,d)
+
++(1 − α)βc
++αβd
+
+x
+
+1− β
+c
+
+d
+
+The weights are proportional to the distances to the grid pixel intensities.
+Remark: in contrast to the nearest (NN) interpolation, where the intensity x depends
+only on one NN pixel, in the bilinear interpolation the intensity of x is determined by 4
+NN pixels in proportion of distances to them.
+S. Voloshynovskiy - Image Processing
+
+57
+
+Bilinear interpolation
+0.5a + 0.5b
+a
+
+0.5
+
+0.5
+
+b
+
+x = ϕ(a,b,c,d)
+
+x = 0.5 ⋅ 0.5a
++0.5 ⋅ 0.5b
++0.5 ⋅ 0.5c
++0.5 ⋅ 0.5d
+
+0.5
+x
+
+0.5a + 0.5c
+
+=
+
+0.5
+c
+
+d
+
+1
+(a + b + c + d )
+4
+
+In the center of the image the point x is just
+proportional to the sum of all of pixel intensities
+(average value).
+
+S. Voloshynovskiy - Image Processing
+
+58
+
+Bilinear interpolation
+a
+
+x
+
+x = ϕ(a,b,c,d)
+
+b
+
+x = (1 − α)(1 − β)a
++α(1 − β)b
+
+α=0
+β=0
+c
+
+d
+
++(1 − α)βc
++αβd
+x =a
+
+If we move closer to the corner, we will have the
+largest contribution of the corner point.
+
+S. Voloshynovskiy - Image Processing
+
+59
+
+5.1. Demo in Matlab: nearest vs bilinear
+Rotated image
+
+Rotated image
+
+80
+
+80
+
+100
+
+100
+
+120
+
+120
+
+140
+
+140
+
+160
+
+160
+
+180
+
+180
+
+200
+
+200
+
+220
+
+220
+80
+
+100
+
+120
+
+140
+
+160
+
+180
+
+Nearest interpolation
+
+S. Voloshynovskiy - Image Processing
+
+200
+
+220
+
+80
+
+100
+
+120
+
+140
+
+160
+
+180
+
+200
+
+Bilinear interpolation
+
+60
+
+Bicubic interpolation
+
+S. Voloshynovskiy - Image Processing
+
+61
+
+Bicubic interpolation
+Bicubic interpolation uses more points and
+special weights for the grid pixel intensities.
+We will consider it later in more details.
+
+wiki
+S. Voloshynovskiy - Image Processing
+
+62
+
+Other geometric transforms
+
+S. Voloshynovskiy - Image Processing
+
+63
+
+
