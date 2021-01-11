@@ -9424,3 +9424,13 @@
 {"description":"Devoir maman Lady","due":"20210109T060000Z","end":"20210106T143521Z","entry":"20210102T132758Z","imask":12,"modified":"20210106T143521Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"43563782-2602-4e06-84bc-60c76a79b610"}
 {"description":"Devoir maman Lady","due":"20210116T060000Z","entry":"20210109T124031Z","imask":13,"modified":"20210106T143521Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"f0fdc8fd-bb45-4a06-b5ff-7f5ada89db91"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++++-","modified":"20210109T124031Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"mode motivation","entry":"20210111T223053Z","modified":"20210111T223053Z","status":"pending","uuid":"36a64be7-b1ca-4475-b865-8b85dad72d88"}
+{"description":"mode motivation","due":"20210111T230000Z","entry":"20210111T223053Z","modified":"20210111T223140Z","status":"pending","uuid":"36a64be7-b1ca-4475-b865-8b85dad72d88"}
+{"description":"symboles prise de note","due":"20210111T230000Z","entry":"20210111T223241Z","modified":"20210111T223241Z","status":"pending","uuid":"3cba4ac0-c36b-4008-adf2-5e457ce98bd6"}
+{"description":"IN images","due":"20210111T230000Z","entry":"20210111T223319Z","modified":"20210111T223319Z","status":"pending","uuid":"a6ddb856-2d4f-423e-b1be-ed30394533d7"}
+{"description":"SI choisir code","due":"20210111T230000Z","entry":"20210111T223339Z","modified":"20210111T223339Z","status":"pending","uuid":"376493ab-835a-4714-b1ee-f9f06d4e674d"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++++++++","modified":"20210111T223345Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Devoir maman Lady","due":"20210116T060000Z","end":"20210111T223345Z","entry":"20210109T124031Z","imask":13,"modified":"20210111T223345Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"completed","uuid":"f0fdc8fd-bb45-4a06-b5ff-7f5ada89db91"}
+{"description":"typing","entry":"20210111T223529Z","modified":"20210111T223529Z","status":"pending","uuid":"5be502c2-bf0a-4513-8500-7a1acd69ffe1"}
+{"description":"typing","due":"20210112T070000Z","entry":"20210111T223542Z","modified":"20210111T223542Z","status":"pending","uuid":"5f8beb27-c8f0-413f-850d-1ac3426ebde2"}
+{"description":"Comment changer ses croyances","due":"20210112T070000Z","entry":"20210111T230007Z","modified":"20210111T230007Z","status":"pending","uuid":"5e4bea30-e6fd-466c-965a-b9023ae030dd"}

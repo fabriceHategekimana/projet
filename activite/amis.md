@@ -3,6 +3,22 @@ Comment se faire des amis
 
 Je veux juste être capable de communiquer avec les gens et pouvoir rassembler les foules quand c'est nécessaire.
 
+## Devenir intéressant
+Dégager une énergie positive
+S'intéresser aux autres et leur donner de la valeur
+Confiance en soi
+Une bonne culture générale
+étendre les limites de son esprit
+Trouver le plus de similarité avec l'autre
+Attitude naturelle et spontanée
+
+## Gagner la confiance d'une personne
+Rester soi-même
+Sûr de soi
+S'intéresser à l'autre
+être percutant dès l'entrée
+trouver des ressemblances avec l'autre
+
 ## Quelques principes pour se faire des amis
 
 1. Principe de réciprocité

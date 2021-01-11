@@ -1,10 +1,10 @@
 Révisions:
 ============
-
+Devinir le fils numéro uno
 Pour recevoir qqch il faut donner autre chose en retour
-BFS (lecture diagonale, strucutre, points clés)
+BFS
 Table de vocabulaire
-cours objectifs
+objectifs (simples, rapides)
 planning
-Instincs/émotions (carotte baton, expérience extèrnes)
-Changement (environnement, thème, etc.)
+Instincs/émotions (motivation)
+Varier (environnement, thème, mission, etc.)

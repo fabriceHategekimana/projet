@@ -9,6 +9,7 @@ Voici quelques liens pour commencer:
 [[buts]]
 [[motivation]]
 [[moi]]
+[activites](activites)
 
 Quel est le but de cette documentation.
 Elle est comme un carnet: le but est de canaliser mes pensés.

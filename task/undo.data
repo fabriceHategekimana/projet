@@ -33773,3 +33773,36 @@ time 1610196031
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++" modified:"1609943721" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++-" modified:"1610196031" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 ---
+time 1610404253
+new [description:"mode motivation" entry:"1610404253" modified:"1610404253" status:"pending" uuid:"36a64be7-b1ca-4475-b865-8b85dad72d88"]
+---
+time 1610404300
+old [description:"mode motivation" entry:"1610404253" modified:"1610404253" status:"pending" uuid:"36a64be7-b1ca-4475-b865-8b85dad72d88"]
+new [description:"mode motivation" due:"1610406000" entry:"1610404253" modified:"1610404300" status:"pending" uuid:"36a64be7-b1ca-4475-b865-8b85dad72d88"]
+---
+time 1610404361
+new [description:"symboles prise de note" due:"1610406000" entry:"1610404361" modified:"1610404361" status:"pending" uuid:"3cba4ac0-c36b-4008-adf2-5e457ce98bd6"]
+---
+time 1610404399
+new [description:"IN images" due:"1610406000" entry:"1610404399" modified:"1610404399" status:"pending" uuid:"a6ddb856-2d4f-423e-b1be-ed30394533d7"]
+---
+time 1610404419
+new [description:"SI choisir code" due:"1610406000" entry:"1610404419" modified:"1610404419" status:"pending" uuid:"376493ab-835a-4714-b1ee-f9f06d4e674d"]
+---
+time 1610404425
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++-" modified:"1610196031" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++" modified:"1610404425" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1610404425
+old [description:"Devoir maman Lady" due:"1610776800" entry:"1610196031" imask:"13" modified:"1609943721" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"f0fdc8fd-bb45-4a06-b5ff-7f5ada89db91"]
+new [description:"Devoir maman Lady" due:"1610776800" end:"1610404425" entry:"1610196031" imask:"13" modified:"1610404425" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"f0fdc8fd-bb45-4a06-b5ff-7f5ada89db91"]
+---
+time 1610404529
+new [description:"typing" entry:"1610404529" modified:"1610404529" status:"pending" uuid:"5be502c2-bf0a-4513-8500-7a1acd69ffe1"]
+---
+time 1610404542
+new [description:"typing" due:"1610434800" entry:"1610404542" modified:"1610404542" status:"pending" uuid:"5f8beb27-c8f0-413f-850d-1ac3426ebde2"]
+---
+time 1610406007
+new [description:"Comment changer ses croyances" due:"1610434800" entry:"1610406007" modified:"1610406007" status:"pending" uuid:"5e4bea30-e6fd-466c-965a-b9023ae030dd"]
+---
