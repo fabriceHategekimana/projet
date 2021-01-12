@@ -33806,3 +33806,19 @@ new [description:"typing" due:"1610434800" entry:"1610404542" modified:"16104045
 time 1610406007
 new [description:"Comment changer ses croyances" due:"1610434800" entry:"1610406007" modified:"1610406007" status:"pending" uuid:"5e4bea30-e6fd-466c-965a-b9023ae030dd"]
 ---
+time 1610451426
+old [description:"symboles prise de note" due:"1610406000" entry:"1610404361" modified:"1610404361" status:"pending" uuid:"3cba4ac0-c36b-4008-adf2-5e457ce98bd6"]
+new [description:"symboles prise de note" due:"1610406000" end:"1610451426" entry:"1610404361" modified:"1610451426" status:"completed" uuid:"3cba4ac0-c36b-4008-adf2-5e457ce98bd6"]
+---
+time 1610488913
+old [description:"mode motivation" due:"1610406000" entry:"1610404253" modified:"1610404300" status:"pending" uuid:"36a64be7-b1ca-4475-b865-8b85dad72d88"]
+new [description:"mode motivation" due:"1610406000" end:"1610488911" entry:"1610404253" modified:"1610488913" status:"completed" uuid:"36a64be7-b1ca-4475-b865-8b85dad72d88"]
+---
+time 1610488913
+old [description:"IN images" due:"1610406000" entry:"1610404399" modified:"1610404399" status:"pending" uuid:"a6ddb856-2d4f-423e-b1be-ed30394533d7"]
+new [description:"IN images" due:"1610406000" end:"1610488913" entry:"1610404399" modified:"1610488913" status:"completed" uuid:"a6ddb856-2d4f-423e-b1be-ed30394533d7"]
+---
+time 1610488913
+old [description:"typing" due:"1610434800" entry:"1610404542" modified:"1610404542" status:"pending" uuid:"5f8beb27-c8f0-413f-850d-1ac3426ebde2"]
+new [description:"typing" due:"1610434800" end:"1610488913" entry:"1610404542" modified:"1610488913" status:"completed" uuid:"5f8beb27-c8f0-413f-850d-1ac3426ebde2"]
+---

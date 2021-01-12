@@ -9434,3 +9434,7 @@
 {"description":"typing","entry":"20210111T223529Z","modified":"20210111T223529Z","status":"pending","uuid":"5be502c2-bf0a-4513-8500-7a1acd69ffe1"}
 {"description":"typing","due":"20210112T070000Z","entry":"20210111T223542Z","modified":"20210111T223542Z","status":"pending","uuid":"5f8beb27-c8f0-413f-850d-1ac3426ebde2"}
 {"description":"Comment changer ses croyances","due":"20210112T070000Z","entry":"20210111T230007Z","modified":"20210111T230007Z","status":"pending","uuid":"5e4bea30-e6fd-466c-965a-b9023ae030dd"}
+{"description":"symboles prise de note","due":"20210111T230000Z","end":"20210112T113706Z","entry":"20210111T223241Z","modified":"20210112T113706Z","status":"completed","uuid":"3cba4ac0-c36b-4008-adf2-5e457ce98bd6"}
+{"description":"mode motivation","due":"20210111T230000Z","end":"20210112T220151Z","entry":"20210111T223053Z","modified":"20210112T220153Z","status":"completed","uuid":"36a64be7-b1ca-4475-b865-8b85dad72d88"}
+{"description":"IN images","due":"20210111T230000Z","end":"20210112T220153Z","entry":"20210111T223319Z","modified":"20210112T220153Z","status":"completed","uuid":"a6ddb856-2d4f-423e-b1be-ed30394533d7"}
+{"description":"typing","due":"20210112T070000Z","end":"20210112T220153Z","entry":"20210111T223542Z","modified":"20210112T220153Z","status":"completed","uuid":"5f8beb27-c8f0-413f-850d-1ac3426ebde2"}

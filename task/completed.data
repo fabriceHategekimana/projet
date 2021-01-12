@@ -1,3 +1,7 @@
+[description:"mode motivation" due:"1610406000" end:"1610488911" entry:"1610404253" modified:"1610488913" status:"completed" uuid:"36a64be7-b1ca-4475-b865-8b85dad72d88"]
+[description:"IN images" due:"1610406000" end:"1610488913" entry:"1610404399" modified:"1610488913" status:"completed" uuid:"a6ddb856-2d4f-423e-b1be-ed30394533d7"]
+[description:"typing" due:"1610434800" end:"1610488913" entry:"1610404542" modified:"1610488913" status:"completed" uuid:"5f8beb27-c8f0-413f-850d-1ac3426ebde2"]
+[description:"symboles prise de note" due:"1610406000" end:"1610451426" entry:"1610404361" modified:"1610451426" status:"completed" uuid:"3cba4ac0-c36b-4008-adf2-5e457ce98bd6"]
 [description:"Devoir maman Lady" due:"1610776800" end:"1610404425" entry:"1610196031" imask:"13" modified:"1610404425" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"f0fdc8fd-bb45-4a06-b5ff-7f5ada89db91"]
 [description:"Devoir maman Lady" due:"1610172000" end:"1609943721" entry:"1609594078" imask:"12" modified:"1609943721" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"43563782-2602-4e06-84bc-60c76a79b610"]
 [description:"papa José" end:"1609851586" entry:"1609187034" modified:"1609851586" status:"completed" uuid:"bbedb147-7862-437c-a7bb-d09d14d42839"]
