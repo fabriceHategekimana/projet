@@ -2,17 +2,21 @@ Motivation
 ==========
 
 ## Ouverture du projet
+Définition:
+La motivation est un état d'esprit. Le meilleur moyen de la "forcer" est de prendre le temps de méditer pour atteindre cet état. En fait, on concentre et dirige notre pensé sur l'activité en question. Le temps d'activation peu varier en fonction de la fatigue, mais c'est super efficace!
+
 **`But`:**
 Comprendre la motivation en profondeur.
 Comment:
-	- Définition:
-	- expérience (liste)
-	- labo
+	- [X] Définition:
+	- [ ] expérience (liste)
+	- [ ] labo
+
 **`But`:**
 Appliquer ces connaissances sur moi.
 Comment:
-	- Augmenter ma motivation
-	- Maintenir ma motivation
+	- [X] Augmenter ma motivation
+	- [ ] Maintenir ma motivation
 **`But`:**
 Motiver les autres
 	- Augmenter leur motivation

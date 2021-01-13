@@ -9438,3 +9438,8 @@
 {"description":"mode motivation","due":"20210111T230000Z","end":"20210112T220151Z","entry":"20210111T223053Z","modified":"20210112T220153Z","status":"completed","uuid":"36a64be7-b1ca-4475-b865-8b85dad72d88"}
 {"description":"IN images","due":"20210111T230000Z","end":"20210112T220153Z","entry":"20210111T223319Z","modified":"20210112T220153Z","status":"completed","uuid":"a6ddb856-2d4f-423e-b1be-ed30394533d7"}
 {"description":"typing","due":"20210112T070000Z","end":"20210112T220153Z","entry":"20210111T223542Z","modified":"20210112T220153Z","status":"completed","uuid":"5f8beb27-c8f0-413f-850d-1ac3426ebde2"}
+{"description":"SI choisir code","due":"20210113T230000Z","entry":"20210111T223339Z","modified":"20210113T204356Z","status":"pending","uuid":"376493ab-835a-4714-b1ee-f9f06d4e674d"}
+{"description":"faire du fun","entry":"20210113T204811Z","modified":"20210113T204811Z","status":"pending","uuid":"03db4e8b-0ee0-42ba-86bc-205b4d9bb362"}
+{"description":"refaire userstories","end":"20210113T204817Z","entry":"20201125T123802Z","modified":"20210113T204817Z","priority":"L","status":"completed","uuid":"679e20bd-4024-4122-860b-7bdf9422a950"}
+{"description":"tuto piano","end":"20210113T204827Z","entry":"20201127T231458Z","modified":"20210113T204827Z","status":"completed","uuid":"6c82d6c0-934a-4fa4-bd5f-4fac3c625d0f"}
+{"description":"vocliste","due":"20210113T230000Z","entry":"20201127T190608Z","modified":"20210113T204858Z","status":"pending","uuid":"cd107333-fb83-4b90-a278-e7b9594217c0"}
