@@ -33852,3 +33852,10 @@ time 1610669145
 old [description:"all" entry:"1610658541" modified:"1610658541" status:"pending" uuid:"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"]
 new [description:"all" end:"1610669145" entry:"1610658541" modified:"1610669145" status:"completed" uuid:"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"]
 ---
+time 1610721153
+new [description:"Oral blanc IA" due:"1611039600" entry:"1610721153" modified:"1610721153" status:"pending" uuid:"ec9c9691-b4a7-4b10-bf69-16266d861db2"]
+---
+time 1610743772
+old [description:"SI choisir code" due:"1610578800" entry:"1610404419" modified:"1610570636" status:"pending" uuid:"376493ab-835a-4714-b1ee-f9f06d4e674d"]
+new [description:"SI choisir code" due:"1610578800" end:"1610743772" entry:"1610404419" modified:"1610743772" status:"completed" uuid:"376493ab-835a-4714-b1ee-f9f06d4e674d"]
+---

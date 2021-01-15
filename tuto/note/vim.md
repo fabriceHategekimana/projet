@@ -34,7 +34,9 @@ C'est une façon de penser la rédaction:
 Les Bagages utils
 =================
 typing
+shell (bash, zsh, cmd, powershell,...)
 regexp
+(vim)
 
 Les modes
 ==========

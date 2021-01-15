@@ -1,6 +1,7 @@
 # Vim: thèmes
-
-Actions de base de vim
+grok vim
+[Démonstration](Démonstration)
+[Actions_de_base_de_vim](Actions_de_base_de_vim)
 Normal (mov, act, act+mov)
 Insert (touches, completion, <C-O>, etc.)
 Visual (chants+actions,vV<C-V>,Select)
@@ -13,3 +14,4 @@ Navigation (mark, tags, quickfix)
 Comilation (comp/int, !, terminal, efm, make)
 Plugins ()
 help ()
+Comment être plus rapide dans vim

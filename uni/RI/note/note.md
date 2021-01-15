@@ -101,8 +101,9 @@ On peu avoir un réseau d'interconnexion avec les deux premières couches
 réseau privés, faible distance de communication
 (unis, centre de recherche, banque, etc.)
 
-On parle de liaison à diffusion (câble, ou sans fil):
-Peut aussi être une liaison point-à-point
+VERSUS
+On parle de liaison à diffusion (câble, ou sans fil) lorsque on a plusieurs appareils pour un média de communication (collision=supperposition de signal).
+Peut aussi être une liaison point-à-point lorsqu'on une communication entre deux appareil seulement.
 Exemple (PPP, HDLC)
 
 ## Aloha
@@ -116,7 +117,8 @@ Collision si plusieurs stations transmettent en même temps.
 
 ## Algo Aloha:
 Lorsqu’une trame est soumise à la couche liaison de données d’une station,
-1. La station attend un temps aléatoire avec un distribution exponentielle
+1. La station attend un temps aléatoire avec un distribution exponentielle (loi sans mémoire):
+    1. Le temps d'attente est invariant qu'on attende depuis longtemps
 2. La station transmet la trame
 3. La station attend un temps fixe. Si un acquittement positif est reçu d’Ohau
 pendant l’attente la transmission est finie, sinon retour au point 1 (retransmission).
@@ -131,10 +133,22 @@ Sous intervalles de taille 1/n
 Variable de Bernoulli= lambda/n=>1 sinon =>0
 
 ## Mesure des performances Aloha:
-? voir la vidéo du cours
+througput= nb trames/secondes
+Sloted Aloha, le temps est divisé en slot (interval de temps). Ainsi les appareil continue à transmettre aléatoirement leur données indépendament les une des autres mais doivent envoyé que sur un slot de temps défini.
+On divise par deux la fenêtre de visibilité
 
+Processus de poisson d'intensité G
+G= nb trames/unité de temps
+Il ne doit pas y avoir d'autre transmission que dans la fenêtre de visibilité.
+fenêtre de vulnérabilité= deux fois la duré de la trame= 2T
+S-G*exp(-2G)
+S-G*exp(-G)
+
+exp(...)= pas de colision
+S= débit effectif
 ## Ethernet (802.3)
 Réseau à diffusion
+Transmission en bande de base: Sans modulation de signal
 Connecté par des câbles coaxiaux:
 	- épais (10Base5)
 	- fin (10Base2)
@@ -156,6 +170,8 @@ d’isoler automatiquement une station défaillante.
 
 ## Trame Ethernet
 Préambule||destination|source| |données|PaD|CRC
+PAD= 64bits (assez longtemps transféré pour repérer les collisions)
+Pour augmenter le débit, on doit augmenter la taille des trames.
 
 ## Algo Ethernet
 - À la réception d’une trame à transmettre la couche liaison de
@@ -169,6 +185,9 @@ recommence.
 - Sinon, la trame est transmise.
 
 Gestion des collisions grâce à une phase d'attente exponentielle
+Plus on collisionne, plus on augmente le temps d'attente (car ça veut dire qu'il y a plus d'utilisateurs que prévu)
+Quand la trame basse tout le monde le sait (broad cast) et laisse assez de temps pour que le récepteur envoie l'acquittement.
+CSMA/CD= Carried Sense Multiple Access Collision Detection
 
 ## Analyse de performance Ethernet
 Pour k stations, la probabilité A qu'une station émette sans collisione est:
@@ -185,8 +204,10 @@ A= 1/e 	=> Optimal
 
 ## Protocole à jetons
 Comparée à Aloha et Ethernet, assure un débit minimal aux stations (pad d'application temps réel car temps de réponse borné)
+Offre une garantie de crédit.
 La trame jeton est transmise de station en station (cycle). Chaque station à l'addresse de son successeur. Chque station aura une période de transmition bornée à H_k secondes.
 T_TRT est le temps de rotation du jeton qui assure une débit de H_k*B/T_TRT [bits/sec] si B [bits/sec] est le débit du canal.
+Demande un réseau en anneau
 Nous avons un timer TRT_k et un compteur LC_k
 ![Variable_protocole_a_jeton](../../images/Variable_protocole_a_jeton.png)
 ## Algo Protocole a jeton

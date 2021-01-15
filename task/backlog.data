@@ -9446,3 +9446,5 @@
 {"description":"all","entry":"20210114T210901Z","modified":"20210114T210901Z","status":"pending","uuid":"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"}
 {"description":"Comment changer ses croyances","due":"20210112T070000Z","end":"20210115T000528Z","entry":"20210111T230007Z","modified":"20210115T000528Z","status":"completed","uuid":"5e4bea30-e6fd-466c-965a-b9023ae030dd"}
 {"description":"all","end":"20210115T000545Z","entry":"20210114T210901Z","modified":"20210115T000545Z","status":"completed","uuid":"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"}
+{"description":"Oral blanc IA","due":"20210119T070000Z","entry":"20210115T143233Z","modified":"20210115T143233Z","status":"pending","uuid":"ec9c9691-b4a7-4b10-bf69-16266d861db2"}
+{"description":"SI choisir code","due":"20210113T230000Z","end":"20210115T204932Z","entry":"20210111T223339Z","modified":"20210115T204932Z","status":"completed","uuid":"376493ab-835a-4714-b1ee-f9f06d4e674d"}
