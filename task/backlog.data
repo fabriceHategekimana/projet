@@ -9443,3 +9443,6 @@
 {"description":"refaire userstories","end":"20210113T204817Z","entry":"20201125T123802Z","modified":"20210113T204817Z","priority":"L","status":"completed","uuid":"679e20bd-4024-4122-860b-7bdf9422a950"}
 {"description":"tuto piano","end":"20210113T204827Z","entry":"20201127T231458Z","modified":"20210113T204827Z","status":"completed","uuid":"6c82d6c0-934a-4fa4-bd5f-4fac3c625d0f"}
 {"description":"vocliste","due":"20210113T230000Z","entry":"20201127T190608Z","modified":"20210113T204858Z","status":"pending","uuid":"cd107333-fb83-4b90-a278-e7b9594217c0"}
+{"description":"all","entry":"20210114T210901Z","modified":"20210114T210901Z","status":"pending","uuid":"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"}
+{"description":"Comment changer ses croyances","due":"20210112T070000Z","end":"20210115T000528Z","entry":"20210111T230007Z","modified":"20210115T000528Z","status":"completed","uuid":"5e4bea30-e6fd-466c-965a-b9023ae030dd"}
+{"description":"all","end":"20210115T000545Z","entry":"20210114T210901Z","modified":"20210115T000545Z","status":"completed","uuid":"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"}

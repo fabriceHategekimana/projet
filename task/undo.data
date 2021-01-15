@@ -33841,3 +33841,14 @@ time 1610570938
 old [description:"vocliste" entry:"1606503968" modified:"1606503968" status:"pending" uuid:"cd107333-fb83-4b90-a278-e7b9594217c0"]
 new [description:"vocliste" due:"1610578800" entry:"1606503968" modified:"1610570938" status:"pending" uuid:"cd107333-fb83-4b90-a278-e7b9594217c0"]
 ---
+time 1610658541
+new [description:"all" entry:"1610658541" modified:"1610658541" status:"pending" uuid:"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"]
+---
+time 1610669128
+old [description:"Comment changer ses croyances" due:"1610434800" entry:"1610406007" modified:"1610406007" status:"pending" uuid:"5e4bea30-e6fd-466c-965a-b9023ae030dd"]
+new [description:"Comment changer ses croyances" due:"1610434800" end:"1610669128" entry:"1610406007" modified:"1610669128" status:"completed" uuid:"5e4bea30-e6fd-466c-965a-b9023ae030dd"]
+---
+time 1610669145
+old [description:"all" entry:"1610658541" modified:"1610658541" status:"pending" uuid:"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"]
+new [description:"all" end:"1610669145" entry:"1610658541" modified:"1610669145" status:"completed" uuid:"1a5df8c4-5320-4277-8ffc-8f8a6ae2b174"]
+---
