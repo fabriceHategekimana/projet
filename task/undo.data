@@ -33859,3 +33859,10 @@ time 1610743772
 old [description:"SI choisir code" due:"1610578800" entry:"1610404419" modified:"1610570636" status:"pending" uuid:"376493ab-835a-4714-b1ee-f9f06d4e674d"]
 new [description:"SI choisir code" due:"1610578800" end:"1610743772" entry:"1610404419" modified:"1610743772" status:"completed" uuid:"376493ab-835a-4714-b1ee-f9f06d4e674d"]
 ---
+time 1610791821
+new [description:"Devoir maman Lady" due:"1611381600" entry:"1610791821" imask:"14" modified:"1610404425" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"ec593ebc-a23c-43b3-aa51-f219d9cdb88e"]
+---
+time 1610791821
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++" modified:"1610404425" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++-" modified:"1610791821" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
