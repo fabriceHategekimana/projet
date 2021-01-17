@@ -33866,3 +33866,20 @@ time 1610791821
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++" modified:"1610404425" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++-" modified:"1610791821" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 ---
+time 1610897278
+new [description:"Anniversaire d'Esaïe et Ezéchiel" due:"1610953200" entry:"1610897278" modified:"1610897278" status:"pending" uuid:"f35e60fd-0bb8-4639-afa1-9316f1073fde"]
+---
+time 1610897437
+new [description:"Anniversaire d'Oetske" due:"1610953200" entry:"1610897437" modified:"1610897437" status:"pending" uuid:"284d172f-dffb-4169-961a-c6192fe3b0fa"]
+---
+time 1610897611
+new [description:"Anniversaire de Mahya" due:"1632636000" entry:"1610897611" modified:"1610897611" status:"pending" uuid:"f70cede7-b6fe-487f-946b-fcf0e19c6c4a"]
+---
+time 1610899937
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++-" modified:"1610791821" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++" modified:"1610899937" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1610899937
+old [description:"Devoir maman Lady" due:"1611381600" entry:"1610791821" imask:"14" modified:"1610404425" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"ec593ebc-a23c-43b3-aa51-f219d9cdb88e"]
+new [description:"Devoir maman Lady" due:"1611381600" end:"1610899937" entry:"1610791821" imask:"14" modified:"1610899937" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"ec593ebc-a23c-43b3-aa51-f219d9cdb88e"]
+---

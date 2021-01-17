@@ -1,4 +1,4 @@
-[description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++-" modified:"1610791821" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+[description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++" modified:"1610899937" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 [description:"vocliste" due:"1610578800" entry:"1606503968" modified:"1610570938" status:"pending" uuid:"cd107333-fb83-4b90-a278-e7b9594217c0"]
 [description:"organisation examen" entry:"1609187029" modified:"1609187029" status:"pending" uuid:"69bd39e6-f477-44fe-abae-6f096666b60a"]
 [description:"Examen RI" due:"1611644400" entry:"1609187294" modified:"1609187294" status:"pending" uuid:"625b5a42-893b-4dfc-9dee-81e332f61e5e"]
@@ -12,4 +12,6 @@
 [description:"typing" entry:"1610404529" modified:"1610404529" status:"pending" uuid:"5be502c2-bf0a-4513-8500-7a1acd69ffe1"]
 [description:"faire du fun" entry:"1610570891" modified:"1610570891" status:"pending" uuid:"03db4e8b-0ee0-42ba-86bc-205b4d9bb362"]
 [description:"Oral blanc IA" due:"1611039600" entry:"1610721153" modified:"1610721153" status:"pending" uuid:"ec9c9691-b4a7-4b10-bf69-16266d861db2"]
-[description:"Devoir maman Lady" due:"1611381600" entry:"1610791821" imask:"14" modified:"1610404425" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"ec593ebc-a23c-43b3-aa51-f219d9cdb88e"]
+[description:"Anniversaire d'Esaïe et Ezéchiel" due:"1610953200" entry:"1610897278" modified:"1610897278" status:"pending" uuid:"f35e60fd-0bb8-4639-afa1-9316f1073fde"]
+[description:"Anniversaire d'Oetske" due:"1610953200" entry:"1610897437" modified:"1610897437" status:"pending" uuid:"284d172f-dffb-4169-961a-c6192fe3b0fa"]
+[description:"Anniversaire de Mahya" due:"1632636000" entry:"1610897611" modified:"1610897611" status:"pending" uuid:"f70cede7-b6fe-487f-946b-fcf0e19c6c4a"]
