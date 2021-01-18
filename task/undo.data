@@ -33883,3 +33883,39 @@ time 1610899937
 old [description:"Devoir maman Lady" due:"1611381600" entry:"1610791821" imask:"14" modified:"1610404425" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"ec593ebc-a23c-43b3-aa51-f219d9cdb88e"]
 new [description:"Devoir maman Lady" due:"1611381600" end:"1610899937" entry:"1610791821" imask:"14" modified:"1610899937" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"ec593ebc-a23c-43b3-aa51-f219d9cdb88e"]
 ---
+time 1611010536
+new [description:"1 à 5 questions Parallelisme" due:"1611039600" entry:"1611010536" modified:"1611010536" status:"pending" uuid:"b7de9a4c-a21e-48ee-9d68-7844c27cd51d"]
+---
+time 1611010575
+new [description:"louange et adoration pour les tutos" due:"1609484400" entry:"1611010575" modified:"1611010575" status:"pending" uuid:"91389707-b844-4cdc-8dc0-949f987f9de8"]
+---
+time 1611010603
+new [description:"Une nouvelle image pour IN" due:"1609484400" entry:"1611010603" modified:"1611010603" status:"pending" uuid:"ad22c757-e3be-4529-b259-1541e0ab5ed2"]
+---
+time 1611010621
+new [description:"Payer factures" due:"1609484400" entry:"1611010621" modified:"1611010621" status:"pending" uuid:"697a7ee9-dce6-4e9e-9b56-304ccb715ec3"]
+---
+time 1611010674
+new [description:"tuto vim 01" due:"1609484400" entry:"1611010674" modified:"1611010674" status:"pending" uuid:"3aba0f6f-8eb2-4071-a86f-59aa92d8d915"]
+---
+time 1611010696
+new [description:"musique (guitare ou ewi)" due:"1609484400" entry:"1611010696" modified:"1611010696" status:"pending" uuid:"04df1dc7-f931-4998-aa7a-14b29bd04e4d"]
+---
+time 1611010722
+old [description:"Anniversaire d'Esaïe et Ezéchiel" due:"1610953200" entry:"1610897278" modified:"1610897278" status:"pending" uuid:"f35e60fd-0bb8-4639-afa1-9316f1073fde"]
+new [description:"Anniversaire d'Esaïe et Ezéchiel" due:"1610953200" end:"1611010722" entry:"1610897278" modified:"1611010722" status:"completed" uuid:"f35e60fd-0bb8-4639-afa1-9316f1073fde"]
+---
+time 1611010722
+old [description:"Anniversaire d'Oetske" due:"1610953200" entry:"1610897437" modified:"1610897437" status:"pending" uuid:"284d172f-dffb-4169-961a-c6192fe3b0fa"]
+new [description:"Anniversaire d'Oetske" due:"1610953200" end:"1611010722" entry:"1610897437" modified:"1611010722" status:"completed" uuid:"284d172f-dffb-4169-961a-c6192fe3b0fa"]
+---
+time 1611010853
+old [description:"Oral blanc IA" due:"1611039600" entry:"1610721153" modified:"1610721153" status:"pending" uuid:"ec9c9691-b4a7-4b10-bf69-16266d861db2"]
+new [description:"IA examen blanc 14h" due:"1611039600" entry:"1610721153" modified:"1611010853" status:"pending" uuid:"ec9c9691-b4a7-4b10-bf69-16266d861db2"]
+---
+time 1611010954
+new [description:"question RI-Co 16h" due:"1611212400" entry:"1611010954" modified:"1611010954" status:"pending" uuid:"26fe0af0-df36-4124-9949-451b4b17edf7"]
+---
+time 1611010997
+new [description:"Question RI-Co 10h" due:"1611298800" entry:"1611010997" modified:"1611010997" status:"pending" uuid:"5c8d98d3-3f0a-4a89-92b7-1ebb12968d03"]
+---

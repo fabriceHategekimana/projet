@@ -1,26 +1,26 @@
 # Parallelisme
-1. Les réseaux d'interconnexion: but, performance, solutions, exemples
-2. L'hypercube: construction, propriétés, routage et broadcast.
-3. Le réseau oméga
-4. Le crossbar switch
-5. Les architectues à haute performance: SIMD, MIMD, vectoriel, ILP, Data-flow
-6. Modèle de programmation à mémoire distribuée
-7. Le fetch-and-add
-8. Notion de tâches, granularité, dépendence, partitionnement, placement
-   et ordonancement
-9. La méthode des temps au plus tôt et au plus tard
-10. L'équilibrage de charge: présenter la problématique et les solutions
-11. Comment exploiter le parallélisme: avantage et limitations des approches
-12. Comment obtenir des performances, et quelles sont les limites
-    technologiques.
-13. Notion de travail et les métriques de performance du parallélisme
-14. Modèle de performance pour la somme en parallèle
-15. Modèle de performance pour l'équation de Laplace
-16. Les différents types de partitionnement de domaine, leurs avantages et
-    inconvénient
-17. Les Lois d'Amdahl et de Gustafson
-18. La scalability d'application: isoefficacité, strong et weak scaling
-19. Mapping d'une grille sur un hypercube
-20. Les primitives de communications
-21. Les limites de l'architecture séquentielle et le «roofline model»
-22. Le modèle de programmation à mémoire partagée
+4 par jour:
+fait: 0
+
+[1 _Les_réseaux_d_interconnexion](1._Les_réseaux_d_interconnection)
+2. [L_hypercube](L_hypercube)
+[3 _Le_réseau_oméga](3._Le_réseau_oméga)
+[4 _Le_crossbar_switch](4._Le_crossbar_switch)
+[5 _Les_architectues_à_haute_performance](5._Les_architectues_à_haute_performance)
+[6 _Modèle_de_programmation_à_mémoire_distribuée](6._Modèle_de_programmation_à_mémoire_distribuée)
+[7 _Le_fetch and add](7._Le_fetch-and-add)
+[8 _Notion_de_tâches_granularité_dépendence_partitionnement_placement_et_ordonancement](8._Notion_de_tâches_granularité_dépendence_partitionnement_placement_et_ordonancement)
+[9 _La_méthode_des_temps_au_plus_tôt_et_au_plus_tard](9._La_méthode_des_temps_au_plus_tôt_et_au_plus_tard)
+[10 _L_équilibrage_de_charge](10._L_équilibrage_de_charge)
+[11 _Comment_exploiter_le_parallélisme](11._Comment_exploiter_le_parallélisme)
+[12 _Comment_obtenir_des_performances](12._Comment_obtenir_des_performances)_et_quelles_sont_les_limites_technologiques.
+[13 _Notion_de_travail_et_les_métriques_de_performance_du_parallélisme](13._Notion_de_travail_et_les_métriques_de_performance_du_parallélisme)
+[14 _Modèle_de_performance_pour_la_somme_en_parallèle](14._Modèle_de_performance_pour_la_somme_en_parallèle)
+[15 _Modèle_de_performance_pour_l_équation_de_Laplace](15._Modèle_de_performance_pour_l_équation_de_Laplace)
+[16 _Les_différents_types_de_partitionnement_de_domaine_leurs_avantages_et_inconvénient](16._Les_différents_types_de_partitionnement_de_domaine_leurs_avantages_et_inconvénient)
+[17 _Les_Lois_d_Amdahl_et_de_Gustafson](17._Les_Lois_d_Amdahl_et_de_Gustafson)
+[18 _La_scalability_d_application](18._La_scalability_d_application):_isoefficacité_strong_et_weak_scaling
+[19 _Mapping_d_une_grille_sur_un_hypercube](19._Mapping_d_une_grille_sur_un_hypercube)
+[20 _Les_primitives_de_communications](20._Les_primitives_de_communications)
+[21 _Les_limites_de_l_architecture_séquentielle_et_le_«roofline_model»](21._Les_limites_de_l_architecture_séquentielle_et_le_«roofline_model»)
+[22 _Le_modèle_de_programmation_à_mémoire_partagée](22._Le_modèle_de_programmation_à_mémoire_partagée)
