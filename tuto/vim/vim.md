@@ -1,6 +1,7 @@
 Vim
 ===
-Intro
+
+----
 
 Sommaire
 ========
@@ -17,30 +18,39 @@ Sommaire
 - Documentation
 - Autres (marqueurs, macro, quickfix, buffer, window, global, tab)
 
+----
+
 Origines
 =========
 - ed 1970 (Ken Thompson) edition ligne par ligne affichage par demande
 - vi (ex) 1976 (Bill Joy) écran total, premier raccourcis.
 - vim (Bram Moolenaar) 1988 (imitation -> amélioré)
 
+----
+
 Vim c'est quoi?
 ================
-C'est plus qu'un éditeur de texte.
-C'est une façon de penser la rédaction:
-- On passe plus de temps à modifier qu'à ajouter
-- Clavier + homerow
-- langage (requête)
+C'est plus qu'un éditeur de texte.  
+C'est une façon de penser la rédaction:  
+- On passe plus de temps à modifier qu'à ajouter  
+- Clavier + homerow  
+- langage (requête)  
 
-Les Bagages utils
+----
+
+Les Bagages utiles
 =================
-typing
-shell (bash, zsh, cmd, powershell,...)
-regexp
-(vim)
+* typing   
+* shell (bash, zsh, cmd, powershell,...)   
+* regexp   
+* (vim)   
+
+----
 
 Les modes
 ==========
-Vim est un éditeur modal: plusieurs modes:
+plusieurs modes:
+
 1. normal
 2. insert
 3. visual
@@ -49,103 +59,143 @@ Vim est un éditeur modal: plusieurs modes:
 6. Ex
 7. Replace
 8. Completion
+9. ...
 
-Les plus utilisés
+----
+
+# Les modes
+
+## Les plus courants
+
 1. normal
 2. insert
 3. visual
 4. command-line
 
+----
+
 Le mode normal
 ===============
-Usage: navigation + édition rapide
+## Usage:   
+	navigation + édition rapide  
 
-touches: action, mouvement, action+mouvement
+## Touches:   
+	action | mouvement | action+mouvement  
 
-## keystrokes:
-1. mouvements:
+----
 
+# mouvements, actions
+
+## Mouvements:
 - flèches + hjkl
 - words (w,b,e) ("[", "]", "(", ")", "{", "}")
-actions:
-- ligne: delete, yank, paste, change
-- changement de mode (insert, commande, visual)
-- spéciaux
-actions+mouvements (objects) 
-
-
-=======
-- spéciaux (w,b,e) ("(", ")", "{", "}")
 - recherche (f,t,F,T,/,?)
-
-2. actions:
-
-- ligne (double): delete, yank, change, paste
-- changement de mode (insersion, command-line, visual, etc.)
-- spéciales
-
-3. actions+mouvements (ou objet) 
  
-- delete, yank, change
-- objets: iw, i), it, aw, etc.
+## Actions:
+- pending (d,y,c)
+- direct (p,x,s,u,Ctrl+R)
+- changement de mode (i, :, v)
 
-4. préfixes:
-numérique: 1,...,23,...,2638,etc,...
+----
+
+# actions et mouvements
+
+## Principe
+- n actions et m mouvement: n*m possibilité
+
+## Text-objects
+- iw, i), it, aw, etc.
+
+## Répétitions
+- "."
+- numérique: 1,...,23,...,2638,etc,...
+
+----
 
 mode insert
 ===========
-               O 
-               |
-commande I<-i<-+->a->A
-               |
-	       o
-	      
-Change
 
-mode completion:
--mots
--ligne
--fichier
--tags
--omni
+- ligne en haut: O   
+- ligne en bas: o      
+- sinon  I<-i<-+->a->A    
+	      
+----
+
+# mode completion (sous mode):
+
+## Completion par:
+- mots
+- ligne
+- fichier
+- tags
+- omni
+
+----
 
 Le mode Visual
 ===============
-Selection+action
-v, v, <C-v>
+`Selection+action:`
+
+v, V, Ctrl+v
+
+----
 
 Le mode Command
 ===============
-settings
-Gestion de fichier (edit, write, quit, read)
-Navigation ficher (buffer, window, tab)
-terminal
-map,abbrev
-script
+
+* settings
+* Gestion de fichier (edit, write, quit, read)
+* Navigation ficher (buffer, window, tab)
+* Comportement de vim (map,abbrev,command,etc.)
+
+----
+
+# Autres fonctions de Vim
+* terminal
+* macro
+* mark
+* regexp
+* quickfix
+* script
+* etc.
+
+----
 
 Vim script et le vimrc
 ======================
-Variables (texte, nombre, boolean, listes)
-echo, operators
-map, function, command, etc.
+- Variables (texte, nombre, boolean, listes)  
+- map, function, command, etc.  
+- **Vim script the hard way:**
+    - https://learnvimscriptthehardway.stevelosh.com/ echo, operators  
+
+----
 
 Plugin
 ======
-Pour augmenter les possibilités de vim
-Précautions:
+**Pour augmenter les possibilités de vim**  
+
+## Précautions:
 1. Savoir ce qu'il y a dans notre vimrc
 2. Installer un nombre raisonable de plugins
 3. Bien connaître ses plugins
-Vim awesome
+ 
+**Vim awesome**:
+
+	- https://vimawesome.com/
+
+----
 
 Documentation
 =============
-help
-sites
-communautés
+- **help**: (:help)  
+- **sites**: (Vim Tips Wiki, youtube, sties particuliers)  
+- **communautés**: (Stack Overflow, Stack Exchange, reddit, etc.) 
+
+----
 
 Horizon:
 =========
-Neovim
-Spacevim
-Onivim
+* Editeurs+IDE
+* Neovim
+* Spacevim
+* Onivim

@@ -5,19 +5,19 @@ Routage des données dans le réseau
 Sans connexion
 Ne gère pas la perte de datagramme
 
-Structure:
+# Structure:
 16 bits en hexadécimal (donc 2 octet)
 prefix|interface ID
 préfix numéro du réseau(0-128)
 Interface ID (le reste des bits)
 
-Adresses Unicast:
+# Adresses Unicast:
 	- Global unicast Adress (GUA)
 	- Link Local Unicast Address (L-LUA)
 
 GUA: servent à router les datagrammes
 
-5 registre internet régionaux (Regional Internet Restistries RIR):
+5 registres internet régionaux (Regional Internet Restistries RIR):
 	1. AfriNIC
 	2. APNIC
 	3. LACNIC
@@ -48,13 +48,13 @@ ULA (Unique Local Address): addresse privé (pas pour internet)
 Déterminent des groupes multicasts
 L'adresse de l'expéditeur doit être unicast (one-to-many)
 
-# SNM (Solicited-node Multicast)
+## SNM (Solicited-node Multicast)
 addresse associé aux adresse globales
 Quand on connait l'adresse IP mais pas l'adresse MAC
 Par rapport au broadcast c'est que les interfaces peuvent filtrer les messages multicast
 Utilise des mécanisme de génération aléatoires pour être généré
 
-# Routage des adresses multicast niveau 3
+## Routage des adresses multicast niveau 3
 3 types de messages:
 	1. Multicast Listener Query
 	2. Multicast Listener Report
@@ -85,7 +85,7 @@ AS (autonome système): composent un système et utilisent un algo de routage pr
 - IGP (inferiror Gateway protocole) protocole de routage utilisé dans un AS
 - EGP (Exterior gatway protocole) protocole de communication entre AS
 
-# Routage par vecteur de distance
+## Routage par vecteur de distance
 Appellé algorithme de bellman-Ford, c'est un IGP. Routage par le plus court chemin.
 S'utilise dans un réseau où:
 - taille limité
@@ -93,7 +93,7 @@ S'utilise dans un réseau où:
 La métrique (fonction de distance), 
 Dispose d'un algo précis
 
-# RIPng
+## RIPng
 RIPng (Routing Information Protocol next eneration)
 Protocole à vecteur de distance
 métrique: nombre de saut
@@ -106,7 +106,7 @@ Deux type de procéssus appelés:
 	- processus d'entrée
 	- processus de sortie
 
-# Routage par des états des liens
+## Routage par des états des liens
 Créer pour remplacer la lente convergence de l'algo par vecteur de distance
 Les idées de bases de l’algorithme sont:
 1. découvrir les routeurs voisins et leur adresse réseau

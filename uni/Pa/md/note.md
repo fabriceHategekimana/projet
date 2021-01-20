@@ -1,5 +1,5 @@
 # Parallelisme
-4 par jour:
+5 par jour:
 fait: 0
 
 [1 _Les_réseaux_d_interconnexion](1._Les_réseaux_d_interconnection)

@@ -9477,3 +9477,11 @@
 {"description":"musique","due":"20210101T070000Z","entry":"20210119T225745Z","modified":"20210119T225745Z","status":"pending","uuid":"0906ce5f-8f6b-4de7-a0cd-d4cb01d62c27"}
 {"description":"message de l'année","due":"20210101T070000Z","entry":"20210119T225813Z","modified":"20210119T225813Z","status":"pending","uuid":"000aadec-76a7-4623-b9be-5d8650f478a5"}
 {"description":"Histoire","due":"20210101T070000Z","entry":"20210119T225843Z","modified":"20210119T225843Z","status":"pending","uuid":"63c99bb4-8efa-401d-b0ad-31e204012cf3"}
+{"description":"Para 6-10","due":"20210101T070000Z","end":"20210120T185706Z","entry":"20210119T225648Z","modified":"20210120T185706Z","status":"completed","uuid":"b4c730e7-76da-4d68-8b14-2fcba833945a"}
+{"description":"1 à 5 questions Parallelisme","due":"20210119T070000Z","end":"20210120T185722Z","entry":"20210118T225536Z","modified":"20210120T185722Z","status":"completed","uuid":"b7de9a4c-a21e-48ee-9d68-7844c27cd51d"}
+{"description":"tuto vim 01","due":"20210101T070000Z","end":"20210120T192418Z","entry":"20210118T225754Z","modified":"20210120T192418Z","status":"completed","uuid":"3aba0f6f-8eb2-4071-a86f-59aa92d8d915"}
+{"description":"musique","due":"20210101T070000Z","end":"20210120T192430Z","entry":"20210119T225745Z","modified":"20210120T192430Z","status":"completed","uuid":"0906ce5f-8f6b-4de7-a0cd-d4cb01d62c27"}
+{"description":"musique (guitare ou ewi)","due":"20210101T070000Z","end":"20210120T200354Z","entry":"20210118T225816Z","modified":"20210120T200354Z","status":"completed","uuid":"04df1dc7-f931-4998-aa7a-14b29bd04e4d"}
+{"description":"préparer tuto piano deux chants","due":"20210120T070000Z","end":"20210120T203427Z","entry":"20210119T225617Z","modified":"20210120T203427Z","status":"completed","uuid":"dbbd243f-891b-449f-b48a-38208c4ec5d2"}
+{"description":"message de l'année","due":"20210101T070000Z","end":"20210120T214123Z","entry":"20210119T225813Z","modified":"20210120T214123Z","status":"completed","uuid":"000aadec-76a7-4623-b9be-5d8650f478a5"}
+{"description":"RI révision générale","due":"20210101T070000Z","end":"20210120T215433Z","entry":"20210119T225707Z","modified":"20210120T215433Z","status":"completed","uuid":"723770e2-bfb0-4486-8fe3-8d3418b53f6c"}

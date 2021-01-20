@@ -1,7 +1,6 @@
-## Nom
+## prof_colérique_femme
 Age:
 Genre:
 Origine:
-Particularité/pouvoirs:
 Thème:
 Attachement:

@@ -1,7 +1,7 @@
 ## Goupes:
 [principal](principal)
 Police
-École
+[École](École)
 Révolutionnaire
 Monarchie
 Underground
