@@ -1,3 +1,11 @@
+TODO être à l'aise avec le pseudo code et les notations
+
+Quizz: 5 min par question max, 3 grosses questions. Application du cours.
+
+Le spanning tree protocole: s'effectue pour tout les ports, s'il est désactivé, c'est pour toutes les données.
+IPV6 multicast
+S'intéresser aux protocoles
+
 IP jusqu'à la diapo 92
 # IP
 Protocole de niveau 3
