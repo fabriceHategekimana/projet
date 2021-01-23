@@ -1,4 +1,7 @@
 # Message01:
+TODO 
+Étude textuelle
+Étude thématique
 
 ## Argument:
 Dieu souhaite nous conduir dans la paix.

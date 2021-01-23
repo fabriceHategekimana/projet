@@ -1,0 +1,174 @@
+HISTOIRE UNIX
+Guillaume Chanel
+Remerciements à Jean-Luc Falcone
+Septembre 2019
+
+
+1/ / 16
+
+SPACE TRAVEL: DE MULTICS À UNICS (1969)
+
+Bell Labs (AT&T): Dennis Ritchie, Ken Thompson, Brian Kernighan, et leurs
+collègues
+En assembleur pour PDP-7
+2 / 16
+/
+
+UNIX (1970)
+Portage sur PDP-11
+Multi-tâches
+Multi-utilisateurs
+
+
+3/ / 16
+
+PREMIÈRE INSTALLATION COMMERCIALE
+(1972)
+
+Exploitée jusqu'en 1979 sans changements
+
+4/ / 16
+
+RÉ-ÉCRITURE EN C (1972)
+Ré-écrit dans le nouveau langage C
+Portabilité accrue
+AT&T est obligé de licencier le code source à qui
+le demande
+Le source est publié sous forme de livres
+
+
+5/ / 16
+
+BERKLEY-SOFTWARE DISTRIBUTION (1982)
+Créé à l'Université de Berkley par Bill Joy
+A la base de plusieurs systèmes encore utilisés:
+FreeBSD
+OpenBSD
+MacOSX
+iOS
+
+
+6/ / 16
+
+VIRAGE COMMERCIAL (1983)
+Une décision de justice autorise AT&T à faire d'Unix un produit
+Les universités se tournent vers les dérivés de BSD
+Chaque grande entreprise continue à dévelloper en parallèle sa propre
+version:
+AIX
+IBM
+HPUX
+
+Hewlett-Packard
+
+SunOS SUN Microsystems
+Irix
+
+Silicon Graphics
+
+Xenix
+
+Microso
+
+…
+
+7/ / 16
+
+GNU IS NOT UNIX (1983)
+
+Richard Stallman propose de créér un clone complet d'Unix qui serait libre et
+gratuit.
+
+8/ / 16
+
+X WINDOW SYSTEM (1984)
+Système graphique pour Unix
+Découplé: client-serveur
+Fonctionne à travers le réseau
+
+Tab Window Manager (TWM)
+
+9/ / 16
+
+X WINDOW SYSTEM (1984)
+Système graphique pour Unix
+Découplé: client-serveur
+Fonctionne à travers le réseau
+
+Tab Window Manager (TWM)
+
+GNOME
+
+
+9/ / 16
+
+STANDARD POSIX (1988)
+Série de standards uniformisant les diﬀérents descendant d'Unix:
+Signaux
+Processus
+Accès aux fichiers
+Ligne de commande
+Commandes de bases
+Libraire standard C
+
+
+10/ / 16
+
+GNU/LINUX (1991)
+Un étudiant Finlandais, Linus Torvalds, s'ennuye et décide d'écrire le
+noyau d'un système d'exploitation similaire à Unix…
+Il donnera son noyau au projet GNU, pour constituer GNU/Linux.
+
+
+11/ / 16
+
+GNU/LINUX: UTILISATION
+Très peu répandu sur les machines de bureau et les portables
+Mais, très répandu sur:
+Smartphones et tablettes (Android)
+Serveurs (60% des serveurs web, Security Space 2009)
+Superordinateurs (97% des machines du Top500 en 2014, 100% en
+2018)
+
+12/ / 16
+
+GNU/LINUX: UTILISATION
+Utilisation pour les superordinateurs
+
+
+13/ / 16
+
+GNU/LINUX: DISTRIBUTION
+Une distribution GNU/Linux regroupe:
+Noyau
+Librairies standard
+Un système d'installation
+Un système de démarage
+Un catalogue d'applications par défaut
+Un moyen d'installer facilement des applications
+Un système de mise à jour
+Une documentation, communauté, support commercial, etc.
+
+14/ / 16
+
+MACOSX (2001)
+Système équipant les ordinateurs d'Apple,
+composé notament de:
+Noyau et environement unix issu de FreeBSD
+Librairies et environement de dévellopement
+ObjectiveC issu de NextSTEP
+Système d'aﬀichage Quartz (inspiré de
+NextSTEP)
+
+
+15/ / 16
+
+RÉCAPITUALTIF
+
+
+/
+
+  
+16/ / 16
+
+

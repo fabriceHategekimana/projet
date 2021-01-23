@@ -1,24 +1,36 @@
 # Omélitique
 Omeli= sermon
-But: glorifier Dieu et convaincre
-prédication= précher pour communiquer un message convainquant
-La porté du message doit toucher tout l'auditoir (tout le monde)
+TODO
+-Quels sont les clés pour convaincre
+-Étude comparative naissance de Jésus et de Jean-baptiste
+
+**But:**  
+glorifier Dieu et convaincre
+
+**prédication:**  
+précher pour communiquer un message convainquant
+
+[Quels_sont_les_clés_pour_convaincre](Quels_sont_les_clés_pour_convaincre)
+**Portée:**  
+Tout le monde (tout l'auditoir)
 Il y a deux types de prédication:
 	1. thématique
 	2. textuelle
 
-devoir: étude comparative (Naissance de Jésus et Jean-baptiste)
-Outils:
+**Effet:**
+Amener une changement dans la foi des auditeur et leur faire prendre une décision
+
+**Outils:**  
 - prière
 - Étude biblique
 
-3 acteurs:
+**3 acteurs:**  
 - Dieu
 - le prédicateur
 - l'auditoir
 
-effet: amenner une changement dans la foi des auditeur et leur faire prendre une décision
-Introduction: attirer l'intérêt, mise en contexte
+**Introduction: **
+attirer l'intérêt, mise en contexte
 
 1. Type et sorte de prédication
 2. Ebauche d'une prédication type:

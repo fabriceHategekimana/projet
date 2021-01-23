@@ -1,0 +1,1152 @@
+LE SYSTÈME UNIX
+Guillaume Chanel
+Remerciements à Jean-Luc Falcone
+Septembre 2019
+
+
+1/ / 72
+
+SHELL
+
+
+2/ / 72
+
+INTERFACE TEXTE
+Pourquoi utiliser une interface texte en 2017 ?
+
+
+3/ / 72
+
+LE SHELL
+Interface textuelle, ligne de commande
+presque toutes les fonctionnalités d'Unix sont accessibles
+Petits outils simple que l'on peut composer
+Possibilité d'écrire des scripts
+
+
+4/ / 72
+
+LES SHELLS
+Il existe plusieurs shell diﬀérents (sh, bash, csh, zsh, ash, etc.)
+Ils diﬀèrent par:
+Manière d'écrire les scripts
+Configuration et personnalisation
+Commandes prédéfinies
+
+
+5/ / 72
+
+TERMINAL & PSEUDO-TERMINAL
+
+terminal
+
+
+6/ / 72
+
+TERMINAL & PSEUDO-TERMINAL
+
+terminal
+
+VT220
+
+
+6/ / 72
+
+TERMINAL & PSEUDO-TERMINAL
+
+terminal
+
+VT220
+
+Pseudo-terminal
+
+
+6/ / 72
+
+UTILISATEURS
+
+
+7/ / 72
+
+UTILISATEURS
+Chaque utilisateur se loge sur une machine Unix avec une identité (user)
+Un utilisateur est décrit par:
+Nom d'utilisateur
+Mot de passe
+Identifiant numérique (userid)
+Groupe par défaut
+Répertoire home
+Description
+Shell par défaut
+Notes
+On peut créer un utilisateur pour certain programmes (par exemple
+serveur web).
+Le utilisateurs "locaux" sont listés dans le fichier /etc/passwd.
+
+8/ / 72
+
+PROPRIÉTÉ & PERMISSIONS
+Chaque processus appartient à un utilisateur
+Chaque fichier et répertoire appartient à un utilisateur
+Un utilisateur est abilité à:
+Modifier ses fichiers et ses répertoires
+Intéragir (et arrêter) ses processus
+
+
+9/ / 72
+
+SUPER-UTILISATEUR (ROOT)
+Il existe un super-utilisateur: root
+Son userid est le 0
+Il a le droit de tout faire.
+Attention
+Accès au mot de passe root: faille de sécurité majeure.
+
+
+10/ / 72
+
+GROUPES
+Les utilisateurs peuvent faire partie d'un ou plusieurs groupes:
+Groupe par défaut
+Autres groupes
+Ceci permet par exemple de:
+restreindre l'accès à un répertoire à un seul groupe
+donner accès à un périphérique à un seul groupe
+Note
+Les groupes "locaux" sont listés dans le fichier /etc/group.
+
+11/ / 72
+
+COMMANDES IMPORTANTES
+whoami
+
+quel est mon nom d'utilisateur
+
+groups
+
+de quels groupes fais-je partie ?
+
+id
+
+aﬀiche les identifiants de mon nom d'utilisateur et de mes
+groupes
+
+w
+
+quels sont les utilisateurs logués sur la machine
+
+who
+
+comme w mais avec moins d'infos
+
+exit
+
+permet de quitter le shell courant
+
+
+12/ / 72
+
+MANUEL
+
+
+13/ / 72
+
+ACCÈDER AU MANUEL (man)
+Un manuel très complet est présent sur les systèmes Unix
+Commande:
+man [section] <sujet>
+Exemples
+$ man pwd
+$ man 3 getcwd
+$ man man
+
+
+14/ / 72
+
+SECTIONS DU MANUEL SUR GNU/LINUX
+1 Commandes générales
+2 Appels systèmes
+3 Librairie C
+4 Fichiers spéciaux
+5 Formats de fichiers et conventions
+6 Jeux
+7 Divers
+8 Commandes d'administration et démons
+
+15/ / 72
+
+RTFM !
+
+
+16/ / 72
+
+FICHIERS
+
+
+17/ / 72
+
+SYSTÈME DE FICHIER (1)
+Manière d'organiser les données sur le disque:
+Noms
+Répertoires
+Permissions
+Metadonnées
+Maintien de l'intégrité
+…
+
+
+18/ / 72
+
+SYSTÈMES DE FICHIER (2)
+Il existe plusieurs types de systèmes de fichiers. Par exemple:
+VFAT
+
+Ancien système de fichier de Windows, très utilisé sur les cléusb, lecteurs MP3, etc.
+
+NTFS
+
+Système de fichier récent sur Windows.
+
+ext4
+
+Système de fichier par défaut sous beaucoup de distributions
+GNU/Linux
+
+ISO9660 Système de fichier des CD-ROMs
+UDF
+
+Système de fichier des DVDs
+
+HFS+
+
+Système de fichier sur MacOSX
+
+NFS
+
+Système de fichier réseau sous Unix
+
+
+19/ / 72
+
+ARBORESCENCE (1)
+Tous les systèmes de fichiers sont "montés" sur une seule et même
+arborescence.
+Seul root peut monter/démonter des systèmes de fichiers (par défaut)
+La plupart des installations GNU/Linux actuelles, montent
+automatiquement les disques externes (CD, DVD, usb)
+
+
+20/ / 72
+
+ARBORESCENCE (2)
+Disque 1
+Partition 1:
+Système Linux
+(ext4)
+Partition 2:
+Données utilisateurs
+(ext4)
+
+Disque 2
+Partition 1:
+Système Windows
+(ntfs)
+
+Partition 2:
+Données utilisateurs
+(ntfs)
+
+Partition 3:
+Vidéos, Photos, Musique
+(xfs)
+
+Partitionnement des espaces
+
+21/ / 72
+
+ARBORESCENCE (3)
+Disque 1
+Partition 1:
+Système Linux
+(ext4)
+Partition 2:
+Données utilisateurs
+(ext4)
+
+Partition 3:
+Vidéos, Photos, Musique
+(xfs)
+
+Disque 2
+Partition 1:
+Système Windows
+(ntfs)
+
+Partition 2:
+Données utilisateurs
+(xfs)
+
+
+
+Montage des partitions dans l'arborescence
+22/ / 72
+
+ARBORESCENCE UNIX STANDARD
+
+
+
+/bin/
+
+Principaux exécutables
+
+/boot/
+
+Fichiers de démarrage
+
+/dev/
+
+Périphériques
+
+/etc
+
+Configuration système
+
+/home/
+
+Données utilisateurs
+
+/lib/
+
+Librairies système
+
+/media/
+
+Montage des périphériques de stockage
+
+/mnt/
+
+Point de montage manuel
+
+/proc/
+
+Processus
+
+/root/
+
+Répertoire perso du superutilisateur
+
+/sbin/
+
+Exécutables pour la maintenance
+
+/sys/
+
+Informations système
+
+/usr/
+
+Applications et librairies utilisateurs
+
+/var/
+
+Données variables (logs, spool, mail…)
+23/ / 72
+
+NOMS DE FICHIERS ET DE RÉPERTOIRES
+Maximum 255 caractères
+Tous les caractères sont autorisés, mais déconseillés
+espaces
+.*?/!
+Si le nom du fichier commence par un point, il est caché.
+
+
+24/ / 72
+
+CHEMIN D'ACCÈS
+Les conventions suivantes (POSIX) s'appliquent:
+La racine est représentée par /
+Les répertoires sont séparés par /
+Tout chemin qui ne commence par / est relatif au répertoire courant.
+Le répertoire courant est symbolisé par .
+Le réperoire parent est symbolisé par ..
+Le répertoire home est symbolisé par ~
+WTF?
+~/././././hello
+~/./hello/../hello/../.
+
+
+25/ / 72
+
+COMMANDES UTILES
+pwd
+
+aﬀiche le répertoire courant
+
+cd
+
+change de répertoire courant
+
+ls
+
+liste le contenu d'un répertoire
+
+
+26/ / 72
+
+LISTER UN RÉPERTOIRE (ls)
+ls [options]... [répertoire-ou-fichier]...
+
+Par défaut, utilise le répertoire courant
+Options courantes:
+
+$
+$
+$
+$
+
+ls
+ls
+ls
+ls
+
+-l
+
+liste les fichiers (plus d'infos)
+
+-h
+
+aﬀiche les tailles en format humain
+
+-a
+
+aﬀiche les fichiers cachés
+
+..
+dossier/sous-dossier
+-l dossier1 dossier2 fichier
+-l | less # utile si la sortie est trop longue
+
+
+27/ / 72
+
+CRÉER UN REPERTOIRE (mkdir)
+mkdir [options]... répertoire-à-créer...
+
+L'option -p permet de créer automatiquement les repertoires parents.
+$ mkdir ../foo
+$ mkdir ../foo/bar ../foo/bar/baz
+$ mkdir -p ../foo/bar/baz
+
+# equivalent des précédents en une commande
+
+
+28/ / 72
+
+DÉPLACER ET RENOMMER DES FICHIERS
+(mv)
+mv [options]... fichiers... destination
+
+Fonctionne aussi avec des répertoires
+$ mv foo.avi bar.mpg baz.mkv video/ # deplace foo.avi et bar.mpg dans le dossier vidéo
+$ mv SysInfo/ InfoBio ~/cours # deplace les premiers éléments dans le répertoire cours du "home"
+$ mv foo.AVI foo.avi
+$ mkdir bar
+$ mv bar/ foo/
+
+# renomme le fichier foo.AVI vers foo.avi (case sensitive)
+
+# renomme le dossier bar en foo SI foo n'existe pas !
+
+
+29/ / 72
+
+OPTIONS DE LA COMMANDE mv
+Que faire si on déplace un fichier vers une source ou un fichier existe déjà
+avec le même nom:
+-f
+
+Ecrase silencieusement la destination si elle existe (force)
+
+-i
+
+Demande une confirmation avant d'écraser la destination (interactive)
+
+-u
+
+Eﬀace la destination si elle est plus ancienne que la source (update)
+
+
+30/ / 72
+
+COPIER UN FICHIER (cp)
+cp [options]... fichiers... destination
+
+Options:
+-r
+
+Copie aussi le contenu des répertoires (recursive)
+
+-a
+
+Préserve les attributs (permissions, propriétaire, etc.) et copie le
+contenu des répertoires (archive)
+$ cp foo.txt foo.txt.backup
+$ cp bar.txt baz.doc projet/
+
+# copie les deux fichiers dans le dossier projet
+
+
+31/ / 72
+
+OPTIONS DE LA COMMANDE cp
+Que faire si on déplace un fichier vers une source ou un fichier existe déjà
+avec le même nom:
+-f
+
+Ecrase silencieusement la destination si elle existe (force)
+
+-i
+
+Demande une confirmation avant d'écraser la destination (interactive)
+
+-u
+
+Eﬀace la destination si elle est plus ancienne que la source (update)
+
+
+32/ / 72
+
+EFFACER UN RÉPERTOIRE VIDE (rmdir)
+rmdir [options]... répertoires...
+
+L'option -p permet de supprimer automatiquement les repertoires parents
+si ils sont vides.
+$ rmdir ../foo/bar/baz
+$ rmdir ../foo/bar
+$ rmdir ../foo
+$ rmdir ../foo/bar/baz
+
+# equivalent aux commandes précédentes
+
+
+33/ / 72
+
+EFFACER UN FICHIER / RÉPERTOIRE (rm)
+rm [options]... fichiers...
+
+Options:
+-r eﬀace recursivement le contenu (recursive)
+-f
+
+ne demande pas de confirmation (force)
+
+-i
+
+demande une confirmation pour chaque fichier (interactive)
+
+$ rmdir ../foo/bar/baz
+$ rm foo.txt foo.txt.backup
+$ rm -rf foo/ # supprime tout le contenu de foo
+
+
+34/ / 72
+
+Y'a-t-il une diﬀérence ?
+$ mv foo.avi video/
+
+vs.
+A. oui
+
+$ cp foo.avi video/
+$ rm foo.avi
+
+B. non
+
+
+35/ / 72
+
+Y'a-t-il une diﬀérence ?
+$ mv foo.avi video/
+
+vs.
+A. oui
+
+$ cp foo.avi video/
+$ rm foo.avi
+
+B. non
+
+Si les fichiers sont sur le même système de fichier:
+mv ne fait que créer un nouveau nom / déplacer le nom, sans déplacer les
+données
+cp + rm copie les données puis les supprime (beaucoup moins eﬀicace)
+
+
+35/ / 72
+
+AGIR SUR UN GROUPE DE FICHIER
+WILDCARDS
+On peut utiliser les métacaractères (wildcards) suivants dans les noms des
+fichiers:
+* remplace zéro, un ou plusieurs caractères
+? un seul caractère
+Si le nom du fichier contient un astérisque ou un point d'intérogation on
+peut utiliser un backslash pour l'échapper.
+
+
+36/ / 72
+
+LE CAUCHEMAR
+Attention !
+$ rm -rf ~/*.txt
+$ rm -rf ~/* .txt
+
+
+37/ / 72
+
+PERMISSIONS
+
+user group other
+
+read
+write
+execute
+
+
+38/ / 72
+
+PERMISSIONS - EFFETS
+Fichier:
+Read
+
+Lire le contenu du fichier
+
+Write
+
+Modifer le contenu d'un fichier
+Warning en cas de suppression
+
+eXecute Exécuter le fichier (exécutable binaire ou script)
+Répertoire:
+Read
+
+Lister les noms des fichiers inclus (mais pas les métadonnées)
+
+Write
+
+Créer, renommer ou détruire les fichiers inclus
+
+eXecute "Ouvrir" le répertoire, voir les métadonnées, accèder au
+contenu des fichiers (mais pas aux noms), exécuter les fichiers
+exécutables.
+
+39/ / 72
+
+PERMISSIONS - OCTAL (3)
+user group other
+
+read = 4
+write = 2
+execute = 1
+
+
+40/ / 72
+
+CHANGER LES PERMISSIONS (chmod)
+chmod [options]... permission fichiers...
+
+L'option -R agit récursivement sur le contenu des répertoires
+$
+$
+$
+$
+
+chmod
+chmod
+chmod
+chmod
+
+666 foo.txt
+640 videos/*
+750 videos/
+-R 750 videos/
+
+# change les permissions de videos/ mais aussi de TOUT son contenu
+
+
+41/ / 72
+
+CHANGER LES PERMISSIONS (2)
+La command chmod accepte également une représentation symbolique:
+Elle se forme de la manière suivante:
+1. u (user), g (group), o (other), ou a (all)
+2. + (add), - (remove), ou = (set)
+3. Les permission au "format" rwx
+$ chmod a+rw foo.txt
+$ chmod u=w foo.txt
+$ chmod g-wx foo.txt
+
+# ajoute les droit read et write à tous
+# l'utilisateur n'a QUE le droit w
+# le groupe perd les droit write et execution
+
+
+42/ / 72
+
+CHANGER LE GROUPE (chgrp)
+chrgp [options]... groupe fichiers...
+
+L'option -R agit récursivement sur le contenu des répertoires
+$ chgrp video *.avi
+$ chgrp -R admin notes/
+
+
+43/ / 72
+
+FICHIERS CACHÉS
+Il suﬀit d'ajouter un point au début du nom d'un fichier pour le cacher.
+$ mv foo.txt .foo.txt
+$ cp ~/.bashrc /tmp/bashrc
+
+
+44/ / 72
+
+AUTRES COMMANDES UTILES
+1. Aﬀicher l'espace restant sur toutes les partitions:
+$ df -h
+
+2. Calculer la taille de chaque sous-répertoire et fichier:
+$ du -sh *
+
+3. Chercher récursivement par le nom:
+$ find . -name "*.txt"
+
+4. Créer un lien symbolique:
+$ ln -s /machin/chose/truc/ ~/truc
+
+
+45/ / 72
+
+EVERYTHING IS A FILE
+Plusieurs concepts sont représentés par des fichiers synthétiques.
+Par exemple:
+Les périphériques sont visibles dans /dev/
+Les processus (et certaines info système) sont visibles dans /proc/
+Informations sur les périphériques dans /sys/
+
+
+46/ / 72
+
+EXEMPLES D'UTILISATION DE /dev/
+Faire une image ISO à partir d'un CD
+$ dd if=/dev/cdrom of=~/image.iso
+
+Remplir une partition de données pseudo-aléatoires
+$ dd if=/dev/urandom of=/dev/sdb1 bs=1M
+
+
+47/ / 72
+
+FLUX ET REDIRECTIONS
+
+
+48/ / 72
+
+FLUX DE SORTIE STANDARD
+La plupart des commandes (des processus) ont un flux de sortie.
+Par défaut ce flux est dirigé vers le shell.
+On peut le rediriger vers un fichier avec >:
+commande arguments > fichier
+
+
+49/ / 72
+
+CONCATÉNER (cat)
+On peut concaténer plusieurs fichiers avec cat
+cat [options]... [fichiers]...
+
+Le résultat est envoyé sur le flux de sortie
+Options:
+
+$
+$
+$
+$
+
+cat
+cat
+cat
+cat
+
+-n
+
+numérote les lignes
+
+-b
+
+numérote les lignes non-vides
+
+foo.txt
+foo.txt bar.txt
+foo.txt bar.txt > all.txt # ecrit le resultat dans all.txt au lieu su shell
+episode1.avi episode2.avi episode3.avi > full.avi # est-ce que ca marche ?
+
+
+50/ / 72
+
+SAUVER LE RÉSULTAT D'UNE COMMANDE
+On peut sauver le résultat de toute commande utilisant le flux de sortie:
+$ ls -lh > content.txt
+$ df -h > disk_usage.txt
+$ w > users.txt
+
+
+51/ / 72
+
+FLUX D'ENTRÉE STANDARD
+La plupart des commandes (des processus) ont un flux d'entrée.
+Par défaut ce flux est est issu du clavier
+On peut le rediriger vers un fichier avec <:
+commande arguments < fichier
+
+
+52/ / 72
+
+COMPTER (wc)
+On peut compter les caractères/mots/lignes avec wc
+wc [options]... [fichiers]...
+
+Le résultat est envoyé sur le flux de sortie
+Par défaut, l'entrée standard est utilisée
+Options:
+-c
+
+compte les caractères
+
+-w compte les mots
+-l
+$
+$
+$
+$
+
+wc
+wc
+wc
+wc
+
+
+
+compte les lignes
+
+-w foo.txt
+-w < foo.txt
+-w < foo.txt > words.dat
+-w
+53/ / 72
+
+ENTRÉE STANDARD
+On peut interrompre le flux avec ctrl+D.
+$ cat > foo.txt
+
+
+54/ / 72
+
+AJOUT (>>)
+La redirection > écrase la destination si elle existe
+On peut utiliser >> pour ajouter à un fichier existant
+$ wc -l < foo.txt >> stats.dat
+$ wc -l < bar.txt >> stats.dat
+$ wc -l < baz.txt >> stats.dat
+
+
+55/ / 72
+
+PIPES (TUBES)
+On veut concaténer des fichiers et compter les lignes du résultat:
+$ cat foo.txt bar.txt baz.txt > all.txt
+$ wc -l < all.txt > stats.dat
+
+On peut utiliser les pipes (|) pour rediriger la sortie d'une commande vers
+l'entrée de la suivante:
+$ cat foo.txt bar.txt baz.txt | wc -l > stats.dat
+
+
+56/ / 72
+
+TRIER LES LIGNES (sort)
+sort [options]...
+
+Options:
+-r
+
+trie "à l'envers"
+
+-n
+
+tri numérique
+
+-h
+
+tri des représentations "humaines"
+
+$ du -sh * | sort -h
+$ du -sh * | sort -rh
+$ sort < words.txt > sorted.txt
+
+
+57/ / 72
+
+GARDER LES PREMIÈRES LIGNES (head)
+head [options]... [fichiers]...
+
+Options:
+Par défaut garde les 10 premières lignes
+-n k garde les k permières lignes
+-c k
+
+garde les k premiers bytes
+
+$ head -n 5 < foo.txt
+$ du -sh * | sort -rh | head -n 5 > biggest.txt
+
+
+58/ / 72
+
+FLUX D'ERREUR STANDARD
+La plupart des commandes (des processus) ont un flux d'erreur.
+Par défaut ce flux est dirigé vers la console.
+On peut le rediriger vers un fichier avec 2>:
+commande arguments 2> fichier
+On peut rediriger le flux d'erreur vers le flux de sortie avec 2>&1:
+commande arguments > fichier 2>&1
+
+
+59/ / 72
+
+FLUX STANDARD DANS LES LANGAGES DE
+PROGRAMMATION
+C
+Entrée stdin
+
+C++
+
+Java
+
+Python
+
+Ruby
+
+std::cin
+
+System.in
+
+sys.stdin
+
+$stdin
+
+Sortie
+
+stdput std::cout System.out sys.stdout $stdout
+
+Erreur
+
+stderr
+
+std::cerr
+
+System.err
+
+sys.stderr
+
+$stderr
+
+Exemple
+System.out.println( "Hello world!" );
+
+Redirection
+$ java HelloWorld > hello.txt
+
+
+60/ / 72
+
+PROCESSUS
+
+
+61/ / 72
+
+PROCESSUS (1)
+Instance d'un programme en cours d'execution
+Possède:
+Son code en langage machine
+Des Segments de mémoire
+Des descripteurs de fichiers
+Un propriétaire et un ensemble de permissions
+Un état à un moment donné
+Un coeur de processeur ne peut exécuter qu'un processus à la fois
+Le système d'exploitation peut alterner l'execution de plusieurs processus
+(multi-tasking)
+
+62/ / 72
+
+PROCESSUS (2)
+Sous unix, tous les processus ont:
+un identifiant numérique (PID)
+un processus parent (sauf le processus 0)
+une priorité
+
+
+63/ / 72
+
+AFFICHER LES PROCESSUS (ps)
+ps [options]...
+
+Exemples d'options:
+-eF
+
+Voir tous les processus
+
+-ejH
+
+Voir l'arbre des processus
+
+-u falcone Voir tous les processus de l'utilisateur falcone
+
+
+64/ / 72
+
+INTERLUDE: grep
+La commande grep est extremement utile car elle permet de filtrer les
+lignes qui contiennent un certain motif
+grep [options]... <motif> [fichiers]...
+
+Options utiles:
+-i
+
+ignore les majuscules
+
+-v
+
+exclus les lignes qui contiennent le motif
+
+-r
+
+cherche recursivement (sous-répertoires)
+
+$ grep falcone /etc/passwd
+$ ps -eF | grep java
+
+
+65/ / 72
+
+UTILISATION DU CPU (top)
+La commande top permet de voir quels processus occupent le(s) CPU(s).
+
+
+66/ / 72
+
+SIGNAUX
+Les signaux permettent une communication limitée entre les processus.
+La commande kill -l permet d'aﬀicher les diﬀérent signaux
+Quelques signaux utiles:
+Nom
+Action
+Numero
+
+
+
+SIGINT
+
+Interrompt le processus
+
+SIGKILL
+
+Tue le processus immédiatement 9
+
+SIGTERM
+
+Demande la terminaison (propre) 15
+
+SIGTSTP
+
+Suspension
+
+2
+
+20
+
+SIGCONT Active un processus suspendu
+
+18
+
+SIGUSR1
+
+Signal utilisateur 1
+
+10
+
+SIGUSR2
+
+Signal utilisateur 2
+
+12
+67/ / 72
+
+ENVOYER UN SIGNAL (kill)
+kill -signal [pids]...
+
+kill permet d'envoyer un signal à un processus
+$ kill -SIGKILL 2111 2120
+$ kill -15 2111
+
+
+68/ / 72
+
+GESTION DES SIGNAUX PAR LES PROCESSUS
+Tous les processus peuvent gérer (intercepter) un signal.
+Par exemple:
+Sauver l'état avant de quitter lorsque SIGTERM est reçu
+Redémarer le processus lorsque SIGINT est reçu
+Le signal SIGKILL ne peut être intercepté
+
+
+69/ / 72
+
+SIGNAUX DEPUIS LE SHELL
+Les raccourcis claviers suivant permettent de lancer un signal à un processus
+du shell:
+ctrl+C Envoie SIGINT
+ctrl+Z
+
+Envoie SIGTSTP
+
+Attention ctl+D n'est pas un signal mais envoie "End-Of-File" (EOF) sur
+l'entrée standard
+
+
+70/ / 72
+
+JOBS
+Par défaut, tout processus lancé depuis le shell tourne à l'avant-plan
+(foreground)
+Un processus en avant-plan bloque le shell tant qu'il n'est pas fini.
+On peu aussi lancer un processus en arrière-plan (background):
+Ajouter un & après la commande:
+$ gedit &
+
+Interrompre un processus:
+Utilisez ctrl-Z pour interrompre le processus
+Utilisez la commande bg pour relancer un processus interrompu en
+arrière-plan
+On peut aussi utiliser fg pour remettre le dernier processus
+interrompu en avant-plan
+
+71/ / 72
+
+RESSOURCES
+http://www.ibm.com/developerworks/aix/library/au-speakingunix8/
+
+  
+72/ / 72
+
+

@@ -34008,3 +34008,21 @@ new [description:"Question RI-Co 10h" due:"1611298800" end:"1611350635" entry:"1
 time 1611351447
 new [description:"chgt switch UNIGE" due:"1613977200" entry:"1611351447" modified:"1611351447" status:"pending" uuid:"e8404b63-5c5b-4b05-ac3f-eb07c4d094b9"]
 ---
+time 1611390946
+new [description:"Devoir maman Lady" due:"1611986400" entry:"1611390946" imask:"15" modified:"1610899937" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"fda110f4-8ef7-4885-a435-a9c845a3889b"]
+---
+time 1611390946
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++" modified:"1610899937" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++-" modified:"1611390946" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1611391056
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++-" modified:"1611390946" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++++" modified:"1611391056" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1611391056
+old [description:"Devoir maman Lady" due:"1611986400" entry:"1611390946" imask:"15" modified:"1610899937" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"fda110f4-8ef7-4885-a435-a9c845a3889b"]
+new [description:"Devoir maman Lady" due:"1611986400" end:"1611391056" entry:"1611390946" imask:"15" modified:"1611391056" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"fda110f4-8ef7-4885-a435-a9c845a3889b"]
+---
+time 1611393331
+new [description:"Examen STB" due:"1612594800" entry:"1611393331" modified:"1611393331" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+---
