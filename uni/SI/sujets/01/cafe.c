@@ -60,21 +60,30 @@ void service ()
 {
     set_sigaction_handler (SIG_CREME , service_handler );
     set_sigaction_handler (SIG_ANUL , service_handler );
+    //variable pour vérifier si les masques ont étés appliqués
     int err;
     sigset_t set , oldset ;
+    //sigemptyset: définit un masque sur un ensemble vide pour err
     err = sigemptyset (& set);
+    //on ajoute: un masque pour SIG_CREME
     err |= sigaddset (&set , SIG_CREME );
+    //si la consstruction s'est mal passée
     if(err != 0)
 	exit_err ("service , construction d’ensemble de signaux ");
-    if( sigprocmask (SIG_BLOCK , &set , & oldset ) == -1)
+    //Les signaux de set sont ajoutés aux signaux actuellement bloqués
+    if( sigprocmask (SIG_BLOCK , &set , &oldset ) == -1)
 	exit_err ("service , sigprocmask 1");
+    //le processus enfant va préparer un café (5 secondes)
     printf ("Je commence a preparer un cafe\n");
     sleep (5);
+    //On reprend le groupe de signaux précédent
     if( sigprocmask ( SIG_SETMASK , &oldset , NULL) == -1)
 	exit_err ("service , sigprocmask 2");
+    //Le processus enfant a terminé le café
     printf ("Cafe termine \n");
     exit( EXIT_SUCCESS );
 }
+
 void btn_handler (int sig)
 {
     switch (sig)
@@ -86,28 +95,38 @@ void btn_handler (int sig)
 
 	    if( pidService == -1)
 		exit_err (" btn_handler , fork");
+	    //Ce que fait le processus parent
 	    else if ( pidService > 0)
 	    {
+		//le processus parent rend disponible les signaux SIG_CREME et SIG_ANUL
 		set_sigaction_handler (SIG_CREME , btn_handler );
 		set_sigaction_handler (SIG_ANUL , btn_handler );
+		//préparation du status pour valuer l'état du processus enfant
 		int status = 0;
+		//le processus parent attend la fin de l'exécution de son processus enfant
 		while ( ( status = waitpid ( pidService , NULL , 0)) == -1)
 		    if( errno != EINTR )
 			exit_err (" btn_handler , waitpid ");
+		//quand le processus enfant a fini
 		if( WIFEXITED ( status ))
+		    //si l'enfant n'a pas fait un exit success
 		    if( WEXITSTATUS ( status ) != 0)
+			//Ecrire une erreur
 			write ( STDIN_FILENO , errStr , strlen ( errStr ));
 	    }
 	    else
+		//Si c'est le processus enfant, on commence le service
 		service ();
 	    break ;
-	    // SIG_CREME recu
+	// SIG_CREME recu
 	case SIG_CREME :
+	    //le processus parent envoie ce signal au processus enfant
 	    if(kill( pidService , SIG_CREME ) == 1)
 		exit_err (" btn_handler , kill");
 	    break ;
 	    // SIG_ANUL recu
 	case SIG_ANUL :
+	    //le processus parent envoie ce signal au processus enfant
 	    if(kill( pidService , SIG_ANUL ) == 1)
 		exit_err (" btn_handler , kill");
 	    break ;
@@ -116,11 +135,14 @@ void btn_handler (int sig)
 	    exit( EXIT_FAILURE );
     }
 }
+
 int main(void)
 {
+    //au début il n'y a que le signal SIG_CAFE qui est prit en compte
     set_sigaction_handler (SIG_CAFE , btn_handler );
     set_sigaction_handler (SIG_CREME , SIG_IGN );
     set_sigaction_handler (SIG_ANUL , SIG_IGN );
+
     while (1)
 	pause ();
     return 0;
