@@ -15,16 +15,27 @@ Jérémie 29:10
     - C'est vraiment le projet de Dieu
 - Ce passage est une promesse:
     - Il parle d'avenir
-    - Il parle de bonne choses qui vont arrivé
+    - Il parle de bonne choses qui vont arriver
 - Ce passage est un encouragement:
     - Il donne la direction
     - Il prépare notre coeur à vivre la promesse
 - Ce passage parle de la paix qui nous attend:
     - Il nous parle d'un retour en Israel mais surtout Jérusalem
-- Jérusalem est-elle vraiment une ville de paix:
-    - Elle appartenait a un peuple féroce
-    - Elle est maintenant la capitale
-    - Elle est l'une des promesse de Dieu (nouvelle Jérusalem)
+- Comparaison entre Jérusalem et Babylone
+    - Babylone, quel est cette ville?:
+	- prophétie sur la chute de babylone par Sirus (Jm 51:8) (Esaïe)
+	- Babylone antique et de la fin
+	- Début de la vie humain (tour de Babel=confusion) 
+	- Ville la plus idôlatre
+	- Grand royaume
+	- Femme sur une bête (ap 17:3) 
+	- Femme -> église -> peuple
+	- Avenir de Babylone -> chute
+	- Apocalypse 18:20
+    - Jérusalem est-elle vraiment une ville de paix:
+	- Elle appartenait a un peuple féroce
+	- Elle est maintenant la capitale
+	- Elle est l'une des promesse de Dieu (nouvelle Jérusalem)
 - Avoir confiance en Dieu (espérance et avenir):
     - Qu'en est-il pour nous?
     - Cette révélation a été faite à Jérémie pour le peuple d'Israël

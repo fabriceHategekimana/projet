@@ -9485,3 +9485,8 @@
 {"description":"préparer tuto piano deux chants","due":"20210120T070000Z","end":"20210120T203427Z","entry":"20210119T225617Z","modified":"20210120T203427Z","status":"completed","uuid":"dbbd243f-891b-449f-b48a-38208c4ec5d2"}
 {"description":"message de l'année","due":"20210101T070000Z","end":"20210120T214123Z","entry":"20210119T225813Z","modified":"20210120T214123Z","status":"completed","uuid":"000aadec-76a7-4623-b9be-5d8650f478a5"}
 {"description":"RI révision générale","due":"20210101T070000Z","end":"20210120T215433Z","entry":"20210119T225707Z","modified":"20210120T215433Z","status":"completed","uuid":"723770e2-bfb0-4486-8fe3-8d3418b53f6c"}
+{"description":"Histoire","due":"20210101T070000Z","end":"20210122T171443Z","entry":"20210119T225843Z","modified":"20210122T171443Z","status":"completed","uuid":"63c99bb4-8efa-401d-b0ad-31e204012cf3"}
+{"description":"Payer factures","due":"20210119T230000Z","end":"20210122T212346Z","entry":"20210118T225701Z","modified":"20210122T212346Z","status":"completed","uuid":"697a7ee9-dce6-4e9e-9b56-304ccb715ec3"}
+{"description":"question RI-Co 16h","due":"20210121T070000Z","end":"20210122T212355Z","entry":"20210118T230234Z","modified":"20210122T212355Z","status":"completed","uuid":"26fe0af0-df36-4124-9949-451b4b17edf7"}
+{"description":"Question RI-Co 10h","due":"20210122T070000Z","end":"20210122T212355Z","entry":"20210118T230317Z","modified":"20210122T212355Z","status":"completed","uuid":"5c8d98d3-3f0a-4a89-92b7-1ebb12968d03"}
+{"description":"chgt switch UNIGE","due":"20210222T070000Z","entry":"20210122T213727Z","modified":"20210122T213727Z","status":"pending","uuid":"e8404b63-5c5b-4b05-ac3f-eb07c4d094b9"}
