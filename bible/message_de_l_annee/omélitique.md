@@ -23,6 +23,7 @@ Amener une changement dans la foi des auditeur et leur faire prendre une décisi
 **Outils:**  
 - prière
 - Étude biblique
+- Dico
 
 **3 acteurs:**  
 - Dieu

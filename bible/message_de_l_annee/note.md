@@ -62,3 +62,36 @@ Jérémie 15:15:
 	- Jérusalem
 	- Nouvelle Jérusalem
 
+
+# Message du dim 24 jan 2021 17:18:51 CET
+## Sous-thème: Gardons l'espérane
+Jérémie 29:10-14
+
+Dieu nous parle d'une destination finale
+Temps déterminé par lui-même
+Silence, souffrance, difficulté, tout ça est temporaire
+C'est la pensée que Dieu souhaite nous communiquer
+Ça parole s'accompli certainement
+Exemple de Jérémie:
+Jérémie -> 1:5 (accomplissement) -> Il est devenu prophète selon le plan de Dieu
+temps
+
+Espérance 
+- définition du dictionnaire:
+    - Sentiment d'une chose qui va probablement s'accomplir, l'accomplissement de ce qu'on désir.
+    - Confiance
+- définition de Dieu:
+    - Foi concerant la volonté et le projet parfait de Dieu
+    - Notre espérance se trouve en Dieu et pas ailleurs
+
+Nos désirs doivent être compatible avec les projets de Dieu.
+Hebreux 6:11-12 -> foi et espérance.
+Hebreux 6:17-19
+
+Déclaration:
+"La résolution de Dieu pour ma vie est absolue!"
+
+Persévéront dans la déclaration de Dieu
+Ce que Dieu voit =/= ce que les hommes voient
+Cultiver notre relation
+

@@ -1,0 +1,25 @@
+Algo:
+ Pour chaque pont:
+
+ name<-myName
+ id<-myId
+ boucle:
+ 	m<-Createmessage(name, id)
+	sendNeighbourg(m)
+	mList<-recieveNeighbourg()
+	newName, NewId <- getMin(mList, m)
+    	if (newName, NewId) == (name, id):
+	    break
+	
+Pour chaque pont:
+
+ name<-myName
+ id<-myId
+ d<-0
+ boucle:
+ 	m<-Createmessage(name, id)
+	sendNeighbourg(m)
+	mList<-recieveNeighbourg()
+	newName, NewId <- getMin(mList, m)
+    	if (newName, NewId) == (name, id):
+	    break
