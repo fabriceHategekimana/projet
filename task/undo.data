@@ -34026,3 +34026,11 @@ new [description:"Devoir maman Lady" due:"1611986400" end:"1611391056" entry:"16
 time 1611393331
 new [description:"Examen STB" due:"1612594800" entry:"1611393331" modified:"1611393331" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
 ---
+time 1611738459
+old [description:"Examen RI" due:"1611644400" entry:"1609187294" modified:"1609187294" status:"pending" uuid:"625b5a42-893b-4dfc-9dee-81e332f61e5e"]
+new [description:"Examen RI" due:"1611644400" end:"1611738459" entry:"1609187294" modified:"1611738459" status:"completed" uuid:"625b5a42-893b-4dfc-9dee-81e332f61e5e"]
+---
+time 1611738459
+old [description:"Examen Pa" due:"1611730800" entry:"1609187353" modified:"1609187353" status:"pending" uuid:"26e84691-1a02-4aaa-9e4b-a6804debbddf"]
+new [description:"Examen Pa" due:"1611730800" end:"1611738459" entry:"1609187353" modified:"1611738459" status:"completed" uuid:"26e84691-1a02-4aaa-9e4b-a6804debbddf"]
+---
