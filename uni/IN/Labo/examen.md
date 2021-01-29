@@ -112,7 +112,6 @@ All physiquly existing colors appeared on this normalized x, y plain.
 
 Gamut of the screen is larger than the gamut of the printer . printer can reproduce less color
 
---------------------------------------------------------------------------------------------------------Chapitre 6
 # Q15. Explain the difference between the convolution and correlation. Give examples
 and explain the practical usage of both.
 
@@ -121,175 +120,80 @@ Important : If the filter is symmetric the result of coevolution and correlation
 same.
 
 # Q16.Explain the border effects during the computation of 2D convolution. Define the
-total size of filtered images. Give examples.
-We don’t know the pixel intensity of the borders so we do some padding
-operation.
-Handling the border effect (for example)
-1. Zero padding
-2. Periodic extension
-3. Symmetrically flip
-Zero padding : around the image I create a virtual border( the half of filter-1)
-One ligne of image
+taille totale des images filtrées. Exemples
+Pour nos opérations, on ne connais pas les valeurs qu'il y a au bord de notre image discrète.
+Alors on rajoute un "padding" tout autour.
+Il y a différents types de padding.
+    1. Zero padding
+    2. Periodic extension
+    3. Symmetrically flip
 
-cropped
+Trouver des exemples.
 
-Periodic extension : I can create just image repeat it multiply time .
-One ligne of image
-
-cropped
-
-Here we see we take the same signal (line) and we repeat it . we can
-see our intensity is very small but intensity from the previous period is
-very high and if I need to multiply all these values on filter coefficients, I
-will have a jump near de edges so as result we have a border effect
-
-near the edges of the image due such kind of the periodical extension . (happens in Fourier
-transformations )
-
-1
-
-N
-
-Symmetrically flip :
-
-explication….
-M
-
-total size of filtered images : If i compute with all of my border effect
--a
-
-a
-Filter size
-
-m× n
-
-M×N
-Image size
-Resulting image size Sv × Sh
-Sv =m+ M −1
-Sh=+ N − 1
-
-Exemples :
 
 # Q17. Explain the main properties of convolution. Complexity of convolution in 2D.
 1. The Commutative property (general form)
 ∞
-
 g ( x )=f ( x ) ∗h ( x )=
-
 ∞
-
 ∑
-
 f ( m ) h ( x − m ) ↔ h ( x ) ∗ f ( x )=
-
 m=− ∞
-
 f (x)
-
 h(x)
-
 g(x)
-
 h(x) g( x)
-
 f ( x −k ) h ( k ) k=x − m
-m=x − k
 x=− ∞
-
 ∑
-
 |
-
 f (x)
-
 2. The associative property
-
 g ( x )=f ( x ) ∗ ( h1 ( x ) ∗ h2 ( x ) ) ↔ ( f ( x ) ∗ h1 ( x ) ) ∗ h2 ( x )
-f (x)
-
-h1 ( x )
-
-g(x)
-
-h2 ( x )
-
-f (x)
-
-g(x)
 h1 ( x ) ∗ h2 ( x )
-
-f (x)
-
-h2 ( x )
-
-g(x)
-
-h1 ( x )
-
 f (x)
-
+h2 ( x )
 g(x)
-h2 ( x ) ∗ h1 ( x )
-
-3. The distributive property
-
+h1 ( x )
+f (x)
+g(x)
 g ( x )=f ( x ) ∗ ( h1 ( x ) +h2 ( x )) =f ( x ) ∗h 1 ( x ) +f ( x ) ∗ h2 ( x )
-
-f (x)
-
 h1 ( x )
-
-g(x)
-
 f (x)
-
 h2 ( x )
-
 g(x)
-
 h1 ( x )+ h2 ( x )
+ 
+**Property 1**:
+En temps normal, si nous avons la convolution entre f(x) et g(x) cela signifie que nous pouvons interchanger le qui fait le signal et qui fait le filtre.
 
-Property 1: Generally if we have the convolution between f(x) and g(x) it means we can
-interchange the sense what is the signal, what is the filter -- > Filtering the signal by filter and
-filtering the filter by signal.
-Property 2 : we have two filter h1 and h2 and our signal f(x). we can convolve one filter with
-another filter create a new virtual filter and convolve the signal with h result . otherwise we
-can convolve our signal with filter h1 then convolve with the second filter or convolve our
-signal with filter h2 then convolve with the first filter.
+**Property 2**:
+Soit deux filtre h1 et h2 et notre signal f(x). On peut convoluer un filtre avec l'autre pour créer un nouveau filtre virtuel et convoluer ce signal avec f(x). On peut aussi convoluer f avec un filtre puis l'autre.
+Attention, ne marche pas avec la fonction de correlation.
+
 Remarque: property 2 is true for convolution but its not true for correlation . for correlation if I
 replace the order it not the same due to the fact the filter is not flip.
-Property 3
-In case de correlation For pattern recognition et for classification it is ok but not for edge
+
+**Property 3**
+n case de correlation For pattern recognition et for classification it is ok but not for edge
 detection of filtering (property 1 et 2)
 Property
 
-Convolution
-
-Correlation
-
-Commutative
-
+Convolution Correlation
+**Commutative**
 f ∗ h=h ∗ f
 
-Does not hold
-
-Associative
-
+**Associative**
 f ∗ ( h1 ∗h 2 )=( f ∗ h1 ) ∗ h2
 
-Does not hold
 
-Distributive
-
+**Distributive**
 f ∗ ( h1 +h2 ) =f ∗ h1 +f ∗ h2
-
 fo ( h1 +h 2) =fo h1 + fo h2
 
-the Correlation will be a Somme of Correlation here (Distribution), But it’s not generally true if
-I would just apply the Associative or Commutative property. You can also thank from the
-inner product point.
+La correlation sera la somme d'une distribution. Mais ce n'est pas généralement vrai si Je pouvais just appliqer les propritétés associative ou communtative. On peut aussi grâce au produit scalaire.
 
+La correlation est la valeur attendue entre le signal X et Y (E[XYT]), ça ne serait pas la même chose si on interchangeait(E[XYT])
 The Correlation is the expected value between the signal X and Y (E(XYT]) it’s not will be the
 same result if I just interchange E[YXT].
 

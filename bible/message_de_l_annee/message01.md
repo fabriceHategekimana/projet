@@ -10,6 +10,13 @@ Jérémie 29:10
 "Mais voici ce que dit l'Eternel: Dès que soixante-dix ans seront écoulés pour Babylone, je me souviendrai de vous, et j'accomplirai à votre égard ma bonne parole, en vous ramenant dans ce lieu"
 
 ## Plan
+- Mise en contexte
+	- Lecture du passage
+	- Qui: Dieu, Jérémie, Captif de Jérusalem déportés
+	- Quoi: promesse de délivrance, parole de l'Eternel, souvenir accomplir
+	- Comment: ramenant dans ce lieu.
+	- Où: Babylone
+	- Quand: à l'époque de la déportation, après 60 ans
 - Dieu veut nous amener dans sa paix:
     - Ce n'est pas juste un propos rassurant:
 	- C'est une réponse de Dieu pour cette année
