@@ -10,6 +10,7 @@ Voir s'il n'y a pas de possibilité de trouver un travail fixe chez Satom ou dan
 
 ## Finir mon bachelor
 Réussir les examens manquant de la 2e année et ceux de la 3e année.
+De plus, je voudrai être un homme d'étude.
 
 ## Être un homme de Dieu capable de toucher les coeurs:
 Apprendre à modérer une prière et a ammener les gens dans un état (corp, âme et esprit) rendant l'accès à Dieu plus facile.
@@ -17,3 +18,4 @@ Apprendre de nouveau chant, nouveaux instruments pour le developpement de l'égl
 
 ## Reprendre le sport régulièrement
 Trouver un temps pour les exercices physiques (d'abord maison puis à l'extérieur).
+
