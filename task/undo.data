@@ -34034,3 +34034,26 @@ time 1611738459
 old [description:"Examen Pa" due:"1611730800" entry:"1609187353" modified:"1609187353" status:"pending" uuid:"26e84691-1a02-4aaa-9e4b-a6804debbddf"]
 new [description:"Examen Pa" due:"1611730800" end:"1611738459" entry:"1609187353" modified:"1611738459" status:"completed" uuid:"26e84691-1a02-4aaa-9e4b-a6804debbddf"]
 ---
+time 1611994567
+new [description:"Devoir maman Lady" due:"1612591200" entry:"1611994567" imask:"16" modified:"1611391056" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"4d0c0cc0-33e7-42ff-a672-bcb21d39b324"]
+---
+time 1611994567
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++++" modified:"1611391056" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++++-" modified:"1611994567" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1612000148
+old [description:"Examen STB" due:"1612594800" entry:"1611393331" modified:"1611393331" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+new [description:"Examen STB" due:"1619992800" entry:"1611393331" modified:"1612000148" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+---
+time 1612000190
+old [description:"Examen STB" due:"1619992800" entry:"1611393331" modified:"1612000148" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+new [description:"2021-03-05" due:"1619992800" entry:"1611393331" modified:"1612000190" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+---
+time 1612000230
+old [description:"2021-03-05" due:"1619992800" entry:"1611393331" modified:"1612000190" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+new [description:"examen STB (21h)" due:"1619992800" entry:"1611393331" modified:"1612000230" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+---
+time 1612000265
+old [description:"examen STB (21h)" due:"1619992800" entry:"1611393331" modified:"1612000230" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+new [description:"examen STB (21h)" due:"1614898800" entry:"1611393331" modified:"1612000265" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
+---

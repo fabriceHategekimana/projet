@@ -9497,3 +9497,9 @@
 {"description":"Examen STB","due":"20210206T070000Z","entry":"20210123T091531Z","modified":"20210123T091531Z","status":"pending","uuid":"4de50704-315a-4372-8dff-ac774479fc20"}
 {"description":"Examen RI","due":"20210126T070000Z","end":"20210127T090739Z","entry":"20201228T202814Z","modified":"20210127T090739Z","status":"completed","uuid":"625b5a42-893b-4dfc-9dee-81e332f61e5e"}
 {"description":"Examen Pa","due":"20210127T070000Z","end":"20210127T090739Z","entry":"20201228T202913Z","modified":"20210127T090739Z","status":"completed","uuid":"26e84691-1a02-4aaa-9e4b-a6804debbddf"}
+{"description":"Devoir maman Lady","due":"20210206T060000Z","entry":"20210130T081607Z","imask":16,"modified":"20210123T083736Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"4d0c0cc0-33e7-42ff-a672-bcb21d39b324"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"++++++++++++++++-","modified":"20210130T081607Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Examen STB","due":"20210502T220000Z","entry":"20210123T091531Z","modified":"20210130T094908Z","status":"pending","uuid":"4de50704-315a-4372-8dff-ac774479fc20"}
+{"description":"2021-03-05","due":"20210502T220000Z","entry":"20210123T091531Z","modified":"20210130T094950Z","status":"pending","uuid":"4de50704-315a-4372-8dff-ac774479fc20"}
+{"description":"examen STB (21h)","due":"20210502T220000Z","entry":"20210123T091531Z","modified":"20210130T095030Z","status":"pending","uuid":"4de50704-315a-4372-8dff-ac774479fc20"}
+{"description":"examen STB (21h)","due":"20210304T230000Z","entry":"20210123T091531Z","modified":"20210130T095105Z","status":"pending","uuid":"4de50704-315a-4372-8dff-ac774479fc20"}
