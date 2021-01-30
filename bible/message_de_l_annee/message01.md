@@ -13,27 +13,23 @@ Jérémie 29:10
 - Mise en contexte
 	- Lecture du passage
 	- Qui: Dieu, Jérémie, Captif de Jérusalem déportés
-	- Quoi: promesse de délivrance, parole de l'Eternel, souvenir accomplir
+	- Quoi: parole prophétique, promesse de délivrance, parole de l'Eternel, souvenir accomplir
 	- Comment: ramenant dans ce lieu.
 	- Où: Babylone
 	- Quand: à l'époque de la déportation, après 60 ans
-- Dieu veut nous amener dans sa paix:
-    - Ce n'est pas juste un propos rassurant:
-	- C'est une réponse de Dieu pour cette année
-	- Là ou il y a le mal, il y a le bien
-    - C'est vraiment le projet de Dieu
-
-- Ce passage est une promesse:
-    - c'est quoi une promesse de Dieu?
-    - Il parle d'avenir
-    - Il parle de bonne choses qui vont arriver
-
+	 
 - Ce passage est un encouragement:
     - Il donne la direction
     - Il prépare notre coeur à vivre la promesse
 
 - Ce passage parle de la paix qui nous attend:
     - Il nous parle d'un retour en Israel mais surtout Jérusalem
+
+- Dieu veut nous amener dans sa paix:
+    - Ce n'est pas juste un propos rassurant:
+	- C'est une réponse de Dieu pour cette année
+	- ~ Là ou il y a le mal, il y a le bien
+    - C'est vraiment le projet de Dieu
 
 - Comparaison entre Jérusalem et Babylone
     - Babylone, quel est cette ville?:

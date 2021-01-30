@@ -23,5 +23,14 @@ Jérémie 29:11
     - Qu'en est-il pour nous?
     - Cette révélation a été faite à Jérémie pour le peuple d'Israël
     - Cette révélation nous concerne car elle nous montre une part de la personne de Dieu (=fidèle)
-
+- Ce passage est une promesse:
+    - c'est quoi une promesse de Dieu?
+    - La bible contient des 100 de promesse
+    - promesse conditionnelles.
+    - promesse Général:
+	- promesse de pardon 1Jean 1:9
+	- promesse de paix Philipiens 4:7
+    - Que faire avec les promesse s'approprier.
+    - Il parle d'avenir
+    - Il parle de bonne choses qui vont arriver
 
