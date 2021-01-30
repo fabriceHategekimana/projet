@@ -5,21 +5,10 @@
 [economies](economies)
 [hikigai](hikigai)
 
-# Éditeurs de text
-
-|                    | Vim | Vs code | Sublime | Atom |
-|--------------------|-----|---------|---------|------|
-| beauté             | 4   | 1       | 3       | 2    |
-| prise en main      | 4   | 1       | 3       | 2    |
-| extentions/plugins | -   | -       | -       | -    |
-| keybindings        | 1   | 3       | 2       | 4    |
-| légèreté           | 1   | 3       | 2       | 4    |
-| command/palette    | 1   | 2       | 3       | 4    |
-
 Organisation:
-2. 10 min
-3. explore
-1. Planning
+1. 10 min
+2. explore
+3. Planning
 4. sauvegarde
 
 ## Bible
@@ -39,7 +28,6 @@ Parfois la lecture d'une histoire peu provoquer de différentes émotions.
 Je peux supprimé certaines émotions en trouvant des sources contraires.
 Je cherche souvent des émotions qui me motivent
 Mais souvent on est pas motivé tout cours, on est motivé à [faire qqch]
-
 
 ## Révision plus efficace
 - C'est quoi
@@ -69,7 +57,7 @@ Je me rends compte que j'arrive à répartir du "temps" pour mes diverts activit
 DEVOIRS:
 * rev GL
 * rev IN
- 
+
 * GL
 * SI
 * IN
@@ -86,3 +74,4 @@ Tuto
 Cadeaux
 Activite
 Histoire
+

@@ -29,7 +29,7 @@ Le système visuel humain fonctionne de cette façon:
 
 Explain the fundamentals of color vision.
 
-Objectively, we can distinguish:
+Objectivement, on peut distinguer
 La lumière acromatic (sans couleur): caractérisé par l'intensité de la lumière. cela varie entre noir et blanc avec des nuances de gris
 La lumière cromatique (couleur): qui sert à distinguer et percevoir les couleurs
 
@@ -38,8 +38,7 @@ La lumière cromatique (couleur): qui sert à distinguer et percevoir les couleu
 2. **Liminance** est une mesuer de la quatité d'énergie qu'un observateur perçois depuis la source lumineuse. on peut considéré cela philtré par l'oeil humain (lumens)
 3. **Brightness** est une évaluation subjective de ce qu'est la source de radiation dont nous parlons.
 
-**There are two ways to consider the color vision:**
-Il y a deux façon de considérer la vision des couleurs
+**Il y a deux façon de considérer la vision des couleurs**
 1. On peut le considéere comme une partie du spectre électromagnétique et depuis la perspective de la percéption par l'oeil humain et l'interpretation par le cerveau humain.
 2. On peut le considérer comme une part de la façon dont la couleur est créée en tant que tell par les couleur primaire ou par le mélange des couleur (composition additive/soustractive)
 
@@ -110,14 +109,13 @@ All physiquly existing colors appeared on this normalized x, y plain.
 
 **Which factors determine the achievable color gamut for the screens and printers?**
 
-Gamut of the screen is larger than the gamut of the printer . printer can reproduce less color
+Le Gamut de l'écran est plus large que le gamut de l'imprimante. L'imprimante peut reproduire moins de couleur.
 
 # Q15. Explain the difference between the convolution and correlation. Give examples
 and explain the practical usage of both.
 
 **Give examples**
-Important : If the filter is symmetric the result of coevolution and correlation will be the
-same.
+Important: si le filtre est symmetrique, le résultat de la convolution et de la correlation sera la même chose.
 
 # Q16.Explain the border effects during the computation of 2D convolution. Define the
 taille totale des images filtrées. Exemples
@@ -129,7 +127,6 @@ Il y a différents types de padding.
     3. Symmetrically flip
 
 Trouver des exemples.
-
 
 # Q17. Explain the main properties of convolution. Complexity of convolution in 2D.
 1. The Commutative property (general form)
@@ -175,9 +172,7 @@ Remarque: property 2 is true for convolution but its not true for correlation . 
 replace the order it not the same due to the fact the filter is not flip.
 
 **Property 3**
-n case de correlation For pattern recognition et for classification it is ok but not for edge
-detection of filtering (property 1 et 2)
-Property
+n cas de correlation pour des reconnaissance de pattern et la classification c'est ok mais pas pour la détection des côtés/arcs ou le filtrage (propriétés 1 et 2)
 
 Convolution Correlation
 **Commutative**
@@ -194,10 +189,9 @@ fo ( h1 +h 2) =fo h1 + fo h2
 La correlation sera la somme d'une distribution. Mais ce n'est pas généralement vrai si Je pouvais just appliqer les propritétés associative ou communtative. On peut aussi grâce au produit scalaire.
 
 La correlation est la valeur attendue entre le signal X et Y (E[XYT]), ça ne serait pas la même chose si on interchangeait(E[XYT])
-The Correlation is the expected value between the signal X and Y (E(XYT]) it’s not will be the
-same result if I just interchange E[YXT].
 
 Complexity of convolution in 2D :
+
 # Q18. Explain the advantages of separable filters for the computation of 2D
 convolution. Complexity of separate convolution computation in 2D.
 
@@ -206,4 +200,3 @@ convolution. Complexity of separate convolution computation in 2D.
 # Q20.Explain the high-pass filtering. Provide the examples of sharpening filters.
 Derivatives.
 
-
