@@ -95,3 +95,49 @@ Persévéront dans la déclaration de Dieu
 Ce que Dieu voit =/= ce que les hommes voient
 Cultiver notre relation
 
+## dim 31 jan 2021 15:34:13 CET
+Le prix de la vrai paix.
+Je 29:11
+Je 29:8-9
+
+est-ce que nous faisons attention sur notre vie?
+est-ce la vrai paix
+
+prix à payer tout a un prix
+Exemple:
+	- oxygène: Dieu l'a créé
+	- Le salut: Jésus a ouvert la voie
+
+Shalom:
+C'est une attention, un style de vie.
+Etat complet, de perfection
+Santé
+Sentiment de bien être
+prospérité 
+tranquilité, quietude
+durabilité
+Quand on dit "shalom" on souhaite offrir le meilleur
+
+Quand on se lève le matin et qu'on se regarde dans un mirroir, on peut se demander si la personne devant nous vie la vrai paix.
+
+Les dominations, la captivité, les barrières c'est fini
+"C'est terminé, tu va sortir!"
+exemple de la vrai paix avec Abraham qui sacrifie Isaac, Moïse qui ouvre la mer en deux, etc.
+
+- Je veux la vrai paix
+* Dans le repos
+* J'ai Jehovah Shalom
+
+- Jésus qui réssusite Lazare, si tu crois, tu vas le réveiller
+- La vrai paix
+
+La réalité n'est pas la vérité, confesse la vérité et non la réalité
+
+Comment faire?
+Que faire pour être heureux
+1) Ne pas se laisser tromper par de faux prophètes
+* propriété interne
+* captivité spirituelle
+
+**Qui sont les faux prophètes de ta vie?**
+"Je vivrai la paix cette année"

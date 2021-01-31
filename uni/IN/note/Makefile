@@ -11,6 +11,6 @@ clean: start
 zip: clean
 	zip INResumeQ5-9+21 ../PDF/*
 rendu: zip
-	mv ../note/INResumeQ5-9+21.zip ~/rendu/
+	mv ../note/INResumeQ5-10+21.zip ~/rendu/
 
 FORCE:
