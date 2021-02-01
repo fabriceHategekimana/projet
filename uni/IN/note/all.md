@@ -18,11 +18,9 @@ Pour alors passer du départ à la cible, il suffira d'utiliser z= U^-1[T[r]]
 ![Histogram_matching01](../../images/Histogram_matching01.png)
 ![Histogram_matching02](../../images/Histogram_matching02.png)
 
-# Q21. Spatial filters.
-Q21. Spatial filters: Explain the unsharpened mask and its link to the Laplacian sharpening.
+# Q21. Spatial filters: Explain the unsharpened mask and its link to the Laplacian sharpening.
 
-TODO
-expliquer le lien avec le Laplacian sharpening
+![laplacian_filter](../../images/laplacian_filter.png)
 
 **Masque flou (explain the unsharpened mask):**
 La photographie numérique a popularisé l'utilisation du masque flou pour accentuer les images, c'est-à-dire précisément pour améliorer leur piqué.
@@ -34,14 +32,9 @@ L'impression de netteté est améliorée par une augmentation du contraste d'une
 augmente la visibilité des bords.
 Ces filtres sont pas mal similaire/proportionnels. On peut observer une similitude dans leur formule respective.
 
-
-
+![relation_laplacian_unsharpened](../../images/relation_laplacian_unsharpened.png)
 # Q5. Image acquisition
 **Q5. Image acquisition** Explain the role of a sensor in imaging. Explain the principle of photon counting? Which size of sensors is of preference in practice? Explain the trade-offs.  
-
-TODO
-préférence 16 mm diamètre
-Which size of sensors is of preference in practice? Explain the trade-offs.  
 
 **Définition**
 C'est la partie matérielle des appareils de captures d'image (compose l'imaging pipeline).
@@ -55,8 +48,7 @@ Vient juste après la lentille et avant la partie électronique.
 
 **comptage de photons :** (explain the principle of photons counting)
 
-1. Les photons sont capturés par la lentille et sont amenés au capteur (sensor).
-2. Le capteur capture les photons dans des récepteurs qui vont les accumuler et les convertir grâce à l'effet photoélectrique (une propriété physique des photons qui permet d'arracher des électrons).
+1. Les photons sont capturés par la lentille et sont amenés au capteur (sensor).  2. Le capteur capture les photons dans des récepteurs qui vont les accumuler et les convertir grâce à l'effet photoélectrique (une propriété physique des photons qui permet d'arracher des électrons).
 
 **gain quantique**
 Pas tout les électrons produisent des photons.  
@@ -73,6 +65,10 @@ La qualité du comptage dépend de la taille et de la sensibilité du capteur.
 
 ![comptage_de_photons](../../images/comptage_de_photons.png)
 
+**size of preferences**
+Cela dépend du domaine d'application, pour le domaine des caméras professionnelles, on peut avoir des capteur assez grands qui peuvent mieux capter la lumière (car la taille des cellules pour les pixel est plus grande et peut accueillir plus de lumière).  
+Pour le cas des petits appareils comme les téléphones portable, le capteur sera très petit car la caméra du télépohe sera elle aussi petite (cela peut poser des problèmes pour le comptage de photon).  
+
 **Compromis** (explain the trade-off)
 Dans l'actualité, on cherche beaucoup a miniaturiser les appareils pour des question de place, mais cela permet aussi d'augmenter la résolution (on a plus de pixel par surface). Le problème qu'on rencontre concerne le comptage des photons. En effet, si le capteur d'une cellule est petit, il attrape moins de photon et ça diminue la qualité de l'image.
 rapport taille photons
@@ -83,17 +79,14 @@ effet photoélectrique: les photons arrache des électrons à chaque élément a
 # Q6 Image acquisition. 
 Q6. Image acquisition. Explain the design of modern sensors.
 
-TODO
-Composition en anglais
-
 ## Capteurs modernes (modern sensors)
-**Composition**
-Photocites:  
-	puit à photon intensité lumineux  
-Matrice:  
-	philtre colographique attribut de la couleur aux pixels  
-Microlentille:  
-	converge les rayons au dans les photocyte  
+**Composition**  
+**Microlentille (=microlense):**  
+	- converge les rayons au dans les photocyte    
+**Photodiode (=photodiode lol):**  
+	- puit à photon intensité lumineux    
+**Matrice (=color filter):**  
+	- philtre colographique attribut de la couleur aux pixels    
 
 ![image_sensor](../../images/image_sensor.png)
 
@@ -102,7 +95,8 @@ Microlentille:
 **Comparaison des capteur ccd et cmos**
 Pour les deux capteurs, il y a une différence dans `le comptage des photons`.
 
-`ccd:` Un système éléctrique pour les pixel. Stockés dans un puit de potentiel. Chaque électron est décalé pour enfin être compté par un ciruit électronique.
+`ccd:` 
+Un système éléctrique pour les pixel. Stockés dans un puit de potentiel. Chaque électron est décalé pour enfin être compté par un ciruit électronique.
 un seul circuit de comptage. Peut être optimisé facilement mais dépense beaucoup d'énergie pour le déplacement des charges est-ce ce que le prof a dit.   
 Problème: pas toujours stable
 
@@ -121,12 +115,10 @@ Le cmos a:
 	- une consomation électrique réduite
 	- une vitesse de lecture plus élevée.
 
-# Q7  Image acquisition.
-Q7. Image acquisition. Explain the different types of noise in digital images. How can one reduce the noise in digital images?
-TODO
-changer la hierarchie dans type de bruit et autre
+# Q7. Image acquisition. Explain the different types of noise in digital images. How can one reduce the noise in digital images?
 
-**Type de bruit (explain the type of noise):**
+**Type de bruit (explain the type of noise):**  
+
 `Bruit thermique (thermal noise)`: Vient de l'agitation des électrons lorsqu'ils sont influencé par la température du capteur (plus c'est chaud, plus ils sont agités). Cela libère plus d'électron que prévu et peut créer des différences. Ce bruit est aussi appelé courant d'obscurité (=dark current)
 
 `Bruit de grenaille (shot noise)`: Arrive quand la quantité de photon ou électron est tellement faible que de petites fluctuation font de grande différence dans une images.
@@ -144,11 +136,13 @@ Quelque methodes:
 4. `trained mappers` en mappant des image moins claire dans des images de haute qualité.
 
 
-# Q8 Image acquisition.
-Q8.  Image acquisition.  Explain the principles of modern color imaging.  What is a color filter array? What is the demosaicing?
+# Q8.  Image acquisition.  Explain the principles of modern color imaging.  What is a color filter array? What is the demosaicing?
 
 Color imaging
 Explain the principles of modern color imageing
+
+(color imaging)
+
 
 **Matrice de filtre colorés (What is color filter array?):**
 Un capteur ne fait que de récolter les photons pour les attribuer à des pixel.  
@@ -157,31 +151,37 @@ On utilise des philtre coloré pour donner de la couleur.
 ils sont placés sur les photosites d'un capteur photographique pour permettre la sépartion des couleurs.  
 Chaque pixel reçoit une couleur (cela dépend du philtre, comme Bayer, RGBE, etc) On crée finallement les caneaux de couleur en interpolant.  
 
+![Bayer_filter](../../images/Bayer_filter.png)
+![filter_example](../../images/filter_example.png)
+
 **Dématriçage (demosaicing):**
 Est une des phases du traitement du signal brut issu du capteur d'un appareil photographique numérique.
-Il consiste à interpoler les données de chacun des photosites monochromes rouge, vert et bleu composant le capteur électronique pour obtenir une valeur trichrome pour chaque pixel.
+En effet, une image est d'abord enregistré comme une matrice représentant l'intensité lumineuse sans les couleurs. C'est comme un grayscale.
+
+On utilise un filtre coloré pour attribuer à chaque valeur une couleur et on sépare l'image en trois chaînes de couleurs (habituellement RGB). Le problème est que chaque chanel va finir avec des trous. C'est pourquoi on utilise des technique d'interpolation pour combler les trous et se rapprocher des valeurs originelles de l'image.
+
+Il consiste à `interpoler` les données de chacun des photosites monochromes rouge, vert et bleu composant le capteur électronique pour obtenir une valeur trichrome pour chaque pixel.
+
+![demosaicing](../../images/demosaicing.png)
 
 Action de base du traitement d'image.
 
-# Q9 Histogram transformation.
-
-Q9.  Histogram transformation.  Explain and exemplify the example of contrast stretching and gamma correction.  Where do we use these operations in practice?  
-TODO
-Donner des exemple de contrast stretching et gamma correction
+# Q9.  Histogram transformation.  Explain and exemplify the example of contrast stretching and gamma correction.  Where do we use these operations in practice?  
  
 **Usage:**
 On utilise le streching et la correction gamma quand l'histograme de l'image n'est pas uniforme (quand il ne couvre pas toute la rangée dynamique de l'image et qu'il y a de grand écards entre les valeurs).
 
 **Contrast streching (explain contrast stretching):**
 Le contrast stretching est utilisé  pour augmenter la rangé dynamique jusqu'au bord pour rendre l'histogramme plus large.
+Le contraste streching ne crée pas vraiment de nouvelle valeurs:
+Il rend plus visible pour l'oeil humain certains détails.
+
+![Contrast_streching](../../images/Contrast_streching.png)
 
 **Correction gamma (explain gamma correction):**
 Le gamma caractérise le contraste d'un support de captation ou de diffusion d'images.
-C'est l'amplification non linéaire que l'on applique au signal électrique avant la transmission pour obtenir un rendu satisfaisant5.
-Cet ajustement volontaire de la caractéristique du signal n'a pas de rapport nécessaire avec le précédent.
-Même si les transducteurs sont linéaires, le bruit de fond est moins visible avec un encodage non-linéaire.
-La correction de gamma peut se comprendre comme un moyen de transmettre non pas la luminance d'un objet, mais sa luminosité perçue.
+Il est utilisé par exemple pour corriger l'e rendu d'une image sur un autre support (autre écran, papier, mur, etc.).
+C'est l'amplification non linéaire que l'on applique au signal électrique avant la transmission pour obtenir un rendu satisfaisant.
+La correction de gamma peut se comprendre comme un moyen de transmettre sa luminosité perçue.
 
-**notion**
-Luminance: une grandeur correspondant à la sensation visuelle de luminosité d'une surface.
-
+![gamma_correction](../../images/gamma_correction.png)
