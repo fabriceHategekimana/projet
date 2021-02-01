@@ -36,5 +36,5 @@ Espérance:
 - souffir
 - affliction
 - persévérer
-- vitoire
+- victoire
 

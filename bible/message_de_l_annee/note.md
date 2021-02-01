@@ -101,7 +101,7 @@ Je 29:11
 Je 29:8-9
 
 est-ce que nous faisons attention sur notre vie?
-est-ce la vrai paix
+est-ce la vrai paix?
 
 prix à payer tout a un prix
 Exemple:

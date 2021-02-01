@@ -34057,3 +34057,7 @@ time 1612000265
 old [description:"examen STB (21h)" due:"1619992800" entry:"1611393331" modified:"1612000230" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
 new [description:"examen STB (21h)" due:"1614898800" entry:"1611393331" modified:"1612000265" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
 ---
+time 1612194353
+old [description:"Examen IN" due:"1612249200" entry:"1609187403" modified:"1609187403" status:"pending" uuid:"2a9e1baa-85c5-4019-bf01-fd4b95fe2bd6"]
+new [description:"Examen IN" due:"1612249200" end:"1612194353" entry:"1609187403" modified:"1612194353" status:"completed" uuid:"2a9e1baa-85c5-4019-bf01-fd4b95fe2bd6"]
+---
