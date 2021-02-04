@@ -22,3 +22,25 @@ temps nécessaire à ces opérations (lecture et écriture).
 
 En Java le mot clé synchronized permet de définir une routine qui ne
 peut être exécutée que par un seul processus simultanément.
+
+Utiliser une FIFO et synchroniser les méthodes de gestion de la queue
+
+Avec la loi d'amdal, on se rend compte que les programmes synchronisés (s'executant séquentiellement) risquent de ralentir le programme.
+
+La synchronisation est un problème si on a une interuption (par ex. exception).
+
+# Méthode des invariants
+Une proposition est invariante si elle est toujours vraie, dans tout les états possible du programme.
+
+Les méchanismes de synchronisation permettent l'exclusion mutuelle et la coordination de l'exécution des threads sans utiliser de boucles d'attentes actives.
+
+Sémaphore:
+	- valeur booléenne
+	- file d'attente de processus bloqués
+
+Les méthode P() et V()
+Lorsque P() est exécutée on a
+    1.si valeur=true, alors valeur=false
+    2.si valeur=false, le processus appelant est bloqué
+Lorsque V() est exécutée on a
+1. valeur=true, si la file d’attente des processus n’est pas libre on libère un processus
