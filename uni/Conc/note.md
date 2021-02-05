@@ -2,9 +2,10 @@
 
 Programmation concurrente:
 	- [Exclusion_mutuelle](Exclusion_mutuelle)
-	- Synchronisation
-	- Synchronisation wait-free
+	- [Synchronisation](Synchronisation)
+	- [Synchronisation_wait_free](Synchronisation_wait_free)
 Programmation distribuée
+	- [algorithme_distribué](algorithme_distribué)
 	- Sockets/RMI en Java
 
 # Trouver:
@@ -15,19 +16,19 @@ Programme cocurrent:
 Peut s'exécuter en parallèle
 composé de processus (programme séquntiel), appellé threads s'ils partagent une même zone mémoire.
 
-
 # Problèmes classiques
 [Interblocage](Interblocage) (deadlock)
 Interférence: plusieurs processus modifie la même donnée en même temps
 Insuffisance de resources (starvation)
 
 # proriétés (contraintes) désiré(e)s:
-Sûreté (safety)
-Vivacité (liveness)
+[Sûreté](Sûreté) (safety)
+[Vivacité](Vivacité) (liveness)
 
+**règle**
 un programme concurrent n'est pas forcément parallèle (système multitâches)
 
-Système distribué: composé de systèmes qui communique par message à l'aide d'un réseau
+**Système distribué**: composé de systèmes qui communique par message à l'aide d'un réseau
 
 # Java
 Les threads partagent la même mémoire grâce à JVM
@@ -51,3 +52,22 @@ Thread.interrupt() permet a un thread d'en interrompre un autre.
 Pour l'ordonnancement des thread, on utilise un système de priorité (max, min, norm)
 Cela est placé dans la variable Priority
 join() permet a un thread d'attendre qu'un autre finisse
+
+Je ne sais pas où poser:
+wait(), notify(), interrupt(), (notifyAll())
+
+sémaphore (booléene ou entière)
+
+Problème du producteur consommateur, multiproducteur multiconsomateur, problème des philosophes
+
+![algorithme_probabiliste_des_philosophes](../../images/algorithme_probabiliste_des_philosophes.png)
+
+Java en pratique
+	- data race
+	- Atomic long
+	- consistance
+	- visibilité
+	- publication
+	- spécification
+	- synch-order
+	- Happen-before

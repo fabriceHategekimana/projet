@@ -1,4 +1,4 @@
-%title: Vim
+%title: Vi/Vim
 %author: Fabrice Hategekimana
 
 ```
@@ -15,7 +15,7 @@ Sommaire
 ========
 - origines
 ^
-- vim c'est quoi?
+- Vi/Vim c'est quoi?
 ^
 - Bagages utils
 ^
@@ -40,14 +40,14 @@ Origines
 
 ----
 
-Vim c'est quoi?
+Vi/Vim c'est quoi?
 ================
 
 C'est **plus** qu'un éditeur de texte.  
-C'est une façon de penser la rédaction:  
+C'est une façon de penser sa rédaction/son workflow:  
 - On passe plus de temps à **modifier** qu'à ajouter  
 - Clavier + **homerow**  
-- **langage** (requête)  
+- **Langage** (requête)  
 
 ----
 
@@ -217,6 +217,7 @@ Documentation
 - **help**: (:help)  
 - **sites**: (Vim Tips Wiki, youtube, sites particuliers)  
 - **communautés**: (Stack Overflow, Stack Exchange, reddit, etc.) 
+- **cheat sheet**: (internet)
 
 ----
 
@@ -229,6 +230,7 @@ Horizon:
 * Onivim
 
 ----
+
 ```
                       __  __               _   _ 
                      |  \/  | ___ _ __ ___(_) | |
@@ -237,3 +239,8 @@ Horizon:
                      |_|  |_|\___|_|  \___|_| (_)
                                                  
 ```
+
+----
+
+## Questions?
+## Use case
