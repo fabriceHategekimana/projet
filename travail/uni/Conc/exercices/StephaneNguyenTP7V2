@@ -1,0 +1,40 @@
+
+public class bakeryInspired implements Lock{
+
+  private int NumeroCpt = 0;
+
+  private int DernierServi = 0;
+
+  public bakeryInspired(){
+
+  }
+
+  public synchronized void requestCS(int i){
+
+    int CptLocal = NumeroCpt; // 0 au depart, le prochain voit le numero comme
+    // 1 : CptLocal
+    // Si d'autres veulent ils auront un CptLocal plus haut
+
+    NumeroCpt++;
+
+    // si DernierServi == CptLocal, c'est a nous.
+    // sinon tant que pas a nous, on attend.
+    while ( DernierServi != CptLocal){ // 0 == 0 au depart
+      try{
+        wait();
+      }
+      catch (InterruptedException e){ e.printStackTrace();}
+    }
+    System.out.println("CptLocal : " + CptLocal);
+
+  }
+
+
+  public synchronized void releaseCS(int i){
+
+    DernierServi++;
+    // Si on a fini de le servir, incremente DernierServi
+    // on notifyAll. Si notify tout court, on pourrait avoir un deadlock
+    notifyAll();
+  }
+}

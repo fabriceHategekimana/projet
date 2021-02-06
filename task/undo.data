@@ -34061,3 +34061,15 @@ time 1612194353
 old [description:"Examen IN" due:"1612249200" entry:"1609187403" modified:"1609187403" status:"pending" uuid:"2a9e1baa-85c5-4019-bf01-fd4b95fe2bd6"]
 new [description:"Examen IN" due:"1612249200" end:"1612194353" entry:"1609187403" modified:"1612194353" status:"completed" uuid:"2a9e1baa-85c5-4019-bf01-fd4b95fe2bd6"]
 ---
+time 1612537860
+old [description:"Examen GL" due:"1612508400" entry:"1609187459" modified:"1609187459" status:"pending" uuid:"b03eb3ec-2843-45e9-974f-a830a5755897"]
+new [description:"Examen GL" due:"1612508400" end:"1612537860" entry:"1609187459" modified:"1612537860" status:"completed" uuid:"b03eb3ec-2843-45e9-974f-a830a5755897"]
+---
+time 1612559290
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"++++++++++++++++-" modified:"1611994567" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++" modified:"1612559290" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
+time 1612559290
+old [description:"Devoir maman Lady" due:"1612591200" entry:"1611994567" imask:"16" modified:"1611391056" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"4d0c0cc0-33e7-42ff-a672-bcb21d39b324"]
+new [description:"Devoir maman Lady" due:"1612591200" end:"1612559290" entry:"1611994567" imask:"16" modified:"1612559290" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"4d0c0cc0-33e7-42ff-a672-bcb21d39b324"]
+---

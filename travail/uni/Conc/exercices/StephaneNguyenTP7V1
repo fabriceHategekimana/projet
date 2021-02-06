@@ -1,0 +1,74 @@
+
+public class LamportInspired implements Lock{
+  /*
+  Without timestamps
+  */
+
+  int Nproc;
+  volatile int numbers[];// saving numbers..
+
+  public LamportInspired(int Nproc){
+    /*
+    Init
+    */
+    this.Nproc=Nproc;
+
+    numbers = new int[Nproc];
+
+    // fill both arrays
+    for (int j=0;j<Nproc;j++){
+      numbers[j]=0; // init at 0 !!
+    }
+
+  }
+
+  private void criticalSection(int id){
+    System.out.println("Id: " + id +" is in CS");
+  }
+  private void nonCriticalSection(int id){
+    System.out.println("Id: " + id +" exits CS and is NOT in CS");
+  }
+
+  // request critical section
+  public synchronized void requestCS(int i){
+    System.out.println(i + " want to enter in CS");
+    /*
+    Phase 1 : set numbers if we request. In the array, we cannot
+    have multiple same values due to synch, we also do not need
+    choosing.
+    */
+
+    /*
+    find max then add 1
+    */
+    for (int j=0; j < Nproc; j++){
+      if (numbers[i] < numbers[j]){
+        numbers[i]=numbers[j];
+      }
+    }
+    numbers[i]++;
+
+    for (int j=0; j < Nproc; j++){
+      // everyone will always finish the phase 1
+
+      // if not his turn, wait
+      while ((numbers[j] != 0) && (numbers[j] < numbers[i])){
+        try{
+          this.wait();
+        }
+        catch (InterruptedException e){ e.printStackTrace();};
+      }
+
+    }
+    criticalSection(i);
+  }
+
+  // release critical section
+  public synchronized void releaseCS(int i){
+    nonCriticalSection(i);
+    // resets numbers[i]
+    numbers[i]=0;
+    this.notifyAll();
+
+  }
+}

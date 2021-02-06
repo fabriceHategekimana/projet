@@ -3,7 +3,7 @@
 
 ## spirituel:
 ### obéissance:  
-Au niveau de l'obéissance je n'ai pas fait de progrès.
+Au niveau de l'obéissance je n'ai pas fait de progrès. C'est plutôt comme si je n'arrive pas à augmenter mes heures de prière personnelles. Certains je reçois toujours qqch quand je cherche Dieu de tout mon coeur, mais parfois, j'ai l'impression que je ne parvient pas à m'habituer à faire plus. C'est comme la douche, ça me fait du bien quand je suis dedans, mais je n'ai pas forcément envie d'y aller. Je pense que le problème viens de roché et de ronces qui m'empêchent de me plenter profondément.
 Dieu m'a révélé un peu plus sur ma volonté cette année mais je me rends compte que je tarde dans l'accomplissement de celle-ci.
 
 ### ecclésiastique:  

@@ -1,0 +1,59 @@
+package tp7;
+
+import java.util.ArrayList;
+
+public class lamportNew extends Thread{
+		
+	volatile ArrayList<Object> file;
+	volatile int inCS;
+	
+	public lamportNew() {
+		file = new ArrayList<Object>();
+		inCS = 0;
+	}
+	
+	public void requestCS(int i) throws InterruptedException {
+		
+		int toDo = 0;
+		synchronized(this) {
+			if (file.size() > 0 || inCS == 1) {
+				toDo = 1;
+				}
+			else {
+				inCS = 1;
+			}
+			}
+			
+		if (toDo == 1) {
+			Object o1 = new Object();
+			synchronized(o1){
+				synchronized(this) {
+					file.add(o1);
+				}
+				o1.wait();
+			}
+			
+		}
+		
+	}
+	
+	public void releaseCS(int i) {
+
+		inCS = 0;
+		if (file.size() != 0) {
+			Object tmp = file.get(0);
+			synchronized(tmp) {
+				tmp.notify();
+				inCS = 1;
+				synchronized(this) {
+					file.remove(0);
+				}
+			}
+			
+		}
+		
+		
+		
+	}
+
+}
