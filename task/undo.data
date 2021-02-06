@@ -34073,3 +34073,10 @@ time 1612559290
 old [description:"Devoir maman Lady" due:"1612591200" entry:"1611994567" imask:"16" modified:"1611391056" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"4d0c0cc0-33e7-42ff-a672-bcb21d39b324"]
 new [description:"Devoir maman Lady" due:"1612591200" end:"1612559290" entry:"1611994567" imask:"16" modified:"1612559290" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"4d0c0cc0-33e7-42ff-a672-bcb21d39b324"]
 ---
+time 1612612461
+new [description:"Devoir maman Lady" due:"1613196000" entry:"1612612461" imask:"17" modified:"1612559290" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b415ecf0-20af-45f8-a7f0-f00020b9497f"]
+---
+time 1612612461
+old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++" modified:"1612559290" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++-" modified:"1612612461" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+---
