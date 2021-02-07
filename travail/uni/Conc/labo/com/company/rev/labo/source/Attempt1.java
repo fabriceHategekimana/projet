@@ -9,12 +9,16 @@ public class Attempt1 implements Lock {
     }
 
     public void requestCS(int i) {
-	while (!openDoor) ; // attente active
+	while (!openDoor){  // attente active
+		System.out.println("p"+Integer.toString(i)+" waiting");
+	}
 	openDoor = false; // verouille l’accès à la SC
+	System.out.println("p"+Integer.toString(i)+" enter SC");
     }
 
     public void releaseCS(int i) {
 	openDoor = true; // libère l’accès à la SC
+	System.out.println("p"+Integer.toString(i)+" quit SC");
     }
 
 
