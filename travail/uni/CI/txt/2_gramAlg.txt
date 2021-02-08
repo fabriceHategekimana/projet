@@ -1,7 +1,7 @@
 Limites des langages réguliers
 Langages et grammaires algébriques
 Arbres syntaxiques
-Grammaires ⌧ pathologiques
+Grammaires  pathologiques
 Les algébriques. . . et les autres
 
 But de ce cours

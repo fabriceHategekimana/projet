@@ -1,0 +1,14 @@
+- Chair, tromperie du coeur, viel homme
+- Conduit de l'Esprit
+- Activateurs:
+    - `Galates 5:19 `
+    - Consomation
+    - Addiction
+    - impudicité
+    - amertume
+    - mauvaise paroles
+    - manque de pardon
+    - fréquentations
+- Renouvellement de l'alliance continuelle
+- Détacher des attraits du monde
+

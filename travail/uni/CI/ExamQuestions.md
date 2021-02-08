@@ -2,37 +2,37 @@
 Deux questions à traiter en 20 minutes, utilisez des exemples, soyez
 préparés.
 
-## Principes généraux:
-Q1.1: Analyseur lexical, qu'est ce que c'est ?
-Q1.2: Analyse syntaxique, qu'est ce que c'est ?
-Q1.3: Automates à piles, principes
+## Principes généraux
+[Q1_1_Analyseur_lexical_qu_est_ce_que_c_est_](Q1_1_Analyseur_lexical_qu_est_ce_que_c_est_)?
+[Q1_2_Analyse_syntaxique_qu_est_ce_que_c_est_](Q1_2_Analyse_syntaxique_qu_est_ce_que_c_est_)?
+[Q1_3_Automates_à_piles_principes](Q1_3_Automates_à_piles_principes)
 
 ## Grammaire:
-Q3.1: Définir formellement ce qu'est une grammaire
-Q3.2: Classification des grammaires
-Q3.3: Grammaires ambigües
+[Q3_1_Définir_formellement_ce_qu_est_une_grammaire](Q3_1_Définir_formellement_ce_qu_est_une_grammaire)
+[Q3_2_Classification_des_grammaires](Q3_2_Classification_des_grammaires)
+[Q3_3_Grammaires_ambigües](Q3_3_Grammaires_ambigües)
 
 ## Analyse descendante
-Q5.1: Qu'est-ce que c'est l'analyse prédictive
-Q5.2: Table d'analyse
-Q5.3: Collaboration avec analyseur lexical
-Q5.4: transition de lecture, transition d'expansion, ordre préfixe
-Q5.5: construction de la table d'analyse: Premier
-Q5.6: construction de la table d'analyse: epsilon-Prod
-Q5.7: construction de la table d'analyse: Suivant
-Q5.8: construction de la table d'analyse: remplissage
-Q5.9: caractérisation d'une grammaire LL(1)
-Q5.10: rendre une grammaire LL(1), problèmes et solutions
+[Q5_1_Qu_est ce_que_c_est_l_analyse_prédictive](Q5_1_Qu_est-ce_que_c_est_l_analyse_prédictive)
+[Q5_2_Table_d_analyse](Q5_2_Table_d_analyse)
+[Q5_3_Collaboration_avec_analyseur_lexical](Q5_3_Collaboration_avec_analyseur_lexical)
+[Q5_4_transition_de_lecture_transition_d_expansion_ordre_préfixe](Q5_4_transition_de_lecture_transition_d_expansion_ordre_préfixe)
+[Q5_5_construction_de_la_table_d_analyse_Premier](Q5_5_construction_de_la_table_d_analyse_Premier)
+[Q5_6_construction_de_la_table_d_analyse_epsilon Prod](Q5_6_construction_de_la_table_d_analyse_epsilon-Prod)
+[Q5_7_construction_de_la_table_d_analyse_Suivant](Q5_7_construction_de_la_table_d_analyse_Suivant)
+[Q5_8_construction_de_la_table_d_analyse_remplissage](Q5_8_construction_de_la_table_d_analyse_remplissage)
+[Q5_9_caractérisation_d_une_grammaire_LL1](Q5_9_caractérisation_d_une_grammaire_LL1)
+[Q5_10_rendre_une_grammaire_LL1_problèmes_et_solutions](Q5_10_rendre_une_grammaire_LL1_problèmes_et_solutions)
 
-## Analyse Ascendante:
-Q6.1: Automate des items
-Q6.2: Automate charactéristique
-Q6.3: Automate LR-AFD
-Q6.4: Table d'analyse LR(0): table des successeurs
-Q6.5: Table d'analyse LR(0): table des actions
-Q6.6: Table d'analyse LR(0): conflits ?
-Q 6.7: Analyseurs SLR(1): table des actions
-Q 6.8: Analyseurs LR(1): items généralisés
-Q 6.9: Analyseurs LR(1): table des actions
-Q 6.10: Table d'analyse LR(1): conflits ?
+## Analyse Ascendante
+[Q6_1_Automate_des_items](Q6_1_Automate_des_items)
+[Q6_2_Automate_charactéristique](Q6_2_Automate_charactéristique)
+[Q6_3_Automate_LR AFD](Q6_3_Automate_LR-AFD)
+[Q6_4_Table_d_analyse_LR0_table_des_successeurs](Q6_4_Table_d_analyse_LR0_table_des_successeurs)
+[Q6_5_Table_d_analyse_LR0_table_des_actions](Q6_5_Table_d_analyse_LR0_table_des_actions)
+[Q6_6_Table_d_analyse_LR0_conflits_](Q6_6_Table_d_analyse_LR0_conflits_)?
+[Q_6_7_Analyseurs_SLR1_table_des_actions](Q_6_7_Analyseurs_SLR1_table_des_actions)
+[Q_6_8_Analyseurs_LR1_items_généralisés](Q_6_8_Analyseurs_LR1_items_généralisés)
+[Q_6_9_Analyseurs_LR1_table_des_actions](Q_6_9_Analyseurs_LR1_table_des_actions)
+[Q_6_10_Table_d_analyse_LR1_conflits_](Q_6_10_Table_d_analyse_LR1_conflits_)?
 
