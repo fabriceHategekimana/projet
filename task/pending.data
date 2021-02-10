@@ -1,7 +1,5 @@
 [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++-" modified:"1612612461" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 [description:"organisation examen" entry:"1609187029" modified:"1609187029" status:"pending" uuid:"69bd39e6-f477-44fe-abae-6f096666b60a"]
-[description:"Examen Co" due:"1612767600" entry:"1609187517" modified:"1609187517" status:"pending" uuid:"e7884ac8-cfa8-4565-8511-b174c8bc1b6a"]
-[description:"Examen CI" due:"1612940400" entry:"1609187543" modified:"1609187543" status:"pending" uuid:"4fe08581-8031-41a2-ac29-cc781b5833e6"]
 [description:"Examen IA" due:"1613026800" entry:"1609187584" modified:"1609187584" status:"pending" uuid:"1aec47bc-52c6-40df-87e9-42c591fa253f"]
 [description:"Examen SI" due:"1613113200" entry:"1609187620" modified:"1609187620" status:"pending" uuid:"1fd74cb5-d42d-4da6-abae-43f88cfaf5e5"]
 [description:"typing" entry:"1610404529" modified:"1610404529" status:"pending" uuid:"5be502c2-bf0a-4513-8500-7a1acd69ffe1"]

@@ -34080,3 +34080,11 @@ time 1612612461
 old [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++" modified:"1612559290" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 new [description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++-" modified:"1612612461" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 ---
+time 1612984890
+old [description:"Examen Co" due:"1612767600" entry:"1609187517" modified:"1609187517" status:"pending" uuid:"e7884ac8-cfa8-4565-8511-b174c8bc1b6a"]
+new [description:"Examen Co" due:"1612767600" end:"1612984890" entry:"1609187517" modified:"1612984890" status:"completed" uuid:"e7884ac8-cfa8-4565-8511-b174c8bc1b6a"]
+---
+time 1612984890
+old [description:"Examen CI" due:"1612940400" entry:"1609187543" modified:"1609187543" status:"pending" uuid:"4fe08581-8031-41a2-ac29-cc781b5833e6"]
+new [description:"Examen CI" due:"1612940400" end:"1612984890" entry:"1609187543" modified:"1612984890" status:"completed" uuid:"4fe08581-8031-41a2-ac29-cc781b5833e6"]
+---

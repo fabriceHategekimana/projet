@@ -1,3 +1,5 @@
+[description:"Examen Co" due:"1612767600" end:"1612984890" entry:"1609187517" modified:"1612984890" status:"completed" uuid:"e7884ac8-cfa8-4565-8511-b174c8bc1b6a"]
+[description:"Examen CI" due:"1612940400" end:"1612984890" entry:"1609187543" modified:"1612984890" status:"completed" uuid:"4fe08581-8031-41a2-ac29-cc781b5833e6"]
 [description:"Devoir maman Lady" due:"1612591200" end:"1612559290" entry:"1611994567" imask:"16" modified:"1612559290" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"completed" uuid:"4d0c0cc0-33e7-42ff-a672-bcb21d39b324"]
 [description:"Examen GL" due:"1612508400" end:"1612537860" entry:"1609187459" modified:"1612537860" status:"completed" uuid:"b03eb3ec-2843-45e9-974f-a830a5755897"]
 [description:"Examen IN" due:"1612249200" end:"1612194353" entry:"1609187403" modified:"1612194353" status:"completed" uuid:"2a9e1baa-85c5-4019-bf01-fd4b95fe2bd6"]
