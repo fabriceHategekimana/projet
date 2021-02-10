@@ -74,7 +74,7 @@ On peut améliorer l'algorithme si on fait un approfondissement itératif (IDS).
 
 # Chapitres:
 [01 intro](01.intro)
-02.preuveTaquin
+[02 preuveTaquin](02.preuveTaquin)
 02.recherche
 03.rechercheAveugle
 04.rechercheHeuristique
