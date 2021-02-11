@@ -18,7 +18,7 @@ Les processus fils deviennent orphelin et son ratachés au processus init (proce
 Cette fonction permet de soulager le CPU en laissant leur tour à d'autre threads. Cela permet aussi de réduire les différences de vitesse d'exécution entre les processus (chaque processus execute son code en tour par tour). (je ne suis pas totalement sûr de cette réponse).
 
 ## 4. Y-a-t-il des conflits dans les ressources utilisées par les différents processus ?  Expliquez.
-Il y a quelques conflits de ressource.Chaque processus modifie sa propre cellule (mémoire addressé) et se contente de lire le contenu des autre cellule. Le processus parent ne fait que de lire le plateau (toutes les cellules en cours).
+Il y a pas vraiment de conflit de ressource. Chaque processus modifie sa propre cellule (mémoire addressé) et se contente de lire le contenu des autres cellules. Le processus parent ne fait que de lire le plateau (toutes les cellules en cours). Cependant, comme il n'y a pas de moyen de synchronisation, la lecture sur les cellules voisine ou la lecture du plateau peut être faussée (les threads n'ont pas tous la même vitesse et il se peut que les valeurs changent pendant une lecture).
 
 ## 5. Imaginons que ce programme tourne sur un processeur unique, que ce passerais- t-il si les lignes 85-87 n’étaient pas commentées.
 Alors on aurrait un affichage lent et discontinue. Car on demande un ordonnancement des tâches en mode SCHED_FIFO (un processus, tournera dans le processeur sans interruption jusqu'à ce qu'il termine). De plus, on donne une faible priorité au processus parent (=1).

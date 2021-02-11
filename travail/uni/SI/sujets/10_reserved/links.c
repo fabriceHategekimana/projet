@@ -38,14 +38,12 @@ int main(int argc, char *argv[]) {
         if (strcmp(entry->d_name, "..") != 0 && strcmp(entry->d_name, ".") != 0) {
             
             char path_in[PATH_MAX];     //On copie dans la variable 'path_in' la chaîne de caractères "<nom_du_dossier_d'entrée>/<nom_du_fichier"
-            int res = snprintf(path_in, PATH_MAX ,
-                                "%s/%s", in_dir, entry->d_name);
+            int res = snprintf(path_in, PATH_MAX , "%s/%s", in_dir, entry->d_name);
             if(res >= PATH_MAX)     //Vérification d'erreur
                 fprintf(stderr, "Input path length is too long.\n");
                 
             char path_out[PATH_MAX];    //On copie dans la variable 'path_out' la chaîne de caractères "<nom_du_dossier_de_sortie>/<nom_du_fichier"
-            res = snprintf(path_out, PATH_MAX ,
-                                    "%s/%s", out_dir, entry->d_name);
+            res = snprintf(path_out, PATH_MAX , "%s/%s", out_dir, entry->d_name);
             if(res >= PATH_MAX)     //Vérification d'erreur
                 fprintf(stderr, "Output path length is too long.\n");
             
