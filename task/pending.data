@@ -1,4 +1,4 @@
-[description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++-" modified:"1612612461" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
+[description:"Devoir maman Lady" due:"1602914400" entry:"1602928466" mask:"+++++++++++++++++--" modified:"1613213468" recur:"weekly" status:"recurring" uuid:"2c785361-3075-4da5-9e90-21bcfb3b9e4b"]
 [description:"organisation examen" entry:"1609187029" modified:"1609187029" status:"pending" uuid:"69bd39e6-f477-44fe-abae-6f096666b60a"]
 [description:"Examen IA" due:"1613026800" entry:"1609187584" modified:"1609187584" status:"pending" uuid:"1aec47bc-52c6-40df-87e9-42c591fa253f"]
 [description:"Examen SI" due:"1613113200" entry:"1609187620" modified:"1609187620" status:"pending" uuid:"1fd74cb5-d42d-4da6-abae-43f88cfaf5e5"]
@@ -8,3 +8,4 @@
 [description:"chgt switch UNIGE" due:"1613977200" entry:"1611351447" modified:"1611351447" status:"pending" uuid:"e8404b63-5c5b-4b05-ac3f-eb07c4d094b9"]
 [description:"examen STB (21h)" due:"1614898800" entry:"1611393331" modified:"1612000265" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
 [description:"Devoir maman Lady" due:"1613196000" entry:"1612612461" imask:"17" modified:"1612559290" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b415ecf0-20af-45f8-a7f0-f00020b9497f"]
+[description:"Devoir maman Lady" due:"1613800800" entry:"1613213468" imask:"18" modified:"1612612461" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"8e616983-3dd8-4e04-a838-fee66f70d60e"]
