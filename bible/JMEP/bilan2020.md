@@ -4,10 +4,16 @@
 ## spirituel:
 ### obéissance:  
 Au niveau de l'obéissance je n'ai pas fait de progrès. C'est plutôt comme si je n'arrive pas à augmenter mes heures de prière personnelles. Certains je reçois toujours qqch quand je cherche Dieu de tout mon coeur, mais parfois, j'ai l'impression que je ne parvient pas à m'habituer à faire plus. C'est comme la douche, ça me fait du bien quand je suis dedans, mais je n'ai pas forcément envie d'y aller. Je pense que le problème viens de roché et de ronces qui m'empêchent de me plenter profondément.
-Dieu m'a révélé un peu plus sur ma volonté cette année mais je me rends compte que je tarde dans l'accomplissement de celle-ci.
+Dieu m'a révélé un peu plus sur sa volonté cette année mais je me rends compte que je tarde dans l'accomplissement de celle-ci. Il m'a montré l'image de son épé que je me devais de manier, je dois être capable de toucher et d'atteindre les coeurs et pour cela je dois en être conscient.
 
 ### ecclésiastique:  
 Durant cette année 2020, je me rends compte que le Seigneur m'a fait prendre deux pause concernant mon ministère. Je découvre qu'il voulait m'amener à un autre niveau en tant que Chrétien (prière, adoration, musique).
+
+Dans un premier temps c'était à l'armée, j'ai pu rencontrer des musiciens qui m'ont fait voir les choses d'un autre sens. J'ai voulu apprendre de nouveau chants améliorer mon style au piano et plonger un peu plus dans la musique.
+J'ai aussi eu des moment de prière et de communion avec les militaires chrétiens.
+
+Dans un deuxième temps, c'était au milieu de la deuxième vague, à ce moment les membres de Siloé venaient de moins en moins et je m'était retrouvé à la veille du jours attendu avec seulement le batteur. J'ai finalement compris que je ne pouvais pas me limiter qu'à adorer avec le piano seulement mais que je devais aussi apprendre le chant, la batterie la voix etc.
+
 
 ### âme:  
 **relation:**

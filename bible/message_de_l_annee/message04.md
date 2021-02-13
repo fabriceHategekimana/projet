@@ -17,9 +17,21 @@ Foi morte:
 ## Plan
 Sciences
 Message
-Identité
-Extreme
+Identité:
+	- Qui est Dieu
+	- Que va faire Dieu
+	- Qui nous sommes
+	- Qu'allons-nous faire
+Extreme:
+	- Difficile
+	- Job
+	- Jésus
+	- Nature de l'homme
+	- Le monde est injuste
+Espérance
 persévérence
 SE
 Vérité
 Dangereux
+
+Ecclesiaste 9:1 "Les hommes ne savent rien, tout est devant eux"
