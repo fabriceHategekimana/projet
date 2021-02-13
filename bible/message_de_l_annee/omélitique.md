@@ -1,8 +1,8 @@
 # Omélitique
 Omeli= sermon
+
 TODO
--Quels sont les clés pour convaincre
--Étude comparative naissance de Jésus et de Jean-baptiste
+- Étude comparative naissance de Jésus et de Jean-baptiste
 
 **But:**  
 glorifier Dieu et convaincre
@@ -30,8 +30,10 @@ Amener une changement dans la foi des auditeur et leur faire prendre une décisi
 - le prédicateur
 - l'auditoir
 
-**Introduction: **
+**Introduction:**
 attirer l'intérêt, mise en contexte
+
+Défition de shalom
 
 1. Type et sorte de prédication
 2. Ebauche d'une prédication type:
