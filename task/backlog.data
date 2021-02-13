@@ -9511,3 +9511,5 @@
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++++++++-","modified":"20210206T115421Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
 {"description":"Examen Co","due":"20210208T070000Z","end":"20210210T192130Z","entry":"20201228T203157Z","modified":"20210210T192130Z","status":"completed","uuid":"e7884ac8-cfa8-4565-8511-b174c8bc1b6a"}
 {"description":"Examen CI","due":"20210210T070000Z","end":"20210210T192130Z","entry":"20201228T203223Z","modified":"20210210T192130Z","status":"completed","uuid":"4fe08581-8031-41a2-ac29-cc781b5833e6"}
+{"description":"Devoir maman Lady","due":"20210220T060000Z","entry":"20210213T105217Z","imask":18,"modified":"20210206T115421Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"0ff8e0f0-e565-44ea-bc8a-b41b1fef4f4e"}
+{"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++++++++--","modified":"20210213T105217Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}

@@ -7,6 +7,9 @@ Mon identité suis-je de Babylone ou de Dieu?
 Jean 14:27
 Je vous laisse la paix, je vous donne ma paix. Je ne vous donne pas comme le monde donne. Que votre coeur ne se trouble point, et ne s'alarme point
 
+Psaume 34:19
+Le malheur atteint souvent le juste, Mais l'Eternel l'en délivre toujours.
+
 ## Element
 Foi morte:
 - vie pas vraiment transformé par l'oeuvre du SE
