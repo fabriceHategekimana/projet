@@ -33,19 +33,20 @@ Paix sérénité et calme
     - 1. habiter (babylone)
     - 2. rapprochement
     - 3. faux prophètes
+    # - Je vous laisse la paix
 
 `Extreme:`
     - Difficile 
     - Job 3
     - Jésus
     - Nature de l'homme
+    # - Je vous laisse la paix
     Psaume 34:19
     Le malheur atteint souvent le juste, Mais l'Eternel l'en délivre toujours.
 
 `Outils:`
     - Foi
-    - Espérance
-    - persévérence
+    - Paix (barque)
     - SE
     - Vérité
     - Dangereux
