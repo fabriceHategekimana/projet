@@ -1,45 +1,42 @@
 # Message04:
+`La paix de Dieu`
+Dieu veux nous donner Sa paix
+`Shalom:`
+C'est une attention, un style de vie.
+Etat complet, de perfection
+tranquilité, quietude
+Quand on dit "shalom" on souhaite offrir le meilleur
+Paix sérénité et calme
 
 ## Passage.
 Jean 14:27
 Je vous laisse la paix, je vous donne ma paix. Je ne vous donne pas comme le monde donne. Que votre coeur ne se trouble point, et ne s'alarme point
 
-## Element
-Foi morte:
-- vie pas vraiment transformé par l'oeuvre du SE
-- pas de bonne oeuvre (mauvaise oeuvre)
-- Bonne oeuvre Conséquence 
-- Coeur pas changé/transformé
-
 ## Plan
 `Message`
 Jérémie captif nous 
-
-Shalom:
-C'est une attention, un style de vie.
-Etat complet, de perfection
-Santé
-Sentiment de bien être
-prospérité 
-tranquilité, quietude
-durabilité
-Quand on dit "shalom" on souhaite offrir le meilleur
-
-Paix sérénité et calme
 
 `Identité:`
     - Qui est Dieu
     - Qui nous sommes (Babylone, Jérusalem)
     - 1. habiter (babylone)
     - 2. rapprochement
+<<<<<<< HEAD
     - 3. faux prophètes
     # - Je vous laisse la paix
+=======
+ Mais le fruit de l'Esprit, c'est l'amour, la joie, la paix, la patience, la bonté, la bénignité, la fidélité, 23la douceur, la tempérance; la loi n'est pas contre ces choses.
+    - 3. faux prophètes (éphémère)
+    # Je vous laisse la paix
+>>>>>>> f965e171af45f000f1d355c33f0e6b2d12af48c4
 
 `Extreme:`
     - Difficile 
     - Job 3
     - Jésus
+    # Je vous laisse la paix
     - Nature de l'homme
+<<<<<<< HEAD
     # - Je vous laisse la paix
     Psaume 34:19
     Le malheur atteint souvent le juste, Mais l'Eternel l'en délivre toujours.
@@ -47,15 +44,40 @@ Paix sérénité et calme
 `Outils:`
     - Foi
     - Paix (barque)
+=======
+
+`Outils:`
+    - Foi
+    - persévérence
+    - paix
+>>>>>>> f965e171af45f000f1d355c33f0e6b2d12af48c4
     - SE
-    - Vérité
-    - Dangereux
+    # Je vous laisse la paix
+
+J'ai l'assurance que:
+la mort
+la vie
+les anges
+les dominations
+les choses présentes
+les choses avenir
+les puissances
+la hauteur
+la profondeur
+aucune créature
+Romain 8:38-39
+
 
 Ecclesiaste 9:1 "Les hommes ne savent rien, tout est devant eux"
 
+Psaume 34:19
+Le malheur atteint souvent le juste, Mais l'Eternel l'en délivre toujours.
+
 Décision:
-- vivre la communion avec Dieu
-- Vivre la paix de Dieu
+- vivre la communion avec Dieu (accrochons nous)
+- Vivre la paix de Dieu paix durable jusque à l'éternité
+
+Abandonne pas poursuis
 
 Exemple de la 
 Par rapport à aujourd'hui
