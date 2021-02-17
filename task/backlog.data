@@ -739,7 +739,6 @@
 {"description":"phantsper","due":"20200530T193423Z","entry":"20200530T091419Z","imask":7,"modified":"20200529T120020Z","parent":"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4","project":"récapitulatif","recur":"daily","status":"pending","uuid":"13f48a22-3051-487e-a98f-609034ad689b"}
 {"description":"phantsper","due":"20200523T193423Z","entry":"20200519T082536Z","mask":"++++++--","modified":"20200530T091419Z","project":"récapitulatif","recur":"daily","status":"recurring","uuid":"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"}
 =======
->>>>>>> 259493f6d30a2333fe9917391913b1925849ecf8
 {"description":"fabrice","entry":"20200531T152356Z","modified":"20200531T152356Z","status":"pending","uuid":"4521ce0c-74d4-4fe9-8a97-280dff4ff43d"}
 {"description":"spirituel","due":"20200530T193417Z","entry":"20200531T152715Z","imask":7,"modified":"20200529T120029Z","parent":"0cd612cb-5605-4c8a-8ed2-6332c8195861","project":"récapitulatif","recur":"daily","status":"pending","uuid":"e9420ebd-c12c-45a3-b8ca-f2e802589070"}
 {"description":"spirituel","due":"20200531T193417Z","entry":"20200531T152715Z","imask":8,"modified":"20200529T120029Z","parent":"0cd612cb-5605-4c8a-8ed2-6332c8195861","project":"récapitulatif","recur":"daily","status":"pending","uuid":"b8b70eaf-c5ea-40e9-b68b-2498ae0680a4"}
@@ -9517,4 +9516,3 @@
 =======
 {"description":"Devoir maman Lady","due":"20210220T060000Z","entry":"20210213T105108Z","imask":18,"modified":"20210206T115421Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"8e616983-3dd8-4e04-a838-fee66f70d60e"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++++++++--","modified":"20210213T105108Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
->>>>>>> 1bb105c51a2f4901eddf99817b208fe5fb7591c3

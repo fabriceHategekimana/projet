@@ -1,6 +1,7 @@
 # Message04:
 `La paix de Dieu`
 Dieu veux nous donner Sa paix
+
 `Shalom:`
 C'est une attention, un style de vie.
 Etat complet, de perfection
@@ -21,36 +22,24 @@ Jérémie captif nous
     - Qui nous sommes (Babylone, Jérusalem)
     - 1. habiter (babylone)
     - 2. rapprochement
-<<<<<<< HEAD
     - 3. faux prophètes
     # - Je vous laisse la paix
-=======
- Mais le fruit de l'Esprit, c'est l'amour, la joie, la paix, la patience, la bonté, la bénignité, la fidélité, 23la douceur, la tempérance; la loi n'est pas contre ces choses.
-    - 3. faux prophètes (éphémère)
-    # Je vous laisse la paix
->>>>>>> f965e171af45f000f1d355c33f0e6b2d12af48c4
 
+ Mais le fruit de l'Esprit, c'est l'amour, la joie, la paix, la patience, la bonté, la bénignité, la fidélité, 23la douceur, la tempérance; la loi n'est pas contre ces choses.
+ 
 `Extreme:`
     - Difficile 
     - Job 3
     - Jésus
     # Je vous laisse la paix
     - Nature de l'homme
-<<<<<<< HEAD
-    # - Je vous laisse la paix
     Psaume 34:19
     Le malheur atteint souvent le juste, Mais l'Eternel l'en délivre toujours.
 
 `Outils:`
     - Foi
-    - Paix (barque)
-=======
-
-`Outils:`
-    - Foi
     - persévérence
     - paix
->>>>>>> f965e171af45f000f1d355c33f0e6b2d12af48c4
     - SE
     # Je vous laisse la paix
 
