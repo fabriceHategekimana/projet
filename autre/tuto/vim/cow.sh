@@ -12,3 +12,4 @@ do
     clear
     cowsay -W 60 Un peu de patience
 done
+
