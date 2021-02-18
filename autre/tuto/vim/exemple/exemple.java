@@ -3,9 +3,14 @@ class Exemple{
     private String name;
     private double salary;
     private int age;
+
     public String getName() {
+	456
+	345
         return name;
+	978
     }
+
     public void setName(String name) {
         this.name = name;
     }

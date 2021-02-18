@@ -4,7 +4,7 @@ username = raw_input("Login: >> ")
 #list of allowed users
 user1 = "Jack"
 user2 = "Jill"
-
+user3 = "Joe"
 #control that the user belongs to the list of allowed users
 if username == user1:
     print "Access granted"
