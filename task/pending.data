@@ -8,3 +8,4 @@
 [description:"examen STB (21h)" due:"1614898800" entry:"1611393331" modified:"1612000265" status:"pending" uuid:"4de50704-315a-4372-8dff-ac774479fc20"]
 [description:"Devoir maman Lady" due:"1613196000" entry:"1612612461" imask:"17" modified:"1612559290" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"b415ecf0-20af-45f8-a7f0-f00020b9497f"]
 [description:"Devoir maman Lady" due:"1613800800" entry:"1613213537" imask:"18" modified:"1612612461" parent:"2c785361-3075-4da5-9e90-21bcfb3b9e4b" recur:"weekly" status:"pending" uuid:"0ff8e0f0-e565-44ea-bc8a-b41b1fef4f4e"]
+[description:"Vid_psalm" due:"1613977200" entry:"1613746285" modified:"1613746285" status:"pending" uuid:"9a46c6df-3907-43d7-a7a8-9017dbcc1a86"]

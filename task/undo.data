@@ -1663,3 +1663,6 @@ time 1590701336
 old [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"+++++-" modified:"1590664927" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
 new [description:"phantsper" due:"1590262463" entry:"1589876736" mask:"+++++--" modified:"1590701336" project:"récapitulatif" recur:"daily" status:"recurring" uuid:"4eb212bc-9666-45c6-9a7b-de55f9b7e1b4"]
 ---
+time 1613746285
+new [description:"Vid_psalm" due:"1613977200" entry:"1613746285" modified:"1613746285" status:"pending" uuid:"9a46c6df-3907-43d7-a7a8-9017dbcc1a86"]
+---

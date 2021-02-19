@@ -24,13 +24,13 @@ Donc chaque membre du corps du Christ.
 Chacun a préparé le culte à sa manière à la maison.
 La prière de concordance dois nous unir et nous synchronisé.
 Quelles sont les points à respecter pour que les venus trouvent un terrain agréable:
-0. Prière d'ouverture (seul)
-1. Amener à adorer Dieu (dire de Dieu ce qu'il est)
-2. Prise de possession du lieu de culte (prière de combat)
-3. Prier pour les intervenants
-4. Prier pour la parole (son efficacité et sa permanence)
-5. Proclamation, sceller le culte (on déclare la victoire, la délivrance, le culte d'aujourd'hui est différent) proclamer ses miracles et le sang du Christ
-6. prière de clôture
+0. Prière d'`ouverture` (seul)
+1. Amener à `adorer` Dieu (dire de Dieu ce qu'il est)
+2. Prise de `possession` du lieu de culte (prière de combat)
+3. Prier pour les `intervenants`
+4. Prier pour la `Parole` (son efficacité et sa permanence)
+5. `Proclamation`, sceller le culte (on déclare la victoire, la délivrance, le culte d'aujourd'hui est différent) proclamer ses miracles et le sang du Christ
+6. prière de `clôture` (seul)
 
 
 Modération

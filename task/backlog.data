@@ -9516,3 +9516,4 @@
 =======
 {"description":"Devoir maman Lady","due":"20210220T060000Z","entry":"20210213T105108Z","imask":18,"modified":"20210206T115421Z","parent":"2c785361-3075-4da5-9e90-21bcfb3b9e4b","recur":"weekly","status":"pending","uuid":"8e616983-3dd8-4e04-a838-fee66f70d60e"}
 {"description":"Devoir maman Lady","due":"20201017T060000Z","entry":"20201017T095426Z","mask":"+++++++++++++++++--","modified":"20210213T105108Z","recur":"weekly","status":"recurring","uuid":"2c785361-3075-4da5-9e90-21bcfb3b9e4b"}
+{"description":"Vid_psalm","due":"20210222T070000Z","entry":"20210219T145125Z","modified":"20210219T145125Z","status":"pending","uuid":"9a46c6df-3907-43d7-a7a8-9017dbcc1a86"}
