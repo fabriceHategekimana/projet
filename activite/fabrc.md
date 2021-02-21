@@ -31,17 +31,18 @@ Varier (environnement, thème, mission, etc.)
 - Tuto
 
 ## Ce dont le monde besoin
-Bon dirigents
-Divertissement
+- Bon dirigents
+- Divertissement
+- Bon professeur
 
 ## Ce en quoi vous êtes doué
-Piano
-oreille musicale
-Programmation
-Enseigner
+- Piano
+- oreille musicale
+- Programmation
+- Enseigner
 
 ## Ce pour quoi vous êtes payé
-Developpement
-Enseignement
-Dépannage informatique
+- Developpement
+- Enseignement
+- Dépannage informatique
 
