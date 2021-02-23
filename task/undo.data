@@ -1686,3 +1686,9 @@ time 1613935466
 old [description:"chgt switch UNIGE" due:"1613977200" entry:"1611351447" modified:"1611351447" status:"pending" uuid:"e8404b63-5c5b-4b05-ac3f-eb07c4d094b9"]
 new [description:"chgt switch UNIGE" due:"1613977200" end:"1613935466" entry:"1611351447" modified:"1613935466" status:"completed" uuid:"e8404b63-5c5b-4b05-ac3f-eb07c4d094b9"]
 ---
+time 1614080345
+new [description:"Artistes chrétiens lo fi" due:"1614236400" entry:"1614080345" modified:"1614080345" status:"pending" uuid:"b9e01522-7ecb-4d97-81b0-c17c57b6a137"]
+---
+time 1614080383
+new [description:"Versets sur la paix" due:"1614236400" entry:"1614080383" modified:"1614080383" status:"pending" uuid:"390f4886-2334-47fc-ace3-35eb0eb6bc16"]
+---
