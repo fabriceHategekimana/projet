@@ -1,0 +1,4 @@
+**Bitter Virgin**
+J'ai regardé Bitter virgin. Un manga que j'avais commencé quand j'était plus jeune mais que je n'avais pas continuer à suivre manquant de maturité. Malgré tout, j'avais pas mal d'appréention à le reprendre car il me paraissait vieux et que je risquais de détester les dessins. 
+Mais il en était autrement, je suis resté accroché à l'histoire car il abordait des thèmes sérieux et avait des personnages plus qu'intéressants.
+Certainement, les histoires de viol, de grossesse d'avortement ne pouvaient pas m'intéresser lorsque j'avais 13 ans, mais aujourd'hui je me rends compte un peu mieux de la difficulté qu'on éprouve dans ce genre de moment. Surtout que j'ai bien aimer le développement du personnage principal (et j'ai aussi apprécié une autre wing-woman qui aurait pu être une waifu si j'en avais pas découvert des meilleurs).
