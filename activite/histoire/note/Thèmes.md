@@ -1,4 +1,10 @@
-## Banlieu:
+
+- Définir l'intelligence
+- L'école et l'apprentissage
+- Urbanisme:
+- Banlieu
+- Instrumentalisation de la science par les industries ou l'etat
+
 Stigmatisation
 Ennuie, Jeux bizzare (Jeu de la gamelle, chasse à l'homme)
 Traffic
@@ -14,17 +20,14 @@ désert médical
 Revente des appartements
 Club de sport
 
-## Urbanisme:
 paupérisation
 
-## L'école et l'apprentissage
 - Il nous faut un contexte pour apprendre: l'école est toujours le bon?
 - L'école utilise la même méthode pour tous.
 - Si on enlèverai l'école, que resterai-t-il a mettre à sa place.
 - Utilisation méchanique des méthodes pédagogiques
 - intelligences multiple
 
-## Définir l'intelligence
 C'est quoi l'intelligence?
 • Charles Darwin (naturaliste, biologiste 1809-1882):
 … ce qui permet la survie de l’individu le plus apte, adapté à son
