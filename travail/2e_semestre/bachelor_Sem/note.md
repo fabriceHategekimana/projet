@@ -12,6 +12,16 @@ Roulement chaque semaine présentation
 
 [séquents](http://logitext.mit.edu/main)
 
+forme:
+prémisses
+----------
+Conclusion
+
+Les prémisses sont des conjonction de prédicat
+Les variables apparaissant dans les prédicats sont implicitement quantifiées universellement
+
+Déduction = induction en sens inverse
+
 **Ce que j'ai commencé:**
 Revu slide du cours de sémantique (exemple concret d'application)
 Tentative de définition et d'implémentation de quelques concepts de langage
