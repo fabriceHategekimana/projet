@@ -17,6 +17,8 @@ prémisses
 ----------
 Conclusion
 
+[etude](etude)
+
 Les prémisses sont des conjonction de prédicat
 Les variables apparaissant dans les prédicats sont implicitement quantifiées universellement
 
@@ -41,3 +43,16 @@ Remarques:
 - Il faut trouver un moyen de définir nos propres symboles comme pour le système T_{[symboles]}([ensembles])
 - Apprendre d'avantage sur ce que prolog peut faire et essayer de faire (plus adapté) pour le cours.
 - Essayer d'en apprendre plus sur l'outil coq, qui me permettra de mieux créer les définitions.
+
+sam 27 fév 2021 20:34:29 CET
+Tentative de définition d'une liste, de fonctions de liste ainsi que leur dérivation.
+J'ai finalement adopté la notion de terme comme "instruction de précompilation"
+Remarque: Il faut faire attention à distinguer opérateur et type (comme élément de syntaxe) pour définir les listes
+
+J'ai pu définir la structure d'une règle en tant que transition (représente aussi un opérateur):
+	- règle(conditions, conclusion):
+	    - conditions: conjonctions de prédicats
+	    - conclusion: liste de prédicat/instructions à exécuter
+	    - prédicat: souvent de type "element1 symbole element2"
+J'ai pu avoir une première définition de l'état du système:
+	- système(context, instruction, type)

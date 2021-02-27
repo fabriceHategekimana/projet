@@ -1,6 +1,7 @@
 
 Exemple de code:
 
+# Terme
 T(_+_)`[`Entier(`int`)`]`
 
 #Règles
@@ -9,6 +10,7 @@ n `in` Entier, m `in` Entier `--` n+m `in` Entier
 
 -------------------
 
+# Terme
 T(_::_)`[`Entier(`int`), Liste(`int`)`]`
 
 #Règles
@@ -20,6 +22,7 @@ n `in` Entier, m `in` Entier `--` n::m `in` Liste
 
 -------------------
 
+# Terme
 T()`[``]`
 
 #Règles
