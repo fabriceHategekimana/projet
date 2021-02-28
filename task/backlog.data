@@ -1,2 +1,48 @@
 {"description":"jetter pièces du lit","due":"20210225T070000Z","entry":"20210224T154112Z","modified":"20210224T154112Z","status":"pending","uuid":"16be8122-12ea-4dcd-9d6d-6eb12850e19c"}
 {"description":"python scikit-learn","due":"20210201T070000Z","entry":"20210225T073858Z","modified":"20210225T073858Z","status":"pending","uuid":"255f6016-314b-4570-b46b-0b31a1b742b7"}
+{"description":"creer dates","entry":"20210228T190503Z","modified":"20210228T190503Z","status":"pending","uuid":"1e4722ab-6b45-44a0-9883-185269a8cbca"}
+{"description":"creer dates","due":"20210228T190900Z","entry":"20210228T190503Z","modified":"20210228T190735Z","status":"pending","uuid":"1e4722ab-6b45-44a0-9883-185269a8cbca"}
+{"description":"creer dates","due":"20210228T191544Z","entry":"20210228T190503Z","modified":"20210228T191344Z","status":"pending","uuid":"1e4722ab-6b45-44a0-9883-185269a8cbca"}
+{"description":"creer dates","due":"20210228T191544Z","end":"20210228T191520Z","entry":"20210228T190503Z","modified":"20210228T191520Z","status":"completed","uuid":"1e4722ab-6b45-44a0-9883-185269a8cbca"}
+{"description":"truc a faire","entry":"20210228T192014Z","modified":"20210228T192014Z","status":"pending","uuid":"f730384d-b30c-4882-945b-a8a1fb877ce9"}
+{"description":"truc a faire","due":"20210228T192243Z","entry":"20210228T192014Z","modified":"20210228T192043Z","status":"pending","uuid":"f730384d-b30c-4882-945b-a8a1fb877ce9"}
+{"description":"autre chose","entry":"20210228T193639Z","modified":"20210228T193639Z","status":"pending","uuid":"4fbec5ac-3964-4681-b785-a6d4805e0651"}
+{"description":"autre chose","due":"20210228T193903Z","entry":"20210228T193639Z","modified":"20210228T193703Z","status":"pending","uuid":"4fbec5ac-3964-4681-b785-a6d4805e0651"}
+{"description":"finalement un truc special","due":"20210228T203422Z","entry":"20210228T203222Z","modified":"20210228T203222Z","status":"pending","uuid":"2da7f315-8f91-43ba-acee-64270bc69c82"}
+{"description":"truc a faire","due":"20210228T192243Z","end":"20210228T203323Z","entry":"20210228T192014Z","modified":"20210228T203323Z","status":"completed","uuid":"f730384d-b30c-4882-945b-a8a1fb877ce9"}
+{"description":"autre chose","due":"20210228T193903Z","end":"20210228T203323Z","entry":"20210228T193639Z","modified":"20210228T203323Z","status":"completed","uuid":"4fbec5ac-3964-4681-b785-a6d4805e0651"}
+{"description":"on va faire un test","due":"20210228T203518Z","entry":"20210228T203508Z","modified":"20210228T203508Z","status":"pending","uuid":"7cd342ef-e459-4286-9413-170476c5cbe4"}
+{"description":"dernieres modifications","due":"20210228T212706Z","entry":"20210228T212506Z","modified":"20210228T212506Z","status":"pending","uuid":"ea347c75-1824-4912-a718-3d0dffda2848"}
+{"description":"voici une ligne supplemmentaire","due":"20210228T212807Z","entry":"20210228T212607Z","modified":"20210228T212607Z","status":"pending","uuid":"28cd2125-784f-4129-9f67-3b9811f42b6a"}
+{"description":"un","entry":"20210228T212626Z","modified":"20210228T212626Z","status":"pending","uuid":"8917a4d6-3c30-4f70-affa-833f84601c2f"}
+{"description":"deux","entry":"20210228T212629Z","modified":"20210228T212629Z","status":"pending","uuid":"aaff4ba6-6431-4220-a93b-055cc51d9d95"}
+{"description":"trois","entry":"20210228T212637Z","modified":"20210228T212637Z","status":"pending","uuid":"c3af12b2-c298-443c-8cbc-886b5386156f"}
+{"description":"quatre","entry":"20210228T212643Z","modified":"20210228T212643Z","status":"pending","uuid":"94543c0a-ddc3-4c58-a922-546d458233a2"}
+{"description":"cinqu","entry":"20210228T212646Z","modified":"20210228T212646Z","status":"pending","uuid":"d501326f-d3d6-48ba-a2bd-49aed2d71fc9"}
+{"description":"pour tester les dizaines","due":"20210228T212904Z","entry":"20210228T212704Z","modified":"20210228T212704Z","status":"pending","uuid":"b032c7a7-be2a-4d69-9581-b9e49f7bf5c3"}
+{"description":"pour tester les dizaines","due":"20210228T213226Z","entry":"20210228T212704Z","modified":"20210228T213026Z","status":"pending","uuid":"b032c7a7-be2a-4d69-9581-b9e49f7bf5c3"}
+{"description":"pour tester les dizaines","due":"20210228T213428Z","entry":"20210228T212704Z","modified":"20210228T213228Z","status":"pending","uuid":"b032c7a7-be2a-4d69-9581-b9e49f7bf5c3"}
+{"description":"pour tester les dizaines","due":"20210228T213754Z","entry":"20210228T212704Z","modified":"20210228T213554Z","status":"pending","uuid":"b032c7a7-be2a-4d69-9581-b9e49f7bf5c3"}
+{"description":"finalement un truc special","due":"20210228T203422Z","end":"20210228T213848Z","entry":"20210228T203222Z","modified":"20210228T213848Z","status":"completed","uuid":"2da7f315-8f91-43ba-acee-64270bc69c82"}
+{"description":"pour tester les dizaines","due":"20210228T213754Z","end":"20210228T213848Z","entry":"20210228T212704Z","modified":"20210228T213848Z","status":"completed","uuid":"b032c7a7-be2a-4d69-9581-b9e49f7bf5c3"}
+{"description":"on va faire un test","due":"20210228T203518Z","end":"20210228T213901Z","entry":"20210228T203508Z","modified":"20210228T213904Z","status":"completed","uuid":"7cd342ef-e459-4286-9413-170476c5cbe4"}
+{"description":"dernieres modifications","due":"20210228T212706Z","end":"20210228T213904Z","entry":"20210228T212506Z","modified":"20210228T213904Z","status":"completed","uuid":"ea347c75-1824-4912-a718-3d0dffda2848"}
+{"description":"voici une ligne supplemmentaire","due":"20210228T212807Z","end":"20210228T213904Z","entry":"20210228T212607Z","modified":"20210228T213904Z","status":"completed","uuid":"28cd2125-784f-4129-9f67-3b9811f42b6a"}
+{"description":"un","end":"20210228T213904Z","entry":"20210228T212626Z","modified":"20210228T213904Z","status":"completed","uuid":"8917a4d6-3c30-4f70-affa-833f84601c2f"}
+{"description":"deux","end":"20210228T213904Z","entry":"20210228T212629Z","modified":"20210228T213904Z","status":"completed","uuid":"aaff4ba6-6431-4220-a93b-055cc51d9d95"}
+{"description":"trois","end":"20210228T213904Z","entry":"20210228T212637Z","modified":"20210228T213904Z","status":"completed","uuid":"c3af12b2-c298-443c-8cbc-886b5386156f"}
+{"description":"quatre","end":"20210228T213904Z","entry":"20210228T212643Z","modified":"20210228T213904Z","status":"completed","uuid":"94543c0a-ddc3-4c58-a922-546d458233a2"}
+{"description":"cinqu","end":"20210228T213904Z","entry":"20210228T212646Z","modified":"20210228T213904Z","status":"completed","uuid":"d501326f-d3d6-48ba-a2bd-49aed2d71fc9"}
+{"description":"pour tester les dizaines","due":"20210228T214251Z","entry":"20210228T214051Z","modified":"20210228T214051Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"vérifier que on est bon","due":"20210228T214325Z","entry":"20210228T214125Z","modified":"20210228T214125Z","status":"pending","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
+{"description":"pour tester les dizaines","due":"20210228T214602Z","entry":"20210228T214051Z","modified":"20210228T214402Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"vérifier que on est bon","due":"20210228T214602Z","entry":"20210228T214125Z","modified":"20210228T214402Z","status":"pending","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
+{"description":"pour tester les dizaines","due":"20210228T215008Z","entry":"20210228T214051Z","modified":"20210228T214708Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"pour tester les dizaines","due":"20210228T222424Z","entry":"20210228T214051Z","modified":"20210228T215104Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"pour tester les dizaines","due":"20210303T052445Z","entry":"20210228T214051Z","modified":"20210228T215125Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"pour tester les dizaines","due":"20210228T225226Z","entry":"20210228T214051Z","modified":"20210228T215226Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"pour tester les dizaines","due":"20210228T235258Z","entry":"20210228T214051Z","modified":"20210228T215258Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"pour tester les dizaines","due":"20210228T225419Z","entry":"20210228T214051Z","modified":"20210228T215319Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"vérifier que on est bon","due":"20210228T215803Z","entry":"20210228T214125Z","modified":"20210228T215403Z","status":"pending","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
+{"description":"vérifier que on est bon","due":"20210228T224755Z","entry":"20210228T214125Z","modified":"20210228T215435Z","status":"pending","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
+{"description":"okay","due":"20210228T215148Z","entry":"20210228T215508Z","modified":"20210228T215508Z","status":"pending","uuid":"7879c376-efd2-4451-be5a-220a4bee39b7"}
