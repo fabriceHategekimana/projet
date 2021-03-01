@@ -46,3 +46,7 @@
 {"description":"vérifier que on est bon","due":"20210228T215803Z","entry":"20210228T214125Z","modified":"20210228T215403Z","status":"pending","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
 {"description":"vérifier que on est bon","due":"20210228T224755Z","entry":"20210228T214125Z","modified":"20210228T215435Z","status":"pending","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
 {"description":"okay","due":"20210228T215148Z","entry":"20210228T215508Z","modified":"20210228T215508Z","status":"pending","uuid":"7879c376-efd2-4451-be5a-220a4bee39b7"}
+{"description":"okay","due":"20210228T215148Z","end":"20210228T224550Z","entry":"20210228T215508Z","modified":"20210228T224550Z","status":"completed","uuid":"7879c376-efd2-4451-be5a-220a4bee39b7"}
+{"description":"vérifier que on est bon","due":"20210228T224755Z","end":"20210228T224611Z","entry":"20210228T214125Z","modified":"20210228T224611Z","status":"completed","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
+{"description":"pour tester les dizaines","due":"20210301T000719Z","entry":"20210228T214051Z","modified":"20210228T224719Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"pour tester les dizaines","due":"20210301T000719Z","end":"20210301T084738Z","entry":"20210228T214051Z","modified":"20210301T084738Z","status":"completed","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}

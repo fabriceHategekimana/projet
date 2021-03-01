@@ -1,5 +1,3 @@
 [description:"jetter pièces du lit" due:"1614236400" entry:"1614181272" modified:"1614181272" status:"pending" uuid:"16be8122-12ea-4dcd-9d6d-6eb12850e19c"]
 [description:"python scikit-learn" due:"1612162800" entry:"1614238738" modified:"1614238738" status:"pending" uuid:"255f6016-314b-4570-b46b-0b31a1b742b7"]
-[description:"pour tester les dizaines" due:"1614552859" entry:"1614548451" modified:"1614549199" status:"pending" uuid:"21075e49-c77c-45f6-add3-ffad65486c57"]
-[description:"vérifier que on est bon" due:"1614552475" entry:"1614548485" modified:"1614549275" status:"pending" uuid:"16b05abb-badc-48ca-9032-fa54c985ec82"]
-[description:"okay" due:"1614549108" entry:"1614549308" modified:"1614549308" status:"pending" uuid:"7879c376-efd2-4451-be5a-220a4bee39b7"]
+[description:"pour tester les dizaines" due:"1614557239" end:"1614588458" entry:"1614548451" modified:"1614588458" status:"completed" uuid:"21075e49-c77c-45f6-add3-ffad65486c57"]
