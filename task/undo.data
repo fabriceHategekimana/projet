@@ -209,3 +209,7 @@ new [description:"Visionnage zoom" due:"1615014000" entry:"1614612873" modified:
 time 1614612894
 new [description:"Culte dominical" due:"1615100400" entry:"1614612894" modified:"1614612894" status:"pending" uuid:"a31a18fc-c38c-4a74-9d6c-990a0c3ecea2"]
 ---
+time 1614634467
+old [description:"réunion Satom" due:"1614754800" entry:"1614612806" modified:"1614612806" status:"pending" uuid:"f2708d49-f3d1-4fa7-a58b-a43451677771"]
+new [description:"réunion Satom" due:"1612346400" entry:"1614612806" modified:"1614634467" status:"pending" uuid:"f2708d49-f3d1-4fa7-a58b-a43451677771"]
+---
