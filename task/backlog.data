@@ -50,3 +50,10 @@
 {"description":"vérifier que on est bon","due":"20210228T224755Z","end":"20210228T224611Z","entry":"20210228T214125Z","modified":"20210228T224611Z","status":"completed","uuid":"16b05abb-badc-48ca-9032-fa54c985ec82"}
 {"description":"pour tester les dizaines","due":"20210301T000719Z","entry":"20210228T214051Z","modified":"20210228T224719Z","status":"pending","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
 {"description":"pour tester les dizaines","due":"20210301T000719Z","end":"20210301T084738Z","entry":"20210228T214051Z","modified":"20210301T084738Z","status":"completed","uuid":"21075e49-c77c-45f6-add3-ffad65486c57"}
+{"description":"Questionnaire","due":"20210302T070000Z","entry":"20210301T153302Z","modified":"20210301T153302Z","status":"pending","uuid":"79579794-9d9f-42c9-8471-8ae2ac1565f5"}
+{"description":"réunion Satom","due":"20210303T070000Z","entry":"20210301T153326Z","modified":"20210301T153326Z","status":"pending","uuid":"f2708d49-f3d1-4fa7-a58b-a43451677771"}
+{"description":"Magasin de musique","due":"20210303T070000Z","entry":"20210301T153343Z","modified":"20210301T153343Z","status":"pending","uuid":"2256796f-54e6-42e4-bc71-2b1822a5be46"}
+{"description":"Culte de la semaine","due":"20210303T070000Z","entry":"20210301T153357Z","modified":"20210301T153357Z","status":"pending","uuid":"db8401eb-e3c8-49e0-8eb5-815bc14e5759"}
+{"description":"Répétitions","due":"20210306T070000Z","entry":"20210301T153416Z","modified":"20210301T153416Z","status":"pending","uuid":"5b6d680e-d639-4810-8cad-ddb65b3b32bc"}
+{"description":"Visionnage zoom","due":"20210306T070000Z","entry":"20210301T153433Z","modified":"20210301T153433Z","status":"pending","uuid":"1ece378e-0dc5-4ff4-8601-8042fb8e89c0"}
+{"description":"Culte dominical","due":"20210307T070000Z","entry":"20210301T153454Z","modified":"20210301T153454Z","status":"pending","uuid":"a31a18fc-c38c-4a74-9d6c-990a0c3ecea2"}
