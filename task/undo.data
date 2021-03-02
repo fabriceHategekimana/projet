@@ -240,3 +240,6 @@ time 1614661454
 old [description:"Pasteur culte de la semaine" due:"1614639600" entry:"1614661302" modified:"1614661385" status:"pending" uuid:"2a82df94-3c8d-4eb2-b402-c922ccc6b658"]
 new [description:"Pasteur culte de la semaine" due:"1614683054" entry:"1614661302" modified:"1614661454" status:"pending" uuid:"2a82df94-3c8d-4eb2-b402-c922ccc6b658"]
 ---
+time 1614720372
+new [description:"Examen stb" due:"1615014000" entry:"1614720372" modified:"1614720372" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
+---

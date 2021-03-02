@@ -4,8 +4,10 @@ Exemple de code:
 # Terme
 T(_+_)`[`Entier(`int`)`]`
 
-#Règles
+##Axiom
 `--` n `in` Entier
+
+##Induction
 n `in` Entier, m `in` Entier `--` n+m `in` Entier
 
 -------------------
@@ -35,4 +37,9 @@ k `in` EP -- k+2 `in` EP
 # Programme
 $ 4 `in` EP
 
+-------------------
 
+matrice="1,2;3,4M"
+matrice="(\d,)\+(;)\*dM"
+
+T{_+_,_-_}(Matrice(matrice))

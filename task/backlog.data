@@ -65,3 +65,4 @@
 {"description":"Pasteur culte de la semaine","entry":"20210302T050142Z","modified":"20210302T050250Z","status":"pending","uuid":"2a82df94-3c8d-4eb2-b402-c922ccc6b658"}
 {"description":"Pasteur culte de la semaine","due":"20210301T230000Z","entry":"20210302T050142Z","modified":"20210302T050305Z","status":"pending","uuid":"2a82df94-3c8d-4eb2-b402-c922ccc6b658"}
 {"description":"Pasteur culte de la semaine","due":"20210302T110414Z","entry":"20210302T050142Z","modified":"20210302T050414Z","status":"pending","uuid":"2a82df94-3c8d-4eb2-b402-c922ccc6b658"}
+{"description":"Examen stb","due":"20210306T070000Z","entry":"20210302T212612Z","modified":"20210302T212612Z","status":"pending","uuid":"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"}
