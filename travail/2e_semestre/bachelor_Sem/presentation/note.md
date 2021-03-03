@@ -40,13 +40,18 @@ T{_+_,_-_}(Entier(int))
 n in Entier, m in Entier -- n+m in Entier
 ```
 
+## Programme
+```python
+Programme1 { inst1;;inst2;;...;;instn }
+```
+
 ----
 
 # Actuellement(2)
 **Définition de l'algo de dérivation de programme:**
 
 	- Basé sur le modèle d'interpréteur
-	- Utilisation d'expression pseudo régulière
+	- Utilisation d'une grammaire algébrique
 	 
 ----
 

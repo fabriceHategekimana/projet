@@ -243,3 +243,19 @@ new [description:"Pasteur culte de la semaine" due:"1614683054" entry:"161466130
 time 1614720372
 new [description:"Examen stb" due:"1615014000" entry:"1614720372" modified:"1614720372" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
 ---
+time 1614772370
+old [description:"réunion Satom" due:"1614765600" entry:"1614612806" modified:"1614636067" status:"pending" uuid:"f2708d49-f3d1-4fa7-a58b-a43451677771"]
+new [description:"réunion Satom" due:"1614765600" end:"1614772370" entry:"1614612806" modified:"1614772370" status:"completed" uuid:"f2708d49-f3d1-4fa7-a58b-a43451677771"]
+---
+time 1614772415
+old [description:"Magasin de musique" due:"1614754800" entry:"1614612823" modified:"1614612823" status:"pending" uuid:"2256796f-54e6-42e4-bc71-2b1822a5be46"]
+new [description:"Magasin de musique" due:"1614754800" end:"1614772415" entry:"1614612823" modified:"1614772415" status:"completed" uuid:"2256796f-54e6-42e4-bc71-2b1822a5be46"]
+---
+time 1614772436
+old [description:"Examen stb" due:"1615014000" entry:"1614720372" modified:"1614720372" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
+new [description:"Examen stb" due:"1614898800" entry:"1614720372" modified:"1614772436" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
+---
+time 1614772455
+old [description:"jetter pièces du lit" entry:"1614181272" modified:"1614660093" status:"pending" uuid:"16be8122-12ea-4dcd-9d6d-6eb12850e19c"]
+new [description:"jetter pièces du lit" end:"1614772455" entry:"1614181272" modified:"1614772455" status:"completed" uuid:"16be8122-12ea-4dcd-9d6d-6eb12850e19c"]
+---

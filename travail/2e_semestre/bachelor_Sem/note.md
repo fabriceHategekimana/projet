@@ -2,6 +2,8 @@
 
 Définir un objectifs: gitlab
 
+[planning](planning)
+
 **But:**
 Créer un outils d'inférence
 
@@ -56,3 +58,6 @@ J'ai pu définir la structure d'une règle en tant que transition (représente a
 	    - prédicat: souvent de type "element1 symbole element2"
 J'ai pu avoir une première définition de l'état du système:
 	- système(context, instruction, type)
+
+
+

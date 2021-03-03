@@ -66,3 +66,7 @@
 {"description":"Pasteur culte de la semaine","due":"20210301T230000Z","entry":"20210302T050142Z","modified":"20210302T050305Z","status":"pending","uuid":"2a82df94-3c8d-4eb2-b402-c922ccc6b658"}
 {"description":"Pasteur culte de la semaine","due":"20210302T110414Z","entry":"20210302T050142Z","modified":"20210302T050414Z","status":"pending","uuid":"2a82df94-3c8d-4eb2-b402-c922ccc6b658"}
 {"description":"Examen stb","due":"20210306T070000Z","entry":"20210302T212612Z","modified":"20210302T212612Z","status":"pending","uuid":"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"}
+{"description":"réunion Satom","due":"20210303T100000Z","end":"20210303T115250Z","entry":"20210301T153326Z","modified":"20210303T115250Z","status":"completed","uuid":"f2708d49-f3d1-4fa7-a58b-a43451677771"}
+{"description":"Magasin de musique","due":"20210303T070000Z","end":"20210303T115335Z","entry":"20210301T153343Z","modified":"20210303T115335Z","status":"completed","uuid":"2256796f-54e6-42e4-bc71-2b1822a5be46"}
+{"description":"Examen stb","due":"20210304T230000Z","entry":"20210302T212612Z","modified":"20210303T115356Z","status":"pending","uuid":"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"}
+{"description":"jetter pièces du lit","end":"20210303T115415Z","entry":"20210224T154112Z","modified":"20210303T115415Z","status":"completed","uuid":"16be8122-12ea-4dcd-9d6d-6eb12850e19c"}
