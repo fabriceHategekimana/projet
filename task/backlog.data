@@ -70,3 +70,5 @@
 {"description":"Magasin de musique","due":"20210303T070000Z","end":"20210303T115335Z","entry":"20210301T153343Z","modified":"20210303T115335Z","status":"completed","uuid":"2256796f-54e6-42e4-bc71-2b1822a5be46"}
 {"description":"Examen stb","due":"20210304T230000Z","entry":"20210302T212612Z","modified":"20210303T115356Z","status":"pending","uuid":"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"}
 {"description":"jetter pièces du lit","end":"20210303T115415Z","entry":"20210224T154112Z","modified":"20210303T115415Z","status":"completed","uuid":"16be8122-12ea-4dcd-9d6d-6eb12850e19c"}
+{"description":"Culte de la semaine","due":"20210303T070000Z","end":"20210303T221524Z","entry":"20210301T153357Z","modified":"20210303T221524Z","status":"completed","uuid":"db8401eb-e3c8-49e0-8eb5-815bc14e5759"}
+{"description":"Pasteur culte de la semaine","due":"20210302T110414Z","end":"20210303T221530Z","entry":"20210302T050142Z","modified":"20210303T221530Z","status":"completed","uuid":"2a82df94-3c8d-4eb2-b402-c922ccc6b658"}
