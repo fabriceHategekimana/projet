@@ -267,3 +267,7 @@ time 1614809730
 old [description:"Pasteur culte de la semaine" due:"1614683054" entry:"1614661302" modified:"1614661454" status:"pending" uuid:"2a82df94-3c8d-4eb2-b402-c922ccc6b658"]
 new [description:"Pasteur culte de la semaine" due:"1614683054" end:"1614809730" entry:"1614661302" modified:"1614809730" status:"completed" uuid:"2a82df94-3c8d-4eb2-b402-c922ccc6b658"]
 ---
+time 1614875034
+old [description:"python scikit-learn" due:"1612162800" entry:"1614238738" modified:"1614238738" status:"pending" uuid:"255f6016-314b-4570-b46b-0b31a1b742b7"]
+new [description:"python scikit-learn" due:"1612162800" end:"1614875034" entry:"1614238738" modified:"1614875034" status:"completed" uuid:"255f6016-314b-4570-b46b-0b31a1b742b7"]
+---

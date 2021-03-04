@@ -33,3 +33,19 @@ R= |C|cos(teta)
 R= |C|sin(teta)
 
 C= |C|e^(j*teta)
+
+Conversion formula 
+cos(teta)= 1/2 * (exp(j*teta)+exp(-j*teta))
+sin(teta)= 1/j2 * (exp(j*teta)-exp(-j*teta))
+
+sinusoid - periodic function (useful form)
+w_0= frequency
+T= period
+A= Amplitude
+phase= phase
+
+Autre propriété: teta= w_0*t (change en fonction du temps si on parle d'une fonction périodique)
+p.32 modification par la conjugué (shéma en bas)
+f(t)= A*sin(w_0*t+phase)
+Periode T = 2*pi/w_0
+
