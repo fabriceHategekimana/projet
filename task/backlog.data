@@ -73,3 +73,8 @@
 {"description":"Culte de la semaine","due":"20210303T070000Z","end":"20210303T221524Z","entry":"20210301T153357Z","modified":"20210303T221524Z","status":"completed","uuid":"db8401eb-e3c8-49e0-8eb5-815bc14e5759"}
 {"description":"Pasteur culte de la semaine","due":"20210302T110414Z","end":"20210303T221530Z","entry":"20210302T050142Z","modified":"20210303T221530Z","status":"completed","uuid":"2a82df94-3c8d-4eb2-b402-c922ccc6b658"}
 {"description":"python scikit-learn","due":"20210201T070000Z","end":"20210304T162354Z","entry":"20210225T073858Z","modified":"20210304T162354Z","status":"completed","uuid":"255f6016-314b-4570-b46b-0b31a1b742b7"}
+{"description":"Examen stb","due":"20210312T230000Z","entry":"20210302T212612Z","modified":"20210305T192927Z","status":"pending","uuid":"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"}
+{"description":"coo TP2","due":"20210310T070000Z","entry":"20210305T193102Z","modified":"20210305T193102Z","status":"pending","uuid":"240bd906-a82f-4aa3-a84b-8e4bcfeeeb31"}
+{"description":"IN TP7","due":"20210311T070000Z","entry":"20210305T193140Z","modified":"20210305T193140Z","status":"pending","uuid":"6974dd0a-f1e0-45ca-a221-cf8b8ad74e56"}
+{"description":"Bachelor présentation","due":"20210310T070000Z","entry":"20210305T193217Z","modified":"20210305T193217Z","status":"pending","uuid":"a1f86ce6-1bb5-49ba-ba9e-97f5166735bb"}
+{"description":"Questionnaire","entry":"20210301T153302Z","modified":"20210305T193826Z","status":"pending","uuid":"79579794-9d9f-42c9-8471-8ae2ac1565f5"}

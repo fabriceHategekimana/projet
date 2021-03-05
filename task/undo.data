@@ -271,3 +271,20 @@ time 1614875034
 old [description:"python scikit-learn" due:"1612162800" entry:"1614238738" modified:"1614238738" status:"pending" uuid:"255f6016-314b-4570-b46b-0b31a1b742b7"]
 new [description:"python scikit-learn" due:"1612162800" end:"1614875034" entry:"1614238738" modified:"1614875034" status:"completed" uuid:"255f6016-314b-4570-b46b-0b31a1b742b7"]
 ---
+time 1614972567
+old [description:"Examen stb" due:"1614898800" entry:"1614720372" modified:"1614772436" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
+new [description:"Examen stb" due:"1615590000" entry:"1614720372" modified:"1614972567" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
+---
+time 1614972662
+new [description:"coo TP2" due:"1615359600" entry:"1614972662" modified:"1614972662" status:"pending" uuid:"240bd906-a82f-4aa3-a84b-8e4bcfeeeb31"]
+---
+time 1614972700
+new [description:"IN TP7" due:"1615446000" entry:"1614972700" modified:"1614972700" status:"pending" uuid:"6974dd0a-f1e0-45ca-a221-cf8b8ad74e56"]
+---
+time 1614972737
+new [description:"Bachelor présentation" due:"1615359600" entry:"1614972737" modified:"1614972737" status:"pending" uuid:"a1f86ce6-1bb5-49ba-ba9e-97f5166735bb"]
+---
+time 1614973106
+old [description:"Questionnaire" due:"1614668400" entry:"1614612782" modified:"1614612782" status:"pending" uuid:"79579794-9d9f-42c9-8471-8ae2ac1565f5"]
+new [description:"Questionnaire" entry:"1614612782" modified:"1614973106" status:"pending" uuid:"79579794-9d9f-42c9-8471-8ae2ac1565f5"]
+---

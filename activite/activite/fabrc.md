@@ -1,5 +1,6 @@
 Révisions:
 ============
+[trio](trio)
 recule <-> focus
 Labo (expérience)
 motivation -> détermination ([escaliers_émotionnels](escaliers_émotionnels))
