@@ -288,3 +288,10 @@ time 1614973106
 old [description:"Questionnaire" due:"1614668400" entry:"1614612782" modified:"1614612782" status:"pending" uuid:"79579794-9d9f-42c9-8471-8ae2ac1565f5"]
 new [description:"Questionnaire" entry:"1614612782" modified:"1614973106" status:"pending" uuid:"79579794-9d9f-42c9-8471-8ae2ac1565f5"]
 ---
+time 1615053066
+old [description:"Répétitions" due:"1615014000" entry:"1614612856" modified:"1614612856" status:"pending" uuid:"5b6d680e-d639-4810-8cad-ddb65b3b32bc"]
+new [description:"Répétitions" due:"1615014000" end:"1615053066" entry:"1614612856" modified:"1615053066" status:"completed" uuid:"5b6d680e-d639-4810-8cad-ddb65b3b32bc"]
+---
+time 1615053679
+new [description:"rencontre projet info" due:"1615186800" entry:"1615053679" modified:"1615053679" status:"pending" uuid:"e72aee7d-56e0-4c68-b594-74603a0cfdd1"]
+---

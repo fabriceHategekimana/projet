@@ -4,7 +4,7 @@ Révisions:
 recule <-> focus
 Labo (expérience)
 motivation -> détermination ([escaliers_émotionnels](escaliers_émotionnels))
-preuve sociale
+preuve sociale (long terme)
 Pour recevoir qqch il faut donner autre chose en retour
 objectifs (simples, rapides)
 planning
