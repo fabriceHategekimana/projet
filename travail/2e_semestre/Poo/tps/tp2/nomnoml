@@ -3,22 +3,22 @@
 
 
 [Character|
-  ? name: String {readOnly};
-  ? gold: int; 
-  ? maxHP: int {readOnly};
-  ? currentHP: int;
-  ? armor: int; 
-  ? currentQuest: Quest
+  - name: String {readOnly};
+  - gold: int; 
+  - maxHP: int {readOnly};
+  - currentHP: int;
+  - armor: int; 
+  - currentQuest: Quest
 | 
   +Character(name: String, maxHP: int, armor: int);
-  ? wound(damage: int);
-  ? heal(hp: int);
-  ? startQuest(q: Quest)
+  + wound(damage: int);
+  + heal(hp: int);
+  + startQuest(q: Quest)
 ]
 
 [Quest|
-  ? description: String {readOnly};
-  ? reward: int {readOnly}
+  - description: String {readOnly};
+  - reward: int {readOnly}
 | 
   +Quest(description: String, reward: int)
 ]

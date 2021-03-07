@@ -9,7 +9,7 @@
 # Actuellement(1):
 **Défini une syntax de base:**
 
-	- Inspirée du calcul des séquents (jugement)
+	- Inspirée du jugement
 	- Inspirée de l'ensemble termes typé 
 
 ----
@@ -18,7 +18,7 @@
 L'ensemble des termes construit sur un domaine D de type avec l'ensemble des opérateurs OP (muni d'une arité) seront notés $$ T_{OP}(D) $$ Les termes sont définis inductivement par:
 	$$ D \subseteq T_{OP}(D) $$
 
-## Définition (Séquent)
+## Définition (Jugement)
 $$ \frac{Prop_1,...,Prop_n}{Type, Valeur} $$
 
 ----
@@ -26,8 +26,13 @@ $$ \frac{Prop_1,...,Prop_n}{Type, Valeur} $$
 # Syntaxe
 
 ## Terme
-```python
-T{_+_,_-_}(Entier(int))
+```json
+S= {bool,nat}
+F= {
+    True[empty,bool],
+    not[bool,bool],
+    and[bool,bool,bool]
+}
 ```
 
 ## Axiom

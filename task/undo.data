@@ -295,3 +295,18 @@ new [description:"Répétitions" due:"1615014000" end:"1615053066" entry:"161461
 time 1615053679
 new [description:"rencontre projet info" due:"1615186800" entry:"1615053679" modified:"1615053679" status:"pending" uuid:"e72aee7d-56e0-4c68-b594-74603a0cfdd1"]
 ---
+time 1615143270
+old [description:"Visionnage zoom" due:"1615014000" entry:"1614612873" modified:"1614612873" status:"pending" uuid:"1ece378e-0dc5-4ff4-8601-8042fb8e89c0"]
+new [description:"Visionnage zoom" due:"1615014000" end:"1615143270" entry:"1614612873" modified:"1615143270" status:"completed" uuid:"1ece378e-0dc5-4ff4-8601-8042fb8e89c0"]
+---
+time 1615143275
+old [description:"Culte dominical" due:"1615100400" entry:"1614612894" modified:"1614612894" status:"pending" uuid:"a31a18fc-c38c-4a74-9d6c-990a0c3ecea2"]
+new [description:"Culte dominical" due:"1615100400" end:"1615143275" entry:"1614612894" modified:"1615143275" status:"completed" uuid:"a31a18fc-c38c-4a74-9d6c-990a0c3ecea2"]
+---
+time 1615143281
+old [description:"rencontre projet info" due:"1615186800" entry:"1615053679" modified:"1615053679" status:"pending" uuid:"e72aee7d-56e0-4c68-b594-74603a0cfdd1"]
+new [description:"rencontre projet info" due:"1615186800" end:"1615143281" entry:"1615053679" modified:"1615143281" status:"completed" uuid:"e72aee7d-56e0-4c68-b594-74603a0cfdd1"]
+---
+time 1615150057
+new [description:"réu PI 9h" due:"1615186800" entry:"1615150057" modified:"1615150057" status:"pending" uuid:"00b56564-3618-4e36-9941-8b1bc15bc71e"]
+---

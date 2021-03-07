@@ -80,3 +80,7 @@
 {"description":"Questionnaire","entry":"20210301T153302Z","modified":"20210305T193826Z","status":"pending","uuid":"79579794-9d9f-42c9-8471-8ae2ac1565f5"}
 {"description":"Répétitions","due":"20210306T070000Z","end":"20210306T175106Z","entry":"20210301T153416Z","modified":"20210306T175106Z","status":"completed","uuid":"5b6d680e-d639-4810-8cad-ddb65b3b32bc"}
 {"description":"rencontre projet info","due":"20210308T070000Z","entry":"20210306T180119Z","modified":"20210306T180119Z","status":"pending","uuid":"e72aee7d-56e0-4c68-b594-74603a0cfdd1"}
+{"description":"Visionnage zoom","due":"20210306T070000Z","end":"20210307T185430Z","entry":"20210301T153433Z","modified":"20210307T185430Z","status":"completed","uuid":"1ece378e-0dc5-4ff4-8601-8042fb8e89c0"}
+{"description":"Culte dominical","due":"20210307T070000Z","end":"20210307T185435Z","entry":"20210301T153454Z","modified":"20210307T185435Z","status":"completed","uuid":"a31a18fc-c38c-4a74-9d6c-990a0c3ecea2"}
+{"description":"rencontre projet info","due":"20210308T070000Z","end":"20210307T185441Z","entry":"20210306T180119Z","modified":"20210307T185441Z","status":"completed","uuid":"e72aee7d-56e0-4c68-b594-74603a0cfdd1"}
+{"description":"réu PI 9h","due":"20210308T070000Z","entry":"20210307T204737Z","modified":"20210307T204737Z","status":"pending","uuid":"00b56564-3618-4e36-9941-8b1bc15bc71e"}
