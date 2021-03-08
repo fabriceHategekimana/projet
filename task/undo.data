@@ -310,3 +310,11 @@ new [description:"rencontre projet info" due:"1615186800" end:"1615143281" entry
 time 1615150057
 new [description:"réu PI 9h" due:"1615186800" entry:"1615150057" modified:"1615150057" status:"pending" uuid:"00b56564-3618-4e36-9941-8b1bc15bc71e"]
 ---
+time 1615223968
+old [description:"réu PI 9h" due:"1615186800" entry:"1615150057" modified:"1615150057" status:"pending" uuid:"00b56564-3618-4e36-9941-8b1bc15bc71e"]
+new [description:"réu PI 9h" due:"1615186800" end:"1615223968" entry:"1615150057" modified:"1615223968" status:"completed" uuid:"00b56564-3618-4e36-9941-8b1bc15bc71e"]
+---
+time 1615223972
+old [description:"coo TP2" due:"1615359600" entry:"1614972662" modified:"1614972662" status:"pending" uuid:"240bd906-a82f-4aa3-a84b-8e4bcfeeeb31"]
+new [description:"coo TP2" due:"1615359600" end:"1615223972" entry:"1614972662" modified:"1615223972" status:"completed" uuid:"240bd906-a82f-4aa3-a84b-8e4bcfeeeb31"]
+---

@@ -18,9 +18,9 @@ b_n => n=1,2,3,...
 
 (c) Illustrate this fact by sampling f(t) = sin(t+pi/4) with T = 1, 2, 0.5
 	- different plot (function + sampling)
-	- sample(f, T=1)
-	- sample(f, T=2)
-	- sample(f, T=0.5)
+	- sha(f, T=1)
+	- sha(f, T=2)
+	- sha(f, T=0.5)
 	- comment
 
 (d) Even and Odd function:

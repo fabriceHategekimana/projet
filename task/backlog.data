@@ -84,3 +84,5 @@
 {"description":"Culte dominical","due":"20210307T070000Z","end":"20210307T185435Z","entry":"20210301T153454Z","modified":"20210307T185435Z","status":"completed","uuid":"a31a18fc-c38c-4a74-9d6c-990a0c3ecea2"}
 {"description":"rencontre projet info","due":"20210308T070000Z","end":"20210307T185441Z","entry":"20210306T180119Z","modified":"20210307T185441Z","status":"completed","uuid":"e72aee7d-56e0-4c68-b594-74603a0cfdd1"}
 {"description":"réu PI 9h","due":"20210308T070000Z","entry":"20210307T204737Z","modified":"20210307T204737Z","status":"pending","uuid":"00b56564-3618-4e36-9941-8b1bc15bc71e"}
+{"description":"réu PI 9h","due":"20210308T070000Z","end":"20210308T171928Z","entry":"20210307T204737Z","modified":"20210308T171928Z","status":"completed","uuid":"00b56564-3618-4e36-9941-8b1bc15bc71e"}
+{"description":"coo TP2","due":"20210310T070000Z","end":"20210308T171932Z","entry":"20210305T193102Z","modified":"20210308T171932Z","status":"completed","uuid":"240bd906-a82f-4aa3-a84b-8e4bcfeeeb31"}

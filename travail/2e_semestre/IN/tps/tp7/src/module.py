@@ -11,10 +11,9 @@ def sha(t, T):
     val = np.array(list(map(changeIfPeriodic, t)))
     return val
 
-def odd(f, n):
-    return (f(n)-f(-n))/2
+def Odd(f, n):
+    return (f(n)-f(-n))/3
 
-def even(f, n):
+def Even(f, n):
     return (f(n)+f(-n))/2
-
 

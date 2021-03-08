@@ -4,3 +4,6 @@ Genre: homme
 Origine:
 Thème:
 Attachement:
+
+Ancien chef de l'équipe de la garde Royale.
+
