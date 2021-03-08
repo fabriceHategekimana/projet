@@ -14,7 +14,9 @@ public class Character{
     public Character(String name, int maxHP, int armor){ 
 	this.name= name;
     	this.maxHP= maxHP;
+    	this.currentHP= maxHP;
 	this.armor= armor;
+	this.gold= 0;
     }
 
     public void wound(int damage){ 
@@ -32,4 +34,17 @@ public class Character{
 	public void test1(){
 		System.out.println("test1");
 	}
+
+	@Override
+	public String toString() {
+	    return "---------------------------" +
+		"\n name = " + name +
+		"\n gold = " + gold +
+		"\n maxHP = " + maxHP +
+		"\n currentHP = " + currentHP +
+		"\n armor = " + armor +
+		"\n currentQuest = " + currentQuest +
+		"\n---------------------------";
+	}
+
 }
