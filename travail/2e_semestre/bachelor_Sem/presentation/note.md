@@ -19,12 +19,12 @@
 	- Demande un compilateur
 	
 ## interface
-	- CLI -> TUI -> GUI
-
+	- CLI -> GUI
+	- visualisation par graphe
 
 ----
 
-# Plan
+# Structure du langage
 
 ## Types
 S= {...}
@@ -67,7 +67,7 @@ F= {
 -- zero in nat
 ```
 
-## Induction
+## Règle
 ```python
 n in nat -- succ(n) in nat
 ```
@@ -87,8 +87,19 @@ P= { inst1;;inst2;;...;;instn }
 	 
 ----
 
-# À faire:
+# Interface (visualisation par graphe)
 
- - Ajouter la notion de contexte
- - définition de l'algo de preuve
+
+![graphe](images/graphe.png)
+
+----
+
+# outils de visualisation
+
+## Affichage
+	NetworkX + matplotlib
+	
+## Interactivité
+	NetworkX + wxPython
+
 
