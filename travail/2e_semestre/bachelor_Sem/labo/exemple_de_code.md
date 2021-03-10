@@ -1,8 +1,9 @@
 
 Exemple de code:
 
-# Terme
-T(_+_)`[`Entier(`int`)`]`
+# Signature
+S= {types}
+F= {sym[entree1,...,entreen,sortie]}
 
 ##Axiom
 `--` n `in` Entier

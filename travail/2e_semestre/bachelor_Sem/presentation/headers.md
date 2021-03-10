@@ -1,6 +1,6 @@
 ---
-title: "Présentation"
+title: "Outil d'analyse de langages"
 author: "Hategekimana Fabrice"
 theme: "CambridgeUS"
-date: 02 mars 2021
+date: 09 mars 2021
 ---

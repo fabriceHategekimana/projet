@@ -35,3 +35,18 @@ table of n lines and d columns
 a model is a high-level description, summarizing a large collection of data describing its important features. Often a model is global in the sense that it applies to all point...
 
 A pattern is a local description, applying to some subset of the data space, perhaps showing how just a few data points behave or characterizing some persistent but unusual...
+
+
+# Data mining
+Overfitting arrive quand on a pas assez de donnée.
+quand on entraîne un système avec peu de donnée d'entrainement.
+S'évite avec la régularisation, Priors ou la méthode Baésienne.
+
+3 type d'algorithme:
+- generative (make statement with p(x,y)) bcp de maht quand on a la distribe, on peut générer des datas qui lui ressemble.
+- discriminative (P(y|x)) pour des cas plus simple sans estimation
+- (f(x)->y)
+- 
+
+![bayes_theorem](images/bayes_theorem.png)
+![bayes_theorem2](images/bayes_theorem2.png)
