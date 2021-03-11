@@ -2,8 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #prend une fonction f et une période T
-def myScatter(x, y):
+def myScatter(x, y, text):
     plt.scatter(x, y)
+    plt.title(text, fontsize=20)
     plt.show()
 
 def sha(t, T):
@@ -12,7 +13,7 @@ def sha(t, T):
     return val
 
 def Odd(f, n):
-    return (f(n)-f(-n))/3
+    return (f(n)-f(-n))/2
 
 def Even(f, n):
     return (f(n)+f(-n))/2

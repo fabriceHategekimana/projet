@@ -13,30 +13,30 @@ w= f_of_z(z)
 m= np.abs(w)
 plt.imshow(m, cmap='hsv')
 plt.colorbar()
-plt.title("version normal")
+plt.title("visualize |w|", fontsize=20)
 plt.show()
 
 #e
 m= np.log(1+np.abs(w))
 plt.imshow(m, extent=(-30,70,100,0), cmap='hsv')
 plt.colorbar()
-plt.title("version logarithmique")
+plt.title("visualize m= log(1+|w|)", fontsize=20)
 plt.show()
 
 #f
 plt.imshow(w.real, extent=(-30,70,100,0), cmap='hsv')
 plt.colorbar()
-plt.title("partie réelle")
+plt.title("visualize real part", fontsize=20)
 plt.show()
 
 plt.imshow(w.imag, extent=(-30,70,100,0), cmap='hsv')
 plt.colorbar()
-plt.title("partie imaginaire")
+plt.title("visualize imaginery part", fontsize=20)
 plt.show()
 
 #h
 plt.imshow(np.angle(w), extent=(-30,70,100,0), cmap='hsv')
 plt.colorbar()
-plt.title("angle")
+plt.title("visualize angle", fontsize=20)
 plt.show()
 
