@@ -7,11 +7,15 @@ def f_of_t(t):
 def a():
     text= "Sampling f(t)=sin(t+pi/4) with T="
     t= np.linspace(-10, 10, num=201)
+    ft= f_of_t(t)
     y1= f_of_t(t)*sha(t,1)
     y2= f_of_t(t)*sha(t,0.5)
     y3= f_of_t(t)*sha(t,2)
+    plt.plot(t, ft)
     myScatter(t,y1, text+str(1))
+    plt.plot(t, ft)
     myScatter(t,y2, text+str(0.5))
+    plt.plot(t, ft)
     myScatter(t,y3, text+str(2))
 
 def d():
