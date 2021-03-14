@@ -1,5 +1,12 @@
 # Grammaire:
+## grammaire des expressions:
+exp= string "(" exp ")"
+   | exp more
+   | int
+more= "," exp more
+    | empty
 
+# forme de grammaire
 L -> SFRP
 
 S -> {T TS}

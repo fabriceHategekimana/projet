@@ -384,3 +384,13 @@ time 1615622349
 old [annotation_1615414874:"2" description:"Documentation Satom" due:"1615446000" entry:"1615414666" modified:"1615414874" status:"pending" uuid:"f67a3340-66dd-4228-ba7b-c0ff931d5db8"]
 new [annotation_1615414874:"2" description:"Documentation Satom" due:"1615849200" entry:"1615414666" modified:"1615622349" status:"pending" uuid:"f67a3340-66dd-4228-ba7b-c0ff931d5db8"]
 ---
+time 1615750272
+new [description:"TI tp2" due:"1615878000" entry:"1615750272" modified:"1615750272" status:"pending" uuid:"97ee7baa-8b09-427c-8f2d-eebea42bef65"]
+---
+time 1615750301
+new [description:"tp3 coo" due:"1616050800" entry:"1615750301" modified:"1615750301" status:"pending" uuid:"02cc6672-4cfa-4917-9253-0a1b51a272ea"]
+---
+time 1615750321
+old [annotation_1615414891:"4" description:"Boost synthe" due:"1615446000" entry:"1615414695" modified:"1615414891" status:"pending" uuid:"64d54e77-5ac9-4108-9bf9-7d31f0b6da92"]
+new [annotation_1615414891:"4" description:"Boost synthe" due:"1615446000" end:"1615750321" entry:"1615414695" modified:"1615750321" status:"completed" uuid:"64d54e77-5ac9-4108-9bf9-7d31f0b6da92"]
+---
