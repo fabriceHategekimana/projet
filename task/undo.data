@@ -394,3 +394,7 @@ time 1615750321
 old [annotation_1615414891:"4" description:"Boost synthe" due:"1615446000" entry:"1615414695" modified:"1615414891" status:"pending" uuid:"64d54e77-5ac9-4108-9bf9-7d31f0b6da92"]
 new [annotation_1615414891:"4" description:"Boost synthe" due:"1615446000" end:"1615750321" entry:"1615414695" modified:"1615750321" status:"completed" uuid:"64d54e77-5ac9-4108-9bf9-7d31f0b6da92"]
 ---
+time 1615795760
+old [description:"Examen stb" due:"1615590000" entry:"1614720372" modified:"1614972567" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
+new [description:"Examen stb" due:"1615590000" end:"1615795760" entry:"1614720372" modified:"1615795760" status:"completed" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
+---
