@@ -1,6 +1,6 @@
 # Message06:
 `La paix de Dieu`
-Dieu te connaît déjà
+Dieu te connaît
 
 `Shalom:`
 Attention, style de vie, Etat complet, de perfection, tranquilité, quietude, paix sérénité et calme
@@ -10,24 +10,26 @@ Jérémie 1:5
 
 ## Plan
 `Message`
-Jérémie captif nous 
+Dieu qui s'adresse à Jérémie pour lui transmettre ce ministère.
 
 `Identité`
 `Extreme`
 `Foi,Persévérence,Paix interieur`
-
-## Dieu connaît les projets qu'il a formulés sur nous
-## Dieu fait ses projets en connaissance de cause
-## Pourquoi? Car il nous connaît
-	- Il nous observe
-	- Mieux que nous même
-La connaissance des hommes vs la connaissance de Dieu
-
 ## Se Connaître:
     - Est-ce qu'on se connaît réellement?
     - Est-ce qu'on cherche à se connaître?
     - Trichotomie
     - La maîtrise
+
+## Pourquoi? Car il nous connaît
+	- Il nous observe
+	- Mieux que nous même
+La connaissance des hommes vs la connaissance de Dieu
+
+## Dieu connaît les projets qu'il a formulés sur nous
+	- projet de paix
+
+## Dieu fait ses projets en connaissance de cause
 
 ## Est-ce qu'on cherche à connaître Dieu?
     - S'approcher de lui
