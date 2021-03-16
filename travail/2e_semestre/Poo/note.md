@@ -7,3 +7,9 @@
 - les tables sont toujours mutable
 - les tableaux sont initialisé dans le tas
 - les valeurs du tableau sont contigües
+
+# Concepts:
+[Exceptions](Exceptions)
+librairie_standard
+
+[Les_collections](Les_collections)

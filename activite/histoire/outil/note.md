@@ -47,3 +47,7 @@ F : "(" LOGARI ")"
   | PREDICAT
 
 Reste l'arithmétique logique
+
+Utiliser
+UNION pour le OR
+CROSS JOIN pour le OU
