@@ -398,3 +398,7 @@ time 1615795760
 old [description:"Examen stb" due:"1615590000" entry:"1614720372" modified:"1614972567" status:"pending" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
 new [description:"Examen stb" due:"1615590000" end:"1615795760" entry:"1614720372" modified:"1615795760" status:"completed" uuid:"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"]
 ---
+time 1616005909
+old [description:"TI tp2" due:"1615878000" entry:"1615750272" modified:"1615750272" status:"pending" uuid:"97ee7baa-8b09-427c-8f2d-eebea42bef65"]
+new [description:"TI tp2" due:"1615878000" end:"1616005909" entry:"1615750272" modified:"1616005909" status:"completed" uuid:"97ee7baa-8b09-427c-8f2d-eebea42bef65"]
+---
