@@ -22,14 +22,15 @@ public class Damage{
 	}
 
 	public int total(){ 
+		int somme= 0;
 		for(int v : this.values){
 			somme += v;
 		}	
-		return v;
+		return somme;
 	}
 
 	public void reduceDamage(Damage d){ 
-		for(int i= 0; i<name.length; i++){
+		for(int i= 0; i < this.values.length; i++){
 			this.values[i] -= d.getValue(i);
 		}	
 	}

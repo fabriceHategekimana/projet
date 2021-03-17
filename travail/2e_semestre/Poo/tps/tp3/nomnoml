@@ -1,0 +1,86 @@
+#gravity: 2
+#direction: right
+
+[Character|
+  - name: String {readOnly};
+  - gold: int; 
+  - maxHP: int {readOnly};
+  - currentHP: int;
+  - armor: int; 
+  - currentQuest: Quest
+| 
+  +Character(name: String, maxHP: int, armor: int);
+  + wound(damage: int);
+  + heal(hp: int);
+  + startQuest(q: Quest)
+]
+
+[Quest|
+  - description: String {readOnly};
+  - reward: int {readOnly}
+| 
+  +Quest(description: String, reward: int)
+]
+
+[Damage|
+  - values: int {readOnly}
+  - types: String {readOnly}
+| 
+  + setDamage(name: String, int value) => void
+  + modifyDamage(name: String, int value) => void
+  + total() => int
+  + reduceDamage(d: Damage) => Damage
+  + getValue(i: int) => int
+  + findIndexOf(name: String) => int
+  + toString() => String
+
+]
+
+
+[ProtectionStack|
+  - description: String {readOnly}
+  - layers Protection {rewardly}
+| 
+  + absorb(dmg: Damage) => Damage
+  + weight() => int
+  + hashCode() => int 
+  + equals(o: Object) => boolean 
+]
+
+[Protection|
+| 
+  + equals(o: Object) => boolean 
+]
+
+[Equipement|
+| 
+  +weight()
+]
+
+[Armure|
+  - description: String {readOnly};
+  - reward: int {readOnly}
+  - name: String {readOnly}
+  - cWeight: int {readOnly}
+  - protection: Damage {readOnly}
+| 
+   + weight() => int
+   + absorb(dmg: Damage) => Damage
+]
+
+
+[Character]
+[Quest]
+[Damage]
+[ProtectionStack]
+[Protection]
+[Equipement]
+[Armure]
+
+[Character]o->[Quest]
+[Protection]->[Equipement]
+[Armure]--:>[Protection]
+[ProtectionStack]--:>[Protection]
+
+
+

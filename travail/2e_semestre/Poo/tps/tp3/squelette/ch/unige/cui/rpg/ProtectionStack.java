@@ -1,3 +1,5 @@
+package ch.unige.cui.rpg;
+
 /*est de type object Value car représente une combinaison
 *d'équipement du jeu qui ne variera pas avec le temps*/
 public class ProtectionStack implements Protection{ 
@@ -17,7 +19,7 @@ public class ProtectionStack implements Protection{
 	public int weight(){ 
 		int somme= 0;
 		for(Protection p : layers){
-			somme += p.Weight();
+			somme += p.weight();
 		}
 		return somme;	
 	}

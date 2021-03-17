@@ -1,11 +1,11 @@
 package ch.unige.cui.rpg;
 
-public class CotteDeMaille implements Protection{
+public class VesteEnCuir implements Protection{
 	private int cWeight;
 	private Damage protection;
 
-	public CotteDeMaille(int weight, Damage dmg){
-		this.cWeight= weight;
+	public VesteEnCuir(int wheight, Damage dmg){
+		this.cWeight= wheight;
 		this.protection = dmg;
 	}	
 
