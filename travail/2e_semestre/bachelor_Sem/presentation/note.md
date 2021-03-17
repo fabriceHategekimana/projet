@@ -14,62 +14,45 @@
 # Outil
 
 ## langage:
-	- Paradigme logique
+	- Prolog like langage
 	- Syntaxe simplifiée pour la définition de langage
-	- Demande un compilateur
+	- Utilisation de PLY en tant que lexer/parser
 	
 ## interface
 	- CLI -> GUI
-	- visualisation par graphe
+	- Visualisation par graphe
 
 ----
 
 # Structure du langage
 
-## Types
-S= {...}
-
-## Symboles/opérateurs
-F= {...}
-
-## Règles
-R= {...}
-
-## Programme
-P= {...}
+## En construction...
+![en_construction](images/en_construction.png)
 
 ----
 
-# Types, symboles et opérateurs
+# Sémantique sur les types 
 
 ## Signature
 $$ \Sigma = <S,F> $$
 Depuis sigma on peut dériver l'ensemble T_{sigma} qui est l'ensemble des termes généré par Sigma.
 
 ----
+
 # Syntaxe
 
-## Signature
+## Typage
 ```json
-S= {bool,nat}
-F= {
-    True[empty,bool],
-    not[bool,bool],
-    and[bool,bool,bool]
-}
+    true[[empty],[bool]].
+    not[[bool],[bool]].
+    and[[bool,bool],[bool]].
 ```
 
-----
-# Règles et progamme
-
-## Axiom
-```python
--- zero in nat
-```
-
-## Règle
-```python
-n in nat -- succ(n) in nat
+## Traduction
+```bash
+	$ true;; => ['bool']
+	$ false;; => ['bool']
+	$ and(_,_);; => ['bool']
 ```
 
 ## Programme
@@ -79,13 +62,84 @@ P= { inst1;;inst2;;...;;instn }
 
 ----
 
-# Actuellement
-**Définition de l'algo de dérivation de programme:**
-	 
-	- GNU Bison et Flex
-	- Utilisation d'une grammaire algébrique
-	 
+# Strucutre du domaine Sémantique
+
+## Sémantique sur les valeurs de retour
+	- arithmétique
+	- langage plus complexe
+
+## Etat du système
+```javascript
+State(e1,e2,...,en)
+```
+
+## Transition
+```javascript
+Transition(State(...),inst) => State(...)
+```
+
 ----
+
+# Syntaxe côté utilisateur
+
+## State
+```sql
+<e1,...,en>
+```
+
+## State x inst
+```sql
+<e1,...,en,inst>
+```
+
+## Transition
+```
+<e1,...,en,inst> => <i1,...,in>
+```
+
+## Définition linéaire
+```javascript
+e1 => i1,...,in => in -- <e1,...,en,inst> => <i1,...,in>
+```
+	
+----
+
+# Définition implicite
+
+![definition_implicite](images/definition_implicite.png)
+
+----
+
+# Limitations(1)
+
+## Structure de données:
+```javascript
+node(leaf,node(node(leaf,leaf),leaf)) => tree
+```
+
+## Liste
+```javascript
+[] => list
+list(a,list(b,list(c,d)) => list
+[a,b,c,d] => list
+```
+----
+
+# Limitations(2)
+
+## Exercice 5
+![](images/definition_python.png){ width=40% }
+
+## Traduction
+```javascript
+modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
+```
+
+## Comment définir modify?
+Injection python?
+
+----
+
 
 # Interface (visualisation par graphe)
 

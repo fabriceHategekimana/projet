@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'COMA CP INT NAME OP\n    calc : exp\n    \n    exp : NAME OP exp CP\n    \n    exp : exp more\n    \n    exp : INT\n    \n    more : COMA exp more\n    \n    more : COMA exp\n    '
+_lr_signature = 'COMA CP NAME NUM OP\n    calc : exp\n    \n    exp : NAME OP exp CP\n    \n    exp : exp more\n    \n    exp : NUM\n    \n    more : COMA exp more\n    \n    more : COMA exp\n    '
     
-_lr_action_items = {'NAME':([0,6,7,],[3,3,3,]),'INT':([0,6,7,],[4,4,4,]),'$end':([1,2,4,5,8,10,11,],[0,-1,-4,-3,-6,-3,-2,]),'COMA':([2,4,5,8,9,10,11,],[6,-4,-3,6,6,-3,-2,]),'OP':([3,],[7,]),'CP':([4,5,8,9,10,11,],[-4,-3,-6,11,-3,-2,]),}
+_lr_action_items = {'NAME':([0,6,7,],[3,3,3,]),'NUM':([0,6,7,],[4,4,4,]),'$end':([1,2,4,5,8,10,11,],[0,-1,-4,-3,-6,-3,-2,]),'COMA':([2,4,5,8,9,10,11,],[6,-4,-3,6,6,-3,-2,]),'OP':([3,],[7,]),'CP':([4,5,8,9,10,11,],[-4,-3,-6,11,-3,-2,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -29,8 +29,8 @@ _lr_productions = [
   ("S' -> calc","S'",1,None,None,None),
   ('calc -> exp','calc',1,'p_calc','compile.py',52),
   ('exp -> NAME OP exp CP','exp',4,'p_exp_operator','compile.py',58),
-  ('exp -> exp more','exp',2,'p_exp_more','compile.py',64),
-  ('exp -> INT','exp',1,'p_exp_int','compile.py',70),
-  ('more -> COMA exp more','more',3,'p_more_exp','compile.py',76),
-  ('more -> COMA exp','more',2,'p_more_empty','compile.py',82),
+  ('exp -> exp more','exp',2,'p_exp_more','compile.py',66),
+  ('exp -> NUM','exp',1,'p_exp_int','compile.py',72),
+  ('more -> COMA exp more','more',3,'p_more_exp','compile.py',78),
+  ('more -> COMA exp','more',2,'p_more_empty','compile.py',84),
 ]
