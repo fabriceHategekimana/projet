@@ -402,3 +402,12 @@ time 1616005909
 old [description:"TI tp2" due:"1615878000" entry:"1615750272" modified:"1615750272" status:"pending" uuid:"97ee7baa-8b09-427c-8f2d-eebea42bef65"]
 new [description:"TI tp2" due:"1615878000" end:"1616005909" entry:"1615750272" modified:"1616005909" status:"completed" uuid:"97ee7baa-8b09-427c-8f2d-eebea42bef65"]
 ---
+time 1616084545
+new [description:"TP3 TI" due:"1616482800" entry:"1616084545" modified:"1616084545" status:"pending" uuid:"fb1bf50c-cefe-4a7b-b373-ef740ad2f728"]
+---
+time 1616084570
+new [description:"TP8 IN" due:"1616655600" entry:"1616084570" modified:"1616084570" status:"pending" uuid:"db9e5b42-11a1-4c6a-ab33-b63b587d7e09"]
+---
+time 1616084593
+new [description:"TP1 DM" due:"1616997600" entry:"1616084593" modified:"1616084593" status:"pending" uuid:"6a5efe32-ab0e-4382-a931-d7975c8ed240"]
+---

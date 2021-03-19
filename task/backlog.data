@@ -109,3 +109,6 @@
 {"description":"Boost synthe","due":"20210311T070000Z","end":"20210314T193201Z","entry":"20210310T221815Z","modified":"20210314T193201Z","status":"completed","uuid":"64d54e77-5ac9-4108-9bf9-7d31f0b6da92","annotations":[{"entry":"20210310T222131Z","description":"4"}]}
 {"description":"Examen stb","due":"20210312T230000Z","end":"20210315T080920Z","entry":"20210302T212612Z","modified":"20210315T080920Z","status":"completed","uuid":"9e975fe3-b1ea-4281-90ad-f8365f20ffd4"}
 {"description":"TI tp2","due":"20210316T070000Z","end":"20210317T183149Z","entry":"20210314T193112Z","modified":"20210317T183149Z","status":"completed","uuid":"97ee7baa-8b09-427c-8f2d-eebea42bef65"}
+{"description":"TP3 TI","due":"20210323T070000Z","entry":"20210318T162225Z","modified":"20210318T162225Z","status":"pending","uuid":"fb1bf50c-cefe-4a7b-b373-ef740ad2f728"}
+{"description":"TP8 IN","due":"20210325T070000Z","entry":"20210318T162250Z","modified":"20210318T162250Z","status":"pending","uuid":"db9e5b42-11a1-4c6a-ab33-b63b587d7e09"}
+{"description":"TP1 DM","due":"20210329T060000Z","entry":"20210318T162313Z","modified":"20210318T162313Z","status":"pending","uuid":"6a5efe32-ab0e-4382-a931-d7975c8ed240"}
