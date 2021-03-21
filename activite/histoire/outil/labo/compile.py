@@ -75,65 +75,83 @@ def p_calc(p):
     '''
     print(p[1])
 
-def p_exp_command(p):
+def p_exp_exp1(p):
     '''
     exp : ADD modify
         | DELETE modify
-        | CHECK query
+    '''
+    p[0] = p[1] #on l'envoie dans la base sql
+
+def p_exp_exp2(p):
+    '''
+    exp : CHECK query
         | DISPLAY query
+    '''
+    p[0] = p[1]+p[2] #on l'envoie dans la base sql
+
+def p_exp_modify(p):
+    '''
     modify : fact
            | rule
-    fact : ENT ENT ENT
-    rule : if logalg then conj
-    logalg : fact2 more
-    more : op fact2 more
-    op : AND
-       | OR
-    conj : fact2 moreconj
-    moreconj : and facte2 moreconj
-             | empty
-    fact2 : el ENT el
-    el : ENT
-       | VAR
     '''
-    toTypeTable(p[1], p[3])
-    p[0] = ""
+    p[0] = p[1]
 
-def p_exp_more(p):
+def p_exp_fact(p):
     '''
-    exp : exp more
+    fact : ENT ENT ENT
+    '''
+    p[0] = p[1]+p[2]+p[3] #C'est là où on fait l'union
+
+def p_exp_rule(p):
+    '''
+    rule : if logalg then conj
     '''
     p[0] = p[1]+p[2]
 
-def p_exp_int(p):
+def p_exp_logalg(p):
     '''
-    exp : NAME
+    logalg : fact2 more
     '''
-    p[0] = [p[1]]
+    p[0] = p[1]+p[2]
 
-def p_more_exp(p):
+def p_exp_more(p):
     '''
-    more : COMA exp more
+    more : op fact2 more
     '''
-    p[0] = p[2]+p[3]
+    p[0] = p[1]+p[2]
 
-def p_more_empty(p):
+def p_exp_op(p):
     '''
-    more : COMA exp
+    op : AND
+       | OR
     '''
-    p[0] = p[2]
+    p[0] = p[1]
 
-def p_next_empty(p):
+def p_exp_conj(p):
     '''
-    next : DOT
+    conj : fact2 moreconj
     '''
-    p[0] = "" 
+    p[0] = p[1]+p[2]
 
-def p_next_exp(p):
+def p_exp_AND(p):
     '''
-    next : DOT exp
+    moreconj : AND fact2 moreconj
+             | empty
     '''
-    p[0] = p[2]
+    p[0] = p[1]+p[2]+p[3]
+
+def p_exp_predicat(p):
+    '''
+    fact2 : el ENT el
+    '''
+    p[0] = p[1] #C'est là où doit se faire l'union partielle
+
+def p_exp_term(p):
+    '''
+    el : ENT
+       | VAR
+    '''
+    p[0] = p[1]
 
 def p_error(p):
     print("Error")
