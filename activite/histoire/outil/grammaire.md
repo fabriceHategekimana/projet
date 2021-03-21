@@ -18,6 +18,10 @@ op: and
 conj: fact2 moreconj
 moreconj: and facte2 moreconj
         | empty
-fact2: el ent el
-el: ent
-  | var
+fact2: ent ent var
+	 | ent var ent
+	 | var ent ent
+	 | ent var var
+	 | var ent var
+	 | var var ent
+	 
