@@ -1,0 +1,29 @@
+from module_union import *
+from module_db import *
+
+def complete(exp, varList, value):
+    for i in range(len(varList)):
+        exp= exp.replace(varList[i], value[i])
+    return exp
+
+def retroPropagation(rule):
+    print("rule: ", rule)
+    sql= union(rule[0])
+    facts= d.sqlQuery("select * from "+sql+";")
+    varList= getVariables(rule[0])
+    for fact in facts:
+        res= complete(rule[1], varList, fact)
+        if res not in(ENTETE):
+            addFact(res)
+
+def addFact(fact):
+        d.sqlModify("insert into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(fact.split(" ")))
+
+def propagation(fact):
+    fact= fact.split(" ")
+    for i in range(3):
+        fact[i]= "%"+fact[i]+"%"
+    rules= d.sqlQuery("select * from rules where premises like '%s' or premises like '%s' or premises like '%s'" % tuple(fact))
+    for rule in rules:
+        retroPropagation(rule[1:])
+
