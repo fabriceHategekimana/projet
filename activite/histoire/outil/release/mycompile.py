@@ -140,7 +140,7 @@ def p_exp_modify_fact(p):
     '''
     modify : fact
     '''
-    d.sqlModify("insert into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(p[1]))
+    d.sqlModify("insert or ignore into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(p[1]))
     propagation(" ".join(p[1]))
     p[0] = p[1]
 
@@ -148,9 +148,12 @@ def p_exp_modify_rule(p):
     '''
     modify : rule
     '''
-    premises= p[1][0][:-1] # enlever le dernier espace à droite
+    if p[1][0][-1]  == ' ':
+        premises= p[1][0][:-1] # enlever le dernier espace à droite
+    else:
+        premises= p[1][0]
     conclusion= p[1][1]
-    d.sqlModify("insert into rules (premises,conclusion) values ('%s','%s')" % tuple([premises,conclusion]))
+    d.sqlModify("insert or ignore into rules (premises,conclusion) values ('%s','%s')" % tuple([premises,conclusion]))
     retroPropagation([premises,conclusion]) 
     ENTETE= []
     p[0] = p[1]

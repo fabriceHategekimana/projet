@@ -12,7 +12,7 @@ def isComplet(tab):
 def getVariables(exp):
     final= []
     for e in exp:
-        if e in ["A","B","C"]:
+        if e in ["A","B","C"] and e not in final:
             final.append(e)
     return final
 
@@ -30,7 +30,7 @@ def variableIndex(command):
     tab= command
     for i in range(len(tab)):
         if tab[i] in ["A","B","C"]:
-            variables.append(column[i])
+            variables.append(column[i]+" as "+tab[i])
         else:
             values.append(column[i])
             values.append(tab[i])

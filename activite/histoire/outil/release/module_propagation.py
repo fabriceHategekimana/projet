@@ -7,17 +7,18 @@ def complete(exp, varList, value):
     return exp
 
 def retroPropagation(rule):
-    print("rule: ", rule)
     sql= union(rule[0])
     facts= d.sqlQuery("select * from "+sql+";")
-    varList= getVariables(rule[0])
+    varList= getVariables(rule[0].split(" "))
     for fact in facts:
         res= complete(rule[1], varList, fact)
         if res not in(ENTETE):
             addFact(res)
 
 def addFact(fact):
-        d.sqlModify("insert into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(fact.split(" ")))
+        d.sqlModify("insert or ignore into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(fact.split(" ")))
+        ENTETE.append(fact)
+        propagation(fact)
 
 def propagation(fact):
     fact= fact.split(" ")

@@ -1,7 +1,7 @@
 import sqlite3
 
 class Data(): 
-    nom="data.db"
+    nom="data/data.db"
 
     def __init__(self):
         self.conn= sqlite3.connect(self.nom)

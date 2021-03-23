@@ -16,7 +16,9 @@ def retroPropagation(rule):
             addFact(res)
 
 def addFact(fact):
-        d.sqlModify("insert into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(fact.split(" ")))
+        d.sqlModify("insert or ignore into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(fact.split(" ")))
+        ENTETE.append(fact)
+        propagation(fact)
 
 def propagation(fact):
     fact= fact.split(" ")

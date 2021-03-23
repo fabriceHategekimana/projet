@@ -1,6 +1,6 @@
 all: clean
 
 clean: FORCE
-	rm data.db && cp data/data.db .
+	rm data/data.db && cp data/src/data.db data
 
 FORCE:
