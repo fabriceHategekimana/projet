@@ -7,10 +7,9 @@ def complete(exp, varList, value):
     return exp
 
 def retroPropagation(rule):
-    print("rule: ", rule)
     sql= union(rule[0])
     facts= d.sqlQuery("select * from "+sql+";")
-    varList= getVariables(rule[0])
+    varList= getVariables(rule[0].split(" "))
     for fact in facts:
         res= complete(rule[1], varList, fact)
         if res not in(ENTETE):
