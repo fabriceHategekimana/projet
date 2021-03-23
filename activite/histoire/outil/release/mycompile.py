@@ -23,7 +23,9 @@ reserved = {
         "or" : "OR",
         "if" : "IF",
         "then" : "THEN",
-        "rules" : "RULES"
+        "rules" : "RULES",
+        "links" : "LINKS",
+        "nodes" : "NODES"
         }
                          
 tokens = [
@@ -88,7 +90,6 @@ def p_exp_delete_rules(p):
     '''
     exp= p[3][:-1] # on retire la virgule en trop à droite
     sql= "delete from rules where id in ("+exp+");"
-    print(sql)
     d.sqlModify(sql)
     p[0] = ["values deleted"]
 
@@ -109,15 +110,30 @@ def p_exp_exp2(p):
     exp : CHECK logalg
         | DISPLAY logalg
     '''
-    exp= p[2][:-1] #enlever l'espace en trop sur la droite
+    exp= p[2] #enlever l'espace en trop sur la droite
     sql= "select * from "+union(exp)+";"
     p[0] = d.sqlQuery(sql)
+    #p[0] = []
 
 def p_exp_check_rule(p):
     '''
     exp : CHECK RULES
     '''
     exp= "select * from rules;"
+    p[0] = d.sqlQuery(exp)
+
+def p_exp_check_links(p):
+    '''
+    exp : CHECK LINKS
+    '''
+    exp= "select distinct link from facts;"
+    p[0] = d.sqlQuery(exp)
+
+def p_exp_check_nodes(p):
+    '''
+    exp : CHECK NODES
+    '''
+    exp= "select distinct subject from facts inner join (select distinct goal from facts);"
     p[0] = d.sqlQuery(exp)
 
 def p_exp_modify_fact(p):
@@ -161,13 +177,13 @@ def p_exp_logalg(p):
     '''
     logalg : fact2 more
     '''
-    p[0] = " ".join(p[1])+" "+p[2]
+    p[0] = " ".join(p[1])+p[2]
 
 def p_exp_more(p):
     '''
     more : op fact2 more
     '''
-    p[0] = p[1]+" ".join(p[2])+" "+p[3]
+    p[0] = " "+p[1]+" "+" ".join(p[2])+p[3]
 
 def p_exp_more2(p):
     '''
@@ -197,9 +213,9 @@ def p_exp_op(p):
 def p_exp_op2(p):
     '''
     op2 : AND
-       | OR
+        | OR
     '''
-    p[0] = p[1]
+    p[0] = p[1].upper() #mark
 
 #def p_exp_conj(p):
     #'''
@@ -260,15 +276,13 @@ def p_exp_term(p):
     p[0] = p[1]
 
 def p_error(p):
-    print("Error")
+    print("Error bad syntax")
 
 parser= yacc.yacc()
 
-print("<!>Starting the server<!>")
 
-while True:
-    try:
-        s = input('')
-    except EOFError:
-        break
-    parser.parse(s)
+#s1= "add if A est B then A est bleu"
+#parser.parse(s1)
+
+#s2= "add if A est comme then A est bleu"
+#parser.parse(s2)

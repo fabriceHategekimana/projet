@@ -70,20 +70,22 @@ def setAND(exp, varList):
 def union(exp):
     final= []
     tabOR= exp.split(" OR ")
-    index= 0
     for t in tabOR:
         varList= []
         tabAND= t.split(" AND ")
         subexp= ""
-        for i in range(len(tabAND)):
+        for i in range(len(tabAND)): # on converti chaque conjonction
             var= getVariables(tabAND[i])
             subexp += convert(tabAND[i])+" AND "
             varList.append(var)
-        subexp= subexp[:-5]
+        subexp= subexp[:-5] # on enlève le " AND " en trop
         num= len(t.split(" AND "))
         final.append(setAND(subexp, varList))
-        index += num
+    #dernier traitement des parenthèses à côté des or
+    for i in range(1,len(final)):
+        final[i]= final[i].replace("(","",1).replace(")","",1)
     return " UNION ".join(final)
+        
 
 #PROPAGATION
 #if val == []:
@@ -94,5 +96,5 @@ def union(exp):
         #res += union(newCommand)
     #return res
 
-#cmd="francois dans classe1"
+#cmd="emy A B OR A B emy"
 #print(union(cmd))
