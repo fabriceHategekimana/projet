@@ -411,3 +411,7 @@ new [description:"TP8 IN" due:"1616655600" entry:"1616084570" modified:"16160845
 time 1616084593
 new [description:"TP1 DM" due:"1616997600" entry:"1616084593" modified:"1616084593" status:"pending" uuid:"6a5efe32-ab0e-4382-a931-d7975c8ed240"]
 ---
+time 1616573442
+old [description:"tp3 coo" due:"1616050800" entry:"1615750301" modified:"1615750301" status:"pending" uuid:"02cc6672-4cfa-4917-9253-0a1b51a272ea"]
+new [description:"tp3 coo" due:"1616050800" end:"1616573442" entry:"1615750301" modified:"1616573442" status:"completed" uuid:"02cc6672-4cfa-4917-9253-0a1b51a272ea"]
+---

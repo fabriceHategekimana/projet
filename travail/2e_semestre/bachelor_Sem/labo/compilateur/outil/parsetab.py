@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'COMA CP NAME NUM OP\n    calc : exp\n    \n    exp : NAME OP exp CP\n    \n    exp : exp more\n    \n    exp : NUM\n    \n    more : COMA exp more\n    \n    more : COMA exp\n    '
+_lr_signature = 'AND CB COMA CP EQUAL INF MINUS NAME NUM OB OP SUP VAR\n    calc : exp \n    \n    premises : fact following\n    \n    fact : transition\n    \n    fact : equality\n    \n    transition : term MINUS SUP term\n    \n    term : exp\n    \n    term : state\n    \n    state : INF suite SUP\n    \n    suite : exp next\n    \n    suite : NAME next\n    \n    suite : VAR next\n    \n    suite : list next\n    \n    list : OB exp CB\n    \n    list : OB suite CB\n    \n    next : COMA suite\n    \n    next : \n    \n    equality : exp EQUAL exp\n    \n    following : COMA fact following \n    \n    following : \n    \n    conclusion : transition\n    \n    exp : NAME OP exp CP\n    \n    exp : exp more\n    \n    exp : NUM\n    \n    exp : NAME\n    \n    exp : VAR\n    \n    more : COMA exp more\n    \n    more : \n    '
     
-_lr_action_items = {'NAME':([0,6,7,],[3,3,3,]),'NUM':([0,6,7,],[4,4,4,]),'$end':([1,2,4,5,8,10,11,],[0,-1,-4,-3,-6,-3,-2,]),'COMA':([2,4,5,8,9,10,11,],[6,-4,-3,6,6,-3,-2,]),'OP':([3,],[7,]),'CP':([4,5,8,9,10,11,],[-4,-3,-6,11,-3,-2,]),}
+_lr_action_items = {'NAME':([0,7,8,],[3,3,3,]),'NUM':([0,7,8,],[4,4,4,]),'VAR':([0,7,8,],[5,5,5,]),'$end':([1,2,3,4,5,6,9,11,12,],[0,-1,-24,-23,-25,-22,-27,-22,-21,]),'COMA':([2,3,4,5,6,9,10,11,12,],[7,-24,-23,-25,-22,7,7,-22,-21,]),'OP':([3,],[8,]),'CP':([3,4,5,6,9,10,11,12,],[-24,-23,-25,-22,-27,12,-22,-21,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'calc':([0,],[1,]),'exp':([0,6,7,],[2,8,9,]),'more':([2,8,9,],[5,10,5,]),}
+_lr_goto_items = {'calc':([0,],[1,]),'exp':([0,7,8,],[2,9,10,]),'more':([2,9,10,],[6,11,6,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -27,10 +27,31 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> calc","S'",1,None,None,None),
-  ('calc -> exp','calc',1,'p_calc','compile.py',52),
-  ('exp -> NAME OP exp CP','exp',4,'p_exp_operator','compile.py',58),
-  ('exp -> exp more','exp',2,'p_exp_more','compile.py',66),
-  ('exp -> NUM','exp',1,'p_exp_int','compile.py',72),
-  ('more -> COMA exp more','more',3,'p_more_exp','compile.py',78),
-  ('more -> COMA exp','more',2,'p_more_empty','compile.py',84),
+  ('calc -> exp','calc',1,'p_calc','compile.py',80),
+  ('premises -> fact following','premises',2,'p_exp_premisses','compile.py',86),
+  ('fact -> transition','fact',1,'p_exp_fact1','compile.py',92),
+  ('fact -> equality','fact',1,'p_exp_fact2','compile.py',98),
+  ('transition -> term MINUS SUP term','transition',4,'p_exp_transition','compile.py',104),
+  ('term -> exp','term',1,'p_exp_term1','compile.py',110),
+  ('term -> state','term',1,'p_exp_term2','compile.py',116),
+  ('state -> INF suite SUP','state',3,'p_exp_state','compile.py',122),
+  ('suite -> exp next','suite',2,'p_exp_suite1','compile.py',128),
+  ('suite -> NAME next','suite',2,'p_exp_suite2','compile.py',134),
+  ('suite -> VAR next','suite',2,'p_exp_suite3','compile.py',140),
+  ('suite -> list next','suite',2,'p_exp_suite4','compile.py',146),
+  ('list -> OB exp CB','list',3,'p_exp_list1','compile.py',152),
+  ('list -> OB suite CB','list',3,'p_exp_list2','compile.py',158),
+  ('next -> COMA suite','next',2,'p_exp_next1','compile.py',164),
+  ('next -> <empty>','next',0,'p_exp_next2','compile.py',170),
+  ('equality -> exp EQUAL exp','equality',3,'p_exp_equality','compile.py',176),
+  ('following -> COMA fact following','following',3,'p_exp_following1','compile.py',182),
+  ('following -> <empty>','following',0,'p_exp_following2','compile.py',188),
+  ('conclusion -> transition','conclusion',1,'p_exp_conclusion','compile.py',194),
+  ('exp -> NAME OP exp CP','exp',4,'p_exp_operator','compile.py',200),
+  ('exp -> exp more','exp',2,'p_exp_more','compile.py',206),
+  ('exp -> NUM','exp',1,'p_exp_int','compile.py',212),
+  ('exp -> NAME','exp',1,'p_exp_name','compile.py',218),
+  ('exp -> VAR','exp',1,'p_exp_var','compile.py',224),
+  ('more -> COMA exp more','more',3,'p_more_exp','compile.py',230),
+  ('more -> <empty>','more',0,'p_more_empty','compile.py',236),
 ]

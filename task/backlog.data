@@ -112,3 +112,4 @@
 {"description":"TP3 TI","due":"20210323T070000Z","entry":"20210318T162225Z","modified":"20210318T162225Z","status":"pending","uuid":"fb1bf50c-cefe-4a7b-b373-ef740ad2f728"}
 {"description":"TP8 IN","due":"20210325T070000Z","entry":"20210318T162250Z","modified":"20210318T162250Z","status":"pending","uuid":"db9e5b42-11a1-4c6a-ab33-b63b587d7e09"}
 {"description":"TP1 DM","due":"20210329T060000Z","entry":"20210318T162313Z","modified":"20210318T162313Z","status":"pending","uuid":"6a5efe32-ab0e-4382-a931-d7975c8ed240"}
+{"description":"tp3 coo","due":"20210318T070000Z","end":"20210324T081042Z","entry":"20210314T193141Z","modified":"20210324T081042Z","status":"completed","uuid":"02cc6672-4cfa-4917-9253-0a1b51a272ea"}

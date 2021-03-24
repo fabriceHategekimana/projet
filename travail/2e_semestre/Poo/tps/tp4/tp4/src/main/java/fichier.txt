@@ -1,0 +1,5 @@
+name: Lancelot
+maxHP: 100
+belowType: leather
+belowPhyProt: 20
+belowMagicalProt: 0

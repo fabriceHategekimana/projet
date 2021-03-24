@@ -1,0 +1,20 @@
+ch/unige/cui/rpg/Quest.java
+ ch.unige.cui.rpg.Quest
+ch/unige/cui/rpg/ProtectionStack.java
+ ch.unige.cui.rpg.ProtectionStack
+ch/unige/cui/rpg/VesteEnCuir.java
+ ch.unige.cui.rpg.VesteEnCuir
+Game.java
+ Game
+ch/unige/cui/rpg/Armure.java
+ ch.unige.cui.rpg.Armure
+ch/unige/cui/rpg/Damage.java
+ ch.unige.cui.rpg.Damage
+ch/unige/cui/rpg/CotteDeMaille.java
+ ch.unige.cui.rpg.CotteDeMaille
+ch/unige/cui/rpg/Equipement.java
+ ch.unige.cui.rpg.Equipement
+ch/unige/cui/rpg/Protection.java
+ ch.unige.cui.rpg.Protection
+ch/unige/cui/rpg/Character.java
+ ch.unige.cui.rpg.Character

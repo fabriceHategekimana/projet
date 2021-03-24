@@ -58,8 +58,7 @@ def p_exp_operator(p):
     exp : NAME OP exp CP
     '''
     mt= tuple(p[3])
-    print("tuple: ", mt)
-    p[0] = [func(function_dict[p[1]], mt)]
+    p[0] = func(function_dict[p[1]], mt)
 
 def p_exp_more(p):
     '''

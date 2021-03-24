@@ -1,4 +1,7 @@
+----
+
 # Motivation: 
+
 **Ce que nous voulons:**
 
 	- Étude de langage
@@ -24,63 +27,7 @@
 
 ----
 
-# Structure du langage
-
-## En construction...
-![en_construction](images/en_construction.png)
-
-----
-
-# Sémantique sur les types 
-
-## Signature
-$$ \Sigma = <S,F> $$
-Depuis sigma on peut dériver l'ensemble T_{sigma} qui est l'ensemble des termes généré par Sigma.
-
-----
-
-# Syntaxe
-
-## Typage
-```json
-    true[[empty],[bool]].
-    not[[bool],[bool]].
-    and[[bool,bool],[bool]].
-```
-
-## Traduction
-```bash
-	$ true;; => ['bool']
-	$ false;; => ['bool']
-	$ and(_,_);; => ['bool']
-```
-
-## Programme
-```json
-P= { inst1;;inst2;;...;;instn }
-```
-
-----
-
-# Strucutre du domaine Sémantique
-
-## Sémantique sur les valeurs de retour
-	- arithmétique
-	- langage plus complexe
-
-## Etat du système
-```javascript
-State(e1,e2,...,en)
-```
-
-## Transition
-```javascript
-Transition(State(...),inst) => State(...)
-```
-
-----
-
-# Syntaxe côté utilisateur
+# Syntaxe State (du domaine sémantique)
 
 ## State
 ```sql
@@ -101,48 +48,124 @@ Transition(State(...),inst) => State(...)
 ```javascript
 e1 => i1,...,in => in -- <e1,...,en,inst> => <i1,...,in>
 ```
-	
-----
-
-# Définition implicite
-
-![definition_implicite](images/definition_implicite.png)
 
 ----
 
-# Limitations(1)
+# Actuellement
 
-## Structure de données:
-```javascript
-node(leaf,node(node(leaf,leaf),leaf)) => tree
+## reconnaissance
+- grammaire
+- parser
+
+## évaluation
+- deuxième parser
+- algorithme principal
+
+----
+
+# Problèmes
+
+## évaluation de règles
+	- union
+	- récursivité
+
+----
+
+# Entraînement
+
+## Langage plus simple
+	- inspiré de la logique des prédicats
+	- inspiré de prolog
+
+## évaluation simplifiée
+	- faits simples
+	- règles simple
+
+----
+
+# Qu'est ce qu'on peut faire?
+
+1. Créer des faits
+2. Poser des questions
+3. Créer des règles
+
+----
+
+# Syntaxe du LS faits
+
+## prédicats à deux expressions
+	[sujet] [lien] [verbe]
+
+## exemple
+Pour dire "Socrate est un homme":  
+```bash
+|normal> Socrate est homme
 ```
 
-## Liste
-```javascript
-[] => list
-list(a,list(b,list(c,d)) => list
-[a,b,c,d] => list
-```
 ----
 
-# Limitations(2)
+# Syntaxe du LS requête(1)
 
-## Exercice 5
-![](images/definition_python.png){ width=40% }
+## principe
+Même structure que les faits mais avec l'utilisation de variables
 
-## Traduction
-```javascript
-modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
-```
-
-## Comment définir modify?
-Injection python?
+## variables réservées
+A, B, C
+Pas plus de `deux` variables par fait.
 
 ----
 
+# Syntaxe du LS requête(2)
+
+## Cas 1
+check **A** est homme = "**Qui** est un homme?"
+
+## Cas 2
+check Socrate **A** homme = "**Quel relation** Socrate a avec 'homme'?"
+
+## Cas 3
+check Socrate est **A** = "**Qu'est-ce qu**'est Socrate?"
+
+----
+
+# Autres questions: 2 variables
+## Cas 4
+check **A B** homme = "**Qu'est-ce qui est relier à **'homme'?"
+
+## Cas 5
+check Socrate **A B** = "**Qu'est ce qu'on dit sur** Socrate?"
+
+## Cas 6
+check **A** est **B** = "**Qu'est-ce qui** 'est' **quoi?**"
+
+----
+
+# Syntaxe LS règles
+
+## Syntax
+add `if` [conditions] `then` [conclusions]
+
+## exemple
+Pour donner la règle "Tout les hommes sont mortels":  
+```bash
+	|normal> add if A est homme then A est mortel
+```
+
+----
+
+# Actuellement(1)
+
+![arbre_généalogique](images/arbre_généalogique.png)
+
+----
+
+# Actuellement(2)
+
+![type_pokemon](images/type_pokemon.png)
+
+----
 
 # Interface (visualisation par graphe)
-
 
 ![graphe](images/graphe.png)
 
