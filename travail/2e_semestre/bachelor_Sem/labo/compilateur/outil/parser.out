@@ -1,0 +1,172 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> calc
+Rule 1     calc -> exp
+Rule 2     exp -> NAME OP exp CP
+Rule 3     exp -> exp more
+Rule 4     exp -> NUM
+Rule 5     more -> COMA exp more
+Rule 6     more -> COMA exp
+
+Terminals, with rules where they appear
+
+COMA                 : 5 6
+CP                   : 2
+NAME                 : 2
+NUM                  : 4
+OP                   : 2
+error                : 
+
+Nonterminals, with rules where they appear
+
+calc                 : 0
+exp                  : 1 2 3 5 6
+more                 : 3 5
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . calc
+    (1) calc -> . exp
+    (2) exp -> . NAME OP exp CP
+    (3) exp -> . exp more
+    (4) exp -> . NUM
+
+    NAME            shift and go to state 3
+    NUM             shift and go to state 4
+
+    calc                           shift and go to state 1
+    exp                            shift and go to state 2
+
+state 1
+
+    (0) S' -> calc .
+
+
+
+state 2
+
+    (1) calc -> exp .
+    (3) exp -> exp . more
+    (5) more -> . COMA exp more
+    (6) more -> . COMA exp
+
+    $end            reduce using rule 1 (calc -> exp .)
+    COMA            shift and go to state 6
+
+    more                           shift and go to state 5
+
+state 3
+
+    (2) exp -> NAME . OP exp CP
+
+    OP              shift and go to state 7
+
+
+state 4
+
+    (4) exp -> NUM .
+
+    COMA            reduce using rule 4 (exp -> NUM .)
+    $end            reduce using rule 4 (exp -> NUM .)
+    CP              reduce using rule 4 (exp -> NUM .)
+
+
+state 5
+
+    (3) exp -> exp more .
+
+    COMA            reduce using rule 3 (exp -> exp more .)
+    $end            reduce using rule 3 (exp -> exp more .)
+    CP              reduce using rule 3 (exp -> exp more .)
+
+
+state 6
+
+    (5) more -> COMA . exp more
+    (6) more -> COMA . exp
+    (2) exp -> . NAME OP exp CP
+    (3) exp -> . exp more
+    (4) exp -> . NUM
+
+    NAME            shift and go to state 3
+    NUM             shift and go to state 4
+
+    exp                            shift and go to state 8
+
+state 7
+
+    (2) exp -> NAME OP . exp CP
+    (2) exp -> . NAME OP exp CP
+    (3) exp -> . exp more
+    (4) exp -> . NUM
+
+    NAME            shift and go to state 3
+    NUM             shift and go to state 4
+
+    exp                            shift and go to state 9
+
+state 8
+
+    (5) more -> COMA exp . more
+    (6) more -> COMA exp .
+    (3) exp -> exp . more
+    (5) more -> . COMA exp more
+    (6) more -> . COMA exp
+
+  ! shift/reduce conflict for COMA resolved as shift
+    $end            reduce using rule 6 (more -> COMA exp .)
+    CP              reduce using rule 6 (more -> COMA exp .)
+    COMA            shift and go to state 6
+
+  ! COMA            [ reduce using rule 6 (more -> COMA exp .) ]
+
+    more                           shift and go to state 10
+
+state 9
+
+    (2) exp -> NAME OP exp . CP
+    (3) exp -> exp . more
+    (5) more -> . COMA exp more
+    (6) more -> . COMA exp
+
+    CP              shift and go to state 11
+    COMA            shift and go to state 6
+
+    more                           shift and go to state 5
+
+state 10
+
+    (5) more -> COMA exp more .
+    (3) exp -> exp more .
+
+  ! reduce/reduce conflict for COMA resolved using rule 3 (exp -> exp more .)
+  ! reduce/reduce conflict for $end resolved using rule 3 (exp -> exp more .)
+  ! reduce/reduce conflict for CP resolved using rule 3 (exp -> exp more .)
+    COMA            reduce using rule 3 (exp -> exp more .)
+    $end            reduce using rule 3 (exp -> exp more .)
+    CP              reduce using rule 3 (exp -> exp more .)
+
+  ! COMA            [ reduce using rule 5 (more -> COMA exp more .) ]
+  ! $end            [ reduce using rule 5 (more -> COMA exp more .) ]
+  ! CP              [ reduce using rule 5 (more -> COMA exp more .) ]
+
+
+state 11
+
+    (2) exp -> NAME OP exp CP .
+
+    COMA            reduce using rule 2 (exp -> NAME OP exp CP .)
+    $end            reduce using rule 2 (exp -> NAME OP exp CP .)
+    CP              reduce using rule 2 (exp -> NAME OP exp CP .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for COMA in state 8 resolved as shift
+WARNING: reduce/reduce conflict in state 10 resolved using rule (exp -> exp more)
+WARNING: rejected rule (more -> COMA exp more) in state 10
+WARNING: Rule (more -> COMA exp more) is never reduced
