@@ -6,6 +6,7 @@ from module_db import *
 from module_propagation import *
 
 typeTable= {}
+VALUES= []
 d= Data()
 
 # _                       
