@@ -1,0 +1,623 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> calc
+Rule 1     calc -> exp
+Rule 2     exp -> ADD modify
+Rule 3     exp -> DELETE fact2
+Rule 4     exp -> DELETE RULES numlist
+Rule 5     numlist -> NUM numlist
+Rule 6     numlist -> <empty>
+Rule 7     exp -> CHECK logalg
+Rule 8     exp -> DISPLAY logalg
+Rule 9     exp -> CHECK RULES
+Rule 10    exp -> CHECK LINKS
+Rule 11    exp -> CHECK NODES
+Rule 12    modify -> fact
+Rule 13    modify -> rule
+Rule 14    fact -> ENT ENT ENT
+Rule 15    rule -> IF logalg2 THEN conj2
+Rule 16    logalg2 -> fact3 more2
+Rule 17    logalg -> fact2 more
+Rule 18    more -> op fact2 more
+Rule 19    more2 -> op2 fact3 more2
+Rule 20    more -> <empty>
+Rule 21    more2 -> <empty>
+Rule 22    op -> AND
+Rule 23    op -> OR
+Rule 24    op2 -> AND
+Rule 25    op2 -> OR
+Rule 26    conj2 -> fact3 moreconj2
+Rule 27    moreconj2 -> AND fact3 moreconj2
+Rule 28    moreconj2 -> <empty>
+Rule 29    fact2 -> el el el
+Rule 30    fact3 -> el el el
+Rule 31    el -> ENT
+Rule 32    el -> VAR
+
+Terminals, with rules where they appear
+
+ADD                  : 2
+AND                  : 22 24 27
+CHECK                : 7 9 10 11
+DELETE               : 3 4
+DISPLAY              : 8
+ENT                  : 14 14 14 31
+IF                   : 15
+LINKS                : 10
+NODES                : 11
+NUM                  : 5
+OR                   : 23 25
+RULES                : 4 9
+THEN                 : 15
+VAR                  : 32
+error                : 
+
+Nonterminals, with rules where they appear
+
+calc                 : 0
+conj2                : 15
+el                   : 29 29 29 30 30 30
+exp                  : 1
+fact                 : 12
+fact2                : 3 17 18
+fact3                : 16 19 26 27
+logalg               : 7 8
+logalg2              : 15
+modify               : 2
+more                 : 17 18
+more2                : 16 19
+moreconj2            : 26 27
+numlist              : 4 5
+op                   : 18
+op2                  : 19
+rule                 : 13
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . calc
+    (1) calc -> . exp
+    (2) exp -> . ADD modify
+    (3) exp -> . DELETE fact2
+    (4) exp -> . DELETE RULES numlist
+    (7) exp -> . CHECK logalg
+    (8) exp -> . DISPLAY logalg
+    (9) exp -> . CHECK RULES
+    (10) exp -> . CHECK LINKS
+    (11) exp -> . CHECK NODES
+
+    ADD             shift and go to state 3
+    DELETE          shift and go to state 4
+    CHECK           shift and go to state 5
+    DISPLAY         shift and go to state 6
+
+    calc                           shift and go to state 1
+    exp                            shift and go to state 2
+
+state 1
+
+    (0) S' -> calc .
+
+
+
+state 2
+
+    (1) calc -> exp .
+
+    $end            reduce using rule 1 (calc -> exp .)
+
+
+state 3
+
+    (2) exp -> ADD . modify
+    (12) modify -> . fact
+    (13) modify -> . rule
+    (14) fact -> . ENT ENT ENT
+    (15) rule -> . IF logalg2 THEN conj2
+
+    ENT             shift and go to state 10
+    IF              shift and go to state 11
+
+    modify                         shift and go to state 7
+    fact                           shift and go to state 8
+    rule                           shift and go to state 9
+
+state 4
+
+    (3) exp -> DELETE . fact2
+    (4) exp -> DELETE . RULES numlist
+    (29) fact2 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    RULES           shift and go to state 13
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    fact2                          shift and go to state 12
+    el                             shift and go to state 14
+
+state 5
+
+    (7) exp -> CHECK . logalg
+    (9) exp -> CHECK . RULES
+    (10) exp -> CHECK . LINKS
+    (11) exp -> CHECK . NODES
+    (17) logalg -> . fact2 more
+    (29) fact2 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    RULES           shift and go to state 18
+    LINKS           shift and go to state 19
+    NODES           shift and go to state 20
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    logalg                         shift and go to state 17
+    fact2                          shift and go to state 21
+    el                             shift and go to state 14
+
+state 6
+
+    (8) exp -> DISPLAY . logalg
+    (17) logalg -> . fact2 more
+    (29) fact2 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    logalg                         shift and go to state 22
+    fact2                          shift and go to state 21
+    el                             shift and go to state 14
+
+state 7
+
+    (2) exp -> ADD modify .
+
+    $end            reduce using rule 2 (exp -> ADD modify .)
+
+
+state 8
+
+    (12) modify -> fact .
+
+    $end            reduce using rule 12 (modify -> fact .)
+
+
+state 9
+
+    (13) modify -> rule .
+
+    $end            reduce using rule 13 (modify -> rule .)
+
+
+state 10
+
+    (14) fact -> ENT . ENT ENT
+
+    ENT             shift and go to state 23
+
+
+state 11
+
+    (15) rule -> IF . logalg2 THEN conj2
+    (16) logalg2 -> . fact3 more2
+    (30) fact3 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    logalg2                        shift and go to state 24
+    fact3                          shift and go to state 25
+    el                             shift and go to state 26
+
+state 12
+
+    (3) exp -> DELETE fact2 .
+
+    $end            reduce using rule 3 (exp -> DELETE fact2 .)
+
+
+state 13
+
+    (4) exp -> DELETE RULES . numlist
+    (5) numlist -> . NUM numlist
+    (6) numlist -> .
+
+    NUM             shift and go to state 28
+    $end            reduce using rule 6 (numlist -> .)
+
+    numlist                        shift and go to state 27
+
+state 14
+
+    (29) fact2 -> el . el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    el                             shift and go to state 29
+
+state 15
+
+    (31) el -> ENT .
+
+    ENT             reduce using rule 31 (el -> ENT .)
+    VAR             reduce using rule 31 (el -> ENT .)
+    $end            reduce using rule 31 (el -> ENT .)
+    AND             reduce using rule 31 (el -> ENT .)
+    OR              reduce using rule 31 (el -> ENT .)
+    THEN            reduce using rule 31 (el -> ENT .)
+
+
+state 16
+
+    (32) el -> VAR .
+
+    ENT             reduce using rule 32 (el -> VAR .)
+    VAR             reduce using rule 32 (el -> VAR .)
+    $end            reduce using rule 32 (el -> VAR .)
+    AND             reduce using rule 32 (el -> VAR .)
+    OR              reduce using rule 32 (el -> VAR .)
+    THEN            reduce using rule 32 (el -> VAR .)
+
+
+state 17
+
+    (7) exp -> CHECK logalg .
+
+    $end            reduce using rule 7 (exp -> CHECK logalg .)
+
+
+state 18
+
+    (9) exp -> CHECK RULES .
+
+    $end            reduce using rule 9 (exp -> CHECK RULES .)
+
+
+state 19
+
+    (10) exp -> CHECK LINKS .
+
+    $end            reduce using rule 10 (exp -> CHECK LINKS .)
+
+
+state 20
+
+    (11) exp -> CHECK NODES .
+
+    $end            reduce using rule 11 (exp -> CHECK NODES .)
+
+
+state 21
+
+    (17) logalg -> fact2 . more
+    (18) more -> . op fact2 more
+    (20) more -> .
+    (22) op -> . AND
+    (23) op -> . OR
+
+    $end            reduce using rule 20 (more -> .)
+    AND             shift and go to state 32
+    OR              shift and go to state 33
+
+    more                           shift and go to state 30
+    op                             shift and go to state 31
+
+state 22
+
+    (8) exp -> DISPLAY logalg .
+
+    $end            reduce using rule 8 (exp -> DISPLAY logalg .)
+
+
+state 23
+
+    (14) fact -> ENT ENT . ENT
+
+    ENT             shift and go to state 34
+
+
+state 24
+
+    (15) rule -> IF logalg2 . THEN conj2
+
+    THEN            shift and go to state 35
+
+
+state 25
+
+    (16) logalg2 -> fact3 . more2
+    (19) more2 -> . op2 fact3 more2
+    (21) more2 -> .
+    (24) op2 -> . AND
+    (25) op2 -> . OR
+
+    THEN            reduce using rule 21 (more2 -> .)
+    AND             shift and go to state 38
+    OR              shift and go to state 39
+
+    more2                          shift and go to state 36
+    op2                            shift and go to state 37
+
+state 26
+
+    (30) fact3 -> el . el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    el                             shift and go to state 40
+
+state 27
+
+    (4) exp -> DELETE RULES numlist .
+
+    $end            reduce using rule 4 (exp -> DELETE RULES numlist .)
+
+
+state 28
+
+    (5) numlist -> NUM . numlist
+    (5) numlist -> . NUM numlist
+    (6) numlist -> .
+
+    NUM             shift and go to state 28
+    $end            reduce using rule 6 (numlist -> .)
+
+    numlist                        shift and go to state 41
+
+state 29
+
+    (29) fact2 -> el el . el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    el                             shift and go to state 42
+
+state 30
+
+    (17) logalg -> fact2 more .
+
+    $end            reduce using rule 17 (logalg -> fact2 more .)
+
+
+state 31
+
+    (18) more -> op . fact2 more
+    (29) fact2 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    fact2                          shift and go to state 43
+    el                             shift and go to state 14
+
+state 32
+
+    (22) op -> AND .
+
+    ENT             reduce using rule 22 (op -> AND .)
+    VAR             reduce using rule 22 (op -> AND .)
+
+
+state 33
+
+    (23) op -> OR .
+
+    ENT             reduce using rule 23 (op -> OR .)
+    VAR             reduce using rule 23 (op -> OR .)
+
+
+state 34
+
+    (14) fact -> ENT ENT ENT .
+
+    $end            reduce using rule 14 (fact -> ENT ENT ENT .)
+
+
+state 35
+
+    (15) rule -> IF logalg2 THEN . conj2
+    (26) conj2 -> . fact3 moreconj2
+    (30) fact3 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    conj2                          shift and go to state 44
+    fact3                          shift and go to state 45
+    el                             shift and go to state 26
+
+state 36
+
+    (16) logalg2 -> fact3 more2 .
+
+    THEN            reduce using rule 16 (logalg2 -> fact3 more2 .)
+
+
+state 37
+
+    (19) more2 -> op2 . fact3 more2
+    (30) fact3 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    fact3                          shift and go to state 46
+    el                             shift and go to state 26
+
+state 38
+
+    (24) op2 -> AND .
+
+    ENT             reduce using rule 24 (op2 -> AND .)
+    VAR             reduce using rule 24 (op2 -> AND .)
+
+
+state 39
+
+    (25) op2 -> OR .
+
+    ENT             reduce using rule 25 (op2 -> OR .)
+    VAR             reduce using rule 25 (op2 -> OR .)
+
+
+state 40
+
+    (30) fact3 -> el el . el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    el                             shift and go to state 47
+
+state 41
+
+    (5) numlist -> NUM numlist .
+
+    $end            reduce using rule 5 (numlist -> NUM numlist .)
+
+
+state 42
+
+    (29) fact2 -> el el el .
+
+    $end            reduce using rule 29 (fact2 -> el el el .)
+    AND             reduce using rule 29 (fact2 -> el el el .)
+    OR              reduce using rule 29 (fact2 -> el el el .)
+
+
+state 43
+
+    (18) more -> op fact2 . more
+    (18) more -> . op fact2 more
+    (20) more -> .
+    (22) op -> . AND
+    (23) op -> . OR
+
+    $end            reduce using rule 20 (more -> .)
+    AND             shift and go to state 32
+    OR              shift and go to state 33
+
+    op                             shift and go to state 31
+    more                           shift and go to state 48
+
+state 44
+
+    (15) rule -> IF logalg2 THEN conj2 .
+
+    $end            reduce using rule 15 (rule -> IF logalg2 THEN conj2 .)
+
+
+state 45
+
+    (26) conj2 -> fact3 . moreconj2
+    (27) moreconj2 -> . AND fact3 moreconj2
+    (28) moreconj2 -> .
+
+    AND             shift and go to state 50
+    $end            reduce using rule 28 (moreconj2 -> .)
+
+    moreconj2                      shift and go to state 49
+
+state 46
+
+    (19) more2 -> op2 fact3 . more2
+    (19) more2 -> . op2 fact3 more2
+    (21) more2 -> .
+    (24) op2 -> . AND
+    (25) op2 -> . OR
+
+    THEN            reduce using rule 21 (more2 -> .)
+    AND             shift and go to state 38
+    OR              shift and go to state 39
+
+    op2                            shift and go to state 37
+    more2                          shift and go to state 51
+
+state 47
+
+    (30) fact3 -> el el el .
+
+    AND             reduce using rule 30 (fact3 -> el el el .)
+    OR              reduce using rule 30 (fact3 -> el el el .)
+    THEN            reduce using rule 30 (fact3 -> el el el .)
+    $end            reduce using rule 30 (fact3 -> el el el .)
+
+
+state 48
+
+    (18) more -> op fact2 more .
+
+    $end            reduce using rule 18 (more -> op fact2 more .)
+
+
+state 49
+
+    (26) conj2 -> fact3 moreconj2 .
+
+    $end            reduce using rule 26 (conj2 -> fact3 moreconj2 .)
+
+
+state 50
+
+    (27) moreconj2 -> AND . fact3 moreconj2
+    (30) fact3 -> . el el el
+    (31) el -> . ENT
+    (32) el -> . VAR
+
+    ENT             shift and go to state 15
+    VAR             shift and go to state 16
+
+    fact3                          shift and go to state 52
+    el                             shift and go to state 26
+
+state 51
+
+    (19) more2 -> op2 fact3 more2 .
+
+    THEN            reduce using rule 19 (more2 -> op2 fact3 more2 .)
+
+
+state 52
+
+    (27) moreconj2 -> AND fact3 . moreconj2
+    (27) moreconj2 -> . AND fact3 moreconj2
+    (28) moreconj2 -> .
+
+    AND             shift and go to state 50
+    $end            reduce using rule 28 (moreconj2 -> .)
+
+    moreconj2                      shift and go to state 53
+
+state 53
+
+    (27) moreconj2 -> AND fact3 moreconj2 .
+
+    $end            reduce using rule 27 (moreconj2 -> AND fact3 moreconj2 .)
+

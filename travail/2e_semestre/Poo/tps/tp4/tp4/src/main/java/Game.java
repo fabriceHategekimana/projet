@@ -9,18 +9,13 @@ import ch.unige.cui.rpg.Protection;
 import ch.unige.cui.rpg.ProtectionStack;
 import ch.unige.cui.rpg.Quest;
 import ch.unige.cui.rpg.Armure;
+import ch.unige.cui.rpg.Bag;
+import ch.unige.cui.rpg.Potion;
+import ch.unige.cui.rpg.Sword;
 
 public class Game{
 	public static void main(String[] args){
-		//Character Lancelot = new Character("Lancelot", 20, 7);
-		//Damage p1= new Damage();
-		//p1.setDamage("feu", 1);
-		//p1.setDamage("physique", 4);
-		//CotteDeMaille cdm= new CotteDeMaille(5, p1);
-		//VesteEnCuir vec= new VesteEnCuir(2, p2);
-		//Protection[] pro= {cdm,vec};
-		//ProtectionStack ps= new ProtectionStack(pro);
-		//ps.absorb(d);
+		//Exercice 1
 		try{ 
 				Path p= Paths.get("fichier.txt");
 				List<String> data= Files.readAllLines(p);
@@ -40,11 +35,22 @@ public class Game{
 				ProtectionStack ps= new ProtectionStack(pro);
 
 				Character Lancelot = new Character(name, maxHP, ps);
-				
 		}
 		catch(Exception e){ 
 			e.printStackTrace();
 		}
+
+		//Exercice 2
+		Potion p= new Potion("Soin", "+20 HP", 4);
+		Damage swordDamage= new Damage();
+		swordDamage.setDamage("physique", 4);
+		Sword s= new Sword(swordDamage, 2);
+		Bag sacDAventurier= new Bag(25);
+
+		sacDAventurier.putEquipment(p);
+		sacDAventurier.putEquipment(s);
+		sacDAventurier.putMoney(70);
+			
 	}
 }
 

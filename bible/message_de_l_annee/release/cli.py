@@ -2,7 +2,6 @@ from cmd import Cmd
 from mycompile import *
 import re
 
-
 class MyPrompt(Cmd):
     logo= ""+"|"
     prompt = logo+'normal> '
@@ -10,7 +9,6 @@ class MyPrompt(Cmd):
     use_raw_input= False
     mode = "normal"
     p = re.compile(r'\d+')
-    COMPLETIONLIST= []
 
     def do_exit(self, inp):
         return True
@@ -22,7 +20,6 @@ class MyPrompt(Cmd):
         else:
             print("This is note a mode")
             print("Availiable modes: normal, union, sql")
-
     def do_logo(self, inp):
         self.logo= inp+"|"
         self.prompt = self.logo+'%s> ' % self.mode
@@ -41,6 +38,8 @@ class MyPrompt(Cmd):
         for r in res:
             retroPropagation(r[1:])
 
+                
+
     def repeate(self, num, tab):
         if tab[0] == "add" and len(tab) == 2:
             for i in range(1,num+1):
@@ -58,9 +57,6 @@ class MyPrompt(Cmd):
         else:
             print("ce mode ne produit rien")
 
-    def do_completion(self, inp):
-        print(self.COMPLETIONLIST)
-
     def sql(self,inp):
         try:
             print(d.sqlQuery(inp))
@@ -75,29 +71,12 @@ class MyPrompt(Cmd):
 
     def normal(self,inp):
             tab= inp.split(" ")
-            m = self.p.match(tab[0]) #si c'est un nombre
+            m = self.p.match(tab[0])
             if m:
                 i= int(m.group())
                 self.repeate(i, tab[1:])
             else:
                 parser.parse(inp)
-                self.completion()
 
-    def completion(self):
-        print("On va faire une completion avec: ", VALUES)
-        for val in VALUES:
-            for v in val:
-                if v not in completionList:
-                    self.COMPLETIONLIST.append(v)
-
-    def completedefault(self, text, line, begidx, endidx):
-        if not text:
-            completions = self.COMPLETIONLIST[:]
-        else:
-            completions = [ f
-                            for f in self.COMPLETIONLIST
-                            if f.startswith(text)
-                            ]
-        return completions
 
 MyPrompt().cmdloop()
