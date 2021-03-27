@@ -96,5 +96,5 @@ def union(exp):
         #res += union(newCommand)
     #return res
 
-#cmd="fabrice aime informatique"
+#cmd="emy A B OR A B emy"
 #print(union(cmd))

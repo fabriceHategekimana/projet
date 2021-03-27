@@ -65,17 +65,17 @@ lexer= lex.lex()
 
 #Parser
 
-#def p_calc(p):
-    #'''
-    #calc : premises MINUS MINUS conclusion
-    #'''
-    #print(" ".join(p[1:]))
-
 def p_calc(p):
     '''
-    calc : exp 
+    calc : premises MINUS MINUS conclusion
     '''
     print(" ".join(p[1:]))
+
+#def p_calc(p):
+    #'''
+    #calc : exp 
+    #'''
+    #print(" ".join(p[1:]))
 
 def p_exp_premisses(p):
     '''
@@ -236,7 +236,7 @@ def p_more_empty(p):
 def p_error(p):
     print("Error: ", p)
 
-parser= yacc.yacc()
+parser= yacc.yacc(start='calc')
 
 #s="plus(1,2) = element -- <d,empty> -> <d>"
 #s="plus(1,2)"

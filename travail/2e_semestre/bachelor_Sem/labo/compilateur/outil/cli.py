@@ -10,6 +10,7 @@ class MyPrompt(Cmd):
         return True
 
     def default(self, inp):
+        #parser.parse(inp,debug=True)
         parser.parse(inp)
 
 

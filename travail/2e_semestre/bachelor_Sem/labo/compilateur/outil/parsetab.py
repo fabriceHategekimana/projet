@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'AND CB COMA CP EQUAL INF MINUS NAME NUM OB OP SUP VAR\n    calc : exp \n    \n    premises : fact following\n    \n    fact : transition\n    \n    fact : equality\n    \n    transition : term MINUS SUP term\n    \n    term : exp\n    \n    term : state\n    \n    state : INF suite SUP\n    \n    suite : exp next\n    \n    suite : NAME next\n    \n    suite : VAR next\n    \n    suite : list next\n    \n    list : OB exp CB\n    \n    list : OB suite CB\n    \n    next : COMA suite\n    \n    next : \n    \n    equality : exp EQUAL exp\n    \n    following : COMA fact following \n    \n    following : \n    \n    conclusion : transition\n    \n    exp : NAME OP exp CP\n    \n    exp : exp more\n    \n    exp : NUM\n    \n    exp : NAME\n    \n    exp : VAR\n    \n    more : COMA exp more\n    \n    more : \n    '
+_lr_signature = 'calcAND CB COMA CP EQUAL INF MINUS NAME NUM OB OP SUP VAR\n    calc : premises MINUS MINUS conclusion\n    \n    premises : fact following\n    \n    fact : transition\n    \n    fact : equality\n    \n    transition : term MINUS SUP term\n    \n    term : exp\n    \n    term : state\n    \n    state : INF suite SUP\n    \n    suite : exp next\n    \n    suite : NAME next\n    \n    suite : VAR next\n    \n    suite : list next\n    \n    list : OB exp CB\n    \n    list : OB suite CB\n    \n    next : COMA suite\n    \n    next : \n    \n    equality : exp EQUAL exp\n    \n    following : COMA fact following \n    \n    following : \n    \n    conclusion : transition\n    \n    exp : NAME OP exp CP\n    \n    exp : exp more\n    \n    exp : NUM\n    \n    exp : NAME\n    \n    exp : VAR\n    \n    more : COMA exp more\n    \n    more : \n    '
     
-_lr_action_items = {'NAME':([0,7,8,],[3,3,3,]),'NUM':([0,7,8,],[4,4,4,]),'VAR':([0,7,8,],[5,5,5,]),'$end':([1,2,3,4,5,6,9,11,12,],[0,-1,-24,-23,-25,-22,-27,-22,-21,]),'COMA':([2,3,4,5,6,9,10,11,12,],[7,-24,-23,-25,-22,7,7,-22,-21,]),'OP':([3,],[8,]),'CP':([3,4,5,6,9,10,11,12,],[-24,-23,-25,-22,-27,12,-22,-21,]),}
+_lr_action_items = {'NAME':([0,12,15,17,19,20,26,27,29,35,37,54,],[9,23,9,9,9,9,42,9,9,23,23,42,]),'NUM':([0,12,15,17,19,20,26,27,29,35,37,54,],[10,10,10,10,10,10,10,10,10,10,10,10,]),'VAR':([0,12,15,17,19,20,26,27,29,35,37,54,],[11,24,11,11,11,11,43,11,11,24,24,43,]),'INF':([0,15,27,29,],[12,12,12,12,]),'$end':([1,8,9,10,11,18,31,33,44,45,46,48,49,50,],[0,-7,-24,-23,-25,-22,-27,-8,-1,-20,-6,-5,-22,-21,]),'MINUS':([2,3,4,5,6,7,8,9,10,11,13,14,18,28,30,31,33,46,47,48,49,50,],[13,-19,-3,-4,16,-6,-7,-24,-23,-25,27,-2,-22,-19,-17,-27,-8,-6,-18,-5,-22,-21,]),'COMA':([3,4,5,7,8,9,10,11,18,22,23,24,25,28,30,31,32,33,40,42,43,46,48,49,50,52,53,55,56,],[15,-3,-4,19,-7,-24,-23,-25,-22,35,37,37,37,15,19,19,19,-8,54,37,37,19,-5,-22,-21,54,-13,-14,54,]),'EQUAL':([7,9,10,11,18,31,49,50,],[17,-24,-23,-25,-22,-27,-22,-21,]),'OP':([9,23,42,],[20,20,20,]),'CP':([9,10,11,18,31,32,49,50,],[-24,-23,-25,-22,-27,50,-22,-21,]),'SUP':([10,16,18,21,22,23,24,25,34,36,38,39,42,43,49,50,51,52,53,55,56,],[-23,29,-22,33,-16,-16,-16,-16,-9,-10,-11,-12,-16,-16,-22,-21,-15,-16,-13,-14,-16,]),'CB':([10,18,22,23,24,25,34,36,38,39,40,41,42,43,49,50,51,52,53,55,56,],[-23,-22,-16,-16,-16,-16,-9,-10,-11,-12,53,55,-16,-16,-22,-21,-15,-16,-13,-14,-16,]),'OB':([12,26,35,37,54,],[26,26,26,26,26,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'calc':([0,],[1,]),'exp':([0,7,8,],[2,9,10,]),'more':([2,9,10,],[6,11,6,]),}
+_lr_goto_items = {'calc':([0,],[1,]),'premises':([0,],[2,]),'fact':([0,15,],[3,28,]),'transition':([0,15,27,],[4,4,45,]),'equality':([0,15,],[5,5,]),'term':([0,15,27,29,],[6,6,6,48,]),'exp':([0,12,15,17,19,20,26,27,29,35,37,54,],[7,22,7,30,31,32,40,46,46,52,22,56,]),'state':([0,15,27,29,],[8,8,8,8,]),'following':([3,28,],[14,47,]),'more':([7,22,30,31,32,40,46,52,56,],[18,18,18,49,18,18,18,49,49,]),'suite':([12,26,35,37,54,],[21,41,51,51,51,]),'list':([12,26,35,37,54,],[25,25,25,25,25,]),'next':([22,23,24,25,40,42,43,52,56,],[34,36,38,39,34,36,38,34,34,]),'conclusion':([27,],[44,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -27,31 +27,31 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> calc","S'",1,None,None,None),
-  ('calc -> exp','calc',1,'p_calc','compile.py',80),
-  ('premises -> fact following','premises',2,'p_exp_premisses','compile.py',86),
-  ('fact -> transition','fact',1,'p_exp_fact1','compile.py',92),
-  ('fact -> equality','fact',1,'p_exp_fact2','compile.py',98),
-  ('transition -> term MINUS SUP term','transition',4,'p_exp_transition','compile.py',104),
-  ('term -> exp','term',1,'p_exp_term1','compile.py',110),
-  ('term -> state','term',1,'p_exp_term2','compile.py',116),
-  ('state -> INF suite SUP','state',3,'p_exp_state','compile.py',122),
-  ('suite -> exp next','suite',2,'p_exp_suite1','compile.py',128),
-  ('suite -> NAME next','suite',2,'p_exp_suite2','compile.py',134),
-  ('suite -> VAR next','suite',2,'p_exp_suite3','compile.py',140),
-  ('suite -> list next','suite',2,'p_exp_suite4','compile.py',146),
-  ('list -> OB exp CB','list',3,'p_exp_list1','compile.py',152),
-  ('list -> OB suite CB','list',3,'p_exp_list2','compile.py',158),
-  ('next -> COMA suite','next',2,'p_exp_next1','compile.py',164),
-  ('next -> <empty>','next',0,'p_exp_next2','compile.py',170),
-  ('equality -> exp EQUAL exp','equality',3,'p_exp_equality','compile.py',176),
-  ('following -> COMA fact following','following',3,'p_exp_following1','compile.py',182),
-  ('following -> <empty>','following',0,'p_exp_following2','compile.py',188),
-  ('conclusion -> transition','conclusion',1,'p_exp_conclusion','compile.py',194),
-  ('exp -> NAME OP exp CP','exp',4,'p_exp_operator','compile.py',200),
-  ('exp -> exp more','exp',2,'p_exp_more','compile.py',206),
-  ('exp -> NUM','exp',1,'p_exp_int','compile.py',212),
-  ('exp -> NAME','exp',1,'p_exp_name','compile.py',218),
-  ('exp -> VAR','exp',1,'p_exp_var','compile.py',224),
-  ('more -> COMA exp more','more',3,'p_more_exp','compile.py',230),
-  ('more -> <empty>','more',0,'p_more_empty','compile.py',236),
+  ('calc -> premises MINUS MINUS conclusion','calc',4,'p_calc','compile.py',70),
+  ('premises -> fact following','premises',2,'p_exp_premisses','compile.py',82),
+  ('fact -> transition','fact',1,'p_exp_fact1','compile.py',88),
+  ('fact -> equality','fact',1,'p_exp_fact2','compile.py',94),
+  ('transition -> term MINUS SUP term','transition',4,'p_exp_transition','compile.py',100),
+  ('term -> exp','term',1,'p_exp_term1','compile.py',106),
+  ('term -> state','term',1,'p_exp_term2','compile.py',112),
+  ('state -> INF suite SUP','state',3,'p_exp_state','compile.py',118),
+  ('suite -> exp next','suite',2,'p_exp_suite1','compile.py',124),
+  ('suite -> NAME next','suite',2,'p_exp_suite2','compile.py',130),
+  ('suite -> VAR next','suite',2,'p_exp_suite3','compile.py',136),
+  ('suite -> list next','suite',2,'p_exp_suite4','compile.py',142),
+  ('list -> OB exp CB','list',3,'p_exp_list1','compile.py',148),
+  ('list -> OB suite CB','list',3,'p_exp_list2','compile.py',154),
+  ('next -> COMA suite','next',2,'p_exp_next1','compile.py',160),
+  ('next -> <empty>','next',0,'p_exp_next2','compile.py',166),
+  ('equality -> exp EQUAL exp','equality',3,'p_exp_equality','compile.py',172),
+  ('following -> COMA fact following','following',3,'p_exp_following1','compile.py',178),
+  ('following -> <empty>','following',0,'p_exp_following2','compile.py',184),
+  ('conclusion -> transition','conclusion',1,'p_exp_conclusion','compile.py',190),
+  ('exp -> NAME OP exp CP','exp',4,'p_exp_operator','compile.py',196),
+  ('exp -> exp more','exp',2,'p_exp_more','compile.py',202),
+  ('exp -> NUM','exp',1,'p_exp_int','compile.py',208),
+  ('exp -> NAME','exp',1,'p_exp_name','compile.py',214),
+  ('exp -> VAR','exp',1,'p_exp_var','compile.py',220),
+  ('more -> COMA exp more','more',3,'p_more_exp','compile.py',226),
+  ('more -> <empty>','more',0,'p_more_empty','compile.py',232),
 ]
