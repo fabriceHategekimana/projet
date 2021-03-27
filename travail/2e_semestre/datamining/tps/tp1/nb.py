@@ -27,16 +27,14 @@ def train_nb(X, y):
     # Separate training points by class
     unique_y = np.unique (y)
     points_by_class = [[x for x, t in zip (X, y) if t == c] for c in unique_y]
-    print(unique_y)
-    print(points_by_class)
 
     #########################################################################
     # TODO:                                                                 #
     # compute class prior                                                   #
     #########################################################################
-
+    
+    #We get the probability of each distinct values by a division: nb_of_occurence/total_nb_of value
     prior = [len(n)/len(y) for n in points_by_class]
-    print("prior: ", prior)
 
 
 
@@ -45,8 +43,8 @@ def train_nb(X, y):
     # Estimate mean and std for each class / feature                        #
     #########################################################################
 
-    mean = []
-    std = []
+    mean = np.sum([xi*pi for xi, pi in zip(y,prior)])
+    std = np.sqrt(np.sum([((xi-mean)**2)*pi for xi, pi in zip(y,prior)]))
 
     return prior, mean, std
 
@@ -60,14 +58,14 @@ def normal_distribution(x, mean, std):
     # TODO : Compute normal distribution                                    #
     #########################################################################
 
-    #normal =
+    normal = np.random.normal(mean, std, len(x))
 
     return normal
 
 
 def predict(X, prior, mean, std):
     """
-    Using the dustributions from before, predict labels for test data (or train data) using this classifier.
+    Using the distributions from before, predict labels for test data (or train data) using this classifier.
     We predict the class of the data maximizing the likelihood or you can
      maximize the log likelihood to make it numericaly more stable.
      (This is possible since f(x)=log(x) is a monotone function)
@@ -109,14 +107,19 @@ def predict(X, prior, mean, std):
     # - hint for prediction: class having the biggest probability[argmax()] #
     #########################################################################
 
-    # posterior =
+    xUnique= np.unique(x)
+    for u in xUnique:
+        px= np.sum(u == x)
+        for t in x :
+            final.append(px*t)
+    # posterior = [x/c for x,c in zip():]
 
     # y_pred =
     return y_pred
 
 
-X= np.arange(16).reshape(4,4)
-y= np.array([2, 4, 2, 8])
+X= np.arange(25).reshape(5,5)
+y= np.array([12, 1, 1, 1, 1])
 
 
 train_nb(X,y)

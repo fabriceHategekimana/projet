@@ -1,8 +1,8 @@
 <html>
 <head>
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="app.js"></script>
 
     <style type="text/css">
@@ -25,6 +25,8 @@
 </head>
 <body ng-app="myLogic" ng-controller="textController">
 <div id="mynetwork"></div>
+
+<button>Send an HTTP POST request to a page and get the result back</button>
 
 <textarea class="myterminal" name="w3review" value="Hey">
 {{demo}}

@@ -1,16 +1,2 @@
-		// Define the module for our AngularJS application.
-		var app = angular.module( "myLogic", [] );
-		
-		app.controller("textController", function($scope){ 
-			$scope.demo="Voici du text";
-		});
+fetch('http://127.0.0.1:5000/', { method: 'POST', body: "socrate est homme" })
 
-httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
-
-
-function access(name){ 
-	old= $("textarea").text();
-    $("textarea").text(old+"\nNode "+name+" created");
-}

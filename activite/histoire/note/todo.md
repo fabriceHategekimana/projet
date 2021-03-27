@@ -1,5 +1,4 @@
-- Il y a-t-il plusieurs école
-- Quel évènement a amené la destruction de l'ancienne ville et la construction de l'underworld?
+- rechercher sur le clonage
+- Quel évènement a amené la destruction de l'ancienne ville et la construction de l'underworld? l'avènement des divinités
 - Combien d'étudiant il y a-t-il dans l'école?
-- Combien d'années d'études pour l'école?
 

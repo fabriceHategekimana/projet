@@ -5,9 +5,10 @@
 4. Expansion
 5. Découvert_du fragment
 6. Développement
-7. Division_et_conflit
+7. [Division_et_conflit](Division_et_conflit)
 8. équilibre
 9. Menace_lointaine
+
 
 ## 7. Division_et_conflit
 Les empires sont encore dans leur idéologie d'expention et de conquête de terre.
