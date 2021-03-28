@@ -1,3 +1,20 @@
+# Jérémie 1-3
+Chapitre 1:
+- consécration
+- vision: amandier bouilleoir
+
+Chapitre 2:
+- Souvenir
+- Où est l'Eternel
+- idoles
+
+Chapitre 3:
+- Prostitution
+- Israël
+- Juda
+- repentance
+
+
 LES LIVRES PROPHETIQUES
 Introduction à la prophétie biblique
 Les prophètes sont l’accomplissement de la promesse de Dieu à Moïse :
@@ -38,4 +55,6 @@ Entre la période d’Esaïe et de Jérémie se place le règne du roi Manass
 d’apostasie, puis Josias, temps de reformé, mais ensuite lent déclin spirituel
 tandis qu’appariant une nouvelle puissance Babylone. Jérémie va parler durant ce
 temps de déclin, rappelant à Dieu et annonçant la prise de Jérusalem et les 70 ans de captivités.
+
+
 

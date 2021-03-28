@@ -12,6 +12,10 @@ Personnages:
 [Tiago](Tiago)    
 Lenora
 
+Jordan
+Liberty
+Karah
+
 [Le_directeur_de_l_ecole](Le_directeur_de_l_ecole)
 
 # ÉCOLE
