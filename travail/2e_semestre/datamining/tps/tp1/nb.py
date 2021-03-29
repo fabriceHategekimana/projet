@@ -42,8 +42,10 @@ def train_nb(X, y):
     # TODO:                                                                 #
     # Estimate mean and std for each class / feature                        #
     #########################################################################
-
-    mean = np.sum([xi*pi for xi, pi in zip(y,prior)])
+    
+    mean= [np.sum(n)/len(n) for n in points_by_class]
+    print("mean: ", mean)
+    #mean = np.sum([xi*pi for xi, pi in zip(y,prior)])
     std = np.sqrt(np.sum([((xi-mean)**2)*pi for xi, pi in zip(y,prior)]))
 
     return prior, mean, std
@@ -118,8 +120,9 @@ def predict(X, prior, mean, std):
     return y_pred
 
 
-X= np.arange(25).reshape(5,5)
-y= np.array([12, 1, 1, 1, 1])
+X= np.arange(81).reshape(9,9)
+y= np.array([2, 1, 3, 3, 2, 1, 1, 3, 2])
 
+print(X)
 
-train_nb(X,y)
+#train_nb(X,y)
