@@ -112,26 +112,50 @@ def predict(X, prior, mean, std):
         for i in range(len(prior)):
             prob.append(prior[i]*np.sum(normal_distribution(xtuple, mean[i], std[i])))
         prob= np.array(prob)
-        total.append((np.where(prob == np.max(np.array(prob))))[0])
+        total.append((np.where(prob == np.max(np.array(prob))))[0][0])
 
     y_pred= np.array(total)
 
     return y_pred
 
-#X= np.arange(81).reshape(9,9)
-#y= np.array([2, 1, 3, 3, 2, 1, 1, 3, 2])
-#X= np.arange(9).reshape(3,3)
-#y= np.array([2, 3, 2])
+def train_nb2(X, y):
+    # Separate training points by class
+    unique_y = np.unique (y)
+    points_by_class = np.array([np.array([x for x, t in zip (X, y) if t == c]) for c in unique_y])
+    
+    #We get the probability of each distinct values by a division: nb_of_occurence/total_nb_of value
+    prior = np.array([len(n)/len(y) for n in points_by_class])
 
-#X= np.arange(4).reshape(2,2)
+    # Compute the probability of each instance of each column from the training set x
+    proba= []
+    # for each value of y:
+    for pbc in points_by_class:
+        tab= []
+        #for each column:
+        for i in range(pbc.shape[1]):
+            column= list(pbc[:,i])
+            unique= np.unique(column)
+            d= {}
+            for u in unique:
+                d[u]= column.count(u)/len(column)
+            tab.append(d)
+        proba.append(tab)
 
-#X= np.array([[1,2]])
-#prior= np.array([0.2,0.8])
-#mean= np.array([[1,2],[0,0]])
-#std= np.array([[0.5,0.5],[1,1]])
+    return prior, proba
 
-#print(X)
-#print(y)
+def predict2(X, prior, proba):
+    final= []
+    for xtuple in X:
+        #print(xtuple)
+        prob= []
+        for i in range(len(prior)):
+            somme= 0
+            for j in range(len(xtuple)):
+                somme += proba[i][j].get(xtuple[j], 0)
+            prob.append(prior[i]*somme/len(xtuple))
+        prob= np.array(prob)
+        #print(prob)
+        final.append((np.where(prob == np.max(prob)))[0][0])
+        
+    return final
 
-#predict(X, prior, mean, std)
-#train_nb(X,y)
