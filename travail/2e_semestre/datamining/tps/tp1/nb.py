@@ -26,7 +26,7 @@ def train_nb(X, y):
 
     # Separate training points by class
     unique_y = np.unique (y)
-    points_by_class = [[x for x, t in zip (X, y) if t == c] for c in unique_y]
+    points_by_class = np.array([np.array([x for x, t in zip (X, y) if t == c]) for c in unique_y])
 
     #########################################################################
     # TODO:                                                                 #
@@ -34,19 +34,16 @@ def train_nb(X, y):
     #########################################################################
     
     #We get the probability of each distinct values by a division: nb_of_occurence/total_nb_of value
-    prior = [len(n)/len(y) for n in points_by_class]
-
-
+    prior = np.array([len(n)/len(y) for n in points_by_class])
 
     #########################################################################
     # TODO:                                                                 #
     # Estimate mean and std for each class / feature                        #
     #########################################################################
-    
-    mean= [np.sum(n)/len(n) for n in points_by_class]
-    print("mean: ", mean)
-    #mean = np.sum([xi*pi for xi, pi in zip(y,prior)])
-    std = np.sqrt(np.sum([((xi-mean)**2)*pi for xi, pi in zip(y,prior)]))
+
+    mean= np.array([n.sum(axis=0)/len(n) for n in points_by_class])
+
+    std = np.sqrt(np.array([((xs-m)**2).sum(axis=0)/len(xs) for xs,m in zip(points_by_class,mean)]))
 
     return prior, mean, std
 
@@ -60,7 +57,7 @@ def normal_distribution(x, mean, std):
     # TODO : Compute normal distribution                                    #
     #########################################################################
 
-    normal = np.random.normal(mean, std, len(x))
+    normal= (1/std*(np.sqrt(2*np.pi))) * np.exp(-((x-mean)**2)/(2*(std**2)))
 
     return normal
 
@@ -109,20 +106,32 @@ def predict(X, prior, mean, std):
     # - hint for prediction: class having the biggest probability[argmax()] #
     #########################################################################
 
-    xUnique= np.unique(x)
-    for u in xUnique:
-        px= np.sum(u == x)
-        for t in x :
-            final.append(px*t)
-    # posterior = [x/c for x,c in zip():]
+    total= []
+    for xtuple in X:
+        prob= []
+        for i in range(len(prior)):
+            prob.append(prior[i]*np.sum(normal_distribution(xtuple, mean[i], std[i])))
+        prob= np.array(prob)
+        total.append((np.where(prob == np.max(np.array(prob))))[0])
 
-    # y_pred =
+    y_pred= np.array(total)
+
     return y_pred
 
+#X= np.arange(81).reshape(9,9)
+#y= np.array([2, 1, 3, 3, 2, 1, 1, 3, 2])
+#X= np.arange(9).reshape(3,3)
+#y= np.array([2, 3, 2])
 
-X= np.arange(81).reshape(9,9)
-y= np.array([2, 1, 3, 3, 2, 1, 1, 3, 2])
+#X= np.arange(4).reshape(2,2)
 
-print(X)
+#X= np.array([[1,2]])
+#prior= np.array([0.2,0.8])
+#mean= np.array([[1,2],[0,0]])
+#std= np.array([[0.5,0.5],[1,1]])
 
+#print(X)
+#print(y)
+
+#predict(X, prior, mean, std)
 #train_nb(X,y)
