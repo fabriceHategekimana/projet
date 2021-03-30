@@ -2,6 +2,10 @@ import ply.lex as lex
 import ply.yacc as yacc
 import sys
 
+def write(content):
+    f = open("res.txt", "w")
+    f.write(content)
+    f.close()
 
 # _                       
 #| |    _____  _____ _ __ 
@@ -10,15 +14,15 @@ import sys
 #|_____\___/_/\_\___|_|   
 
 reserved = {
-        "and" : "AND"
+        "in" : "IN",
         }
                          
 tokens = [
     'NUM',
     'OP',
     'CP',
-    'OB',
-    'CB',
+    'OSB',
+    'CSB',
     'COMA',
     'EQUAL',
     'INF',
@@ -30,8 +34,8 @@ tokens = [
 
 t_OP= r'\('
 t_CP= r'\)'
-t_OB= r'\['
-t_CB= r'\]'
+t_OSB= r'\['
+t_CSB= r'\]'
 t_COMA= r'\,'
 t_INF= r'\<'
 t_SUP= r'\>'
@@ -56,7 +60,7 @@ def t_VAR(t):
     return t
 
 def t_error(t):
-    print("Illegal characters!")
+    #print("Illegal characters!")
     t.lexer.skip(1)
 
 lexer= lex.lex()
@@ -65,129 +69,65 @@ lexer= lex.lex()
 
 #Parser
 
-def p_calc(p):
+def p_lang(p):
     '''
-    calc : premises MINUS MINUS conclusion
+    lang : premises MINUS MINUS conclusion
     '''
-    print(" ".join(p[1:]))
+    write(p[1][:-1]+" -- "+p[4])
 
-#def p_calc(p):
-    #'''
-    #calc : exp 
-    #'''
-    #print(" ".join(p[1:]))
-
-def p_exp_premisses(p):
+def p_premisses1(p):
     '''
-    premises : fact following
+    premises : statements
     '''
     p[0] = " ".join(p[1:])
 
-def p_exp_fact1(p):
+def p_premisses2(p):
     '''
-    fact : transition
-    '''
-    p[0] = p[1]
-
-def p_exp_fact2(p):
-    '''
-    fact : equality
-    '''
-    p[0] = p[1]
-
-def p_exp_transition(p):
-    '''
-    transition : term MINUS SUP term
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_term1(p):
-    '''
-    term : exp
-    '''
-    p[0] = p[1]
-
-def p_exp_term2(p):
-    '''
-    term : state
-    '''
-    p[0] = p[1]
-
-def p_exp_state(p):
-    '''
-    state : INF suite SUP
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_suite1(p):
-    '''
-    suite : exp next
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_suite2(p):
-    '''
-    suite : NAME next
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_suite3(p):
-    '''
-    suite : VAR next
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_suite4(p):
-    '''
-    suite : list next
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_list1(p):
-    '''
-    list : OB exp CB
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_list2(p):
-    '''
-    list : OB suite CB
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_next1(p):
-    '''
-    next : COMA suite
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_next2(p):
-    '''
-    next : 
+    premises : 
     '''
     p[0] = ""
 
-def p_exp_equality(p):
+def p_statements1(p):
     '''
-    equality : exp EQUAL exp
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_following1(p): #ici
-    '''
-    following : COMA fact following 
+    statements : statement more
     '''
     p[0] = " ".join(p[1:])
 
-def p_exp_following2(p):
+def p_statements2(p):
     '''
-    following : 
+    statements : 
     '''
     p[0] = ""
 
-def p_exp_conclusion(p):
+def p_more1(p):
     '''
-    conclusion : transition
+    more : COMA statement more
+    '''
+    p[0] = ";"+p[2]+p[3]
+
+def p_more2(p):
+    '''
+    more : 
+    '''
+    p[0] = ""
+
+def p_statement(p):
+    '''
+    statement : exp sym exp
+    '''
+    p[0] = " ".join(p[1:])
+
+def p_sym(p):
+    '''
+    sym : EQUAL
+        | MINUS SUP
+        | IN
+    '''
+    p[0] = "".join(p[1:])
+
+def p_conclusion(p):
+    '''
+    conclusion : statement
     '''
     p[0] = p[1]
 
@@ -199,44 +139,77 @@ def p_exp_operator(p):
 
 def p_exp_more(p):
     '''
-    exp : exp more
+    exp : exp moreexp
     '''
-    p[0] = " ".join(p[1:])
+    p[0] = p[1]+p[2]
 
 def p_exp_int(p):
     '''
     exp : NUM
+        | VAR
     '''
-    p[0] = p[1]
+    p[0] = str(p[1])
 
-def p_exp_name(p):
+def p_term(p):
     '''
-    exp : NAME
+    term : NUM
+         | VAR
+         | list
     '''
-    p[0] = p[1]
+    p[0]= str(p[1])
 
-def p_exp_var(p):
+def p_exp_list(p):
     '''
-    exp : VAR
+    exp : list
     '''
-    p[0] = p[1]
+    p[0] = str(p[1])
+
+def p_exp_list1(p):
+    '''
+    list : OSB morelist CSB
+    '''
+    p[0] = str("["+p[2]+"]")
+
+def p_exp_list2(p):
+    '''
+    morelist : term COMA morelist
+    '''
+    p[0] = str(p[1]+","+p[3])
+
+def p_exp_list3(p):
+    '''
+    morelist : term
+    '''
+    p[0] = str(p[1])
+
+def p_exp_list4(p):
+    '''
+    list : OSB CSB
+    '''
+    p[0] = "[]"
+
+def p_exp_list5(p):
+    '''
+    list : INF morelist SUP
+    '''
+    p[0] = str("["+p[2]+"]")
 
 def p_more_exp(p):
     '''
-    more : COMA exp more
+    moreexp : COMA exp moreexp
     '''
-    p[0] = " ".join(p[1:])
+    p[0] = ";"+p[2]+p[3]
 
 def p_more_empty(p):
     '''
-    more : 
+    moreexp : COMA exp
     '''
-    p[0] = ""
+    p[0] = ";"+p[2]
 
 def p_error(p):
-    print("Error: ", p)
+    write("error")
 
-parser= yacc.yacc(start='calc')
+parser= yacc.yacc(start='lang')
 
 #s="plus(1,2) = element -- <d,empty> -> <d>"
 #s="plus(1,2)"

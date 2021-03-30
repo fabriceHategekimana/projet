@@ -40,9 +40,13 @@ def train_nb(X, y):
     # TODO:                                                                 #
     # Estimate mean and std for each class / feature                        #
     #########################################################################
-
+    
+    #for each distinct value of y, we just compute the mean by doing the sum
+    #of the coresponding tuple x divided by the total number of tuples
     mean= np.array([n.sum(axis=0)/len(n) for n in points_by_class])
-
+    
+    #for the standar deviation, we just do the same as the mean but we apply (x-mean)**2
+    #for each column
     std = np.sqrt(np.array([((xs-m)**2).sum(axis=0)/len(xs) for xs,m in zip(points_by_class,mean)]))
 
     return prior, mean, std
@@ -56,7 +60,9 @@ def normal_distribution(x, mean, std):
     #########################################################################
     # TODO : Compute normal distribution                                    #
     #########################################################################
-
+    
+    #we just apply for each column the computation of the normal distributions
+    #with the given mean and standard deviation: Normal(xij, meanij, stdij)
     normal= (1/std*(np.sqrt(2*np.pi))) * np.exp(-((x-mean)**2)/(2*(std**2)))
 
     return normal
@@ -106,12 +112,19 @@ def predict(X, prior, mean, std):
     # - hint for prediction: class having the biggest probability[argmax()] #
     #########################################################################
 
+    #we define the total list tha will contain the index of the most probable y
     total= []
+    #for each x from the testing set:
     for xtuple in X:
+        #the prob list will contain the probability of each y for the given tuple
         prob= []
+        #computing the probability of each column and finally sum them and do a
+        #a multiplication by the prior of y
         for i in range(len(prior)):
             prob.append(prior[i]*np.sum(normal_distribution(xtuple, mean[i], std[i])))
+        #formating the prob table
         prob= np.array(prob)
+        #append the index of the most probable y from the prob array
         total.append((np.where(prob == np.max(np.array(prob))))[0][0])
 
     y_pred= np.array(total)
@@ -135,26 +148,35 @@ def train_nb2(X, y):
         for i in range(pbc.shape[1]):
             column= list(pbc[:,i])
             unique= np.unique(column)
+            #creating a dictionnary that will contain the probability of each values
+            #from each column
             d= {}
             for u in unique:
                 d[u]= column.count(u)/len(column)
+            #we put the dictionnary to the list
             tab.append(d)
         proba.append(tab)
 
     return prior, proba
 
 def predict2(X, prior, proba):
+    #of each x from the testing set
     final= []
+    #for each tuple in the testing set
     for xtuple in X:
-        #print(xtuple)
         prob= []
+        #for for each distinct value y
         for i in range(len(prior)):
             somme= 0
+            #compute the probability of each column
             for j in range(len(xtuple)):
+                #finally do a summation 
                 somme += proba[i][j].get(xtuple[j], 0)
+            #and multiply by the prior (divided by the number of column)
             prob.append(prior[i]*somme/len(xtuple))
+        #formating prob
         prob= np.array(prob)
-        #print(prob)
+        #put the most probable y
         final.append((np.where(prob == np.max(prob)))[0][0])
         
     return final

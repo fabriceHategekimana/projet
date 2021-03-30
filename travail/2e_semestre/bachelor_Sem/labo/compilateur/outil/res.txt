@@ -1,0 +1,1 @@
+Li = [] -- isvalid ( Li ) = True

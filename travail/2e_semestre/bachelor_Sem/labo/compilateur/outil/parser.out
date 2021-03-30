@@ -1,969 +1,666 @@
 Created by PLY version 3.11 (http://www.dabeaz.com/ply)
 
-Unused terminals:
-
-    AND
-
 Grammar
 
-Rule 0     S' -> calc
-Rule 1     calc -> premises MINUS MINUS conclusion
-Rule 2     premises -> fact following
-Rule 3     fact -> transition
-Rule 4     fact -> equality
-Rule 5     transition -> term MINUS SUP term
-Rule 6     term -> exp
-Rule 7     term -> state
-Rule 8     state -> INF suite SUP
-Rule 9     suite -> exp next
-Rule 10    suite -> NAME next
-Rule 11    suite -> VAR next
-Rule 12    suite -> list next
-Rule 13    list -> OB exp CB
-Rule 14    list -> OB suite CB
-Rule 15    next -> COMA suite
-Rule 16    next -> <empty>
-Rule 17    equality -> exp EQUAL exp
-Rule 18    following -> COMA fact following
-Rule 19    following -> <empty>
-Rule 20    conclusion -> transition
-Rule 21    exp -> NAME OP exp CP
-Rule 22    exp -> exp more
-Rule 23    exp -> NUM
-Rule 24    exp -> NAME
-Rule 25    exp -> VAR
-Rule 26    more -> COMA exp more
-Rule 27    more -> <empty>
+Rule 0     S' -> lang
+Rule 1     lang -> premises MINUS MINUS conclusion
+Rule 2     premises -> statements
+Rule 3     premises -> <empty>
+Rule 4     statements -> statement more
+Rule 5     statements -> <empty>
+Rule 6     more -> COMA statement more
+Rule 7     more -> <empty>
+Rule 8     statement -> exp sym exp
+Rule 9     sym -> EQUAL
+Rule 10    sym -> MINUS SUP
+Rule 11    sym -> IN
+Rule 12    conclusion -> statement
+Rule 13    exp -> NAME OP exp CP
+Rule 14    exp -> exp moreexp
+Rule 15    exp -> NUM
+Rule 16    exp -> VAR
+Rule 17    term -> NUM
+Rule 18    term -> VAR
+Rule 19    term -> list
+Rule 20    exp -> list
+Rule 21    list -> OSB morelist CSB
+Rule 22    morelist -> term COMA morelist
+Rule 23    morelist -> term
+Rule 24    list -> OSB CSB
+Rule 25    list -> INF morelist SUP
+Rule 26    moreexp -> COMA exp moreexp
+Rule 27    moreexp -> COMA exp
 
 Terminals, with rules where they appear
 
-AND                  : 
-CB                   : 13 14
-COMA                 : 15 18 26
-CP                   : 21
-EQUAL                : 17
-INF                  : 8
-MINUS                : 1 1 5
-NAME                 : 10 21 24
-NUM                  : 23
-OB                   : 13 14
-OP                   : 21
-SUP                  : 5 8
-VAR                  : 11 25
+COMA                 : 6 22 26 27
+CP                   : 13
+CSB                  : 21 24
+EQUAL                : 9
+IN                   : 11
+INF                  : 25
+MINUS                : 1 1 10
+NAME                 : 13
+NUM                  : 15 17
+OP                   : 13
+OSB                  : 21 24
+SUP                  : 10 25
+VAR                  : 16 18
 error                : 
 
 Nonterminals, with rules where they appear
 
-calc                 : 0
 conclusion           : 1
-equality             : 4
-exp                  : 6 9 13 17 17 21 22 26
-fact                 : 2 18
-following            : 2 18
-list                 : 12
-more                 : 22 26
-next                 : 9 10 11 12
+exp                  : 8 8 13 14 26 27
+lang                 : 0
+list                 : 19 20
+more                 : 4 6
+moreexp              : 14 26
+morelist             : 21 22 25
 premises             : 1
-state                : 7
-suite                : 8 14 15
-term                 : 5 5
-transition           : 3 20
+statement            : 4 6 12
+statements           : 2
+sym                  : 8
+term                 : 22 23
 
 Parsing method: LALR
 
 state 0
 
-    (0) S' -> . calc
-    (1) calc -> . premises MINUS MINUS conclusion
-    (2) premises -> . fact following
-    (3) fact -> . transition
-    (4) fact -> . equality
-    (5) transition -> . term MINUS SUP term
-    (17) equality -> . exp EQUAL exp
-    (6) term -> . exp
-    (7) term -> . state
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (8) state -> . INF suite SUP
+    (0) S' -> . lang
+    (1) lang -> . premises MINUS MINUS conclusion
+    (2) premises -> . statements
+    (3) premises -> .
+    (4) statements -> . statement more
+    (5) statements -> .
+    (8) statement -> . exp sym exp
+    (13) exp -> . NAME OP exp CP
+    (14) exp -> . exp moreexp
+    (15) exp -> . NUM
+    (16) exp -> . VAR
+    (20) exp -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    NAME            shift and go to state 9
-    NUM             shift and go to state 10
-    VAR             shift and go to state 11
-    INF             shift and go to state 12
+  ! reduce/reduce conflict for MINUS resolved using rule 3 (premises -> .)
+    MINUS           reduce using rule 3 (premises -> .)
+    NAME            shift and go to state 6
+    NUM             shift and go to state 7
+    VAR             shift and go to state 8
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
-    calc                           shift and go to state 1
+  ! MINUS           [ reduce using rule 5 (statements -> .) ]
+
+    lang                           shift and go to state 1
     premises                       shift and go to state 2
-    fact                           shift and go to state 3
-    transition                     shift and go to state 4
-    equality                       shift and go to state 5
-    term                           shift and go to state 6
-    exp                            shift and go to state 7
-    state                          shift and go to state 8
+    statements                     shift and go to state 3
+    statement                      shift and go to state 4
+    exp                            shift and go to state 5
+    list                           shift and go to state 9
 
 state 1
 
-    (0) S' -> calc .
+    (0) S' -> lang .
 
 
 
 state 2
 
-    (1) calc -> premises . MINUS MINUS conclusion
+    (1) lang -> premises . MINUS MINUS conclusion
 
-    MINUS           shift and go to state 13
+    MINUS           shift and go to state 12
 
 
 state 3
 
-    (2) premises -> fact . following
-    (18) following -> . COMA fact following
-    (19) following -> .
+    (2) premises -> statements .
 
-    COMA            shift and go to state 15
-    MINUS           reduce using rule 19 (following -> .)
+    MINUS           reduce using rule 2 (premises -> statements .)
 
-    following                      shift and go to state 14
 
 state 4
 
-    (3) fact -> transition .
+    (4) statements -> statement . more
+    (6) more -> . COMA statement more
+    (7) more -> .
 
-    COMA            reduce using rule 3 (fact -> transition .)
-    MINUS           reduce using rule 3 (fact -> transition .)
+    COMA            shift and go to state 14
+    MINUS           reduce using rule 7 (more -> .)
 
+    more                           shift and go to state 13
 
 state 5
 
-    (4) fact -> equality .
+    (8) statement -> exp . sym exp
+    (14) exp -> exp . moreexp
+    (9) sym -> . EQUAL
+    (10) sym -> . MINUS SUP
+    (11) sym -> . IN
+    (26) moreexp -> . COMA exp moreexp
+    (27) moreexp -> . COMA exp
 
-    COMA            reduce using rule 4 (fact -> equality .)
-    MINUS           reduce using rule 4 (fact -> equality .)
+    EQUAL           shift and go to state 17
+    MINUS           shift and go to state 18
+    IN              shift and go to state 19
+    COMA            shift and go to state 20
 
+    sym                            shift and go to state 15
+    moreexp                        shift and go to state 16
 
 state 6
 
-    (5) transition -> term . MINUS SUP term
+    (13) exp -> NAME . OP exp CP
 
-    MINUS           shift and go to state 16
+    OP              shift and go to state 21
 
 
 state 7
 
-    (17) equality -> exp . EQUAL exp
-    (6) term -> exp .
-    (22) exp -> exp . more
-    (26) more -> . COMA exp more
-    (27) more -> .
+    (15) exp -> NUM .
 
-  ! shift/reduce conflict for EQUAL resolved as shift
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for MINUS resolved using rule 6 (term -> exp .)
-    EQUAL           shift and go to state 17
-    MINUS           reduce using rule 6 (term -> exp .)
-    COMA            shift and go to state 19
+    EQUAL           reduce using rule 15 (exp -> NUM .)
+    MINUS           reduce using rule 15 (exp -> NUM .)
+    IN              reduce using rule 15 (exp -> NUM .)
+    COMA            reduce using rule 15 (exp -> NUM .)
+    $end            reduce using rule 15 (exp -> NUM .)
+    CP              reduce using rule 15 (exp -> NUM .)
 
-  ! EQUAL           [ reduce using rule 27 (more -> .) ]
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-  ! MINUS           [ reduce using rule 27 (more -> .) ]
-
-    more                           shift and go to state 18
 
 state 8
 
-    (7) term -> state .
+    (16) exp -> VAR .
 
-    MINUS           reduce using rule 7 (term -> state .)
-    COMA            reduce using rule 7 (term -> state .)
-    $end            reduce using rule 7 (term -> state .)
+    EQUAL           reduce using rule 16 (exp -> VAR .)
+    MINUS           reduce using rule 16 (exp -> VAR .)
+    IN              reduce using rule 16 (exp -> VAR .)
+    COMA            reduce using rule 16 (exp -> VAR .)
+    $end            reduce using rule 16 (exp -> VAR .)
+    CP              reduce using rule 16 (exp -> VAR .)
 
 
 state 9
 
-    (21) exp -> NAME . OP exp CP
-    (24) exp -> NAME .
+    (20) exp -> list .
 
-    OP              shift and go to state 20
-    EQUAL           reduce using rule 24 (exp -> NAME .)
-    COMA            reduce using rule 24 (exp -> NAME .)
-    MINUS           reduce using rule 24 (exp -> NAME .)
-    CP              reduce using rule 24 (exp -> NAME .)
-    $end            reduce using rule 24 (exp -> NAME .)
+    EQUAL           reduce using rule 20 (exp -> list .)
+    MINUS           reduce using rule 20 (exp -> list .)
+    IN              reduce using rule 20 (exp -> list .)
+    COMA            reduce using rule 20 (exp -> list .)
+    $end            reduce using rule 20 (exp -> list .)
+    CP              reduce using rule 20 (exp -> list .)
 
 
 state 10
 
-    (23) exp -> NUM .
+    (21) list -> OSB . morelist CSB
+    (24) list -> OSB . CSB
+    (22) morelist -> . term COMA morelist
+    (23) morelist -> . term
+    (17) term -> . NUM
+    (18) term -> . VAR
+    (19) term -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    EQUAL           reduce using rule 23 (exp -> NUM .)
-    COMA            reduce using rule 23 (exp -> NUM .)
-    MINUS           reduce using rule 23 (exp -> NUM .)
-    SUP             reduce using rule 23 (exp -> NUM .)
-    CP              reduce using rule 23 (exp -> NUM .)
-    $end            reduce using rule 23 (exp -> NUM .)
-    CB              reduce using rule 23 (exp -> NUM .)
+    CSB             shift and go to state 23
+    NUM             shift and go to state 25
+    VAR             shift and go to state 26
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
+    morelist                       shift and go to state 22
+    term                           shift and go to state 24
+    list                           shift and go to state 27
 
 state 11
 
-    (25) exp -> VAR .
+    (25) list -> INF . morelist SUP
+    (22) morelist -> . term COMA morelist
+    (23) morelist -> . term
+    (17) term -> . NUM
+    (18) term -> . VAR
+    (19) term -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    EQUAL           reduce using rule 25 (exp -> VAR .)
-    COMA            reduce using rule 25 (exp -> VAR .)
-    MINUS           reduce using rule 25 (exp -> VAR .)
-    CP              reduce using rule 25 (exp -> VAR .)
-    $end            reduce using rule 25 (exp -> VAR .)
+    NUM             shift and go to state 25
+    VAR             shift and go to state 26
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
+    morelist                       shift and go to state 28
+    term                           shift and go to state 24
+    list                           shift and go to state 27
 
 state 12
 
-    (8) state -> INF . suite SUP
-    (9) suite -> . exp next
-    (10) suite -> . NAME next
-    (11) suite -> . VAR next
-    (12) suite -> . list next
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (13) list -> . OB exp CB
-    (14) list -> . OB suite CB
+    (1) lang -> premises MINUS . MINUS conclusion
 
-    NAME            shift and go to state 23
-    VAR             shift and go to state 24
-    NUM             shift and go to state 10
-    OB              shift and go to state 26
+    MINUS           shift and go to state 29
 
-    suite                          shift and go to state 21
-    exp                            shift and go to state 22
-    list                           shift and go to state 25
 
 state 13
 
-    (1) calc -> premises MINUS . MINUS conclusion
+    (4) statements -> statement more .
 
-    MINUS           shift and go to state 27
+    MINUS           reduce using rule 4 (statements -> statement more .)
 
 
 state 14
 
-    (2) premises -> fact following .
+    (6) more -> COMA . statement more
+    (8) statement -> . exp sym exp
+    (13) exp -> . NAME OP exp CP
+    (14) exp -> . exp moreexp
+    (15) exp -> . NUM
+    (16) exp -> . VAR
+    (20) exp -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    MINUS           reduce using rule 2 (premises -> fact following .)
+    NAME            shift and go to state 6
+    NUM             shift and go to state 7
+    VAR             shift and go to state 8
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
+    statement                      shift and go to state 30
+    exp                            shift and go to state 5
+    list                           shift and go to state 9
 
 state 15
 
-    (18) following -> COMA . fact following
-    (3) fact -> . transition
-    (4) fact -> . equality
-    (5) transition -> . term MINUS SUP term
-    (17) equality -> . exp EQUAL exp
-    (6) term -> . exp
-    (7) term -> . state
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (8) state -> . INF suite SUP
+    (8) statement -> exp sym . exp
+    (13) exp -> . NAME OP exp CP
+    (14) exp -> . exp moreexp
+    (15) exp -> . NUM
+    (16) exp -> . VAR
+    (20) exp -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    NAME            shift and go to state 9
-    NUM             shift and go to state 10
-    VAR             shift and go to state 11
-    INF             shift and go to state 12
+    NAME            shift and go to state 6
+    NUM             shift and go to state 7
+    VAR             shift and go to state 8
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
-    fact                           shift and go to state 28
-    transition                     shift and go to state 4
-    equality                       shift and go to state 5
-    term                           shift and go to state 6
-    exp                            shift and go to state 7
-    state                          shift and go to state 8
+    exp                            shift and go to state 31
+    list                           shift and go to state 9
 
 state 16
 
-    (5) transition -> term MINUS . SUP term
+    (14) exp -> exp moreexp .
 
-    SUP             shift and go to state 29
+    EQUAL           reduce using rule 14 (exp -> exp moreexp .)
+    MINUS           reduce using rule 14 (exp -> exp moreexp .)
+    IN              reduce using rule 14 (exp -> exp moreexp .)
+    COMA            reduce using rule 14 (exp -> exp moreexp .)
+    $end            reduce using rule 14 (exp -> exp moreexp .)
+    CP              reduce using rule 14 (exp -> exp moreexp .)
 
 
 state 17
 
-    (17) equality -> exp EQUAL . exp
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
+    (9) sym -> EQUAL .
 
-    NAME            shift and go to state 9
-    NUM             shift and go to state 10
-    VAR             shift and go to state 11
+    NAME            reduce using rule 9 (sym -> EQUAL .)
+    NUM             reduce using rule 9 (sym -> EQUAL .)
+    VAR             reduce using rule 9 (sym -> EQUAL .)
+    OSB             reduce using rule 9 (sym -> EQUAL .)
+    INF             reduce using rule 9 (sym -> EQUAL .)
 
-    exp                            shift and go to state 30
 
 state 18
 
-    (22) exp -> exp more .
+    (10) sym -> MINUS . SUP
 
-    EQUAL           reduce using rule 22 (exp -> exp more .)
-    COMA            reduce using rule 22 (exp -> exp more .)
-    MINUS           reduce using rule 22 (exp -> exp more .)
-    SUP             reduce using rule 22 (exp -> exp more .)
-    CP              reduce using rule 22 (exp -> exp more .)
-    CB              reduce using rule 22 (exp -> exp more .)
-    $end            reduce using rule 22 (exp -> exp more .)
+    SUP             shift and go to state 32
 
 
 state 19
 
-    (26) more -> COMA . exp more
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
+    (11) sym -> IN .
 
-    NAME            shift and go to state 9
-    NUM             shift and go to state 10
-    VAR             shift and go to state 11
+    NAME            reduce using rule 11 (sym -> IN .)
+    NUM             reduce using rule 11 (sym -> IN .)
+    VAR             reduce using rule 11 (sym -> IN .)
+    OSB             reduce using rule 11 (sym -> IN .)
+    INF             reduce using rule 11 (sym -> IN .)
 
-    exp                            shift and go to state 31
 
 state 20
 
-    (21) exp -> NAME OP . exp CP
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
+    (26) moreexp -> COMA . exp moreexp
+    (27) moreexp -> COMA . exp
+    (13) exp -> . NAME OP exp CP
+    (14) exp -> . exp moreexp
+    (15) exp -> . NUM
+    (16) exp -> . VAR
+    (20) exp -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    NAME            shift and go to state 9
-    NUM             shift and go to state 10
-    VAR             shift and go to state 11
+    NAME            shift and go to state 6
+    NUM             shift and go to state 7
+    VAR             shift and go to state 8
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
-    exp                            shift and go to state 32
+    exp                            shift and go to state 33
+    list                           shift and go to state 9
 
 state 21
 
-    (8) state -> INF suite . SUP
+    (13) exp -> NAME OP . exp CP
+    (13) exp -> . NAME OP exp CP
+    (14) exp -> . exp moreexp
+    (15) exp -> . NUM
+    (16) exp -> . VAR
+    (20) exp -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    SUP             shift and go to state 33
+    NAME            shift and go to state 6
+    NUM             shift and go to state 7
+    VAR             shift and go to state 8
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
+    exp                            shift and go to state 34
+    list                           shift and go to state 9
 
 state 22
 
-    (9) suite -> exp . next
-    (22) exp -> exp . more
-    (15) next -> . COMA suite
-    (16) next -> .
-    (26) more -> . COMA exp more
-    (27) more -> .
+    (21) list -> OSB morelist . CSB
 
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for SUP resolved using rule 16 (next -> .)
-  ! reduce/reduce conflict for CB resolved using rule 16 (next -> .)
-    COMA            shift and go to state 35
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
+    CSB             shift and go to state 35
 
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-  ! SUP             [ reduce using rule 27 (more -> .) ]
-  ! CB              [ reduce using rule 27 (more -> .) ]
-
-    next                           shift and go to state 34
-    more                           shift and go to state 18
 
 state 23
 
-    (10) suite -> NAME . next
-    (21) exp -> NAME . OP exp CP
-    (24) exp -> NAME .
-    (15) next -> . COMA suite
-    (16) next -> .
+    (24) list -> OSB CSB .
 
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for SUP resolved using rule 16 (next -> .)
-  ! reduce/reduce conflict for CB resolved using rule 16 (next -> .)
-    OP              shift and go to state 20
-    COMA            shift and go to state 37
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
+    EQUAL           reduce using rule 24 (list -> OSB CSB .)
+    MINUS           reduce using rule 24 (list -> OSB CSB .)
+    IN              reduce using rule 24 (list -> OSB CSB .)
+    COMA            reduce using rule 24 (list -> OSB CSB .)
+    CSB             reduce using rule 24 (list -> OSB CSB .)
+    SUP             reduce using rule 24 (list -> OSB CSB .)
+    $end            reduce using rule 24 (list -> OSB CSB .)
+    CP              reduce using rule 24 (list -> OSB CSB .)
 
-  ! COMA            [ reduce using rule 24 (exp -> NAME .) ]
-  ! SUP             [ reduce using rule 24 (exp -> NAME .) ]
-  ! CB              [ reduce using rule 24 (exp -> NAME .) ]
-
-    next                           shift and go to state 36
 
 state 24
 
-    (11) suite -> VAR . next
-    (25) exp -> VAR .
-    (15) next -> . COMA suite
-    (16) next -> .
+    (22) morelist -> term . COMA morelist
+    (23) morelist -> term .
 
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for SUP resolved using rule 16 (next -> .)
-  ! reduce/reduce conflict for CB resolved using rule 16 (next -> .)
-    COMA            shift and go to state 37
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
+    COMA            shift and go to state 36
+    CSB             reduce using rule 23 (morelist -> term .)
+    SUP             reduce using rule 23 (morelist -> term .)
 
-  ! COMA            [ reduce using rule 25 (exp -> VAR .) ]
-  ! SUP             [ reduce using rule 25 (exp -> VAR .) ]
-  ! CB              [ reduce using rule 25 (exp -> VAR .) ]
-
-    next                           shift and go to state 38
 
 state 25
 
-    (12) suite -> list . next
-    (15) next -> . COMA suite
-    (16) next -> .
+    (17) term -> NUM .
 
-    COMA            shift and go to state 37
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
+    COMA            reduce using rule 17 (term -> NUM .)
+    CSB             reduce using rule 17 (term -> NUM .)
+    SUP             reduce using rule 17 (term -> NUM .)
 
-    next                           shift and go to state 39
 
 state 26
 
-    (13) list -> OB . exp CB
-    (14) list -> OB . suite CB
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (9) suite -> . exp next
-    (10) suite -> . NAME next
-    (11) suite -> . VAR next
-    (12) suite -> . list next
-    (13) list -> . OB exp CB
-    (14) list -> . OB suite CB
+    (18) term -> VAR .
 
-    NAME            shift and go to state 42
-    NUM             shift and go to state 10
-    VAR             shift and go to state 43
-    OB              shift and go to state 26
+    COMA            reduce using rule 18 (term -> VAR .)
+    CSB             reduce using rule 18 (term -> VAR .)
+    SUP             reduce using rule 18 (term -> VAR .)
 
-    exp                            shift and go to state 40
-    suite                          shift and go to state 41
-    list                           shift and go to state 25
 
 state 27
 
-    (1) calc -> premises MINUS MINUS . conclusion
-    (20) conclusion -> . transition
-    (5) transition -> . term MINUS SUP term
-    (6) term -> . exp
-    (7) term -> . state
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (8) state -> . INF suite SUP
+    (19) term -> list .
 
-    NAME            shift and go to state 9
-    NUM             shift and go to state 10
-    VAR             shift and go to state 11
-    INF             shift and go to state 12
+    COMA            reduce using rule 19 (term -> list .)
+    CSB             reduce using rule 19 (term -> list .)
+    SUP             reduce using rule 19 (term -> list .)
 
-    conclusion                     shift and go to state 44
-    transition                     shift and go to state 45
-    term                           shift and go to state 6
-    exp                            shift and go to state 46
-    state                          shift and go to state 8
 
 state 28
 
-    (18) following -> COMA fact . following
-    (18) following -> . COMA fact following
-    (19) following -> .
+    (25) list -> INF morelist . SUP
 
-    COMA            shift and go to state 15
-    MINUS           reduce using rule 19 (following -> .)
+    SUP             shift and go to state 37
 
-    following                      shift and go to state 47
 
 state 29
 
-    (5) transition -> term MINUS SUP . term
-    (6) term -> . exp
-    (7) term -> . state
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (8) state -> . INF suite SUP
+    (1) lang -> premises MINUS MINUS . conclusion
+    (12) conclusion -> . statement
+    (8) statement -> . exp sym exp
+    (13) exp -> . NAME OP exp CP
+    (14) exp -> . exp moreexp
+    (15) exp -> . NUM
+    (16) exp -> . VAR
+    (20) exp -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    NAME            shift and go to state 9
-    NUM             shift and go to state 10
-    VAR             shift and go to state 11
-    INF             shift and go to state 12
+    NAME            shift and go to state 6
+    NUM             shift and go to state 7
+    VAR             shift and go to state 8
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
-    term                           shift and go to state 48
-    exp                            shift and go to state 46
-    state                          shift and go to state 8
+    conclusion                     shift and go to state 38
+    statement                      shift and go to state 39
+    exp                            shift and go to state 5
+    list                           shift and go to state 9
 
 state 30
 
-    (17) equality -> exp EQUAL exp .
-    (22) exp -> exp . more
-    (26) more -> . COMA exp more
-    (27) more -> .
+    (6) more -> COMA statement . more
+    (6) more -> . COMA statement more
+    (7) more -> .
 
-  ! shift/reduce conflict for COMA resolved as shift
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for MINUS resolved using rule 17 (equality -> exp EQUAL exp .)
-    MINUS           reduce using rule 17 (equality -> exp EQUAL exp .)
-    COMA            shift and go to state 19
+    COMA            shift and go to state 14
+    MINUS           reduce using rule 7 (more -> .)
 
-  ! COMA            [ reduce using rule 17 (equality -> exp EQUAL exp .) ]
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-  ! MINUS           [ reduce using rule 27 (more -> .) ]
-
-    more                           shift and go to state 18
+    more                           shift and go to state 40
 
 state 31
 
-    (26) more -> COMA exp . more
-    (22) exp -> exp . more
-    (26) more -> . COMA exp more
-    (27) more -> .
+    (8) statement -> exp sym exp .
+    (14) exp -> exp . moreexp
+    (26) moreexp -> . COMA exp moreexp
+    (27) moreexp -> . COMA exp
 
   ! shift/reduce conflict for COMA resolved as shift
-    COMA            shift and go to state 19
-    EQUAL           reduce using rule 27 (more -> .)
-    MINUS           reduce using rule 27 (more -> .)
-    CP              reduce using rule 27 (more -> .)
-    $end            reduce using rule 27 (more -> .)
+    MINUS           reduce using rule 8 (statement -> exp sym exp .)
+    $end            reduce using rule 8 (statement -> exp sym exp .)
+    COMA            shift and go to state 20
 
-  ! COMA            [ reduce using rule 27 (more -> .) ]
+  ! COMA            [ reduce using rule 8 (statement -> exp sym exp .) ]
 
-    more                           shift and go to state 49
+    moreexp                        shift and go to state 16
 
 state 32
 
-    (21) exp -> NAME OP exp . CP
-    (22) exp -> exp . more
-    (26) more -> . COMA exp more
-    (27) more -> .
+    (10) sym -> MINUS SUP .
 
-  ! shift/reduce conflict for CP resolved as shift
-  ! shift/reduce conflict for COMA resolved as shift
-    CP              shift and go to state 50
-    COMA            shift and go to state 19
+    NAME            reduce using rule 10 (sym -> MINUS SUP .)
+    NUM             reduce using rule 10 (sym -> MINUS SUP .)
+    VAR             reduce using rule 10 (sym -> MINUS SUP .)
+    OSB             reduce using rule 10 (sym -> MINUS SUP .)
+    INF             reduce using rule 10 (sym -> MINUS SUP .)
 
-  ! CP              [ reduce using rule 27 (more -> .) ]
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-
-    more                           shift and go to state 18
 
 state 33
 
-    (8) state -> INF suite SUP .
+    (26) moreexp -> COMA exp . moreexp
+    (27) moreexp -> COMA exp .
+    (14) exp -> exp . moreexp
+    (26) moreexp -> . COMA exp moreexp
+    (27) moreexp -> . COMA exp
 
-    MINUS           reduce using rule 8 (state -> INF suite SUP .)
-    COMA            reduce using rule 8 (state -> INF suite SUP .)
-    $end            reduce using rule 8 (state -> INF suite SUP .)
+  ! shift/reduce conflict for COMA resolved as shift
+    EQUAL           reduce using rule 27 (moreexp -> COMA exp .)
+    MINUS           reduce using rule 27 (moreexp -> COMA exp .)
+    IN              reduce using rule 27 (moreexp -> COMA exp .)
+    $end            reduce using rule 27 (moreexp -> COMA exp .)
+    CP              reduce using rule 27 (moreexp -> COMA exp .)
+    COMA            shift and go to state 20
 
+  ! COMA            [ reduce using rule 27 (moreexp -> COMA exp .) ]
+
+    moreexp                        shift and go to state 41
 
 state 34
 
-    (9) suite -> exp next .
+    (13) exp -> NAME OP exp . CP
+    (14) exp -> exp . moreexp
+    (26) moreexp -> . COMA exp moreexp
+    (27) moreexp -> . COMA exp
 
-    SUP             reduce using rule 9 (suite -> exp next .)
-    CB              reduce using rule 9 (suite -> exp next .)
+    CP              shift and go to state 42
+    COMA            shift and go to state 20
 
+    moreexp                        shift and go to state 16
 
 state 35
 
-    (15) next -> COMA . suite
-    (26) more -> COMA . exp more
-    (9) suite -> . exp next
-    (10) suite -> . NAME next
-    (11) suite -> . VAR next
-    (12) suite -> . list next
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (13) list -> . OB exp CB
-    (14) list -> . OB suite CB
+    (21) list -> OSB morelist CSB .
 
-    NAME            shift and go to state 23
-    VAR             shift and go to state 24
-    NUM             shift and go to state 10
-    OB              shift and go to state 26
+    EQUAL           reduce using rule 21 (list -> OSB morelist CSB .)
+    MINUS           reduce using rule 21 (list -> OSB morelist CSB .)
+    IN              reduce using rule 21 (list -> OSB morelist CSB .)
+    COMA            reduce using rule 21 (list -> OSB morelist CSB .)
+    CSB             reduce using rule 21 (list -> OSB morelist CSB .)
+    SUP             reduce using rule 21 (list -> OSB morelist CSB .)
+    $end            reduce using rule 21 (list -> OSB morelist CSB .)
+    CP              reduce using rule 21 (list -> OSB morelist CSB .)
 
-    suite                          shift and go to state 51
-    exp                            shift and go to state 52
-    list                           shift and go to state 25
 
 state 36
 
-    (10) suite -> NAME next .
+    (22) morelist -> term COMA . morelist
+    (22) morelist -> . term COMA morelist
+    (23) morelist -> . term
+    (17) term -> . NUM
+    (18) term -> . VAR
+    (19) term -> . list
+    (21) list -> . OSB morelist CSB
+    (24) list -> . OSB CSB
+    (25) list -> . INF morelist SUP
 
-    SUP             reduce using rule 10 (suite -> NAME next .)
-    CB              reduce using rule 10 (suite -> NAME next .)
+    NUM             shift and go to state 25
+    VAR             shift and go to state 26
+    OSB             shift and go to state 10
+    INF             shift and go to state 11
 
+    term                           shift and go to state 24
+    morelist                       shift and go to state 43
+    list                           shift and go to state 27
 
 state 37
 
-    (15) next -> COMA . suite
-    (9) suite -> . exp next
-    (10) suite -> . NAME next
-    (11) suite -> . VAR next
-    (12) suite -> . list next
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (13) list -> . OB exp CB
-    (14) list -> . OB suite CB
+    (25) list -> INF morelist SUP .
 
-    NAME            shift and go to state 23
-    VAR             shift and go to state 24
-    NUM             shift and go to state 10
-    OB              shift and go to state 26
+    EQUAL           reduce using rule 25 (list -> INF morelist SUP .)
+    MINUS           reduce using rule 25 (list -> INF morelist SUP .)
+    IN              reduce using rule 25 (list -> INF morelist SUP .)
+    COMA            reduce using rule 25 (list -> INF morelist SUP .)
+    CSB             reduce using rule 25 (list -> INF morelist SUP .)
+    SUP             reduce using rule 25 (list -> INF morelist SUP .)
+    $end            reduce using rule 25 (list -> INF morelist SUP .)
+    CP              reduce using rule 25 (list -> INF morelist SUP .)
 
-    suite                          shift and go to state 51
-    exp                            shift and go to state 22
-    list                           shift and go to state 25
 
 state 38
 
-    (11) suite -> VAR next .
+    (1) lang -> premises MINUS MINUS conclusion .
 
-    SUP             reduce using rule 11 (suite -> VAR next .)
-    CB              reduce using rule 11 (suite -> VAR next .)
+    $end            reduce using rule 1 (lang -> premises MINUS MINUS conclusion .)
 
 
 state 39
 
-    (12) suite -> list next .
+    (12) conclusion -> statement .
 
-    SUP             reduce using rule 12 (suite -> list next .)
-    CB              reduce using rule 12 (suite -> list next .)
+    $end            reduce using rule 12 (conclusion -> statement .)
 
 
 state 40
 
-    (13) list -> OB exp . CB
-    (22) exp -> exp . more
-    (9) suite -> exp . next
-    (26) more -> . COMA exp more
-    (27) more -> .
-    (15) next -> . COMA suite
-    (16) next -> .
+    (6) more -> COMA statement more .
 
-  ! shift/reduce conflict for CB resolved as shift
-  ! shift/reduce conflict for COMA resolved as shift
-  ! shift/reduce conflict for CB resolved as shift
-    CB              shift and go to state 53
-    COMA            shift and go to state 54
+    MINUS           reduce using rule 6 (more -> COMA statement more .)
 
-  ! CB              [ reduce using rule 27 (more -> .) ]
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-  ! CB              [ reduce using rule 16 (next -> .) ]
-
-    more                           shift and go to state 18
-    next                           shift and go to state 34
 
 state 41
 
-    (14) list -> OB suite . CB
+    (26) moreexp -> COMA exp moreexp .
+    (14) exp -> exp moreexp .
 
-    CB              shift and go to state 55
+  ! reduce/reduce conflict for COMA resolved using rule 14 (exp -> exp moreexp .)
+  ! reduce/reduce conflict for EQUAL resolved using rule 14 (exp -> exp moreexp .)
+  ! reduce/reduce conflict for MINUS resolved using rule 14 (exp -> exp moreexp .)
+  ! reduce/reduce conflict for IN resolved using rule 14 (exp -> exp moreexp .)
+  ! reduce/reduce conflict for $end resolved using rule 14 (exp -> exp moreexp .)
+  ! reduce/reduce conflict for CP resolved using rule 14 (exp -> exp moreexp .)
+    COMA            reduce using rule 14 (exp -> exp moreexp .)
+    EQUAL           reduce using rule 14 (exp -> exp moreexp .)
+    MINUS           reduce using rule 14 (exp -> exp moreexp .)
+    IN              reduce using rule 14 (exp -> exp moreexp .)
+    $end            reduce using rule 14 (exp -> exp moreexp .)
+    CP              reduce using rule 14 (exp -> exp moreexp .)
+
+  ! EQUAL           [ reduce using rule 26 (moreexp -> COMA exp moreexp .) ]
+  ! MINUS           [ reduce using rule 26 (moreexp -> COMA exp moreexp .) ]
+  ! IN              [ reduce using rule 26 (moreexp -> COMA exp moreexp .) ]
+  ! COMA            [ reduce using rule 26 (moreexp -> COMA exp moreexp .) ]
+  ! $end            [ reduce using rule 26 (moreexp -> COMA exp moreexp .) ]
+  ! CP              [ reduce using rule 26 (moreexp -> COMA exp moreexp .) ]
 
 
 state 42
 
-    (21) exp -> NAME . OP exp CP
-    (24) exp -> NAME .
-    (10) suite -> NAME . next
-    (15) next -> . COMA suite
-    (16) next -> .
+    (13) exp -> NAME OP exp CP .
 
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for SUP resolved using rule 16 (next -> .)
-  ! reduce/reduce conflict for CB resolved using rule 16 (next -> .)
-    OP              shift and go to state 20
-    COMA            shift and go to state 37
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
+    EQUAL           reduce using rule 13 (exp -> NAME OP exp CP .)
+    MINUS           reduce using rule 13 (exp -> NAME OP exp CP .)
+    IN              reduce using rule 13 (exp -> NAME OP exp CP .)
+    COMA            reduce using rule 13 (exp -> NAME OP exp CP .)
+    $end            reduce using rule 13 (exp -> NAME OP exp CP .)
+    CP              reduce using rule 13 (exp -> NAME OP exp CP .)
 
-  ! CB              [ reduce using rule 24 (exp -> NAME .) ]
-  ! COMA            [ reduce using rule 24 (exp -> NAME .) ]
-  ! SUP             [ reduce using rule 24 (exp -> NAME .) ]
-
-    next                           shift and go to state 36
 
 state 43
 
-    (25) exp -> VAR .
-    (11) suite -> VAR . next
-    (15) next -> . COMA suite
-    (16) next -> .
+    (22) morelist -> term COMA morelist .
 
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for SUP resolved using rule 16 (next -> .)
-  ! reduce/reduce conflict for CB resolved using rule 16 (next -> .)
-    COMA            shift and go to state 37
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
+    CSB             reduce using rule 22 (morelist -> term COMA morelist .)
+    SUP             reduce using rule 22 (morelist -> term COMA morelist .)
 
-  ! CB              [ reduce using rule 25 (exp -> VAR .) ]
-  ! COMA            [ reduce using rule 25 (exp -> VAR .) ]
-  ! SUP             [ reduce using rule 25 (exp -> VAR .) ]
-
-    next                           shift and go to state 38
-
-state 44
-
-    (1) calc -> premises MINUS MINUS conclusion .
-
-    $end            reduce using rule 1 (calc -> premises MINUS MINUS conclusion .)
-
-
-state 45
-
-    (20) conclusion -> transition .
-
-    $end            reduce using rule 20 (conclusion -> transition .)
-
-
-state 46
-
-    (6) term -> exp .
-    (22) exp -> exp . more
-    (26) more -> . COMA exp more
-    (27) more -> .
-
-  ! shift/reduce conflict for COMA resolved as shift
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for MINUS resolved using rule 6 (term -> exp .)
-  ! reduce/reduce conflict for $end resolved using rule 6 (term -> exp .)
-    MINUS           reduce using rule 6 (term -> exp .)
-    $end            reduce using rule 6 (term -> exp .)
-    COMA            shift and go to state 19
-
-  ! COMA            [ reduce using rule 6 (term -> exp .) ]
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-  ! MINUS           [ reduce using rule 27 (more -> .) ]
-  ! $end            [ reduce using rule 27 (more -> .) ]
-
-    more                           shift and go to state 18
-
-state 47
-
-    (18) following -> COMA fact following .
-
-    MINUS           reduce using rule 18 (following -> COMA fact following .)
-
-
-state 48
-
-    (5) transition -> term MINUS SUP term .
-
-    COMA            reduce using rule 5 (transition -> term MINUS SUP term .)
-    MINUS           reduce using rule 5 (transition -> term MINUS SUP term .)
-    $end            reduce using rule 5 (transition -> term MINUS SUP term .)
-
-
-state 49
-
-    (26) more -> COMA exp more .
-    (22) exp -> exp more .
-
-  ! reduce/reduce conflict for COMA resolved using rule 22 (exp -> exp more .)
-  ! reduce/reduce conflict for EQUAL resolved using rule 22 (exp -> exp more .)
-  ! reduce/reduce conflict for MINUS resolved using rule 22 (exp -> exp more .)
-  ! reduce/reduce conflict for CP resolved using rule 22 (exp -> exp more .)
-  ! reduce/reduce conflict for $end resolved using rule 22 (exp -> exp more .)
-  ! reduce/reduce conflict for SUP resolved using rule 22 (exp -> exp more .)
-  ! reduce/reduce conflict for CB resolved using rule 22 (exp -> exp more .)
-    COMA            reduce using rule 22 (exp -> exp more .)
-    EQUAL           reduce using rule 22 (exp -> exp more .)
-    MINUS           reduce using rule 22 (exp -> exp more .)
-    CP              reduce using rule 22 (exp -> exp more .)
-    $end            reduce using rule 22 (exp -> exp more .)
-    SUP             reduce using rule 22 (exp -> exp more .)
-    CB              reduce using rule 22 (exp -> exp more .)
-
-  ! EQUAL           [ reduce using rule 26 (more -> COMA exp more .) ]
-  ! COMA            [ reduce using rule 26 (more -> COMA exp more .) ]
-  ! MINUS           [ reduce using rule 26 (more -> COMA exp more .) ]
-  ! SUP             [ reduce using rule 26 (more -> COMA exp more .) ]
-  ! CB              [ reduce using rule 26 (more -> COMA exp more .) ]
-  ! CP              [ reduce using rule 26 (more -> COMA exp more .) ]
-  ! $end            [ reduce using rule 26 (more -> COMA exp more .) ]
-
-
-state 50
-
-    (21) exp -> NAME OP exp CP .
-
-    EQUAL           reduce using rule 21 (exp -> NAME OP exp CP .)
-    COMA            reduce using rule 21 (exp -> NAME OP exp CP .)
-    MINUS           reduce using rule 21 (exp -> NAME OP exp CP .)
-    SUP             reduce using rule 21 (exp -> NAME OP exp CP .)
-    CP              reduce using rule 21 (exp -> NAME OP exp CP .)
-    $end            reduce using rule 21 (exp -> NAME OP exp CP .)
-    CB              reduce using rule 21 (exp -> NAME OP exp CP .)
-
-
-state 51
-
-    (15) next -> COMA suite .
-
-    SUP             reduce using rule 15 (next -> COMA suite .)
-    CB              reduce using rule 15 (next -> COMA suite .)
-
-
-state 52
-
-    (26) more -> COMA exp . more
-    (9) suite -> exp . next
-    (22) exp -> exp . more
-    (26) more -> . COMA exp more
-    (27) more -> .
-    (15) next -> . COMA suite
-    (16) next -> .
-
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for SUP resolved using rule 16 (next -> .)
-  ! reduce/reduce conflict for CB resolved using rule 16 (next -> .)
-    COMA            shift and go to state 54
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
-
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-  ! SUP             [ reduce using rule 27 (more -> .) ]
-  ! CB              [ reduce using rule 27 (more -> .) ]
-
-    more                           shift and go to state 49
-    next                           shift and go to state 34
-
-state 53
-
-    (13) list -> OB exp CB .
-
-    COMA            reduce using rule 13 (list -> OB exp CB .)
-    SUP             reduce using rule 13 (list -> OB exp CB .)
-    CB              reduce using rule 13 (list -> OB exp CB .)
-
-
-state 54
-
-    (26) more -> COMA . exp more
-    (15) next -> COMA . suite
-    (21) exp -> . NAME OP exp CP
-    (22) exp -> . exp more
-    (23) exp -> . NUM
-    (24) exp -> . NAME
-    (25) exp -> . VAR
-    (9) suite -> . exp next
-    (10) suite -> . NAME next
-    (11) suite -> . VAR next
-    (12) suite -> . list next
-    (13) list -> . OB exp CB
-    (14) list -> . OB suite CB
-
-    NAME            shift and go to state 42
-    NUM             shift and go to state 10
-    VAR             shift and go to state 43
-    OB              shift and go to state 26
-
-    exp                            shift and go to state 56
-    suite                          shift and go to state 51
-    list                           shift and go to state 25
-
-state 55
-
-    (14) list -> OB suite CB .
-
-    COMA            reduce using rule 14 (list -> OB suite CB .)
-    SUP             reduce using rule 14 (list -> OB suite CB .)
-    CB              reduce using rule 14 (list -> OB suite CB .)
-
-
-state 56
-
-    (26) more -> COMA exp . more
-    (22) exp -> exp . more
-    (9) suite -> exp . next
-    (26) more -> . COMA exp more
-    (27) more -> .
-    (15) next -> . COMA suite
-    (16) next -> .
-
-  ! shift/reduce conflict for COMA resolved as shift
-  ! reduce/reduce conflict for SUP resolved using rule 16 (next -> .)
-  ! reduce/reduce conflict for CB resolved using rule 16 (next -> .)
-    COMA            shift and go to state 54
-    SUP             reduce using rule 16 (next -> .)
-    CB              reduce using rule 16 (next -> .)
-
-  ! COMA            [ reduce using rule 27 (more -> .) ]
-  ! CB              [ reduce using rule 27 (more -> .) ]
-  ! SUP             [ reduce using rule 27 (more -> .) ]
-
-    more                           shift and go to state 49
-    next                           shift and go to state 34
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-WARNING: shift/reduce conflict for EQUAL in state 7 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 7 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 22 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 23 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 24 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 30 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 30 resolved as shift
 WARNING: shift/reduce conflict for COMA in state 31 resolved as shift
-WARNING: shift/reduce conflict for CP in state 32 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 32 resolved as shift
-WARNING: shift/reduce conflict for CB in state 40 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 40 resolved as shift
-WARNING: shift/reduce conflict for CB in state 40 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 42 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 43 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 46 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 46 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 52 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 56 resolved as shift
-WARNING: reduce/reduce conflict in state 7 resolved using rule (term -> exp)
-WARNING: rejected rule (more -> <empty>) in state 7
-WARNING: reduce/reduce conflict in state 22 resolved using rule (next -> <empty>)
-WARNING: rejected rule (more -> <empty>) in state 22
-WARNING: reduce/reduce conflict in state 23 resolved using rule (next -> <empty>)
-WARNING: rejected rule (exp -> NAME) in state 23
-WARNING: reduce/reduce conflict in state 24 resolved using rule (next -> <empty>)
-WARNING: rejected rule (exp -> VAR) in state 24
-WARNING: reduce/reduce conflict in state 30 resolved using rule (equality -> exp EQUAL exp)
-WARNING: rejected rule (more -> <empty>) in state 30
-WARNING: reduce/reduce conflict in state 42 resolved using rule (next -> <empty>)
-WARNING: rejected rule (exp -> NAME) in state 42
-WARNING: reduce/reduce conflict in state 43 resolved using rule (next -> <empty>)
-WARNING: rejected rule (exp -> VAR) in state 43
-WARNING: reduce/reduce conflict in state 46 resolved using rule (term -> exp)
-WARNING: rejected rule (more -> <empty>) in state 46
-WARNING: reduce/reduce conflict in state 49 resolved using rule (exp -> exp more)
-WARNING: rejected rule (more -> COMA exp more) in state 49
-WARNING: reduce/reduce conflict in state 52 resolved using rule (next -> <empty>)
-WARNING: rejected rule (more -> <empty>) in state 52
-WARNING: reduce/reduce conflict in state 56 resolved using rule (next -> <empty>)
-WARNING: rejected rule (more -> <empty>) in state 56
-WARNING: Rule (more -> COMA exp more) is never reduced
+WARNING: shift/reduce conflict for COMA in state 33 resolved as shift
+WARNING: reduce/reduce conflict in state 0 resolved using rule (premises -> <empty>)
+WARNING: rejected rule (statements -> <empty>) in state 0
+WARNING: reduce/reduce conflict in state 41 resolved using rule (exp -> exp moreexp)
+WARNING: rejected rule (moreexp -> COMA exp moreexp) in state 41
+WARNING: Rule (statements -> <empty>) is never reduced
+WARNING: Rule (moreexp -> COMA exp moreexp) is never reduced

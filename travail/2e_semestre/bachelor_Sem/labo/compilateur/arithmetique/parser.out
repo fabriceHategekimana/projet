@@ -7,23 +7,32 @@ Rule 1     calc -> exp
 Rule 2     exp -> NAME OP exp CP
 Rule 3     exp -> exp more
 Rule 4     exp -> NUM
-Rule 5     more -> COMA exp more
-Rule 6     more -> COMA exp
+Rule 5     exp -> list
+Rule 6     list -> OSB morelist CSB
+Rule 7     morelist -> NUM COMA morelist
+Rule 8     morelist -> NUM
+Rule 9     list -> OSB CSB
+Rule 10    more -> COMA exp more
+Rule 11    more -> COMA exp
 
 Terminals, with rules where they appear
 
-COMA                 : 5 6
+COMA                 : 7 10 11
 CP                   : 2
+CSB                  : 6 9
 NAME                 : 2
-NUM                  : 4
+NUM                  : 4 7 8
 OP                   : 2
+OSB                  : 6 9
 error                : 
 
 Nonterminals, with rules where they appear
 
 calc                 : 0
-exp                  : 1 2 3 5 6
-more                 : 3 5
+exp                  : 1 2 3 10 11
+list                 : 5
+more                 : 3 10
+morelist             : 6 7
 
 Parsing method: LALR
 
@@ -34,12 +43,17 @@ state 0
     (2) exp -> . NAME OP exp CP
     (3) exp -> . exp more
     (4) exp -> . NUM
+    (5) exp -> . list
+    (6) list -> . OSB morelist CSB
+    (9) list -> . OSB CSB
 
     NAME            shift and go to state 3
     NUM             shift and go to state 4
+    OSB             shift and go to state 6
 
     calc                           shift and go to state 1
     exp                            shift and go to state 2
+    list                           shift and go to state 5
 
 state 1
 
@@ -51,19 +65,19 @@ state 2
 
     (1) calc -> exp .
     (3) exp -> exp . more
-    (5) more -> . COMA exp more
-    (6) more -> . COMA exp
+    (10) more -> . COMA exp more
+    (11) more -> . COMA exp
 
     $end            reduce using rule 1 (calc -> exp .)
-    COMA            shift and go to state 6
+    COMA            shift and go to state 8
 
-    more                           shift and go to state 5
+    more                           shift and go to state 7
 
 state 3
 
     (2) exp -> NAME . OP exp CP
 
-    OP              shift and go to state 7
+    OP              shift and go to state 9
 
 
 state 4
@@ -77,6 +91,27 @@ state 4
 
 state 5
 
+    (5) exp -> list .
+
+    COMA            reduce using rule 5 (exp -> list .)
+    $end            reduce using rule 5 (exp -> list .)
+    CP              reduce using rule 5 (exp -> list .)
+
+
+state 6
+
+    (6) list -> OSB . morelist CSB
+    (9) list -> OSB . CSB
+    (7) morelist -> . NUM COMA morelist
+    (8) morelist -> . NUM
+
+    CSB             shift and go to state 11
+    NUM             shift and go to state 12
+
+    morelist                       shift and go to state 10
+
+state 7
+
     (3) exp -> exp more .
 
     COMA            reduce using rule 3 (exp -> exp more .)
@@ -84,63 +119,117 @@ state 5
     CP              reduce using rule 3 (exp -> exp more .)
 
 
-state 6
+state 8
 
-    (5) more -> COMA . exp more
-    (6) more -> COMA . exp
+    (10) more -> COMA . exp more
+    (11) more -> COMA . exp
     (2) exp -> . NAME OP exp CP
     (3) exp -> . exp more
     (4) exp -> . NUM
+    (5) exp -> . list
+    (6) list -> . OSB morelist CSB
+    (9) list -> . OSB CSB
 
     NAME            shift and go to state 3
     NUM             shift and go to state 4
+    OSB             shift and go to state 6
 
-    exp                            shift and go to state 8
+    exp                            shift and go to state 13
+    list                           shift and go to state 5
 
-state 7
+state 9
 
     (2) exp -> NAME OP . exp CP
     (2) exp -> . NAME OP exp CP
     (3) exp -> . exp more
     (4) exp -> . NUM
+    (5) exp -> . list
+    (6) list -> . OSB morelist CSB
+    (9) list -> . OSB CSB
 
     NAME            shift and go to state 3
     NUM             shift and go to state 4
+    OSB             shift and go to state 6
 
-    exp                            shift and go to state 9
-
-state 8
-
-    (5) more -> COMA exp . more
-    (6) more -> COMA exp .
-    (3) exp -> exp . more
-    (5) more -> . COMA exp more
-    (6) more -> . COMA exp
-
-  ! shift/reduce conflict for COMA resolved as shift
-    $end            reduce using rule 6 (more -> COMA exp .)
-    CP              reduce using rule 6 (more -> COMA exp .)
-    COMA            shift and go to state 6
-
-  ! COMA            [ reduce using rule 6 (more -> COMA exp .) ]
-
-    more                           shift and go to state 10
-
-state 9
-
-    (2) exp -> NAME OP exp . CP
-    (3) exp -> exp . more
-    (5) more -> . COMA exp more
-    (6) more -> . COMA exp
-
-    CP              shift and go to state 11
-    COMA            shift and go to state 6
-
-    more                           shift and go to state 5
+    exp                            shift and go to state 14
+    list                           shift and go to state 5
 
 state 10
 
-    (5) more -> COMA exp more .
+    (6) list -> OSB morelist . CSB
+
+    CSB             shift and go to state 15
+
+
+state 11
+
+    (9) list -> OSB CSB .
+
+    COMA            reduce using rule 9 (list -> OSB CSB .)
+    $end            reduce using rule 9 (list -> OSB CSB .)
+    CP              reduce using rule 9 (list -> OSB CSB .)
+
+
+state 12
+
+    (7) morelist -> NUM . COMA morelist
+    (8) morelist -> NUM .
+
+    COMA            shift and go to state 16
+    CSB             reduce using rule 8 (morelist -> NUM .)
+
+
+state 13
+
+    (10) more -> COMA exp . more
+    (11) more -> COMA exp .
+    (3) exp -> exp . more
+    (10) more -> . COMA exp more
+    (11) more -> . COMA exp
+
+  ! shift/reduce conflict for COMA resolved as shift
+    $end            reduce using rule 11 (more -> COMA exp .)
+    CP              reduce using rule 11 (more -> COMA exp .)
+    COMA            shift and go to state 8
+
+  ! COMA            [ reduce using rule 11 (more -> COMA exp .) ]
+
+    more                           shift and go to state 17
+
+state 14
+
+    (2) exp -> NAME OP exp . CP
+    (3) exp -> exp . more
+    (10) more -> . COMA exp more
+    (11) more -> . COMA exp
+
+    CP              shift and go to state 18
+    COMA            shift and go to state 8
+
+    more                           shift and go to state 7
+
+state 15
+
+    (6) list -> OSB morelist CSB .
+
+    COMA            reduce using rule 6 (list -> OSB morelist CSB .)
+    $end            reduce using rule 6 (list -> OSB morelist CSB .)
+    CP              reduce using rule 6 (list -> OSB morelist CSB .)
+
+
+state 16
+
+    (7) morelist -> NUM COMA . morelist
+    (7) morelist -> . NUM COMA morelist
+    (8) morelist -> . NUM
+
+    NUM             shift and go to state 12
+
+    morelist                       shift and go to state 19
+
+state 17
+
+    (10) more -> COMA exp more .
     (3) exp -> exp more .
 
   ! reduce/reduce conflict for COMA resolved using rule 3 (exp -> exp more .)
@@ -150,12 +239,12 @@ state 10
     $end            reduce using rule 3 (exp -> exp more .)
     CP              reduce using rule 3 (exp -> exp more .)
 
-  ! COMA            [ reduce using rule 5 (more -> COMA exp more .) ]
-  ! $end            [ reduce using rule 5 (more -> COMA exp more .) ]
-  ! CP              [ reduce using rule 5 (more -> COMA exp more .) ]
+  ! COMA            [ reduce using rule 10 (more -> COMA exp more .) ]
+  ! $end            [ reduce using rule 10 (more -> COMA exp more .) ]
+  ! CP              [ reduce using rule 10 (more -> COMA exp more .) ]
 
 
-state 11
+state 18
 
     (2) exp -> NAME OP exp CP .
 
@@ -163,10 +252,17 @@ state 11
     $end            reduce using rule 2 (exp -> NAME OP exp CP .)
     CP              reduce using rule 2 (exp -> NAME OP exp CP .)
 
+
+state 19
+
+    (7) morelist -> NUM COMA morelist .
+
+    CSB             reduce using rule 7 (morelist -> NUM COMA morelist .)
+
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-WARNING: shift/reduce conflict for COMA in state 8 resolved as shift
-WARNING: reduce/reduce conflict in state 10 resolved using rule (exp -> exp more)
-WARNING: rejected rule (more -> COMA exp more) in state 10
+WARNING: shift/reduce conflict for COMA in state 13 resolved as shift
+WARNING: reduce/reduce conflict in state 17 resolved using rule (exp -> exp more)
+WARNING: rejected rule (more -> COMA exp more) in state 17
 WARNING: Rule (more -> COMA exp more) is never reduced
