@@ -23,31 +23,8 @@
 	
 ## interface
 	- CLI -> GUI
+	- Outils de debbuging qui prévient l'utilisateur
 	- Visualisation par graphe
-
-----
-
-# Syntaxe State (du domaine sémantique)
-
-## State
-```sql
-<e1,...,en>
-```
-
-## State x inst
-```sql
-<e1,...,en,inst>
-```
-
-## Transition
-```
-<e1,...,en,inst> => <i1,...,in>
-```
-
-## Définition linéaire
-```javascript
-e1 => i1,...,in => in -- <e1,...,en,inst> => <i1,...,in>
-```
 
 ----
 
@@ -63,120 +40,90 @@ e1 => i1,...,in => in -- <e1,...,en,inst> => <i1,...,in>
 
 ----
 
-# Problèmes
+# sous langage (1)
+## Tree-based abstract syntaxe
 
-## évaluation de règles
-	- union
-	- récursivité
-
-----
-
-# Entraînement
-
-## Langage plus simple
-	- inspiré de la logique des prédicats
-	- inspiré de prolog
-
-## évaluation simplifiée
-	- faits simples
-	- règles simple
+![abstract_syntaxe](images/abstract_syntaxe.png)
 
 ----
 
-# Qu'est ce qu'on peut faire?
+# sous langage (2)
 
-1. Créer des faits
-2. Poser des questions
-3. Créer des règles
+## Arithmétique simple
+- addition **add(a,b)**   
+- soustraction **sub(a,b)**  
+- division **div(a,b)**  
+- multiplication **mul(a,b)**  
 
 ----
 
-# Syntaxe du LS faits
+# sous langage (2)
 
-## prédicats à deux expressions
-	[sujet] [lien] [verbe]
+## gestion de liste
+liste: [], [1,2,3], ...   
 
 ## exemple
-Pour dire "Socrate est un homme":  
-```bash
-|normal> Socrate est homme
+**l1= [1,2,3]**, **l2= [4,5,6]**  
+- accès **get(l1, 0)**  => [1]  
+- définition **set(l2, 1, 7)**  => [4,7,6]  
+- concatenation **concat(l1, l2)**  => [1,2,3,4,5,6]  
+- insertion  **insert(l1, 0)**  => [0,1,2,3]  
+- ajout  **append(l2, 7)**  => [4,5,6,7]  
+
+----
+
+# Pour le reste
+
+![](images/definition_python.png){ width=40% }
+
+## Traduction
+```javascript
+modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
 ```
 
 ----
 
-# Syntaxe du LS requête(1)
+# architecture
 
-## principe
-Même structure que les faits mais avec l'utilisation de variables
-
-## variables réservées
-A, B, C
-Pas plus de `deux` variables par fait.
+![architecture](images/architecture.png)
 
 ----
-
-# Syntaxe du LS requête(2)
-
-## Cas 1
-check **A** est homme = "**Qui** est un homme?"
-
-## Cas 2
-check Socrate **A** homme = "**Quel relation** Socrate a avec 'homme'?"
-
-## Cas 3
-check Socrate est **A** = "**Qu'est-ce qu**'est Socrate?"
-
-----
-
-# Autres questions: 2 variables
-## Cas 4
-check **A B** homme = "**Qu'est-ce qui est relier à **'homme'?"
-
-## Cas 5
-check Socrate **A B** = "**Qu'est ce qu'on dit sur** Socrate?"
-
-## Cas 6
-check **A** est **B** = "**Qu'est-ce qui** 'est' **quoi?**"
-
-----
-
-# Syntaxe LS règles
-
-## Syntax
-add `if` [conditions] `then` [conclusions]
-
-## exemple
-Pour donner la règle "Tout les hommes sont mortels":  
-```bash
-	|normal> add if A est homme then A est mortel
-```
-
-----
-
-# Actuellement(1)
-
-![arbre_généalogique](images/arbre_généalogique.png)
-
-----
-
-# Actuellement(2)
-
-![type_pokemon](images/type_pokemon.png)
+# test.fa
+l=[] -- isValid(l) = true
 
 ----
 
 # Interface (visualisation par graphe)
 
-![graphe](images/graphe.png)
+## pyvis
+![pyvis](images/pyvis.png)
+
+inspiré de vis.js
 
 ----
 
 # outils de visualisation
 
 ## Affichage
-	NetworkX + matplotlib
+	NetworkX + pyvis + vis.js
 	
-## Interactivité
-	NetworkX + wxPython
+----
 
+# Pour la suite
 
+## 07.04.21
+- évaluation de programmes définis par l'utilisateur
+- écriture de la documentation (suite)
+
+## 14.04.21
+- interface du système de dérivation (CLI peut-être GUI)
+- écriture de la documentation (suite)
+
+## 21.04.21
+- interface du système de dérivation (suite) 
+- écriture de la documentation (suite)
+
+## 28.04.21
+- développement d'un système de preuve
+- écriture de la documentation (suite)
+	
