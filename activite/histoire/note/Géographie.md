@@ -1,4 +1,8 @@
-Actuellement trois pays:
+école
+bourgeoisie
+quartier
+ghetto
+
 
 Map du jeu:
 ![map](images/map.png)
