@@ -1,4 +1,5 @@
-from arithmetique.entree import subEval
+from compile import parser
+import re
 
 def find(state):
     return "<d> -- <d>"
@@ -32,53 +33,86 @@ def symbol(statement):
         res= " in "
     return res
 
-def test(expression, substitution):
+def test(expression, substitution, data):
     res= False
     expression= complete(expression, substitution)
+    print("expression à tester: ", expression)
     sym= symbol(expression)
     if sym in [" = ", " > ", " >= ", " < ", " <= "]:
         if sym == " = ":
             expression= expression.replace(" = ", " == ")
-        if subEval(expression) == "True":
+        val= subEval(expression)
+        print("résultat du test de comparaison: ", val)
+        if val == "True":
             res = substitution
-            print("le subEval donne True")
-        else:
-            print("le subEval donne False")
     elif sym == " in ":
         val= evalNativeType(expression)
-        if val == "False":
-            val= evaluateExpression(expression)
-            if val != "False":
-                res= val
+        print("résultat du test in 1: ", val)
+        if val == False:
+            print("on continue")
+            #val= evaluateExpression(expression)
+            #print("résultat du test in 2: ", val)
+            #if val != "False":
+                #res= val"
+        else:
+            res= True
     elif sym == " -> ":
-        res= evaluateExpression(expression)
-    #tab= expression.split(sym)
+        res= evaluateExpression(expression, data)
+        print("résultat du test -> : ", res)
+    return res
+
+def evalNativeType(exp):
+    res= False
+    if exp.find("in number") > 0:
+        res= isNumber(exp.replace(" in number", ""))
+    elif exp.find("in list") > 0:
+        res= isList(exp.replace(" in list", ""))
     return res
 
 def evaluateExpression(expression, data):
+    res= subEval(expression) 
+    if res == "error":
+        res= evaluateExpressionHelper(expression, data)
+    return res
+
+def evaluateExpressionHelper(expression, data):
     print("expression: ", expression)
-    final= []
-    selection= [data[0]]
+    final= ""
+    selection= data
     for rule in selection:
+        print("--------------------")
         print("règle choisie: ", rule)
         allTrue= True
-        substitution= union(rule[0], expression)
-        print("substitution obtenue: ", substitution)
-        for premise in rule[1].split(";"): #loop: premises
-            print("premisse obtenue: ", premise)
-            res= test(premise, substitution)
-            if res == False:
-                allTrue= False
-                break
-            else:
-                substitution= res
+        substitution= union(rule[0], expression) 
+        if substitution == False: # if false the fact doesn't match go to the next rule/fact
+            print("Le fait ne match pas, on passe à la suite")
+            allTrue= False
+        elif substitution == True: # if true the fact match go directly to the conclusion
+            print("Le fait match")
+        else: # if this is an array of substitution, go check the premises
+            print("substitution obtenue: ", substitution)
+            if rule[1] != "":
+                for premise in rule[1].split(";"): #loop: premises
+                    print("premisse obtenue: ", premise)
+                    res= test(premise, substitution, data)
+                    print("res: ",res)
+                    if res == False:
+                        print("règle non accomplie")
+                        allTrue= False
+                        break
+                    else:
+                        print("règle accomplie")
+                        substitution= res
         if allTrue == True:
-            #conclusion= test(rule[2], substitution)
-            conclusion= complete(rule[2],substitution).split(symbol(rule[2]))[1]
-            final.append(conclusion)
-    print(final)
+            if substitution != True: # on fait les dernière substitutions si le tableau n'est pas vide
+                conclusion= complete(rule[2],substitution).split(symbol(rule[2]))[1]
+            else:
+                conclusion= rule[2].split(symbol(rule[2]))[1]
+            print("conclusion: ", conclusion)
+            final= conclusion
+            break
+    return final
         
-
 def union(exp1, exp2):
     if exp1[0] == "<":
         res= unionState(exp1, exp2)
@@ -97,6 +131,7 @@ def unionState(exp1, exp2):
     return res
 
 def unionExpression(exp1,exp2):
+    #exp1 is the rule union, exp2 is the user union
     res= False
     exp1= exp1[exp1.find("(")+1:exp1.rfind(")")] #pour enlever les espaces en trop du parser
     exp2= exp2[exp2.find("(")+1:exp2.rfind(")")]
@@ -106,8 +141,39 @@ def unionExpression(exp1,exp2):
     if len(tab1) == len(tab2):
         final= []
         for i in range(len(tab1)):
-            final.append([tab1[i], tab2[i]])
-        res= final
+            if isTerminal(tab1[i]):
+                if tab1[i] != tab2[i]:
+                    final= False
+                    break
+            else:
+                final.append([tab1[i], tab2[i]])
+        if final == []:
+            final = True
+    print("résultat de l'union: ", final)
+    return final
+
+def isNumber(exp):
+    res = False
+    try:
+        if len(re.findall("(\d+(\.\d+)*)", exp)) > 0:
+            res = True
+    except:
+        pass
+    return res
+
+def isList(exp):
+    res = False
+    try:
+        if eval("isinstance(%s, list)" % (exp)):
+            res = True
+    except:
+        pass
+    return res
+
+def isTerminal(exp):
+    res= False
+    if isNumber(exp) or isList(exp):
+        res= True
     return res
 
 def check(exp, dico):
@@ -143,8 +209,11 @@ def complete(exp, dico):
         exp= exp.replace(d[0], d[1])
     return exp
 
-def myeval(exp):
-    #utilise mes fonctions définies
-    return exp
+def subEval(exp):
+    parser.parse("calc "+exp)
+    f = open("subEval.txt", "r")
+    res= f.readline()
+    f.close()
+    return res
 
 #print(complete("A+C",union("<A,B,C>","<un,[0;0],3")))

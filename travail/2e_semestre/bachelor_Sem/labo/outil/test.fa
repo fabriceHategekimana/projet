@@ -1,1 +1,2 @@
-Li = [] -- isVoid(Li) = True
+-- fact(1) = 1
+n > 1 -- fact(n) = mul(n,fact(sub(n,1)))

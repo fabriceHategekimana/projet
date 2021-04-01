@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'langCOMA CP CSB EQUAL IN INF MINUS NAME NUM OP OSB SUP VAR\n    lang : premises MINUS MINUS conclusion\n    \n    premises : statements\n    \n    premises : \n    \n    statements : statement more\n    \n    statements : \n    \n    more : COMA statement more\n    \n    more : \n    \n    statement : exp sym exp\n    \n    sym : EQUAL\n        | MINUS SUP\n        | IN\n    \n    conclusion : statement\n    \n    exp : NAME OP exp CP\n    \n    exp : exp moreexp\n    \n    exp : NUM\n        | VAR\n    \n    term : NUM\n         | VAR\n         | list\n    \n    exp : list\n    \n    list : OSB morelist CSB\n    \n    morelist : term COMA morelist\n    \n    morelist : term\n    \n    list : OSB CSB\n    \n    list : INF morelist SUP\n    \n    moreexp : COMA exp moreexp\n    \n    moreexp : COMA exp\n    '
+_lr_signature = 'startCALC CHECK COMA CP CSB EQUAL IN INF MINUS NAME NUM OP OSB SUP VAR\n    start : CALC calc\n          | CHECK check\n    \n    check : check1\n          | check2\n    \n    check1 : c_premises MINUS MINUS c_conclusion\n    \n    check2 : MINUS MINUS c_conclusion\n    \n    c_premises : c_statement\n    \n    c_premises : c_statement c_more\n    \n    c_more : COMA c_statement\n    \n    c_more : COMA c_statement c_more\n    \n    c_more : NUM\n    \n    c_statement : c_exp c_sym c_statement2\n    \n    c_statement2 : c_exp\n    \n    c_sym : EQUAL\n          | MINUS SUP\n          | IN\n    \n    c_conclusion : c_statement\n    \n    c_exp : NAME OP c_subexp CP\n          | c_term\n    \n    c_subexp : c_subexp c_moreexp\n    \n    c_subexp : NUM\n             | VAR\n             | c_list\n    \n    c_term : NUM\n           | VAR\n           | c_list\n    \n    c_list : OSB c_morelist CSB\n    \n    c_morelist : c_term COMA c_morelist\n    \n    c_morelist : c_term\n    \n    c_list : OSB CSB\n    \n    c_list : INF c_morelist SUP\n    \n    c_moreexp : COMA c_subexp c_moreexp\n    \n    c_moreexp : COMA c_subexp\n    \n    calc : exp\n    \n    calc : condition\n    \n    condition : exp comparator exp\n    \n    comparator : EQUAL EQUAL\n               | SUP\n               | SUP EQUAL\n               | INF\n               | INF EQUAL\n    \n    exp : NAME OP exp CP\n    \n    exp : exp more\n    \n    exp : NUM\n    \n    exp : list\n    \n    list : OSB morelist CSB\n    \n    morelist : NUM COMA morelist\n    \n    morelist : NUM\n    \n    list : OSB CSB\n    \n    list : INF morelist SUP\n    \n    more : COMA exp more\n    \n    more : COMA exp\n    '
     
-_lr_action_items = {'MINUS':([0,2,3,4,5,7,8,9,12,13,16,23,30,31,33,35,37,40,41,42,],[-3,12,-2,-7,18,-15,-16,-20,29,-4,-14,-24,-7,-8,-27,-21,-25,-6,-14,-13,]),'NAME':([0,14,15,17,19,20,21,29,32,],[6,6,6,-9,-11,6,6,6,-10,]),'NUM':([0,10,11,14,15,17,19,20,21,29,32,36,],[7,25,25,7,7,-9,-11,7,7,7,-10,25,]),'VAR':([0,10,11,14,15,17,19,20,21,29,32,36,],[8,26,26,8,8,-9,-11,8,8,8,-10,26,]),'OSB':([0,10,11,14,15,17,19,20,21,29,32,36,],[10,10,10,10,10,-9,-11,10,10,10,-10,10,]),'INF':([0,10,11,14,15,17,19,20,21,29,32,36,],[11,11,11,11,11,-9,-11,11,11,11,-10,11,]),'$end':([1,7,8,9,16,23,31,33,35,37,38,39,41,42,],[0,-15,-16,-20,-14,-24,-8,-27,-21,-25,-1,-12,-14,-13,]),'COMA':([4,5,7,8,9,16,23,24,25,26,27,30,31,33,34,35,37,41,42,],[14,20,-15,-16,-20,-14,-24,36,-17,-18,-19,14,20,20,20,-21,-25,-14,-13,]),'EQUAL':([5,7,8,9,16,23,33,35,37,41,42,],[17,-15,-16,-20,-14,-24,-27,-21,-25,-14,-13,]),'IN':([5,7,8,9,16,23,33,35,37,41,42,],[19,-15,-16,-20,-14,-24,-27,-21,-25,-14,-13,]),'OP':([6,],[21,]),'CP':([7,8,9,16,23,33,34,35,37,41,42,],[-15,-16,-20,-14,-24,-27,42,-21,-25,-14,-13,]),'CSB':([10,22,23,24,25,26,27,35,37,43,],[23,35,-24,-23,-17,-18,-19,-21,-25,-22,]),'SUP':([18,23,24,25,26,27,28,35,37,43,],[32,-24,-23,-17,-18,-19,37,-21,-25,-22,]),}
+_lr_action_items = {'CALC':([0,],[2,]),'CHECK':([0,],[3,]),'$end':([1,4,5,6,8,9,12,13,14,20,21,22,23,26,34,48,51,52,57,59,61,62,64,65,71,73,74,75,77,79,],[0,-1,-34,-35,-44,-45,-2,-3,-4,-19,-24,-25,-26,-43,-49,-30,-36,-52,-46,-50,-6,-17,-13,-12,-27,-31,-43,-42,-5,-18,]),'NAME':([2,3,27,28,30,31,32,38,40,42,43,45,53,54,55,60,66,],[7,19,7,7,-38,-40,7,19,19,19,-14,-16,-37,-39,-41,19,-15,]),'NUM':([2,3,10,11,17,20,21,22,23,24,25,27,28,30,31,32,38,40,42,43,45,46,48,53,54,55,58,60,63,64,65,66,71,72,73,79,81,],[8,21,35,35,41,-19,-24,-25,-26,21,21,8,8,-38,-40,8,21,21,21,-14,-16,68,-30,-37,-39,-41,35,21,41,-13,-12,-15,-27,21,-31,-18,68,]),'OSB':([2,3,24,25,27,28,30,31,32,38,40,42,43,45,46,53,54,55,60,66,72,81,],[10,24,24,24,10,10,-38,-40,10,24,24,24,-14,-16,24,-37,-39,-41,24,-15,24,24,]),'INF':([2,3,5,8,9,24,25,26,27,28,30,31,32,34,38,40,42,43,45,46,52,53,54,55,57,59,60,66,72,74,75,81,],[11,25,31,-44,-45,25,25,-43,11,11,-38,-40,11,-49,25,25,25,-14,-16,25,-52,-37,-39,-41,-46,-50,25,-15,25,-43,-42,25,]),'MINUS':([3,15,16,17,18,20,21,22,23,37,39,41,48,63,64,65,71,73,78,79,],[16,37,38,-7,44,-19,-24,-25,-26,60,-8,-11,-30,-9,-13,-12,-27,-31,-10,-18,]),'VAR':([3,24,25,38,40,42,43,45,46,60,66,72,81,],[22,22,22,22,22,22,-14,-16,69,22,-15,22,69,]),'COMA':([5,8,9,17,20,21,22,23,26,34,35,48,49,51,52,56,57,59,63,64,65,67,68,69,70,71,73,74,75,79,80,83,84,],[28,-44,-45,40,-19,-24,-25,-26,-43,-49,58,-30,72,28,28,28,-46,-50,40,-13,-12,81,-21,-22,-23,-27,-31,-43,-42,-18,-20,81,-20,]),'EQUAL':([5,8,9,18,20,21,22,23,26,29,30,31,34,48,52,57,59,71,73,74,75,79,],[29,-44,-45,43,-19,-24,-25,-26,-43,53,54,55,-49,-30,-52,-46,-50,-27,-31,-43,-42,-18,]),'SUP':([5,8,9,21,22,23,26,34,35,36,44,48,49,50,52,57,59,71,73,74,75,76,82,],[30,-44,-45,-24,-25,-26,-43,-49,-48,59,66,-30,-29,73,-52,-46,-50,-27,-31,-43,-42,-47,-28,]),'OP':([7,19,],[32,46,]),'CP':([8,9,26,34,48,52,56,57,59,67,68,69,70,71,73,74,75,80,83,84,],[-44,-45,-43,-49,-30,-52,75,-46,-50,79,-21,-22,-23,-27,-31,-43,-42,-20,-33,-20,]),'CSB':([10,21,22,23,24,33,35,47,48,49,71,73,76,82,],[34,-24,-25,-26,48,57,-48,71,-30,-29,-27,-31,-47,-28,]),'IN':([18,20,21,22,23,48,71,73,79,],[45,-19,-24,-25,-26,-30,-27,-31,-18,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'lang':([0,],[1,]),'premises':([0,],[2,]),'statements':([0,],[3,]),'statement':([0,14,29,],[4,30,39,]),'exp':([0,14,15,20,21,29,],[5,5,31,33,34,5,]),'list':([0,10,11,14,15,20,21,29,36,],[9,27,27,9,9,9,9,9,27,]),'more':([4,30,],[13,40,]),'sym':([5,],[15,]),'moreexp':([5,31,33,34,],[16,16,41,16,]),'morelist':([10,11,36,],[22,28,43,]),'term':([10,11,36,],[24,24,24,]),'conclusion':([29,],[38,]),}
+_lr_goto_items = {'start':([0,],[1,]),'calc':([2,],[4,]),'exp':([2,27,28,32,],[5,51,52,56,]),'condition':([2,],[6,]),'list':([2,27,28,32,],[9,9,9,9,]),'check':([3,],[12,]),'check1':([3,],[13,]),'check2':([3,],[14,]),'c_premises':([3,],[15,]),'c_statement':([3,38,40,60,],[17,62,63,62,]),'c_exp':([3,38,40,42,60,],[18,18,18,64,18,]),'c_term':([3,24,25,38,40,42,60,72,],[20,49,49,20,20,20,20,49,]),'c_list':([3,24,25,38,40,42,46,60,72,81,],[23,23,23,23,23,23,70,23,23,70,]),'more':([5,51,52,56,],[26,26,74,26,]),'comparator':([5,],[27,]),'morelist':([10,11,58,],[33,36,76,]),'c_more':([17,63,],[39,78,]),'c_sym':([18,],[42,]),'c_morelist':([24,25,72,],[47,50,82,]),'c_conclusion':([38,60,],[61,77,]),'c_statement2':([42,],[65,]),'c_subexp':([46,81,],[67,83,]),'c_moreexp':([67,83,],[80,84,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -26,32 +26,57 @@ for _k, _v in _lr_goto_items.items():
        _lr_goto[_x][_k] = _y
 del _lr_goto_items
 _lr_productions = [
-  ("S' -> lang","S'",1,None,None,None),
-  ('lang -> premises MINUS MINUS conclusion','lang',4,'p_lang','compile.py',74),
-  ('premises -> statements','premises',1,'p_premisses1','compile.py',80),
-  ('premises -> <empty>','premises',0,'p_premisses2','compile.py',86),
-  ('statements -> statement more','statements',2,'p_statements1','compile.py',92),
-  ('statements -> <empty>','statements',0,'p_statements2','compile.py',98),
-  ('more -> COMA statement more','more',3,'p_more1','compile.py',104),
-  ('more -> <empty>','more',0,'p_more2','compile.py',110),
-  ('statement -> exp sym exp','statement',3,'p_statement','compile.py',116),
-  ('sym -> EQUAL','sym',1,'p_sym','compile.py',122),
-  ('sym -> MINUS SUP','sym',2,'p_sym','compile.py',123),
-  ('sym -> IN','sym',1,'p_sym','compile.py',124),
-  ('conclusion -> statement','conclusion',1,'p_conclusion','compile.py',130),
-  ('exp -> NAME OP exp CP','exp',4,'p_operator','compile.py',136),
-  ('exp -> exp moreexp','exp',2,'p_more','compile.py',142),
-  ('exp -> NUM','exp',1,'p_int','compile.py',148),
-  ('exp -> VAR','exp',1,'p_int','compile.py',149),
-  ('term -> NUM','term',1,'p_term','compile.py',155),
-  ('term -> VAR','term',1,'p_term','compile.py',156),
-  ('term -> list','term',1,'p_term','compile.py',157),
-  ('exp -> list','exp',1,'p_list','compile.py',163),
-  ('list -> OSB morelist CSB','list',3,'p_list1','compile.py',169),
-  ('morelist -> term COMA morelist','morelist',3,'p_list2','compile.py',175),
-  ('morelist -> term','morelist',1,'p_list3','compile.py',181),
-  ('list -> OSB CSB','list',2,'p_list4','compile.py',187),
-  ('list -> INF morelist SUP','list',3,'p_list5','compile.py',193),
-  ('moreexp -> COMA exp moreexp','moreexp',3,'p_more_expexp','compile.py',199),
-  ('moreexp -> COMA exp','moreexp',2,'p_more_coma_exp','compile.py',205),
+  ("S' -> start","S'",1,None,None,None),
+  ('start -> CALC calc','start',2,'p_start','compile.py',134),
+  ('start -> CHECK check','start',2,'p_start','compile.py',135),
+  ('check -> check1','check',1,'p_check','compile.py',147),
+  ('check -> check2','check',1,'p_check','compile.py',148),
+  ('check1 -> c_premises MINUS MINUS c_conclusion','check1',4,'p_check1','compile.py',154),
+  ('check2 -> MINUS MINUS c_conclusion','check2',3,'p_check2','compile.py',162),
+  ('c_premises -> c_statement','c_premises',1,'p_premisses1','compile.py',170),
+  ('c_premises -> c_statement c_more','c_premises',2,'p_premisses2','compile.py',176),
+  ('c_more -> COMA c_statement','c_more',2,'p_more1','compile.py',182),
+  ('c_more -> COMA c_statement c_more','c_more',3,'p_more2','compile.py',188),
+  ('c_more -> NUM','c_more',1,'p_more3','compile.py',194),
+  ('c_statement -> c_exp c_sym c_statement2','c_statement',3,'p_statement','compile.py',200),
+  ('c_statement2 -> c_exp','c_statement2',1,'p_statement2','compile.py',206),
+  ('c_sym -> EQUAL','c_sym',1,'p_sym','compile.py',213),
+  ('c_sym -> MINUS SUP','c_sym',2,'p_sym','compile.py',214),
+  ('c_sym -> IN','c_sym',1,'p_sym','compile.py',215),
+  ('c_conclusion -> c_statement','c_conclusion',1,'p_conclusion','compile.py',221),
+  ('c_exp -> NAME OP c_subexp CP','c_exp',4,'p_operator','compile.py',227),
+  ('c_exp -> c_term','c_exp',1,'p_operator','compile.py',228),
+  ('c_subexp -> c_subexp c_moreexp','c_subexp',2,'p_more','compile.py',234),
+  ('c_subexp -> NUM','c_subexp',1,'p_int','compile.py',240),
+  ('c_subexp -> VAR','c_subexp',1,'p_int','compile.py',241),
+  ('c_subexp -> c_list','c_subexp',1,'p_int','compile.py',242),
+  ('c_term -> NUM','c_term',1,'p_term','compile.py',248),
+  ('c_term -> VAR','c_term',1,'p_term','compile.py',249),
+  ('c_term -> c_list','c_term',1,'p_term','compile.py',250),
+  ('c_list -> OSB c_morelist CSB','c_list',3,'p_list1','compile.py',262),
+  ('c_morelist -> c_term COMA c_morelist','c_morelist',3,'p_list2','compile.py',268),
+  ('c_morelist -> c_term','c_morelist',1,'p_list3','compile.py',274),
+  ('c_list -> OSB CSB','c_list',2,'p_list4','compile.py',280),
+  ('c_list -> INF c_morelist SUP','c_list',3,'p_list5','compile.py',286),
+  ('c_moreexp -> COMA c_subexp c_moreexp','c_moreexp',3,'p_more_expexp','compile.py',292),
+  ('c_moreexp -> COMA c_subexp','c_moreexp',2,'p_more_coma_exp','compile.py',298),
+  ('calc -> exp','calc',1,'p_calc','compile.py',311),
+  ('calc -> condition','calc',1,'p_calc2','compile.py',320),
+  ('condition -> exp comparator exp','condition',3,'p_condition','compile.py',328),
+  ('comparator -> EQUAL EQUAL','comparator',2,'p_comparator','compile.py',334),
+  ('comparator -> SUP','comparator',1,'p_comparator','compile.py',335),
+  ('comparator -> SUP EQUAL','comparator',2,'p_comparator','compile.py',336),
+  ('comparator -> INF','comparator',1,'p_comparator','compile.py',337),
+  ('comparator -> INF EQUAL','comparator',2,'p_comparator','compile.py',338),
+  ('exp -> NAME OP exp CP','exp',4,'p_exp_operator','compile.py',344),
+  ('exp -> exp more','exp',2,'p_exp_more','compile.py',351),
+  ('exp -> NUM','exp',1,'p_exp_int','compile.py',357),
+  ('exp -> list','exp',1,'p_exp_list','compile.py',363),
+  ('list -> OSB morelist CSB','list',3,'p_exp_list1','compile.py',369),
+  ('morelist -> NUM COMA morelist','morelist',3,'p_exp_list2','compile.py',375),
+  ('morelist -> NUM','morelist',1,'p_exp_list3','compile.py',381),
+  ('list -> OSB CSB','list',2,'p_exp_list4','compile.py',387),
+  ('list -> INF morelist SUP','list',3,'p_exp_list5','compile.py',393),
+  ('more -> COMA exp more','more',3,'p_more_exp','compile.py',399),
+  ('more -> COMA exp','more',2,'p_more_empty','compile.py',405),
 ]
