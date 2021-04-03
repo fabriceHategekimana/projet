@@ -1,0 +1,133 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 70%;
+            height: 100%;
+            background-color: #333333;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "id": "mechant", "label": "mechant", "shape": "dot"}, {"font": {"color": "white"}, "id": "homme", "label": "homme", "shape": "dot"}, {"font": {"color": "white"}, "id": "mortel", "label": "mortel", "shape": "dot"}, {"font": {"color": "white"}, "id": "personne", "label": "personne", "shape": "dot"}, {"font": {"color": "white"}, "id": "moroha", "label": "moroha", "shape": "dot"}, {"font": {"color": "white"}, "id": "lenora", "label": "lenora", "shape": "dot"}, {"font": {"color": "white"}, "id": "femme", "label": "femme", "shape": "dot"}, {"font": {"color": "white"}, "id": "sesshomaru", "label": "sesshomaru", "shape": "dot"}, {"font": {"color": "white"}, "id": "racine", "label": "racine", "shape": "dot"}, {"font": {"color": "white"}, "id": "towa", "label": "towa", "shape": "dot"}, {"font": {"color": "white"}, "id": "hanyo", "label": "hanyo", "shape": "dot"}, {"font": {"color": "white"}, "id": "personnage", "label": "personnage", "shape": "dot"}, {"font": {"color": "white"}, "id": "emy", "label": "emy", "shape": "dot"}, {"font": {"color": "white"}, "id": "neNoKubi", "label": "neNoKubi", "shape": "dot"}, {"font": {"color": "white"}, "id": "setsuna", "label": "setsuna", "shape": "dot"}, {"font": {"color": "white"}, "id": "hyun", "label": "hyun", "shape": "dot"}, {"font": {"color": "white"}, "id": "fabrice", "label": "fabrice", "shape": "dot"}, {"font": {"color": "white"}, "id": "zero", "label": "zero", "shape": "dot"}, {"font": {"color": "white"}, "id": "kirinmaru", "label": "kirinmaru", "shape": "dot"}, {"font": {"color": "white"}, "id": "kagome", "label": "kagome", "shape": "dot"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "#110a1e", "from": "fabrice", "label": "est", "to": "personne"}, {"arrows": "to", "color": "#110a1e", "from": "emy", "label": "est", "to": "femme"}, {"arrows": "to", "color": "#110a1e", "from": "emy", "label": "est", "to": "personne"}, {"arrows": "to", "color": "#110a1e", "from": "hyun", "label": "est", "to": "homme"}, {"arrows": "to", "color": "#110a1e", "from": "hyun", "label": "est", "to": "mortel"}, {"arrows": "to", "color": "#110a1e", "from": "hyun", "label": "est", "to": "personne"}, {"arrows": "to", "color": "#110a1e", "from": "lenora", "label": "est", "to": "femme"}, {"arrows": "to", "color": "#110a1e", "from": "lenora", "label": "est", "to": "personne"}, {"arrows": "to", "color": "#110a1e", "from": "towa", "label": "est", "to": "hanyo"}, {"arrows": "to", "color": "#110a1e", "from": "setsuna", "label": "est", "to": "hanyo"}, {"arrows": "to", "color": "#110a1e", "from": "towa", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#110a1e", "from": "setsuna", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#110a1e", "from": "moroha", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#110a1e", "from": "sesshomaru", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#110a1e", "from": "kagome", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#110a1e", "from": "neNoKubi", "label": "est", "to": "mechant"}, {"arrows": "to", "color": "#110a1e", "from": "neNoKubi", "label": "est", "to": "racine"}, {"arrows": "to", "color": "#110a1e", "from": "zero", "label": "est", "to": "mechant"}, {"arrows": "to", "color": "#110a1e", "from": "kirinmaru", "label": "est", "to": "mechant"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "layout",
+            "edges",
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.0,
+            "damping": 0.09,
+            "gravitationalConstant": -20000,
+            "springConstant": 0.01,
+            "springLength": 73
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

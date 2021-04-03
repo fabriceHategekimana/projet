@@ -26,24 +26,28 @@ def match(l1,l2):
 def variableIndex(command):
     variables= []
     values= []
-    column= ["subject","link","goal"]
+    column= ["","subject","","link","","goal"]
     tab= command
-    for i in range(len(tab)):
-        if tab[i] in ["A","B","C"]:
-            variables.append(column[i]+" as "+tab[i])
-        else:
+    for i in range(len(tab)): # on explore les éléments de la commande
+        if tab[i] in ["not",""]: # si on tombe sur un 'not' ou pas on l'ajoute par défaut
+            values.append(tab[i])
+        elif tab[i] in ["A","B","C"]: # si on trouve une variable
+            variables.append(column[i]+" as "+tab[i]) # on l'ajoute à la table des variables
+            values.pop() # on retire le 'not' ou le '' ajouté précédement dans values
+        else: # sinon on ajoute le nom de la column et la valeur
             values.append(column[i])
             values.append(tab[i])
     return tuple(variables), tuple(values)
 
 def createUnionQuery(command):
+    command= completeNot(command)
     variables, values = variableIndex(command)
     if len(variables) == 2:
-        tvalue= "%s='%s'" % values
         tvariable= "%s,%s" % variables
+        tvalue= "%s %s='%s'" % values
     elif len(variables) == 1:
         tvariable= "%s" % variables
-        tvalue= "%s='%s' and %s='%s'" % values
+        tvalue= "%s %s='%s' and %s %s='%s'" % values
     sql= "(select "+tvariable+" from facts where "+tvalue+")"
     return sql
 
@@ -51,13 +55,37 @@ def convert(exp):
     exp= exp.split(" ")
     res= []
     if isComplet(exp):
+        exp= completeNot(exp)
         t= tuple(exp)
-        sql= "(select * from facts where subject='%s' and link='%s' and goal='%s'" % t+")"
+        sql= "(select * from facts where %s subject='%s' and %s link='%s' and %s goal='%s'" % t+")"
+        #else:
+            #t= tuple(exp)
+            #sql= "(select * from facts where subject='%s' and link='%s' and goal='%s'" % t+")"
         return sql
     else:
         sql= createUnionQuery(exp)
-        #val= d.sqlQuery(sql)
         return sql
+
+def hasNot(exp):
+    return "not" in exp
+
+def completeNot(exp):
+    if hasNot(exp):
+        pos= exp.index("not") 
+        if pos == 0:
+            exp.insert(2, "")
+            exp.insert(4, "")
+        elif pos == 1:
+            exp.insert(0, "")
+            exp.insert(4, "")
+        elif pos == 2:
+            exp.insert(0, "")
+            exp.insert(2, "")
+    else:
+        exp.insert(0, "")
+        exp.insert(2, "")
+        exp.insert(4, "")
+    return exp
 
 def setAND(exp, varList):
     for i in range(len(varList)-1):
@@ -86,15 +114,3 @@ def union(exp):
         final[i]= final[i].replace("(","",1).replace(")","",1)
     return " UNION ".join(final)
         
-
-#PROPAGATION
-#if val == []:
-    #return []
-#elif:
-    #for v in val:
-        #newCommand= complete(v, command)
-        #res += union(newCommand)
-    #return res
-
-#cmd="emy A B OR A B emy"
-#print(union(cmd))

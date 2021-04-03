@@ -1,5 +1,6 @@
 from cmd import Cmd
 from mycompile import *
+from module_network import *
 import re
 import csv
 
@@ -97,6 +98,35 @@ class MyPrompt(Cmd):
                 print("Bad syntax. It should be: 'rename [target] [oldname] [newname]")
                 print("[target]= nodes or links")
 
+    def do_display(self, inp):
+        parser.parse("display "+inp)
+        tabInp= self.splitOneDimension(inp)
+        with open("res.txt") as f:
+            reader = csv.reader(f)
+            tab = list(reader)
+        facts=[]
+        for inp in tabInp:
+            for ligne in tab:
+                res= self.completeDisplay(ligne, inp).split(" ")
+                facts.append(res)
+        displayNetwork(facts)
+
+    def completeDisplay(self, ligne, inp):
+        substitution= ["A","B","C"]
+        res= inp.replace("not ","")
+        for i in range(len(ligne)):
+            res= res.replace(substitution[i], ligne[i])
+        return res
+
+    def splitOneDimension(self, inp):
+        final= []
+        tab1= inp.split(" or ")
+        for t1 in  tab1:
+            tab2= t1.split(" and ")
+            for t2 in tab2:
+                final.append(t2)
+        return final
+
     def sql(self,inp):
         try:
             print(d.sqlQuery(inp))
@@ -104,10 +134,11 @@ class MyPrompt(Cmd):
             print("Error this is not a sql query")
 
     def union(self, inp):
-        try:
-            print(union(inp))
-        except:
-            print("Error this is not a predicat")
+        print(union(inp))
+        #try:
+            #print(union(inp))
+        #except:
+            #print("Error this is not a predicat")
 
     def normal(self,inp):
             tab= inp.split(" ")

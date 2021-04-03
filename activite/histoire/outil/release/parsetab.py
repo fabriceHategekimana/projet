@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'ADD AND CHECK DELETE DISPLAY ENT IF LINKS NODES NUM OR RULES THEN VAR\n    calc : exp\n    \n    exp : ADD modify\n    \n    exp : DELETE fact2\n    \n    exp : DELETE RULES numlist \n    \n    numlist : NUM numlist\n    \n    numlist : \n    \n    exp : CHECK logalg\n        | DISPLAY logalg\n    \n    exp : CHECK RULES\n    \n    exp : CHECK LINKS\n    \n    exp : CHECK NODES\n    \n    modify : fact\n    \n    modify : rule\n    \n    fact : ENT ENT ENT\n    \n    rule : IF logalg2 THEN conj2\n    \n    logalg2 : fact3 more2\n    \n    logalg : fact2 more\n    \n    more : op fact2 more\n    \n    more2 : op2 fact3 more2\n    \n    more : \n    \n    more2 : \n    \n    op : AND\n       | OR\n    \n    op2 : AND\n        | OR\n    \n    conj2 : fact3 moreconj2\n    \n    moreconj2 : AND fact3 moreconj2\n    \n    moreconj2 : \n    \n    fact2 : el el el\n    \n    fact3 : el el el\n    \n    el : ENT\n       | VAR\n    '
+_lr_signature = 'ADD AND CHECK DELETE DISPLAY ENT IF LINKS NODES NOT NUM OR RULES THEN VAR\n    calc : exp\n    \n    exp : ADD modify\n    \n    exp : DELETE fact2\n    \n    exp : DELETE RULES numlist \n    \n    numlist : NUM numlist\n    \n    numlist : \n    \n    exp : CHECK logalg\n        | DISPLAY logalg\n    \n    exp : CHECK RULES\n    \n    exp : CHECK LINKS\n    \n    exp : CHECK NODES\n    \n    modify : fact\n    \n    modify : rule\n    \n    fact : ENT ENT ENT\n         | NOT ENT ENT ENT\n         | ENT NOT ENT ENT\n         | ENT ENT NOT ENT\n    \n    rule : IF logalg2 THEN conj2\n    \n    logalg2 : fact3 more2\n    \n    logalg : fact2 more\n    \n    more : op fact2 more\n    \n    more2 : op2 fact3 more2\n    \n    more : \n    \n    more2 : \n    \n    op : AND\n       | OR\n    \n    op2 : AND\n        | OR\n    \n    conj2 : fact3 moreconj2\n    \n    moreconj2 : AND fact3 moreconj2\n    \n    moreconj2 : \n    \n    fact2 : el el el\n    \n    fact3 : el el el\n    \n    el : ENT\n       | NOT ENT\n       | VAR\n    '
     
-_lr_action_items = {'ADD':([0,],[3,]),'DELETE':([0,],[4,]),'CHECK':([0,],[5,]),'DISPLAY':([0,],[6,]),'$end':([1,2,7,8,9,12,13,15,16,17,18,19,20,21,22,27,28,30,34,41,42,43,44,45,47,48,49,52,53,],[0,-1,-2,-12,-13,-3,-6,-31,-32,-7,-9,-10,-11,-20,-8,-4,-6,-17,-14,-5,-29,-20,-15,-28,-30,-18,-26,-28,-27,]),'ENT':([3,4,5,6,10,11,14,15,16,23,26,29,31,32,33,35,37,38,39,40,50,],[10,15,15,15,23,15,15,-31,-32,34,15,15,15,-22,-23,15,15,-24,-25,15,15,]),'IF':([3,],[11,]),'RULES':([4,5,],[13,18,]),'VAR':([4,5,6,11,14,15,16,26,29,31,32,33,35,37,38,39,40,50,],[16,16,16,16,16,-31,-32,16,16,16,-22,-23,16,16,-24,-25,16,16,]),'LINKS':([5,],[19,]),'NODES':([5,],[20,]),'NUM':([13,28,],[28,28,]),'AND':([15,16,21,25,42,43,45,46,47,52,],[-31,-32,32,38,-29,32,50,38,-30,50,]),'OR':([15,16,21,25,42,43,46,47,],[-31,-32,33,39,-29,33,39,-30,]),'THEN':([15,16,24,25,36,46,47,51,],[-31,-32,35,-21,-16,-21,-30,-19,]),}
+_lr_action_items = {'ADD':([0,],[3,]),'DELETE':([0,],[4,]),'CHECK':([0,],[5,]),'DISPLAY':([0,],[6,]),'$end':([1,2,7,8,9,13,14,16,18,19,20,21,22,23,24,31,32,34,35,39,49,50,51,52,53,54,55,56,58,59,60,63,64,],[0,-1,-2,-12,-13,-3,-6,-34,-36,-7,-9,-10,-11,-23,-8,-4,-6,-35,-20,-14,-5,-32,-23,-17,-16,-15,-18,-31,-33,-21,-29,-31,-30,]),'ENT':([3,4,5,6,10,11,12,15,16,17,18,25,26,27,30,33,34,36,37,38,40,41,42,43,45,46,47,48,61,],[10,16,16,16,25,27,16,16,-34,34,-36,39,41,42,16,16,-35,16,-25,-26,52,53,54,16,16,-27,-28,16,16,]),'NOT':([3,4,5,6,10,12,15,16,18,25,30,33,34,36,37,38,43,45,46,47,48,61,],[11,17,17,17,26,17,17,-34,-36,40,17,17,-35,17,-25,-26,17,17,-27,-28,17,17,]),'IF':([3,],[12,]),'RULES':([4,5,],[14,20,]),'VAR':([4,5,6,12,15,16,18,30,33,34,36,37,38,43,45,46,47,48,61,],[18,18,18,18,18,-34,-36,18,18,-35,18,-25,-26,18,18,-27,-28,18,18,]),'LINKS':([5,],[21,]),'NODES':([5,],[22,]),'NUM':([14,32,],[32,32,]),'AND':([16,18,23,29,34,50,51,56,57,58,63,],[-34,-36,37,46,-35,-32,37,61,46,-33,61,]),'OR':([16,18,23,29,34,50,51,57,58,],[-34,-36,38,47,-35,-32,38,47,-33,]),'THEN':([16,18,28,29,34,44,57,58,62,],[-34,-36,43,-24,-35,-19,-24,-33,-22,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'calc':([0,],[1,]),'exp':([0,],[2,]),'modify':([3,],[7,]),'fact':([3,],[8,]),'rule':([3,],[9,]),'fact2':([4,5,6,31,],[12,21,21,43,]),'el':([4,5,6,11,14,26,29,31,35,37,40,50,],[14,14,14,26,29,40,42,14,26,26,47,26,]),'logalg':([5,6,],[17,22,]),'logalg2':([11,],[24,]),'fact3':([11,35,37,50,],[25,45,46,52,]),'numlist':([13,28,],[27,41,]),'more':([21,43,],[30,48,]),'op':([21,43,],[31,31,]),'more2':([25,46,],[36,51,]),'op2':([25,46,],[37,37,]),'conj2':([35,],[44,]),'moreconj2':([45,52,],[49,53,]),}
+_lr_goto_items = {'calc':([0,],[1,]),'exp':([0,],[2,]),'modify':([3,],[7,]),'fact':([3,],[8,]),'rule':([3,],[9,]),'fact2':([4,5,6,36,],[13,23,23,51,]),'el':([4,5,6,12,15,30,33,36,43,45,48,61,],[15,15,15,30,33,48,50,15,30,30,58,30,]),'logalg':([5,6,],[19,24,]),'logalg2':([12,],[28,]),'fact3':([12,43,45,61,],[29,56,57,63,]),'numlist':([14,32,],[31,49,]),'more':([23,51,],[35,59,]),'op':([23,51,],[36,36,]),'more2':([29,57,],[44,62,]),'op2':([29,57,],[45,45,]),'conj2':([43,],[55,]),'moreconj2':([56,63,],[60,64,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -27,36 +27,40 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> calc","S'",1,None,None,None),
-  ('calc -> exp','calc',1,'p_calc','mycompile.py',66),
-  ('exp -> ADD modify','exp',2,'p_exp_exp1_ADD','mycompile.py',74),
-  ('exp -> DELETE fact2','exp',2,'p_exp_exp1_DELETE','mycompile.py',80),
-  ('exp -> DELETE RULES numlist','exp',3,'p_exp_delete_rules','mycompile.py',89),
-  ('numlist -> NUM numlist','numlist',2,'p_exp_numlist','mycompile.py',99),
-  ('numlist -> <empty>','numlist',0,'p_exp_numlist_void','mycompile.py',105),
-  ('exp -> CHECK logalg','exp',2,'p_exp_exp2','mycompile.py',111),
-  ('exp -> DISPLAY logalg','exp',2,'p_exp_exp2','mycompile.py',112),
-  ('exp -> CHECK RULES','exp',2,'p_exp_check_rule','mycompile.py',120),
-  ('exp -> CHECK LINKS','exp',2,'p_exp_check_links','mycompile.py',127),
-  ('exp -> CHECK NODES','exp',2,'p_exp_check_nodes','mycompile.py',134),
-  ('modify -> fact','modify',1,'p_exp_modify_fact','mycompile.py',141),
-  ('modify -> rule','modify',1,'p_exp_modify_rule','mycompile.py',149),
-  ('fact -> ENT ENT ENT','fact',3,'p_exp_fact','mycompile.py',160),
-  ('rule -> IF logalg2 THEN conj2','rule',4,'p_exp_rule','mycompile.py',166),
-  ('logalg2 -> fact3 more2','logalg2',2,'p_exp_logalg2','mycompile.py',172),
-  ('logalg -> fact2 more','logalg',2,'p_exp_logalg','mycompile.py',178),
-  ('more -> op fact2 more','more',3,'p_exp_more','mycompile.py',184),
-  ('more2 -> op2 fact3 more2','more2',3,'p_exp_more2','mycompile.py',190),
-  ('more -> <empty>','more',0,'p_exp_more_empty','mycompile.py',196),
-  ('more2 -> <empty>','more2',0,'p_exp_more2_empty','mycompile.py',202),
-  ('op -> AND','op',1,'p_exp_op','mycompile.py',208),
-  ('op -> OR','op',1,'p_exp_op','mycompile.py',209),
-  ('op2 -> AND','op2',1,'p_exp_op2','mycompile.py',215),
-  ('op2 -> OR','op2',1,'p_exp_op2','mycompile.py',216),
-  ('conj2 -> fact3 moreconj2','conj2',2,'p_exp_conj2','mycompile.py',228),
-  ('moreconj2 -> AND fact3 moreconj2','moreconj2',3,'p_exp_AND2','mycompile.py',234),
-  ('moreconj2 -> <empty>','moreconj2',0,'p_exp_moreconj2','mycompile.py',240),
-  ('fact2 -> el el el','fact2',3,'p_exp_predicat','mycompile.py',258),
-  ('fact3 -> el el el','fact3',3,'p_exp_fact3','mycompile.py',267),
-  ('el -> ENT','el',1,'p_exp_term','mycompile.py',273),
-  ('el -> VAR','el',1,'p_exp_term','mycompile.py',274),
+  ('calc -> exp','calc',1,'p_calc','mycompile.py',68),
+  ('exp -> ADD modify','exp',2,'p_exp_exp1_ADD','mycompile.py',76),
+  ('exp -> DELETE fact2','exp',2,'p_exp_exp1_DELETE','mycompile.py',82),
+  ('exp -> DELETE RULES numlist','exp',3,'p_exp_delete_rules','mycompile.py',91),
+  ('numlist -> NUM numlist','numlist',2,'p_exp_numlist','mycompile.py',100),
+  ('numlist -> <empty>','numlist',0,'p_exp_numlist_void','mycompile.py',106),
+  ('exp -> CHECK logalg','exp',2,'p_exp_exp2','mycompile.py',112),
+  ('exp -> DISPLAY logalg','exp',2,'p_exp_exp2','mycompile.py',113),
+  ('exp -> CHECK RULES','exp',2,'p_exp_check_rule','mycompile.py',122),
+  ('exp -> CHECK LINKS','exp',2,'p_exp_check_links','mycompile.py',129),
+  ('exp -> CHECK NODES','exp',2,'p_exp_check_nodes','mycompile.py',136),
+  ('modify -> fact','modify',1,'p_exp_modify_fact','mycompile.py',143),
+  ('modify -> rule','modify',1,'p_exp_modify_rule','mycompile.py',151),
+  ('fact -> ENT ENT ENT','fact',3,'p_exp_fact','mycompile.py',165),
+  ('fact -> NOT ENT ENT ENT','fact',4,'p_exp_fact','mycompile.py',166),
+  ('fact -> ENT NOT ENT ENT','fact',4,'p_exp_fact','mycompile.py',167),
+  ('fact -> ENT ENT NOT ENT','fact',4,'p_exp_fact','mycompile.py',168),
+  ('rule -> IF logalg2 THEN conj2','rule',4,'p_exp_rule','mycompile.py',174),
+  ('logalg2 -> fact3 more2','logalg2',2,'p_exp_logalg2','mycompile.py',180),
+  ('logalg -> fact2 more','logalg',2,'p_exp_logalg','mycompile.py',186),
+  ('more -> op fact2 more','more',3,'p_exp_more','mycompile.py',192),
+  ('more2 -> op2 fact3 more2','more2',3,'p_exp_more2','mycompile.py',198),
+  ('more -> <empty>','more',0,'p_exp_more_empty','mycompile.py',204),
+  ('more2 -> <empty>','more2',0,'p_exp_more2_empty','mycompile.py',210),
+  ('op -> AND','op',1,'p_exp_op','mycompile.py',216),
+  ('op -> OR','op',1,'p_exp_op','mycompile.py',217),
+  ('op2 -> AND','op2',1,'p_exp_op2','mycompile.py',223),
+  ('op2 -> OR','op2',1,'p_exp_op2','mycompile.py',224),
+  ('conj2 -> fact3 moreconj2','conj2',2,'p_exp_conj2','mycompile.py',230),
+  ('moreconj2 -> AND fact3 moreconj2','moreconj2',3,'p_exp_AND2','mycompile.py',236),
+  ('moreconj2 -> <empty>','moreconj2',0,'p_exp_moreconj2','mycompile.py',242),
+  ('fact2 -> el el el','fact2',3,'p_exp_predicat','mycompile.py',248),
+  ('fact3 -> el el el','fact3',3,'p_exp_fact3','mycompile.py',257),
+  ('el -> ENT','el',1,'p_exp_term','mycompile.py',263),
+  ('el -> NOT ENT','el',2,'p_exp_term','mycompile.py',264),
+  ('el -> VAR','el',1,'p_exp_term','mycompile.py',265),
 ]

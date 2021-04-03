@@ -1,6 +1,7 @@
 import ply.lex as lex
 import ply.yacc as yacc
 import sys
+import csv
 from module_union import *
 from module_db import *
 from module_propagation import *
@@ -8,6 +9,11 @@ from module_propagation import *
 typeTable= {}
 VALUES= []
 d= Data()
+
+def write(tab):
+    with open("res.txt", 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerows(tab)
 
 # _                       
 #| |    _____  _____ _ __ 
@@ -25,6 +31,7 @@ reserved = {
         "if" : "IF",
         "then" : "THEN",
         "rules" : "RULES",
+        "not" : "NOT",
         "links" : "LINKS",
         "nodes" : "NODES"
         }
@@ -66,6 +73,7 @@ def p_calc(p):
     '''
     calc : exp
     '''
+    write(p[1])
     for el in p[1]:
         print(el)
     print("+--------------+")
@@ -162,6 +170,9 @@ def p_exp_modify_rule(p):
 def p_exp_fact(p):
     '''
     fact : ENT ENT ENT
+         | NOT ENT ENT ENT
+         | ENT NOT ENT ENT
+         | ENT ENT NOT ENT
     '''
     p[0] = p[1:]
 
@@ -221,12 +232,6 @@ def p_exp_op2(p):
     '''
     p[0] = p[1].upper() #mark
 
-#def p_exp_conj(p):
-    #'''
-    #conj : fact2 moreconj
-    #'''
-    #p[0] = p[1]+p[2]
-
 def p_exp_conj2(p):
     '''
     conj2 : fact3 moreconj2
@@ -244,18 +249,6 @@ def p_exp_moreconj2(p):
     moreconj2 : 
     '''
     p[0] = "" 
-
-#def p_exp_AND(p):
-    #'''
-    #moreconj : AND fact2 moreconj
-    #'''
-    #p[0] = p[1].upper()+p[2]+p[3]
-
-#def p_exp_moreconj(p):
-    #'''
-    #moreconj : 
-    #'''
-    #p[0] = "" 
 
 def p_exp_predicat(p):
     '''
@@ -275,9 +268,10 @@ def p_exp_fact3(p):
 def p_exp_term(p):
     '''
     el : ENT
+       | NOT ENT
        | VAR
     '''
-    p[0] = p[1]
+    p[0] = " ".join(p[1:])
 
 def p_error(p):
     print("Error bad syntax")
