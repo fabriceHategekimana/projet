@@ -1,6 +1,5 @@
 import ply.lex as lex
 import ply.yacc as yacc
-import sys
 import csv
 from module_union import *
 from module_db import *
@@ -10,8 +9,8 @@ typeTable= {}
 VALUES= []
 d= Data()
 
-def write(tab):
-    with open("res.txt", 'w', newline='') as f:
+def write(tab, fname):
+    with open(fname, 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerows(tab)
 
@@ -73,7 +72,7 @@ def p_calc(p):
     '''
     calc : exp
     '''
-    write(p[1])
+    write(p[1], "res.txt")
     for el in p[1]:
         print(el)
     print("+--------------+")

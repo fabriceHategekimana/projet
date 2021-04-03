@@ -110,6 +110,25 @@ class MyPrompt(Cmd):
                 res= self.completeDisplay(ligne, inp).split(" ")
                 facts.append(res)
         displayNetwork(facts)
+        write(facts, "append.csv")
+
+    def do_append(self, inp):
+        parser.parse("display "+inp)
+        tabInp= self.splitOneDimension(inp)
+        with open("res.txt") as f:
+            reader = csv.reader(f)
+            tab = list(reader)
+        with open("append.csv") as f:
+            reader = csv.reader(f)
+            oldFacts = list(reader) # cette table est déjà formatée
+        facts=[]
+        for inp in tabInp:
+            for ligne in tab:
+                res= self.completeDisplay(ligne, inp).split(" ")
+                facts.append(res)
+        facts += oldFacts
+        displayNetwork(facts)
+        write(facts, "append.csv")
 
     def completeDisplay(self, ligne, inp):
         substitution= ["A","B","C"]

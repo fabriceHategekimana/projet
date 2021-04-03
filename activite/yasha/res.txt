@@ -1,1 +1,15 @@
-v,a,l,u,e, ,a,d,d,e,d
+neNoKubi,mechant
+kirinmaru,mechant
+zero,mechant
+riku,mechant
+inuyasha,oldteam
+sango,oldteam
+miroku,oldteam
+kagome,oldteam
+setsuna,chasseur
+hisui,chasseur
+sango,chasseur
+kohaku,chasseur
+towa,mc
+setsuna,mc
+moroha,mc
