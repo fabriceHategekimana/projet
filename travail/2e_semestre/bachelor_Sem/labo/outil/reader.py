@@ -2,10 +2,10 @@
 from evaluation import *
 
 RULES= [
-        ['add ( n ; o )', 'n -> m ; o -> p', 'add ( m , p )'],
-        ['sub ( n ; o )', 'n -> m ; o -> p', 'sub ( m , p )'],
-        ['mul ( n ; o )', 'n -> m ; o -> p', 'mul ( m , p )'],
-        ['div ( n ; o )', 'n -> m ; o -> p', 'div ( m , p )']
+        ['add(n,o)', 'n->m,o->p', 'add(m,p)'],
+        ['sub(n,o)', 'n->m,o->p', 'sub(m,p)'],
+        ['mul(n,o)', 'n->m,o->p', 'mul(m,p)'],
+        ['div(n,o)', 'n->m,o->p', 'div(m,p)']
         ]
 
 def syntaxChecking(exp):
@@ -24,11 +24,13 @@ def decompose(exp):
     print([entete, tab[0], tab[1]])
     RULES.append([entete, tab[0], tab[1]])
 
+#------------------------------------------
+
 f = open("test.fa", "r")
 count= 0
 for line in f:
     count += 1
-    #res= syntaxChecking(line)
+    res= syntaxChecking("check "+line)
     res= line[:-1]
     if res == "error":
         print("Error in line "+ str(count)+": '"+line[:-1]+"'")

@@ -69,6 +69,8 @@ liste: [], [1,2,3], ...
 - concatenation **concat(l1, l2)**  => [1,2,3,4,5,6]  
 - insertion  **insert(l1, 0)**  => [0,1,2,3]  
 - ajout  **append(l2, 7)**  => [4,5,6,7]  
+- retrait  **remove(l2, 1)**  => [4,6]  
+- retrait  **removeLast(l2)**  => [4,5]  
 
 ----
 

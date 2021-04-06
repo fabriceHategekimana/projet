@@ -4,6 +4,7 @@ from module_network import *
 import re
 import csv
 
+
 class MyPrompt(Cmd):
     logo= ""+"|"
     prompt = logo+'normal> '
@@ -59,8 +60,6 @@ class MyPrompt(Cmd):
         else:
             print("ce mode ne produit rien")
 
-    def do_completion(self, inp):
-        print(self.COMPLETIONLIST)
 
     def do_export(self, inp):
         tab= inp.split(" ")
@@ -167,22 +166,10 @@ class MyPrompt(Cmd):
                 self.repeate(i, tab[1:])
             else:
                 parser.parse(inp)
-                self.completion()
-
-    def completion(self):
-        for val in VALUES:
-            for v in val:
-                if v not in completionList:
-                    self.COMPLETIONLIST.append(v)
 
     def completedefault(self, text, line, begidx, endidx):
-        if not text:
-            completions = self.COMPLETIONLIST[:]
-        else:
-            completions = [ f
-                            for f in self.COMPLETIONLIST
-                            if f.startswith(text)
-                            ]
+        sql= "select distinct subject from facts where subject like '"+text+"%' union select distinct link from facts where link like '"+text+"%' union select distinct goal from facts where goal like '"+text+"%'"
+        completions= self.simpleList(d.sqlQuery(sql))
         return completions
 
     def toCSV(self, name, csvFormat):
@@ -213,6 +200,10 @@ class MyPrompt(Cmd):
         except:
             print("The csv file has not the good format: ('subject,target,link' or 'subject,goal,link')")
 
-
+    def simpleList(self, list2d):
+        final= []
+        for element in list2d:
+            final.append(element[0])
+        return final
 
 MyPrompt().cmdloop()

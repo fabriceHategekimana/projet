@@ -70,15 +70,20 @@ def evalNativeType(exp):
     return res
 
 def evaluateExpression(expression, data):
+    print("subEval de l'expression: ", expression)
     res= subEval(expression) 
     if res == "error":
+        print("erreur: on développe")
         res= evaluateExpressionHelper(expression, data)
+    print("résultat rendu par l'interpréteur: ", res)
     return res
 
 def evaluateExpressionHelper(expression, data):
     print("expression: ", expression)
+    print("data: ", data)
     final= ""
-    selection= data
+    selection= getSelection(expression, data)
+    print("selection: ", selection)
     for rule in selection:
         print("--------------------")
         print("règle choisie: ", rule)
@@ -109,9 +114,23 @@ def evaluateExpressionHelper(expression, data):
             else:
                 conclusion= rule[2].split(symbol(rule[2]))[1]
             print("conclusion: ", conclusion)
-            final= conclusion
+            final= evaluateExpression(conclusion, data)
             break
     return final
+
+def getSelection(exp, data):
+    final= []
+    name= getName(exp)
+    for rule in data:
+        if getName(rule[0]) == name:
+            final.append(rule)
+    return final
+
+def getName(exp):
+    name= re.findall("\w+\(", exp)
+    if name == []:
+        name = [""]
+    return name[0]
         
 def union(exp1, exp2):
     if exp1[0] == "<":
@@ -135,11 +154,11 @@ def unionExpression(exp1,exp2):
     res= False
     exp1= exp1[exp1.find("(")+1:exp1.rfind(")")] #pour enlever les espaces en trop du parser
     exp2= exp2[exp2.find("(")+1:exp2.rfind(")")]
-    tab1= exp1.split(";")
-    tab2= exp2.split(";")
+    tab1= exp1.split(",")
+    tab2= exp2.split(",")
 
+    final= []
     if len(tab1) == len(tab2):
-        final= []
         for i in range(len(tab1)):
             if isTerminal(tab1[i]):
                 if tab1[i] != tab2[i]:

@@ -1,0 +1,17 @@
+subject,link,goal
+tragedie,est,evenement
+orphelinat,est,arc
+grandeGuerre,est,event
+ageDesMutants,est,event
+attaqueDeLAmbassade,est,event
+renversementDeLaMonarchie,est,event
+orphelinat,precede,ageDesMutants
+explorationDuGetho,est,event
+explorationDuGetho,precede,ageDesMutants
+orphelinat,avant,ageDesMutants
+ageDesMutants,apres,orphelinat
+orphelinat,est,evenement
+ageDesMutants,est,evenement
+explorationDuGetho,avant,ageDesMutants
+ageDesMutants,apres,explorationDuGetho
+explorationDuGetho,est,evenement

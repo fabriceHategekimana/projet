@@ -141,7 +141,7 @@ def p_exp_check_nodes(p):
     '''
     exp : CHECK NODES
     '''
-    exp= "select distinct subject from facts inner join (select distinct goal from facts);"
+    exp= "select distinct subject from facts union select distinct goal from facts;"
     p[0] = d.sqlQuery(exp)
 
 def p_exp_modify_fact(p):

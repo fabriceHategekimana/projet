@@ -23,6 +23,12 @@
         
 
         
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
 
         
 </style>
@@ -32,6 +38,8 @@
 <body>
 <div id = "mynetwork"></div>
 
+
+<div id = "config"></div>
 
 <script type="text/javascript">
 
@@ -50,16 +58,56 @@
         
 
         // parsing and collecting nodes and edges from the python
-        nodes = new vis.DataSet([{"font": {"color": "white"}, "id": "jordan", "label": "jordan", "shape": "dot"}, {"font": {"color": "white"}, "id": "policierHomme", "label": "policierHomme", "shape": "dot"}, {"font": {"color": "white"}, "id": "groupe", "label": "groupe", "shape": "dot"}, {"font": {"color": "white"}, "id": "policierFemme", "label": "policierFemme", "shape": "dot"}, {"font": {"color": "white"}, "id": "zhuan", "label": "zhuan", "shape": "dot"}, {"font": {"color": "white"}, "id": "eleanor", "label": "eleanor", "shape": "dot"}, {"font": {"color": "white"}, "id": "profFemme", "label": "profFemme", "shape": "dot"}, {"font": {"color": "white"}, "id": "emy", "label": "emy", "shape": "dot"}, {"font": {"color": "white"}, "id": "rachel", "label": "rachel", "shape": "dot"}, {"font": {"color": "white"}, "id": "chefWingForce", "label": "chefWingForce", "shape": "dot"}, {"font": {"color": "white"}, "id": "filsDirecteur", "label": "filsDirecteur", "shape": "dot"}, {"font": {"color": "white"}, "id": "personnage", "label": "personnage", "shape": "dot"}, {"font": {"color": "white"}, "id": "tiago", "label": "tiago", "shape": "dot"}, {"font": {"color": "white"}, "id": "francois", "label": "francois", "shape": "dot"}, {"font": {"color": "white"}, "id": "mutant", "label": "mutant", "shape": "dot"}, {"font": {"color": "white"}, "id": "profPlusJeune", "label": "profPlusJeune", "shape": "dot"}, {"font": {"color": "white"}, "id": "rebel", "label": "rebel", "shape": "dot"}, {"font": {"color": "white"}, "id": "leon", "label": "leon", "shape": "dot"}, {"font": {"color": "white"}, "id": "lenora", "label": "lenora", "shape": "dot"}, {"font": {"color": "white"}, "id": "bourgeoisie", "label": "bourgeoisie", "shape": "dot"}, {"font": {"color": "white"}, "id": "karah", "label": "karah", "shape": "dot"}, {"font": {"color": "white"}, "id": "hyun", "label": "hyun", "shape": "dot"}, {"font": {"color": "white"}, "id": "profHomme", "label": "profHomme", "shape": "dot"}, {"font": {"color": "white"}, "id": "huugo", "label": "huugo", "shape": "dot"}, {"font": {"color": "white"}, "id": "groupePrincipal", "label": "groupePrincipal", "shape": "dot"}, {"font": {"color": "white"}, "id": "valentino", "label": "valentino", "shape": "dot"}, {"font": {"color": "white"}, "id": "hugo", "label": "hugo", "shape": "dot"}, {"font": {"color": "white"}, "id": "liberty", "label": "liberty", "shape": "dot"}, {"font": {"color": "white"}, "id": "arthur", "label": "arthur", "shape": "dot"}, {"font": {"color": "white"}, "id": "directeur", "label": "directeur", "shape": "dot"}, {"font": {"color": "white"}, "id": "alfred", "label": "alfred", "shape": "dot"}]);
-        edges = new vis.DataSet([{"arrows": "to", "color": "#bfc1b6", "from": "emy", "label": "dans", "to": "groupePrincipal"}, {"arrows": "to", "color": "#bfc1b6", "from": "francois", "label": "dans", "to": "groupePrincipal"}, {"arrows": "to", "color": "#bfc1b6", "from": "tiago", "label": "dans", "to": "groupePrincipal"}, {"arrows": "to", "color": "#bfc1b6", "from": "hyun", "label": "dans", "to": "groupePrincipal"}, {"arrows": "to", "color": "#bfc1b6", "from": "lenora", "label": "dans", "to": "groupePrincipal"}, {"arrows": "to", "color": "#bfc1b6", "from": "rachel", "label": "dans", "to": "rebel"}, {"arrows": "to", "color": "#bfc1b6", "from": "leon", "label": "dans", "to": "rebel"}, {"arrows": "to", "color": "#bfc1b6", "from": "hugo", "label": "dans", "to": "rebel"}, {"arrows": "to", "color": "#bfc1b6", "from": "zhuan", "label": "dans", "to": "rebel"}, {"arrows": "to", "color": "#bfc1b6", "from": "arthur", "label": "dans", "to": "bourgeoisie"}, {"arrows": "to", "color": "#bfc1b6", "from": "rachel", "label": "dans", "to": "mutant"}, {"arrows": "to", "color": "#bfc1b6", "from": "leon", "label": "dans", "to": "mutant"}, {"arrows": "to", "color": "#bfc1b6", "from": "huugo", "label": "dans", "to": "mutant"}, {"arrows": "to", "color": "#bfc1b6", "from": "jordan", "label": "dans", "to": "mutant"}, {"arrows": "to", "color": "#bfc1b6", "from": "hugo", "label": "dans", "to": "mutant"}, {"arrows": "to", "color": "#7f1390", "from": "groupePrincipal", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "groupePrincipal", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "groupePrincipal", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "groupePrincipal", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "groupePrincipal", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "rebel", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "rebel", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "rebel", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "rebel", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "bourgeoisie", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "mutant", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "mutant", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "mutant", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "mutant", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "mutant", "label": "est", "to": "groupe"}, {"arrows": "to", "color": "#7f1390", "from": "emy", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "francois", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "hyun", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "tiago", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "leon", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "rachel", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "huugo", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "directeur", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "filsDirecteur", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "liberty", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "chefWingForce", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "arthur", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "karah", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "jordan", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "zhuan", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "valentino", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "alfred", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "eleanor", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "policierFemme", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "policierHomme", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "profHomme", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "profFemme", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "profPlusJeune", "label": "est", "to": "personnage"}, {"arrows": "to", "color": "#7f1390", "from": "lenora", "label": "est", "to": "personnage"}]);
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "id": "socrate", "label": "socrate", "shape": "dot"}, {"font": {"color": "white"}, "id": "homme", "label": "homme", "shape": "dot"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "#2eb943", "from": "socrate", "label": "est", "to": "homme"}]);
 
         // adding nodes and edges to the graph
         data = {nodes: nodes, edges: edges};
 
-        var options = {"manipulation": {"enabled": true}, "physics": {"enabled": false}, "interaction": {"multiselect": true, "navigationButtons": true}, "configure": {"enabled": true, "filter": "layout,physics", "showButton": true}, "edges": {"smooth": {"enabled": false}}};
+        var options = {
+    "configure": {
+        "enabled": true
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.0,
+            "damping": 0.09,
+            "gravitationalConstant": -20000,
+            "springConstant": 0.01,
+            "springLength": 73
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
         
         
 
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
         
 
         network = new vis.Network(container, data, options);
