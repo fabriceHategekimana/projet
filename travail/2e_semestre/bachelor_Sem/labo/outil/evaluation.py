@@ -17,20 +17,20 @@ def evaluateState(state):
 
 def symbol(statement):
     res= ""
-    if statement.find(" = ") > -1:
-        res= " = "
-    elif statement.find(" > ") > -1:
-        res= " > "
-    elif statement.find(" >= ") > -1:
-        res= " >= "
-    elif statement.find(" < ") > -1:
-        res= " < "
-    elif statement.find(" <= ") > -1:
-        res= " <= "
-    elif statement.find(" -> ") > -1:
-        res= " -> "
-    elif statement.find(" in ") > -1:
-        res= " in "
+    if statement.find("=") > -1:
+        res= "="
+    elif statement.find(">") > -1:
+        res=">"
+    elif statement.find(">=") > -1:
+        res=">="
+    elif statement.find("<") > -1:
+        res="<"
+    elif statement.find("<=") > -1:
+        res="<="
+    elif statement.find("->") > -1:
+        res="->"
+    elif statement.find("in") > -1:
+        res="in"
     return res
 
 def test(expression, substitution, data):
@@ -38,14 +38,14 @@ def test(expression, substitution, data):
     expression= complete(expression, substitution)
     print("expression à tester: ", expression)
     sym= symbol(expression)
-    if sym in [" = ", " > ", " >= ", " < ", " <= "]:
-        if sym == " = ":
-            expression= expression.replace(" = ", " == ")
+    if sym in ["=",">",">=","<","<="]:
+        if sym =="=":
+            expression= expression.replace("=","==")
         val= subEval(expression)
         print("résultat du test de comparaison: ", val)
         if val == "True":
             res = substitution
-    elif sym == " in ":
+    elif sym == "in":
         val= evalNativeType(expression)
         print("résultat du test in 1: ", val)
         if val == False:
@@ -56,7 +56,7 @@ def test(expression, substitution, data):
                 #res= val"
         else:
             res= True
-    elif sym == " -> ":
+    elif sym == "->":
         res= evaluateExpression(expression, data)
         print("résultat du test -> : ", res)
     return res
@@ -80,7 +80,6 @@ def evaluateExpression(expression, data):
 
 def evaluateExpressionHelper(expression, data):
     print("expression: ", expression)
-    print("data: ", data)
     final= ""
     selection= getSelection(expression, data)
     print("selection: ", selection)
@@ -156,6 +155,9 @@ def unionExpression(exp1,exp2):
     exp2= exp2[exp2.find("(")+1:exp2.rfind(")")]
     tab1= exp1.split(",")
     tab2= exp2.split(",")
+
+    print("tab1", tab1)
+    print("tab2", tab2)
 
     final= []
     if len(tab1) == len(tab2):

@@ -33,8 +33,3 @@ Disposition: Tables
 - devinnettes images
 - devinnettes définition, mot, geste
 - Jeux de vitesse lecture biblique (cadeaux sur la table)
-
-Mardi: feed-back:  
-
-Informer les gens
-

@@ -142,6 +142,7 @@ def p_start(p):
     start : CALC calc
           | CHECK check
     '''
+    #print(p[1]+" "+p[2])
     #print("action: "+p[1])
                                
 #      _               _             
@@ -161,41 +162,40 @@ def p_check1(p):
     '''
     check1 : c_premises MINUS MINUS c_conclusion
     '''
-    write(p[1][:-1]+" -- "+p[4])
-    print(p[1][:-1]+" -- "+p[4])
+    write(p[1]+"--"+p[4])
     p[0]= "okay"
 
 def p_check2(p):
     '''
     check2 : MINUS MINUS c_conclusion
     '''
-    write(" -- "+p[3])
-    print(" -- "+p[3])
+    write("--"+p[3])
+    #print("--"+p[3])
     p[0]= "okay"
 
 def p_premisses1(p):
     '''
     c_premises : c_statement
     '''
-    p[0] = " ".join(p[1:])
+    p[0] = "".join(p[1:])
 
 def p_premisses2(p):
     '''
     c_premises : c_statement c_more
     '''
-    p[0] = " ".join(p[1:])
+    p[0] = "".join(p[1:])
 
 def p_more1(p):
     '''
     c_more : COMA c_statement
     '''
-    p[0] = "; "+p[2]
+    p[0] = ";"+p[2]
 
 def p_more2(p):
     '''
     c_more : COMA c_statement c_more
     '''
-    p[0] = "; "+p[2]+p[3]
+    p[0] = ";"+p[2]+p[3]
 
 def p_more3(p):
     '''
@@ -205,16 +205,15 @@ def p_more3(p):
 
 def p_statement(p):
     '''
-    c_statement : c_exp c_sym c_statement2
+    c_statement : c_exp comparator c_statement2
     '''
-    p[0] = " ".join(p[1:])
+    p[0] = "".join(p[1:])
 
 def p_statement2(p):
     '''
     c_statement2 : c_exp
     '''
-    p[0] = " ".join(p[1:])
-    #p[0] = str(p[1])
+    p[0] = "".join(p[1:])
 
 def p_sym(p):
     '''
@@ -233,9 +232,14 @@ def p_conclusion(p):
 def p_operator(p):
     '''
     c_exp : NAME OP c_subexp CP
-          | c_term
     '''
-    p[0] = " ".join(p[1:])
+    p[0] = "".join(p[1:])
+
+def p_operator2(p):
+    '''
+    c_exp : c_term
+    '''
+    p[0] = p[1]
 
 def p_more(p):
     '''
@@ -247,7 +251,14 @@ def p_int(p):
     '''
     c_subexp : NUM
              | VAR
+             | NAME
              | c_list
+    '''
+    p[0] = str(p[1])
+
+def p_subexp_loop(p):
+    '''
+    c_subexp : c_exp
     '''
     p[0] = str(p[1])
 
@@ -255,15 +266,10 @@ def p_term(p):
     '''
     c_term : NUM
            | VAR
+           | NAME
            | c_list
     '''
     p[0]= str(p[1])
-
-#def p_list(p):
-    #'''
-    #c_exp : c_list
-    #'''
-    #p[0] = str(p[1])
 
 def p_list1(p):
     '''
@@ -299,13 +305,13 @@ def p_more_expexp(p):
     '''
     c_moreexp : COMA c_subexp c_moreexp
     '''
-    p[0] = "; "+p[2]+p[3]
+    p[0] = ";"+p[2]+p[3]
 
 def p_more_coma_exp(p):
     '''
     c_moreexp : COMA c_subexp
     '''
-    p[0] = "; "+p[2]
+    p[0] = ";"+p[2]
 
 #           _            _       _             
 #  ___ __ _| | ___ _   _| | __ _| |_ ___  _ __ 
@@ -344,6 +350,7 @@ def p_comparator(p):
                | SUP EQUAL
                | INF
                | INF EQUAL
+               | EQUAL
     '''
     p[0]= "".join(p[1:])
 
@@ -417,7 +424,7 @@ def p_more_empty(p):
 def p_error(p):
     write("error")
     write2("error")
-    print("error")
+    #print("error")
 
 parser= yacc.yacc(start='start')
 
