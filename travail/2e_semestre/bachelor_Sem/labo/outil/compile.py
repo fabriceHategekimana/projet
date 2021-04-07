@@ -2,10 +2,6 @@ import ply.lex as lex
 import ply.yacc as yacc
 import sys
 
-def write(content):
-    f = open("res.txt", "w")
-    f.write(content)
-    f.close()
 
             #_ _   _                    _   _      
   #__ _ _ __(_) |_| |__  _ __ ___   ___| |_(_) ___ 
@@ -62,10 +58,10 @@ def func(f,i):
         res= "error"
     return res
 
-def write2(content):
-    f2 = open("subEval.txt", "w")
-    f2.write(content)
-    f2.close()
+def write(content):
+    f = open("res.txt", "w")
+    f.write(content)
+    f.close()
 
 
 # _                       
@@ -78,8 +74,11 @@ reserved = {
         "in" : "IN",
         "calc" : "CALC",
         "check" : "CHECK",
+        "split" : "SPLIT",
+        "isList" : "ISLIST",
+        "isNumber" : "ISNUMBER"
         }
-                         
+
 tokens = [
     'NUM',
     'OP',
@@ -87,6 +86,7 @@ tokens = [
     'OSB',
     'CSB',
     'COMA',
+    'SEMICOLON',
     'EQUAL',
     'INF',
     'SUP',
@@ -100,6 +100,7 @@ t_CP= r'\)'
 t_OSB= r'\['
 t_CSB= r'\]'
 t_COMA= r'\,'
+t_SEMICOLON= r'\;'
 t_INF= r'\<'
 t_SUP= r'\>'
 t_MINUS= r'\-'
@@ -141,6 +142,9 @@ def p_start(p):
     '''
     start : CALC calc
           | CHECK check
+          | SPLIT split
+          | ISNUMBER NUM
+          | ISLIST list
     '''
     #print(p[1]+" "+p[2])
     #print("action: "+p[1])
@@ -304,12 +308,14 @@ def p_list5(p):
 def p_more_expexp(p):
     '''
     c_moreexp : COMA c_subexp c_moreexp
+              | SEMICOLON c_subexp c_moreexp
     '''
     p[0] = ";"+p[2]+p[3]
 
 def p_more_coma_exp(p):
     '''
     c_moreexp : COMA c_subexp
+              | SEMICOLON c_subexp
     '''
     p[0] = ";"+p[2]
 
@@ -324,16 +330,15 @@ def p_calc(p):
     '''
     calc : exp
     '''
-    write2(str(p[1]))
+    write(str(p[1]))
     #print(str(eval(p[1])))
     p[0]= "calc"
     
-
 def p_calc2(p):
     '''
     calc : condition
     '''
-    write2(str(eval(p[1])))
+    write(str(eval(p[1])))
     #print(str(eval(p[1])))
     p[0]= "calc"
 
@@ -388,6 +393,7 @@ def p_exp_list1(p):
 def p_exp_list2(p):
     '''
     morelist : NUM COMA morelist
+             | NUM SEMICOLON morelist
     '''
     p[0] = str(p[1]+","+p[3])
 
@@ -412,29 +418,52 @@ def p_exp_list5(p):
 def p_more_exp(p):
     '''
     more : COMA exp more
+         | SEMICOLON exp more
     '''
     p[0] = ";"+p[2]+p[3]
 
 def p_more_empty(p):
     '''
     more : COMA exp
+         | SEMICOLON exp
     '''
     p[0] = ";"+p[2]
 
+           #_ _ _   
+ #___ _ __ | (_) |_ 
+#/ __| '_ \| | | __|
+#\__ \ |_) | | | |_ 
+#|___/ .__/|_|_|\__|
+    #|_|            
+
+def p_split(p):
+    '''
+    split : c_exp s_more
+    '''
+    write(p[1]+p[2])
+    p[0]= "okay"
+
+def p_split2(p):
+    '''
+    split : c_exp
+    '''
+    write(p[1])
+    p[0]= "okay"
+
+def p_s_more(p):
+    '''
+    s_more : SEMICOLON c_exp s_more
+    '''
+    p[0]= ";;"+p[2]+p[3]
+
+def p_s_more2(p):
+    '''
+    s_more : SEMICOLON c_exp
+    '''
+    p[0]= ";;"+p[2]
+
 def p_error(p):
     write("error")
-    write2("error")
     #print("error")
 
 parser= yacc.yacc(start='start')
-
-#s="plus(1,2) = element -- <d,empty> -> <d>"
-#s="plus(1,2)"
-#parser.parse(s)
-
-#while True:
-    #try:
-        #s = input('')
-    #except EOFError:
-        #break
-    #parser.parse(s)

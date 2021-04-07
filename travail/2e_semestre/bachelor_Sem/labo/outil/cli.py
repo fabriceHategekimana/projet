@@ -10,7 +10,7 @@ class MyPrompt(Cmd):
         return True
 
     def default(self, inp):
-        parser.parse(inp,debug=False)
+        parser.parse(inp,debug=True)
         #parser.parse(inp)
         f = open("subEval.txt", "r")
         for line in f:
