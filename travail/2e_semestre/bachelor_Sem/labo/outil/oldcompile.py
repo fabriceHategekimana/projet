@@ -93,8 +93,7 @@ tokens = [
     'SUP',
     'MINUS',
     'VAR',
-    'NAME',
-    'COMPARATOR'
+    'NAME'
         ]+list(reserved.values())
 
 t_OP= r'\('
@@ -125,20 +124,10 @@ def t_VAR(t):
     t.type = reserved.get(t.value,'VAR')
     return t
 
-def t_COMPARATOR(t):
-    r'=|<=|>=|<|>'
-    t.type = reserved.get(t.value,'VAR')
-    return t
-
 def t_error(t):
     t.lexer.skip(1)
 
 lexer= lex.lex()
-
-precedence = (
-        ('left','COMA'),
-        ('left','COMPARATOR')
-        )
 
 #----------------------------------
 
@@ -218,20 +207,15 @@ def p_more3(p):
 
 def p_statement(p):
     '''
-    c_statement : exp comparator exp
+    c_statement : c_exp c_statement2
     '''
+    p[0] = "".join(p[1:])
 
-#def p_statement(p):
-    #'''
-    #c_statement : c_prestatement c_term
-    #'''
-    #p[0] = "".join(p[1:])
-#
-#def p_statement2(p):
-    #'''
-    #c_prestatement : c_exp comparator 
-    #'''
-    #p[0] = "".join(p[1:])
+def p_statement2(p):
+    '''
+    c_statement2 : comparator c_exp
+    '''
+    p[0] = "".join(p[1:])
 
 def p_sym(p):
     '''
@@ -248,7 +232,7 @@ def p_sym2(p):
 
 def p_conclusion(p):
     '''
-    c_conclusion : c_exp 
+    c_conclusion : c_statement
     '''
     p[0] = p[1]
 
@@ -331,7 +315,6 @@ def p_more_coma_exp(p):
               | SEMICOLON c_exp
     '''
     p[0] = ";"+p[2]
-
 
 #           _            _       _             
 #  ___ __ _| | ___ _   _| | __ _| |_ ___  _ __ 

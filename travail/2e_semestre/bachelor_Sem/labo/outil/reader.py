@@ -54,6 +54,8 @@ for line in f:
 #Li in list -- eval(Li) = True
 
 #factorielle
+#-- fact(1) = 1
+#N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
 #evaluateExpression("fact(1)", RULES)
 #print(RULES)
 #evaluateExpression("fact(2)", RULES)
