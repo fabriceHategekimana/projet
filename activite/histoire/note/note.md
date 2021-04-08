@@ -27,6 +27,4 @@ Il faut aussi voir ce qui rend une Histoire géniale:
 			- 4e mur
 			- exploiter des outils qu'il n'y a pas normalement dans une histoire.
 
-https://www.dailymotion.com/video/x7wm8aj
-
 [ships](ships)

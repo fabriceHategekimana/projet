@@ -1,7 +1,8 @@
 ## Eleanor_Ortiz
 Age: (évolutif)
 Genre:
-Origine:
-slogant:
+Origine: anglaise
+theme: vengance
 Attachement:
+signification: calme, douceur, apaisement
 

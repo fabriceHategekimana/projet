@@ -8,7 +8,6 @@ Personnages:
 [François_Gounelle](François_Gounelle)
 [Kwon_Hyun](Kwon_Hyun)
 [Eleanor_Ortiz](Eleanor_Ortiz)
-    
 [Tiago](Tiago)    
 Lenora
 

@@ -12,9 +12,8 @@ class MyPrompt(Cmd):
     def default(self, inp):
         parser.parse(inp,debug=True)
         #parser.parse(inp)
-        f = open("subEval.txt", "r")
+        f = open("res.txt", "r")
         for line in f:
             print(line)
-
 
 MyPrompt().cmdloop()

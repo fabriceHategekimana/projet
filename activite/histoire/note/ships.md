@@ -40,6 +40,6 @@ Je me rend compte aussi que je préfère les ship où j'apprécie les deux perso
 Je m'intéresse aussi à la qualité et à l'évolution du lien qu'entretiennent les personnages.
 
 Autres mentions honorables
-Rise Kairi [Watashi No Tadashi]
+Rise x Kairi [Watashi No Tadashi]
 Kato x Arisaka [14 Sai no Koi]
 Ichiri x Jyungo [Batuque]

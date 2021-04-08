@@ -1,10 +1,16 @@
 from evaluation import *
 
 RULES= [
-        ['add(n;o)', 'n->m;o->p', 'add(m;p)'],
-        ['sub(n;o)', 'n->m;o->p', 'sub(m;p)'],
-        ['mul(n;o)', 'n->m;o->p', 'mul(m;p)'],
-        ['div(n;o)', 'n->m;o->p', 'div(m;p)']
+        ['add(N;O)', 'N->P;O->Q', 'add(P;Q)'],
+        ['sub(N;O)', 'N->P;O->Q', 'sub(P;Q)'],
+        ['mul(N;O)', 'N->P;O->Q', 'mul(P;Q)'],
+        ['div(N;O)', 'N->P;O->Q', 'div(P;Q)'],
+        ['get(L)', 'L->Lp', 'get(Lp)'],
+        ['set(L,N)', 'Li->Lp;N->Np', 'set(Lp;Np)'],
+        ['append(L,N)', 'L->Lp;N->Np', 'append(Lp;Np)'],
+        ['insert(L,N)', 'L->Lp;N->Np', 'insert(Lp;Np)'],
+        ['remove(L,N)', 'L->Lp;N->Np', 'remove(Lp;Np)'],
+        ['removeLast(L)', 'L->Lp', 'removeLast(Lp)']
         ]
 
 def syntaxChecking(exp):
@@ -50,6 +56,11 @@ for line in f:
 #factorielle
 #evaluateExpression("fact(1)", RULES)
 #print(RULES)
-evaluateExpression("fact(2)", RULES)
+#evaluateExpression("fact(2)", RULES)
+#evaluateExpression("fact(4)", RULES)
+
+#liste
+#evaluateExpression("get([1,2,3],2)", RULES)
+#evaluateExpression("len([1])", RULES)
 
 #f.close()

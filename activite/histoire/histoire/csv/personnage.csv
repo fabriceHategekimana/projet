@@ -21,9 +21,6 @@ leon,est,personnage
 rachel,genre,femme
 rachel,est,personnage
 francois,genre,homme
-orphelinat,est,periode
-accueil,est,arc
-quartier,est,arc
 huugo,est,personnage
 huugo,est,mutant
 directeur,est,personnage
@@ -108,3 +105,7 @@ police,est,groupe
 policierFemme,dans,police
 wingForce,est,groupe
 chefWingForce,dans,wingForce
+profPhilo,est,personnage
+eleanor,theme,vengance
+vieuxPretre,est,personnage
+vieuxPretre,theme,foi

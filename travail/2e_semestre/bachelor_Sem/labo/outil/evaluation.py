@@ -19,8 +19,8 @@ def symbol(statement):
     res= ""
     if statement.find("->") > -1:
         res="->"
-    elif statement.find("in") > -1:
-        res="in"
+    elif statement.find("&in&") > -1:
+        res="&in&"
     elif statement.find("=") > -1:
         res= "="
     elif statement.find(">") > -1:
@@ -45,7 +45,7 @@ def test(expression, substitution, data):
         print("résultat du test de comparaison: ", val)
         if val == "True":
             res = substitution
-    elif sym == "in":
+    elif sym == "&in%":
         val= evalNativeType(expression)
         print("résultat du test in 1: ", val)
         if val == False:
@@ -101,7 +101,7 @@ def applyRule(expression, rule, data):
     allTrue= True
     substitution= union(rule[0], expression) 
     if substitution == False: # if false the fact doesn't match go to the next rule/fact
-        print("Le fait ne match pas, on passe à la suite")
+        print("Le fait ne match pas, on passe à la prochaine règle")
         allTrue= False
         final= False
     elif substitution == True: # if true the fact match go directly to the conclusion
@@ -111,7 +111,7 @@ def applyRule(expression, rule, data):
         if rule[1] != "":
             for premise in rule[1].split(";"): #loop: premises
                 print("premisse obtenue: ", premise)
-                res= test(premise, substitution, rule)
+                res= test(premise, substitution, data)
                 print("res: ",res)
                 if res == False:
                     print("règle non accomplie")
@@ -122,7 +122,9 @@ def applyRule(expression, rule, data):
                     substitution= res
     if allTrue == True:
         if substitution != True: # on fait les dernière substitutions si le tableau n'est pas vide
-            conclusion= complete(rule[2],substitution).split(symbol(rule[2]))[1]
+            conclusion= complete(rule[2],substitution)
+            if symbol(rule[2]) != "":
+                conclusion= conclusion.split(symbol(rule[2]))[1] # on ne prend que la partie de droite
         else:
             conclusion= rule[2].split(symbol(rule[2]))[1]
         print("conclusion: ", conclusion)
@@ -246,9 +248,15 @@ def verifiable(exp,dico):
     return res, dico
 
 def complete(exp, dico):
-    for d in dico:
-        exp= exp.replace(d[0], d[1])
+    tokens= getToken(exp) #token est un tableau des différentes partie de l'expression
+    for i in range(len(tokens)):
+        tokens[i]= dico.get(tokens[i], tokens[i]) #On remplace si'il y a un moyen de remplacer
+    exp= "".join(tokens)
     return exp
+
+def getToken(exp):
+    tokens= myParser("token "+exp).split("&&")
+    return tokens
 
 def subEval(exp):
     res= myParser("calc "+exp)
@@ -263,5 +271,3 @@ def myParser(exp):
     res= f.readline()
     f.close()
     return res
-
-#print(complete("A+C",union("<A,B,C>","<un,[0;0],3")))

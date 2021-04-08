@@ -76,7 +76,8 @@ reserved = {
         "check" : "CHECK",
         "split" : "SPLIT",
         "isList" : "ISLIST",
-        "isNumber" : "ISNUMBER"
+        "isNumber" : "ISNUMBER",
+        "token" : "TOKEN"
         }
 
 tokens = [
@@ -114,17 +115,16 @@ def t_NUM(t):
     return t
 
 def t_NAME(t):
-    r'[a-z_][a-zA-Z_0-9]*'
+    r'[a-z_][a-zA-Z_0-9]+'
     t.type = reserved.get(t.value,'NAME')
     return t
 
 def t_VAR(t):
-    r'[A-Z][a-zA-Z_0-9]*'
+    r'[A-Z][a-z_0-9]*'
     t.type = reserved.get(t.value,'VAR')
     return t
 
 def t_error(t):
-    #print("Illegal characters!")
     t.lexer.skip(1)
 
 lexer= lex.lex()
@@ -145,9 +145,8 @@ def p_start(p):
           | SPLIT split
           | ISNUMBER NUM
           | ISLIST list
+          | TOKEN token
     '''
-    #print(p[1]+" "+p[2])
-    #print("action: "+p[1])
                                
 #      _               _             
 #  ___| |__   ___  ___| | _____ _ __ 
@@ -174,7 +173,6 @@ def p_check2(p):
     check2 : MINUS MINUS c_conclusion
     '''
     write("--"+p[3])
-    #print("--"+p[3])
     p[0]= "okay"
 
 def p_premisses1(p):
@@ -223,9 +221,14 @@ def p_sym(p):
     '''
     c_sym : EQUAL
           | MINUS SUP
-          | IN
     '''
     p[0] = "".join(p[1:])
+
+def p_sym2(p):
+    '''
+    c_sym : IN
+    '''
+    p[0] = "&"+p[1]+"&"
 
 def p_conclusion(p):
     '''
@@ -331,7 +334,6 @@ def p_calc(p):
     calc : exp
     '''
     write(str(p[1]))
-    #print(str(eval(p[1])))
     p[0]= "calc"
     
 def p_calc2(p):
@@ -339,7 +341,6 @@ def p_calc2(p):
     calc : condition
     '''
     write(str(eval(p[1])))
-    #print(str(eval(p[1])))
     p[0]= "calc"
 
 def p_condition(p):
@@ -356,6 +357,7 @@ def p_comparator(p):
                | INF
                | INF EQUAL
                | EQUAL
+               | c_sym
     '''
     p[0]= "".join(p[1:])
 
@@ -462,8 +464,80 @@ def p_s_more2(p):
     '''
     p[0]= ";;"+p[2]
 
+ #_        _              
+#| |_ ___ | | _____ _ __  
+#| __/ _ \| |/ / _ \ '_ \ 
+#| || (_) |   <  __/ | | |
+ #\__\___/|_|\_\___|_| |_|
+# token
+
+def p_token(p):
+    '''
+    token : t_statement
+          | t_exp
+    '''
+    write(p[1])
+
+def p_t_statement(p):
+    '''
+    t_statement : t_exp comparator t_statement2
+    '''
+    p[0] = "&&".join(p[1:])
+
+def p_t_statement2(p):
+    '''
+    t_statement2 : t_exp
+    '''
+    p[0] = "".join(p[1:])
+
+def p_t_exp(p):
+    '''
+    t_exp : NAME OP t_subexp CP
+    '''
+    p[0] = "&&".join(p[1:])
+
+def p_t_exp2(p):
+    '''
+    t_exp : c_term
+    '''
+    p[0] = p[1]
+
+def p_t_subexp(p):
+    '''
+    t_subexp : t_subexp t_moreexp
+    '''
+    p[0] = p[1]+"&&"+p[2]
+
+def p_t_subexp2(p):
+    '''
+    t_subexp : NUM
+             | VAR
+             | NAME
+             | c_list
+    '''
+    p[0] = str(p[1])
+
+def p_subexp_loop(p):
+    '''
+    t_subexp : t_exp
+    '''
+    p[0] = str(p[1])
+
+def p_t_moreexp(p):
+    '''
+    t_moreexp : COMA t_subexp t_moreexp
+              | SEMICOLON t_subexp t_moreexp
+    '''
+    p[0] = ";"+"&&"+p[2]+"&&"+p[3]
+
+def p_t_moreexp2(p):
+    '''
+    t_moreexp : COMA t_subexp
+              | SEMICOLON t_subexp
+    '''
+    p[0] = ";"+"&&"+p[2]
+
 def p_error(p):
     write("error")
-    #print("error")
 
 parser= yacc.yacc(start='start')

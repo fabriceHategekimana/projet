@@ -1,2 +1,5 @@
+Li in list -- ret(Li) = Li
+-- len([]) = 0
+Li->Lid, LP in list -- len(L) = add(1,removeLast(LP))
 -- fact(1) = 1
-n > 1 -- fact(n) = mul(n,fact(sub(n,1)))
+N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
