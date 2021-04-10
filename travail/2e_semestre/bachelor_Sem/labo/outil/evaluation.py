@@ -1,9 +1,6 @@
 from compile import parser
 import re
 
-def find(state):
-    return "<d> -- <d>"
-
 def evaluateState(state):
     rules= find(state)
     for r in rules:
@@ -21,16 +18,18 @@ def symbol(statement):
         res="->"
     elif statement.find("&in&") > -1:
         res="&in&"
+    elif statement.find("==") > -1:
+        res="=="
+    elif statement.find(">=") > -1:
+        res=">="
+    elif statement.find("<=") > -1:
+        res="<="
     elif statement.find("=") > -1:
         res= "="
     elif statement.find(">") > -1:
         res=">"
-    elif statement.find(">=") > -1:
-        res=">="
     elif statement.find("<") > -1:
         res="<"
-    elif statement.find("<=") > -1:
-        res="<="
     return res
 
 def test(expression, substitution, data):
@@ -38,15 +37,16 @@ def test(expression, substitution, data):
     expression= complete(expression, substitution)
     print("expression à tester: ", expression)
     sym= symbol(expression)
-    if sym in ["=",">",">=","<","<="]:
-        if sym =="=":
-            expression= expression.replace("=","==")
-        val= subEval(expression)
+    print("symbol: ", sym)
+    tab= expression.split(sym)
+    left= evaluateExpression(tab[0], data)
+    if sym in ["==",">",">=","<","<="]: # if its conditionnal test
+        val= subEval(left+sym+tab[1])
         print("résultat du test de comparaison: ", val)
         if val == "True":
             res = substitution
-    elif sym == "&in%":
-        val= evalNativeType(expression)
+    elif sym == "&in&": # if its a type test
+        val= evalNativeType(left+" in "+tab[1])
         print("résultat du test in 1: ", val)
         if val == False:
             print("on continue")
@@ -55,12 +55,10 @@ def test(expression, substitution, data):
             #if val != "False":
                 #res= val"
         else:
-            res= True
-    elif sym == "->":
-        tab= expression.split("->")
-        res= evaluateExpression(tab[0], data)
-        print("résultat du test -> : ", res)
-        substitution.append([tab[1], res])
+            res= substitution
+    elif sym == "->": # if it's an evaluation
+        print("résultat du test -> : ", left)
+        substitution.append([tab[1], left])
         res= substitution
     return res
 
@@ -77,19 +75,29 @@ def evaluateExpression(expression, data):
     print("subEval de l'expression: ", expression)
     res= subEval(expression) 
     if not isTerminal(res):
+        #res= pseudoEval(expression, data)
         res= evaluateExpressionHelper(expression, data)
-    print("résultat rendu par l'interpréteur: ", res)
+        if not isTerminal:
+            res= "error"
     return res
+
+def pseudoEval(expression, data):
+    print("------------------------EE")
+    print("expression: ", expression)
+    final= "Error: instruction non developpable"
+    selection= getSelection(expression, data)
+    print("selection: ", selection)
+    return "pas fini"
 
 def evaluateExpressionHelper(expression, data):
     print("------------------------EE")
     print("expression: ", expression)
-    final= ""
+    final= "Error: instruction non developpable"
     selection= getSelection(expression, data)
     print("selection: ", selection)
     for rule in selection:
         res= applyRule(expression, rule, data)
-        if res != False:
+        if res != "error":
             final= res
             break
     return final
@@ -97,13 +105,13 @@ def evaluateExpressionHelper(expression, data):
 def applyRule(expression, rule, data):
     print("--------------------RULE")
     print("règle choisie: ", rule)
-    final= ""
+    final= "error"
     allTrue= True
     substitution= union(rule[0], expression) 
     if substitution == False: # if false the fact doesn't match go to the next rule/fact
         print("Le fait ne match pas, on passe à la prochaine règle")
         allTrue= False
-        final= False
+        final= "error"
     elif substitution == True: # if true the fact match go directly to the conclusion
         print("Le fait match")
     else: # if this is an array of substitution, go check the premises
@@ -113,7 +121,7 @@ def applyRule(expression, rule, data):
                 print("premisse obtenue: ", premise)
                 res= test(premise, substitution, data)
                 print("res: ",res)
-                if res == False:
+                if res == False: #if a premise is false, we drop the rule
                     print("règle non accomplie")
                     allTrue= False
                     break
@@ -126,9 +134,10 @@ def applyRule(expression, rule, data):
             if symbol(rule[2]) != "":
                 conclusion= conclusion.split(symbol(rule[2]))[1] # on ne prend que la partie de droite
         else:
-            conclusion= rule[2].split(symbol(rule[2]))[1]
+            conclusion= rule[2].split(symbol(rule[2]))[1] # on prend la partie de droite (qui n'a pas besoin d'être complêtée)
         print("conclusion: ", conclusion)
         final= evaluateExpression(conclusion, data)
+    print("final applyRule: ", final)
     return final
 
 def getSelection(exp, data):
@@ -179,14 +188,12 @@ def unionExpression(exp1,exp2):
             if isTerminal(tab1[i]): #si si l'élément à gauche est fini
                 res1= subEval(tab1[i])
                 res2= subEval(tab2[i])
-                print("res1: ",res1)
-                print("res2: ",res2)
                 if res1 != res2:
                     final= False
                     break
             else:
                 final.append([tab1[i], tab2[i]])
-        if final == []:
+        if final == []: # si on est tombé que sur des terminaux égaux
             final = True
     print("résultat de l'union: ", final)
     return final
@@ -196,11 +203,11 @@ def splitByExpression(exp):
 
 def isNumber(exp):
     res= myParser("isNumber "+exp)
-    if res != "error":
+    if res == "True":
         res = True
     else:
         res = False
-    print("isNumber de "+exp+": "+str(res))
+    #print("isNumber de "+exp+": "+str(res))
     return res
 
 def isList(exp):
@@ -210,13 +217,20 @@ def isList(exp):
             res = True
     except:
         pass
-    print("isList de "+exp+": "+str(res))
+    #print("isList de "+exp+": "+str(res))
+    return res
+
+def isBoolean(exp):
+    res= False
+    if exp in ["True", "False"]:
+        res = True
     return res
 
 def isTerminal(exp):
     res= False
-    if isNumber(exp) or isList(exp):
+    if isNumber(exp) or isList(exp) or isBoolean(exp):
         res= True
+    print("isTerminal de "+exp+" "+str(res))
     return res
 
 def check(exp, dico):
@@ -247,12 +261,22 @@ def verifiable(exp,dico):
             res= True
     return res, dico
 
-def complete(exp, dico):
+def complete(exp, tab):
+    dico= tabToDic(tab)
     tokens= getToken(exp) #token est un tableau des différentes partie de l'expression
+    print("tokens: ", tokens)
     for i in range(len(tokens)):
         tokens[i]= dico.get(tokens[i], tokens[i]) #On remplace si'il y a un moyen de remplacer
+    if "in" in tokens:
+        tokens = ['&in&' if i=='in' else i for i in tokens] # pour que le "in" ne soit pas collé aux voisins
     exp= "".join(tokens)
     return exp
+
+def tabToDic(tab):
+    dico= {}
+    for t in tab:
+        dico[t[0]]= t[1]
+    return dico
 
 def getToken(exp):
     tokens= myParser("token "+exp).split("&&")
@@ -270,4 +294,6 @@ def myParser(exp):
     f = open("res.txt", "r")
     res= f.readline()
     f.close()
+    if res[0] == "&":
+        res= "error"
     return res

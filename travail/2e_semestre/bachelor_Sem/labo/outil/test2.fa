@@ -1,0 +1,21 @@
+-------------------------------------------
+Num in number -- eval(Num) = True
+Li in list -- eval(Li) = True
+-------------------------------------------
+-- fact(1) = 1
+N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
+-------------------------------------------
+-- len([]) = 0
+L->Lp, Lp in list -- len(L) = add(1,len(removeLast(Lp)))
+-------------------------------------------
+A -> Ap, B -> Bp, Bp >= Ap -- max(A,B) = Bp
+A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
+-------------------------------------------
+-- sum([])=0
+L->Lp -- sum(L) = add(pop(Lp),sum(removeLast(Lp)))
+-------------------------------------------
+len(A)==1, len(B)==1 -- sum2L(A,B) = append([], add(pop(A),pop(B)))
+L1->L1p, L2->L2p -- sum2L(L1,L2) = append(sum2L(removeLast(L1),removeLast(L2)),add(pop(L1),pop(L2)))
+-------------------------------------------
+-- toList(0) = append([],0)
+-- toList(N) = append(toList(sub(N,1)), N)

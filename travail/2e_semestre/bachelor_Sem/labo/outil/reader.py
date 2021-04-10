@@ -26,43 +26,40 @@ def decompose(exp):
     print([entete, tab[0], tab[1]])
     RULES.append([entete, tab[0], tab[1]])
 
+def evaluateInstruction(inst):
+    #EVALUATION
+    print("[retour]> "+str(evaluateExpression(inst, RULES)))
+
+    #test typage natif
+    #print("[retour]> "+evaluateExpression("eval(1)", RULES))
+    #print("[retour]> "+evaluateExpression("eval([])", RULES))
+    #Num in number -- eval(Num) = True
+    #Li in list -- eval(Li) = True
+
+    #factorielle
+    #print("[retour]> "+evaluateExpression("fact(3)", RULES))
+    #print("[retour]> "+evaluateExpression("fact(2)", RULES))
+    #print("[retour]> "+evaluateExpression("fact(3)", RULES))
+
+    #liste
+    #print("[retour]> "+evaluateExpression("get([1,2,3],2)", RULES))
+    #print("[retour]> "+evaluateExpression("len([23,2,3,4])", RULES))
+
+
 #------------------------------------------
 
 f = open("test.fa", "r")
 count= 0
+error= False
 for line in f:
     count += 1
-    res= syntaxChecking(line).replace(" ", "")
-    #res= line[:-1]
-    print("syntaxChecking: ", res)
-    if res == "error":
-        print("Error in line "+ str(count)+": '"+line[:-1]+"'")
+    res= syntaxChecking(line)
+    if res[0] == "&":
+        print("Error in line "+ str(count)+": '"+line[:-1]+"' \n"+res[1:])
+        error= True
         break
     else:
+        res= res.replace(" ", "")
         decompose(res)
-
-#EVALUATION
-
-#evaluateExpression("isVoid([])", RULES)
-#evaluateExpression("isVoid([1])", RULES)
-#evaluateExpression("isVoid([1,2,3])", RULES)
-
-#test typage natif
-#evaluateExpression("eval(1)", RULES)
-#evaluateExpression("eval([])", RULES)
-#Num in number -- eval(Num) = True
-#Li in list -- eval(Li) = True
-
-#factorielle
-#-- fact(1) = 1
-#N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
-#evaluateExpression("fact(1)", RULES)
-#print(RULES)
-#evaluateExpression("fact(2)", RULES)
-#evaluateExpression("fact(4)", RULES)
-
-#liste
-#evaluateExpression("get([1,2,3],2)", RULES)
-#evaluateExpression("len([1])", RULES)
-
-#f.close()
+if error == False:
+    evaluatenstruction("maxL([1,2,12,4,5])")
