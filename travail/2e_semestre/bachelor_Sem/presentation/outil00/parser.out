@@ -1,0 +1,2118 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> start
+Rule 1     start -> CALC calc
+Rule 2     start -> CHECK check
+Rule 3     start -> SPLIT split
+Rule 4     start -> ISNUMBER isnumber
+Rule 5     start -> ISLIST list
+Rule 6     start -> TOKEN token
+Rule 7     check -> check1
+Rule 8     check -> check2
+Rule 9     check1 -> c_premises MINUS MINUS c_conclusion
+Rule 10    check2 -> MINUS MINUS c_conclusion
+Rule 11    c_premises -> c_statement COMA c_premises
+Rule 12    c_premises -> c_statement
+Rule 13    c_statement -> c_exp c_right_statement
+Rule 14    c_right_statement -> MINUS SUP VAR
+Rule 15    c_right_statement -> comparator c_term_var
+Rule 16    c_right_statement -> IN NAME
+Rule 17    c_term_var -> c_term
+Rule 18    c_term_var -> VAR
+Rule 19    c_conclusion -> c_exp EQUAL c_exp
+Rule 20    c_exp -> NAME OP c_exp CP
+Rule 21    c_exp -> c_term
+Rule 22    c_exp -> VAR
+Rule 23    c_exp -> c_exp COMA c_exp
+Rule 24    c_term -> NUM
+Rule 25    c_term -> c_list
+Rule 26    c_list -> OSB c_morelist CSB
+Rule 27    c_morelist -> c_term_var COMA c_morelist
+Rule 28    c_morelist -> c_term_var
+Rule 29    c_list -> OSB CSB
+Rule 30    c_list -> INF c_morelist SUP
+Rule 31    calc -> exp
+Rule 32    calc -> condition
+Rule 33    condition -> exp comparator exp
+Rule 34    comparator -> EQUAL EQUAL
+Rule 35    comparator -> SUP
+Rule 36    comparator -> SUP EQUAL
+Rule 37    comparator -> INF
+Rule 38    comparator -> INF EQUAL
+Rule 39    exp -> NAME OP exp CP
+Rule 40    exp -> exp more
+Rule 41    exp -> NUM
+Rule 42    exp -> list
+Rule 43    list -> OSB morelist CSB
+Rule 44    morelist -> NUM COMA morelist
+Rule 45    morelist -> NUM SEMICOLON morelist
+Rule 46    morelist -> NUM
+Rule 47    list -> OSB CSB
+Rule 48    list -> INF morelist SUP
+Rule 49    more -> COMA exp more
+Rule 50    more -> SEMICOLON exp more
+Rule 51    more -> COMA exp
+Rule 52    more -> SEMICOLON exp
+Rule 53    split -> s_exp
+Rule 54    s_exp -> NAME OP s_subexp CP
+Rule 55    s_exp -> s_term
+Rule 56    s_exp -> VAR
+Rule 57    s_exp -> s_exp SEMICOLON s_exp
+Rule 58    s_exp -> s_exp COMA s_exp
+Rule 59    s_term -> NUM
+Rule 60    s_term -> c_list
+Rule 61    s_subexp -> NAME OP s_subexp CP
+Rule 62    s_subexp -> s_term
+Rule 63    s_subexp -> VAR
+Rule 64    s_subexp -> s_subexp SEMICOLON s_subexp
+Rule 65    token -> t_statement
+Rule 66    token -> t_exp
+Rule 67    token -> t_conclusion
+Rule 68    t_statement -> t_exp t_right_statement
+Rule 69    t_right_statement -> MINUS SUP VAR
+Rule 70    t_right_statement -> IN NAME
+Rule 71    t_right_statement -> comparator c_term_var
+Rule 72    t_exp -> NAME OP t_exp CP
+Rule 73    t_exp -> t_term
+Rule 74    t_exp -> VAR
+Rule 75    t_exp -> t_exp COMA t_exp
+Rule 76    t_exp -> t_exp SEMICOLON t_exp
+Rule 77    t_term -> NUM
+Rule 78    t_term -> c_list
+Rule 79    t_conclusion -> t_exp EQUAL t_exp
+Rule 80    isnumber -> NUM
+
+Terminals, with rules where they appear
+
+CALC                 : 1
+CHECK                : 2
+COMA                 : 11 23 27 44 49 51 58 75
+CP                   : 20 39 54 61 72
+CSB                  : 26 29 43 47
+EQUAL                : 19 34 34 36 38 79
+IN                   : 16 70
+INF                  : 30 37 38 48
+ISLIST               : 5
+ISNUMBER             : 4
+MINUS                : 9 9 10 10 14 69
+NAME                 : 16 20 39 54 61 70 72
+NUM                  : 24 41 44 45 46 59 77 80
+OP                   : 20 39 54 61 72
+OSB                  : 26 29 43 47
+SEMICOLON            : 45 50 52 57 64 76
+SPLIT                : 3
+SUP                  : 14 30 35 36 48 69
+TOKEN                : 6
+VAR                  : 14 18 22 56 63 69 74
+error                : 
+
+Nonterminals, with rules where they appear
+
+c_conclusion         : 9 10
+c_exp                : 13 19 19 20 23 23
+c_list               : 25 60 78
+c_morelist           : 26 27 30
+c_premises           : 9 11
+c_right_statement    : 13
+c_statement          : 11 12
+c_term               : 17 21
+c_term_var           : 15 27 28 71
+calc                 : 1
+check                : 2
+check1               : 7
+check2               : 8
+comparator           : 15 33 71
+condition            : 32
+exp                  : 31 33 33 39 40 49 50 51 52
+isnumber             : 4
+list                 : 5 42
+more                 : 40 49 50
+morelist             : 43 44 45 48
+s_exp                : 53 57 57 58 58
+s_subexp             : 54 61 64 64
+s_term               : 55 62
+split                : 3
+start                : 0
+t_conclusion         : 67
+t_exp                : 66 68 72 75 75 76 76 79 79
+t_right_statement    : 68
+t_statement          : 65
+t_term               : 73
+token                : 6
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . start
+    (1) start -> . CALC calc
+    (2) start -> . CHECK check
+    (3) start -> . SPLIT split
+    (4) start -> . ISNUMBER isnumber
+    (5) start -> . ISLIST list
+    (6) start -> . TOKEN token
+
+    CALC            shift and go to state 2
+    CHECK           shift and go to state 3
+    SPLIT           shift and go to state 4
+    ISNUMBER        shift and go to state 5
+    ISLIST          shift and go to state 6
+    TOKEN           shift and go to state 7
+
+    start                          shift and go to state 1
+
+state 1
+
+    (0) S' -> start .
+
+
+
+state 2
+
+    (1) start -> CALC . calc
+    (31) calc -> . exp
+    (32) calc -> . condition
+    (39) exp -> . NAME OP exp CP
+    (40) exp -> . exp more
+    (41) exp -> . NUM
+    (42) exp -> . list
+    (33) condition -> . exp comparator exp
+    (43) list -> . OSB morelist CSB
+    (47) list -> . OSB CSB
+    (48) list -> . INF morelist SUP
+
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
+    OSB             shift and go to state 14
+    INF             shift and go to state 15
+
+    calc                           shift and go to state 8
+    exp                            shift and go to state 9
+    condition                      shift and go to state 10
+    list                           shift and go to state 13
+
+state 3
+
+    (2) start -> CHECK . check
+    (7) check -> . check1
+    (8) check -> . check2
+    (9) check1 -> . c_premises MINUS MINUS c_conclusion
+    (10) check2 -> . MINUS MINUS c_conclusion
+    (11) c_premises -> . c_statement COMA c_premises
+    (12) c_premises -> . c_statement
+    (13) c_statement -> . c_exp c_right_statement
+    (20) c_exp -> . NAME OP c_exp CP
+    (21) c_exp -> . c_term
+    (22) c_exp -> . VAR
+    (23) c_exp -> . c_exp COMA c_exp
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    MINUS           shift and go to state 20
+    NAME            shift and go to state 23
+    VAR             shift and go to state 25
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    check                          shift and go to state 16
+    check1                         shift and go to state 17
+    check2                         shift and go to state 18
+    c_premises                     shift and go to state 19
+    c_statement                    shift and go to state 21
+    c_exp                          shift and go to state 22
+    c_term                         shift and go to state 24
+    c_list                         shift and go to state 27
+
+state 4
+
+    (3) start -> SPLIT . split
+    (53) split -> . s_exp
+    (54) s_exp -> . NAME OP s_subexp CP
+    (55) s_exp -> . s_term
+    (56) s_exp -> . VAR
+    (57) s_exp -> . s_exp SEMICOLON s_exp
+    (58) s_exp -> . s_exp COMA s_exp
+    (59) s_term -> . NUM
+    (60) s_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 32
+    VAR             shift and go to state 34
+    NUM             shift and go to state 35
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    split                          shift and go to state 30
+    s_exp                          shift and go to state 31
+    s_term                         shift and go to state 33
+    c_list                         shift and go to state 36
+
+state 5
+
+    (4) start -> ISNUMBER . isnumber
+    (80) isnumber -> . NUM
+
+    NUM             shift and go to state 38
+
+    isnumber                       shift and go to state 37
+
+state 6
+
+    (5) start -> ISLIST . list
+    (43) list -> . OSB morelist CSB
+    (47) list -> . OSB CSB
+    (48) list -> . INF morelist SUP
+
+    OSB             shift and go to state 14
+    INF             shift and go to state 15
+
+    list                           shift and go to state 39
+
+state 7
+
+    (6) start -> TOKEN . token
+    (65) token -> . t_statement
+    (66) token -> . t_exp
+    (67) token -> . t_conclusion
+    (68) t_statement -> . t_exp t_right_statement
+    (72) t_exp -> . NAME OP t_exp CP
+    (73) t_exp -> . t_term
+    (74) t_exp -> . VAR
+    (75) t_exp -> . t_exp COMA t_exp
+    (76) t_exp -> . t_exp SEMICOLON t_exp
+    (79) t_conclusion -> . t_exp EQUAL t_exp
+    (77) t_term -> . NUM
+    (78) t_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 44
+    VAR             shift and go to state 46
+    NUM             shift and go to state 47
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    token                          shift and go to state 40
+    t_statement                    shift and go to state 41
+    t_exp                          shift and go to state 42
+    t_conclusion                   shift and go to state 43
+    t_term                         shift and go to state 45
+    c_list                         shift and go to state 48
+
+state 8
+
+    (1) start -> CALC calc .
+
+    $end            reduce using rule 1 (start -> CALC calc .)
+
+
+state 9
+
+    (31) calc -> exp .
+    (40) exp -> exp . more
+    (33) condition -> exp . comparator exp
+    (49) more -> . COMA exp more
+    (50) more -> . SEMICOLON exp more
+    (51) more -> . COMA exp
+    (52) more -> . SEMICOLON exp
+    (34) comparator -> . EQUAL EQUAL
+    (35) comparator -> . SUP
+    (36) comparator -> . SUP EQUAL
+    (37) comparator -> . INF
+    (38) comparator -> . INF EQUAL
+
+    $end            reduce using rule 31 (calc -> exp .)
+    COMA            shift and go to state 51
+    SEMICOLON       shift and go to state 52
+    EQUAL           shift and go to state 53
+    SUP             shift and go to state 54
+    INF             shift and go to state 55
+
+    more                           shift and go to state 49
+    comparator                     shift and go to state 50
+
+state 10
+
+    (32) calc -> condition .
+
+    $end            reduce using rule 32 (calc -> condition .)
+
+
+state 11
+
+    (39) exp -> NAME . OP exp CP
+
+    OP              shift and go to state 56
+
+
+state 12
+
+    (41) exp -> NUM .
+
+    COMA            reduce using rule 41 (exp -> NUM .)
+    SEMICOLON       reduce using rule 41 (exp -> NUM .)
+    EQUAL           reduce using rule 41 (exp -> NUM .)
+    SUP             reduce using rule 41 (exp -> NUM .)
+    INF             reduce using rule 41 (exp -> NUM .)
+    $end            reduce using rule 41 (exp -> NUM .)
+    CP              reduce using rule 41 (exp -> NUM .)
+
+
+state 13
+
+    (42) exp -> list .
+
+    COMA            reduce using rule 42 (exp -> list .)
+    SEMICOLON       reduce using rule 42 (exp -> list .)
+    EQUAL           reduce using rule 42 (exp -> list .)
+    SUP             reduce using rule 42 (exp -> list .)
+    INF             reduce using rule 42 (exp -> list .)
+    $end            reduce using rule 42 (exp -> list .)
+    CP              reduce using rule 42 (exp -> list .)
+
+
+state 14
+
+    (43) list -> OSB . morelist CSB
+    (47) list -> OSB . CSB
+    (44) morelist -> . NUM COMA morelist
+    (45) morelist -> . NUM SEMICOLON morelist
+    (46) morelist -> . NUM
+
+    CSB             shift and go to state 58
+    NUM             shift and go to state 59
+
+    morelist                       shift and go to state 57
+
+state 15
+
+    (48) list -> INF . morelist SUP
+    (44) morelist -> . NUM COMA morelist
+    (45) morelist -> . NUM SEMICOLON morelist
+    (46) morelist -> . NUM
+
+    NUM             shift and go to state 59
+
+    morelist                       shift and go to state 60
+
+state 16
+
+    (2) start -> CHECK check .
+
+    $end            reduce using rule 2 (start -> CHECK check .)
+
+
+state 17
+
+    (7) check -> check1 .
+
+    $end            reduce using rule 7 (check -> check1 .)
+
+
+state 18
+
+    (8) check -> check2 .
+
+    $end            reduce using rule 8 (check -> check2 .)
+
+
+state 19
+
+    (9) check1 -> c_premises . MINUS MINUS c_conclusion
+
+    MINUS           shift and go to state 61
+
+
+state 20
+
+    (10) check2 -> MINUS . MINUS c_conclusion
+
+    MINUS           shift and go to state 62
+
+
+state 21
+
+    (11) c_premises -> c_statement . COMA c_premises
+    (12) c_premises -> c_statement .
+
+    COMA            shift and go to state 63
+    MINUS           reduce using rule 12 (c_premises -> c_statement .)
+
+
+state 22
+
+    (13) c_statement -> c_exp . c_right_statement
+    (23) c_exp -> c_exp . COMA c_exp
+    (14) c_right_statement -> . MINUS SUP VAR
+    (15) c_right_statement -> . comparator c_term_var
+    (16) c_right_statement -> . IN NAME
+    (34) comparator -> . EQUAL EQUAL
+    (35) comparator -> . SUP
+    (36) comparator -> . SUP EQUAL
+    (37) comparator -> . INF
+    (38) comparator -> . INF EQUAL
+
+    COMA            shift and go to state 65
+    MINUS           shift and go to state 66
+    IN              shift and go to state 68
+    EQUAL           shift and go to state 53
+    SUP             shift and go to state 54
+    INF             shift and go to state 55
+
+    c_right_statement              shift and go to state 64
+    comparator                     shift and go to state 67
+
+state 23
+
+    (20) c_exp -> NAME . OP c_exp CP
+
+    OP              shift and go to state 69
+
+
+state 24
+
+    (21) c_exp -> c_term .
+
+    COMA            reduce using rule 21 (c_exp -> c_term .)
+    MINUS           reduce using rule 21 (c_exp -> c_term .)
+    IN              reduce using rule 21 (c_exp -> c_term .)
+    EQUAL           reduce using rule 21 (c_exp -> c_term .)
+    SUP             reduce using rule 21 (c_exp -> c_term .)
+    INF             reduce using rule 21 (c_exp -> c_term .)
+    CP              reduce using rule 21 (c_exp -> c_term .)
+    $end            reduce using rule 21 (c_exp -> c_term .)
+
+
+state 25
+
+    (22) c_exp -> VAR .
+
+    COMA            reduce using rule 22 (c_exp -> VAR .)
+    MINUS           reduce using rule 22 (c_exp -> VAR .)
+    IN              reduce using rule 22 (c_exp -> VAR .)
+    EQUAL           reduce using rule 22 (c_exp -> VAR .)
+    SUP             reduce using rule 22 (c_exp -> VAR .)
+    INF             reduce using rule 22 (c_exp -> VAR .)
+    CP              reduce using rule 22 (c_exp -> VAR .)
+    $end            reduce using rule 22 (c_exp -> VAR .)
+
+
+state 26
+
+    (24) c_term -> NUM .
+
+    COMA            reduce using rule 24 (c_term -> NUM .)
+    MINUS           reduce using rule 24 (c_term -> NUM .)
+    IN              reduce using rule 24 (c_term -> NUM .)
+    EQUAL           reduce using rule 24 (c_term -> NUM .)
+    SUP             reduce using rule 24 (c_term -> NUM .)
+    INF             reduce using rule 24 (c_term -> NUM .)
+    CSB             reduce using rule 24 (c_term -> NUM .)
+    CP              reduce using rule 24 (c_term -> NUM .)
+    $end            reduce using rule 24 (c_term -> NUM .)
+
+
+state 27
+
+    (25) c_term -> c_list .
+
+    COMA            reduce using rule 25 (c_term -> c_list .)
+    MINUS           reduce using rule 25 (c_term -> c_list .)
+    IN              reduce using rule 25 (c_term -> c_list .)
+    EQUAL           reduce using rule 25 (c_term -> c_list .)
+    SUP             reduce using rule 25 (c_term -> c_list .)
+    INF             reduce using rule 25 (c_term -> c_list .)
+    CSB             reduce using rule 25 (c_term -> c_list .)
+    CP              reduce using rule 25 (c_term -> c_list .)
+    $end            reduce using rule 25 (c_term -> c_list .)
+
+
+state 28
+
+    (26) c_list -> OSB . c_morelist CSB
+    (29) c_list -> OSB . CSB
+    (27) c_morelist -> . c_term_var COMA c_morelist
+    (28) c_morelist -> . c_term_var
+    (17) c_term_var -> . c_term
+    (18) c_term_var -> . VAR
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    CSB             shift and go to state 71
+    VAR             shift and go to state 74
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_morelist                     shift and go to state 70
+    c_term_var                     shift and go to state 72
+    c_term                         shift and go to state 73
+    c_list                         shift and go to state 27
+
+state 29
+
+    (30) c_list -> INF . c_morelist SUP
+    (27) c_morelist -> . c_term_var COMA c_morelist
+    (28) c_morelist -> . c_term_var
+    (17) c_term_var -> . c_term
+    (18) c_term_var -> . VAR
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    VAR             shift and go to state 74
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_morelist                     shift and go to state 75
+    c_term_var                     shift and go to state 72
+    c_term                         shift and go to state 73
+    c_list                         shift and go to state 27
+
+state 30
+
+    (3) start -> SPLIT split .
+
+    $end            reduce using rule 3 (start -> SPLIT split .)
+
+
+state 31
+
+    (53) split -> s_exp .
+    (57) s_exp -> s_exp . SEMICOLON s_exp
+    (58) s_exp -> s_exp . COMA s_exp
+
+    $end            reduce using rule 53 (split -> s_exp .)
+    SEMICOLON       shift and go to state 76
+    COMA            shift and go to state 77
+
+
+state 32
+
+    (54) s_exp -> NAME . OP s_subexp CP
+
+    OP              shift and go to state 78
+
+
+state 33
+
+    (55) s_exp -> s_term .
+
+    SEMICOLON       reduce using rule 55 (s_exp -> s_term .)
+    COMA            reduce using rule 55 (s_exp -> s_term .)
+    $end            reduce using rule 55 (s_exp -> s_term .)
+
+
+state 34
+
+    (56) s_exp -> VAR .
+
+    SEMICOLON       reduce using rule 56 (s_exp -> VAR .)
+    COMA            reduce using rule 56 (s_exp -> VAR .)
+    $end            reduce using rule 56 (s_exp -> VAR .)
+
+
+state 35
+
+    (59) s_term -> NUM .
+
+    SEMICOLON       reduce using rule 59 (s_term -> NUM .)
+    COMA            reduce using rule 59 (s_term -> NUM .)
+    $end            reduce using rule 59 (s_term -> NUM .)
+    CP              reduce using rule 59 (s_term -> NUM .)
+
+
+state 36
+
+    (60) s_term -> c_list .
+
+    SEMICOLON       reduce using rule 60 (s_term -> c_list .)
+    COMA            reduce using rule 60 (s_term -> c_list .)
+    $end            reduce using rule 60 (s_term -> c_list .)
+    CP              reduce using rule 60 (s_term -> c_list .)
+
+
+state 37
+
+    (4) start -> ISNUMBER isnumber .
+
+    $end            reduce using rule 4 (start -> ISNUMBER isnumber .)
+
+
+state 38
+
+    (80) isnumber -> NUM .
+
+    $end            reduce using rule 80 (isnumber -> NUM .)
+
+
+state 39
+
+    (5) start -> ISLIST list .
+
+    $end            reduce using rule 5 (start -> ISLIST list .)
+
+
+state 40
+
+    (6) start -> TOKEN token .
+
+    $end            reduce using rule 6 (start -> TOKEN token .)
+
+
+state 41
+
+    (65) token -> t_statement .
+
+    $end            reduce using rule 65 (token -> t_statement .)
+
+
+state 42
+
+    (66) token -> t_exp .
+    (68) t_statement -> t_exp . t_right_statement
+    (75) t_exp -> t_exp . COMA t_exp
+    (76) t_exp -> t_exp . SEMICOLON t_exp
+    (79) t_conclusion -> t_exp . EQUAL t_exp
+    (69) t_right_statement -> . MINUS SUP VAR
+    (70) t_right_statement -> . IN NAME
+    (71) t_right_statement -> . comparator c_term_var
+    (34) comparator -> . EQUAL EQUAL
+    (35) comparator -> . SUP
+    (36) comparator -> . SUP EQUAL
+    (37) comparator -> . INF
+    (38) comparator -> . INF EQUAL
+
+    $end            reduce using rule 66 (token -> t_exp .)
+    COMA            shift and go to state 80
+    SEMICOLON       shift and go to state 81
+    EQUAL           shift and go to state 82
+    MINUS           shift and go to state 83
+    IN              shift and go to state 84
+    SUP             shift and go to state 54
+    INF             shift and go to state 55
+
+    t_right_statement              shift and go to state 79
+    comparator                     shift and go to state 85
+
+state 43
+
+    (67) token -> t_conclusion .
+
+    $end            reduce using rule 67 (token -> t_conclusion .)
+
+
+state 44
+
+    (72) t_exp -> NAME . OP t_exp CP
+
+    OP              shift and go to state 86
+
+
+state 45
+
+    (73) t_exp -> t_term .
+
+    COMA            reduce using rule 73 (t_exp -> t_term .)
+    SEMICOLON       reduce using rule 73 (t_exp -> t_term .)
+    EQUAL           reduce using rule 73 (t_exp -> t_term .)
+    MINUS           reduce using rule 73 (t_exp -> t_term .)
+    IN              reduce using rule 73 (t_exp -> t_term .)
+    SUP             reduce using rule 73 (t_exp -> t_term .)
+    INF             reduce using rule 73 (t_exp -> t_term .)
+    $end            reduce using rule 73 (t_exp -> t_term .)
+    CP              reduce using rule 73 (t_exp -> t_term .)
+
+
+state 46
+
+    (74) t_exp -> VAR .
+
+    COMA            reduce using rule 74 (t_exp -> VAR .)
+    SEMICOLON       reduce using rule 74 (t_exp -> VAR .)
+    EQUAL           reduce using rule 74 (t_exp -> VAR .)
+    MINUS           reduce using rule 74 (t_exp -> VAR .)
+    IN              reduce using rule 74 (t_exp -> VAR .)
+    SUP             reduce using rule 74 (t_exp -> VAR .)
+    INF             reduce using rule 74 (t_exp -> VAR .)
+    $end            reduce using rule 74 (t_exp -> VAR .)
+    CP              reduce using rule 74 (t_exp -> VAR .)
+
+
+state 47
+
+    (77) t_term -> NUM .
+
+    COMA            reduce using rule 77 (t_term -> NUM .)
+    SEMICOLON       reduce using rule 77 (t_term -> NUM .)
+    EQUAL           reduce using rule 77 (t_term -> NUM .)
+    MINUS           reduce using rule 77 (t_term -> NUM .)
+    IN              reduce using rule 77 (t_term -> NUM .)
+    SUP             reduce using rule 77 (t_term -> NUM .)
+    INF             reduce using rule 77 (t_term -> NUM .)
+    $end            reduce using rule 77 (t_term -> NUM .)
+    CP              reduce using rule 77 (t_term -> NUM .)
+
+
+state 48
+
+    (78) t_term -> c_list .
+
+    COMA            reduce using rule 78 (t_term -> c_list .)
+    SEMICOLON       reduce using rule 78 (t_term -> c_list .)
+    EQUAL           reduce using rule 78 (t_term -> c_list .)
+    MINUS           reduce using rule 78 (t_term -> c_list .)
+    IN              reduce using rule 78 (t_term -> c_list .)
+    SUP             reduce using rule 78 (t_term -> c_list .)
+    INF             reduce using rule 78 (t_term -> c_list .)
+    $end            reduce using rule 78 (t_term -> c_list .)
+    CP              reduce using rule 78 (t_term -> c_list .)
+
+
+state 49
+
+    (40) exp -> exp more .
+
+    COMA            reduce using rule 40 (exp -> exp more .)
+    SEMICOLON       reduce using rule 40 (exp -> exp more .)
+    EQUAL           reduce using rule 40 (exp -> exp more .)
+    SUP             reduce using rule 40 (exp -> exp more .)
+    INF             reduce using rule 40 (exp -> exp more .)
+    $end            reduce using rule 40 (exp -> exp more .)
+    CP              reduce using rule 40 (exp -> exp more .)
+
+
+state 50
+
+    (33) condition -> exp comparator . exp
+    (39) exp -> . NAME OP exp CP
+    (40) exp -> . exp more
+    (41) exp -> . NUM
+    (42) exp -> . list
+    (43) list -> . OSB morelist CSB
+    (47) list -> . OSB CSB
+    (48) list -> . INF morelist SUP
+
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
+    OSB             shift and go to state 14
+    INF             shift and go to state 15
+
+    exp                            shift and go to state 87
+    list                           shift and go to state 13
+
+state 51
+
+    (49) more -> COMA . exp more
+    (51) more -> COMA . exp
+    (39) exp -> . NAME OP exp CP
+    (40) exp -> . exp more
+    (41) exp -> . NUM
+    (42) exp -> . list
+    (43) list -> . OSB morelist CSB
+    (47) list -> . OSB CSB
+    (48) list -> . INF morelist SUP
+
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
+    OSB             shift and go to state 14
+    INF             shift and go to state 15
+
+    exp                            shift and go to state 88
+    list                           shift and go to state 13
+
+state 52
+
+    (50) more -> SEMICOLON . exp more
+    (52) more -> SEMICOLON . exp
+    (39) exp -> . NAME OP exp CP
+    (40) exp -> . exp more
+    (41) exp -> . NUM
+    (42) exp -> . list
+    (43) list -> . OSB morelist CSB
+    (47) list -> . OSB CSB
+    (48) list -> . INF morelist SUP
+
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
+    OSB             shift and go to state 14
+    INF             shift and go to state 15
+
+    exp                            shift and go to state 89
+    list                           shift and go to state 13
+
+state 53
+
+    (34) comparator -> EQUAL . EQUAL
+
+    EQUAL           shift and go to state 90
+
+
+state 54
+
+    (35) comparator -> SUP .
+    (36) comparator -> SUP . EQUAL
+
+    NAME            reduce using rule 35 (comparator -> SUP .)
+    NUM             reduce using rule 35 (comparator -> SUP .)
+    OSB             reduce using rule 35 (comparator -> SUP .)
+    INF             reduce using rule 35 (comparator -> SUP .)
+    VAR             reduce using rule 35 (comparator -> SUP .)
+    EQUAL           shift and go to state 91
+
+
+state 55
+
+    (37) comparator -> INF .
+    (38) comparator -> INF . EQUAL
+
+    NAME            reduce using rule 37 (comparator -> INF .)
+    NUM             reduce using rule 37 (comparator -> INF .)
+    OSB             reduce using rule 37 (comparator -> INF .)
+    INF             reduce using rule 37 (comparator -> INF .)
+    VAR             reduce using rule 37 (comparator -> INF .)
+    EQUAL           shift and go to state 92
+
+
+state 56
+
+    (39) exp -> NAME OP . exp CP
+    (39) exp -> . NAME OP exp CP
+    (40) exp -> . exp more
+    (41) exp -> . NUM
+    (42) exp -> . list
+    (43) list -> . OSB morelist CSB
+    (47) list -> . OSB CSB
+    (48) list -> . INF morelist SUP
+
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
+    OSB             shift and go to state 14
+    INF             shift and go to state 15
+
+    exp                            shift and go to state 93
+    list                           shift and go to state 13
+
+state 57
+
+    (43) list -> OSB morelist . CSB
+
+    CSB             shift and go to state 94
+
+
+state 58
+
+    (47) list -> OSB CSB .
+
+    COMA            reduce using rule 47 (list -> OSB CSB .)
+    SEMICOLON       reduce using rule 47 (list -> OSB CSB .)
+    EQUAL           reduce using rule 47 (list -> OSB CSB .)
+    SUP             reduce using rule 47 (list -> OSB CSB .)
+    INF             reduce using rule 47 (list -> OSB CSB .)
+    $end            reduce using rule 47 (list -> OSB CSB .)
+    CP              reduce using rule 47 (list -> OSB CSB .)
+
+
+state 59
+
+    (44) morelist -> NUM . COMA morelist
+    (45) morelist -> NUM . SEMICOLON morelist
+    (46) morelist -> NUM .
+
+    COMA            shift and go to state 95
+    SEMICOLON       shift and go to state 96
+    CSB             reduce using rule 46 (morelist -> NUM .)
+    SUP             reduce using rule 46 (morelist -> NUM .)
+
+
+state 60
+
+    (48) list -> INF morelist . SUP
+
+    SUP             shift and go to state 97
+
+
+state 61
+
+    (9) check1 -> c_premises MINUS . MINUS c_conclusion
+
+    MINUS           shift and go to state 98
+
+
+state 62
+
+    (10) check2 -> MINUS MINUS . c_conclusion
+    (19) c_conclusion -> . c_exp EQUAL c_exp
+    (20) c_exp -> . NAME OP c_exp CP
+    (21) c_exp -> . c_term
+    (22) c_exp -> . VAR
+    (23) c_exp -> . c_exp COMA c_exp
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 23
+    VAR             shift and go to state 25
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_conclusion                   shift and go to state 99
+    c_exp                          shift and go to state 100
+    c_term                         shift and go to state 24
+    c_list                         shift and go to state 27
+
+state 63
+
+    (11) c_premises -> c_statement COMA . c_premises
+    (11) c_premises -> . c_statement COMA c_premises
+    (12) c_premises -> . c_statement
+    (13) c_statement -> . c_exp c_right_statement
+    (20) c_exp -> . NAME OP c_exp CP
+    (21) c_exp -> . c_term
+    (22) c_exp -> . VAR
+    (23) c_exp -> . c_exp COMA c_exp
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 23
+    VAR             shift and go to state 25
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_statement                    shift and go to state 21
+    c_premises                     shift and go to state 101
+    c_exp                          shift and go to state 22
+    c_term                         shift and go to state 24
+    c_list                         shift and go to state 27
+
+state 64
+
+    (13) c_statement -> c_exp c_right_statement .
+
+    COMA            reduce using rule 13 (c_statement -> c_exp c_right_statement .)
+    MINUS           reduce using rule 13 (c_statement -> c_exp c_right_statement .)
+
+
+state 65
+
+    (23) c_exp -> c_exp COMA . c_exp
+    (20) c_exp -> . NAME OP c_exp CP
+    (21) c_exp -> . c_term
+    (22) c_exp -> . VAR
+    (23) c_exp -> . c_exp COMA c_exp
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 23
+    VAR             shift and go to state 25
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_exp                          shift and go to state 102
+    c_term                         shift and go to state 24
+    c_list                         shift and go to state 27
+
+state 66
+
+    (14) c_right_statement -> MINUS . SUP VAR
+
+    SUP             shift and go to state 103
+
+
+state 67
+
+    (15) c_right_statement -> comparator . c_term_var
+    (17) c_term_var -> . c_term
+    (18) c_term_var -> . VAR
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    VAR             shift and go to state 74
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_term_var                     shift and go to state 104
+    c_term                         shift and go to state 73
+    c_list                         shift and go to state 27
+
+state 68
+
+    (16) c_right_statement -> IN . NAME
+
+    NAME            shift and go to state 105
+
+
+state 69
+
+    (20) c_exp -> NAME OP . c_exp CP
+    (20) c_exp -> . NAME OP c_exp CP
+    (21) c_exp -> . c_term
+    (22) c_exp -> . VAR
+    (23) c_exp -> . c_exp COMA c_exp
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 23
+    VAR             shift and go to state 25
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_exp                          shift and go to state 106
+    c_term                         shift and go to state 24
+    c_list                         shift and go to state 27
+
+state 70
+
+    (26) c_list -> OSB c_morelist . CSB
+
+    CSB             shift and go to state 107
+
+
+state 71
+
+    (29) c_list -> OSB CSB .
+
+    COMA            reduce using rule 29 (c_list -> OSB CSB .)
+    MINUS           reduce using rule 29 (c_list -> OSB CSB .)
+    IN              reduce using rule 29 (c_list -> OSB CSB .)
+    EQUAL           reduce using rule 29 (c_list -> OSB CSB .)
+    SUP             reduce using rule 29 (c_list -> OSB CSB .)
+    INF             reduce using rule 29 (c_list -> OSB CSB .)
+    SEMICOLON       reduce using rule 29 (c_list -> OSB CSB .)
+    $end            reduce using rule 29 (c_list -> OSB CSB .)
+    CSB             reduce using rule 29 (c_list -> OSB CSB .)
+    CP              reduce using rule 29 (c_list -> OSB CSB .)
+
+
+state 72
+
+    (27) c_morelist -> c_term_var . COMA c_morelist
+    (28) c_morelist -> c_term_var .
+
+    COMA            shift and go to state 108
+    CSB             reduce using rule 28 (c_morelist -> c_term_var .)
+    SUP             reduce using rule 28 (c_morelist -> c_term_var .)
+
+
+state 73
+
+    (17) c_term_var -> c_term .
+
+    COMA            reduce using rule 17 (c_term_var -> c_term .)
+    CSB             reduce using rule 17 (c_term_var -> c_term .)
+    SUP             reduce using rule 17 (c_term_var -> c_term .)
+    MINUS           reduce using rule 17 (c_term_var -> c_term .)
+    $end            reduce using rule 17 (c_term_var -> c_term .)
+
+
+state 74
+
+    (18) c_term_var -> VAR .
+
+    COMA            reduce using rule 18 (c_term_var -> VAR .)
+    CSB             reduce using rule 18 (c_term_var -> VAR .)
+    SUP             reduce using rule 18 (c_term_var -> VAR .)
+    MINUS           reduce using rule 18 (c_term_var -> VAR .)
+    $end            reduce using rule 18 (c_term_var -> VAR .)
+
+
+state 75
+
+    (30) c_list -> INF c_morelist . SUP
+
+    SUP             shift and go to state 109
+
+
+state 76
+
+    (57) s_exp -> s_exp SEMICOLON . s_exp
+    (54) s_exp -> . NAME OP s_subexp CP
+    (55) s_exp -> . s_term
+    (56) s_exp -> . VAR
+    (57) s_exp -> . s_exp SEMICOLON s_exp
+    (58) s_exp -> . s_exp COMA s_exp
+    (59) s_term -> . NUM
+    (60) s_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 32
+    VAR             shift and go to state 34
+    NUM             shift and go to state 35
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    s_exp                          shift and go to state 110
+    s_term                         shift and go to state 33
+    c_list                         shift and go to state 36
+
+state 77
+
+    (58) s_exp -> s_exp COMA . s_exp
+    (54) s_exp -> . NAME OP s_subexp CP
+    (55) s_exp -> . s_term
+    (56) s_exp -> . VAR
+    (57) s_exp -> . s_exp SEMICOLON s_exp
+    (58) s_exp -> . s_exp COMA s_exp
+    (59) s_term -> . NUM
+    (60) s_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 32
+    VAR             shift and go to state 34
+    NUM             shift and go to state 35
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    s_exp                          shift and go to state 111
+    s_term                         shift and go to state 33
+    c_list                         shift and go to state 36
+
+state 78
+
+    (54) s_exp -> NAME OP . s_subexp CP
+    (61) s_subexp -> . NAME OP s_subexp CP
+    (62) s_subexp -> . s_term
+    (63) s_subexp -> . VAR
+    (64) s_subexp -> . s_subexp SEMICOLON s_subexp
+    (59) s_term -> . NUM
+    (60) s_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 112
+    VAR             shift and go to state 115
+    NUM             shift and go to state 35
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    s_subexp                       shift and go to state 113
+    s_term                         shift and go to state 114
+    c_list                         shift and go to state 36
+
+state 79
+
+    (68) t_statement -> t_exp t_right_statement .
+
+    $end            reduce using rule 68 (t_statement -> t_exp t_right_statement .)
+
+
+state 80
+
+    (75) t_exp -> t_exp COMA . t_exp
+    (72) t_exp -> . NAME OP t_exp CP
+    (73) t_exp -> . t_term
+    (74) t_exp -> . VAR
+    (75) t_exp -> . t_exp COMA t_exp
+    (76) t_exp -> . t_exp SEMICOLON t_exp
+    (77) t_term -> . NUM
+    (78) t_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 44
+    VAR             shift and go to state 46
+    NUM             shift and go to state 47
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    t_exp                          shift and go to state 116
+    t_term                         shift and go to state 45
+    c_list                         shift and go to state 48
+
+state 81
+
+    (76) t_exp -> t_exp SEMICOLON . t_exp
+    (72) t_exp -> . NAME OP t_exp CP
+    (73) t_exp -> . t_term
+    (74) t_exp -> . VAR
+    (75) t_exp -> . t_exp COMA t_exp
+    (76) t_exp -> . t_exp SEMICOLON t_exp
+    (77) t_term -> . NUM
+    (78) t_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 44
+    VAR             shift and go to state 46
+    NUM             shift and go to state 47
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    t_exp                          shift and go to state 117
+    t_term                         shift and go to state 45
+    c_list                         shift and go to state 48
+
+state 82
+
+    (79) t_conclusion -> t_exp EQUAL . t_exp
+    (34) comparator -> EQUAL . EQUAL
+    (72) t_exp -> . NAME OP t_exp CP
+    (73) t_exp -> . t_term
+    (74) t_exp -> . VAR
+    (75) t_exp -> . t_exp COMA t_exp
+    (76) t_exp -> . t_exp SEMICOLON t_exp
+    (77) t_term -> . NUM
+    (78) t_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    EQUAL           shift and go to state 90
+    NAME            shift and go to state 44
+    VAR             shift and go to state 46
+    NUM             shift and go to state 47
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    t_exp                          shift and go to state 118
+    t_term                         shift and go to state 45
+    c_list                         shift and go to state 48
+
+state 83
+
+    (69) t_right_statement -> MINUS . SUP VAR
+
+    SUP             shift and go to state 119
+
+
+state 84
+
+    (70) t_right_statement -> IN . NAME
+
+    NAME            shift and go to state 120
+
+
+state 85
+
+    (71) t_right_statement -> comparator . c_term_var
+    (17) c_term_var -> . c_term
+    (18) c_term_var -> . VAR
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    VAR             shift and go to state 74
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_term_var                     shift and go to state 121
+    c_term                         shift and go to state 73
+    c_list                         shift and go to state 27
+
+state 86
+
+    (72) t_exp -> NAME OP . t_exp CP
+    (72) t_exp -> . NAME OP t_exp CP
+    (73) t_exp -> . t_term
+    (74) t_exp -> . VAR
+    (75) t_exp -> . t_exp COMA t_exp
+    (76) t_exp -> . t_exp SEMICOLON t_exp
+    (77) t_term -> . NUM
+    (78) t_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 44
+    VAR             shift and go to state 46
+    NUM             shift and go to state 47
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    t_exp                          shift and go to state 122
+    t_term                         shift and go to state 45
+    c_list                         shift and go to state 48
+
+state 87
+
+    (33) condition -> exp comparator exp .
+    (40) exp -> exp . more
+    (49) more -> . COMA exp more
+    (50) more -> . SEMICOLON exp more
+    (51) more -> . COMA exp
+    (52) more -> . SEMICOLON exp
+
+    $end            reduce using rule 33 (condition -> exp comparator exp .)
+    COMA            shift and go to state 51
+    SEMICOLON       shift and go to state 52
+
+    more                           shift and go to state 49
+
+state 88
+
+    (49) more -> COMA exp . more
+    (51) more -> COMA exp .
+    (40) exp -> exp . more
+    (49) more -> . COMA exp more
+    (50) more -> . SEMICOLON exp more
+    (51) more -> . COMA exp
+    (52) more -> . SEMICOLON exp
+
+  ! shift/reduce conflict for COMA resolved as shift
+  ! shift/reduce conflict for SEMICOLON resolved as shift
+    EQUAL           reduce using rule 51 (more -> COMA exp .)
+    SUP             reduce using rule 51 (more -> COMA exp .)
+    INF             reduce using rule 51 (more -> COMA exp .)
+    $end            reduce using rule 51 (more -> COMA exp .)
+    CP              reduce using rule 51 (more -> COMA exp .)
+    COMA            shift and go to state 51
+    SEMICOLON       shift and go to state 52
+
+  ! COMA            [ reduce using rule 51 (more -> COMA exp .) ]
+  ! SEMICOLON       [ reduce using rule 51 (more -> COMA exp .) ]
+
+    more                           shift and go to state 123
+
+state 89
+
+    (50) more -> SEMICOLON exp . more
+    (52) more -> SEMICOLON exp .
+    (40) exp -> exp . more
+    (49) more -> . COMA exp more
+    (50) more -> . SEMICOLON exp more
+    (51) more -> . COMA exp
+    (52) more -> . SEMICOLON exp
+
+  ! shift/reduce conflict for COMA resolved as shift
+  ! shift/reduce conflict for SEMICOLON resolved as shift
+    EQUAL           reduce using rule 52 (more -> SEMICOLON exp .)
+    SUP             reduce using rule 52 (more -> SEMICOLON exp .)
+    INF             reduce using rule 52 (more -> SEMICOLON exp .)
+    $end            reduce using rule 52 (more -> SEMICOLON exp .)
+    CP              reduce using rule 52 (more -> SEMICOLON exp .)
+    COMA            shift and go to state 51
+    SEMICOLON       shift and go to state 52
+
+  ! COMA            [ reduce using rule 52 (more -> SEMICOLON exp .) ]
+  ! SEMICOLON       [ reduce using rule 52 (more -> SEMICOLON exp .) ]
+
+    more                           shift and go to state 124
+
+state 90
+
+    (34) comparator -> EQUAL EQUAL .
+
+    NAME            reduce using rule 34 (comparator -> EQUAL EQUAL .)
+    NUM             reduce using rule 34 (comparator -> EQUAL EQUAL .)
+    OSB             reduce using rule 34 (comparator -> EQUAL EQUAL .)
+    INF             reduce using rule 34 (comparator -> EQUAL EQUAL .)
+    VAR             reduce using rule 34 (comparator -> EQUAL EQUAL .)
+
+
+state 91
+
+    (36) comparator -> SUP EQUAL .
+
+    NAME            reduce using rule 36 (comparator -> SUP EQUAL .)
+    NUM             reduce using rule 36 (comparator -> SUP EQUAL .)
+    OSB             reduce using rule 36 (comparator -> SUP EQUAL .)
+    INF             reduce using rule 36 (comparator -> SUP EQUAL .)
+    VAR             reduce using rule 36 (comparator -> SUP EQUAL .)
+
+
+state 92
+
+    (38) comparator -> INF EQUAL .
+
+    NAME            reduce using rule 38 (comparator -> INF EQUAL .)
+    NUM             reduce using rule 38 (comparator -> INF EQUAL .)
+    OSB             reduce using rule 38 (comparator -> INF EQUAL .)
+    INF             reduce using rule 38 (comparator -> INF EQUAL .)
+    VAR             reduce using rule 38 (comparator -> INF EQUAL .)
+
+
+state 93
+
+    (39) exp -> NAME OP exp . CP
+    (40) exp -> exp . more
+    (49) more -> . COMA exp more
+    (50) more -> . SEMICOLON exp more
+    (51) more -> . COMA exp
+    (52) more -> . SEMICOLON exp
+
+    CP              shift and go to state 125
+    COMA            shift and go to state 51
+    SEMICOLON       shift and go to state 52
+
+    more                           shift and go to state 49
+
+state 94
+
+    (43) list -> OSB morelist CSB .
+
+    COMA            reduce using rule 43 (list -> OSB morelist CSB .)
+    SEMICOLON       reduce using rule 43 (list -> OSB morelist CSB .)
+    EQUAL           reduce using rule 43 (list -> OSB morelist CSB .)
+    SUP             reduce using rule 43 (list -> OSB morelist CSB .)
+    INF             reduce using rule 43 (list -> OSB morelist CSB .)
+    $end            reduce using rule 43 (list -> OSB morelist CSB .)
+    CP              reduce using rule 43 (list -> OSB morelist CSB .)
+
+
+state 95
+
+    (44) morelist -> NUM COMA . morelist
+    (44) morelist -> . NUM COMA morelist
+    (45) morelist -> . NUM SEMICOLON morelist
+    (46) morelist -> . NUM
+
+    NUM             shift and go to state 59
+
+    morelist                       shift and go to state 126
+
+state 96
+
+    (45) morelist -> NUM SEMICOLON . morelist
+    (44) morelist -> . NUM COMA morelist
+    (45) morelist -> . NUM SEMICOLON morelist
+    (46) morelist -> . NUM
+
+    NUM             shift and go to state 59
+
+    morelist                       shift and go to state 127
+
+state 97
+
+    (48) list -> INF morelist SUP .
+
+    COMA            reduce using rule 48 (list -> INF morelist SUP .)
+    SEMICOLON       reduce using rule 48 (list -> INF morelist SUP .)
+    EQUAL           reduce using rule 48 (list -> INF morelist SUP .)
+    SUP             reduce using rule 48 (list -> INF morelist SUP .)
+    INF             reduce using rule 48 (list -> INF morelist SUP .)
+    $end            reduce using rule 48 (list -> INF morelist SUP .)
+    CP              reduce using rule 48 (list -> INF morelist SUP .)
+
+
+state 98
+
+    (9) check1 -> c_premises MINUS MINUS . c_conclusion
+    (19) c_conclusion -> . c_exp EQUAL c_exp
+    (20) c_exp -> . NAME OP c_exp CP
+    (21) c_exp -> . c_term
+    (22) c_exp -> . VAR
+    (23) c_exp -> . c_exp COMA c_exp
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 23
+    VAR             shift and go to state 25
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_conclusion                   shift and go to state 128
+    c_exp                          shift and go to state 100
+    c_term                         shift and go to state 24
+    c_list                         shift and go to state 27
+
+state 99
+
+    (10) check2 -> MINUS MINUS c_conclusion .
+
+    $end            reduce using rule 10 (check2 -> MINUS MINUS c_conclusion .)
+
+
+state 100
+
+    (19) c_conclusion -> c_exp . EQUAL c_exp
+    (23) c_exp -> c_exp . COMA c_exp
+
+    EQUAL           shift and go to state 129
+    COMA            shift and go to state 65
+
+
+state 101
+
+    (11) c_premises -> c_statement COMA c_premises .
+
+    MINUS           reduce using rule 11 (c_premises -> c_statement COMA c_premises .)
+
+
+state 102
+
+    (23) c_exp -> c_exp COMA c_exp .
+    (23) c_exp -> c_exp . COMA c_exp
+
+  ! shift/reduce conflict for COMA resolved as shift
+    MINUS           reduce using rule 23 (c_exp -> c_exp COMA c_exp .)
+    IN              reduce using rule 23 (c_exp -> c_exp COMA c_exp .)
+    EQUAL           reduce using rule 23 (c_exp -> c_exp COMA c_exp .)
+    SUP             reduce using rule 23 (c_exp -> c_exp COMA c_exp .)
+    INF             reduce using rule 23 (c_exp -> c_exp COMA c_exp .)
+    CP              reduce using rule 23 (c_exp -> c_exp COMA c_exp .)
+    $end            reduce using rule 23 (c_exp -> c_exp COMA c_exp .)
+    COMA            shift and go to state 65
+
+  ! COMA            [ reduce using rule 23 (c_exp -> c_exp COMA c_exp .) ]
+
+
+state 103
+
+    (14) c_right_statement -> MINUS SUP . VAR
+
+    VAR             shift and go to state 130
+
+
+state 104
+
+    (15) c_right_statement -> comparator c_term_var .
+
+    COMA            reduce using rule 15 (c_right_statement -> comparator c_term_var .)
+    MINUS           reduce using rule 15 (c_right_statement -> comparator c_term_var .)
+
+
+state 105
+
+    (16) c_right_statement -> IN NAME .
+
+    COMA            reduce using rule 16 (c_right_statement -> IN NAME .)
+    MINUS           reduce using rule 16 (c_right_statement -> IN NAME .)
+
+
+state 106
+
+    (20) c_exp -> NAME OP c_exp . CP
+    (23) c_exp -> c_exp . COMA c_exp
+
+    CP              shift and go to state 131
+    COMA            shift and go to state 65
+
+
+state 107
+
+    (26) c_list -> OSB c_morelist CSB .
+
+    COMA            reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    MINUS           reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    IN              reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    EQUAL           reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    SUP             reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    INF             reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    SEMICOLON       reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    $end            reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    CSB             reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+    CP              reduce using rule 26 (c_list -> OSB c_morelist CSB .)
+
+
+state 108
+
+    (27) c_morelist -> c_term_var COMA . c_morelist
+    (27) c_morelist -> . c_term_var COMA c_morelist
+    (28) c_morelist -> . c_term_var
+    (17) c_term_var -> . c_term
+    (18) c_term_var -> . VAR
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    VAR             shift and go to state 74
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_term_var                     shift and go to state 72
+    c_morelist                     shift and go to state 132
+    c_term                         shift and go to state 73
+    c_list                         shift and go to state 27
+
+state 109
+
+    (30) c_list -> INF c_morelist SUP .
+
+    COMA            reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    MINUS           reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    IN              reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    EQUAL           reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    SUP             reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    INF             reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    SEMICOLON       reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    $end            reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    CSB             reduce using rule 30 (c_list -> INF c_morelist SUP .)
+    CP              reduce using rule 30 (c_list -> INF c_morelist SUP .)
+
+
+state 110
+
+    (57) s_exp -> s_exp SEMICOLON s_exp .
+    (57) s_exp -> s_exp . SEMICOLON s_exp
+    (58) s_exp -> s_exp . COMA s_exp
+
+  ! shift/reduce conflict for SEMICOLON resolved as shift
+  ! shift/reduce conflict for COMA resolved as shift
+    $end            reduce using rule 57 (s_exp -> s_exp SEMICOLON s_exp .)
+    SEMICOLON       shift and go to state 76
+    COMA            shift and go to state 77
+
+  ! SEMICOLON       [ reduce using rule 57 (s_exp -> s_exp SEMICOLON s_exp .) ]
+  ! COMA            [ reduce using rule 57 (s_exp -> s_exp SEMICOLON s_exp .) ]
+
+
+state 111
+
+    (58) s_exp -> s_exp COMA s_exp .
+    (57) s_exp -> s_exp . SEMICOLON s_exp
+    (58) s_exp -> s_exp . COMA s_exp
+
+  ! shift/reduce conflict for SEMICOLON resolved as shift
+  ! shift/reduce conflict for COMA resolved as shift
+    $end            reduce using rule 58 (s_exp -> s_exp COMA s_exp .)
+    SEMICOLON       shift and go to state 76
+    COMA            shift and go to state 77
+
+  ! SEMICOLON       [ reduce using rule 58 (s_exp -> s_exp COMA s_exp .) ]
+  ! COMA            [ reduce using rule 58 (s_exp -> s_exp COMA s_exp .) ]
+
+
+state 112
+
+    (61) s_subexp -> NAME . OP s_subexp CP
+
+    OP              shift and go to state 133
+
+
+state 113
+
+    (54) s_exp -> NAME OP s_subexp . CP
+    (64) s_subexp -> s_subexp . SEMICOLON s_subexp
+
+    CP              shift and go to state 134
+    SEMICOLON       shift and go to state 135
+
+
+state 114
+
+    (62) s_subexp -> s_term .
+
+    CP              reduce using rule 62 (s_subexp -> s_term .)
+    SEMICOLON       reduce using rule 62 (s_subexp -> s_term .)
+
+
+state 115
+
+    (63) s_subexp -> VAR .
+
+    CP              reduce using rule 63 (s_subexp -> VAR .)
+    SEMICOLON       reduce using rule 63 (s_subexp -> VAR .)
+
+
+state 116
+
+    (75) t_exp -> t_exp COMA t_exp .
+    (75) t_exp -> t_exp . COMA t_exp
+    (76) t_exp -> t_exp . SEMICOLON t_exp
+
+  ! shift/reduce conflict for COMA resolved as shift
+  ! shift/reduce conflict for SEMICOLON resolved as shift
+    EQUAL           reduce using rule 75 (t_exp -> t_exp COMA t_exp .)
+    MINUS           reduce using rule 75 (t_exp -> t_exp COMA t_exp .)
+    IN              reduce using rule 75 (t_exp -> t_exp COMA t_exp .)
+    SUP             reduce using rule 75 (t_exp -> t_exp COMA t_exp .)
+    INF             reduce using rule 75 (t_exp -> t_exp COMA t_exp .)
+    $end            reduce using rule 75 (t_exp -> t_exp COMA t_exp .)
+    CP              reduce using rule 75 (t_exp -> t_exp COMA t_exp .)
+    COMA            shift and go to state 80
+    SEMICOLON       shift and go to state 81
+
+  ! COMA            [ reduce using rule 75 (t_exp -> t_exp COMA t_exp .) ]
+  ! SEMICOLON       [ reduce using rule 75 (t_exp -> t_exp COMA t_exp .) ]
+
+
+state 117
+
+    (76) t_exp -> t_exp SEMICOLON t_exp .
+    (75) t_exp -> t_exp . COMA t_exp
+    (76) t_exp -> t_exp . SEMICOLON t_exp
+
+  ! shift/reduce conflict for COMA resolved as shift
+  ! shift/reduce conflict for SEMICOLON resolved as shift
+    EQUAL           reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .)
+    MINUS           reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .)
+    IN              reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .)
+    SUP             reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .)
+    INF             reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .)
+    $end            reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .)
+    CP              reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .)
+    COMA            shift and go to state 80
+    SEMICOLON       shift and go to state 81
+
+  ! COMA            [ reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .) ]
+  ! SEMICOLON       [ reduce using rule 76 (t_exp -> t_exp SEMICOLON t_exp .) ]
+
+
+state 118
+
+    (79) t_conclusion -> t_exp EQUAL t_exp .
+    (75) t_exp -> t_exp . COMA t_exp
+    (76) t_exp -> t_exp . SEMICOLON t_exp
+
+    $end            reduce using rule 79 (t_conclusion -> t_exp EQUAL t_exp .)
+    COMA            shift and go to state 80
+    SEMICOLON       shift and go to state 81
+
+
+state 119
+
+    (69) t_right_statement -> MINUS SUP . VAR
+
+    VAR             shift and go to state 136
+
+
+state 120
+
+    (70) t_right_statement -> IN NAME .
+
+    $end            reduce using rule 70 (t_right_statement -> IN NAME .)
+
+
+state 121
+
+    (71) t_right_statement -> comparator c_term_var .
+
+    $end            reduce using rule 71 (t_right_statement -> comparator c_term_var .)
+
+
+state 122
+
+    (72) t_exp -> NAME OP t_exp . CP
+    (75) t_exp -> t_exp . COMA t_exp
+    (76) t_exp -> t_exp . SEMICOLON t_exp
+
+    CP              shift and go to state 137
+    COMA            shift and go to state 80
+    SEMICOLON       shift and go to state 81
+
+
+state 123
+
+    (49) more -> COMA exp more .
+    (40) exp -> exp more .
+
+  ! reduce/reduce conflict for COMA resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for SEMICOLON resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for EQUAL resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for SUP resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for INF resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for $end resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for CP resolved using rule 40 (exp -> exp more .)
+    COMA            reduce using rule 40 (exp -> exp more .)
+    SEMICOLON       reduce using rule 40 (exp -> exp more .)
+    EQUAL           reduce using rule 40 (exp -> exp more .)
+    SUP             reduce using rule 40 (exp -> exp more .)
+    INF             reduce using rule 40 (exp -> exp more .)
+    $end            reduce using rule 40 (exp -> exp more .)
+    CP              reduce using rule 40 (exp -> exp more .)
+
+  ! COMA            [ reduce using rule 49 (more -> COMA exp more .) ]
+  ! SEMICOLON       [ reduce using rule 49 (more -> COMA exp more .) ]
+  ! EQUAL           [ reduce using rule 49 (more -> COMA exp more .) ]
+  ! SUP             [ reduce using rule 49 (more -> COMA exp more .) ]
+  ! INF             [ reduce using rule 49 (more -> COMA exp more .) ]
+  ! $end            [ reduce using rule 49 (more -> COMA exp more .) ]
+  ! CP              [ reduce using rule 49 (more -> COMA exp more .) ]
+
+
+state 124
+
+    (50) more -> SEMICOLON exp more .
+    (40) exp -> exp more .
+
+  ! reduce/reduce conflict for COMA resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for SEMICOLON resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for EQUAL resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for SUP resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for INF resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for $end resolved using rule 40 (exp -> exp more .)
+  ! reduce/reduce conflict for CP resolved using rule 40 (exp -> exp more .)
+    COMA            reduce using rule 40 (exp -> exp more .)
+    SEMICOLON       reduce using rule 40 (exp -> exp more .)
+    EQUAL           reduce using rule 40 (exp -> exp more .)
+    SUP             reduce using rule 40 (exp -> exp more .)
+    INF             reduce using rule 40 (exp -> exp more .)
+    $end            reduce using rule 40 (exp -> exp more .)
+    CP              reduce using rule 40 (exp -> exp more .)
+
+  ! COMA            [ reduce using rule 50 (more -> SEMICOLON exp more .) ]
+  ! SEMICOLON       [ reduce using rule 50 (more -> SEMICOLON exp more .) ]
+  ! EQUAL           [ reduce using rule 50 (more -> SEMICOLON exp more .) ]
+  ! SUP             [ reduce using rule 50 (more -> SEMICOLON exp more .) ]
+  ! INF             [ reduce using rule 50 (more -> SEMICOLON exp more .) ]
+  ! $end            [ reduce using rule 50 (more -> SEMICOLON exp more .) ]
+  ! CP              [ reduce using rule 50 (more -> SEMICOLON exp more .) ]
+
+
+state 125
+
+    (39) exp -> NAME OP exp CP .
+
+    COMA            reduce using rule 39 (exp -> NAME OP exp CP .)
+    SEMICOLON       reduce using rule 39 (exp -> NAME OP exp CP .)
+    EQUAL           reduce using rule 39 (exp -> NAME OP exp CP .)
+    SUP             reduce using rule 39 (exp -> NAME OP exp CP .)
+    INF             reduce using rule 39 (exp -> NAME OP exp CP .)
+    $end            reduce using rule 39 (exp -> NAME OP exp CP .)
+    CP              reduce using rule 39 (exp -> NAME OP exp CP .)
+
+
+state 126
+
+    (44) morelist -> NUM COMA morelist .
+
+    CSB             reduce using rule 44 (morelist -> NUM COMA morelist .)
+    SUP             reduce using rule 44 (morelist -> NUM COMA morelist .)
+
+
+state 127
+
+    (45) morelist -> NUM SEMICOLON morelist .
+
+    CSB             reduce using rule 45 (morelist -> NUM SEMICOLON morelist .)
+    SUP             reduce using rule 45 (morelist -> NUM SEMICOLON morelist .)
+
+
+state 128
+
+    (9) check1 -> c_premises MINUS MINUS c_conclusion .
+
+    $end            reduce using rule 9 (check1 -> c_premises MINUS MINUS c_conclusion .)
+
+
+state 129
+
+    (19) c_conclusion -> c_exp EQUAL . c_exp
+    (20) c_exp -> . NAME OP c_exp CP
+    (21) c_exp -> . c_term
+    (22) c_exp -> . VAR
+    (23) c_exp -> . c_exp COMA c_exp
+    (24) c_term -> . NUM
+    (25) c_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 23
+    VAR             shift and go to state 25
+    NUM             shift and go to state 26
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    c_exp                          shift and go to state 138
+    c_term                         shift and go to state 24
+    c_list                         shift and go to state 27
+
+state 130
+
+    (14) c_right_statement -> MINUS SUP VAR .
+
+    COMA            reduce using rule 14 (c_right_statement -> MINUS SUP VAR .)
+    MINUS           reduce using rule 14 (c_right_statement -> MINUS SUP VAR .)
+
+
+state 131
+
+    (20) c_exp -> NAME OP c_exp CP .
+
+    COMA            reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+    MINUS           reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+    IN              reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+    EQUAL           reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+    SUP             reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+    INF             reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+    CP              reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+    $end            reduce using rule 20 (c_exp -> NAME OP c_exp CP .)
+
+
+state 132
+
+    (27) c_morelist -> c_term_var COMA c_morelist .
+
+    CSB             reduce using rule 27 (c_morelist -> c_term_var COMA c_morelist .)
+    SUP             reduce using rule 27 (c_morelist -> c_term_var COMA c_morelist .)
+
+
+state 133
+
+    (61) s_subexp -> NAME OP . s_subexp CP
+    (61) s_subexp -> . NAME OP s_subexp CP
+    (62) s_subexp -> . s_term
+    (63) s_subexp -> . VAR
+    (64) s_subexp -> . s_subexp SEMICOLON s_subexp
+    (59) s_term -> . NUM
+    (60) s_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 112
+    VAR             shift and go to state 115
+    NUM             shift and go to state 35
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    s_subexp                       shift and go to state 139
+    s_term                         shift and go to state 114
+    c_list                         shift and go to state 36
+
+state 134
+
+    (54) s_exp -> NAME OP s_subexp CP .
+
+    SEMICOLON       reduce using rule 54 (s_exp -> NAME OP s_subexp CP .)
+    COMA            reduce using rule 54 (s_exp -> NAME OP s_subexp CP .)
+    $end            reduce using rule 54 (s_exp -> NAME OP s_subexp CP .)
+
+
+state 135
+
+    (64) s_subexp -> s_subexp SEMICOLON . s_subexp
+    (61) s_subexp -> . NAME OP s_subexp CP
+    (62) s_subexp -> . s_term
+    (63) s_subexp -> . VAR
+    (64) s_subexp -> . s_subexp SEMICOLON s_subexp
+    (59) s_term -> . NUM
+    (60) s_term -> . c_list
+    (26) c_list -> . OSB c_morelist CSB
+    (29) c_list -> . OSB CSB
+    (30) c_list -> . INF c_morelist SUP
+
+    NAME            shift and go to state 112
+    VAR             shift and go to state 115
+    NUM             shift and go to state 35
+    OSB             shift and go to state 28
+    INF             shift and go to state 29
+
+    s_subexp                       shift and go to state 140
+    s_term                         shift and go to state 114
+    c_list                         shift and go to state 36
+
+state 136
+
+    (69) t_right_statement -> MINUS SUP VAR .
+
+    $end            reduce using rule 69 (t_right_statement -> MINUS SUP VAR .)
+
+
+state 137
+
+    (72) t_exp -> NAME OP t_exp CP .
+
+    COMA            reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    SEMICOLON       reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    EQUAL           reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    MINUS           reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    IN              reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    SUP             reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    INF             reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    $end            reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+    CP              reduce using rule 72 (t_exp -> NAME OP t_exp CP .)
+
+
+state 138
+
+    (19) c_conclusion -> c_exp EQUAL c_exp .
+    (23) c_exp -> c_exp . COMA c_exp
+
+    $end            reduce using rule 19 (c_conclusion -> c_exp EQUAL c_exp .)
+    COMA            shift and go to state 65
+
+
+state 139
+
+    (61) s_subexp -> NAME OP s_subexp . CP
+    (64) s_subexp -> s_subexp . SEMICOLON s_subexp
+
+    CP              shift and go to state 141
+    SEMICOLON       shift and go to state 135
+
+
+state 140
+
+    (64) s_subexp -> s_subexp SEMICOLON s_subexp .
+    (64) s_subexp -> s_subexp . SEMICOLON s_subexp
+
+  ! shift/reduce conflict for SEMICOLON resolved as shift
+    CP              reduce using rule 64 (s_subexp -> s_subexp SEMICOLON s_subexp .)
+    SEMICOLON       shift and go to state 135
+
+  ! SEMICOLON       [ reduce using rule 64 (s_subexp -> s_subexp SEMICOLON s_subexp .) ]
+
+
+state 141
+
+    (61) s_subexp -> NAME OP s_subexp CP .
+
+    CP              reduce using rule 61 (s_subexp -> NAME OP s_subexp CP .)
+    SEMICOLON       reduce using rule 61 (s_subexp -> NAME OP s_subexp CP .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for COMA in state 88 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 88 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 89 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 89 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 102 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 110 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 110 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 111 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 111 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 116 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 116 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 117 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 117 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 140 resolved as shift
+WARNING: reduce/reduce conflict in state 123 resolved using rule (exp -> exp more)
+WARNING: rejected rule (more -> COMA exp more) in state 123
+WARNING: reduce/reduce conflict in state 124 resolved using rule (exp -> exp more)
+WARNING: rejected rule (more -> SEMICOLON exp more) in state 124
+WARNING: Rule (more -> COMA exp more) is never reduced
+WARNING: Rule (more -> SEMICOLON exp more) is never reduced

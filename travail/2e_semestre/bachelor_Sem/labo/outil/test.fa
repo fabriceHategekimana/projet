@@ -1,4 +1,0 @@
-A -> Ap, B -> Bp, Bp >= Ap -- max(A,B) = Bp
-A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
--- maxL([]) = 0
--- maxL(L) = max(pop(L), maxL(removeLast(L)))
