@@ -1,4 +1,3 @@
-----
 
 # Motivation: 
 
@@ -12,7 +11,6 @@
 	- Définir la sémantique d'un langage
 	- En voir ses dérivations
 
-----
 
 # Outil
 
@@ -25,7 +23,6 @@
 	- Outils de debbuging qui prévient l'utilisateur
 	- Visualisation par graphe
 
-----
 
 # Actuellement
 
@@ -38,20 +35,17 @@
 	- présentation du projet
 	- documentation
 
-----
 
 # langage
 
 ![langage_ensemble_shema](images/langage_ensemble_shema.png){ width=50% }
 
-----
 
 # langage natif (1)
 ## Tree-based abstract syntaxe
 
 ![abstract_syntaxe](images/abstract_syntaxe.png)
 
-----
 
 # langage natif (2)
 
@@ -61,7 +55,6 @@
 - division **div(a,b)**  
 - multiplication **mul(a,b)**  
 
-----
 
 # langage natif (2)
 
@@ -79,7 +72,6 @@ liste: [], [1,2,3], ...
 - retrait  **pop(l2)**  => 6  
 - retrait  **pop(l2, 0)**  => 4  
 
-----
 
 # Pour le reste
 
@@ -90,7 +82,6 @@ liste: [], [1,2,3], ...
 modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
 ```
 
-----
 
 # détails
 
@@ -109,13 +100,11 @@ modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
 ## fonction:
 	- Doit obligatoirement commencer par une minuscule
 
-----
 
 # architecture
 
 ![architecture](images/architecture.png)
 
-----
 
 # formule simple
 
@@ -123,7 +112,6 @@ modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
 	- les nombres
 	- les listes
 
-----
 
 # factorielle.fa
 
@@ -137,7 +125,6 @@ modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
 N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
 ```
 
-----
 
 # len.fa
 
@@ -151,7 +138,6 @@ N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
 L->Lp, Lp in list -- len(L) = add(1,len(removeLast(Lp)))
 ```
 
-----
 
 # max.fa
 
@@ -169,7 +155,6 @@ A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
 -- maxL(L) = max(pop(L), maxL(removeLast(L)))
 ```
 
-----
 
 # Syntaxe State (du domaine sémantique)
 
@@ -188,7 +173,6 @@ A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
 <e1,...,en>inst => <i1,...,in>
 ```
 
-----
 
 # Le compteur
 
@@ -203,7 +187,6 @@ Compteur in number -- <Compteur>moins = <sub(Compteur,1)>
 
 ```
 
-----
 
 # Le point
 
@@ -221,7 +204,6 @@ Compteur in number -- <Compteur>moins = <sub(Compteur,1)>
 -- <X,Y>haut = <X,add(Y,1)>
 ```
 
-----
 
 # mode debug
 
@@ -235,7 +217,6 @@ Le but est de permettre à l'utilisateur de voir pas à pas le developpement de 
 - visualiser le parcours d'exécution
 - (faire des test)
 
-----
 
 # Interface (visualisation par graphe)
 
@@ -244,14 +225,12 @@ Le but est de permettre à l'utilisateur de voir pas à pas le developpement de 
 
 inspiré de vis.js
 
-----
 
 # outils de visualisation
 
 ## Affichage
 	NetworkX + pyvis + vis.js
 	
-----
 
 # Document
 
@@ -262,27 +241,3 @@ inspiré de vis.js
 4. présentation de l'outils
 5. documentation de l'outils
 6. conclusions
-
-----
-
-# Pour la suite
-
-## 21.04.21
-- interface du système de dérivation (suite) 
-- système de gestion des erreurs
-- écriture de la documentation (suite)
-
-## 28.04.21
-- système de gestion des erreurs (suite)
-- faire tester l'outil
-- écriture de la documentation (suite)
-	
-## 05.05.21
-- écriture de la documentation (suite)
-- faire tester l'outil
-- système de gestion des erreurs (suite)
-
-## 12.05.21
-- écriture de la documentation (suite)
-- faire tester l'outil
-- (développement d'un système de preuve)

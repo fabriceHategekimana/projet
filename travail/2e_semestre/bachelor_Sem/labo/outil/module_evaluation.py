@@ -11,7 +11,7 @@ def evaluateInstruction(exp):
     else:
         print("evaluate expression")
         res= evaluateExpression(exp)
-    return "return> "+res
+    return res
 
 def evaluateState(state):
     print("------------------------EE")
@@ -157,10 +157,10 @@ def applyRule(expression, rule):
 
 def subEvalState(exp):
     final= []
-    tab= exp.replace("<","").replace(">","").split(",")
+    tab= splitByExpression(exp.replace("<","").replace(">",""))
     for t in tab:
         final.append(evaluateExpression(t))
-    return "<"+"".join(final)+">"
+    return "<"+";".join(final)+">"
 
 def applyRule2(expression, rule, data):
     final= "error"
@@ -214,6 +214,7 @@ def getName(exp):
         
 def union(exp1, exp2):
     if exp1[0] == "<":
+        print("unionState")
         res= unionState(exp1, exp2)
     else:
         res= unionExpression(exp1, exp2)
@@ -222,8 +223,10 @@ def union(exp1, exp2):
 def unionState(exp1, exp2):
     exp1= toTuple(exp1)
     exp2= toTuple(exp2)
-    tab1= exp1.split(",")
-    tab2= exp2.split(",")
+    tab1= exp1.split(";")
+    tab2= exp2.split(";")
+    print("tab1:", tab1)
+    print("tab2:", tab2)
     return unionFinal(tab1, tab2)
 
 def toTuple(exp):

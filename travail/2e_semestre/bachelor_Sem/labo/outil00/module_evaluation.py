@@ -1,16 +1,30 @@
 from compile import parser
 import re
+from module_db import *
+
+d= Data()
+
+def evaluateInstruction(exp):
+    if exp[0] == "<":
+        print("evaluate state")
+        res= evaluateState(exp)
+    else:
+        print("evaluate expression")
+        res= evaluateExpression(exp)
+    return res
 
 def evaluateState(state):
-    rules= find(state)
-    for r in rules:
-        #[premise,entete,conclusion]
-        dico= union(state, r[1])
-        res, dico= check(r[0], dico)
-        if res:
-            state= complete(r[2], dico)
-            return state
-    return false
+    print("------------------------EE")
+    print("expression: ", state)
+    final= "Error: instruction non developpable"
+    selection= getSelection(state, "state")
+    print("selection: ", selection)
+    for rule in selection:
+        res= applyRule(state, rule)
+        if res != "error":
+            final= res
+            break
+    return final
 
 def symbol(statement):
     res= ""
@@ -32,29 +46,29 @@ def symbol(statement):
         res="<"
     return res
 
-def test(expression, substitution, data):
+def test(expression, substitution):
     res= False
     expression= complete(expression, substitution)
-    #print("expression à tester: ", expression)
+    print("expression à tester: ", expression)
     sym= symbol(expression)
-    #print("symbol: ", sym)
+    print("symbol: ", sym)
     tab= expression.split(sym)
-    left= evaluateExpression(tab[0], data)
+    left= evaluateExpression(tab[0])
     if sym in ["==",">",">=","<","<="]: # if its conditionnal test
         val= subEval(left+sym+tab[1])
-        #print("résultat du test de comparaison: ", val)
+        print("résultat du test de comparaison: ", val)
         if val == "True":
             res = substitution
     elif sym == "&in&": # if its a type test
         val= evalNativeType(left+" in "+tab[1])
-        #print("résultat du test in 1: ", val)
+        print("résultat du test in 1: ", val)
         if val == False:
-            #print("on continue")
+            print("on continue")
             pass
         else:
             res= substitution
     elif sym == "->": # if it's an evaluation
-        #print("résultat du test -> : ", left)
+        print("résultat du test -> : ", left)
         substitution.append([tab[1], left])
         res= substitution
     return res
@@ -67,64 +81,64 @@ def evalNativeType(exp):
         res= isList(exp.replace(" in list", ""))
     return res
 
-def evaluateExpression(expression, data):
-    #print("------------------------EVAL")
-    #print("subEval de l'expression: ", expression)
+def evaluateExpression(expression):
+    print("------------------------EVAL")
+    print("subEval de l'expression: ", expression)
     res= subEval(expression) 
     if not isTerminal(res):
         #res= pseudoEval(expression, data)
-        res= evaluateExpressionHelper(expression, data)
+        res= evaluateExpressionHelper(expression)
         if not isTerminal:
             res= "error"
     return res
 
-def pseudoEval(expression, data):
+#def pseudoEval(expression, data):
     #print("------------------------EE")
     #print("expression: ", expression)
-    final= "Error: instruction non developpable"
-    selection= getSelection(expression, data)
+    #final= "Error: instruction non developpable"
+    #selection= getSelection(expression, data)
     #print("selection: ", selection)
-    return "pas fini"
+    #return "pas fini"
 
-def evaluateExpressionHelper(expression, data):
-    #print("------------------------EE")
-    #print("expression: ", expression)
+def evaluateExpressionHelper(expression):
+    print("------------------------EE")
+    print("expression: ", expression)
     final= "Error: instruction non developpable"
-    selection= getSelection(expression, data)
-    #print("selection: ", selection)
+    selection= getSelection(expression, "exp")
+    print("selection: ", selection)
     for rule in selection:
-        res= applyRule(expression, rule, data)
+        res= applyRule(expression, rule)
         if res != "error":
             final= res
             break
     return final
 
-def applyRule(expression, rule, data):
-    #print("--------------------RULE")
-    #print("règle choisie: ", rule)
+def applyRule(expression, rule):
+    print("--------------------RULE")
+    print("règle choisie: ", rule)
     final= "error"
     allTrue= True
     substitution= union(rule[0], expression) 
     if substitution == False: # if false the fact doesn't match go to the next rule/fact
-        #print("Le fait ne match pas, on passe à la prochaine règle")
+        print("Le fait ne match pas, on passe à la prochaine règle")
         allTrue= False
         final= "error"
     elif substitution == True: # if true the fact match go directly to the conclusion
-        #print("Le fait match")
+        print("Le fait match")
         pass
     else: # if this is an array of substitution, go check the premises
-        #print("substitution obtenue: ", substitution)
+        print("substitution obtenue: ", substitution)
         if rule[1] != "":
             for premise in rule[1].split(";"): #loop: premises
-                #print("premisse obtenue: ", premise)
-                res= test(premise, substitution, data)
-                #print("res: ",res)
+                print("premisse obtenue: ", premise)
+                res= test(premise, substitution)
+                print("res: ",res)
                 if res == False: #if a premise is false, we drop the rule
-                    #print("règle non accomplie")
+                    print("règle non accomplie")
                     allTrue= False
                     break
                 else:
-                    #print("règle accomplie")
+                    print("règle accomplie")
                     substitution= res
     if allTrue == True:
         if substitution != True: # on fait les dernière substitutions si le tableau n'est pas vide
@@ -133,10 +147,20 @@ def applyRule(expression, rule, data):
                 conclusion= conclusion.split(symbol(rule[2]))[1] # on ne prend que la partie de droite
         else:
             conclusion= rule[2].split(symbol(rule[2]))[1] # on prend la partie de droite (qui n'a pas besoin d'être complêtée)
-        #print("conclusion: ", conclusion)
-        final= evaluateExpression(conclusion, data)
-    #print("final applyRule: ", final)
+        print("conclusion: ", conclusion)
+        if conclusion[0] == "<":
+            final= subEvalState(conclusion)
+        else:
+            final= evaluateExpression(conclusion)
+    print("final applyRule: ", final)
     return final
+
+def subEvalState(exp):
+    final= []
+    tab= splitByExpression(exp.replace("<","").replace(">",""))
+    for t in tab:
+        final.append(evaluateExpression(t))
+    return "<"+";".join(final)+">"
 
 def applyRule2(expression, rule, data):
     final= "error"
@@ -150,7 +174,7 @@ def applyRule2(expression, rule, data):
     else: # if this is an array of substitution, go check the premises
         if rule[1] != "":
             for premise in rule[1].split(";"): #loop: premises
-                res= test(premise, substitution, data)
+                res= test(premise, substitution)
                 if res == False: #if a premise is false, we drop the rule
                     allTrue= False
                     break
@@ -169,12 +193,17 @@ def applyRule2(expression, rule, data):
         final= conclusion
     return final
 
-def getSelection(exp, data):
-    final= []
-    name= getName(exp)
-    for rule in data:
-        if getName(rule[0]) == name:
-            final.append(rule)
+def getSelection(exp,table):
+    if exp[0] == "<":
+        if exp.find("(") > -1:
+            newExp= "%"+exp[exp.find(">")+1:exp.find("(")]
+        else:
+            newExp= "%"+exp[exp.find(">")+1:]
+    else:
+        newExp= exp[0:exp.find("(")]
+    print("exp pour la selection:", newExp)
+    table= table+"_rules"
+    final= d.sqlQuery("select header,premises,conclusion from "+table+" where header like '"+newExp+"%'")
     return final
 
 def getName(exp):
@@ -185,20 +214,23 @@ def getName(exp):
         
 def union(exp1, exp2):
     if exp1[0] == "<":
+        print("unionState")
         res= unionState(exp1, exp2)
     else:
         res= unionExpression(exp1, exp2)
     return res
 
 def unionState(exp1, exp2):
-    exp1= exp1.replace("<","").replace(">","")
-    exp2= exp2.replace("<","").replace(">","")
-    tab1= exp1.split(",")
-    tab2= exp2.split(",")
-    res= []
-    for i in range(len(tab1)):
-        res.append([tab1[i], tab2[i]])
-    return res
+    exp1= toTuple(exp1)
+    exp2= toTuple(exp2)
+    tab1= exp1.split(";")
+    tab2= exp2.split(";")
+    print("tab1:", tab1)
+    print("tab2:", tab2)
+    return unionFinal(tab1, tab2)
+
+def toTuple(exp):
+    return myParser("state"+exp)
 
 def unionExpression(exp1,exp2):
     #exp1 is the rule union, exp2 is the user union
@@ -207,10 +239,9 @@ def unionExpression(exp1,exp2):
     exp2= exp2[exp2.find("(")+1:exp2.rfind(")")]
     tab1= splitByExpression(exp1)
     tab2= splitByExpression(exp2)
+    return unionFinal(tab1, tab2)
 
-    #print("tab1", tab1)
-    #print("tab2", tab2)
-
+def unionFinal(tab1,tab2):
     final= []
     if len(tab1) == len(tab2): #si les tables font la même longueur
         for i in range(len(tab1)): #on explore
@@ -224,7 +255,7 @@ def unionExpression(exp1,exp2):
                 final.append([tab1[i], tab2[i]])
         if final == []: # si on est tombé que sur des terminaux égaux
             final = True
-    #print("résultat de l'union: ", final)
+    print("résultat de l'union: ", final)
     return final
 
 def splitByExpression(exp):
@@ -236,7 +267,7 @@ def isNumber(exp):
         res = True
     else:
         res = False
-    ##print("isNumber de "+exp+": "+str(res))
+    #print("isNumber de "+exp+": "+str(res))
     return res
 
 def isList(exp):
@@ -246,7 +277,7 @@ def isList(exp):
             res = True
     except:
         pass
-    ##print("isList de "+exp+": "+str(res))
+    #print("isList de "+exp+": "+str(res))
     return res
 
 def isBoolean(exp):
@@ -259,7 +290,7 @@ def isTerminal(exp):
     res= False
     if isNumber(exp) or isList(exp) or isBoolean(exp):
         res= True
-    #print("isTerminal de "+exp+" "+str(res))
+    print("isTerminal de "+exp+" "+str(res))
     return res
 
 def check(exp, dico):
@@ -291,9 +322,10 @@ def verifiable(exp,dico):
     return res, dico
 
 def complete(exp, tab):
+    print("expression à complèter:", exp)
     dico= tabToDic(tab)
     tokens= getToken(exp) #token est un tableau des différentes partie de l'expression
-    #print("tokens: ", tokens)
+    print("tokens: ", tokens)
     for i in range(len(tokens)):
         tokens[i]= dico.get(tokens[i], tokens[i]) #On remplace si'il y a un moyen de remplacer
     if "in" in tokens:
@@ -314,7 +346,7 @@ def getToken(exp):
 def subEval(exp):
     res= myParser("calc "+exp)
     if res == "error":
-        #print("subEval a échoué")
+        print("subEval a échoué")
         res= exp
     return res
 

@@ -110,7 +110,7 @@ t_EQUAL= r'\='
 t_ignore = r' '
 
 def t_NUM(t):
-    r'\d+'
+    r'-?\d+'
     t.value = str(t.value)
     return t
 
@@ -249,6 +249,7 @@ def p_c_exp2(p):
 def p_c_exp3(p):
     '''
     c_exp : c_exp COMA c_exp
+          | c_exp SEMICOLON c_exp
     '''
     p[0] = p[1]+";"+p[3]
 
@@ -259,29 +260,11 @@ def p_c_term(p):
     '''
     p[0]= str(p[1])
 
-#def p_list1(p):
-    #'''
-    #c_list : OSB c_morelist CSB
-    #'''
-    #p[0] = str("["+p[2]+"]")
-
 def p_list1(p):
     '''
-    c_list : OSB exp CSB
+    c_list : OSB c_exp CSB
     '''
     p[0] = str("["+p[2]+"]")
-
-#def p_list2(p):
-    #'''
-    #c_morelist : c_term_var COMA c_morelist
-    #'''
-    #p[0] = str(p[1]+","+p[3])
-
-#def p_list3(p):
-    #'''
-    #c_morelist : c_term_var
-    #'''
-    #p[0] = str(p[1])
 
 def p_list4(p):
     '''
@@ -294,12 +277,6 @@ def p_list5(p):
     c_morelist : c_exp
     '''
     p[0] = p[1]
-
-#def p_list6(p):
-    #'''
-    #c_list : INF c_morelist SUP
-    #'''
-    #p[0] = str("<"+p[2]+">")
 
 def p_list6(p):
     '''
@@ -513,7 +490,6 @@ def p_t_exp2(p):
     '''
     t_exp : t_term
           | VAR
-          | NAME
     '''
     p[0] = p[1]
 
@@ -534,18 +510,20 @@ def p_term(p):
 def p_t_conclusion(p):
     '''
     t_conclusion : t_state_exp EQUAL t_exp
+                 | t_exp EQUAL t_exp
     '''
     p[0] = p[1]+"&&"+p[2]+"&&"+p[3]
 
 def p_t_state_exp1(p):
     '''
-    t_state_exp : t_list t_exp
+    t_state_exp : t_list t_exp_or_name
     '''
     p[0] = p[1]+"&&"+p[2]
 
-def p_t_state_exp2(p):
+def p_t_exp_or_name(p):
     '''
-    t_state_exp : t_exp
+    t_exp_or_name : t_exp
+                  | NAME
     '''
     p[0] = p[1]
 

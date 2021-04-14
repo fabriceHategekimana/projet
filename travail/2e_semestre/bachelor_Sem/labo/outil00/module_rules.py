@@ -38,15 +38,20 @@ def decompose(exp):
     print([entete, tab[0], tab[1]])
     return [entete, tab[0], tab[1]]
 
-def evaluateInstruction(inst, rules):
-    #EVALUATION
-    print("[retour]> "+str(evaluateExpression(inst, rules)))
+#def evaluateInstruction(inst, rules):
+    ##EVALUATION
+    #print("[retour]> "+str(evaluateExpression(inst, rules)))
 
 def getRules():
     return d.sqlQuery("select header,premises,conclusion from exp_rules;")
 
 def insertRule(rule):
-    d.sqlModify("insert into exp_rules(header, premises, conclusion) values('%s','%s','%s');" % tuple(rule))
+    if rule[0][0] == "<":
+        #rule[0]= rule[0][rule[0].find(">")+1:]
+        table= "state_rules"
+    else:
+        table= "exp_rules"
+    d.sqlModify("insert into "+table+"(header, premises, conclusion) values('%s','%s','%s');" % tuple(rule))
 
 def insertDefaultRules():
     for rule in RULES:

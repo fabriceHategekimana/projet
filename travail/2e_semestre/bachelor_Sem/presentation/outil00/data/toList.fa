@@ -1,2 +1,0 @@
--- toList(0) = append([],0)
--- toList(N) = append(toList(sub(N,1)), N)
