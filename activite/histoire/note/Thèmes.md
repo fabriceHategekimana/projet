@@ -1,3 +1,8 @@
+Pourquoi un yankee?
+Les yankee c'est cool et badass.
+J'ai besoin de quelqu'un qui défi des personnes spéciales avec des poings et des techniques de frappe de rue.
+
+- Yankee
 - Définir l'intelligence
 - Urbanisme:
 - Banlieu

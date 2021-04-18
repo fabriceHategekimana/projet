@@ -2,7 +2,8 @@ Histoire
 ========
 
 Il faut voir de quoi est composée une histoire:
-[Personnages](-Personnages)
+- [Histoire](Histoire)
+- [Personnages](-Personnages)
 - [Groupes](Groupes)
 - [Chronologies](Chronologies)
 - [Géographie](Géographie)
