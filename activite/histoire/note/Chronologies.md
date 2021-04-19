@@ -5,7 +5,7 @@
 4. Expansion
 5. Découvert_du fragment
 6. Développement
-7. [Division_et_conflit](Division_et_conflit)
+7. [Grande_guerre](Grande_guerre)
 8. équilibre
 9. Menace_lointaine
 

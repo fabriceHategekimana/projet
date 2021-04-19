@@ -1,7 +1,13 @@
 ## Nom
-Age: 17-21 ans lors de la tragédie (27-31 ojd?)
+Age: 15 ans lors de la tragédie
 Genre: homme
-Origine:
+Origine: russe
 Particularité/pouvoirs:
+	- mutant artificiel
 Thème:
 Attachement:
+
+Passé:
+	- Enfant soldat
+	- surdoué à son jeune âge
+	- hait l'empire gagnante
