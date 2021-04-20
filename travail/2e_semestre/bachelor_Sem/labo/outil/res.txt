@@ -1,1 +1,1 @@
-N>1--fact(N)=mul(N;fact(sub(N;1)))
+True

@@ -1,4 +1,4 @@
-from compile import parser
+from module_compile import parser
 import re
 from module_db import *
 
@@ -7,7 +7,7 @@ d= Data()
 def evaluateInstruction(exp):
     if exp[0] == "<":
         print("evaluate state")
-        res= evaluateState(exp)
+        res= evaluateState(exp).replace(";",",")
     else:
         print("evaluate expression")
         res= evaluateExpression(exp)
@@ -142,9 +142,11 @@ def applyRule(expression, rule):
                     substitution= res
     if allTrue == True:
         if substitution != True: # on fait les dernière substitutions si le tableau n'est pas vide
-            conclusion= complete(rule[2],substitution)
-            if symbol(rule[2]) != "":
-                conclusion= conclusion.split(symbol(rule[2]))[1] # on ne prend que la partie de droite
+            sym= symbol(rule[2])
+            if sym == "->": # if it's a custom rule
+                conclusion= complete(rule[2].split(sym)[1],substitution)
+            else: # if it's a builtin rule
+                conclusion= subEval(complete(rule[2],substitution))
         else:
             conclusion= rule[2].split(symbol(rule[2]))[1] # on prend la partie de droite (qui n'a pas besoin d'être complêtée)
         print("conclusion: ", conclusion)
@@ -162,8 +164,9 @@ def subEvalState(exp):
         final.append(evaluateExpression(t))
     return "<"+";".join(final)+">"
 
-def applyRule2(expression, rule, data):
+def applyRule2(expression, rule):
     final= "error"
+    conclusion= "error"
     allTrue= True
     substitution= union(rule[0], expression) 
     if substitution == False: # if false the fact doesn't match go to the next rule/fact
@@ -181,28 +184,30 @@ def applyRule2(expression, rule, data):
                 else:
                     substitution= res
     if allTrue == True:
+        print("substitution:", substitution)
         if substitution != True: # on fait les dernière substitutions si le tableau n'est pas vide
-            conclusion= complete(rule[2],substitution)
-            if symbol(rule[2]) != "":
-                conclusion= conclusion.split(symbol(rule[2]))[1] # on ne prend que la partie de droite
+            sym= symbol(rule[2])
+            if sym == "->":
+                conclusion= complete(rule[2].split(sym)[1],substitution)
+            else:
+                conclusion= subEval(complete(rule[2],substitution))
+            print("conclusion:", conclusion)
         else:
             conclusion= rule[2].split(symbol(rule[2]))[1] # on prend la partie de droite (qui n'a pas besoin d'être complêtée)
-        res= subEval(conclusion) 
-        if isTerminal(res):
-            conclusion= res
         final= conclusion
     return final
 
 def getSelection(exp,table):
-    if exp[0] == "<":
+    if exp[0] == "<": #si on a un état
         if exp.find("(") > -1:
             newExp= "%"+exp[exp.find(">")+1:exp.find("(")]
         else:
             newExp= "%"+exp[exp.find(">")+1:]
-    else:
+        table= "state_rules"
+    else: # si on a seulement une expression
         newExp= exp[0:exp.find("(")]
+        table= "exp_rules"
     print("exp pour la selection:", newExp)
-    table= table+"_rules"
     final= d.sqlQuery("select header,premises,conclusion from "+table+" where header like '"+newExp+"%'")
     return final
 
@@ -223,14 +228,12 @@ def union(exp1, exp2):
 def unionState(exp1, exp2):
     exp1= toTuple(exp1)
     exp2= toTuple(exp2)
-    tab1= exp1.split(";")
-    tab2= exp2.split(";")
-    print("tab1:", tab1)
-    print("tab2:", tab2)
+    tab1= exp1.split("&&")
+    tab2= exp2.split("&&")
     return unionFinal(tab1, tab2)
 
 def toTuple(exp):
-    return myParser("state"+exp)
+    return myParser("state "+exp)
 
 def unionExpression(exp1,exp2):
     #exp1 is the rule union, exp2 is the user union
@@ -259,7 +262,7 @@ def unionFinal(tab1,tab2):
     return final
 
 def splitByExpression(exp):
-    return myParser("split "+exp).split(";;")
+    return myParser("split "+exp).split("&&")
 
 def isNumber(exp):
     res= myParser("isNumber "+exp)
@@ -324,6 +327,9 @@ def verifiable(exp,dico):
 def complete(exp, tab):
     print("expression à complèter:", exp)
     dico= tabToDic(tab)
+    sym= symbol(exp)
+    #if sym == "->": # si c'est une expresison de conclusion
+        #exp= exp.split(sym)[1]
     tokens= getToken(exp) #token est un tableau des différentes partie de l'expression
     print("tokens: ", tokens)
     for i in range(len(tokens)):

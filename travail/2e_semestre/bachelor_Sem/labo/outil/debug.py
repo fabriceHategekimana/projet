@@ -1,5 +1,5 @@
 from cmd import Cmd
-from compile import *
+from module_compile import *
 import re
 from module_rules import *
 from module_network import *
@@ -36,7 +36,7 @@ class MyPrompt(Cmd):
            r= self.RULES.pop(0)
            rules= getRules()
            self.stackAppend(r[1]+"--"+r[2])
-           newExp= applyRule2(self.exp, r, rules) 
+           newExp= applyRule2(self.exp, r) 
            self.stackAppend(newExp)
            print("exp: ", newExp)
            if newExp != "error":

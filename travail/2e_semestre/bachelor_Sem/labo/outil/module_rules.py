@@ -35,12 +35,8 @@ def syntaxChecking(exp):
 def decompose(exp):
     tab= exp.split("--")
     entete= tab[1].split(symbol(tab[1]))[0]
-    print([entete, tab[0], tab[1]])
+    #print([entete, tab[0], tab[1]])
     return [entete, tab[0], tab[1]]
-
-#def evaluateInstruction(inst, rules):
-    ##EVALUATION
-    #print("[retour]> "+str(evaluateExpression(inst, rules)))
 
 def getRules():
     return d.sqlQuery("select header,premises,conclusion from exp_rules;")

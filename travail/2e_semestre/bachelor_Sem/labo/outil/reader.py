@@ -8,7 +8,6 @@ def evaluateProgram(state, prog):
 
 #EVALUATION DU PROGRAMME
 importRules("data/position.fa")
-prog= "gauche;;gauche;;droite;;haut"
+prog= "droite;;droite;;haut"
 state="<0,0>"
-
 evaluateProgram(state, prog)

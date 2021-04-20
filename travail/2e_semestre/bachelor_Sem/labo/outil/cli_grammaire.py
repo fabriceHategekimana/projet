@@ -1,5 +1,5 @@
 from cmd import Cmd
-from compile import *
+from module_compile import *
 import re
 
 class MyPrompt(Cmd):

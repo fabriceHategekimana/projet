@@ -50,3 +50,17 @@ S'évite avec la régularisation, Priors ou la méthode Baésienne.
 
 ![bayes_theorem](images/bayes_theorem.png)
 ![bayes_theorem2](images/bayes_theorem2.png)
+
+# Kernel density function
+Si on a plusieur paramètres, on les traite de façon indépendante s3p20 (ou 19)
+
+upper bounded définition
+
+# Linear Regression
+Deux approches:
+- geometrique
+- probabilistique
+
+Régularization
+![gradient](images/gradient.png)
+When this gradient is null, we can have the response

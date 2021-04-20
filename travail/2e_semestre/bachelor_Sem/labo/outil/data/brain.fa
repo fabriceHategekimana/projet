@@ -1,0 +1,4 @@
+set(Tab,Pt,1) -> Tabp -- <Tab,Pt>plus -> <Tabp,Pt>
+set(Tab,Pt,1) -> Tabp -- <Tab,Pt>minus -> <Tabp,Pt>
+add(Pt,1) -> Ptp -- <Tab,Pt>sup -> <Tabp,Ptp>
+sub(Pt,1) -> Ptp -- <Tab,Pt>inf -> <Tabp,Ptp>
