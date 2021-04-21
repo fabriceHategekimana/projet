@@ -1,11 +1,4 @@
-# Documentation
-
-# Principe de base
-
-## Évaluation d'un langage.
-Nous avons différentes approches pour l'évaluation de la sémantique d'un langage. L'approche la plus populaire est une évaluation par sémantique opérationnelle, mais nous pouvons aussi avoir une sémantique dénotationnelle ou axiomatique.
-
-Ce travail de bachelor est une tentative pour créer un outil capable de faire une évaluation opérationnelle de la sémantique d'un langage.
+----
 
 # Motivation: 
 
@@ -19,41 +12,63 @@ Ce travail de bachelor est une tentative pour créer un outil capable de faire u
 	- Définir la sémantique d'un langage
 	- En voir ses dérivations
 
+----
 
-## Outil
+# Outil
 
-### langage:
+## langage:
 	- Syntaxe simplifiée pour la définition de langage
 	- Utilisation de PLY en tant que lexer/parser
 	
-### interface
+## interface
 	- CLI -> GUI
 	- Outils de debbuging qui prévient l'utilisateur
 	- Visualisation par graphe
 
-# Présentation de l'outil
-## langage
+----
+
+# Actuellement
+
+## developpement
+	- redéfinition + clarification de la grammaire
+	- gérer les erreurs (recursion depth, confusion variables/noms,...)
+	- module d'aide à la correction des erreurs
+
+## rédaction
+	- présentation du projet
+	- documentation
+
+----
+
+# langage
 
 ![langage_ensemble_shema](images/langage_ensemble_shema.png){ width=50% }
 
+----
 
-## langage natif
-### Tree-based abstract syntaxe
+# langage natif (1)
+## Tree-based abstract syntaxe
 
 ![abstract_syntaxe](images/abstract_syntaxe.png)
 
+----
 
-### Arithmétique simple
+# langage natif (2)
+
+## Arithmétique simple
 - addition **add(a,b)**   
 - soustraction **sub(a,b)**  
 - division **div(a,b)**  
 - multiplication **mul(a,b)**  
 
+----
 
-### gestion de liste
+# langage natif (2)
+
+## gestion de liste
 liste: [], [1,2,3], ...   
 
-### exemple
+## exemple
 **l1= [1,2,3]**, **l2= [4,5,6]**  
 - accès **get(l1, 0)**  => 1  
 - définition **set(l2, 1, 7)**  => [4,7,6]  
@@ -64,78 +79,89 @@ liste: [], [1,2,3], ...
 - retrait  **pop(l2)**  => 6  
 - retrait  **pop(l2, 0)**  => 4  
 
+----
 
-## Autre exemple
+# Pour le reste
 
 ![](images/definition_python.png){ width=40% }
 
-### Traduction
+## Traduction
 ```javascript
 modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
 ```
 
-### Réalité
-```javascript
--- <Tab,Pt>plus => <modify(Tab,Pt,1),Pt>
-```
+----
 
-## autres détails
+# détails
 
-### Nombres:
+## Nombres:
 	- Le langage supporte actuellement les nombres relatifs
 
-### Booléens:
+## Booléens:
 	- Le langage supporte les booléens (True et False)
 
-### Liste:
+## Liste:
 	- Ne peut contenir que des nombres/variables/booléens
 
-### Variable:
+## Variable:
 	- Doit obligatoirement commencer par une majuscule
 
-### fonction:
+## fonction:
 	- Doit obligatoirement commencer par une minuscule
 
+----
 
-## architecture du projet
+# architecture
 
 ![architecture](images/architecture.png)
 
-## Quelques exemples d'utilisation
+----
 
-### factorielle.fa
+# formule simple
 
-#### règles
+# utilise le langage natif pour:
+	- les nombres
+	- les listes
+
+----
+
+# factorielle.fa
+
+## règles
 \myRule{}{fact(1)}{1}
 \myRule{N>1}{fact(N)}{mul(N,fact(sub(N,1)))}
 
-#### traduction
+## traduction
 ```javascript
 -- fact(1) = 1  
 N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
 ```
 
-### len.fa
+----
 
-#### règles
+# len.fa
+
+## règles
 \myRule{}{len([])}{0}
 \myRule{L \rightarrow Lp, Lp \in list}{Len(L)}{add(1,len(removeLast(Lp)))}
 
-#### traduction
+## traduction
 ```javascript
 -- len([]) = 0  
 L->Lp, Lp in list -- len(L) = add(1,len(removeLast(Lp)))
 ```
 
-### max.fa
+----
 
-#### règles
+# max.fa
+
+## règles
 \myRule{A \rightarrow Ap, B \rightarrow Bp, Bp >= Ap}{max(A,B)}{Bp}
 \myRule{A \rightarrow Ap, B \rightarrow Bp, Ap >= Bp}{max(A,B)}{Ap}
 \myRule{}{maxL([])}{0}
 \myRule{}{maxL(L)}{max(pop(L), maxL(removeLast(L)))}
 
-#### traduction
+## traduction
 ```javascript
 A -> Ap, B -> Bp, Bp >= Ap -- max(A,B) = Bp
 A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
@@ -143,45 +169,51 @@ A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
 -- maxL(L) = max(pop(L), maxL(removeLast(L)))
 ```
 
-### Syntaxe State (du domaine sémantique)
+----
 
-#### State
+# Syntaxe State (du domaine sémantique)
+
+## State
 ```sql
 <e1,...,en>
 ```
 
-#### State x inst
+## State x inst
 ```sql
 <e1,...,en>inst
 ```
 
-#### Transition
+## Transition
 ```
 <e1,...,en>inst => <i1,...,in>
 ```
 
-### Le compteur
+----
 
-#### règles
+# Le compteur
+
+## règles
 \myRule{Compteur \in number}{<Compteur>plus}{<add(Compteur,1)>}
 \myRule{Compteur \in number}{<Compteur>plus}{<sub(Compteur,1)>}
 
-#### traduction
+## traduction
 ```javascript
 Compteur in number -- <Compteur>plus = <add(Compteur,1)>
 Compteur in number -- <Compteur>moins = <sub(Compteur,1)>
 
 ```
 
-### Le point
+----
 
-#### règles
+# Le point
+
+## règles
 \myRule{}{<X,Y>gauche}{<sub(X,1),Y>}
 \myRule{}{<X,Y>droite}{<add(X,1),Y>}
 \myRule{}{<X,Y>bas}{<X,sub(Y,1)>}
 \myRule{}{<X,Y>haut}{<X,add(Y,1)>}
 
-#### traduction
+## traduction
 ```javascript
 -- <X,Y>gauche = <sub(X,1),Y>
 -- <X,Y>droite = <add(X,1),Y>
@@ -189,7 +221,9 @@ Compteur in number -- <Compteur>moins = <sub(Compteur,1)>
 -- <X,Y>haut = <X,add(Y,1)>
 ```
 
-## mode debug
+----
+
+# mode debug
 
 ## Principe:
 Un peu similaire au trace de prolog.
@@ -201,24 +235,54 @@ Le but est de permettre à l'utilisateur de voir pas à pas le developpement de 
 - visualiser le parcours d'exécution
 - (faire des test)
 
-## Interface (visualisation par graphe)
+----
 
-### pyvis
+# Interface (visualisation par graphe)
+
+## pyvis
 ![pyvis](images/pyvis.png)
 
 inspiré de vis.js
 
-## outils de visualisation
+----
+
+# outils de visualisation
 
 ## Affichage
 	NetworkX + pyvis + vis.js
 	
-## Document
+----
 
-### Structures:
+# Document
+
+## Structures:
 1. principes de base
 2. motivation
 3. principes et concepts théorique
 4. présentation de l'outils
 5. documentation de l'outils
 6. conclusions
+
+----
+
+# Pour la suite
+
+## 21.04.21
+- interface du système de dérivation (suite) 
+- système de gestion des erreurs
+- écriture de la documentation (suite)
+
+## 28.04.21
+- système de gestion des erreurs (suite)
+- faire tester l'outil
+- écriture de la documentation (suite)
+	
+## 05.05.21
+- écriture de la documentation (suite)
+- faire tester l'outil
+- système de gestion des erreurs (suite)
+
+## 12.05.21
+- écriture de la documentation (suite)
+- faire tester l'outil
+- (développement d'un système de preuve)

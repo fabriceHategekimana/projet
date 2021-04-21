@@ -1,0 +1,5 @@
+-- modify(Tab,Pt,N) -> set(Tab,Pt,add(get(Tab,Pt),N))
+-- <Tab,Pt>plus -> <modify(Tab,Pt,1),Pt>
+-- <Tab,Pt>minus -> <modify(Tab,Pt,-1),Pt>
+-- <Tab,Pt>sup -> <Tab,add(Pt,1)>
+-- <Tab,Pt>inf -> <Tab,sub(Pt,1)>

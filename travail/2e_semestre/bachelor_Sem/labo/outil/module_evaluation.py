@@ -21,6 +21,7 @@ def evaluateState(state):
     print("selection: ", selection)
     for rule in selection:
         res= applyRule(state, rule)
+        #res= applyRule2(state, rule)
         if res != "error":
             final= res
             break
@@ -230,6 +231,8 @@ def unionState(exp1, exp2):
     exp2= toTuple(exp2)
     tab1= exp1.split("&&")
     tab2= exp2.split("&&")
+    print("tab1", tab1)
+    print("tab2", tab2)
     return unionFinal(tab1, tab2)
 
 def toTuple(exp):

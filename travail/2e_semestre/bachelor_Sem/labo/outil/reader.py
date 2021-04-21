@@ -7,7 +7,7 @@ def evaluateProgram(state, prog):
     print("return>", state)
 
 #EVALUATION DU PROGRAMME
-importRules("data/position.fa")
-prog= "droite;;droite;;haut"
-state="<0,0>"
+importRules("data/brain2.fa")
+prog= "plus;;sup;;minus;;sup;;plus;;plus"
+state="<[0,0,0],0>"
 evaluateProgram(state, prog)

@@ -594,8 +594,8 @@ def p_st_exp(p):
 
 def p_st_list(p):
     '''
-    st_list : OSB t_exp CSB
-            | INF t_exp SUP
+    st_list : OSB s_exp CSB
+            | INF s_exp SUP
     '''
     res= p[2]
     p[0]= res

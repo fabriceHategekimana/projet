@@ -30,13 +30,12 @@
 # Actuellement
 
 ## developpement
-	- redéfinition + clarification de la grammaire
-	- gérer les erreurs (recursion depth, confusion variables/noms,...)
-	- module d'aide à la correction des erreurs
+	- [ ] redéfinition + clarification de la grammaire
+	- [ ] gérer les erreurs (recursion depth, confusion variables/noms,...)
+	- [ ] module d'aide à la correction des erreurs
 
 ## rédaction
-	- présentation du projet
-	- documentation
+	- [ ] documentation (structure du projet)
 
 ----
 
@@ -85,9 +84,14 @@ liste: [], [1,2,3], ...
 
 ![](images/definition_python.png){ width=40% }
 
-## Traduction
+## Traduction Idéale
 ```javascript
 modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
+```
+
+## Réalité
+```javascript
+-- <Tab,Pt>plus => <modify(Tab,Pt,1),Pt>
 ```
 
 ----
@@ -114,14 +118,6 @@ modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
 # architecture
 
 ![architecture](images/architecture.png)
-
-----
-
-# formule simple
-
-# utilise le langage natif pour:
-	- les nombres
-	- les listes
 
 ----
 
@@ -185,7 +181,7 @@ A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
 
 ## Transition
 ```
-<e1,...,en>inst => <i1,...,in>
+<e1,...,en>inst -> <i1,...,in>
 ```
 
 ----
@@ -237,6 +233,17 @@ Le but est de permettre à l'utilisateur de voir pas à pas le developpement de 
 
 ----
 
+## Instructions
+
+- import [path]: importe un fichier [nom].fa
+- set exp [exp]: donne une expression à évaluer
+- set state [state] : donne un état à évaluer
+- step: va à l'étape suivante
+- end: poursuit l'exécution jusqu'au bout
+- state: voir l'état courant du système d'évaluation
+
+----
+
 # Interface (visualisation par graphe)
 
 ## pyvis
@@ -251,6 +258,16 @@ inspiré de vis.js
 ## Affichage
 	NetworkX + pyvis + vis.js
 	
+----
+
+# Problèmes
+## algorithme d'évaluation
+	- récursif vs boucle
+	- granularité de l'évaluation
+	
+## Dans les premisses
+	Mauvaise évaluation des expressions
+
 ----
 
 # Document
