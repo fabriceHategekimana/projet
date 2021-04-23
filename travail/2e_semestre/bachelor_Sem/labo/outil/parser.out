@@ -87,43 +87,44 @@ Rule 77    c_exp -> NAME OP c_exp CP
 Rule 78    c_exp -> c_exp COMA c_exp
 Rule 79    c_exp -> c_exp SEMICOLON c_exp
 Rule 80    c_exp -> NUM
-Rule 81    c_exp -> list
-Rule 82    c_list -> OSB c_morelist CSB
-Rule 83    c_morelist -> NUM COMA c_morelist
-Rule 84    c_morelist -> NUM SEMICOLON c_morelist
-Rule 85    c_morelist -> NUM
-Rule 86    c_list -> OSB CSB
-Rule 87    c_list -> INF c_morelist SUP
-Rule 88    state -> st_list st_ins_exp
-Rule 89    st_ins_exp -> st_ins
-Rule 90    st_ins_exp -> st_exp
-Rule 91    st_ins -> NAME
-Rule 92    st_exp -> NAME OP t_exp CP
-Rule 93    st_list -> OSB s_exp CSB
-Rule 94    st_list -> INF s_exp SUP
+Rule 81    c_exp -> boolean
+Rule 82    c_exp -> list
+Rule 83    c_list -> OSB c_morelist CSB
+Rule 84    c_morelist -> NUM COMA c_morelist
+Rule 85    c_morelist -> NUM SEMICOLON c_morelist
+Rule 86    c_morelist -> NUM
+Rule 87    c_list -> OSB CSB
+Rule 88    c_list -> INF c_morelist SUP
+Rule 89    state -> st_list st_ins_exp
+Rule 90    st_ins_exp -> st_ins
+Rule 91    st_ins_exp -> st_exp
+Rule 92    st_ins -> NAME
+Rule 93    st_exp -> NAME OP t_exp CP
+Rule 94    st_list -> OSB s_exp CSB
+Rule 95    st_list -> INF s_exp SUP
 
 Terminals, with rules where they appear
 
 CALC                 : 1
 CHECK                : 2
-COMA                 : 10 14 39 48 60 78 83
-CP                   : 16 41 50 77 92
-CSB                  : 22 24 56 58 82 86 93
+COMA                 : 10 14 39 48 60 78 84
+CP                   : 16 41 50 77 93
+CSB                  : 22 24 56 58 83 87 94
 EQUAL                : 25 25 26 27 72 72 74 76
 FALSE                : 36
 IN                   : 13 63
-INF                  : 23 26 28 57 59 75 76 87 94
+INF                  : 23 26 28 57 59 75 76 88 95
 ISLIST               : 
 ISNUMBER             : 5
 MINUS                : 7 7 8 8 30 31 32
-NAME                 : 13 16 33 41 50 63 67 77 91 92
-NUM                  : 19 53 68 80 83 84 85
-OP                   : 16 41 50 77 92
-OSB                  : 22 24 56 58 82 86 93
-SEMICOLON            : 15 40 49 79 84
+NAME                 : 13 16 33 41 50 63 67 77 92 93
+NUM                  : 19 53 68 80 84 85 86
+OP                   : 16 41 50 77 93
+OSB                  : 22 24 56 58 83 87 94
+SEMICOLON            : 15 40 49 79 85
 SPLIT                : 3
 STATE                : 6
-SUP                  : 23 27 29 30 31 32 57 59 73 74 87 94
+SUP                  : 23 27 29 30 31 32 57 59 73 74 88 95
 TOKEN                : 4
 TRUE                 : 35
 VAR                  : 12 18 43 52 62
@@ -131,11 +132,11 @@ error                :
 
 Nonterminals, with rules where they appear
 
-boolean              : 20 54
+boolean              : 20 54 81
 c_condition          : 70
 c_exp                : 69 71 71 77 78 78 79 79
 c_list               : 
-c_morelist           : 82 83 84 87
+c_morelist           : 83 84 85 88
 calc                 : 1
 check                : 2
 comparator           : 71
@@ -144,19 +145,19 @@ exp                  : 11 12 13 14 14 15 15 16 22 23 31 31 34 41
 ins_exp              : 32
 isnumber             : 5
 lang                 : 37
-list                 : 21 32 32 81
+list                 : 21 32 32 82
 premises             : 7
-s_exp                : 38 39 39 40 40 93 94
+s_exp                : 38 39 39 40 40 94 95
 split                : 3
-st_exp               : 90
-st_ins               : 89
-st_ins_exp           : 88
-st_list              : 88
+st_exp               : 91
+st_ins               : 90
+st_ins_exp           : 89
+st_list              : 89
 start                : 0
 state                : 6
 statement            : 9 10 10
 symb                 : 11 12 61 62
-t_exp                : 44 48 48 49 49 50 56 57 61 62 63 66 92
+t_exp                : 44 48 48 49 49 50 56 57 61 62 63 66 93
 t_ins                : 65
 t_ins_exp            : 64
 t_list               : 45 55 64
@@ -202,21 +203,27 @@ state 2
     (78) c_exp -> . c_exp COMA c_exp
     (79) c_exp -> . c_exp SEMICOLON c_exp
     (80) c_exp -> . NUM
-    (81) c_exp -> . list
+    (81) c_exp -> . boolean
+    (82) c_exp -> . list
     (71) c_condition -> . c_exp comparator c_exp
+    (35) boolean -> . TRUE
+    (36) boolean -> . FALSE
     (22) list -> . OSB exp CSB
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
     NAME            shift and go to state 11
     NUM             shift and go to state 12
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
     calc                           shift and go to state 8
     c_exp                          shift and go to state 9
     c_condition                    shift and go to state 10
-    list                           shift and go to state 13
+    boolean                        shift and go to state 13
+    list                           shift and go to state 14
 
 state 3
 
@@ -243,23 +250,23 @@ state 3
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    MINUS           shift and go to state 19
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    MINUS           shift and go to state 22
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    check                          shift and go to state 16
-    lang                           shift and go to state 17
-    premises                       shift and go to state 18
-    statement                      shift and go to state 20
-    exp                            shift and go to state 21
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    check                          shift and go to state 19
+    lang                           shift and go to state 20
+    premises                       shift and go to state 21
+    statement                      shift and go to state 23
+    exp                            shift and go to state 24
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
 state 4
 
@@ -279,19 +286,19 @@ state 4
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 32
-    VAR             shift and go to state 34
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 33
+    VAR             shift and go to state 35
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    split                          shift and go to state 30
-    s_exp                          shift and go to state 31
-    term                           shift and go to state 33
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    split                          shift and go to state 31
+    s_exp                          shift and go to state 32
+    term                           shift and go to state 34
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
 state 5
 
@@ -320,43 +327,43 @@ state 5
     (35) boolean -> . TRUE
     (36) boolean -> . FALSE
 
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
 
-    token                          shift and go to state 35
-    t_exp                          shift and go to state 36
-    t_list                         shift and go to state 37
-    t_statement                    shift and go to state 38
-    t_state_ins                    shift and go to state 39
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
+    token                          shift and go to state 36
+    t_exp                          shift and go to state 37
+    t_list                         shift and go to state 38
+    t_statement                    shift and go to state 39
+    t_state_ins                    shift and go to state 40
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
 
 state 6
 
     (5) start -> ISNUMBER . isnumber
     (68) isnumber -> . NUM
 
-    NUM             shift and go to state 48
+    NUM             shift and go to state 49
 
-    isnumber                       shift and go to state 47
+    isnumber                       shift and go to state 48
 
 state 7
 
     (6) start -> STATE . state
-    (88) state -> . st_list st_ins_exp
-    (93) st_list -> . OSB s_exp CSB
-    (94) st_list -> . INF s_exp SUP
+    (89) state -> . st_list st_ins_exp
+    (94) st_list -> . OSB s_exp CSB
+    (95) st_list -> . INF s_exp SUP
 
-    OSB             shift and go to state 51
-    INF             shift and go to state 52
+    OSB             shift and go to state 52
+    INF             shift and go to state 53
 
-    state                          shift and go to state 49
-    st_list                        shift and go to state 50
+    state                          shift and go to state 50
+    st_list                        shift and go to state 51
 
 state 8
 
@@ -378,13 +385,13 @@ state 9
     (76) comparator -> . INF EQUAL
 
     $end            reduce using rule 69 (calc -> c_exp .)
-    COMA            shift and go to state 53
-    SEMICOLON       shift and go to state 54
-    EQUAL           shift and go to state 56
-    SUP             shift and go to state 57
-    INF             shift and go to state 58
+    COMA            shift and go to state 54
+    SEMICOLON       shift and go to state 55
+    EQUAL           shift and go to state 57
+    SUP             shift and go to state 58
+    INF             shift and go to state 59
 
-    comparator                     shift and go to state 55
+    comparator                     shift and go to state 56
 
 state 10
 
@@ -397,7 +404,7 @@ state 11
 
     (77) c_exp -> NAME . OP c_exp CP
 
-    OP              shift and go to state 59
+    OP              shift and go to state 60
 
 
 state 12
@@ -415,18 +422,63 @@ state 12
 
 state 13
 
-    (81) c_exp -> list .
+    (81) c_exp -> boolean .
 
-    COMA            reduce using rule 81 (c_exp -> list .)
-    SEMICOLON       reduce using rule 81 (c_exp -> list .)
-    EQUAL           reduce using rule 81 (c_exp -> list .)
-    SUP             reduce using rule 81 (c_exp -> list .)
-    INF             reduce using rule 81 (c_exp -> list .)
-    $end            reduce using rule 81 (c_exp -> list .)
-    CP              reduce using rule 81 (c_exp -> list .)
+    COMA            reduce using rule 81 (c_exp -> boolean .)
+    SEMICOLON       reduce using rule 81 (c_exp -> boolean .)
+    EQUAL           reduce using rule 81 (c_exp -> boolean .)
+    SUP             reduce using rule 81 (c_exp -> boolean .)
+    INF             reduce using rule 81 (c_exp -> boolean .)
+    $end            reduce using rule 81 (c_exp -> boolean .)
+    CP              reduce using rule 81 (c_exp -> boolean .)
 
 
 state 14
+
+    (82) c_exp -> list .
+
+    COMA            reduce using rule 82 (c_exp -> list .)
+    SEMICOLON       reduce using rule 82 (c_exp -> list .)
+    EQUAL           reduce using rule 82 (c_exp -> list .)
+    SUP             reduce using rule 82 (c_exp -> list .)
+    INF             reduce using rule 82 (c_exp -> list .)
+    $end            reduce using rule 82 (c_exp -> list .)
+    CP              reduce using rule 82 (c_exp -> list .)
+
+
+state 15
+
+    (35) boolean -> TRUE .
+
+    COMA            reduce using rule 35 (boolean -> TRUE .)
+    SEMICOLON       reduce using rule 35 (boolean -> TRUE .)
+    EQUAL           reduce using rule 35 (boolean -> TRUE .)
+    SUP             reduce using rule 35 (boolean -> TRUE .)
+    INF             reduce using rule 35 (boolean -> TRUE .)
+    $end            reduce using rule 35 (boolean -> TRUE .)
+    IN              reduce using rule 35 (boolean -> TRUE .)
+    MINUS           reduce using rule 35 (boolean -> TRUE .)
+    CSB             reduce using rule 35 (boolean -> TRUE .)
+    CP              reduce using rule 35 (boolean -> TRUE .)
+
+
+state 16
+
+    (36) boolean -> FALSE .
+
+    COMA            reduce using rule 36 (boolean -> FALSE .)
+    SEMICOLON       reduce using rule 36 (boolean -> FALSE .)
+    EQUAL           reduce using rule 36 (boolean -> FALSE .)
+    SUP             reduce using rule 36 (boolean -> FALSE .)
+    INF             reduce using rule 36 (boolean -> FALSE .)
+    $end            reduce using rule 36 (boolean -> FALSE .)
+    IN              reduce using rule 36 (boolean -> FALSE .)
+    MINUS           reduce using rule 36 (boolean -> FALSE .)
+    CSB             reduce using rule 36 (boolean -> FALSE .)
+    CP              reduce using rule 36 (boolean -> FALSE .)
+
+
+state 17
 
     (22) list -> OSB . exp CSB
     (24) list -> OSB . CSB
@@ -444,21 +496,21 @@ state 14
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    CSB             shift and go to state 61
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    CSB             shift and go to state 62
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    exp                            shift and go to state 60
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    exp                            shift and go to state 61
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 15
+state 18
 
     (23) list -> INF . exp SUP
     (14) exp -> . exp COMA exp
@@ -475,57 +527,57 @@ state 15
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    exp                            shift and go to state 62
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    exp                            shift and go to state 63
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 16
+state 19
 
     (2) start -> CHECK check .
 
     $end            reduce using rule 2 (start -> CHECK check .)
 
 
-state 17
+state 20
 
     (37) check -> lang .
 
     $end            reduce using rule 37 (check -> lang .)
 
 
-state 18
+state 21
 
     (7) lang -> premises . MINUS MINUS conclusion
-
-    MINUS           shift and go to state 63
-
-
-state 19
-
-    (8) lang -> MINUS . MINUS conclusion
 
     MINUS           shift and go to state 64
 
 
-state 20
+state 22
+
+    (8) lang -> MINUS . MINUS conclusion
+
+    MINUS           shift and go to state 65
+
+
+state 23
 
     (9) premises -> statement .
     (10) statement -> statement . COMA statement
 
     MINUS           reduce using rule 9 (premises -> statement .)
-    COMA            shift and go to state 65
+    COMA            shift and go to state 66
 
 
-state 21
+state 24
 
     (11) statement -> exp . symb term
     (12) statement -> exp . symb VAR
@@ -539,17 +591,17 @@ state 21
     (29) symb -> . SUP
     (30) symb -> . MINUS SUP
 
-    IN              shift and go to state 67
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
-    EQUAL           shift and go to state 70
-    INF             shift and go to state 71
-    SUP             shift and go to state 72
-    MINUS           shift and go to state 73
+    IN              shift and go to state 68
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
+    EQUAL           shift and go to state 71
+    INF             shift and go to state 72
+    SUP             shift and go to state 73
+    MINUS           shift and go to state 74
 
-    symb                           shift and go to state 66
+    symb                           shift and go to state 67
 
-state 22
+state 25
 
     (17) exp -> term .
 
@@ -565,7 +617,7 @@ state 22
     $end            reduce using rule 17 (exp -> term .)
 
 
-state 23
+state 26
 
     (18) exp -> VAR .
 
@@ -581,14 +633,14 @@ state 23
     $end            reduce using rule 18 (exp -> VAR .)
 
 
-state 24
+state 27
 
     (16) exp -> NAME . OP exp CP
 
-    OP              shift and go to state 74
+    OP              shift and go to state 75
 
 
-state 25
+state 28
 
     (19) term -> NUM .
 
@@ -604,7 +656,7 @@ state 25
     CP              reduce using rule 19 (term -> NUM .)
 
 
-state 26
+state 29
 
     (20) term -> boolean .
 
@@ -620,7 +672,7 @@ state 26
     CP              reduce using rule 20 (term -> boolean .)
 
 
-state 27
+state 30
 
     (21) term -> list .
 
@@ -636,64 +688,32 @@ state 27
     CP              reduce using rule 21 (term -> list .)
 
 
-state 28
-
-    (35) boolean -> TRUE .
-
-    IN              reduce using rule 35 (boolean -> TRUE .)
-    COMA            reduce using rule 35 (boolean -> TRUE .)
-    SEMICOLON       reduce using rule 35 (boolean -> TRUE .)
-    EQUAL           reduce using rule 35 (boolean -> TRUE .)
-    INF             reduce using rule 35 (boolean -> TRUE .)
-    SUP             reduce using rule 35 (boolean -> TRUE .)
-    MINUS           reduce using rule 35 (boolean -> TRUE .)
-    $end            reduce using rule 35 (boolean -> TRUE .)
-    CSB             reduce using rule 35 (boolean -> TRUE .)
-    CP              reduce using rule 35 (boolean -> TRUE .)
-
-
-state 29
-
-    (36) boolean -> FALSE .
-
-    IN              reduce using rule 36 (boolean -> FALSE .)
-    COMA            reduce using rule 36 (boolean -> FALSE .)
-    SEMICOLON       reduce using rule 36 (boolean -> FALSE .)
-    EQUAL           reduce using rule 36 (boolean -> FALSE .)
-    INF             reduce using rule 36 (boolean -> FALSE .)
-    SUP             reduce using rule 36 (boolean -> FALSE .)
-    MINUS           reduce using rule 36 (boolean -> FALSE .)
-    $end            reduce using rule 36 (boolean -> FALSE .)
-    CSB             reduce using rule 36 (boolean -> FALSE .)
-    CP              reduce using rule 36 (boolean -> FALSE .)
-
-
-state 30
+state 31
 
     (3) start -> SPLIT split .
 
     $end            reduce using rule 3 (start -> SPLIT split .)
 
 
-state 31
+state 32
 
     (38) split -> s_exp .
     (39) s_exp -> s_exp . COMA s_exp
     (40) s_exp -> s_exp . SEMICOLON s_exp
 
     $end            reduce using rule 38 (split -> s_exp .)
-    COMA            shift and go to state 75
-    SEMICOLON       shift and go to state 76
-
-
-state 32
-
-    (41) s_exp -> NAME . OP exp CP
-
-    OP              shift and go to state 77
+    COMA            shift and go to state 76
+    SEMICOLON       shift and go to state 77
 
 
 state 33
+
+    (41) s_exp -> NAME . OP exp CP
+
+    OP              shift and go to state 78
+
+
+state 34
 
     (42) s_exp -> term .
 
@@ -704,7 +724,7 @@ state 33
     SUP             reduce using rule 42 (s_exp -> term .)
 
 
-state 34
+state 35
 
     (43) s_exp -> VAR .
 
@@ -715,14 +735,14 @@ state 34
     SUP             reduce using rule 43 (s_exp -> VAR .)
 
 
-state 35
+state 36
 
     (4) start -> TOKEN token .
 
     $end            reduce using rule 4 (start -> TOKEN token .)
 
 
-state 36
+state 37
 
     (44) token -> t_exp .
     (48) t_exp -> t_exp . COMA t_exp
@@ -738,17 +758,17 @@ state 36
     (30) symb -> . MINUS SUP
 
     $end            reduce using rule 44 (token -> t_exp .)
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
-    IN              shift and go to state 81
-    EQUAL           shift and go to state 70
-    INF             shift and go to state 71
-    SUP             shift and go to state 72
-    MINUS           shift and go to state 73
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
+    IN              shift and go to state 82
+    EQUAL           shift and go to state 71
+    INF             shift and go to state 72
+    SUP             shift and go to state 73
+    MINUS           shift and go to state 74
 
-    symb                           shift and go to state 80
+    symb                           shift and go to state 81
 
-state 37
+state 38
 
     (45) token -> t_list .
     (64) t_state_ins -> t_list . t_ins_exp
@@ -780,48 +800,48 @@ state 37
     EQUAL           reduce using rule 55 (t_term -> t_list .)
     SUP             reduce using rule 55 (t_term -> t_list .)
     MINUS           reduce using rule 55 (t_term -> t_list .)
-    NAME            shift and go to state 86
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    NAME            shift and go to state 87
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
   ! INF             [ reduce using rule 55 (t_term -> t_list .) ]
   ! $end            [ reduce using rule 55 (t_term -> t_list .) ]
 
-    t_list                         shift and go to state 82
-    t_ins_exp                      shift and go to state 83
-    t_ins                          shift and go to state 84
-    t_exp                          shift and go to state 85
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
+    t_list                         shift and go to state 83
+    t_ins_exp                      shift and go to state 84
+    t_ins                          shift and go to state 85
+    t_exp                          shift and go to state 86
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
 
-state 38
+state 39
 
     (46) token -> t_statement .
     (60) t_statement -> t_statement . COMA t_statement
 
     $end            reduce using rule 46 (token -> t_statement .)
-    COMA            shift and go to state 87
+    COMA            shift and go to state 88
 
 
-state 39
+state 40
 
     (47) token -> t_state_ins .
 
     $end            reduce using rule 47 (token -> t_state_ins .)
 
 
-state 40
+state 41
 
     (50) t_exp -> NAME . OP t_exp CP
 
-    OP              shift and go to state 88
+    OP              shift and go to state 89
 
 
-state 41
+state 42
 
     (51) t_exp -> t_term .
 
@@ -837,7 +857,7 @@ state 41
     CP              reduce using rule 51 (t_exp -> t_term .)
 
 
-state 42
+state 43
 
     (52) t_exp -> VAR .
 
@@ -853,7 +873,7 @@ state 42
     CP              reduce using rule 52 (t_exp -> VAR .)
 
 
-state 43
+state 44
 
     (56) t_list -> OSB . t_exp CSB
     (58) t_list -> OSB . CSB
@@ -872,21 +892,21 @@ state 43
     (58) t_list -> . OSB CSB
     (59) t_list -> . INF SUP
 
-    CSB             shift and go to state 90
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    CSB             shift and go to state 91
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
-    t_exp                          shift and go to state 89
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
-    t_list                         shift and go to state 82
+    t_exp                          shift and go to state 90
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
+    t_list                         shift and go to state 83
 
-state 44
+state 45
 
     (57) t_list -> INF . t_exp SUP
     (59) t_list -> INF . SUP
@@ -905,21 +925,21 @@ state 44
     (58) t_list -> . OSB CSB
     (59) t_list -> . INF SUP
 
-    SUP             shift and go to state 92
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    SUP             shift and go to state 93
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
-    t_exp                          shift and go to state 91
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
-    t_list                         shift and go to state 82
+    t_exp                          shift and go to state 92
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
+    t_list                         shift and go to state 83
 
-state 45
+state 46
 
     (53) t_term -> NUM .
 
@@ -935,7 +955,7 @@ state 45
     CP              reduce using rule 53 (t_term -> NUM .)
 
 
-state 46
+state 47
 
     (54) t_term -> boolean .
 
@@ -951,74 +971,44 @@ state 46
     CP              reduce using rule 54 (t_term -> boolean .)
 
 
-state 47
+state 48
 
     (5) start -> ISNUMBER isnumber .
 
     $end            reduce using rule 5 (start -> ISNUMBER isnumber .)
 
 
-state 48
+state 49
 
     (68) isnumber -> NUM .
 
     $end            reduce using rule 68 (isnumber -> NUM .)
 
 
-state 49
+state 50
 
     (6) start -> STATE state .
 
     $end            reduce using rule 6 (start -> STATE state .)
 
 
-state 50
-
-    (88) state -> st_list . st_ins_exp
-    (89) st_ins_exp -> . st_ins
-    (90) st_ins_exp -> . st_exp
-    (91) st_ins -> . NAME
-    (92) st_exp -> . NAME OP t_exp CP
-
-    NAME            shift and go to state 96
-
-    st_ins_exp                     shift and go to state 93
-    st_ins                         shift and go to state 94
-    st_exp                         shift and go to state 95
-
 state 51
 
-    (93) st_list -> OSB . s_exp CSB
-    (39) s_exp -> . s_exp COMA s_exp
-    (40) s_exp -> . s_exp SEMICOLON s_exp
-    (41) s_exp -> . NAME OP exp CP
-    (42) s_exp -> . term
-    (43) s_exp -> . VAR
-    (19) term -> . NUM
-    (20) term -> . boolean
-    (21) term -> . list
-    (35) boolean -> . TRUE
-    (36) boolean -> . FALSE
-    (22) list -> . OSB exp CSB
-    (23) list -> . INF exp SUP
-    (24) list -> . OSB CSB
+    (89) state -> st_list . st_ins_exp
+    (90) st_ins_exp -> . st_ins
+    (91) st_ins_exp -> . st_exp
+    (92) st_ins -> . NAME
+    (93) st_exp -> . NAME OP t_exp CP
 
-    NAME            shift and go to state 32
-    VAR             shift and go to state 34
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 97
 
-    s_exp                          shift and go to state 97
-    term                           shift and go to state 33
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    st_ins_exp                     shift and go to state 94
+    st_ins                         shift and go to state 95
+    st_exp                         shift and go to state 96
 
 state 52
 
-    (94) st_list -> INF . s_exp SUP
+    (94) st_list -> OSB . s_exp CSB
     (39) s_exp -> . s_exp COMA s_exp
     (40) s_exp -> . s_exp SEMICOLON s_exp
     (41) s_exp -> . NAME OP exp CP
@@ -1033,142 +1023,200 @@ state 52
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 32
-    VAR             shift and go to state 34
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 33
+    VAR             shift and go to state 35
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
     s_exp                          shift and go to state 98
-    term                           shift and go to state 33
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    term                           shift and go to state 34
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
 state 53
+
+    (95) st_list -> INF . s_exp SUP
+    (39) s_exp -> . s_exp COMA s_exp
+    (40) s_exp -> . s_exp SEMICOLON s_exp
+    (41) s_exp -> . NAME OP exp CP
+    (42) s_exp -> . term
+    (43) s_exp -> . VAR
+    (19) term -> . NUM
+    (20) term -> . boolean
+    (21) term -> . list
+    (35) boolean -> . TRUE
+    (36) boolean -> . FALSE
+    (22) list -> . OSB exp CSB
+    (23) list -> . INF exp SUP
+    (24) list -> . OSB CSB
+
+    NAME            shift and go to state 33
+    VAR             shift and go to state 35
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
+
+    s_exp                          shift and go to state 99
+    term                           shift and go to state 34
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
+
+state 54
 
     (78) c_exp -> c_exp COMA . c_exp
     (77) c_exp -> . NAME OP c_exp CP
     (78) c_exp -> . c_exp COMA c_exp
     (79) c_exp -> . c_exp SEMICOLON c_exp
     (80) c_exp -> . NUM
-    (81) c_exp -> . list
+    (81) c_exp -> . boolean
+    (82) c_exp -> . list
+    (35) boolean -> . TRUE
+    (36) boolean -> . FALSE
     (22) list -> . OSB exp CSB
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
     NAME            shift and go to state 11
     NUM             shift and go to state 12
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    c_exp                          shift and go to state 99
-    list                           shift and go to state 13
+    c_exp                          shift and go to state 100
+    boolean                        shift and go to state 13
+    list                           shift and go to state 14
 
-state 54
+state 55
 
     (79) c_exp -> c_exp SEMICOLON . c_exp
     (77) c_exp -> . NAME OP c_exp CP
     (78) c_exp -> . c_exp COMA c_exp
     (79) c_exp -> . c_exp SEMICOLON c_exp
     (80) c_exp -> . NUM
-    (81) c_exp -> . list
+    (81) c_exp -> . boolean
+    (82) c_exp -> . list
+    (35) boolean -> . TRUE
+    (36) boolean -> . FALSE
     (22) list -> . OSB exp CSB
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
     NAME            shift and go to state 11
     NUM             shift and go to state 12
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    c_exp                          shift and go to state 100
-    list                           shift and go to state 13
+    c_exp                          shift and go to state 101
+    boolean                        shift and go to state 13
+    list                           shift and go to state 14
 
-state 55
+state 56
 
     (71) c_condition -> c_exp comparator . c_exp
     (77) c_exp -> . NAME OP c_exp CP
     (78) c_exp -> . c_exp COMA c_exp
     (79) c_exp -> . c_exp SEMICOLON c_exp
     (80) c_exp -> . NUM
-    (81) c_exp -> . list
+    (81) c_exp -> . boolean
+    (82) c_exp -> . list
+    (35) boolean -> . TRUE
+    (36) boolean -> . FALSE
     (22) list -> . OSB exp CSB
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
     NAME            shift and go to state 11
     NUM             shift and go to state 12
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    c_exp                          shift and go to state 101
-    list                           shift and go to state 13
+    c_exp                          shift and go to state 102
+    boolean                        shift and go to state 13
+    list                           shift and go to state 14
 
-state 56
+state 57
 
     (72) comparator -> EQUAL . EQUAL
 
-    EQUAL           shift and go to state 102
+    EQUAL           shift and go to state 103
 
 
-state 57
+state 58
 
     (73) comparator -> SUP .
     (74) comparator -> SUP . EQUAL
 
     NAME            reduce using rule 73 (comparator -> SUP .)
     NUM             reduce using rule 73 (comparator -> SUP .)
+    TRUE            reduce using rule 73 (comparator -> SUP .)
+    FALSE           reduce using rule 73 (comparator -> SUP .)
     OSB             reduce using rule 73 (comparator -> SUP .)
     INF             reduce using rule 73 (comparator -> SUP .)
-    EQUAL           shift and go to state 103
+    EQUAL           shift and go to state 104
 
 
-state 58
+state 59
 
     (75) comparator -> INF .
     (76) comparator -> INF . EQUAL
 
     NAME            reduce using rule 75 (comparator -> INF .)
     NUM             reduce using rule 75 (comparator -> INF .)
+    TRUE            reduce using rule 75 (comparator -> INF .)
+    FALSE           reduce using rule 75 (comparator -> INF .)
     OSB             reduce using rule 75 (comparator -> INF .)
     INF             reduce using rule 75 (comparator -> INF .)
-    EQUAL           shift and go to state 104
+    EQUAL           shift and go to state 105
 
 
-state 59
+state 60
 
     (77) c_exp -> NAME OP . c_exp CP
     (77) c_exp -> . NAME OP c_exp CP
     (78) c_exp -> . c_exp COMA c_exp
     (79) c_exp -> . c_exp SEMICOLON c_exp
     (80) c_exp -> . NUM
-    (81) c_exp -> . list
+    (81) c_exp -> . boolean
+    (82) c_exp -> . list
+    (35) boolean -> . TRUE
+    (36) boolean -> . FALSE
     (22) list -> . OSB exp CSB
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
     NAME            shift and go to state 11
     NUM             shift and go to state 12
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    c_exp                          shift and go to state 105
-    list                           shift and go to state 13
+    c_exp                          shift and go to state 106
+    boolean                        shift and go to state 13
+    list                           shift and go to state 14
 
-state 60
+state 61
 
     (22) list -> OSB exp . CSB
     (14) exp -> exp . COMA exp
     (15) exp -> exp . SEMICOLON exp
 
-    CSB             shift and go to state 106
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    CSB             shift and go to state 107
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
 
-state 61
+state 62
 
     (24) list -> OSB CSB .
 
@@ -1190,25 +1238,25 @@ state 61
     OSB             reduce using rule 24 (list -> OSB CSB .)
 
 
-state 62
+state 63
 
     (23) list -> INF exp . SUP
     (14) exp -> exp . COMA exp
     (15) exp -> exp . SEMICOLON exp
 
-    SUP             shift and go to state 107
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
-
-
-state 63
-
-    (7) lang -> premises MINUS . MINUS conclusion
-
-    MINUS           shift and go to state 108
+    SUP             shift and go to state 108
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
 
 state 64
+
+    (7) lang -> premises MINUS . MINUS conclusion
+
+    MINUS           shift and go to state 109
+
+
+state 65
 
     (8) lang -> MINUS MINUS . conclusion
     (31) conclusion -> . exp MINUS SUP exp
@@ -1227,21 +1275,21 @@ state 64
     (35) boolean -> . TRUE
     (36) boolean -> . FALSE
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
 
-    conclusion                     shift and go to state 109
-    exp                            shift and go to state 110
-    list                           shift and go to state 111
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
+    conclusion                     shift and go to state 110
+    exp                            shift and go to state 111
+    list                           shift and go to state 112
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
 
-state 65
+state 66
 
     (10) statement -> statement COMA . statement
     (10) statement -> . statement COMA statement
@@ -1262,21 +1310,21 @@ state 65
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    statement                      shift and go to state 112
-    exp                            shift and go to state 21
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    statement                      shift and go to state 113
+    exp                            shift and go to state 24
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 66
+state 67
 
     (11) statement -> exp symb . term
     (12) statement -> exp symb . VAR
@@ -1289,25 +1337,25 @@ state 66
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    VAR             shift and go to state 114
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    VAR             shift and go to state 115
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    term                           shift and go to state 113
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    term                           shift and go to state 114
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 67
+state 68
 
     (13) statement -> exp IN . NAME
 
-    NAME            shift and go to state 115
+    NAME            shift and go to state 116
 
 
-state 68
+state 69
 
     (14) exp -> exp COMA . exp
     (14) exp -> . exp COMA exp
@@ -1324,20 +1372,20 @@ state 68
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    exp                            shift and go to state 116
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    exp                            shift and go to state 117
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 69
+state 70
 
     (15) exp -> exp SEMICOLON . exp
     (14) exp -> . exp COMA exp
@@ -1354,32 +1402,32 @@ state 69
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    exp                            shift and go to state 117
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    exp                            shift and go to state 118
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 70
+state 71
 
     (25) symb -> EQUAL . EQUAL
 
-    EQUAL           shift and go to state 118
+    EQUAL           shift and go to state 119
 
 
-state 71
+state 72
 
     (26) symb -> INF . EQUAL
     (28) symb -> INF .
 
-    EQUAL           shift and go to state 119
+    EQUAL           shift and go to state 120
     VAR             reduce using rule 28 (symb -> INF .)
     NUM             reduce using rule 28 (symb -> INF .)
     TRUE            reduce using rule 28 (symb -> INF .)
@@ -1388,12 +1436,12 @@ state 71
     INF             reduce using rule 28 (symb -> INF .)
 
 
-state 72
+state 73
 
     (27) symb -> SUP . EQUAL
     (29) symb -> SUP .
 
-    EQUAL           shift and go to state 120
+    EQUAL           shift and go to state 121
     VAR             reduce using rule 29 (symb -> SUP .)
     NUM             reduce using rule 29 (symb -> SUP .)
     TRUE            reduce using rule 29 (symb -> SUP .)
@@ -1402,14 +1450,14 @@ state 72
     INF             reduce using rule 29 (symb -> SUP .)
 
 
-state 73
+state 74
 
     (30) symb -> MINUS . SUP
 
-    SUP             shift and go to state 121
+    SUP             shift and go to state 122
 
 
-state 74
+state 75
 
     (16) exp -> NAME OP . exp CP
     (14) exp -> . exp COMA exp
@@ -1426,20 +1474,20 @@ state 74
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    exp                            shift and go to state 122
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    exp                            shift and go to state 123
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 75
+state 76
 
     (39) s_exp -> s_exp COMA . s_exp
     (39) s_exp -> . s_exp COMA s_exp
@@ -1456,20 +1504,20 @@ state 75
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 32
-    VAR             shift and go to state 34
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 33
+    VAR             shift and go to state 35
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    s_exp                          shift and go to state 123
-    term                           shift and go to state 33
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    s_exp                          shift and go to state 124
+    term                           shift and go to state 34
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 76
+state 77
 
     (40) s_exp -> s_exp SEMICOLON . s_exp
     (39) s_exp -> . s_exp COMA s_exp
@@ -1486,20 +1534,20 @@ state 76
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 32
-    VAR             shift and go to state 34
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 33
+    VAR             shift and go to state 35
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    s_exp                          shift and go to state 124
-    term                           shift and go to state 33
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    s_exp                          shift and go to state 125
+    term                           shift and go to state 34
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 77
+state 78
 
     (41) s_exp -> NAME OP . exp CP
     (14) exp -> . exp COMA exp
@@ -1516,20 +1564,20 @@ state 77
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    exp                            shift and go to state 125
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    exp                            shift and go to state 126
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 78
+state 79
 
     (48) t_exp -> t_exp COMA . t_exp
     (48) t_exp -> . t_exp COMA t_exp
@@ -1547,20 +1595,20 @@ state 78
     (58) t_list -> . OSB CSB
     (59) t_list -> . INF SUP
 
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
-    t_exp                          shift and go to state 126
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
-    t_list                         shift and go to state 82
+    t_exp                          shift and go to state 127
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
+    t_list                         shift and go to state 83
 
-state 79
+state 80
 
     (49) t_exp -> t_exp SEMICOLON . t_exp
     (48) t_exp -> . t_exp COMA t_exp
@@ -1578,20 +1626,20 @@ state 79
     (58) t_list -> . OSB CSB
     (59) t_list -> . INF SUP
 
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
-    t_exp                          shift and go to state 127
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
-    t_list                         shift and go to state 82
+    t_exp                          shift and go to state 128
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
+    t_list                         shift and go to state 83
 
-state 80
+state 81
 
     (61) t_statement -> t_exp symb . term
     (62) t_statement -> t_exp symb . VAR
@@ -1604,25 +1652,25 @@ state 80
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    VAR             shift and go to state 129
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    VAR             shift and go to state 130
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    term                           shift and go to state 128
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
+    term                           shift and go to state 129
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
-state 81
+state 82
 
     (63) t_statement -> t_exp IN . NAME
 
-    NAME            shift and go to state 130
+    NAME            shift and go to state 131
 
 
-state 82
+state 83
 
     (55) t_term -> t_list .
 
@@ -1638,41 +1686,41 @@ state 82
     CP              reduce using rule 55 (t_term -> t_list .)
 
 
-state 83
+state 84
 
     (64) t_state_ins -> t_list t_ins_exp .
 
     $end            reduce using rule 64 (t_state_ins -> t_list t_ins_exp .)
 
 
-state 84
+state 85
 
     (65) t_ins_exp -> t_ins .
 
     $end            reduce using rule 65 (t_ins_exp -> t_ins .)
 
 
-state 85
+state 86
 
     (66) t_ins_exp -> t_exp .
     (48) t_exp -> t_exp . COMA t_exp
     (49) t_exp -> t_exp . SEMICOLON t_exp
 
     $end            reduce using rule 66 (t_ins_exp -> t_exp .)
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
 
 
-state 86
+state 87
 
     (67) t_ins -> NAME .
     (50) t_exp -> NAME . OP t_exp CP
 
     $end            reduce using rule 67 (t_ins -> NAME .)
-    OP              shift and go to state 88
+    OP              shift and go to state 89
 
 
-state 87
+state 88
 
     (60) t_statement -> t_statement COMA . t_statement
     (60) t_statement -> . t_statement COMA t_statement
@@ -1694,21 +1742,21 @@ state 87
     (58) t_list -> . OSB CSB
     (59) t_list -> . INF SUP
 
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
-    t_statement                    shift and go to state 131
-    t_exp                          shift and go to state 132
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
-    t_list                         shift and go to state 82
+    t_statement                    shift and go to state 132
+    t_exp                          shift and go to state 133
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
+    t_list                         shift and go to state 83
 
-state 88
+state 89
 
     (50) t_exp -> NAME OP . t_exp CP
     (48) t_exp -> . t_exp COMA t_exp
@@ -1726,31 +1774,31 @@ state 88
     (58) t_list -> . OSB CSB
     (59) t_list -> . INF SUP
 
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
-    t_exp                          shift and go to state 133
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
-    t_list                         shift and go to state 82
+    t_exp                          shift and go to state 134
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
+    t_list                         shift and go to state 83
 
-state 89
+state 90
 
     (56) t_list -> OSB t_exp . CSB
     (48) t_exp -> t_exp . COMA t_exp
     (49) t_exp -> t_exp . SEMICOLON t_exp
 
-    CSB             shift and go to state 134
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
+    CSB             shift and go to state 135
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
 
 
-state 90
+state 91
 
     (58) t_list -> OSB CSB .
 
@@ -1772,18 +1820,18 @@ state 90
     CP              reduce using rule 58 (t_list -> OSB CSB .)
 
 
-state 91
+state 92
 
     (57) t_list -> INF t_exp . SUP
     (48) t_exp -> t_exp . COMA t_exp
     (49) t_exp -> t_exp . SEMICOLON t_exp
 
-    SUP             shift and go to state 135
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
+    SUP             shift and go to state 136
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
 
 
-state 92
+state 93
 
     (59) t_list -> INF SUP .
 
@@ -1805,59 +1853,59 @@ state 92
     CP              reduce using rule 59 (t_list -> INF SUP .)
 
 
-state 93
-
-    (88) state -> st_list st_ins_exp .
-
-    $end            reduce using rule 88 (state -> st_list st_ins_exp .)
-
-
 state 94
 
-    (89) st_ins_exp -> st_ins .
+    (89) state -> st_list st_ins_exp .
 
-    $end            reduce using rule 89 (st_ins_exp -> st_ins .)
+    $end            reduce using rule 89 (state -> st_list st_ins_exp .)
 
 
 state 95
 
-    (90) st_ins_exp -> st_exp .
+    (90) st_ins_exp -> st_ins .
 
-    $end            reduce using rule 90 (st_ins_exp -> st_exp .)
+    $end            reduce using rule 90 (st_ins_exp -> st_ins .)
 
 
 state 96
 
-    (91) st_ins -> NAME .
-    (92) st_exp -> NAME . OP t_exp CP
+    (91) st_ins_exp -> st_exp .
 
-    $end            reduce using rule 91 (st_ins -> NAME .)
-    OP              shift and go to state 136
+    $end            reduce using rule 91 (st_ins_exp -> st_exp .)
 
 
 state 97
 
-    (93) st_list -> OSB s_exp . CSB
-    (39) s_exp -> s_exp . COMA s_exp
-    (40) s_exp -> s_exp . SEMICOLON s_exp
+    (92) st_ins -> NAME .
+    (93) st_exp -> NAME . OP t_exp CP
 
-    CSB             shift and go to state 137
-    COMA            shift and go to state 75
-    SEMICOLON       shift and go to state 76
+    $end            reduce using rule 92 (st_ins -> NAME .)
+    OP              shift and go to state 137
 
 
 state 98
 
-    (94) st_list -> INF s_exp . SUP
+    (94) st_list -> OSB s_exp . CSB
     (39) s_exp -> s_exp . COMA s_exp
     (40) s_exp -> s_exp . SEMICOLON s_exp
 
-    SUP             shift and go to state 138
-    COMA            shift and go to state 75
-    SEMICOLON       shift and go to state 76
+    CSB             shift and go to state 138
+    COMA            shift and go to state 76
+    SEMICOLON       shift and go to state 77
 
 
 state 99
+
+    (95) st_list -> INF s_exp . SUP
+    (39) s_exp -> s_exp . COMA s_exp
+    (40) s_exp -> s_exp . SEMICOLON s_exp
+
+    SUP             shift and go to state 139
+    COMA            shift and go to state 76
+    SEMICOLON       shift and go to state 77
+
+
+state 100
 
     (78) c_exp -> c_exp COMA c_exp .
     (78) c_exp -> c_exp . COMA c_exp
@@ -1870,14 +1918,14 @@ state 99
     INF             reduce using rule 78 (c_exp -> c_exp COMA c_exp .)
     $end            reduce using rule 78 (c_exp -> c_exp COMA c_exp .)
     CP              reduce using rule 78 (c_exp -> c_exp COMA c_exp .)
-    COMA            shift and go to state 53
-    SEMICOLON       shift and go to state 54
+    COMA            shift and go to state 54
+    SEMICOLON       shift and go to state 55
 
   ! COMA            [ reduce using rule 78 (c_exp -> c_exp COMA c_exp .) ]
   ! SEMICOLON       [ reduce using rule 78 (c_exp -> c_exp COMA c_exp .) ]
 
 
-state 100
+state 101
 
     (79) c_exp -> c_exp SEMICOLON c_exp .
     (78) c_exp -> c_exp . COMA c_exp
@@ -1890,66 +1938,72 @@ state 100
     INF             reduce using rule 79 (c_exp -> c_exp SEMICOLON c_exp .)
     $end            reduce using rule 79 (c_exp -> c_exp SEMICOLON c_exp .)
     CP              reduce using rule 79 (c_exp -> c_exp SEMICOLON c_exp .)
-    COMA            shift and go to state 53
-    SEMICOLON       shift and go to state 54
+    COMA            shift and go to state 54
+    SEMICOLON       shift and go to state 55
 
   ! COMA            [ reduce using rule 79 (c_exp -> c_exp SEMICOLON c_exp .) ]
   ! SEMICOLON       [ reduce using rule 79 (c_exp -> c_exp SEMICOLON c_exp .) ]
 
 
-state 101
+state 102
 
     (71) c_condition -> c_exp comparator c_exp .
     (78) c_exp -> c_exp . COMA c_exp
     (79) c_exp -> c_exp . SEMICOLON c_exp
 
     $end            reduce using rule 71 (c_condition -> c_exp comparator c_exp .)
-    COMA            shift and go to state 53
-    SEMICOLON       shift and go to state 54
+    COMA            shift and go to state 54
+    SEMICOLON       shift and go to state 55
 
 
-state 102
+state 103
 
     (72) comparator -> EQUAL EQUAL .
 
     NAME            reduce using rule 72 (comparator -> EQUAL EQUAL .)
     NUM             reduce using rule 72 (comparator -> EQUAL EQUAL .)
+    TRUE            reduce using rule 72 (comparator -> EQUAL EQUAL .)
+    FALSE           reduce using rule 72 (comparator -> EQUAL EQUAL .)
     OSB             reduce using rule 72 (comparator -> EQUAL EQUAL .)
     INF             reduce using rule 72 (comparator -> EQUAL EQUAL .)
 
 
-state 103
+state 104
 
     (74) comparator -> SUP EQUAL .
 
     NAME            reduce using rule 74 (comparator -> SUP EQUAL .)
     NUM             reduce using rule 74 (comparator -> SUP EQUAL .)
+    TRUE            reduce using rule 74 (comparator -> SUP EQUAL .)
+    FALSE           reduce using rule 74 (comparator -> SUP EQUAL .)
     OSB             reduce using rule 74 (comparator -> SUP EQUAL .)
     INF             reduce using rule 74 (comparator -> SUP EQUAL .)
 
 
-state 104
+state 105
 
     (76) comparator -> INF EQUAL .
 
     NAME            reduce using rule 76 (comparator -> INF EQUAL .)
     NUM             reduce using rule 76 (comparator -> INF EQUAL .)
+    TRUE            reduce using rule 76 (comparator -> INF EQUAL .)
+    FALSE           reduce using rule 76 (comparator -> INF EQUAL .)
     OSB             reduce using rule 76 (comparator -> INF EQUAL .)
     INF             reduce using rule 76 (comparator -> INF EQUAL .)
 
 
-state 105
+state 106
 
     (77) c_exp -> NAME OP c_exp . CP
     (78) c_exp -> c_exp . COMA c_exp
     (79) c_exp -> c_exp . SEMICOLON c_exp
 
-    CP              shift and go to state 139
-    COMA            shift and go to state 53
-    SEMICOLON       shift and go to state 54
+    CP              shift and go to state 140
+    COMA            shift and go to state 54
+    SEMICOLON       shift and go to state 55
 
 
-state 106
+state 107
 
     (22) list -> OSB exp CSB .
 
@@ -1971,7 +2025,7 @@ state 106
     OSB             reduce using rule 22 (list -> OSB exp CSB .)
 
 
-state 107
+state 108
 
     (23) list -> INF exp SUP .
 
@@ -1993,7 +2047,7 @@ state 107
     OSB             reduce using rule 23 (list -> INF exp SUP .)
 
 
-state 108
+state 109
 
     (7) lang -> premises MINUS MINUS . conclusion
     (31) conclusion -> . exp MINUS SUP exp
@@ -2012,39 +2066,39 @@ state 108
     (35) boolean -> . TRUE
     (36) boolean -> . FALSE
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
 
-    conclusion                     shift and go to state 140
-    exp                            shift and go to state 110
-    list                           shift and go to state 111
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
+    conclusion                     shift and go to state 141
+    exp                            shift and go to state 111
+    list                           shift and go to state 112
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
 
-state 109
+state 110
 
     (8) lang -> MINUS MINUS conclusion .
 
     $end            reduce using rule 8 (lang -> MINUS MINUS conclusion .)
 
 
-state 110
+state 111
 
     (31) conclusion -> exp . MINUS SUP exp
     (14) exp -> exp . COMA exp
     (15) exp -> exp . SEMICOLON exp
 
-    MINUS           shift and go to state 141
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    MINUS           shift and go to state 142
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
 
-state 111
+state 112
 
     (32) conclusion -> list . ins_exp MINUS SUP list
     (21) term -> list .
@@ -2067,33 +2121,33 @@ state 111
     MINUS           reduce using rule 21 (term -> list .)
     COMA            reduce using rule 21 (term -> list .)
     SEMICOLON       reduce using rule 21 (term -> list .)
-    NAME            shift and go to state 143
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 144
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    list                           shift and go to state 27
-    ins_exp                        shift and go to state 142
-    exp                            shift and go to state 144
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
+    list                           shift and go to state 30
+    ins_exp                        shift and go to state 143
+    exp                            shift and go to state 145
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
 
-state 112
+state 113
 
     (10) statement -> statement COMA statement .
     (10) statement -> statement . COMA statement
 
   ! shift/reduce conflict for COMA resolved as shift
     MINUS           reduce using rule 10 (statement -> statement COMA statement .)
-    COMA            shift and go to state 65
+    COMA            shift and go to state 66
 
   ! COMA            [ reduce using rule 10 (statement -> statement COMA statement .) ]
 
 
-state 113
+state 114
 
     (11) statement -> exp symb term .
 
@@ -2101,7 +2155,7 @@ state 113
     MINUS           reduce using rule 11 (statement -> exp symb term .)
 
 
-state 114
+state 115
 
     (12) statement -> exp symb VAR .
 
@@ -2109,7 +2163,7 @@ state 114
     MINUS           reduce using rule 12 (statement -> exp symb VAR .)
 
 
-state 115
+state 116
 
     (13) statement -> exp IN NAME .
 
@@ -2117,7 +2171,7 @@ state 115
     MINUS           reduce using rule 13 (statement -> exp IN NAME .)
 
 
-state 116
+state 117
 
     (14) exp -> exp COMA exp .
     (14) exp -> exp . COMA exp
@@ -2133,14 +2187,14 @@ state 116
     CSB             reduce using rule 14 (exp -> exp COMA exp .)
     CP              reduce using rule 14 (exp -> exp COMA exp .)
     $end            reduce using rule 14 (exp -> exp COMA exp .)
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
   ! COMA            [ reduce using rule 14 (exp -> exp COMA exp .) ]
   ! SEMICOLON       [ reduce using rule 14 (exp -> exp COMA exp .) ]
 
 
-state 117
+state 118
 
     (15) exp -> exp SEMICOLON exp .
     (14) exp -> exp . COMA exp
@@ -2156,14 +2210,14 @@ state 117
     CSB             reduce using rule 15 (exp -> exp SEMICOLON exp .)
     CP              reduce using rule 15 (exp -> exp SEMICOLON exp .)
     $end            reduce using rule 15 (exp -> exp SEMICOLON exp .)
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
   ! COMA            [ reduce using rule 15 (exp -> exp SEMICOLON exp .) ]
   ! SEMICOLON       [ reduce using rule 15 (exp -> exp SEMICOLON exp .) ]
 
 
-state 118
+state 119
 
     (25) symb -> EQUAL EQUAL .
 
@@ -2175,7 +2229,7 @@ state 118
     INF             reduce using rule 25 (symb -> EQUAL EQUAL .)
 
 
-state 119
+state 120
 
     (26) symb -> INF EQUAL .
 
@@ -2187,7 +2241,7 @@ state 119
     INF             reduce using rule 26 (symb -> INF EQUAL .)
 
 
-state 120
+state 121
 
     (27) symb -> SUP EQUAL .
 
@@ -2199,7 +2253,7 @@ state 120
     INF             reduce using rule 27 (symb -> SUP EQUAL .)
 
 
-state 121
+state 122
 
     (30) symb -> MINUS SUP .
 
@@ -2211,18 +2265,18 @@ state 121
     INF             reduce using rule 30 (symb -> MINUS SUP .)
 
 
-state 122
+state 123
 
     (16) exp -> NAME OP exp . CP
     (14) exp -> exp . COMA exp
     (15) exp -> exp . SEMICOLON exp
 
-    CP              shift and go to state 145
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    CP              shift and go to state 146
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
 
-state 123
+state 124
 
     (39) s_exp -> s_exp COMA s_exp .
     (39) s_exp -> s_exp . COMA s_exp
@@ -2233,14 +2287,14 @@ state 123
     $end            reduce using rule 39 (s_exp -> s_exp COMA s_exp .)
     CSB             reduce using rule 39 (s_exp -> s_exp COMA s_exp .)
     SUP             reduce using rule 39 (s_exp -> s_exp COMA s_exp .)
-    COMA            shift and go to state 75
-    SEMICOLON       shift and go to state 76
+    COMA            shift and go to state 76
+    SEMICOLON       shift and go to state 77
 
   ! COMA            [ reduce using rule 39 (s_exp -> s_exp COMA s_exp .) ]
   ! SEMICOLON       [ reduce using rule 39 (s_exp -> s_exp COMA s_exp .) ]
 
 
-state 124
+state 125
 
     (40) s_exp -> s_exp SEMICOLON s_exp .
     (39) s_exp -> s_exp . COMA s_exp
@@ -2251,25 +2305,25 @@ state 124
     $end            reduce using rule 40 (s_exp -> s_exp SEMICOLON s_exp .)
     CSB             reduce using rule 40 (s_exp -> s_exp SEMICOLON s_exp .)
     SUP             reduce using rule 40 (s_exp -> s_exp SEMICOLON s_exp .)
-    COMA            shift and go to state 75
-    SEMICOLON       shift and go to state 76
+    COMA            shift and go to state 76
+    SEMICOLON       shift and go to state 77
 
   ! COMA            [ reduce using rule 40 (s_exp -> s_exp SEMICOLON s_exp .) ]
   ! SEMICOLON       [ reduce using rule 40 (s_exp -> s_exp SEMICOLON s_exp .) ]
 
 
-state 125
+state 126
 
     (41) s_exp -> NAME OP exp . CP
     (14) exp -> exp . COMA exp
     (15) exp -> exp . SEMICOLON exp
 
-    CP              shift and go to state 146
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    CP              shift and go to state 147
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
 
-state 126
+state 127
 
     (48) t_exp -> t_exp COMA t_exp .
     (48) t_exp -> t_exp . COMA t_exp
@@ -2285,14 +2339,14 @@ state 126
     $end            reduce using rule 48 (t_exp -> t_exp COMA t_exp .)
     CSB             reduce using rule 48 (t_exp -> t_exp COMA t_exp .)
     CP              reduce using rule 48 (t_exp -> t_exp COMA t_exp .)
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
 
   ! COMA            [ reduce using rule 48 (t_exp -> t_exp COMA t_exp .) ]
   ! SEMICOLON       [ reduce using rule 48 (t_exp -> t_exp COMA t_exp .) ]
 
 
-state 127
+state 128
 
     (49) t_exp -> t_exp SEMICOLON t_exp .
     (48) t_exp -> t_exp . COMA t_exp
@@ -2308,14 +2362,14 @@ state 127
     $end            reduce using rule 49 (t_exp -> t_exp SEMICOLON t_exp .)
     CSB             reduce using rule 49 (t_exp -> t_exp SEMICOLON t_exp .)
     CP              reduce using rule 49 (t_exp -> t_exp SEMICOLON t_exp .)
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
 
   ! COMA            [ reduce using rule 49 (t_exp -> t_exp SEMICOLON t_exp .) ]
   ! SEMICOLON       [ reduce using rule 49 (t_exp -> t_exp SEMICOLON t_exp .) ]
 
 
-state 128
+state 129
 
     (61) t_statement -> t_exp symb term .
 
@@ -2323,7 +2377,7 @@ state 128
     $end            reduce using rule 61 (t_statement -> t_exp symb term .)
 
 
-state 129
+state 130
 
     (62) t_statement -> t_exp symb VAR .
 
@@ -2331,7 +2385,7 @@ state 129
     $end            reduce using rule 62 (t_statement -> t_exp symb VAR .)
 
 
-state 130
+state 131
 
     (63) t_statement -> t_exp IN NAME .
 
@@ -2339,19 +2393,19 @@ state 130
     $end            reduce using rule 63 (t_statement -> t_exp IN NAME .)
 
 
-state 131
+state 132
 
     (60) t_statement -> t_statement COMA t_statement .
     (60) t_statement -> t_statement . COMA t_statement
 
   ! shift/reduce conflict for COMA resolved as shift
     $end            reduce using rule 60 (t_statement -> t_statement COMA t_statement .)
-    COMA            shift and go to state 87
+    COMA            shift and go to state 88
 
   ! COMA            [ reduce using rule 60 (t_statement -> t_statement COMA t_statement .) ]
 
 
-state 132
+state 133
 
     (61) t_statement -> t_exp . symb term
     (62) t_statement -> t_exp . symb VAR
@@ -2365,28 +2419,28 @@ state 132
     (29) symb -> . SUP
     (30) symb -> . MINUS SUP
 
-    IN              shift and go to state 81
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
-    EQUAL           shift and go to state 70
-    INF             shift and go to state 71
-    SUP             shift and go to state 72
-    MINUS           shift and go to state 73
+    IN              shift and go to state 82
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
+    EQUAL           shift and go to state 71
+    INF             shift and go to state 72
+    SUP             shift and go to state 73
+    MINUS           shift and go to state 74
 
-    symb                           shift and go to state 80
+    symb                           shift and go to state 81
 
-state 133
+state 134
 
     (50) t_exp -> NAME OP t_exp . CP
     (48) t_exp -> t_exp . COMA t_exp
     (49) t_exp -> t_exp . SEMICOLON t_exp
 
-    CP              shift and go to state 147
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
+    CP              shift and go to state 148
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
 
 
-state 134
+state 135
 
     (56) t_list -> OSB t_exp CSB .
 
@@ -2408,7 +2462,7 @@ state 134
     CP              reduce using rule 56 (t_list -> OSB t_exp CSB .)
 
 
-state 135
+state 136
 
     (57) t_list -> INF t_exp SUP .
 
@@ -2430,9 +2484,9 @@ state 135
     CP              reduce using rule 57 (t_list -> INF t_exp SUP .)
 
 
-state 136
+state 137
 
-    (92) st_exp -> NAME OP . t_exp CP
+    (93) st_exp -> NAME OP . t_exp CP
     (48) t_exp -> . t_exp COMA t_exp
     (49) t_exp -> . t_exp SEMICOLON t_exp
     (50) t_exp -> . NAME OP t_exp CP
@@ -2448,34 +2502,34 @@ state 136
     (58) t_list -> . OSB CSB
     (59) t_list -> . INF SUP
 
-    NAME            shift and go to state 40
-    VAR             shift and go to state 42
-    NUM             shift and go to state 45
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 43
-    INF             shift and go to state 44
+    NAME            shift and go to state 41
+    VAR             shift and go to state 43
+    NUM             shift and go to state 46
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 44
+    INF             shift and go to state 45
 
-    t_exp                          shift and go to state 148
-    t_term                         shift and go to state 41
-    boolean                        shift and go to state 46
-    t_list                         shift and go to state 82
-
-state 137
-
-    (93) st_list -> OSB s_exp CSB .
-
-    NAME            reduce using rule 93 (st_list -> OSB s_exp CSB .)
-
+    t_exp                          shift and go to state 149
+    t_term                         shift and go to state 42
+    boolean                        shift and go to state 47
+    t_list                         shift and go to state 83
 
 state 138
 
-    (94) st_list -> INF s_exp SUP .
+    (94) st_list -> OSB s_exp CSB .
 
-    NAME            reduce using rule 94 (st_list -> INF s_exp SUP .)
+    NAME            reduce using rule 94 (st_list -> OSB s_exp CSB .)
 
 
 state 139
+
+    (95) st_list -> INF s_exp SUP .
+
+    NAME            reduce using rule 95 (st_list -> INF s_exp SUP .)
+
+
+state 140
 
     (77) c_exp -> NAME OP c_exp CP .
 
@@ -2488,48 +2542,48 @@ state 139
     CP              reduce using rule 77 (c_exp -> NAME OP c_exp CP .)
 
 
-state 140
+state 141
 
     (7) lang -> premises MINUS MINUS conclusion .
 
     $end            reduce using rule 7 (lang -> premises MINUS MINUS conclusion .)
 
 
-state 141
+state 142
 
     (31) conclusion -> exp MINUS . SUP exp
 
-    SUP             shift and go to state 149
-
-
-state 142
-
-    (32) conclusion -> list ins_exp . MINUS SUP list
-
-    MINUS           shift and go to state 150
+    SUP             shift and go to state 150
 
 
 state 143
+
+    (32) conclusion -> list ins_exp . MINUS SUP list
+
+    MINUS           shift and go to state 151
+
+
+state 144
 
     (33) ins_exp -> NAME .
     (16) exp -> NAME . OP exp CP
 
     MINUS           reduce using rule 33 (ins_exp -> NAME .)
-    OP              shift and go to state 74
+    OP              shift and go to state 75
 
 
-state 144
+state 145
 
     (34) ins_exp -> exp .
     (14) exp -> exp . COMA exp
     (15) exp -> exp . SEMICOLON exp
 
     MINUS           reduce using rule 34 (ins_exp -> exp .)
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
 
-state 145
+state 146
 
     (16) exp -> NAME OP exp CP .
 
@@ -2545,7 +2599,7 @@ state 145
     $end            reduce using rule 16 (exp -> NAME OP exp CP .)
 
 
-state 146
+state 147
 
     (41) s_exp -> NAME OP exp CP .
 
@@ -2556,7 +2610,7 @@ state 146
     SUP             reduce using rule 41 (s_exp -> NAME OP exp CP .)
 
 
-state 147
+state 148
 
     (50) t_exp -> NAME OP t_exp CP .
 
@@ -2572,18 +2626,18 @@ state 147
     CP              reduce using rule 50 (t_exp -> NAME OP t_exp CP .)
 
 
-state 148
+state 149
 
-    (92) st_exp -> NAME OP t_exp . CP
+    (93) st_exp -> NAME OP t_exp . CP
     (48) t_exp -> t_exp . COMA t_exp
     (49) t_exp -> t_exp . SEMICOLON t_exp
 
-    CP              shift and go to state 151
-    COMA            shift and go to state 78
-    SEMICOLON       shift and go to state 79
+    CP              shift and go to state 152
+    COMA            shift and go to state 79
+    SEMICOLON       shift and go to state 80
 
 
-state 149
+state 150
 
     (31) conclusion -> exp MINUS SUP . exp
     (14) exp -> . exp COMA exp
@@ -2600,57 +2654,57 @@ state 149
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    NAME            shift and go to state 24
-    VAR             shift and go to state 23
-    NUM             shift and go to state 25
-    TRUE            shift and go to state 28
-    FALSE           shift and go to state 29
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    NAME            shift and go to state 27
+    VAR             shift and go to state 26
+    NUM             shift and go to state 28
+    TRUE            shift and go to state 15
+    FALSE           shift and go to state 16
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    exp                            shift and go to state 152
-    term                           shift and go to state 22
-    boolean                        shift and go to state 26
-    list                           shift and go to state 27
-
-state 150
-
-    (32) conclusion -> list ins_exp MINUS . SUP list
-
-    SUP             shift and go to state 153
-
+    exp                            shift and go to state 153
+    term                           shift and go to state 25
+    boolean                        shift and go to state 29
+    list                           shift and go to state 30
 
 state 151
 
-    (92) st_exp -> NAME OP t_exp CP .
+    (32) conclusion -> list ins_exp MINUS . SUP list
 
-    $end            reduce using rule 92 (st_exp -> NAME OP t_exp CP .)
+    SUP             shift and go to state 154
 
 
 state 152
+
+    (93) st_exp -> NAME OP t_exp CP .
+
+    $end            reduce using rule 93 (st_exp -> NAME OP t_exp CP .)
+
+
+state 153
 
     (31) conclusion -> exp MINUS SUP exp .
     (14) exp -> exp . COMA exp
     (15) exp -> exp . SEMICOLON exp
 
     $end            reduce using rule 31 (conclusion -> exp MINUS SUP exp .)
-    COMA            shift and go to state 68
-    SEMICOLON       shift and go to state 69
+    COMA            shift and go to state 69
+    SEMICOLON       shift and go to state 70
 
 
-state 153
+state 154
 
     (32) conclusion -> list ins_exp MINUS SUP . list
     (22) list -> . OSB exp CSB
     (23) list -> . INF exp SUP
     (24) list -> . OSB CSB
 
-    OSB             shift and go to state 14
-    INF             shift and go to state 15
+    OSB             shift and go to state 17
+    INF             shift and go to state 18
 
-    list                           shift and go to state 154
+    list                           shift and go to state 155
 
-state 154
+state 155
 
     (32) conclusion -> list ins_exp MINUS SUP list .
 
@@ -2659,24 +2713,24 @@ state 154
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-WARNING: shift/reduce conflict for INF in state 37 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 99 resolved as shift
-WARNING: shift/reduce conflict for SEMICOLON in state 99 resolved as shift
+WARNING: shift/reduce conflict for INF in state 38 resolved as shift
 WARNING: shift/reduce conflict for COMA in state 100 resolved as shift
 WARNING: shift/reduce conflict for SEMICOLON in state 100 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 112 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 116 resolved as shift
-WARNING: shift/reduce conflict for SEMICOLON in state 116 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 101 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 101 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 113 resolved as shift
 WARNING: shift/reduce conflict for COMA in state 117 resolved as shift
 WARNING: shift/reduce conflict for SEMICOLON in state 117 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 123 resolved as shift
-WARNING: shift/reduce conflict for SEMICOLON in state 123 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 118 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 118 resolved as shift
 WARNING: shift/reduce conflict for COMA in state 124 resolved as shift
 WARNING: shift/reduce conflict for SEMICOLON in state 124 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 126 resolved as shift
-WARNING: shift/reduce conflict for SEMICOLON in state 126 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 125 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 125 resolved as shift
 WARNING: shift/reduce conflict for COMA in state 127 resolved as shift
 WARNING: shift/reduce conflict for SEMICOLON in state 127 resolved as shift
-WARNING: shift/reduce conflict for COMA in state 131 resolved as shift
-WARNING: reduce/reduce conflict in state 37 resolved using rule (token -> t_list)
-WARNING: rejected rule (t_term -> t_list) in state 37
+WARNING: shift/reduce conflict for COMA in state 128 resolved as shift
+WARNING: shift/reduce conflict for SEMICOLON in state 128 resolved as shift
+WARNING: shift/reduce conflict for COMA in state 132 resolved as shift
+WARNING: reduce/reduce conflict in state 38 resolved using rule (token -> t_list)
+WARNING: rejected rule (t_term -> t_list) in state 38

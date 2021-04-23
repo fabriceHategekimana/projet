@@ -79,7 +79,7 @@ reserved = {
         "token" : "TOKEN",
         "state" : "STATE",
         "True" : "TRUE",
-        "false" : "FALSE"
+        "False" : "FALSE"
         }
 
 tokens = [
@@ -169,7 +169,7 @@ def p_statement1(p):
     '''
     statement : statement COMA statement
     '''
-    res= "".join(p[1:])
+    res= p[1]+";"+p[3]
     p[0]= res
 
 def p_statement2(p):
@@ -505,6 +505,7 @@ def p_exp_more(p):
 def p_exp_int(p):
     '''
     c_exp : NUM
+          | boolean
     '''
     p[0] = str(p[1])
 

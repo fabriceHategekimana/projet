@@ -7,7 +7,7 @@ def evaluateProgram(state, prog):
     print("return>", state)
 
 #EVALUATION DU PROGRAMME
-importRules("data/brain2.fa")
-prog= "plus;;sup;;minus;;sup;;plus;;plus"
-state="<[0,0,0],0>"
+importRules("data/factorielle.fa")
+prog= "estPair(3)"
+state=""
 evaluateProgram(state, prog)

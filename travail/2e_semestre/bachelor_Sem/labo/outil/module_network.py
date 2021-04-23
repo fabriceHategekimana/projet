@@ -21,6 +21,8 @@ def addNodes(net, facts):
         c= "blue"
         if node.find("--") > -1: #if it's a rule
             c= "yellow"
+        elif node == "error": #if it's an normal error
+            c= "red"
         net.add_node(node, color=c)
 
 def addEdges(net, facts):

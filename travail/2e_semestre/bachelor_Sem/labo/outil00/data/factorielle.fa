@@ -1,2 +1,0 @@
--- fact(1) = 1
-N > 1 -- fact(N) = mul(N,fact(sub(N,1)))

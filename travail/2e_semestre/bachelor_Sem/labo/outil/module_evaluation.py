@@ -18,7 +18,7 @@ def evaluateState(state):
     print("expression: ", state)
     final= "Error: instruction non developpable"
     selection= getSelection(state, "state")
-    print("selection: ", selection)
+    #print("selection: ", selection)
     for rule in selection:
         res= applyRule(state, rule)
         #res= applyRule2(state, rule)
@@ -52,7 +52,7 @@ def test(expression, substitution):
     expression= complete(expression, substitution)
     print("expression à tester: ", expression)
     sym= symbol(expression)
-    print("symbol: ", sym)
+    #print("symbol: ", sym)
     tab= expression.split(sym)
     left= evaluateExpression(tab[0])
     if sym in ["==",">",">=","<","<="]: # if its conditionnal test
@@ -93,20 +93,12 @@ def evaluateExpression(expression):
             res= "error"
     return res
 
-#def pseudoEval(expression, data):
-    #print("------------------------EE")
-    #print("expression: ", expression)
-    #final= "Error: instruction non developpable"
-    #selection= getSelection(expression, data)
-    #print("selection: ", selection)
-    #return "pas fini"
-
 def evaluateExpressionHelper(expression):
     print("------------------------EE")
     print("expression: ", expression)
     final= "Error: instruction non developpable"
     selection= getSelection(expression, "exp")
-    print("selection: ", selection)
+    #print("selection: ", selection)
     for rule in selection:
         res= applyRule(expression, rule)
         if res != "error":
@@ -128,12 +120,12 @@ def applyRule(expression, rule):
         print("Le fait match")
         pass
     else: # if this is an array of substitution, go check the premises
-        print("substitution obtenue: ", substitution)
+        #print("substitution obtenue: ", substitution)
         if rule[1] != "":
             for premise in rule[1].split(";"): #loop: premises
                 print("premisse obtenue: ", premise)
                 res= test(premise, substitution)
-                print("res: ",res)
+                print("res de %s: %s" % (premise,res))
                 if res == False: #if a premise is false, we drop the rule
                     print("règle non accomplie")
                     allTrue= False
@@ -208,7 +200,7 @@ def getSelection(exp,table):
     else: # si on a seulement une expression
         newExp= exp[0:exp.find("(")]
         table= "exp_rules"
-    print("exp pour la selection:", newExp)
+    #print("exp pour la selection:", newExp)
     final= d.sqlQuery("select header,premises,conclusion from "+table+" where header like '"+newExp+"%'")
     return final
 
@@ -296,7 +288,7 @@ def isTerminal(exp):
     res= False
     if isNumber(exp) or isList(exp) or isBoolean(exp):
         res= True
-    print("isTerminal de "+exp+" "+str(res))
+    #print("isTerminal de "+exp+" "+str(res))
     return res
 
 def check(exp, dico):
@@ -328,13 +320,13 @@ def verifiable(exp,dico):
     return res, dico
 
 def complete(exp, tab):
-    print("expression à complèter:", exp)
+    #print("expression à complèter:", exp)
     dico= tabToDic(tab)
     sym= symbol(exp)
     #if sym == "->": # si c'est une expresison de conclusion
         #exp= exp.split(sym)[1]
     tokens= getToken(exp) #token est un tableau des différentes partie de l'expression
-    print("tokens: ", tokens)
+    #print("tokens: ", tokens)
     for i in range(len(tokens)):
         tokens[i]= dico.get(tokens[i], tokens[i]) #On remplace si'il y a un moyen de remplacer
     if "in" in tokens:
