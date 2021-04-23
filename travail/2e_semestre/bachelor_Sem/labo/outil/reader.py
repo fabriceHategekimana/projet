@@ -8,6 +8,6 @@ def evaluateProgram(state, prog):
 
 #EVALUATION DU PROGRAMME
 importRules("data/factorielle.fa")
-prog= "estPair(3)"
+prog= "estPair(15)"
 state=""
 evaluateProgram(state, prog)
