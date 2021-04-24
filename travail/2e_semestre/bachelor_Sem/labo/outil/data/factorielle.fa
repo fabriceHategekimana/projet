@@ -23,5 +23,5 @@ estPair(N) -> False.
 
 /*PROGRAMME*/
 Program{ 
-  fact(2);;
+  fact(3);;
 }
