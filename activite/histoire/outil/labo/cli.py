@@ -4,7 +4,6 @@ from module_network import *
 import re
 import csv
 
-
 class MyPrompt(Cmd):
     logo= ""+"|"
     prompt = logo+'normal> '
@@ -18,7 +17,7 @@ class MyPrompt(Cmd):
         return True
 
     def do_mode(self, inp):
-        if inp in ["normal","union","sql"]:
+        if inp in ["normal","union","sql","grammaire"]:
             self.prompt = self.logo+'%s> ' % inp
             self.mode= inp
         else:
@@ -57,6 +56,8 @@ class MyPrompt(Cmd):
             self.union(inp)
         elif self.mode == "sql":
             self.sql(inp)
+        elif self.mode == "grammaire":
+            parser.parse(inp,debug=True)
         else:
             print("ce mode ne produit rien")
 

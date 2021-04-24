@@ -38,7 +38,8 @@ reserved = {
 tokens = [
     'NUM',
     'VAR',
-    'ENT'
+    'ENT',
+    'STRING'
         ]+list(reserved.values())
 
 t_ignore = r' '
@@ -56,6 +57,12 @@ def t_ENT(t):
 def t_VAR(t):
     r'[A-C]'
     t.type = 'VAR'
+    return t
+
+def t_STRING(t):
+    r'"([^"\n])*"'
+    t.type = reserved.get(t.value,'STRING')
+    t.value= t.value[1:-1]
     return t
 
 def t_error(t):
@@ -172,8 +179,17 @@ def p_exp_fact(p):
          | NOT ENT ENT ENT
          | ENT NOT ENT ENT
          | ENT ENT NOT ENT
+         | ENT ENT term
     '''
     p[0] = p[1:]
+
+def p_val(p):
+    '''
+    term : ENT
+         | STRING
+         | NUM
+    '''
+    p[0] = p[1]
 
 def p_exp_rule(p):
     '''
@@ -253,9 +269,6 @@ def p_exp_predicat(p):
     '''
     fact2 : el el el
     '''
-    #varList= getVariables(p[1:])
-    #p[0] = ["("+union(p[1:])+")", varList]
-    #p[0] = ["("+" ".join(p[1:])+")", varList]
     p[0] = p[1:]
 
 def p_exp_fact3(p):
@@ -276,10 +289,3 @@ def p_error(p):
     print("Error bad syntax")
 
 parser= yacc.yacc()
-
-
-#s1= "add if A est B then A est bleu"
-#parser.parse(s1)
-
-#s2= "add if A est comme then A est bleu"
-#parser.parse(s2)
