@@ -55,7 +55,7 @@ def t_ENT(t):
     return t
 
 def t_VAR(t):
-    r'[A-C]'
+    r'[A-C$]'
     t.type = 'VAR'
     return t
 
@@ -155,8 +155,9 @@ def p_exp_modify_fact(p):
     '''
     modify : fact
     '''
-    d.sqlModify("insert or ignore into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(p[1]))
-    propagation(" ".join(p[1]))
+    d.sqlModify("insert or ignore into facts (subject,link,goal) values (\"%s\",\"%s\",\"%s\")" % tuple(p[1]))
+    if p[1][2].find(" ") == -1: # si le membre de droite n'est pas un STRING
+        propagation(" ".join(p[1]))
     p[0] = p[1]
 
 def p_exp_modify_rule(p):
@@ -168,7 +169,7 @@ def p_exp_modify_rule(p):
     else:
         premises= p[1][0]
     conclusion= p[1][1]
-    d.sqlModify("insert or ignore into rules (premises,conclusion) values ('%s','%s')" % tuple([premises,conclusion]))
+    d.sqlModify("insert or ignore into rules (premises,conclusion) values (\"%s\",\"%s\")" % tuple([premises,conclusion]))
     retroPropagation([premises,conclusion]) 
     ENTETE= []
     p[0] = p[1]
@@ -270,6 +271,12 @@ def p_exp_predicat(p):
     fact2 : el el el
     '''
     p[0] = p[1:]
+
+def p_exp_predicat2(p):
+    '''
+    fact2 : el el
+    '''
+    p[0] = p[1:]+["A"]
 
 def p_exp_fact3(p):
     '''

@@ -58,9 +58,6 @@ def convert(exp):
         exp= completeNot(exp)
         t= tuple(exp)
         sql= "(select * from facts where %s subject='%s' and %s link='%s' and %s goal='%s'" % t+")"
-        #else:
-            #t= tuple(exp)
-            #sql= "(select * from facts where subject='%s' and link='%s' and goal='%s'" % t+")"
         return sql
     else:
         sql= createUnionQuery(exp)

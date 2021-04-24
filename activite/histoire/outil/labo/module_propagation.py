@@ -16,13 +16,14 @@ def retroPropagation(rule):
             addFact(res)
 
 def addFact(fact):
-        d.sqlModify("insert or ignore into facts (subject,link,goal) values ('%s','%s','%s')" % tuple(fact.split(" ")))
-        ENTETE.append(fact)
-        if fact.find(" ") == -1: # Si c'est pas une chaine de caractère (s'il y a des espaces)
+    d.sqlModify("insert or ignore into facts (subject,link,goal) values (\"%s\",\"%s\",\"%s\")" % tuple(fact.split(" ")))
+    ENTETE.append(fact)
+    if fact.find(" ") == -1: # Si c'est pas une chaine de caractère (s'il y a des espaces)
         propagation(fact)
 
 def propagation(fact):
     fact= fact.split(" ")
+    print("fact", fact)
     for i in range(3):
         fact[i]= "%"+fact[i]+"%"
     rules= d.sqlQuery("select * from rules where premises like '%s' or premises like '%s' or premises like '%s'" % tuple(fact))

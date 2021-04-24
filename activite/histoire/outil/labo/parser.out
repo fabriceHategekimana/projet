@@ -39,10 +39,11 @@ Rule 33    conj2 -> fact3 moreconj2
 Rule 34    moreconj2 -> AND fact3 moreconj2
 Rule 35    moreconj2 -> <empty>
 Rule 36    fact2 -> el el el
-Rule 37    fact3 -> el el el
-Rule 38    el -> ENT
-Rule 39    el -> NOT ENT
-Rule 40    el -> VAR
+Rule 37    fact2 -> el el
+Rule 38    fact3 -> el el el
+Rule 39    el -> ENT
+Rule 40    el -> NOT ENT
+Rule 41    el -> VAR
 
 Terminals, with rules where they appear
 
@@ -51,24 +52,24 @@ AND                  : 29 31 34
 CHECK                : 7 9 10 11
 DELETE               : 3 4
 DISPLAY              : 8
-ENT                  : 14 14 14 15 15 15 16 16 16 17 17 17 18 18 19 38 39
+ENT                  : 14 14 14 15 15 15 16 16 16 17 17 17 18 18 19 39 40
 IF                   : 22
 LINKS                : 10
 NODES                : 11
-NOT                  : 15 16 17 39
+NOT                  : 15 16 17 40
 NUM                  : 5 21
 OR                   : 30 32
 RULES                : 4 9
 STRING               : 20
 THEN                 : 22
-VAR                  : 40
+VAR                  : 41
 error                : 
 
 Nonterminals, with rules where they appear
 
 calc                 : 0
 conj2                : 22
-el                   : 36 36 36 37 37 37
+el                   : 36 36 36 37 37 38 38 38
 exp                  : 1
 fact                 : 12
 fact2                : 3 24 25
@@ -146,9 +147,10 @@ state 4
     (3) exp -> DELETE . fact2
     (4) exp -> DELETE . RULES numlist
     (36) fact2 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (37) fact2 -> . el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     RULES           shift and go to state 14
     ENT             shift and go to state 16
@@ -166,9 +168,10 @@ state 5
     (11) exp -> CHECK . NODES
     (24) logalg -> . fact2 more
     (36) fact2 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (37) fact2 -> . el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     RULES           shift and go to state 20
     LINKS           shift and go to state 21
@@ -186,9 +189,10 @@ state 6
     (8) exp -> DISPLAY . logalg
     (24) logalg -> . fact2 more
     (36) fact2 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (37) fact2 -> . el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -241,10 +245,10 @@ state 12
 
     (22) rule -> IF . logalg2 THEN conj2
     (23) logalg2 -> . fact3 more2
-    (37) fact3 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (38) fact3 -> . el el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -275,9 +279,10 @@ state 14
 state 15
 
     (36) fact2 -> el . el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (37) fact2 -> el . el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -287,35 +292,35 @@ state 15
 
 state 16
 
-    (38) el -> ENT .
+    (39) el -> ENT .
 
-    ENT             reduce using rule 38 (el -> ENT .)
-    NOT             reduce using rule 38 (el -> ENT .)
-    VAR             reduce using rule 38 (el -> ENT .)
-    $end            reduce using rule 38 (el -> ENT .)
-    AND             reduce using rule 38 (el -> ENT .)
-    OR              reduce using rule 38 (el -> ENT .)
-    THEN            reduce using rule 38 (el -> ENT .)
+    ENT             reduce using rule 39 (el -> ENT .)
+    NOT             reduce using rule 39 (el -> ENT .)
+    VAR             reduce using rule 39 (el -> ENT .)
+    $end            reduce using rule 39 (el -> ENT .)
+    AND             reduce using rule 39 (el -> ENT .)
+    OR              reduce using rule 39 (el -> ENT .)
+    THEN            reduce using rule 39 (el -> ENT .)
 
 
 state 17
 
-    (39) el -> NOT . ENT
+    (40) el -> NOT . ENT
 
     ENT             shift and go to state 34
 
 
 state 18
 
-    (40) el -> VAR .
+    (41) el -> VAR .
 
-    ENT             reduce using rule 40 (el -> VAR .)
-    NOT             reduce using rule 40 (el -> VAR .)
-    VAR             reduce using rule 40 (el -> VAR .)
-    $end            reduce using rule 40 (el -> VAR .)
-    AND             reduce using rule 40 (el -> VAR .)
-    OR              reduce using rule 40 (el -> VAR .)
-    THEN            reduce using rule 40 (el -> VAR .)
+    ENT             reduce using rule 41 (el -> VAR .)
+    NOT             reduce using rule 41 (el -> VAR .)
+    VAR             reduce using rule 41 (el -> VAR .)
+    $end            reduce using rule 41 (el -> VAR .)
+    AND             reduce using rule 41 (el -> VAR .)
+    OR              reduce using rule 41 (el -> VAR .)
+    THEN            reduce using rule 41 (el -> VAR .)
 
 
 state 19
@@ -422,10 +427,10 @@ state 29
 
 state 30
 
-    (37) fact3 -> el . el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (38) fact3 -> el . el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -454,10 +459,14 @@ state 32
 state 33
 
     (36) fact2 -> el el . el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (37) fact2 -> el el .
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
+    $end            reduce using rule 37 (fact2 -> el el .)
+    AND             reduce using rule 37 (fact2 -> el el .)
+    OR              reduce using rule 37 (fact2 -> el el .)
     ENT             shift and go to state 16
     NOT             shift and go to state 17
     VAR             shift and go to state 18
@@ -466,15 +475,15 @@ state 33
 
 state 34
 
-    (39) el -> NOT ENT .
+    (40) el -> NOT ENT .
 
-    ENT             reduce using rule 39 (el -> NOT ENT .)
-    NOT             reduce using rule 39 (el -> NOT ENT .)
-    VAR             reduce using rule 39 (el -> NOT ENT .)
-    $end            reduce using rule 39 (el -> NOT ENT .)
-    AND             reduce using rule 39 (el -> NOT ENT .)
-    OR              reduce using rule 39 (el -> NOT ENT .)
-    THEN            reduce using rule 39 (el -> NOT ENT .)
+    ENT             reduce using rule 40 (el -> NOT ENT .)
+    NOT             reduce using rule 40 (el -> NOT ENT .)
+    VAR             reduce using rule 40 (el -> NOT ENT .)
+    $end            reduce using rule 40 (el -> NOT ENT .)
+    AND             reduce using rule 40 (el -> NOT ENT .)
+    OR              reduce using rule 40 (el -> NOT ENT .)
+    THEN            reduce using rule 40 (el -> NOT ENT .)
 
 
 state 35
@@ -488,9 +497,10 @@ state 36
 
     (25) more -> op . fact2 more
     (36) fact2 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (37) fact2 -> . el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -574,10 +584,10 @@ state 46
 
     (22) rule -> IF logalg2 THEN . conj2
     (33) conj2 -> . fact3 moreconj2
-    (37) fact3 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (38) fact3 -> . el el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -597,10 +607,10 @@ state 47
 state 48
 
     (26) more2 -> op2 . fact3 more2
-    (37) fact3 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (38) fact3 -> . el el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -629,10 +639,10 @@ state 50
 
 state 51
 
-    (37) fact3 -> el el . el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (38) fact3 -> el el . el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
@@ -727,12 +737,12 @@ state 60
 
 state 61
 
-    (37) fact3 -> el el el .
+    (38) fact3 -> el el el .
 
-    AND             reduce using rule 37 (fact3 -> el el el .)
-    OR              reduce using rule 37 (fact3 -> el el el .)
-    THEN            reduce using rule 37 (fact3 -> el el el .)
-    $end            reduce using rule 37 (fact3 -> el el el .)
+    AND             reduce using rule 38 (fact3 -> el el el .)
+    OR              reduce using rule 38 (fact3 -> el el el .)
+    THEN            reduce using rule 38 (fact3 -> el el el .)
+    $end            reduce using rule 38 (fact3 -> el el el .)
 
 
 state 62
@@ -752,10 +762,10 @@ state 63
 state 64
 
     (34) moreconj2 -> AND . fact3 moreconj2
-    (37) fact3 -> . el el el
-    (38) el -> . ENT
-    (39) el -> . NOT ENT
-    (40) el -> . VAR
+    (38) fact3 -> . el el el
+    (39) el -> . ENT
+    (40) el -> . NOT ENT
+    (41) el -> . VAR
 
     ENT             shift and go to state 16
     NOT             shift and go to state 17
