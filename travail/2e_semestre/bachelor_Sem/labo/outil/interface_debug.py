@@ -4,21 +4,32 @@ import re
 from module_rules import *
 from module_network import *
 
-class MyPrompt(Cmd):
-    prompt = '>'
+class Debug(Cmd):
+    prompt = 'debug>'
     use_raw_input= False
     state= ""
+    exp= ""
     STATIC_RULES= []
     RULES= []
     STACK= []
     ERROR= False
-    exp= ""
+
+    def preloop(self): 
+        f= open("res.txt", "r")
+        path= f.readlines()[0]
+        f.close()
+        Program, error= importRules(path)
+        if error == False:
+            self.state, self.exp= getStateAndExp(Program) 
+            #On ne prend que la première expression
+            self.exp= self.exp.split(";;")[0]
+        else:
+            print("Error: rules not correctly imported")
 
     def do_exit(self, inp):
         return True
 
     def do_append(self, inp):
-        self.stackAppend(inp)
         tab= d.sqlQuery("select * from links;")
         print(tab)
 
@@ -29,23 +40,30 @@ class MyPrompt(Cmd):
     def do_step(self, inp):
         if self.RULES == []:
            print("rules selection")
-           rules= getRules() #On prend les règles enregistrées dans la base de données
-           self.RULES= getSelection(self.exp, rules)
+           self.RULES= getSelection(self.state+self.exp)
            self.STATIC_RULES= self.RULES.copy()
         else:
            r= self.RULES.pop(0)
-           rules= getRules()
-           self.stackAppend(r[1]+"--"+r[2])
-           newExp= applyRule2(self.exp, r) 
-           self.stackAppend(newExp)
-           print("exp: ", newExp)
-           if newExp != "error":
+           #newExp= applyRule2(self.exp, r) 
+           stateexp= evaluateInstruction(self.state+self.exp)
+           print("state/exp: ", stateexp)
+           if stateexp != "error": #if there is no error
                self.ERROR= False
                self.RULES= []
-               self.exp= newExp
+               if stateexp.find("<") > -1: #if it's a state
+                   self.state= stateexp
+               else:
+                   self.exp= stateexp
            else:
                self.ERROR= True
-               self.stackPop()
+
+    def do_run(self, inp):
+       prog= inp.split(";;") 
+       print("prog", prog)
+       while(len(prog) > 0):
+         self.exp= prog.pop()
+         self.do_step("")
+         self.do_step("")
 
     def do_state(self, inp):
         print("--------------------------------------")
@@ -55,7 +73,7 @@ class MyPrompt(Cmd):
         else:
             print("next rule:")
         print("expression:", self.exp)
-        print("state: ", self.state)
+        print("state:", self.state)
         print("--------------------------------------")
 
     def do_apply(self, inp):
@@ -71,6 +89,10 @@ class MyPrompt(Cmd):
             tempRULES.append(rule)
             print("tempRULES: ", tempRULES)
 
+    def do_rules(self, inp):
+        r= getRules()
+        print(r)
+
     def do_set(self, inp):
         self.RULES= []
         tab= inp.split(" ")
@@ -85,7 +107,9 @@ class MyPrompt(Cmd):
     def do_import(self, inp):
         try:
             importRules(inp)
-            print("%s imported!" % inp)
+            if error == False:
+                self.state, self.exp= getStateAndExp(Program) 
+                print("%s imported!" % inp)
         except:
             print("can't find the file '%s'" % inp)
 
@@ -98,10 +122,6 @@ class MyPrompt(Cmd):
     def default(self, inp):
         print("action inconnue")
 
-    def stackAppend(self, string):
-       self.STACK.append(string)
-       self.createLink()
-
     def createLink(self):
         goal= self.STACK.pop()
         subject= self.STACK.pop()
@@ -109,8 +129,3 @@ class MyPrompt(Cmd):
         self.STACK.append(subject)
         self.STACK.append(goal)
 
-    def stackPop(self):
-        self.STACK.pop()
-        self.STACK.pop()
-
-MyPrompt().cmdloop()

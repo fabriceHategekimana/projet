@@ -1,0 +1,23 @@
+
+evaluate state
+------------------------EE
+expression: <0,0>gauche
+--------------------RULE
+règle choisie: ['<X,Y>gauche', 'sub(X,1)->Xp', '<X,Y>gauche-><Xp,Y>']
+tab1 ['X', 'Y', '']
+tab2 ['0', '0', '']
+résultat de l'union:  [['X', '0'], ['Y', '0'], ['', '']]
+premisse obtenue: sub(X,1)->Xp
+expression à tester: sub(0,1)->Xp
+------------------------EVAL
+subEval de l'expression: sub(0,1)
+résultat du test -> : -1
+res de sub(X,1)->Xp: [['X', '0'], ['Y', '0'], ['', ''], ['Xp', '-1']]
+règle accomplie
+conclusion: <-1,0>
+------------------------EVAL
+subEval de l'expression: -1
+------------------------EVAL
+subEval de l'expression: 0
+final applyRule: <-1;0>
+expression après application de la règle '['<X,Y>gauche', 'sub(X,1)->Xp', '<X,Y>gauche-><Xp,Y>']': '<-1;0>'

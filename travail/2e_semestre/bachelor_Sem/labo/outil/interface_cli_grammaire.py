@@ -2,8 +2,8 @@ from cmd import Cmd
 from module_compile import *
 import re
 
-class MyPrompt(Cmd):
-    prompt = '>'
+class CliGrammaire(Cmd):
+    prompt = 'grammar>'
     use_raw_input= False
 
     def do_exit(self, inp):
@@ -15,4 +15,3 @@ class MyPrompt(Cmd):
         for line in f:
             print(line)
 
-MyPrompt().cmdloop()

@@ -39,7 +39,7 @@ def decompose(exp):
     return [entete, tab[0], tab[1]]
 
 def getRules():
-    return d.sqlQuery("select header,premises,conclusion from exp_rules;")
+    return d.sqlQuery("select header, premises, conclusion from exp_rules union select header, premises, conclusion from state_rules;")
 
 def insertRule(rule):
     if rule[0][0] == "<":
@@ -53,25 +53,54 @@ def insertDefaultRules():
     for rule in RULES:
         insertRule(rule)
 
+def deleteComment(line):
+    while(line.find("/*") != -1):
+        line= line[:line.find("/*")]+line[line.find("*/")+2:] #delete comments
+    return line
+
 def importRules(name):
+    VERBOSE= verbose
     #On vide les bases de données
     d.sqlModify("delete from exp_rules")
     d.sqlModify("delete from state_rules")
+    d.sqlModify("delete from links")
     insertDefaultRules()
+    error= False
     #On ouvre le fichier
     f = open(name, "r")
-    count= 0
-    error= False
-    #Pour chaque ligne on test si la règle est juste puis on continue
-    for line in f:
-        count += 1
-        res= syntaxChecking(line)
-        if res[0] == "&":
-            print("Error in line "+ str(count)+": '"+line[:-1]+"' \n"+res[1:])
-            error= True
-            break
-        else:
-            res= res.replace(" ", "")
-            rule= decompose(res)
-            #On insère la règle traitée
-            insertRule(rule)
+    #an list of each statements
+    sentences= f.read().replace("\n","").split(".")
+    Program= deleteComment(sentences.pop())
+    #print("last line:", Program[:6])
+    if Program[:7] != "Program":
+        print("Error: Missing the Program section at the bottom of the page (after the rulses)")
+        error= True
+    if error == False:
+        #Pour chaque ligne on test si la règle est juste puis on continue
+        for line in sentences:
+            #print("line:", line)
+            if line.find("/*") != -1:
+                line= deleteComment(line)
+                #print("line modified:", line)
+            res= syntaxChecking(line)
+            if res[0] == "&":
+                print("Error : '"+line[:-1]+"' \n"+res[1:])
+                error= True
+                break
+            else:
+                res= res.replace(" ", "")
+                rule= decompose(res)
+                #On insère la règle traitée
+                insertRule(rule)
+    return Program, error
+
+def getStateAndExp(Program):
+    program= Program[Program.find("{")+1:Program.find("}")].replace(" ", "").replace("\t", "")
+    separationPoint= program.find(">")
+    if separationPoint != -1: #if there is a state
+        state= program[:separationPoint+1]
+        exp= program[separationPoint+1:]
+    else:
+        state= ""
+        exp= program.replace(" ", "")
+    return state, exp

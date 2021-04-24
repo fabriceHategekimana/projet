@@ -1,4 +1,9 @@
-set(Tab,Pt,1) -> Tabp -- <Tab,Pt>plus -> <Tabp,Pt>
-set(Tab,Pt,1) -> Tabp -- <Tab,Pt>minus -> <Tabp,Pt>
-add(Pt,1) -> Ptp -- <Tab,Pt>sup -> <Tabp,Ptp>
-sub(Pt,1) -> Ptp -- <Tab,Pt>inf -> <Tabp,Ptp>
+/*modify*/
+get(Tab,Pt) -> It, set(Tab,Pt,It) -> Tabp
+--
+modify(Tab,Pt,N) -> Tabp.
+
+Program{ 
+	/*<Tab,Pt>*/
+	modify([0,0,0],2,3)
+}

@@ -557,7 +557,7 @@ def p_state(p):
     '''
     state : st_list st_ins_exp
     '''
-    res= p[1]+p[2]
+    res= p[1]+"&&"+p[2]
     write(res.replace("&&,&&","&&"))
     p[0] = "state"
 
@@ -612,7 +612,5 @@ def p_error(p):
             write("&Error near "+p.value)
     else:
         write("&Syntax error at EOF")
-
-
 
 parser= yacc.yacc(start='start')
