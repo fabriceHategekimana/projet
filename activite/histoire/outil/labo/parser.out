@@ -1,806 +1,720 @@
 Created by PLY version 3.11 (http://www.dabeaz.com/ply)
 
+Unused terminals:
+
+    NOT
+    PLUS
+
 Grammar
 
-Rule 0     S' -> calc
-Rule 1     calc -> exp
-Rule 2     exp -> ADD modify
-Rule 3     exp -> DELETE fact2
-Rule 4     exp -> DELETE RULES numlist
-Rule 5     numlist -> NUM numlist
-Rule 6     numlist -> <empty>
-Rule 7     exp -> CHECK logalg
-Rule 8     exp -> DISPLAY logalg
-Rule 9     exp -> CHECK RULES
-Rule 10    exp -> CHECK LINKS
-Rule 11    exp -> CHECK NODES
-Rule 12    modify -> fact
-Rule 13    modify -> rule
-Rule 14    fact -> ENT ENT ENT
-Rule 15    fact -> NOT ENT ENT ENT
-Rule 16    fact -> ENT NOT ENT ENT
-Rule 17    fact -> ENT ENT NOT ENT
-Rule 18    fact -> ENT ENT term
-Rule 19    term -> ENT
-Rule 20    term -> STRING
-Rule 21    term -> NUM
-Rule 22    rule -> IF logalg2 THEN conj2
-Rule 23    logalg2 -> fact3 more2
-Rule 24    logalg -> fact2 more
-Rule 25    more -> op fact2 more
-Rule 26    more2 -> op2 fact3 more2
-Rule 27    more -> <empty>
-Rule 28    more2 -> <empty>
-Rule 29    op -> AND
-Rule 30    op -> OR
-Rule 31    op2 -> AND
-Rule 32    op2 -> OR
-Rule 33    conj2 -> fact3 moreconj2
-Rule 34    moreconj2 -> AND fact3 moreconj2
-Rule 35    moreconj2 -> <empty>
-Rule 36    fact2 -> el el el
-Rule 37    fact2 -> el el
-Rule 38    fact3 -> el el el
-Rule 39    el -> ENT
-Rule 40    el -> NOT ENT
-Rule 41    el -> VAR
+Rule 0     S' -> start
+Rule 1     start -> ADD add
+Rule 2     start -> CHECK check
+Rule 3     add -> fact
+Rule 4     add -> rule
+Rule 5     add -> macro
+Rule 6     fact -> ent ent ent_string
+Rule 7     ent -> NAME
+Rule 8     ent -> NUM
+Rule 9     ent_string -> ent
+Rule 10    ent_string -> STRING
+Rule 11    check -> logalg
+Rule 12    logalg -> logalg log_op logalg
+Rule 13    logalg -> ent_var ent_var ent_var_string
+Rule 14    logalg -> ent_var check_op ent_string
+Rule 15    ent_var_string -> ent_string
+Rule 16    ent_var_string -> VAR
+Rule 17    ent_var -> ent
+Rule 18    ent_var -> VAR
+Rule 19    log_op -> AND
+Rule 20    log_op -> OR
+Rule 21    check_op -> INF
+Rule 22    check_op -> SUP
+Rule 23    check_op -> EQUAL
+Rule 24    check_op -> INF EQUAL
+Rule 25    check_op -> SUP EQUAL
+Rule 26    check_op -> MINUS CONTAINS
+Rule 27    rule -> IF logalg_rule THEN logalg_rule
+Rule 28    logalg_rule -> logalg_rule log_op logalg_rule
+Rule 29    logalg_rule -> ent_var ent_var ent_var
+Rule 30    logalg_rule -> ent_var check_op ent
+Rule 31    macro -> MACRO
 
 Terminals, with rules where they appear
 
-ADD                  : 2
-AND                  : 29 31 34
-CHECK                : 7 9 10 11
-DELETE               : 3 4
-DISPLAY              : 8
-ENT                  : 14 14 14 15 15 15 16 16 16 17 17 17 18 18 19 39 40
-IF                   : 22
-LINKS                : 10
-NODES                : 11
-NOT                  : 15 16 17 40
-NUM                  : 5 21
-OR                   : 30 32
-RULES                : 4 9
-STRING               : 20
-THEN                 : 22
-VAR                  : 41
+ADD                  : 1
+AND                  : 19
+CHECK                : 2
+CONTAINS             : 26
+EQUAL                : 23 24 25
+IF                   : 27
+INF                  : 21 24
+MACRO                : 31
+MINUS                : 26
+NAME                 : 7
+NOT                  : 
+NUM                  : 8
+OR                   : 20
+PLUS                 : 
+STRING               : 10
+SUP                  : 22 25
+THEN                 : 27
+VAR                  : 16 18
 error                : 
 
 Nonterminals, with rules where they appear
 
-calc                 : 0
-conj2                : 22
-el                   : 36 36 36 37 37 38 38 38
-exp                  : 1
-fact                 : 12
-fact2                : 3 24 25
-fact3                : 23 26 33 34
-logalg               : 7 8
-logalg2              : 22
-modify               : 2
-more                 : 24 25
-more2                : 23 26
-moreconj2            : 33 34
-numlist              : 4 5
-op                   : 25
-op2                  : 26
-rule                 : 13
-term                 : 18
+add                  : 1
+check                : 2
+check_op             : 14 30
+ent                  : 6 6 9 17 30
+ent_string           : 6 14 15
+ent_var              : 13 13 14 29 29 29 30
+ent_var_string       : 13
+fact                 : 3
+log_op               : 12 28
+logalg               : 11 12 12
+logalg_rule          : 27 27 28 28
+macro                : 5
+rule                 : 4
+start                : 0
 
 Parsing method: LALR
 
 state 0
 
-    (0) S' -> . calc
-    (1) calc -> . exp
-    (2) exp -> . ADD modify
-    (3) exp -> . DELETE fact2
-    (4) exp -> . DELETE RULES numlist
-    (7) exp -> . CHECK logalg
-    (8) exp -> . DISPLAY logalg
-    (9) exp -> . CHECK RULES
-    (10) exp -> . CHECK LINKS
-    (11) exp -> . CHECK NODES
+    (0) S' -> . start
+    (1) start -> . ADD add
+    (2) start -> . CHECK check
 
-    ADD             shift and go to state 3
-    DELETE          shift and go to state 4
-    CHECK           shift and go to state 5
-    DISPLAY         shift and go to state 6
+    ADD             shift and go to state 2
+    CHECK           shift and go to state 3
 
-    calc                           shift and go to state 1
-    exp                            shift and go to state 2
+    start                          shift and go to state 1
 
 state 1
 
-    (0) S' -> calc .
+    (0) S' -> start .
 
 
 
 state 2
 
-    (1) calc -> exp .
+    (1) start -> ADD . add
+    (3) add -> . fact
+    (4) add -> . rule
+    (5) add -> . macro
+    (6) fact -> . ent ent ent_string
+    (27) rule -> . IF logalg_rule THEN logalg_rule
+    (31) macro -> . MACRO
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 1 (calc -> exp .)
+    IF              shift and go to state 9
+    MACRO           shift and go to state 10
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    add                            shift and go to state 4
+    fact                           shift and go to state 5
+    rule                           shift and go to state 6
+    macro                          shift and go to state 7
+    ent                            shift and go to state 8
 
 state 3
 
-    (2) exp -> ADD . modify
-    (12) modify -> . fact
-    (13) modify -> . rule
-    (14) fact -> . ENT ENT ENT
-    (15) fact -> . NOT ENT ENT ENT
-    (16) fact -> . ENT NOT ENT ENT
-    (17) fact -> . ENT ENT NOT ENT
-    (18) fact -> . ENT ENT term
-    (22) rule -> . IF logalg2 THEN conj2
+    (2) start -> CHECK . check
+    (11) check -> . logalg
+    (12) logalg -> . logalg log_op logalg
+    (13) logalg -> . ent_var ent_var ent_var_string
+    (14) logalg -> . ent_var check_op ent_string
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    ENT             shift and go to state 10
-    NOT             shift and go to state 11
-    IF              shift and go to state 12
+    VAR             shift and go to state 17
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
-    modify                         shift and go to state 7
-    fact                           shift and go to state 8
-    rule                           shift and go to state 9
+    check                          shift and go to state 13
+    logalg                         shift and go to state 14
+    ent_var                        shift and go to state 15
+    ent                            shift and go to state 16
 
 state 4
 
-    (3) exp -> DELETE . fact2
-    (4) exp -> DELETE . RULES numlist
-    (36) fact2 -> . el el el
-    (37) fact2 -> . el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (1) start -> ADD add .
 
-    RULES           shift and go to state 14
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    $end            reduce using rule 1 (start -> ADD add .)
 
-    fact2                          shift and go to state 13
-    el                             shift and go to state 15
 
 state 5
 
-    (7) exp -> CHECK . logalg
-    (9) exp -> CHECK . RULES
-    (10) exp -> CHECK . LINKS
-    (11) exp -> CHECK . NODES
-    (24) logalg -> . fact2 more
-    (36) fact2 -> . el el el
-    (37) fact2 -> . el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (3) add -> fact .
 
-    RULES           shift and go to state 20
-    LINKS           shift and go to state 21
-    NODES           shift and go to state 22
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    $end            reduce using rule 3 (add -> fact .)
 
-    logalg                         shift and go to state 19
-    fact2                          shift and go to state 23
-    el                             shift and go to state 15
 
 state 6
 
-    (8) exp -> DISPLAY . logalg
-    (24) logalg -> . fact2 more
-    (36) fact2 -> . el el el
-    (37) fact2 -> . el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (4) add -> rule .
 
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    $end            reduce using rule 4 (add -> rule .)
 
-    logalg                         shift and go to state 24
-    fact2                          shift and go to state 23
-    el                             shift and go to state 15
 
 state 7
 
-    (2) exp -> ADD modify .
+    (5) add -> macro .
 
-    $end            reduce using rule 2 (exp -> ADD modify .)
+    $end            reduce using rule 5 (add -> macro .)
 
 
 state 8
 
-    (12) modify -> fact .
+    (6) fact -> ent . ent ent_string
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 12 (modify -> fact .)
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    ent                            shift and go to state 18
 
 state 9
 
-    (13) modify -> rule .
+    (27) rule -> IF . logalg_rule THEN logalg_rule
+    (28) logalg_rule -> . logalg_rule log_op logalg_rule
+    (29) logalg_rule -> . ent_var ent_var ent_var
+    (30) logalg_rule -> . ent_var check_op ent
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 13 (modify -> rule .)
+    VAR             shift and go to state 17
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    logalg_rule                    shift and go to state 19
+    ent_var                        shift and go to state 20
+    ent                            shift and go to state 16
 
 state 10
 
-    (14) fact -> ENT . ENT ENT
-    (16) fact -> ENT . NOT ENT ENT
-    (17) fact -> ENT . ENT NOT ENT
-    (18) fact -> ENT . ENT term
+    (31) macro -> MACRO .
 
-    ENT             shift and go to state 25
-    NOT             shift and go to state 26
+    $end            reduce using rule 31 (macro -> MACRO .)
 
 
 state 11
 
-    (15) fact -> NOT . ENT ENT ENT
+    (7) ent -> NAME .
 
-    ENT             shift and go to state 27
+    NAME            reduce using rule 7 (ent -> NAME .)
+    NUM             reduce using rule 7 (ent -> NAME .)
+    VAR             reduce using rule 7 (ent -> NAME .)
+    INF             reduce using rule 7 (ent -> NAME .)
+    SUP             reduce using rule 7 (ent -> NAME .)
+    EQUAL           reduce using rule 7 (ent -> NAME .)
+    MINUS           reduce using rule 7 (ent -> NAME .)
+    STRING          reduce using rule 7 (ent -> NAME .)
+    $end            reduce using rule 7 (ent -> NAME .)
+    AND             reduce using rule 7 (ent -> NAME .)
+    OR              reduce using rule 7 (ent -> NAME .)
+    THEN            reduce using rule 7 (ent -> NAME .)
 
 
 state 12
 
-    (22) rule -> IF . logalg2 THEN conj2
-    (23) logalg2 -> . fact3 more2
-    (38) fact3 -> . el el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (8) ent -> NUM .
 
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    NAME            reduce using rule 8 (ent -> NUM .)
+    NUM             reduce using rule 8 (ent -> NUM .)
+    VAR             reduce using rule 8 (ent -> NUM .)
+    INF             reduce using rule 8 (ent -> NUM .)
+    SUP             reduce using rule 8 (ent -> NUM .)
+    EQUAL           reduce using rule 8 (ent -> NUM .)
+    MINUS           reduce using rule 8 (ent -> NUM .)
+    STRING          reduce using rule 8 (ent -> NUM .)
+    $end            reduce using rule 8 (ent -> NUM .)
+    AND             reduce using rule 8 (ent -> NUM .)
+    OR              reduce using rule 8 (ent -> NUM .)
+    THEN            reduce using rule 8 (ent -> NUM .)
 
-    logalg2                        shift and go to state 28
-    fact3                          shift and go to state 29
-    el                             shift and go to state 30
 
 state 13
 
-    (3) exp -> DELETE fact2 .
+    (2) start -> CHECK check .
 
-    $end            reduce using rule 3 (exp -> DELETE fact2 .)
+    $end            reduce using rule 2 (start -> CHECK check .)
 
 
 state 14
 
-    (4) exp -> DELETE RULES . numlist
-    (5) numlist -> . NUM numlist
-    (6) numlist -> .
+    (11) check -> logalg .
+    (12) logalg -> logalg . log_op logalg
+    (19) log_op -> . AND
+    (20) log_op -> . OR
 
-    NUM             shift and go to state 32
-    $end            reduce using rule 6 (numlist -> .)
+    $end            reduce using rule 11 (check -> logalg .)
+    AND             shift and go to state 22
+    OR              shift and go to state 23
 
-    numlist                        shift and go to state 31
+    log_op                         shift and go to state 21
 
 state 15
 
-    (36) fact2 -> el . el el
-    (37) fact2 -> el . el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (13) logalg -> ent_var . ent_var ent_var_string
+    (14) logalg -> ent_var . check_op ent_string
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (21) check_op -> . INF
+    (22) check_op -> . SUP
+    (23) check_op -> . EQUAL
+    (24) check_op -> . INF EQUAL
+    (25) check_op -> . SUP EQUAL
+    (26) check_op -> . MINUS CONTAINS
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    VAR             shift and go to state 17
+    INF             shift and go to state 26
+    SUP             shift and go to state 27
+    EQUAL           shift and go to state 28
+    MINUS           shift and go to state 29
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
-    el                             shift and go to state 33
+    ent_var                        shift and go to state 24
+    check_op                       shift and go to state 25
+    ent                            shift and go to state 16
 
 state 16
 
-    (39) el -> ENT .
+    (17) ent_var -> ent .
 
-    ENT             reduce using rule 39 (el -> ENT .)
-    NOT             reduce using rule 39 (el -> ENT .)
-    VAR             reduce using rule 39 (el -> ENT .)
-    $end            reduce using rule 39 (el -> ENT .)
-    AND             reduce using rule 39 (el -> ENT .)
-    OR              reduce using rule 39 (el -> ENT .)
-    THEN            reduce using rule 39 (el -> ENT .)
+    VAR             reduce using rule 17 (ent_var -> ent .)
+    INF             reduce using rule 17 (ent_var -> ent .)
+    SUP             reduce using rule 17 (ent_var -> ent .)
+    EQUAL           reduce using rule 17 (ent_var -> ent .)
+    MINUS           reduce using rule 17 (ent_var -> ent .)
+    NAME            reduce using rule 17 (ent_var -> ent .)
+    NUM             reduce using rule 17 (ent_var -> ent .)
+    STRING          reduce using rule 17 (ent_var -> ent .)
+    THEN            reduce using rule 17 (ent_var -> ent .)
+    AND             reduce using rule 17 (ent_var -> ent .)
+    OR              reduce using rule 17 (ent_var -> ent .)
+    $end            reduce using rule 17 (ent_var -> ent .)
 
 
 state 17
 
-    (40) el -> NOT . ENT
+    (18) ent_var -> VAR .
 
-    ENT             shift and go to state 34
+    VAR             reduce using rule 18 (ent_var -> VAR .)
+    INF             reduce using rule 18 (ent_var -> VAR .)
+    SUP             reduce using rule 18 (ent_var -> VAR .)
+    EQUAL           reduce using rule 18 (ent_var -> VAR .)
+    MINUS           reduce using rule 18 (ent_var -> VAR .)
+    NAME            reduce using rule 18 (ent_var -> VAR .)
+    NUM             reduce using rule 18 (ent_var -> VAR .)
+    STRING          reduce using rule 18 (ent_var -> VAR .)
+    THEN            reduce using rule 18 (ent_var -> VAR .)
+    AND             reduce using rule 18 (ent_var -> VAR .)
+    OR              reduce using rule 18 (ent_var -> VAR .)
+    $end            reduce using rule 18 (ent_var -> VAR .)
 
 
 state 18
 
-    (41) el -> VAR .
+    (6) fact -> ent ent . ent_string
+    (9) ent_string -> . ent
+    (10) ent_string -> . STRING
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    ENT             reduce using rule 41 (el -> VAR .)
-    NOT             reduce using rule 41 (el -> VAR .)
-    VAR             reduce using rule 41 (el -> VAR .)
-    $end            reduce using rule 41 (el -> VAR .)
-    AND             reduce using rule 41 (el -> VAR .)
-    OR              reduce using rule 41 (el -> VAR .)
-    THEN            reduce using rule 41 (el -> VAR .)
+    STRING          shift and go to state 32
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    ent                            shift and go to state 30
+    ent_string                     shift and go to state 31
 
 state 19
 
-    (7) exp -> CHECK logalg .
+    (27) rule -> IF logalg_rule . THEN logalg_rule
+    (28) logalg_rule -> logalg_rule . log_op logalg_rule
+    (19) log_op -> . AND
+    (20) log_op -> . OR
 
-    $end            reduce using rule 7 (exp -> CHECK logalg .)
+    THEN            shift and go to state 33
+    AND             shift and go to state 22
+    OR              shift and go to state 23
 
+    log_op                         shift and go to state 34
 
 state 20
 
-    (9) exp -> CHECK RULES .
+    (29) logalg_rule -> ent_var . ent_var ent_var
+    (30) logalg_rule -> ent_var . check_op ent
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (21) check_op -> . INF
+    (22) check_op -> . SUP
+    (23) check_op -> . EQUAL
+    (24) check_op -> . INF EQUAL
+    (25) check_op -> . SUP EQUAL
+    (26) check_op -> . MINUS CONTAINS
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 9 (exp -> CHECK RULES .)
+    VAR             shift and go to state 17
+    INF             shift and go to state 26
+    SUP             shift and go to state 27
+    EQUAL           shift and go to state 28
+    MINUS           shift and go to state 29
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    ent_var                        shift and go to state 35
+    check_op                       shift and go to state 36
+    ent                            shift and go to state 16
 
 state 21
 
-    (10) exp -> CHECK LINKS .
+    (12) logalg -> logalg log_op . logalg
+    (12) logalg -> . logalg log_op logalg
+    (13) logalg -> . ent_var ent_var ent_var_string
+    (14) logalg -> . ent_var check_op ent_string
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 10 (exp -> CHECK LINKS .)
+    VAR             shift and go to state 17
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    logalg                         shift and go to state 37
+    ent_var                        shift and go to state 15
+    ent                            shift and go to state 16
 
 state 22
 
-    (11) exp -> CHECK NODES .
+    (19) log_op -> AND .
 
-    $end            reduce using rule 11 (exp -> CHECK NODES .)
+    VAR             reduce using rule 19 (log_op -> AND .)
+    NAME            reduce using rule 19 (log_op -> AND .)
+    NUM             reduce using rule 19 (log_op -> AND .)
 
 
 state 23
 
-    (24) logalg -> fact2 . more
-    (25) more -> . op fact2 more
-    (27) more -> .
-    (29) op -> . AND
-    (30) op -> . OR
+    (20) log_op -> OR .
 
-    $end            reduce using rule 27 (more -> .)
-    AND             shift and go to state 37
-    OR              shift and go to state 38
+    VAR             reduce using rule 20 (log_op -> OR .)
+    NAME            reduce using rule 20 (log_op -> OR .)
+    NUM             reduce using rule 20 (log_op -> OR .)
 
-    more                           shift and go to state 35
-    op                             shift and go to state 36
 
 state 24
 
-    (8) exp -> DISPLAY logalg .
+    (13) logalg -> ent_var ent_var . ent_var_string
+    (15) ent_var_string -> . ent_string
+    (16) ent_var_string -> . VAR
+    (9) ent_string -> . ent
+    (10) ent_string -> . STRING
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 8 (exp -> DISPLAY logalg .)
+    VAR             shift and go to state 40
+    STRING          shift and go to state 32
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    ent_var_string                 shift and go to state 38
+    ent_string                     shift and go to state 39
+    ent                            shift and go to state 30
 
 state 25
 
-    (14) fact -> ENT ENT . ENT
-    (17) fact -> ENT ENT . NOT ENT
-    (18) fact -> ENT ENT . term
-    (19) term -> . ENT
-    (20) term -> . STRING
-    (21) term -> . NUM
+    (14) logalg -> ent_var check_op . ent_string
+    (9) ent_string -> . ent
+    (10) ent_string -> . STRING
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    ENT             shift and go to state 39
-    NOT             shift and go to state 40
-    STRING          shift and go to state 42
-    NUM             shift and go to state 43
+    STRING          shift and go to state 32
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
-    term                           shift and go to state 41
+    ent_string                     shift and go to state 41
+    ent                            shift and go to state 30
 
 state 26
 
-    (16) fact -> ENT NOT . ENT ENT
+    (21) check_op -> INF .
+    (24) check_op -> INF . EQUAL
 
-    ENT             shift and go to state 44
+    STRING          reduce using rule 21 (check_op -> INF .)
+    NAME            reduce using rule 21 (check_op -> INF .)
+    NUM             reduce using rule 21 (check_op -> INF .)
+    EQUAL           shift and go to state 42
 
 
 state 27
 
-    (15) fact -> NOT ENT . ENT ENT
+    (22) check_op -> SUP .
+    (25) check_op -> SUP . EQUAL
 
-    ENT             shift and go to state 45
+    STRING          reduce using rule 22 (check_op -> SUP .)
+    NAME            reduce using rule 22 (check_op -> SUP .)
+    NUM             reduce using rule 22 (check_op -> SUP .)
+    EQUAL           shift and go to state 43
 
 
 state 28
 
-    (22) rule -> IF logalg2 . THEN conj2
+    (23) check_op -> EQUAL .
 
-    THEN            shift and go to state 46
+    STRING          reduce using rule 23 (check_op -> EQUAL .)
+    NAME            reduce using rule 23 (check_op -> EQUAL .)
+    NUM             reduce using rule 23 (check_op -> EQUAL .)
 
 
 state 29
 
-    (23) logalg2 -> fact3 . more2
-    (26) more2 -> . op2 fact3 more2
-    (28) more2 -> .
-    (31) op2 -> . AND
-    (32) op2 -> . OR
+    (26) check_op -> MINUS . CONTAINS
 
-    THEN            reduce using rule 28 (more2 -> .)
-    AND             shift and go to state 49
-    OR              shift and go to state 50
+    CONTAINS        shift and go to state 44
 
-    more2                          shift and go to state 47
-    op2                            shift and go to state 48
 
 state 30
 
-    (38) fact3 -> el . el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (9) ent_string -> ent .
 
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    $end            reduce using rule 9 (ent_string -> ent .)
+    AND             reduce using rule 9 (ent_string -> ent .)
+    OR              reduce using rule 9 (ent_string -> ent .)
 
-    el                             shift and go to state 51
 
 state 31
 
-    (4) exp -> DELETE RULES numlist .
+    (6) fact -> ent ent ent_string .
 
-    $end            reduce using rule 4 (exp -> DELETE RULES numlist .)
+    $end            reduce using rule 6 (fact -> ent ent ent_string .)
 
 
 state 32
 
-    (5) numlist -> NUM . numlist
-    (5) numlist -> . NUM numlist
-    (6) numlist -> .
+    (10) ent_string -> STRING .
 
-    NUM             shift and go to state 32
-    $end            reduce using rule 6 (numlist -> .)
+    $end            reduce using rule 10 (ent_string -> STRING .)
+    AND             reduce using rule 10 (ent_string -> STRING .)
+    OR              reduce using rule 10 (ent_string -> STRING .)
 
-    numlist                        shift and go to state 52
 
 state 33
 
-    (36) fact2 -> el el . el
-    (37) fact2 -> el el .
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (27) rule -> IF logalg_rule THEN . logalg_rule
+    (28) logalg_rule -> . logalg_rule log_op logalg_rule
+    (29) logalg_rule -> . ent_var ent_var ent_var
+    (30) logalg_rule -> . ent_var check_op ent
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 37 (fact2 -> el el .)
-    AND             reduce using rule 37 (fact2 -> el el .)
-    OR              reduce using rule 37 (fact2 -> el el .)
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    VAR             shift and go to state 17
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
-    el                             shift and go to state 53
+    logalg_rule                    shift and go to state 45
+    ent_var                        shift and go to state 20
+    ent                            shift and go to state 16
 
 state 34
 
-    (40) el -> NOT ENT .
+    (28) logalg_rule -> logalg_rule log_op . logalg_rule
+    (28) logalg_rule -> . logalg_rule log_op logalg_rule
+    (29) logalg_rule -> . ent_var ent_var ent_var
+    (30) logalg_rule -> . ent_var check_op ent
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    ENT             reduce using rule 40 (el -> NOT ENT .)
-    NOT             reduce using rule 40 (el -> NOT ENT .)
-    VAR             reduce using rule 40 (el -> NOT ENT .)
-    $end            reduce using rule 40 (el -> NOT ENT .)
-    AND             reduce using rule 40 (el -> NOT ENT .)
-    OR              reduce using rule 40 (el -> NOT ENT .)
-    THEN            reduce using rule 40 (el -> NOT ENT .)
+    VAR             shift and go to state 17
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    logalg_rule                    shift and go to state 46
+    ent_var                        shift and go to state 20
+    ent                            shift and go to state 16
 
 state 35
 
-    (24) logalg -> fact2 more .
+    (29) logalg_rule -> ent_var ent_var . ent_var
+    (17) ent_var -> . ent
+    (18) ent_var -> . VAR
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    $end            reduce using rule 24 (logalg -> fact2 more .)
+    VAR             shift and go to state 17
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
+    ent_var                        shift and go to state 47
+    ent                            shift and go to state 16
 
 state 36
 
-    (25) more -> op . fact2 more
-    (36) fact2 -> . el el el
-    (37) fact2 -> . el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (30) logalg_rule -> ent_var check_op . ent
+    (7) ent -> . NAME
+    (8) ent -> . NUM
 
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+    NAME            shift and go to state 11
+    NUM             shift and go to state 12
 
-    fact2                          shift and go to state 54
-    el                             shift and go to state 15
+    ent                            shift and go to state 48
 
 state 37
 
-    (29) op -> AND .
+    (12) logalg -> logalg log_op logalg .
+    (12) logalg -> logalg . log_op logalg
+    (19) log_op -> . AND
+    (20) log_op -> . OR
 
-    ENT             reduce using rule 29 (op -> AND .)
-    NOT             reduce using rule 29 (op -> AND .)
-    VAR             reduce using rule 29 (op -> AND .)
+  ! shift/reduce conflict for AND resolved as shift
+  ! shift/reduce conflict for OR resolved as shift
+    $end            reduce using rule 12 (logalg -> logalg log_op logalg .)
+    AND             shift and go to state 22
+    OR              shift and go to state 23
 
+  ! AND             [ reduce using rule 12 (logalg -> logalg log_op logalg .) ]
+  ! OR              [ reduce using rule 12 (logalg -> logalg log_op logalg .) ]
+
+    log_op                         shift and go to state 21
 
 state 38
 
-    (30) op -> OR .
+    (13) logalg -> ent_var ent_var ent_var_string .
 
-    ENT             reduce using rule 30 (op -> OR .)
-    NOT             reduce using rule 30 (op -> OR .)
-    VAR             reduce using rule 30 (op -> OR .)
+    AND             reduce using rule 13 (logalg -> ent_var ent_var ent_var_string .)
+    OR              reduce using rule 13 (logalg -> ent_var ent_var ent_var_string .)
+    $end            reduce using rule 13 (logalg -> ent_var ent_var ent_var_string .)
 
 
 state 39
 
-    (14) fact -> ENT ENT ENT .
-    (19) term -> ENT .
+    (15) ent_var_string -> ent_string .
 
-  ! reduce/reduce conflict for $end resolved using rule 14 (fact -> ENT ENT ENT .)
-    $end            reduce using rule 14 (fact -> ENT ENT ENT .)
-
-  ! $end            [ reduce using rule 19 (term -> ENT .) ]
+    AND             reduce using rule 15 (ent_var_string -> ent_string .)
+    OR              reduce using rule 15 (ent_var_string -> ent_string .)
+    $end            reduce using rule 15 (ent_var_string -> ent_string .)
 
 
 state 40
 
-    (17) fact -> ENT ENT NOT . ENT
+    (16) ent_var_string -> VAR .
 
-    ENT             shift and go to state 55
+    AND             reduce using rule 16 (ent_var_string -> VAR .)
+    OR              reduce using rule 16 (ent_var_string -> VAR .)
+    $end            reduce using rule 16 (ent_var_string -> VAR .)
 
 
 state 41
 
-    (18) fact -> ENT ENT term .
+    (14) logalg -> ent_var check_op ent_string .
 
-    $end            reduce using rule 18 (fact -> ENT ENT term .)
+    AND             reduce using rule 14 (logalg -> ent_var check_op ent_string .)
+    OR              reduce using rule 14 (logalg -> ent_var check_op ent_string .)
+    $end            reduce using rule 14 (logalg -> ent_var check_op ent_string .)
 
 
 state 42
 
-    (20) term -> STRING .
+    (24) check_op -> INF EQUAL .
 
-    $end            reduce using rule 20 (term -> STRING .)
+    STRING          reduce using rule 24 (check_op -> INF EQUAL .)
+    NAME            reduce using rule 24 (check_op -> INF EQUAL .)
+    NUM             reduce using rule 24 (check_op -> INF EQUAL .)
 
 
 state 43
 
-    (21) term -> NUM .
+    (25) check_op -> SUP EQUAL .
 
-    $end            reduce using rule 21 (term -> NUM .)
+    STRING          reduce using rule 25 (check_op -> SUP EQUAL .)
+    NAME            reduce using rule 25 (check_op -> SUP EQUAL .)
+    NUM             reduce using rule 25 (check_op -> SUP EQUAL .)
 
 
 state 44
 
-    (16) fact -> ENT NOT ENT . ENT
+    (26) check_op -> MINUS CONTAINS .
 
-    ENT             shift and go to state 56
+    STRING          reduce using rule 26 (check_op -> MINUS CONTAINS .)
+    NAME            reduce using rule 26 (check_op -> MINUS CONTAINS .)
+    NUM             reduce using rule 26 (check_op -> MINUS CONTAINS .)
 
 
 state 45
 
-    (15) fact -> NOT ENT ENT . ENT
+    (27) rule -> IF logalg_rule THEN logalg_rule .
+    (28) logalg_rule -> logalg_rule . log_op logalg_rule
+    (19) log_op -> . AND
+    (20) log_op -> . OR
 
-    ENT             shift and go to state 57
+    $end            reduce using rule 27 (rule -> IF logalg_rule THEN logalg_rule .)
+    AND             shift and go to state 22
+    OR              shift and go to state 23
 
+    log_op                         shift and go to state 34
 
 state 46
 
-    (22) rule -> IF logalg2 THEN . conj2
-    (33) conj2 -> . fact3 moreconj2
-    (38) fact3 -> . el el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
+    (28) logalg_rule -> logalg_rule log_op logalg_rule .
+    (28) logalg_rule -> logalg_rule . log_op logalg_rule
+    (19) log_op -> . AND
+    (20) log_op -> . OR
 
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
+  ! shift/reduce conflict for AND resolved as shift
+  ! shift/reduce conflict for OR resolved as shift
+    THEN            reduce using rule 28 (logalg_rule -> logalg_rule log_op logalg_rule .)
+    $end            reduce using rule 28 (logalg_rule -> logalg_rule log_op logalg_rule .)
+    AND             shift and go to state 22
+    OR              shift and go to state 23
 
-    conj2                          shift and go to state 58
-    fact3                          shift and go to state 59
-    el                             shift and go to state 30
+  ! AND             [ reduce using rule 28 (logalg_rule -> logalg_rule log_op logalg_rule .) ]
+  ! OR              [ reduce using rule 28 (logalg_rule -> logalg_rule log_op logalg_rule .) ]
+
+    log_op                         shift and go to state 34
 
 state 47
 
-    (23) logalg2 -> fact3 more2 .
+    (29) logalg_rule -> ent_var ent_var ent_var .
 
-    THEN            reduce using rule 23 (logalg2 -> fact3 more2 .)
+    THEN            reduce using rule 29 (logalg_rule -> ent_var ent_var ent_var .)
+    AND             reduce using rule 29 (logalg_rule -> ent_var ent_var ent_var .)
+    OR              reduce using rule 29 (logalg_rule -> ent_var ent_var ent_var .)
+    $end            reduce using rule 29 (logalg_rule -> ent_var ent_var ent_var .)
 
 
 state 48
 
-    (26) more2 -> op2 . fact3 more2
-    (38) fact3 -> . el el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
-
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
-
-    fact3                          shift and go to state 60
-    el                             shift and go to state 30
-
-state 49
-
-    (31) op2 -> AND .
-
-    ENT             reduce using rule 31 (op2 -> AND .)
-    NOT             reduce using rule 31 (op2 -> AND .)
-    VAR             reduce using rule 31 (op2 -> AND .)
-
-
-state 50
-
-    (32) op2 -> OR .
-
-    ENT             reduce using rule 32 (op2 -> OR .)
-    NOT             reduce using rule 32 (op2 -> OR .)
-    VAR             reduce using rule 32 (op2 -> OR .)
-
-
-state 51
-
-    (38) fact3 -> el el . el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
-
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
-
-    el                             shift and go to state 61
-
-state 52
-
-    (5) numlist -> NUM numlist .
-
-    $end            reduce using rule 5 (numlist -> NUM numlist .)
-
-
-state 53
-
-    (36) fact2 -> el el el .
-
-    $end            reduce using rule 36 (fact2 -> el el el .)
-    AND             reduce using rule 36 (fact2 -> el el el .)
-    OR              reduce using rule 36 (fact2 -> el el el .)
-
-
-state 54
-
-    (25) more -> op fact2 . more
-    (25) more -> . op fact2 more
-    (27) more -> .
-    (29) op -> . AND
-    (30) op -> . OR
-
-    $end            reduce using rule 27 (more -> .)
-    AND             shift and go to state 37
-    OR              shift and go to state 38
-
-    op                             shift and go to state 36
-    more                           shift and go to state 62
-
-state 55
-
-    (17) fact -> ENT ENT NOT ENT .
-
-    $end            reduce using rule 17 (fact -> ENT ENT NOT ENT .)
-
-
-state 56
-
-    (16) fact -> ENT NOT ENT ENT .
-
-    $end            reduce using rule 16 (fact -> ENT NOT ENT ENT .)
-
-
-state 57
-
-    (15) fact -> NOT ENT ENT ENT .
-
-    $end            reduce using rule 15 (fact -> NOT ENT ENT ENT .)
-
-
-state 58
-
-    (22) rule -> IF logalg2 THEN conj2 .
-
-    $end            reduce using rule 22 (rule -> IF logalg2 THEN conj2 .)
-
-
-state 59
-
-    (33) conj2 -> fact3 . moreconj2
-    (34) moreconj2 -> . AND fact3 moreconj2
-    (35) moreconj2 -> .
-
-    AND             shift and go to state 64
-    $end            reduce using rule 35 (moreconj2 -> .)
-
-    moreconj2                      shift and go to state 63
-
-state 60
-
-    (26) more2 -> op2 fact3 . more2
-    (26) more2 -> . op2 fact3 more2
-    (28) more2 -> .
-    (31) op2 -> . AND
-    (32) op2 -> . OR
-
-    THEN            reduce using rule 28 (more2 -> .)
-    AND             shift and go to state 49
-    OR              shift and go to state 50
-
-    op2                            shift and go to state 48
-    more2                          shift and go to state 65
-
-state 61
-
-    (38) fact3 -> el el el .
-
-    AND             reduce using rule 38 (fact3 -> el el el .)
-    OR              reduce using rule 38 (fact3 -> el el el .)
-    THEN            reduce using rule 38 (fact3 -> el el el .)
-    $end            reduce using rule 38 (fact3 -> el el el .)
-
-
-state 62
-
-    (25) more -> op fact2 more .
-
-    $end            reduce using rule 25 (more -> op fact2 more .)
-
-
-state 63
-
-    (33) conj2 -> fact3 moreconj2 .
-
-    $end            reduce using rule 33 (conj2 -> fact3 moreconj2 .)
-
-
-state 64
-
-    (34) moreconj2 -> AND . fact3 moreconj2
-    (38) fact3 -> . el el el
-    (39) el -> . ENT
-    (40) el -> . NOT ENT
-    (41) el -> . VAR
-
-    ENT             shift and go to state 16
-    NOT             shift and go to state 17
-    VAR             shift and go to state 18
-
-    fact3                          shift and go to state 66
-    el                             shift and go to state 30
-
-state 65
-
-    (26) more2 -> op2 fact3 more2 .
-
-    THEN            reduce using rule 26 (more2 -> op2 fact3 more2 .)
-
-
-state 66
-
-    (34) moreconj2 -> AND fact3 . moreconj2
-    (34) moreconj2 -> . AND fact3 moreconj2
-    (35) moreconj2 -> .
-
-    AND             shift and go to state 64
-    $end            reduce using rule 35 (moreconj2 -> .)
-
-    moreconj2                      shift and go to state 67
-
-state 67
-
-    (34) moreconj2 -> AND fact3 moreconj2 .
-
-    $end            reduce using rule 34 (moreconj2 -> AND fact3 moreconj2 .)
+    (30) logalg_rule -> ent_var check_op ent .
+
+    THEN            reduce using rule 30 (logalg_rule -> ent_var check_op ent .)
+    AND             reduce using rule 30 (logalg_rule -> ent_var check_op ent .)
+    OR              reduce using rule 30 (logalg_rule -> ent_var check_op ent .)
+    $end            reduce using rule 30 (logalg_rule -> ent_var check_op ent .)
 
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-WARNING: reduce/reduce conflict in state 39 resolved using rule (fact -> ENT ENT ENT)
-WARNING: rejected rule (term -> ENT) in state 39
-WARNING: Rule (term -> ENT) is never reduced
+WARNING: shift/reduce conflict for AND in state 37 resolved as shift
+WARNING: shift/reduce conflict for OR in state 37 resolved as shift
+WARNING: shift/reduce conflict for AND in state 46 resolved as shift
+WARNING: shift/reduce conflict for OR in state 46 resolved as shift

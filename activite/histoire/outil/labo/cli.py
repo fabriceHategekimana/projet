@@ -28,6 +28,46 @@ class MyPrompt(Cmd):
         self.logo= inp+"|"
         self.prompt = self.logo+'%s> ' % self.mode
 
+    def do_check(self, inp):
+        if self.mode == "normal":
+            res= self.parserFormat("check "+inp)
+            if res.find("&") != 0: #s'il n'y a pas d'erreur
+                sql= union(res)
+                print(d.sqlQuery("select * from "+sql))
+            else:
+                print(res[1:])
+        elif self.mode == "union":
+            res= self.parserFormat("check "+inp)
+            if res.find("&") != 0: #s'il n'y a pas d'erreur
+                print(union(res))
+            else:
+                print(res[1:])
+        elif self.mode == "grammaire":
+            res = self.parserFormat("check "+inp, verbose=True)
+            print(res)
+
+    def do_add(self, inp):
+        if self.mode == "normal":
+            res= self.parserFormat("add "+inp)
+            if res.find("&") != 0:
+                if res.find("&&rule&&") > -1: # if it's a rule
+                    tab= res.split("&&rule&&")
+                    d.sqlModify("insert into rules (premises, conclusion) values (\"%s\", \"%s\")" % tuple(tab))
+                    retroPropagation(tab)
+                else:
+                    tab= res.split("&&")
+                    d.sqlModify("insert into facts (subject, link, goal) values (\"%s\", \"%s\", \"%s\")" % tuple(tab))
+                    propagation(" ".join(tab))
+            else:
+                print(res[1:])
+        elif self.mode == "grammaire":
+            res =self.parserFormat("add "+inp, verbose=True)
+            print(res)
+
+    def do_rules(self, inp):
+        res= d.sqlQuery("select * from rules;")
+        print(res)
+
     def do_apply(self, inp):
         tab= inp.split(" ")
         if len(tab) >= 2:
@@ -145,6 +185,21 @@ class MyPrompt(Cmd):
                 final.append(t2)
         return final
 
+    def do_delete(self, inp):
+        if self.mode == "normal":
+            res= self.parserFormat("check "+inp)
+            if res.find("&") != 0: #s'il n'y a pas d'erreur
+                sql= union(res)
+                print("delete "+sql[sql.find("from"):-1]+";")
+                d.sqlModify("delete "+sql[sql.find("from"):-1]+";")
+            else:
+                print(res[1:])
+
+    def do_dr(self, inp):
+        tab= inp.split(" ")
+        print("delete from rules where id in ("+",".join(tab)+")")
+        d.sqlQuery("delete from rules where id in ("+",".join(tab)+")")
+
     def sql(self,inp):
         try:
             print(d.sqlQuery(inp))
@@ -153,19 +208,16 @@ class MyPrompt(Cmd):
 
     def union(self, inp):
         print(union(inp))
-        #try:
-            #print(union(inp))
-        #except:
-            #print("Error this is not a predicat")
 
     def normal(self,inp):
-            tab= inp.split(" ")
-            m = self.p.match(tab[0]) #si c'est un nombre
-            if m:
-                i= int(m.group())
-                self.repeate(i, tab[1:])
-            else:
-                parser.parse(inp)
+        print("normal")
+
+    def parserFormat(self, command, verbose=False):
+        parser.parse(command, debug=verbose)
+        f= open("res.txt", "r")
+        res= f.readlines()[0]
+        f.close()
+        return res
 
     def completedefault(self, text, line, begidx, endidx):
         sql= "select distinct subject from facts where subject like '"+text+"%' union select distinct link from facts where link like '"+text+"%' union select distinct goal from facts where goal like '"+text+"%'"

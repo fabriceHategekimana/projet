@@ -2,12 +2,19 @@ from module_db import *
 d= Data()
 ENTETE=[]
 
+def isFilter(tab):
+    res= False
+    if tab[1] in ["<",">","<=",">=","=","-contains"]:
+        res= True
+    return res
+
 def isComplet(tab):
     res= True
     for t in tab:
         if t.count('A') + t.count('B') + t.count('C') > 0:
            res= False 
     return res
+
 
 def getVariables(exp):
     final= []
@@ -45,23 +52,37 @@ def createUnionQuery(command):
     if len(variables) == 2:
         tvariable= "%s,%s" % variables
         tvalue= "%s %s='%s'" % values
+        sql= "(select "+tvariable+" from facts where "+tvalue+")"
     elif len(variables) == 1:
         tvariable= "%s" % variables
         tvalue= "%s %s='%s' and %s %s='%s'" % values
-    sql= "(select "+tvariable+" from facts where "+tvalue+")"
+        sql= "(select "+tvariable+" from facts where "+tvalue+")"
+    else:
+        sql= "(select subject as A, link as B, goal as C from facts)"
     return sql
 
+def getGoalNumber(): # get the number in the goal column
+    return "(select goal as num from facts where goal like '1%' or goal like '2%' or goal like '3%' or goal like '4%' or goal like '5%' or goal like '6%' or goal like '7%' or goal like '8%' or goal like '9%')"
+
 def convert(exp):
-    exp= exp.split(" ")
-    res= []
-    if isComplet(exp):
+    if exp.find("&&") > -1:
+        exp= exp.split("&&")
+    else:
+        exp= exp.split(" ")
+    sql= "(select count(goal) from facts)"
+    if isFilter(exp):
+        if exp[1] == "-contains": # format for "fuzzy" string matching
+            exp[1] = "like"
+            sql= "(select goal as "+exp[0]+" from facts where goal like '%"+exp[2]+"%')"
+        else:
+            sql= "(select num as "+exp[0]+" from "+getGoalNumber()+" where num "+exp[1]+" "+exp[2]+")"
+    elif isComplet(exp):
         exp= completeNot(exp)
         t= tuple(exp)
         sql= "(select * from facts where %s subject='%s' and %s link='%s' and %s goal='%s'" % t+")"
-        return sql
     else:
         sql= createUnionQuery(exp)
-        return sql
+    return sql
 
 def hasNot(exp):
     return "not" in exp
@@ -94,10 +115,10 @@ def setAND(exp, varList):
 
 def union(exp):
     final= []
-    tabOR= exp.split(" OR ")
+    tabOR= exp.split(" &or& ")
     for t in tabOR:
         varList= []
-        tabAND= t.split(" AND ")
+        tabAND= t.split(" &and& ")
         subexp= ""
         for i in range(len(tabAND)): # on converti chaque conjonction
             var= getVariables(tabAND[i])

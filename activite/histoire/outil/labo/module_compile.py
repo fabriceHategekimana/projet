@@ -9,10 +9,16 @@ typeTable= {}
 VALUES= []
 d= Data()
 
-def write(tab, fname):
+def writeCSV(tab, fname="res.txt"):
     with open(fname, 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerows(tab)
+
+def write(exp, fname="res.txt"):
+    f= open(fname, "w")
+    f.write(exp)
+    f.close()
+
 
 # _                       
 #| |    _____  _____ _ __ 
@@ -22,25 +28,33 @@ def write(tab, fname):
 
 reserved = { 
         "add" : "ADD",
-        "delete" : "DELETE",
         "check" : "CHECK",
-        "display" : "DISPLAY",
         "and" : "AND",
         "or" : "OR",
         "if" : "IF",
         "then" : "THEN",
-        "rules" : "RULES",
         "not" : "NOT",
-        "links" : "LINKS",
-        "nodes" : "NODES"
+        "contains" : "CONTAINS",
+        "macro" : "MACRO"
         }
                          
 tokens = [
     'NUM',
     'VAR',
-    'ENT',
-    'STRING'
+    'NAME',
+    'STRING',
+    'SUP',
+    'INF',
+    'EQUAL',
+    'MINUS',
+    'PLUS'
         ]+list(reserved.values())
+
+t_INF= r'\<'
+t_SUP= r'\>'
+t_EQUAL= r'\='
+t_MINUS= r'\-'
+t_PLUS= r'\+'
 
 t_ignore = r' '
 
@@ -49,9 +63,9 @@ def t_NUM(t):
     t.value = str(t.value)
     return t
 
-def t_ENT(t):
+def t_NAME(t):
     r'[a-zA-Z][a-zA-Z0-9_][a-zA-Z0-9_]*'
-    t.type = reserved.get(t.value,'ENT')
+    t.type = reserved.get(t.value,'NAME')
     return t
 
 def t_VAR(t):
@@ -66,7 +80,7 @@ def t_STRING(t):
     return t
 
 def t_error(t):
-    print("Illegal characters! ", t)
+    write("&Error: Illegal characters! ", t)
     t.lexer.skip(1)
 
 lexer= lex.lex()
@@ -75,224 +89,118 @@ lexer= lex.lex()
 
 #Parser
 
-def p_calc(p):
+def p_start(p):
     '''
-    calc : exp
+    start : ADD add
+          | CHECK check
     '''
-    write(p[1], "res.txt")
-    for el in p[1]:
-        print(el)
     print("+--------------+")
 
-def p_exp_exp1_ADD(p):
+def p_add(p):
     '''
-    exp : ADD modify
+    add : fact
+        | rule
+        | macro
     '''
-    p[0] = ["value added"]
+    write(p[1])
 
-def p_exp_exp1_DELETE(p):
+def p_fact(p):
     '''
-    exp : DELETE fact2
+    fact : ent ent ent_string
     '''
-    exp= union(" ".join(p[2]))
-    sql= "delete from facts "+exp[exp.index("where"):-1]
-    d.sqlModify(sql)
-    p[0] = ["value deleted"]
+    p[0] = "&&".join(p[1:])
 
-def p_exp_delete_rules(p):
+def p_ent(p):
     '''
-    exp : DELETE RULES numlist 
-    '''
-    exp= p[3][:-1] # on retire la virgule en trop à droite
-    sql= "delete from rules where id in ("+exp+");"
-    d.sqlModify(sql)
-    p[0] = ["values deleted"]
-
-def p_exp_numlist(p):
-    '''
-    numlist : NUM numlist
-    '''
-    p[0]= p[1]+","+p[2]
-
-def p_exp_numlist_void(p):
-    '''
-    numlist : 
-    '''
-    p[0]= ""
-
-def p_exp_exp2(p):
-    '''
-    exp : CHECK logalg
-        | DISPLAY logalg
-    '''
-    exp= p[2] #enlever l'espace en trop sur la droite
-    sql= "select * from "+union(exp)+";"
-    p[0] = d.sqlQuery(sql)
-    #p[0] = []
-
-def p_exp_check_rule(p):
-    '''
-    exp : CHECK RULES
-    '''
-    exp= "select * from rules;"
-    p[0] = d.sqlQuery(exp)
-
-def p_exp_check_links(p):
-    '''
-    exp : CHECK LINKS
-    '''
-    exp= "select distinct link from facts;"
-    p[0] = d.sqlQuery(exp)
-
-def p_exp_check_nodes(p):
-    '''
-    exp : CHECK NODES
-    '''
-    exp= "select distinct subject from facts union select distinct goal from facts;"
-    p[0] = d.sqlQuery(exp)
-
-def p_exp_modify_fact(p):
-    '''
-    modify : fact
-    '''
-    d.sqlModify("insert or ignore into facts (subject,link,goal) values (\"%s\",\"%s\",\"%s\")" % tuple(p[1]))
-    if p[1][2].find(" ") == -1: # si le membre de droite n'est pas un STRING
-        propagation(" ".join(p[1]))
-    p[0] = p[1]
-
-def p_exp_modify_rule(p):
-    '''
-    modify : rule
-    '''
-    if p[1][0][-1]  == ' ':
-        premises= p[1][0][:-1] # enlever le dernier espace à droite
-    else:
-        premises= p[1][0]
-    conclusion= p[1][1]
-    d.sqlModify("insert or ignore into rules (premises,conclusion) values (\"%s\",\"%s\")" % tuple([premises,conclusion]))
-    retroPropagation([premises,conclusion]) 
-    ENTETE= []
-    p[0] = p[1]
-
-def p_exp_fact(p):
-    '''
-    fact : ENT ENT ENT
-         | NOT ENT ENT ENT
-         | ENT NOT ENT ENT
-         | ENT ENT NOT ENT
-         | ENT ENT term
-    '''
-    p[0] = p[1:]
-
-def p_val(p):
-    '''
-    term : ENT
-         | STRING
-         | NUM
+    ent : NAME
+        | NUM
     '''
     p[0] = p[1]
 
-def p_exp_rule(p):
+def p_ent_string(p):
     '''
-    rule : IF logalg2 THEN conj2
+    ent_string : ent
+               | STRING
     '''
-    p[0] = [p[2],p[4]]
+    p[0] = p[1]
 
-def p_exp_logalg2(p):
+def p_check(p):
     '''
-    logalg2 : fact3 more2
+    check : logalg
     '''
-    p[0] = p[1]+" "+p[2]
+    write(p[1])
 
-def p_exp_logalg(p):
+def p_logalg1(p):
     '''
-    logalg : fact2 more
+    logalg : logalg log_op logalg
     '''
-    p[0] = " ".join(p[1])+p[2]
+    p[0] = p[1]+" &"+p[2]+"& "+p[3]
 
-def p_exp_more(p):
+def p_logalg2(p):
     '''
-    more : op fact2 more
+    logalg : ent_var ent_var ent_var_string
+           | ent_var check_op ent_string
     '''
-    p[0] = " "+p[1]+" "+" ".join(p[2])+p[3]
+    p[0] = "&&".join(p[1:])
 
-def p_exp_more2(p):
+def p_ent_var_string(p):
     '''
-    more2 : op2 fact3 more2
+    ent_var_string : ent_string
+                   | VAR
     '''
-    p[0] = p[1]+" "+p[2]
+    p[0] = p[1]
 
-def p_exp_more_empty(p):
+def p_ent_var(p):
     '''
-    more : 
+    ent_var : ent
+            | VAR
     '''
-    p[0] = ""
+    p[0] = p[1]
 
-def p_exp_more2_empty(p):
+def p_log_op(p):
     '''
-    more2 : 
+    log_op : AND
+           | OR
     '''
-    p[0] = ""
+    p[0] = p[1]
 
-def p_exp_op(p):
+def p_check_op(p):
     '''
-    op : AND
-       | OR
+    check_op : INF
+             | SUP
+             | EQUAL
+             | INF EQUAL
+             | SUP EQUAL
+             | MINUS CONTAINS
     '''
-    p[0] = p[1].upper()
+    p[0] = "".join(p[1:])
 
-def p_exp_op2(p):
+def p_rule(p):
     '''
-    op2 : AND
-        | OR
+    rule : IF logalg_rule THEN logalg_rule
     '''
-    p[0] = p[1].upper() #mark
+    p[0] = p[2].replace("&&", " ")+"&&rule&&"+p[4].replace("&&", " ")
 
-def p_exp_conj2(p):
+def p_logalg_rule1(p):
     '''
-    conj2 : fact3 moreconj2
+    logalg_rule : logalg_rule log_op logalg_rule
     '''
-    p[0] = p[1]+p[2]
+    p[0] = p[1]+" &"+p[2]+"& "+p[3]
 
-def p_exp_AND2(p):
+def p_logalg_rule2(p):
     '''
-    moreconj2 : AND fact3 moreconj2
+    logalg_rule : ent_var ent_var ent_var
+                | ent_var check_op ent
     '''
-    p[0] = p[1]+p[2]+p[3]
+    p[0] = "&&".join(p[1:])
 
-def p_exp_moreconj2(p):
+def p_macro(p):
     '''
-    moreconj2 : 
+    macro : MACRO
     '''
-    p[0] = "" 
-
-def p_exp_predicat(p):
-    '''
-    fact2 : el el el
-    '''
-    p[0] = p[1:]
-
-def p_exp_predicat2(p):
-    '''
-    fact2 : el el
-    '''
-    p[0] = p[1:]+["A"]
-
-def p_exp_fact3(p):
-    '''
-    fact3 : el el el
-    '''
-    p[0] = " ".join(p[1:])
-
-def p_exp_term(p):
-    '''
-    el : ENT
-       | NOT ENT
-       | VAR
-    '''
-    p[0] = " ".join(p[1:])
+    p[0] = p[1]
 
 def p_error(p):
-    print("Error bad syntax")
+    write("&Error bad syntax")
 
 parser= yacc.yacc()

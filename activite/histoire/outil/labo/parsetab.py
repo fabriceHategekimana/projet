@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'ADD AND CHECK DELETE DISPLAY ENT IF LINKS NODES NOT NUM OR RULES STRING THEN VAR\n    calc : exp\n    \n    exp : ADD modify\n    \n    exp : DELETE fact2\n    \n    exp : DELETE RULES numlist \n    \n    numlist : NUM numlist\n    \n    numlist : \n    \n    exp : CHECK logalg\n        | DISPLAY logalg\n    \n    exp : CHECK RULES\n    \n    exp : CHECK LINKS\n    \n    exp : CHECK NODES\n    \n    modify : fact\n    \n    modify : rule\n    \n    fact : ENT ENT ENT\n         | NOT ENT ENT ENT\n         | ENT NOT ENT ENT\n         | ENT ENT NOT ENT\n         | ENT ENT term\n    \n    term : ENT\n         | STRING\n         | NUM\n    \n    rule : IF logalg2 THEN conj2\n    \n    logalg2 : fact3 more2\n    \n    logalg : fact2 more\n    \n    more : op fact2 more\n    \n    more2 : op2 fact3 more2\n    \n    more : \n    \n    more2 : \n    \n    op : AND\n       | OR\n    \n    op2 : AND\n        | OR\n    \n    conj2 : fact3 moreconj2\n    \n    moreconj2 : AND fact3 moreconj2\n    \n    moreconj2 : \n    \n    fact2 : el el el\n    \n    fact2 : el el\n    \n    fact3 : el el el\n    \n    el : ENT\n       | NOT ENT\n       | VAR\n    '
+_lr_signature = 'ADD AND CHECK CONTAINS EQUAL IF INF MACRO MINUS NAME NOT NUM OR PLUS STRING SUP THEN VAR\n    start : ADD add\n          | CHECK check\n    \n    add : fact\n        | rule\n        | macro\n    \n    fact : ent ent ent_string\n    \n    ent : NAME\n        | NUM\n    \n    ent_string : ent\n               | STRING\n    \n    check : logalg\n    \n    logalg : logalg log_op logalg\n    \n    logalg : ent_var ent_var ent_var_string\n           | ent_var check_op ent_string\n    \n    ent_var_string : ent_string\n                   | VAR\n    \n    ent_var : ent\n            | VAR\n    \n    log_op : AND\n           | OR\n    \n    check_op : INF\n             | SUP\n             | EQUAL\n             | INF EQUAL\n             | SUP EQUAL\n             | MINUS CONTAINS\n    \n    rule : IF logalg_rule THEN logalg_rule\n    \n    logalg_rule : logalg_rule log_op logalg_rule\n    \n    logalg_rule : ent_var ent_var ent_var\n                | ent_var check_op ent\n    \n    macro : MACRO\n    '
     
-_lr_action_items = {'ADD':([0,],[3,]),'DELETE':([0,],[4,]),'CHECK':([0,],[5,]),'DISPLAY':([0,],[6,]),'$end':([1,2,7,8,9,13,14,16,18,19,20,21,22,23,24,31,32,33,34,35,39,41,42,43,52,53,54,55,56,57,58,59,61,62,63,66,67,],[0,-1,-2,-12,-13,-3,-6,-39,-41,-7,-9,-10,-11,-27,-8,-4,-6,-37,-40,-24,-14,-18,-20,-21,-5,-36,-27,-17,-16,-15,-22,-35,-38,-25,-33,-35,-34,]),'ENT':([3,4,5,6,10,11,12,15,16,17,18,25,26,27,30,33,34,36,37,38,40,44,45,46,48,49,50,51,64,],[10,16,16,16,25,27,16,16,-39,34,-41,39,44,45,16,16,-40,16,-29,-30,55,56,57,16,16,-31,-32,16,16,]),'NOT':([3,4,5,6,10,12,15,16,18,25,30,33,34,36,37,38,46,48,49,50,51,64,],[11,17,17,17,26,17,17,-39,-41,40,17,17,-40,17,-29,-30,17,17,-31,-32,17,17,]),'IF':([3,],[12,]),'RULES':([4,5,],[14,20,]),'VAR':([4,5,6,12,15,16,18,30,33,34,36,37,38,46,48,49,50,51,64,],[18,18,18,18,18,-39,-41,18,18,-40,18,-29,-30,18,18,-31,-32,18,18,]),'LINKS':([5,],[21,]),'NODES':([5,],[22,]),'NUM':([14,25,32,],[32,43,32,]),'AND':([16,18,23,29,33,34,53,54,59,60,61,66,],[-39,-41,37,49,-37,-40,-36,37,64,49,-38,64,]),'OR':([16,18,23,29,33,34,53,54,60,61,],[-39,-41,38,50,-37,-40,-36,38,50,-38,]),'THEN':([16,18,28,29,34,47,60,61,65,],[-39,-41,46,-28,-40,-23,-28,-38,-26,]),'STRING':([25,],[42,]),}
+_lr_action_items = {'ADD':([0,],[2,]),'CHECK':([0,],[3,]),'$end':([1,4,5,6,7,10,11,12,13,14,16,17,30,31,32,37,38,39,40,41,45,46,47,48,],[0,-1,-3,-4,-5,-31,-7,-8,-2,-11,-17,-18,-9,-6,-10,-12,-13,-15,-16,-14,-27,-28,-29,-30,]),'IF':([2,],[9,]),'MACRO':([2,],[10,]),'NAME':([2,3,8,9,11,12,15,16,17,18,20,21,22,23,24,25,26,27,28,33,34,35,36,42,43,44,],[11,11,11,11,-7,-8,11,-17,-18,11,11,11,-19,-20,11,11,-21,-22,-23,11,11,11,11,-24,-25,-26,]),'NUM':([2,3,8,9,11,12,15,16,17,18,20,21,22,23,24,25,26,27,28,33,34,35,36,42,43,44,],[12,12,12,12,-7,-8,12,-17,-18,12,12,12,-19,-20,12,12,-21,-22,-23,12,12,12,12,-24,-25,-26,]),'VAR':([3,9,11,12,15,16,17,20,21,22,23,24,33,34,35,],[17,17,-7,-8,17,-17,-18,17,17,-19,-20,40,17,17,17,]),'INF':([11,12,15,16,17,20,],[-7,-8,26,-17,-18,26,]),'SUP':([11,12,15,16,17,20,],[-7,-8,27,-17,-18,27,]),'EQUAL':([11,12,15,16,17,20,26,27,],[-7,-8,28,-17,-18,28,42,43,]),'MINUS':([11,12,15,16,17,20,],[-7,-8,29,-17,-18,29,]),'STRING':([11,12,16,17,18,24,25,26,27,28,42,43,44,],[-7,-8,-17,-18,32,32,32,-21,-22,-23,-24,-25,-26,]),'AND':([11,12,14,16,17,19,30,32,37,38,39,40,41,45,46,47,48,],[-7,-8,22,-17,-18,22,-9,-10,22,-13,-15,-16,-14,22,22,-29,-30,]),'OR':([11,12,14,16,17,19,30,32,37,38,39,40,41,45,46,47,48,],[-7,-8,23,-17,-18,23,-9,-10,23,-13,-15,-16,-14,23,23,-29,-30,]),'THEN':([11,12,16,17,19,46,47,48,],[-7,-8,-17,-18,33,-28,-29,-30,]),'CONTAINS':([29,],[44,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'calc':([0,],[1,]),'exp':([0,],[2,]),'modify':([3,],[7,]),'fact':([3,],[8,]),'rule':([3,],[9,]),'fact2':([4,5,6,36,],[13,23,23,54,]),'el':([4,5,6,12,15,30,33,36,46,48,51,64,],[15,15,15,30,33,51,53,15,30,30,61,30,]),'logalg':([5,6,],[19,24,]),'logalg2':([12,],[28,]),'fact3':([12,46,48,64,],[29,59,60,66,]),'numlist':([14,32,],[31,52,]),'more':([23,54,],[35,62,]),'op':([23,54,],[36,36,]),'term':([25,],[41,]),'more2':([29,60,],[47,65,]),'op2':([29,60,],[48,48,]),'conj2':([46,],[58,]),'moreconj2':([59,66,],[63,67,]),}
+_lr_goto_items = {'start':([0,],[1,]),'add':([2,],[4,]),'fact':([2,],[5,]),'rule':([2,],[6,]),'macro':([2,],[7,]),'ent':([2,3,8,9,15,18,20,21,24,25,33,34,35,36,],[8,16,18,16,16,30,16,16,30,30,16,16,16,48,]),'check':([3,],[13,]),'logalg':([3,21,],[14,37,]),'ent_var':([3,9,15,20,21,33,34,35,],[15,20,24,35,15,20,20,47,]),'logalg_rule':([9,33,34,],[19,45,46,]),'log_op':([14,19,37,45,46,],[21,34,21,34,34,]),'check_op':([15,20,],[25,36,]),'ent_string':([18,24,25,],[31,39,41,]),'ent_var_string':([24,],[38,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -26,46 +26,36 @@ for _k, _v in _lr_goto_items.items():
        _lr_goto[_x][_k] = _y
 del _lr_goto_items
 _lr_productions = [
-  ("S' -> calc","S'",1,None,None,None),
-  ('calc -> exp','calc',1,'p_calc','module_compile.py',80),
-  ('exp -> ADD modify','exp',2,'p_exp_exp1_ADD','module_compile.py',89),
-  ('exp -> DELETE fact2','exp',2,'p_exp_exp1_DELETE','module_compile.py',95),
-  ('exp -> DELETE RULES numlist','exp',3,'p_exp_delete_rules','module_compile.py',104),
-  ('numlist -> NUM numlist','numlist',2,'p_exp_numlist','module_compile.py',113),
-  ('numlist -> <empty>','numlist',0,'p_exp_numlist_void','module_compile.py',119),
-  ('exp -> CHECK logalg','exp',2,'p_exp_exp2','module_compile.py',125),
-  ('exp -> DISPLAY logalg','exp',2,'p_exp_exp2','module_compile.py',126),
-  ('exp -> CHECK RULES','exp',2,'p_exp_check_rule','module_compile.py',135),
-  ('exp -> CHECK LINKS','exp',2,'p_exp_check_links','module_compile.py',142),
-  ('exp -> CHECK NODES','exp',2,'p_exp_check_nodes','module_compile.py',149),
-  ('modify -> fact','modify',1,'p_exp_modify_fact','module_compile.py',156),
-  ('modify -> rule','modify',1,'p_exp_modify_rule','module_compile.py',165),
-  ('fact -> ENT ENT ENT','fact',3,'p_exp_fact','module_compile.py',179),
-  ('fact -> NOT ENT ENT ENT','fact',4,'p_exp_fact','module_compile.py',180),
-  ('fact -> ENT NOT ENT ENT','fact',4,'p_exp_fact','module_compile.py',181),
-  ('fact -> ENT ENT NOT ENT','fact',4,'p_exp_fact','module_compile.py',182),
-  ('fact -> ENT ENT term','fact',3,'p_exp_fact','module_compile.py',183),
-  ('term -> ENT','term',1,'p_val','module_compile.py',189),
-  ('term -> STRING','term',1,'p_val','module_compile.py',190),
-  ('term -> NUM','term',1,'p_val','module_compile.py',191),
-  ('rule -> IF logalg2 THEN conj2','rule',4,'p_exp_rule','module_compile.py',197),
-  ('logalg2 -> fact3 more2','logalg2',2,'p_exp_logalg2','module_compile.py',203),
-  ('logalg -> fact2 more','logalg',2,'p_exp_logalg','module_compile.py',209),
-  ('more -> op fact2 more','more',3,'p_exp_more','module_compile.py',215),
-  ('more2 -> op2 fact3 more2','more2',3,'p_exp_more2','module_compile.py',221),
-  ('more -> <empty>','more',0,'p_exp_more_empty','module_compile.py',227),
-  ('more2 -> <empty>','more2',0,'p_exp_more2_empty','module_compile.py',233),
-  ('op -> AND','op',1,'p_exp_op','module_compile.py',239),
-  ('op -> OR','op',1,'p_exp_op','module_compile.py',240),
-  ('op2 -> AND','op2',1,'p_exp_op2','module_compile.py',246),
-  ('op2 -> OR','op2',1,'p_exp_op2','module_compile.py',247),
-  ('conj2 -> fact3 moreconj2','conj2',2,'p_exp_conj2','module_compile.py',253),
-  ('moreconj2 -> AND fact3 moreconj2','moreconj2',3,'p_exp_AND2','module_compile.py',259),
-  ('moreconj2 -> <empty>','moreconj2',0,'p_exp_moreconj2','module_compile.py',265),
-  ('fact2 -> el el el','fact2',3,'p_exp_predicat','module_compile.py',271),
-  ('fact2 -> el el','fact2',2,'p_exp_predicat2','module_compile.py',277),
-  ('fact3 -> el el el','fact3',3,'p_exp_fact3','module_compile.py',283),
-  ('el -> ENT','el',1,'p_exp_term','module_compile.py',289),
-  ('el -> NOT ENT','el',2,'p_exp_term','module_compile.py',290),
-  ('el -> VAR','el',1,'p_exp_term','module_compile.py',291),
+  ("S' -> start","S'",1,None,None,None),
+  ('start -> ADD add','start',2,'p_start','module_compile.py',94),
+  ('start -> CHECK check','start',2,'p_start','module_compile.py',95),
+  ('add -> fact','add',1,'p_add','module_compile.py',101),
+  ('add -> rule','add',1,'p_add','module_compile.py',102),
+  ('add -> macro','add',1,'p_add','module_compile.py',103),
+  ('fact -> ent ent ent_string','fact',3,'p_fact','module_compile.py',109),
+  ('ent -> NAME','ent',1,'p_ent','module_compile.py',115),
+  ('ent -> NUM','ent',1,'p_ent','module_compile.py',116),
+  ('ent_string -> ent','ent_string',1,'p_ent_string','module_compile.py',122),
+  ('ent_string -> STRING','ent_string',1,'p_ent_string','module_compile.py',123),
+  ('check -> logalg','check',1,'p_check','module_compile.py',129),
+  ('logalg -> logalg log_op logalg','logalg',3,'p_logalg1','module_compile.py',135),
+  ('logalg -> ent_var ent_var ent_var_string','logalg',3,'p_logalg2','module_compile.py',141),
+  ('logalg -> ent_var check_op ent_string','logalg',3,'p_logalg2','module_compile.py',142),
+  ('ent_var_string -> ent_string','ent_var_string',1,'p_ent_var_string','module_compile.py',148),
+  ('ent_var_string -> VAR','ent_var_string',1,'p_ent_var_string','module_compile.py',149),
+  ('ent_var -> ent','ent_var',1,'p_ent_var','module_compile.py',155),
+  ('ent_var -> VAR','ent_var',1,'p_ent_var','module_compile.py',156),
+  ('log_op -> AND','log_op',1,'p_log_op','module_compile.py',162),
+  ('log_op -> OR','log_op',1,'p_log_op','module_compile.py',163),
+  ('check_op -> INF','check_op',1,'p_check_op','module_compile.py',169),
+  ('check_op -> SUP','check_op',1,'p_check_op','module_compile.py',170),
+  ('check_op -> EQUAL','check_op',1,'p_check_op','module_compile.py',171),
+  ('check_op -> INF EQUAL','check_op',2,'p_check_op','module_compile.py',172),
+  ('check_op -> SUP EQUAL','check_op',2,'p_check_op','module_compile.py',173),
+  ('check_op -> MINUS CONTAINS','check_op',2,'p_check_op','module_compile.py',174),
+  ('rule -> IF logalg_rule THEN logalg_rule','rule',4,'p_rule','module_compile.py',180),
+  ('logalg_rule -> logalg_rule log_op logalg_rule','logalg_rule',3,'p_logalg_rule1','module_compile.py',186),
+  ('logalg_rule -> ent_var ent_var ent_var','logalg_rule',3,'p_logalg_rule2','module_compile.py',192),
+  ('logalg_rule -> ent_var check_op ent','logalg_rule',3,'p_logalg_rule2','module_compile.py',193),
+  ('macro -> MACRO','macro',1,'p_macro','module_compile.py',199),
 ]
