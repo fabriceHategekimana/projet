@@ -22,11 +22,80 @@ class MyPrompt(Cmd):
             self.mode= inp
         else:
             print("This is note a mode")
-            print("Availiable modes: normal, union, sql")
+            print("Availiable modes: normal, union, sql, grammaire")
 
     def do_logo(self, inp):
         self.logo= inp+"|"
         self.prompt = self.logo+'%s> ' % self.mode
+
+    def do_check(self, inp):
+        if self.mode == "normal":
+            res= self.parserFormat("check "+inp)
+            if res.find("&") != 0: #s'il n'y a pas d'erreur
+                sql= union(res)
+                print(d.sqlQuery("select * from "+sql))
+            else:
+                print(res[1:])
+        elif self.mode == "union":
+            res= self.parserFormat("check "+inp)
+            if res.find("&") != 0: #s'il n'y a pas d'erreur
+                print(union(res))
+            else:
+                print(res[1:])
+        elif self.mode == "grammaire":
+            res = self.parserFormat("check "+inp, verbose=True)
+            print(res)
+
+    def do_add(self, inp):
+        if self.mode == "normal":
+            res= self.parserFormat("add "+inp)
+            if res.find("&") != 0:
+                if res.find("&&rule&&") > -1: # if it's a rule
+                    tab= res.split("&&rule&&")
+                    d.sqlModify("insert into rules (premises, conclusion) values (\"%s\", \"%s\")" % tuple(tab))
+                    retroPropagation(tab)
+                else:
+                    tab= res.split("&&")
+                    d.sqlModify("insert into facts (subject, link, goal) values (\"%s\", \"%s\", \"%s\")" % tuple(tab))
+                    propagation(" ".join(tab))
+            else:
+                print(res[1:])
+        elif self.mode == "grammaire":
+            res =self.parserFormat("add "+inp, verbose=True)
+            print(res)
+
+    def do_rules(self, inp):
+        res= d.sqlQuery("select * from rules;")
+        print(res)
+
+    def myStr(self, num):
+        if num < 10:
+            res= "00"+str(num)
+        elif num >= 10 and num < 100:
+            res= "0"+str(num)
+        else:
+            res= str(num)
+        return res
+
+    def do_listtofact(self, inp):
+        tab= inp.split(" ")
+        path= tab[0]
+        num= int(tab[1])+1
+        for i in range(num):
+            self.listtofact(path+"/"+self.myStr(i))
+
+    def listtofact(self, inp):
+        f = open(inp, "r")
+        print(inp)
+        lines= f.readlines()
+        for i in range(len(lines)-1):
+            if lines[i] not in [""," "] and lines[i+1] not in [""," "]:
+                fact = (lines[i]+" suit "+lines[i+1]).replace("\n", "")
+                print("fact:", fact)
+                res =self.parserFormat("add "+fact)
+                tab= res.split("&&")
+                print("tab:", tab)
+                d.sqlModify("insert or ignore into facts (subject, link, goal) values (\"%s\", \"%s\", \"%s\")" % tuple(tab))
 
     def do_apply(self, inp):
         tab= inp.split(" ")
@@ -59,7 +128,7 @@ class MyPrompt(Cmd):
         elif self.mode == "grammaire":
             parser.parse(inp,debug=True)
         else:
-            print("ce mode ne produit rien")
+            print("This mode can't produce anything: try mode normal")
 
     def do_export(self, inp):
         tab= inp.split(" ")
@@ -98,18 +167,20 @@ class MyPrompt(Cmd):
                 print("[target]= nodes or links")
 
     def do_display(self, inp):
-        parser.parse("display "+inp)
-        tabInp= self.splitOneDimension(inp)
-        with open("res.txt") as f:
-            reader = csv.reader(f)
-            tab = list(reader)
-        facts=[]
-        for inp in tabInp:
-            for ligne in tab:
-                res= self.completeDisplay(ligne, inp).split(" ")
-                facts.append(res)
-        displayNetwork(facts)
-        write(facts, "append.csv")
+        res= self.parserFormat("check "+inp)
+        if res.find("&") != 0: #s'il n'y a pas d'erreur
+            sql= union(res)
+            tab= d.sqlQuery("select * from "+sql)
+            tabInp= self.splitOneDimension(inp)
+            facts=[]
+            for inp in tabInp:
+                for ligne in tab:
+                    res= self.completeDisplay(ligne, inp).split(" ")
+                    facts.append(res)
+            displayNetwork(facts)
+            writeCSV(facts, "append.csv")
+        else:
+            print("bad syntax")
 
     def do_append(self, inp):
         parser.parse("display "+inp)
@@ -127,7 +198,7 @@ class MyPrompt(Cmd):
                 facts.append(res)
         facts += oldFacts
         displayNetwork(facts)
-        write(facts, "append.csv")
+        writeCSV(facts, "append.csv")
 
     def completeDisplay(self, ligne, inp):
         substitution= ["A","B","C"]
@@ -145,6 +216,21 @@ class MyPrompt(Cmd):
                 final.append(t2)
         return final
 
+    def do_delete(self, inp):
+        if self.mode == "normal":
+            res= self.parserFormat("check "+inp)
+            if res.find("&") != 0: #s'il n'y a pas d'erreur
+                sql= union(res)
+                d.sqlModify("delete "+sql[sql.find("from"):-1]+";")
+                print("value(s) deleted")
+            else:
+                print(res[1:])
+
+    def do_dr(self, inp):
+        tab= inp.split(" ")
+        print("delete ("+",".join(tab)+")")
+        d.sqlQuery("delete from rules where id in ("+",".join(tab)+")")
+
     def sql(self,inp):
         try:
             print(d.sqlQuery(inp))
@@ -153,19 +239,16 @@ class MyPrompt(Cmd):
 
     def union(self, inp):
         print(union(inp))
-        #try:
-            #print(union(inp))
-        #except:
-            #print("Error this is not a predicat")
 
     def normal(self,inp):
-            tab= inp.split(" ")
-            m = self.p.match(tab[0]) #si c'est un nombre
-            if m:
-                i= int(m.group())
-                self.repeate(i, tab[1:])
-            else:
-                parser.parse(inp)
+        print("Bad syntax")
+
+    def parserFormat(self, command, verbose=False):
+        parser.parse(command, debug=verbose)
+        f= open("res.txt", "r")
+        res= f.readlines()[0]
+        f.close()
+        return res
 
     def completedefault(self, text, line, begidx, endidx):
         sql= "select distinct subject from facts where subject like '"+text+"%' union select distinct link from facts where link like '"+text+"%' union select distinct goal from facts where goal like '"+text+"%'"

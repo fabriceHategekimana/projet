@@ -1,5 +1,6 @@
 import ply.lex as lex
 import ply.yacc as yacc
+import math as m
 import csv
 from module_union import *
 from module_db import *
@@ -19,6 +20,21 @@ def write(exp, fname="res.txt"):
     f.write(exp)
     f.close()
 
+def completeAnonymousVariables(exp):
+    if exp.find("$VAR$") > -1:
+        alphabet= ["_A","_B","_C","_D","_E","_F","_G","_H","_I","_J","_K","_L","_M","_N","_O","_P"]
+        if exp.find(" &and& ") > -1:
+            tab= exp.split("$VAR$")
+            #print("tab:", tab)
+            chosenLetters= alphabet[:len(tab)]
+            #print("chosenLetters:", chosenLetters)
+            exp=""
+            for i in range(len(tab)-1):
+                exp+= tab[i]+chosenLetters[m.floor(i/2)]
+            exp += tab[len(tab)-1]
+        else:
+            exp= exp.replace("$VAR$", "_A")
+    return exp
 
 # _                       
 #| |    _____  _____ _ __ 
@@ -47,7 +63,8 @@ tokens = [
     'INF',
     'EQUAL',
     'MINUS',
-    'PLUS'
+    'PLUS',
+    'DOT'
         ]+list(reserved.values())
 
 t_INF= r'\<'
@@ -55,6 +72,7 @@ t_SUP= r'\>'
 t_EQUAL= r'\='
 t_MINUS= r'\-'
 t_PLUS= r'\+'
+t_DOT= r'\.'
 
 t_ignore = r' '
 
@@ -64,12 +82,12 @@ def t_NUM(t):
     return t
 
 def t_NAME(t):
-    r'[a-zA-Z][a-zA-Z0-9_][a-zA-Z0-9_]*'
+    r'[a-zA-ZéèêàâïùçÀô][a-zA-Z0-9_éèêàâïùçÀô][a-zA-Z0-9_éèêàâïùçÀô]*'
     t.type = reserved.get(t.value,'NAME')
     return t
 
 def t_VAR(t):
-    r'[A-C$]'
+    r'_?[A-Z$]'
     t.type = 'VAR'
     return t
 
@@ -110,6 +128,14 @@ def p_fact(p):
     '''
     p[0] = "&&".join(p[1:])
 
+def p_fact_not(p):
+    '''
+    fact : NOT ent ent ent_string
+         | ent NOT ent ent_string
+         | ent ent NOT ent_string
+    '''
+    p[0] = "not("+"&&".join(p[1:]).replace("not&&", "").replace("&&not&&", "").replace("&&not", "")
+
 def p_ent(p):
     '''
     ent : NAME
@@ -128,7 +154,10 @@ def p_check(p):
     '''
     check : logalg
     '''
-    write(p[1])
+    #print("p[1]:", p[1])
+    res= completeAnonymousVariables(p[1])
+    #print("res:", res)
+    write(res)
 
 def p_logalg1(p):
     '''
@@ -142,6 +171,50 @@ def p_logalg2(p):
            | ent_var check_op ent_string
     '''
     p[0] = "&&".join(p[1:])
+
+def p_logalg2_not(p):
+    '''
+    logalg : NOT ent_var ent_var ent_var_string
+           | ent_var NOT ent_var ent_var_string
+           | ent_var ent_var NOT ent_var_string
+    '''
+    p[0] = "not("+"&&".join(p[1:]).replace("not&&", "").replace("&&not&&", "").replace("&&not", "")
+
+def p_logalg_short1(p):
+    '''
+    logalg : ent_var ent_var
+    '''
+    p[0] = "&&".join(p[1:])+"&&$VAR$" #add an anonimous variable
+
+def p_logalg_short2(p):
+    '''
+    logalg : ent_var DOT tail
+    '''
+    p[0] = p[1]+"&&"+p[3]
+
+def p_logalg_short3(p):
+    '''
+    logalg : ent_var ent_var check_op ent_string 
+    '''
+    p[0] = p[1]+"&&"+p[2]+"&&$VAR$ &and& $VAR$&&"+p[3]+"&&"+p[4]
+
+def p_logalg_tail1(p):
+    '''
+    tail : ent tail
+    '''
+    p[0] = p[1]+"&&$VAR$ &and& $VAR$&&"+p[2] #combine with a chain of anonimous variables
+
+def p_logalg_tail2(p):
+    '''
+    tail : ent
+    '''
+    p[0] = p[1]+"&&$VAR$"
+
+def p_logalg_tail3(p):
+    '''
+    tail : ent VAR
+    '''
+    p[0] = p[1]+"&&"+p[2]
 
 def p_ent_var_string(p):
     '''
