@@ -28,14 +28,27 @@ class MyPrompt(Cmd):
         self.logo= inp+"|"
         self.prompt = self.logo+'%s> ' % self.mode
 
+    def getTable(self, predicatQuery):
+        res= self.parserFormat(predicatQuery)
+        if res.find("&") != 0: #s'il n'y a pas d'erreur
+            sql= union(res)
+            res2= d.sqlQuery(sql)
+        else:
+            res2= res[1:]
+        return res2
+
     def do_check(self, inp):
         if self.mode == "normal":
-            res= self.parserFormat("check "+inp)
-            if res.find("&") != 0: #s'il n'y a pas d'erreur
-                sql= union(res)
-                print(d.sqlQuery("select * from "+sql))
+            tab= inp.split(" ")
+            title= tab.pop(0)
+            if title == "nodes":
+                print(d.sqlQuery("select distinct subject from facts union select distinct goal from facts;"))
+            elif title == "links":
+                print(d.sqlQuery("select distinct link from facts;"))
+            elif title == "rules":
+                print(d.sqlQuery("select * from rules;"))
             else:
-                print(res[1:])
+                print(self.getTable("check "+inp))
         elif self.mode == "union":
             res= self.parserFormat("check "+inp)
             if res.find("&") != 0: #s'il n'y a pas d'erreur
@@ -52,12 +65,13 @@ class MyPrompt(Cmd):
             if res.find("&") != 0:
                 if res.find("&&rule&&") > -1: # if it's a rule
                     tab= res.split("&&rule&&")
-                    d.sqlModify("insert into rules (premises, conclusion) values (\"%s\", \"%s\")" % tuple(tab))
+                    d.sqlModify("insert or ignore into rules (premises, conclusion) values (\"%s\", \"%s\")" % tuple(tab))
                     retroPropagation(tab)
                 else:
                     tab= res.split("&&")
-                    d.sqlModify("insert into facts (subject, link, goal) values (\"%s\", \"%s\", \"%s\")" % tuple(tab))
-                    propagation(" ".join(tab))
+                    d.sqlModify("insert or ignore into facts (subject, link, goal) values (\"%s\", \"%s\", \"%s\")" % tuple(tab))
+                    if res.find(" ") == -1: # if there isn't any string in the goal
+                        propagation(" ".join(tab))
             else:
                 print(res[1:])
         elif self.mode == "grammaire":
@@ -66,6 +80,10 @@ class MyPrompt(Cmd):
 
     def do_rules(self, inp):
         res= d.sqlQuery("select * from rules;")
+        print(res)
+
+    def do_links(self, inp):
+        res= d.sqlQuery("select distinct link from facts;")
         print(res)
 
     def myStr(self, num):
@@ -166,46 +184,52 @@ class MyPrompt(Cmd):
                 print("Bad syntax. It should be: 'rename [target] [oldname] [newname]")
                 print("[target]= nodes or links")
 
+    def getPredicat(self,exp):
+        res= exp
+        if exp.find(" filter ") > -1:
+            res= exp[:exp.find(" filter ")+1]
+        elif exp.find(" get ") > -1:
+            res= exp[:exp.find(" get ")+1]
+        return res
+
+    def getFacts(self, tab, predicat):
+        print("prédicat:", predicat)
+        facts=[]
+        for ligne in tab:
+            res= self.completePredicat(ligne, predicat)
+            tabFacts= self.splitOneDimension(res)
+            for fact in tabFacts:
+                facts.append(fact.split(" "))
+        return facts
+
     def do_display(self, inp):
-        res= self.parserFormat("check "+inp)
-        if res.find("&") != 0: #s'il n'y a pas d'erreur
-            sql= union(res)
-            tab= d.sqlQuery("select * from "+sql)
-            tabInp= self.splitOneDimension(inp)
-            facts=[]
-            for inp in tabInp:
-                for ligne in tab:
-                    res= self.completeDisplay(ligne, inp).split(" ")
-                    facts.append(res)
-            displayNetwork(facts)
-            writeCSV(facts, "append.csv")
-        else:
-            print("bad syntax")
+        tab= self.getTable("check "+inp)
+        predicat= self.getPredicat(inp)
+        #getting the result
+        facts= self.getFacts(tab,predicat)
+        print("facts:", facts)
+        displayNetwork(facts)
+        writeCSV(facts, "append.csv")
 
     def do_append(self, inp):
-        parser.parse("display "+inp)
-        tabInp= self.splitOneDimension(inp)
-        with open("res.txt") as f:
-            reader = csv.reader(f)
-            tab = list(reader)
+        tab= self.getTable("check "+inp)
+        predicat= self.getPredicat(inp)
+        facts= self.getFacts(tab,predicat)
         with open("append.csv") as f:
             reader = csv.reader(f)
             oldFacts = list(reader) # cette table est déjà formatée
-        facts=[]
-        for inp in tabInp:
-            for ligne in tab:
-                res= self.completeDisplay(ligne, inp).split(" ")
-                facts.append(res)
         facts += oldFacts
         displayNetwork(facts)
         writeCSV(facts, "append.csv")
 
-    def completeDisplay(self, ligne, inp):
-        substitution= ["A","B","C"]
-        res= inp.replace("not ","")
-        for i in range(len(ligne)):
-            res= res.replace(substitution[i], ligne[i])
-        return res
+    def completePredicat(self, ligne, pred):
+        substitution= getVariables(pred.split(" "))
+        print("ligne:", ligne)
+        print("pred:", pred)
+        if len(substitution) > 0:
+            for i in range(len(ligne)):
+                pred= pred.replace(substitution[i], ligne[i])
+        return pred
 
     def splitOneDimension(self, inp):
         final= []
@@ -217,18 +241,22 @@ class MyPrompt(Cmd):
         return final
 
     def do_delete(self, inp):
-        if self.mode == "normal":
-            res= self.parserFormat("check "+inp)
-            if res.find("&") != 0: #s'il n'y a pas d'erreur
-                sql= union(res)
-                d.sqlModify("delete "+sql[sql.find("from"):-1]+";")
-                print("value(s) deleted")
-            else:
-                print(res[1:])
-
-    def do_dr(self, inp):
         tab= inp.split(" ")
-        print("delete ("+",".join(tab)+")")
+        title= tab.pop(0)
+        if title == "rules":
+            deleteRules(",".join(tab))
+        else:
+            tab= self.getTable("check "+inp)
+            predicat= self.getPredicat(inp)
+            #getting the result
+            facts= self.getFacts(tab,predicat)
+            for fact in facts:
+                sql= "delete from facts where subject='%s' and link='%s' and goal='%s'" % tuple(fact)
+                d.sqlModify(sql)
+
+
+    def deleteRules(self, numbers):
+        print("delete ("+numbers+")")
         d.sqlQuery("delete from rules where id in ("+",".join(tab)+")")
 
     def sql(self,inp):
@@ -249,11 +277,6 @@ class MyPrompt(Cmd):
         res= f.readlines()[0]
         f.close()
         return res
-
-    def completedefault(self, text, line, begidx, endidx):
-        sql= "select distinct subject from facts where subject like '"+text+"%' union select distinct link from facts where link like '"+text+"%' union select distinct goal from facts where goal like '"+text+"%'"
-        completions= self.simpleList(d.sqlQuery(sql))
-        return completions
 
     def toCSV(self, name, csvFormat):
         if csvFormat == "gephy":
@@ -282,11 +305,5 @@ class MyPrompt(Cmd):
                         addFact(" ".join(t))
         except:
             print("The csv file has not the good format: ('subject,target,link' or 'subject,goal,link')")
-
-    def simpleList(self, list2d):
-        final= []
-        for element in list2d:
-            final.append(element[0])
-        return final
 
 MyPrompt().cmdloop()

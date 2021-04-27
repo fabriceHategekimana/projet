@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+<div class="container">
+  <h2>L'heure actuelle en kinyarwanda</h2>
+  <div class="panel-group">
+    <div class="panel panel-default">
+		<h1 class="panel-heading">Temps</h1>
+		<h2 class="panel-body"id="temps"></h2>
+
+		<h1 class="panel-heading">Heures</h1>
+		<h2 class="panel-body" id="heures"></h2>
+
+		<h1 class="panel-heading">Minutes</h1>
+		<h2 class="panel-body" id="minutes"></h2>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+		<script>
+			var isaa= ["Saa sita","Saa saba","Saa munani","Saa cyenda","Saa kumi","Saa kumi n'imwe","Saa kumi n'ebyiri","Saa moya","Saa mbili","Saa tatu", "Saa ine", "Saa tanu","Saa sita z'ijoro","Saa saba z'ijoro","Saa munani z'ijoro","Saa cyenda z'ijoro","Saa kumi z'ijoro","Saa kumi n'imwe z'ijoro","Saa kumi n'ebyiri z'ijoro","Saa moya z'ijoro","Saa mbili z'ijoro","Saa tatu z'ijoro", "Saa ine z'ijoro", "Saa tanu z'ijoro"];
+			var numbers= ["","rimwe","kabiri","gatatu","kane","gatanu", "gatandatu", "karindwi", "uminani", "icyenda"];
+
+			var actuel= new Date();
+			hours= actuel.getHours();
+			minutes= actuel.getMinutes();
+			//préformatage des minutes
+			if (minutes < 10){ 
+				document.getElementById("temps").innerHTML = hours+":0"+minutes;
+			}
+			else{ 
+				document.getElementById("temps").innerHTML = hours+":"+minutes;
+			}
+			translatedHours= isaa[hours];
+			document.getElementById("heures").innerHTML = translatedHours;
+			//translate minutes
+			var num= 0
+			var ten= ""
+			if (minutes > 50){
+				num= 50;
+				ten= "Mirongitanu"
+			}
+			else if (minutes > 40){
+				num= 40;
+				ten= "Mirongine"
+			}
+			else if (minutes > 30){
+				num= 30;
+				ten= "Mirongitatu"
+			}
+			else if (minutes > 20){
+				num= 20;
+				ten= "Makumyiabiri"
+			}
+			else if (minutes > 10){
+				num= 10;
+				ten= "Icumi"
+			}
+			else{
+				num= 0
+				ten= ""
+			}
+			translatedMinutes= ten+" "+numbers[minutes-num];
+			document.getElementById("minutes").innerHTML = translatedMinutes;
+		</script>
+</html> 

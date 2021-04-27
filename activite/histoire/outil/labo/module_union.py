@@ -41,7 +41,7 @@ def getPredicateShape(variables, values):
         var.append(inter[1])
     val= removeVoidString(list(values))
     tab= var+val
-    print("tab:",tab)
+    #print("tab:",tab)
     subject= ""
     link= ""
     goal= ""
@@ -61,7 +61,7 @@ def getTargetedSet(exp):
     command= completeNot(exp)
     variables, values = variableIndex(command)
     shape= getPredicateShape(variables, values)
-    print("shape:", shape)
+    #print("shape:", shape)
     # a b c
     if shape == "el,el,el":
         sql= "select distinct subject, goal, fact from facts"
@@ -93,7 +93,7 @@ def getTargetedSet(exp):
 def getVariables(exp):
     final= []
     for e in exp:
-        if e in ["A","B","C"] and e not in final:
+        if isVariable(e) and e not in final:
             final.append(e)
     return final
 
@@ -154,7 +154,7 @@ def convert(exp):
             sql= "(select num as "+exp[0]+" from "+getGoalNumber()+" where num "+exp[1]+" "+exp[2]+")"
     elif exp[0].find("not(") == 0: #if it's a negative predicat
         exp[0]= exp[0][4:]
-        print("exp: ", exp)
+        #print("exp: ", exp)
         sql1= getTargetedSet(exp.copy())
         sql2= createUnionQuery(exp)[1:-1]
         sql= "("+sql1+" except "+sql2+")"
@@ -195,7 +195,7 @@ def setAND(exp, varList):
             exp= exp.replace("AND","CROSS JOIN",1)
     return exp
 
-def union(exp):
+def unionPredicat(exp):
     final= []
     tabOR= exp.split(" &or& ")
     for t in tabOR:
@@ -213,4 +213,47 @@ def union(exp):
     for i in range(1,len(final)):
         final[i]= final[i].replace("(","",1).replace(")","",1)
     return " UNION ".join(final)
-        
+
+def unionFilter(exp):
+    if exp != "":
+        final= []
+        tabOR= exp.split(" &or& ")
+        for t in tabOR:
+            tabAND= t.split(" &and& ")
+            semifinal=[]
+            for i in range(len(tabAND)): # on converti chaque conjonction
+                expression= tabAND[i].split("&&")
+                if expression[1] == "-contains":
+                    expression[1] = "like"
+                    expression[2] = "'%"+expression[2]+"%'"
+                semifinal.append(" ".join(expression))
+            final.append(" and ".join(semifinal))
+        res= " or ".join(final)
+    else:
+        res= exp
+    #print("unionFilter:", res)
+    return res
+
+def unionGet(exp):
+    exp= exp.replace(" ",",")
+    #print("UnionGet:", exp)
+    return exp
+
+def union(exp, command="check"):
+    #traitement au préalable des predicat, filter, get
+    tab= exp.split(" &part& ")
+    if len(tab) == 3:
+        myPredicat= unionPredicat(tab[0])
+        myFilter= unionFilter(tab[1])
+        myGet= unionGet(tab[2])
+        if command == "check":
+            if myFilter != "":
+                res= "select "+myGet+" from "+myPredicat+" where "+myFilter+";"
+            else:
+                res= "select "+myGet+" from "+myPredicat+";"
+        elif command == "delete":
+            res= "delete from facts "
+    else:
+        res= unionPredicat(tab[0])
+    #print("final query:", res)
+    return res

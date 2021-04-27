@@ -51,7 +51,9 @@ reserved = {
         "then" : "THEN",
         "not" : "NOT",
         "contains" : "CONTAINS",
-        "macro" : "MACRO"
+        "macro" : "MACRO",
+        "filter" : "FILTER",
+        "get" : "GET"
         }
                          
 tokens = [
@@ -64,7 +66,8 @@ tokens = [
     'EQUAL',
     'MINUS',
     'PLUS',
-    'DOT'
+    'DOT',
+    'EXCL'
         ]+list(reserved.values())
 
 t_INF= r'\<'
@@ -73,6 +76,7 @@ t_EQUAL= r'\='
 t_MINUS= r'\-'
 t_PLUS= r'\+'
 t_DOT= r'\.'
+t_EXCL= r'\!'
 
 t_ignore = r' '
 
@@ -150,71 +154,130 @@ def p_ent_string(p):
     '''
     p[0] = p[1]
 
-def p_check(p):
+def p_check1(p):
     '''
-    check : logalg
+    check : prop filt get
     '''
-    #print("p[1]:", p[1])
-    res= completeAnonymousVariables(p[1])
-    #print("res:", res)
+    p[1]= completeAnonymousVariables(p[1])
+    res= " &part& ".join(p[1:])
     write(res)
 
-def p_logalg1(p):
+def p_check2(p):
     '''
-    logalg : logalg log_op logalg
+    check : prop filt
+    '''
+    p[1]= completeAnonymousVariables(p[1])
+    res= p[1]+" &part& "+p[2]+" &part& *" #the star is important for the "all" in sql queries
+    write(res)
+
+def p_check3(p):
+    '''
+    check : prop get
+    '''
+    p[1]= completeAnonymousVariables(p[1])
+    res= p[1]+" &part&  &part& "+p[2] #the star is important for the "all" in sql queries
+    write(res)
+
+def p_check4(p):
+    '''
+    check : prop
+    '''
+    p[1]= completeAnonymousVariables(p[1])
+    res= p[1]+" &part&  &part& *" #the star is important for the "all" in sql queries
+    write(res)
+
+def p_prop1(p):
+    '''
+    prop : prop log_op prop
     '''
     p[0] = p[1]+" &"+p[2]+"& "+p[3]
 
-def p_logalg2(p):
+def p_prop2(p):
     '''
-    logalg : ent_var ent_var ent_var_string
-           | ent_var check_op ent_string
+    prop : ent_var ent_var ent_var_string
+           | ent_var filter_op ent_string
     '''
     p[0] = "&&".join(p[1:])
 
-def p_logalg2_not(p):
+def p_prop2_not(p):
     '''
-    logalg : NOT ent_var ent_var ent_var_string
+    prop : NOT ent_var ent_var ent_var_string
            | ent_var NOT ent_var ent_var_string
            | ent_var ent_var NOT ent_var_string
     '''
     p[0] = "not("+"&&".join(p[1:]).replace("not&&", "").replace("&&not&&", "").replace("&&not", "")
 
-def p_logalg_short1(p):
+def p_prop_short1(p):
     '''
-    logalg : ent_var ent_var
+    prop : ent_var ent_var
     '''
     p[0] = "&&".join(p[1:])+"&&$VAR$" #add an anonimous variable
 
-def p_logalg_short2(p):
+def p_prop_short2(p):
     '''
-    logalg : ent_var DOT tail
+    prop : ent_var DOT tail
     '''
     p[0] = p[1]+"&&"+p[3]
 
-def p_logalg_short3(p):
+def p_prop_short3(p):
     '''
-    logalg : ent_var ent_var check_op ent_string 
+    prop : ent_var ent_var filter_op ent_string 
     '''
     p[0] = p[1]+"&&"+p[2]+"&&$VAR$ &and& $VAR$&&"+p[3]+"&&"+p[4]
 
-def p_logalg_tail1(p):
+def p_prop_tail1(p):
     '''
     tail : ent tail
     '''
     p[0] = p[1]+"&&$VAR$ &and& $VAR$&&"+p[2] #combine with a chain of anonimous variables
 
-def p_logalg_tail2(p):
+def p_prop_tail2(p):
     '''
     tail : ent
     '''
     p[0] = p[1]+"&&$VAR$"
 
-def p_logalg_tail3(p):
+def p_prop_tail3(p):
     '''
     tail : ent VAR
     '''
     p[0] = p[1]+"&&"+p[2]
+
+def p_filt1(p):
+    '''
+    filt : FILTER filter
+    '''
+    p[0] = p[2]
+
+def p_filt2(p):
+    '''
+    filter : filter log_op filter
+    '''
+    p[0] = p[1]+" &"+p[2]+"& "+p[3]
+
+def p_filt3(p):
+    '''
+    filter : ent_var filter_op ent_var_string
+    '''
+    p[0] = "&&".join(p[1:])
+
+def p_get1(p):
+    '''
+    get : GET getter
+    '''
+    p[0] = p[2]
+
+def p_get2(p):
+    '''
+    getter : VAR getter
+    '''
+    p[0] = p[1]+" "+p[2]
+
+def p_get3(p):
+    '''
+    getter : VAR
+    '''
+    p[0] = p[1]
 
 def p_ent_var_string(p):
     '''
@@ -237,14 +300,15 @@ def p_log_op(p):
     '''
     p[0] = p[1]
 
-def p_check_op(p):
+def p_filter_op(p):
     '''
-    check_op : INF
-             | SUP
-             | EQUAL
-             | INF EQUAL
-             | SUP EQUAL
-             | MINUS CONTAINS
+    filter_op : INF
+            | SUP
+            | EQUAL
+            | EXCL EQUAL
+            | INF EQUAL
+            | SUP EQUAL
+            | MINUS CONTAINS
     '''
     p[0] = "".join(p[1:])
 
@@ -263,7 +327,7 @@ def p_logalg_rule1(p):
 def p_logalg_rule2(p):
     '''
     logalg_rule : ent_var ent_var ent_var
-                | ent_var check_op ent
+                | ent_var filter_op ent
     '''
     p[0] = "&&".join(p[1:])
 
