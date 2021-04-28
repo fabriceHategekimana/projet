@@ -1,0 +1,26 @@
+<EntityType Description="A person" DisplayName="Person" Id="Person" Icon="Person (Shaded Shirt)">
+<PropertyGroupTypes />
+<PropertyTypes>
+  <PropertyType Description="" DisplayName="First Name" Id="PER1" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="0" SemanticTypeId="guid4DE7370B-60E5-4EB0-860E-4066D3DFD7B6" MaximumLengthChars="250">
+	<PossibleValues/>
+  </PropertyType>
+  <PropertyType Description="" DisplayName="Middle Name" Id="PER2" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="1" SemanticTypeId="guidBE6A2505-B545-464C-B407-51F9847ECE39" MaximumLengthChars="250">
+	<PossibleValues/>
+  </PropertyType>
+  <PropertyType Description="" DisplayName="Last Name" Id="PER3" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="2" SemanticTypeId="guid62B01C18-2E64-46D5-B2FF-3C69B4F76FEB" MaximumLengthChars="250">
+	<PossibleValues/>
+  </PropertyType>
+  <PropertyType Description="" DisplayName="Year of Birth" Id="PER4" LogicalType="DATE" Mandatory="false" Position="3" SemanticTypeId="guidFE45F1C4-B198-4111-8123-F42D2CD6419D">
+	<PossibleValues/>
+  </PropertyType>
+  <PropertyType Description="" DisplayName="Age" Id="PER5" LogicalType="INTEGER" Mandatory="false" Position="4" SemanticTypeId="">
+	<PossibleValues/>
+  </PropertyType>
+  <PropertyType Description="Social Security Number" DisplayName="SSN" Id="PER6" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="5" SemanticTypeId="guidF9DA2FC4-4B32-4d42-A178-A238274D4C5D" MaximumLengthChars="250">
+	<PossibleValues/>
+  </PropertyType>
+  <PropertyType Description="" DisplayName="SSN Issued Date and Time" Id="PER7" LogicalType="DATE_AND_TIME" Mandatory="false" Position="6" SemanticTypeId="guid770074b2-0235-4ade-aca0-f64f9d1986f9">
+	<PossibleValues/>
+  </PropertyType>
+</PropertyTypes>
+</EntityType>

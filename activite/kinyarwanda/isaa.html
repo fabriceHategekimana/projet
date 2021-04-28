@@ -43,23 +43,23 @@
 			//translate minutes
 			var num= 0
 			var ten= ""
-			if (minutes > 50){
+			if (minutes >= 50){
 				num= 50;
 				ten= "Mirongitanu"
 			}
-			else if (minutes > 40){
+			else if (minutes >= 40){
 				num= 40;
 				ten= "Mirongine"
 			}
-			else if (minutes > 30){
+			else if (minutes >= 30){
 				num= 30;
 				ten= "Mirongitatu"
 			}
-			else if (minutes > 20){
+			else if (minutes >= 20){
 				num= 20;
-				ten= "Makumyiabiri"
+				ten= "Makumyabiri"
 			}
-			else if (minutes > 10){
+			else if (minutes >= 10){
 				num= 10;
 				ten= "Icumi"
 			}
@@ -67,7 +67,12 @@
 				num= 0
 				ten= ""
 			}
-			translatedMinutes= ten+" "+numbers[minutes-num];
+			if(num == 0){
+				translatedMinutes= ten+" "+numbers[minutes-num];
+			}
+			else{
+				translatedMinutes= ten+" na "+numbers[minutes-num];
+			}
 			document.getElementById("minutes").innerHTML = translatedMinutes;
 		</script>
 </html> 

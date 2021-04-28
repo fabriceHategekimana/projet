@@ -1,202 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
--<ns2:Schema xmlns:ns2="http://www.i2group.com/Schemas/2011-03-03/ModelSchema" DefaultLabelingSchemeId="8355f4c5-1444-4a2f-b4da-f9374fbd80e6">
-
-<GradeTypes/>
-
-
--<ItemTypes>
-
-
--<EntityTypes>
-
-
--<EntityType Icon="Person (Shaded Shirt)" Id="Person" DisplayName="Person" Description="A person">
-
-<PropertyGroupTypes/>
-
-
--<PropertyTypes>
-
-
--<PropertyType Id="PER1" DisplayName="First Name" Description="" MaximumLengthChars="250" SemanticTypeId="guid4DE7370B-60E5-4EB0-860E-4066D3DFD7B6" Position="0" Mandatory="false" LogicalType="SINGLE_LINE_STRING">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="PER2" DisplayName="Middle Name" Description="" MaximumLengthChars="250" SemanticTypeId="guidBE6A2505-B545-464C-B407-51F9847ECE39" Position="1" Mandatory="false" LogicalType="SINGLE_LINE_STRING">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="PER3" DisplayName="Last Name" Description="" MaximumLengthChars="250" SemanticTypeId="guid62B01C18-2E64-46D5-B2FF-3C69B4F76FEB" Position="2" Mandatory="false" LogicalType="SINGLE_LINE_STRING">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="PER4" DisplayName="Year of Birth" Description="" SemanticTypeId="guidFE45F1C4-B198-4111-8123-F42D2CD6419D" Position="3" Mandatory="false" LogicalType="DATE">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="PER5" DisplayName="Age" Description="" SemanticTypeId="" Position="4" Mandatory="false" LogicalType="INTEGER">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="PER6" DisplayName="SSN" Description="Social Security Number" MaximumLengthChars="250" SemanticTypeId="guidF9DA2FC4-4B32-4d42-A178-A238274D4C5D" Position="5" Mandatory="false" LogicalType="SINGLE_LINE_STRING">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="PER7" DisplayName="SSN Issued Date and Time" Description="" SemanticTypeId="guid770074b2-0235-4ade-aca0-f64f9d1986f9" Position="6" Mandatory="false" LogicalType="DATE_AND_TIME">
-
-<PossibleValues/>
-
-</PropertyType>
-
-</PropertyTypes>
-
-</EntityType>
-
-
--<EntityType Icon="Bird" Id="TWEET" DisplayName="Tweet" Description="A tweet">
-
-<PropertyGroupTypes/>
-
-
--<PropertyTypes>
-
-
--<PropertyType Id="TW1" DisplayName="Contents" Description="The contents of the tweet" MaximumLengthChars="280" SemanticTypeId="" Position="0" Mandatory="true" LogicalType="SINGLE_LINE_STRING">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="TW2" DisplayName="User name" Description="The originator of the tweet" MaximumLengthChars="250" SemanticTypeId="" Position="1" Mandatory="true" LogicalType="SINGLE_LINE_STRING">
-
-<PossibleValues/>
-
-</PropertyType>
-
-
--<PropertyType Id="TW3" DisplayName="Length" Description="The length of the tweet" SemanticTypeId="" Position="2" Mandatory="true" LogicalType="INTEGER">
-
-<PossibleValues/>
-
-</PropertyType>
-
-</PropertyTypes>
-
-</EntityType>
-
-</EntityTypes>
-
-
--<LinkTypes>
-
-
--<LinkType Id="FriendLink" DisplayName="Friends with" Description="" SemanticTypeId="guid3C07BD39-5F65-4fb0-B87F-5B633BCF9B04" ToTypeIds="Person" FromTypeIds="Person">
-
-<PropertyGroupTypes/>
-
-<PropertyTypes/>
-
-</LinkType>
-
-</LinkTypes>
-
-</ItemTypes>
-
-<Id>b5f2afce-bb7b-4d2c-b1b1-e6e0b9ecea82</Id>
-
-<Version>4</Version>
-
-<SourceInfoMandatoryFields IsTypeMandatory="false" IsReferenceMandatory="false" IsDescriptionMandatory="false" IsDateMandatory="false"/>
-
-
--<LinkStrengthInfo DefaultLinkStrengthId="f232caa8-cf55-4d9a-8c21-19a55b0447da">
-
-
--<LinkStrengths>
-
-<LinkStrength Id="f232caa8-cf55-4d9a-8c21-19a55b0447da" LineStyle="SOLID" Name="Confirmed"/>
-
-<LinkStrength Id="59f66ee2-0abe-4036-a11d-07ed4175720e" LineStyle="DASHED" Name="Unconfirmed"/>
-
-<LinkStrength Id="f0d2ff1c-28cb-4afe-8cbb-89e198c910a3" LineStyle="DOTTED" Name="Tentative"/>
-
-</LinkStrengths>
-
-</LinkStrengthInfo>
-
-
--<LabelingSchemes>
-
-
--<LabelingScheme Id="8355f4c5-1444-4a2f-b4da-f9374fbd80e6" Name="Example Connector Labeling Scheme">
-
-
--<LabelDefinitions>
-
-
--<LabelDefinition ItemTypeId="TWEET">
-
-
--<LabelParts>
-
-<LabelPart LabelPartType="PROPERTY_TYPE" Value="TW2"/>
-
-</LabelParts>
-
-</LabelDefinition>
-
-
--<LabelDefinition ItemTypeId="Person">
-
-
--<LabelParts>
-
-<LabelPart LabelPartType="PROPERTY_TYPE" Value="PER1"/>
-
-<LabelPart LabelPartType="LITERAL" Value=" "/>
-
-<LabelPart LabelPartType="PROPERTY_TYPE" Value="PER3"/>
-
-</LabelParts>
-
-</LabelDefinition>
-
-
--<LabelDefinition ItemTypeId="FriendLink">
-
-
--<LabelParts>
-
-<LabelPart LabelPartType="LITERAL" Value="Friends with"/>
-
-</LabelParts>
-
-</LabelDefinition>
-
-</LabelDefinitions>
-
-</LabelingScheme>
-
-</LabelingSchemes>
-
+<?xml version="1.0" encoding="utf-8"?>
+<ns2:Schema DefaultLabelingSchemeId="8355f4c5-1444-4a2f-b4da-f9374fbd80e6" xmlns:ns2="http://www.i2group.com/Schemas/2011-03-03/ModelSchema">
+  <GradeTypes/>
+  <ItemTypes>
+    <EntityTypes>
+      <EntityType Description="A person" DisplayName="Person" Id="Person" Icon="Person (Shaded Shirt)">
+        <PropertyGroupTypes />
+        <PropertyTypes>
+          <PropertyType Description="" DisplayName="First Name" Id="PER1" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="0" SemanticTypeId="guid4DE7370B-60E5-4EB0-860E-4066D3DFD7B6" MaximumLengthChars="250">
+            <PossibleValues/>
+          </PropertyType>
+          <PropertyType Description="" DisplayName="Middle Name" Id="PER2" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="1" SemanticTypeId="guidBE6A2505-B545-464C-B407-51F9847ECE39" MaximumLengthChars="250">
+            <PossibleValues/>
+          </PropertyType>
+          <PropertyType Description="" DisplayName="Last Name" Id="PER3" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="2" SemanticTypeId="guid62B01C18-2E64-46D5-B2FF-3C69B4F76FEB" MaximumLengthChars="250">
+            <PossibleValues/>
+          </PropertyType>
+          <PropertyType Description="" DisplayName="Year of Birth" Id="PER4" LogicalType="DATE" Mandatory="false" Position="3" SemanticTypeId="guidFE45F1C4-B198-4111-8123-F42D2CD6419D">
+            <PossibleValues/>
+          </PropertyType>
+          <PropertyType Description="" DisplayName="Age" Id="PER5" LogicalType="INTEGER" Mandatory="false" Position="4" SemanticTypeId="">
+            <PossibleValues/>
+          </PropertyType>
+          <PropertyType Description="Social Security Number" DisplayName="SSN" Id="PER6" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="5" SemanticTypeId="guidF9DA2FC4-4B32-4d42-A178-A238274D4C5D" MaximumLengthChars="250">
+            <PossibleValues/>
+          </PropertyType>
+          <PropertyType Description="" DisplayName="SSN Issued Date and Time" Id="PER7" LogicalType="DATE_AND_TIME" Mandatory="false" Position="6" SemanticTypeId="guid770074b2-0235-4ade-aca0-f64f9d1986f9">
+            <PossibleValues/>
+          </PropertyType>
+        </PropertyTypes>
+      </EntityType>
+      <EntityType Description="A tweet" DisplayName="Tweet" Id="TWEET" Icon="Bird">
+        <PropertyGroupTypes />
+        <PropertyTypes>
+          <PropertyType Description="The contents of the tweet" DisplayName="Contents" Id="TW1" LogicalType="SINGLE_LINE_STRING" Mandatory="true" Position="0" SemanticTypeId="" MaximumLengthChars="280">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="The originator of the tweet" DisplayName="User name" Id="TW2" LogicalType="SINGLE_LINE_STRING" Mandatory="true" Position="1" SemanticTypeId="" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="The length of the tweet" DisplayName="Length" Id="TW3" LogicalType="INTEGER" Mandatory="true" Position="2" SemanticTypeId="">
+            <PossibleValues />
+          </PropertyType>
+        </PropertyTypes>
+      </EntityType>
+    </EntityTypes>
+    <LinkTypes>
+      <LinkType FromTypeIds="Person" ToTypeIds="Person" Description="" DisplayName="Friends with" Id="FriendLink" SemanticTypeId="guid3C07BD39-5F65-4fb0-B87F-5B633BCF9B04">
+        <PropertyGroupTypes/>
+        <PropertyTypes/>
+      </LinkType>
+    </LinkTypes>
+  </ItemTypes>
+  <Id>b5f2afce-bb7b-4d2c-b1b1-e6e0b9ecea82</Id>
+  <Version>4</Version>
+  <SourceInfoMandatoryFields IsDateMandatory="false" IsDescriptionMandatory="false" IsReferenceMandatory="false" IsTypeMandatory="false" />
+  <LinkStrengthInfo DefaultLinkStrengthId="f232caa8-cf55-4d9a-8c21-19a55b0447da">
+    <LinkStrengths>
+      <LinkStrength Id="f232caa8-cf55-4d9a-8c21-19a55b0447da" Name="Confirmed" LineStyle="SOLID" />
+      <LinkStrength Id="59f66ee2-0abe-4036-a11d-07ed4175720e" Name="Unconfirmed" LineStyle="DASHED" />
+      <LinkStrength Id="f0d2ff1c-28cb-4afe-8cbb-89e198c910a3" Name="Tentative" LineStyle="DOTTED" />
+    </LinkStrengths>
+  </LinkStrengthInfo>
+  <LabelingSchemes>
+    <LabelingScheme Id="8355f4c5-1444-4a2f-b4da-f9374fbd80e6" Name="Example Connector Labeling Scheme">
+      <LabelDefinitions>
+        <LabelDefinition ItemTypeId="TWEET">
+          <LabelParts>
+            <LabelPart Value="TW2" LabelPartType="PROPERTY_TYPE" />
+          </LabelParts>
+        </LabelDefinition>
+        <LabelDefinition ItemTypeId="Person">
+          <LabelParts>
+            <LabelPart Value="PER1" LabelPartType="PROPERTY_TYPE"/>
+            <LabelPart Value=" " LabelPartType="LITERAL"/>
+            <LabelPart Value="PER3" LabelPartType="PROPERTY_TYPE"/>
+          </LabelParts>
+        </LabelDefinition>
+        <LabelDefinition ItemTypeId="FriendLink">
+          <LabelParts>
+            <LabelPart Value="Friends with" LabelPartType="LITERAL"/>
+          </LabelParts>
+        </LabelDefinition>
+      </LabelDefinitions>
+    </LabelingScheme>
+  </LabelingSchemes>
 </ns2:Schema>
