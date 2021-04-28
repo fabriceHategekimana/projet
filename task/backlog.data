@@ -118,3 +118,13 @@
 {"description":"Rdv avec Marjolaine (BG) 17h","due":"20210323T070000Z","end":"20210328T083908Z","entry":"20210309T152934Z","modified":"20210328T083912Z","status":"completed","uuid":"17464634-d92d-4c17-80ad-2349770e4e39"}
 {"description":"TP3 TI","due":"20210323T070000Z","end":"20210328T083912Z","entry":"20210318T162225Z","modified":"20210328T083912Z","status":"completed","uuid":"fb1bf50c-cefe-4a7b-b373-ef740ad2f728"}
 {"description":"TP8 IN","due":"20210325T070000Z","end":"20210328T083912Z","entry":"20210318T162250Z","modified":"20210328T083912Z","status":"completed","uuid":"db9e5b42-11a1-4c6a-ab33-b63b587d7e09"}
+{"description":"TP1 DM","due":"20210329T060000Z","end":"20210428T204230Z","entry":"20210318T162313Z","modified":"20210428T204230Z","status":"completed","uuid":"6a5efe32-ab0e-4382-a931-d7975c8ed240"}
+{"description":"révisions","entry":"20210428T215146Z","modified":"20210428T215146Z","status":"pending","until":"20210428T220000Z","uuid":"69a6a3fe-404d-4824-8692-e911c7be53b3"}
+{"description":"projet informatique","entry":"20210428T215146Z","modified":"20210428T215146Z","status":"pending","until":"20210428T220000Z","uuid":"0a468f47-da5d-4aaa-91be-09b6014d06a0"}
+{"description":"prédicat","entry":"20210428T215146Z","modified":"20210428T215146Z","status":"pending","until":"20210428T220000Z","uuid":"9f7a0bed-528e-42b1-86cd-214af81fad85"}
+{"description":"révisions","end":"20210428T215156Z","entry":"20210428T215146Z","modified":"20210428T215159Z","status":"deleted","until":"20210428T220000Z","uuid":"69a6a3fe-404d-4824-8692-e911c7be53b3"}
+{"description":"projet informatique","end":"20210428T215214Z","entry":"20210428T215146Z","modified":"20210428T215218Z","status":"deleted","until":"20210428T220000Z","uuid":"0a468f47-da5d-4aaa-91be-09b6014d06a0"}
+{"description":"prédicat","end":"20210428T215218Z","entry":"20210428T215146Z","modified":"20210428T215218Z","status":"deleted","until":"20210428T220000Z","uuid":"9f7a0bed-528e-42b1-86cd-214af81fad85"}
+{"description":"post","entry":"20210428T220125Z","modified":"20210428T220125Z","status":"pending","uuid":"1abdd5a4-d8f2-4c2c-8c40-c2113ee8aef9"}
+{"description":"elastic search tutorial","entry":"20210428T222102Z","modified":"20210428T222102Z","status":"pending","uuid":"90dd76c3-b3a0-4426-a95a-4d15b901a38e"}
+{"description":"kubernetes tutorial","entry":"20210428T222110Z","modified":"20210428T222110Z","status":"pending","uuid":"e84e30c7-b393-4502-a91f-98b5d49bdecf"}
