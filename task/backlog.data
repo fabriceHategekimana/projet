@@ -128,3 +128,11 @@
 {"description":"post","entry":"20210428T220125Z","modified":"20210428T220125Z","status":"pending","uuid":"1abdd5a4-d8f2-4c2c-8c40-c2113ee8aef9"}
 {"description":"elastic search tutorial","entry":"20210428T222102Z","modified":"20210428T222102Z","status":"pending","uuid":"90dd76c3-b3a0-4426-a95a-4d15b901a38e"}
 {"description":"kubernetes tutorial","entry":"20210428T222110Z","modified":"20210428T222110Z","status":"pending","uuid":"e84e30c7-b393-4502-a91f-98b5d49bdecf"}
+{"description":"révisions","entry":"20210428T224807Z","modified":"20210428T224807Z","status":"pending","until":"20210429T220000Z","uuid":"015fc6f6-17be-45bb-96e3-dd7a730851a7"}
+{"description":"projet informatique","entry":"20210428T224807Z","modified":"20210428T224807Z","status":"pending","until":"20210429T220000Z","uuid":"70b10492-bc29-410a-b798-a351a877b27b"}
+{"description":"prédicat","entry":"20210428T224807Z","modified":"20210428T224807Z","status":"pending","until":"20210429T220000Z","uuid":"d2cac745-f75d-4a5d-93ae-057acacb6864"}
+{"description":"courrier","entry":"20210428T224807Z","modified":"20210428T224807Z","status":"pending","until":"20210429T220000Z","uuid":"dc209258-0098-4084-b7e1-6ac533db514d"}
+{"description":"Questionnaire","end":"20210428T224837Z","entry":"20210301T153302Z","modified":"20210428T224840Z","status":"deleted","uuid":"79579794-9d9f-42c9-8471-8ae2ac1565f5"}
+{"description":"projet informatique","end":"20210428T224909Z","entry":"20210428T224807Z","modified":"20210428T224912Z","status":"deleted","until":"20210429T220000Z","uuid":"70b10492-bc29-410a-b798-a351a877b27b"}
+{"description":"prédicat","end":"20210428T224912Z","entry":"20210428T224807Z","modified":"20210428T224912Z","status":"deleted","until":"20210429T220000Z","uuid":"d2cac745-f75d-4a5d-93ae-057acacb6864"}
+{"description":"courrier","end":"20210428T224912Z","entry":"20210428T224807Z","modified":"20210428T224912Z","status":"deleted","until":"20210429T220000Z","uuid":"dc209258-0098-4084-b7e1-6ac533db514d"}
