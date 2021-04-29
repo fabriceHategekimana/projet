@@ -1,5 +1,3 @@
-[description:"post" entry:"1619647285" modified:"1619647285" status:"pending" uuid:"1abdd5a4-d8f2-4c2c-8c40-c2113ee8aef9"]
-[description:"elastic search tutorial" entry:"1619648462" modified:"1619648462" status:"pending" uuid:"90dd76c3-b3a0-4426-a95a-4d15b901a38e"]
 [description:"kubernetes tutorial" entry:"1619648470" modified:"1619648470" status:"pending" uuid:"e84e30c7-b393-4502-a91f-98b5d49bdecf"]
-[description:"révisions" entry:"1619650087" modified:"1619650087" status:"pending" until:"1619733600" uuid:"015fc6f6-17be-45bb-96e3-dd7a730851a7"]
-[description:"recycle papier" entry:"1619650461" modified:"1619650461" status:"pending" uuid:"f0e3b91c-0d3c-444f-9ee7-6ddb766667b8"]
+[description:"révisions" end:"1619734421" entry:"1619650087" modified:"1619734421" status:"deleted" until:"1619733600" uuid:"015fc6f6-17be-45bb-96e3-dd7a730851a7"]
+[description:"tp in" entry:"1619717889" modified:"1619717889" status:"pending" uuid:"107d9238-e625-4956-a62b-8f1c3f3f2c63"]
