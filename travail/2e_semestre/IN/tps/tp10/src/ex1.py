@@ -22,8 +22,7 @@ def mySubplot2(num, y, text):
     plt.title(text, fontsize=20)
 
 def a():
-    #f= np.array([1,2,4,8])
-    f= np.array([1,2,1,2])
+    f= np.array([1,2,4,8])
     #FFT
     print(np.fft.fft(f))
 
@@ -63,4 +62,4 @@ def b():
 
 
 #a()
-b()
+#b()

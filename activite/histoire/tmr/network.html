@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #333333;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "id": "takuya", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "takuya", "shape": "image"}, {"font": {"color": "white"}, "id": "atsushi", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "atsushi", "shape": "image"}, {"font": {"color": "white"}, "id": "sano", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.VsEh_TddnQqn7r1hOnJgKQHaF1%26pid%3DApi\u0026f=1", "label": "sano", "shape": "image"}, {"font": {"color": "white"}, "id": "naoto", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.xsVyaLqMiV8GwRoEeExG4wHaNo%26pid%3DApi\u0026f=1", "label": "naoto", "shape": "image"}, {"font": {"color": "white"}, "id": "hinata", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wefgXv3bo661byjJYl9WMwHaNo%26pid%3DApi\u0026f=1", "label": "hinata", "shape": "image"}, {"font": {"color": "white"}, "id": "kazushi", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "kazushi", "shape": "image"}, {"font": {"color": "white"}, "id": "ken", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8u024XIJ6Iw0lIBu0UcZWAHaEJ%26pid%3DApi\u0026f=1", "label": "ken", "shape": "image"}, {"font": {"color": "white"}, "id": "makoto", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "makoto", "shape": "image"}, {"font": {"color": "white"}, "id": "takemishi", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.anime-planet.com%2Fimages%2Fcharacters%2Fthumbs%2Ftakemichi-hanagaki-186398.jpg%3Ft%3D1603146460\u0026f=1\u0026nofb=1", "label": "takemishi", "shape": "image"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "#2cdbca", "from": "hinata", "label": "fs", "to": "naoto"}, {"arrows": "to", "color": "#2cdbca", "from": "naoto", "label": "fs", "to": "hinata"}, {"arrows": "to", "color": "#29c8d9", "from": "hinata", "label": "couple", "to": "takemishi"}, {"arrows": "to", "color": "#29c8d9", "from": "takemishi", "label": "couple", "to": "hinata"}, {"arrows": "to", "color": "#caba74", "from": "takemishi", "label": "associ\u00e9", "to": "naoto"}, {"arrows": "to", "color": "#caba74", "from": "naoto", "label": "associ\u00e9", "to": "takemishi"}, {"arrows": "to", "color": "#29c8d9", "from": "hinata", "label": "couple", "to": "takemishi"}, {"arrows": "to", "color": "#d76632", "from": "sano", "label": "ami", "to": "ken"}, {"arrows": "to", "color": "#d76632", "from": "ken", "label": "ami", "to": "sano"}, {"arrows": "to", "color": "#d76632", "from": "sano", "label": "ami", "to": "takemishi"}, {"arrows": "to", "color": "#d76632", "from": "takemishi", "label": "ami", "to": "sano"}, {"arrows": "to", "color": "#d76632", "from": "ken", "label": "ami", "to": "takemishi"}, {"arrows": "to", "color": "#d76632", "from": "takemishi", "label": "ami", "to": "ken"}, {"arrows": "to", "color": "#d76632", "from": "makoto", "label": "ami", "to": "takemishi"}, {"arrows": "to", "color": "#d76632", "from": "takemishi", "label": "ami", "to": "makoto"}, {"arrows": "to", "color": "#d76632", "from": "kazushi", "label": "ami", "to": "makoto"}, {"arrows": "to", "color": "#d76632", "from": "makoto", "label": "ami", "to": "kazushi"}, {"arrows": "to", "color": "#d76632", "from": "kazushi", "label": "ami", "to": "takemishi"}, {"arrows": "to", "color": "#d76632", "from": "takemishi", "label": "ami", "to": "kazushi"}, {"arrows": "to", "color": "#d76632", "from": "takuya", "label": "ami", "to": "makoto"}, {"arrows": "to", "color": "#d76632", "from": "makoto", "label": "ami", "to": "takuya"}, {"arrows": "to", "color": "#d76632", "from": "takuya", "label": "ami", "to": "kazushi"}, {"arrows": "to", "color": "#d76632", "from": "kazushi", "label": "ami", "to": "takuya"}, {"arrows": "to", "color": "#d76632", "from": "takuya", "label": "ami", "to": "takemishi"}, {"arrows": "to", "color": "#d76632", "from": "takemishi", "label": "ami", "to": "takuya"}, {"arrows": "to", "color": "#d76632", "from": "atsushi", "label": "ami", "to": "makoto"}, {"arrows": "to", "color": "#d76632", "from": "makoto", "label": "ami", "to": "atsushi"}, {"arrows": "to", "color": "#d76632", "from": "atsushi", "label": "ami", "to": "kazushi"}, {"arrows": "to", "color": "#d76632", "from": "kazushi", "label": "ami", "to": "atsushi"}, {"arrows": "to", "color": "#d76632", "from": "atsushi", "label": "ami", "to": "takuya"}, {"arrows": "to", "color": "#d76632", "from": "takuya", "label": "ami", "to": "atsushi"}, {"arrows": "to", "color": "#d76632", "from": "atsushi", "label": "ami", "to": "takemishi"}, {"arrows": "to", "color": "#d76632", "from": "takemishi", "label": "ami", "to": "atsushi"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"manipulation": {"enabled": true}, "physics": { "minVelocity": 0.75,"solver":"repulsion"}, "interaction": {"multiselect": true, "navigationButtons": true},"edges": {"smooth": {"enabled": false}}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
