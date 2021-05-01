@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #333333;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "id": "transaction", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "transaction", "shape": "image"}, {"font": {"color": "white"}, "id": "reseaux_sociaux", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "reseaux_sociaux", "shape": "image"}, {"font": {"color": "white"}, "id": "covid", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "covid", "shape": "image"}, {"font": {"color": "white"}, "id": "criminel", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "criminel", "shape": "image"}, {"font": {"color": "white"}, "id": "scenarion", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "scenarion", "shape": "image"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "#252749", "from": "scenarion", "label": "link", "to": "reseaux_sociaux"}, {"arrows": "to", "color": "#252749", "from": "scenarion", "label": "link", "to": "criminel"}, {"arrows": "to", "color": "#252749", "from": "reseaux_sociaux", "label": "link", "to": "covid"}, {"arrows": "to", "color": "#252749", "from": "scenarion", "label": "link", "to": "transaction"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"manipulation": {"enabled": true}, "physics": {"enabled": false}, "interaction": {"multiselect": true, "navigationButtons": true}, "configure": {"enabled": true, "filter": "layout,physics", "showButton": true}, "edges": {"smooth": {"enabled": false}}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
