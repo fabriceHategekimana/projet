@@ -161,3 +161,4 @@
 {"description":"prédicat","end":"20210501T172700Z","entry":"20210501T151056Z","modified":"20210501T172700Z","status":"completed","until":"20210501T220000Z","uuid":"1911be2c-38fa-452d-9156-665a6eda456b"}
 {"description":"RDV gb","due":"20210503T060000Z","entry":"20210501T185032Z","modified":"20210501T185032Z","status":"pending","uuid":"87ca2181-9c81-49c5-be88-d3cc79298a03"}
 {"description":"courrier","end":"20210501T185332Z","entry":"20210501T151056Z","modified":"20210501T185332Z","status":"completed","until":"20210501T220000Z","uuid":"0200c6e4-2dfe-4e95-8b8d-df9c0d6dd12f"}
+{"description":"révisions","end":"20210502T081719Z","entry":"20210501T151056Z","modified":"20210502T081719Z","status":"deleted","until":"20210501T220000Z","uuid":"456798d1-ab35-4fc3-9a63-41ee071b75be"}
