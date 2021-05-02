@@ -19,9 +19,8 @@ Tu n'es pas tout seul
 Trouver des moyens pour rester motiver.
 **règle:**  
 - On ne travail pas sans motivation
+- Les divertissements médiatiques tuent la motivation
 
 Moyens:
 - passions
 - escalier émotionnelle
-
-

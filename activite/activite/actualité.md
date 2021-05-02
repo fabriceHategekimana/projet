@@ -1,7 +1,6 @@
 Économie
 ==========
 
-[semantique](semantique)
 [economies](economies)
 [hikigai](hikigai)
 
