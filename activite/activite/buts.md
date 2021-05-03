@@ -6,9 +6,6 @@ Comment gagner?
 2. Faire ce que j'aime et qui m'inspire (pouvoir)
 
 **Réussir dans tout mes domaines**
-[[Vie_Universitaire]]
-[[Vie_spirituelle]]
-[Vie_administrative](Vie_administrative)
 [[Vie_sociale]]
 
 **Faire ce que j'aime**

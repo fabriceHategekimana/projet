@@ -188,3 +188,46 @@
 {"description":"prise de note","end":"20210503T065731Z","entry":"20210502T174222Z","modified":"20210503T065731Z","status":"deleted","until":"20210502T220000Z","uuid":"c113048f-da69-4a87-bf36-dcb85a68891d"}
 {"description":"Ce qu'un conducteur de louange doit savoir","end":"20210503T065731Z","entry":"20210502T174222Z","modified":"20210503T065731Z","status":"deleted","until":"20210502T220000Z","uuid":"18e69ac5-374b-4a95-b2b1-11a02186f9b9"}
 {"description":"musique","end":"20210503T065731Z","entry":"20210502T174222Z","modified":"20210503T065731Z","status":"deleted","until":"20210502T220000Z","uuid":"0cc6b7e9-6c3b-4e42-b6eb-4665de2b411f"}
+{"description":"révisions","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"16fca25c-2745-471e-8a11-b18d9eca8e49"}
+{"description":"projet informatique","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"9db524c8-0edc-4e5a-9724-ebbbcadc3a29"}
+{"description":"prédicat","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"966f9195-f392-42a8-bbcf-5b74418286d9"}
+{"description":"courrier","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"78520c48-e141-459f-b063-42443e1ab320"}
+{"description":"histoire","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"881c9b27-e63b-427e-9c2f-91d8c8520183"}
+{"description":"kinyarwanda","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"27c6c231-9c31-4b11-a074-7522da06a838"}
+{"description":"programme","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"2687ed23-0e63-49a3-90b8-963ee25170ce"}
+{"description":"cours de logique","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"c148e77e-a3b4-4b01-a57f-3cfdc99c5930"}
+{"description":"prise de note","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"494a6998-7215-4f30-aa32-9e878347b94f"}
+{"description":"Classifier mes penser (pour les ranger efficacement)","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"4a987587-47ac-4df1-a68f-05e910a5fce4"}
+{"description":"Ce qu'un conducteur de louange doit savoir","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"383f0477-9223-42f4-856c-ec1157867d7a"}
+{"description":"musique","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"14a86291-24b7-4376-8f3e-e06d468e7900"}
+{"description":"satom","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"cba038d3-8cb6-4877-a9ca-b053018e228a"}
+{"description":"activité","entry":"20210503T133320Z","modified":"20210503T133320Z","status":"pending","until":"20210503T220000Z","uuid":"3b10a706-3cef-4e6a-a4c7-faf69c238fba"}
+{"description":"histoire","end":"20210503T133401Z","entry":"20210503T133320Z","modified":"20210503T133401Z","status":"completed","until":"20210503T220000Z","uuid":"881c9b27-e63b-427e-9c2f-91d8c8520183"}
+{"description":"courrier","end":"20210503T133407Z","entry":"20210503T133320Z","modified":"20210503T133407Z","status":"completed","until":"20210503T220000Z","uuid":"78520c48-e141-459f-b063-42443e1ab320"}
+{"description":"technique cours d'appuie","entry":"20210503T133456Z","modified":"20210503T133456Z","status":"pending","uuid":"6c7b3f50-aac5-402e-bf42-64b223d685f6"}
+{"description":"technique présentation","entry":"20210503T133501Z","modified":"20210503T133501Z","status":"pending","uuid":"d604ae31-a9e4-443e-8d2f-7b037bd4f3d2"}
+{"description":"programme","end":"20210503T134943Z","entry":"20210503T133320Z","modified":"20210503T134943Z","status":"completed","until":"20210503T220000Z","uuid":"2687ed23-0e63-49a3-90b8-963ee25170ce"}
+{"description":"Classifier mes penser (pour les ranger efficacement)","end":"20210503T134951Z","entry":"20210503T133320Z","modified":"20210503T134951Z","status":"completed","until":"20210503T220000Z","uuid":"4a987587-47ac-4df1-a68f-05e910a5fce4"}
+{"description":"créer effets","entry":"20210503T140202Z","modified":"20210503T140202Z","project":"musique","status":"pending","uuid":"9ef28da4-3e00-4606-868e-862148ae248b"}
+{"description":"créer rythme","entry":"20210503T140202Z","modified":"20210503T140202Z","project":"musique","status":"pending","uuid":"0f6d78e7-609a-48fb-928b-507e321fb7b1"}
+{"description":"compiler riffs préférés","entry":"20210503T140202Z","modified":"20210503T140202Z","project":"musique","status":"pending","uuid":"fec5c555-b7d0-4589-b57c-abda5b01c915"}
+{"description":"créer effets","end":"20210503T140243Z","entry":"20210503T140202Z","modified":"20210503T140247Z","project":"musique","status":"deleted","uuid":"9ef28da4-3e00-4606-868e-862148ae248b"}
+{"description":"créer rythme","end":"20210503T140247Z","entry":"20210503T140202Z","modified":"20210503T140247Z","project":"musique","status":"deleted","uuid":"0f6d78e7-609a-48fb-928b-507e321fb7b1"}
+{"description":"compiler riffs préférés","end":"20210503T140247Z","entry":"20210503T140202Z","modified":"20210503T140247Z","project":"musique","status":"deleted","uuid":"fec5c555-b7d0-4589-b57c-abda5b01c915"}
+{"description":"résumé","entry":"20210503T141101Z","modified":"20210503T141101Z","project":"bachelor","status":"pending","uuid":"b83d5676-98f2-493e-8a9d-9cf56b580e75"}
+{"description":"demo","entry":"20210503T141101Z","modified":"20210503T141101Z","project":"bachelor","status":"pending","uuid":"27d42969-b4da-4e10-b11c-4d2c2c545b62"}
+{"description":"documentation","entry":"20210503T141101Z","modified":"20210503T141101Z","project":"bachelor","status":"pending","uuid":"4151faf2-c5dd-4014-87d7-b60b5917ce98"}
+{"description":"correction erreur","entry":"20210503T141101Z","modified":"20210503T141101Z","project":"bachelor","status":"pending","uuid":"44deb41f-15ee-4d95-a4c0-66a14e7675d3"}
+{"description":"clean code","entry":"20210503T141101Z","modified":"20210503T141101Z","project":"bachelor","status":"pending","uuid":"d21d8a7f-dfd6-4171-a74a-37cb9a671070"}
+{"description":"prise de note","end":"20210503T141223Z","entry":"20210503T133320Z","modified":"20210503T141223Z","status":"completed","until":"20210503T220000Z","uuid":"494a6998-7215-4f30-aa32-9e878347b94f"}
+{"description":"prédicat","end":"20210503T143648Z","entry":"20210503T133320Z","modified":"20210503T143648Z","status":"completed","until":"20210503T220000Z","uuid":"966f9195-f392-42a8-bbcf-5b74418286d9"}
+{"description":"kinyarwanda","end":"20210503T145210Z","entry":"20210503T133320Z","modified":"20210503T145210Z","status":"completed","until":"20210503T220000Z","uuid":"27c6c231-9c31-4b11-a074-7522da06a838"}
+{"description":"RDV gb","due":"20210503T060000Z","end":"20210503T145735Z","entry":"20210501T185032Z","modified":"20210503T145735Z","status":"completed","uuid":"87ca2181-9c81-49c5-be88-d3cc79298a03"}
+{"description":"activité","end":"20210503T150117Z","entry":"20210503T133320Z","modified":"20210503T150117Z","status":"completed","until":"20210503T220000Z","uuid":"3b10a706-3cef-4e6a-a4c7-faf69c238fba"}
+{"description":"discours motivant","end":"20210503T152938Z","entry":"20210502T175648Z","modified":"20210503T152938Z","status":"completed","uuid":"4441b15b-f1b4-43bc-a22d-6cc278fb4d59"}
+{"description":"optimisation environnement de travail","entry":"20210503T153144Z","modified":"20210503T153144Z","status":"pending","uuid":"66eea23e-96fc-403a-b656-da93a6cef974"}
+{"description":"datamining","end":"20210503T153151Z","entry":"20210501T163238Z","modified":"20210503T153151Z","status":"completed","uuid":"f29ceeb2-e4fc-4f1f-bb7d-d0a4b66b9619"}
+{"description":"musique","end":"20210503T153201Z","entry":"20210503T133320Z","modified":"20210503T153204Z","status":"deleted","until":"20210503T220000Z","uuid":"14a86291-24b7-4376-8f3e-e06d468e7900"}
+{"description":"Ce qu'un conducteur de louange doit savoir","end":"20210503T153212Z","entry":"20210503T133320Z","modified":"20210503T153214Z","status":"deleted","until":"20210503T220000Z","uuid":"383f0477-9223-42f4-856c-ec1157867d7a"}
+{"description":"cours de logique","end":"20210503T153233Z","entry":"20210503T133320Z","modified":"20210503T153235Z","status":"deleted","until":"20210503T220000Z","uuid":"c148e77e-a3b4-4b01-a57f-3cfdc99c5930"}
+{"description":"technique cours d'appuie","end":"20210503T155304Z","entry":"20210503T133456Z","modified":"20210503T155304Z","status":"completed","uuid":"6c7b3f50-aac5-402e-bf42-64b223d685f6"}

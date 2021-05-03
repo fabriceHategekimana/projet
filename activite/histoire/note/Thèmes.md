@@ -14,6 +14,9 @@ J'ai besoin de quelqu'un qui défi des personnes spéciales avec des poings et d
 - Et pour les personnes qui veulent vivre normalement?
 - Revente des appartements
 - Club de sport
+- Gladiateurs
+- Politique
+- Système juridique
 
 paupérisation
 

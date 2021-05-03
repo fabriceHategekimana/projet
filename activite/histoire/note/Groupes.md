@@ -6,3 +6,10 @@ Révolutionnaire
 Monarchie
 Underground
 Orphelina
+Mutants
+Rebels
+Bourgeoisie
+wingForce
+Mercenaire
+Noblesse
+Armée_régulière

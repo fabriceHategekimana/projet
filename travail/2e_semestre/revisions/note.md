@@ -14,7 +14,6 @@ Si c'est trop difficile, ce n'est pas assez coupé
 La variété est pour les hommes, la répétivité pour les machines
 Tu n'es pas tout seul
 
-
 ## Motivation:
 Trouver des moyens pour rester motiver.
 **règle:**  

@@ -679,3 +679,150 @@ time 1620025051
 old [description:"musique" entry:"1619977342" modified:"1619977342" status:"pending" until:"1619992800" uuid:"0cc6b7e9-6c3b-4e42-b6eb-4665de2b411f"]
 new [description:"musique" end:"1620025051" entry:"1619977342" modified:"1620025051" status:"deleted" until:"1619992800" uuid:"0cc6b7e9-6c3b-4e42-b6eb-4665de2b411f"]
 ---
+time 1620048800
+new [description:"révisions" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"16fca25c-2745-471e-8a11-b18d9eca8e49"]
+---
+time 1620048800
+new [description:"projet informatique" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"9db524c8-0edc-4e5a-9724-ebbbcadc3a29"]
+---
+time 1620048800
+new [description:"prédicat" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"966f9195-f392-42a8-bbcf-5b74418286d9"]
+---
+time 1620048800
+new [description:"courrier" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"78520c48-e141-459f-b063-42443e1ab320"]
+---
+time 1620048800
+new [description:"histoire" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"881c9b27-e63b-427e-9c2f-91d8c8520183"]
+---
+time 1620048800
+new [description:"kinyarwanda" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"27c6c231-9c31-4b11-a074-7522da06a838"]
+---
+time 1620048800
+new [description:"programme" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"2687ed23-0e63-49a3-90b8-963ee25170ce"]
+---
+time 1620048800
+new [description:"cours de logique" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"c148e77e-a3b4-4b01-a57f-3cfdc99c5930"]
+---
+time 1620048800
+new [description:"prise de note" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"494a6998-7215-4f30-aa32-9e878347b94f"]
+---
+time 1620048800
+new [description:"Classifier mes penser (pour les ranger efficacement)" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"4a987587-47ac-4df1-a68f-05e910a5fce4"]
+---
+time 1620048800
+new [description:"Ce qu'un conducteur de louange doit savoir" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"383f0477-9223-42f4-856c-ec1157867d7a"]
+---
+time 1620048800
+new [description:"musique" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"14a86291-24b7-4376-8f3e-e06d468e7900"]
+---
+time 1620048800
+new [description:"satom" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"cba038d3-8cb6-4877-a9ca-b053018e228a"]
+---
+time 1620048800
+new [description:"activité" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"3b10a706-3cef-4e6a-a4c7-faf69c238fba"]
+---
+time 1620048841
+old [description:"histoire" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"881c9b27-e63b-427e-9c2f-91d8c8520183"]
+new [description:"histoire" end:"1620048841" entry:"1620048800" modified:"1620048841" status:"completed" until:"1620079200" uuid:"881c9b27-e63b-427e-9c2f-91d8c8520183"]
+---
+time 1620048847
+old [description:"courrier" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"78520c48-e141-459f-b063-42443e1ab320"]
+new [description:"courrier" end:"1620048847" entry:"1620048800" modified:"1620048847" status:"completed" until:"1620079200" uuid:"78520c48-e141-459f-b063-42443e1ab320"]
+---
+time 1620048896
+new [description:"technique cours d'appuie" entry:"1620048896" modified:"1620048896" status:"pending" uuid:"6c7b3f50-aac5-402e-bf42-64b223d685f6"]
+---
+time 1620048901
+new [description:"technique présentation" entry:"1620048901" modified:"1620048901" status:"pending" uuid:"d604ae31-a9e4-443e-8d2f-7b037bd4f3d2"]
+---
+time 1620049783
+old [description:"programme" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"2687ed23-0e63-49a3-90b8-963ee25170ce"]
+new [description:"programme" end:"1620049783" entry:"1620048800" modified:"1620049783" status:"completed" until:"1620079200" uuid:"2687ed23-0e63-49a3-90b8-963ee25170ce"]
+---
+time 1620049791
+old [description:"Classifier mes penser (pour les ranger efficacement)" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"4a987587-47ac-4df1-a68f-05e910a5fce4"]
+new [description:"Classifier mes penser (pour les ranger efficacement)" end:"1620049791" entry:"1620048800" modified:"1620049791" status:"completed" until:"1620079200" uuid:"4a987587-47ac-4df1-a68f-05e910a5fce4"]
+---
+time 1620050522
+new [description:"créer effets" entry:"1620050522" modified:"1620050522" project:"musique" status:"pending" uuid:"9ef28da4-3e00-4606-868e-862148ae248b"]
+---
+time 1620050522
+new [description:"créer rythme" entry:"1620050522" modified:"1620050522" project:"musique" status:"pending" uuid:"0f6d78e7-609a-48fb-928b-507e321fb7b1"]
+---
+time 1620050522
+new [description:"compiler riffs préférés" entry:"1620050522" modified:"1620050522" project:"musique" status:"pending" uuid:"fec5c555-b7d0-4589-b57c-abda5b01c915"]
+---
+time 1620050567
+old [description:"créer effets" entry:"1620050522" modified:"1620050522" project:"musique" status:"pending" uuid:"9ef28da4-3e00-4606-868e-862148ae248b"]
+new [description:"créer effets" end:"1620050563" entry:"1620050522" modified:"1620050567" project:"musique" status:"deleted" uuid:"9ef28da4-3e00-4606-868e-862148ae248b"]
+---
+time 1620050567
+old [description:"créer rythme" entry:"1620050522" modified:"1620050522" project:"musique" status:"pending" uuid:"0f6d78e7-609a-48fb-928b-507e321fb7b1"]
+new [description:"créer rythme" end:"1620050567" entry:"1620050522" modified:"1620050567" project:"musique" status:"deleted" uuid:"0f6d78e7-609a-48fb-928b-507e321fb7b1"]
+---
+time 1620050567
+old [description:"compiler riffs préférés" entry:"1620050522" modified:"1620050522" project:"musique" status:"pending" uuid:"fec5c555-b7d0-4589-b57c-abda5b01c915"]
+new [description:"compiler riffs préférés" end:"1620050567" entry:"1620050522" modified:"1620050567" project:"musique" status:"deleted" uuid:"fec5c555-b7d0-4589-b57c-abda5b01c915"]
+---
+time 1620051061
+new [description:"résumé" entry:"1620051061" modified:"1620051061" project:"bachelor" status:"pending" uuid:"b83d5676-98f2-493e-8a9d-9cf56b580e75"]
+---
+time 1620051061
+new [description:"demo" entry:"1620051061" modified:"1620051061" project:"bachelor" status:"pending" uuid:"27d42969-b4da-4e10-b11c-4d2c2c545b62"]
+---
+time 1620051061
+new [description:"documentation" entry:"1620051061" modified:"1620051061" project:"bachelor" status:"pending" uuid:"4151faf2-c5dd-4014-87d7-b60b5917ce98"]
+---
+time 1620051061
+new [description:"correction erreur" entry:"1620051061" modified:"1620051061" project:"bachelor" status:"pending" uuid:"44deb41f-15ee-4d95-a4c0-66a14e7675d3"]
+---
+time 1620051061
+new [description:"clean code" entry:"1620051061" modified:"1620051061" project:"bachelor" status:"pending" uuid:"d21d8a7f-dfd6-4171-a74a-37cb9a671070"]
+---
+time 1620051143
+old [description:"prise de note" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"494a6998-7215-4f30-aa32-9e878347b94f"]
+new [description:"prise de note" end:"1620051143" entry:"1620048800" modified:"1620051143" status:"completed" until:"1620079200" uuid:"494a6998-7215-4f30-aa32-9e878347b94f"]
+---
+time 1620052608
+old [description:"prédicat" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"966f9195-f392-42a8-bbcf-5b74418286d9"]
+new [description:"prédicat" end:"1620052608" entry:"1620048800" modified:"1620052608" status:"completed" until:"1620079200" uuid:"966f9195-f392-42a8-bbcf-5b74418286d9"]
+---
+time 1620053530
+old [description:"kinyarwanda" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"27c6c231-9c31-4b11-a074-7522da06a838"]
+new [description:"kinyarwanda" end:"1620053530" entry:"1620048800" modified:"1620053530" status:"completed" until:"1620079200" uuid:"27c6c231-9c31-4b11-a074-7522da06a838"]
+---
+time 1620053855
+old [description:"RDV gb" due:"1620021600" entry:"1619895032" modified:"1619895032" status:"pending" uuid:"87ca2181-9c81-49c5-be88-d3cc79298a03"]
+new [description:"RDV gb" due:"1620021600" end:"1620053855" entry:"1619895032" modified:"1620053855" status:"completed" uuid:"87ca2181-9c81-49c5-be88-d3cc79298a03"]
+---
+time 1620054077
+old [description:"activité" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"3b10a706-3cef-4e6a-a4c7-faf69c238fba"]
+new [description:"activité" end:"1620054077" entry:"1620048800" modified:"1620054077" status:"completed" until:"1620079200" uuid:"3b10a706-3cef-4e6a-a4c7-faf69c238fba"]
+---
+time 1620055778
+old [description:"discours motivant" entry:"1619978208" modified:"1619978208" status:"pending" uuid:"4441b15b-f1b4-43bc-a22d-6cc278fb4d59"]
+new [description:"discours motivant" end:"1620055778" entry:"1619978208" modified:"1620055778" status:"completed" uuid:"4441b15b-f1b4-43bc-a22d-6cc278fb4d59"]
+---
+time 1620055904
+new [description:"optimisation environnement de travail" entry:"1620055904" modified:"1620055904" status:"pending" uuid:"66eea23e-96fc-403a-b656-da93a6cef974"]
+---
+time 1620055911
+old [description:"datamining" entry:"1619886758" modified:"1619886758" status:"pending" uuid:"f29ceeb2-e4fc-4f1f-bb7d-d0a4b66b9619"]
+new [description:"datamining" end:"1620055911" entry:"1619886758" modified:"1620055911" status:"completed" uuid:"f29ceeb2-e4fc-4f1f-bb7d-d0a4b66b9619"]
+---
+time 1620055924
+old [description:"musique" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"14a86291-24b7-4376-8f3e-e06d468e7900"]
+new [description:"musique" end:"1620055921" entry:"1620048800" modified:"1620055924" status:"deleted" until:"1620079200" uuid:"14a86291-24b7-4376-8f3e-e06d468e7900"]
+---
+time 1620055934
+old [description:"Ce qu'un conducteur de louange doit savoir" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"383f0477-9223-42f4-856c-ec1157867d7a"]
+new [description:"Ce qu'un conducteur de louange doit savoir" end:"1620055932" entry:"1620048800" modified:"1620055934" status:"deleted" until:"1620079200" uuid:"383f0477-9223-42f4-856c-ec1157867d7a"]
+---
+time 1620055955
+old [description:"cours de logique" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"c148e77e-a3b4-4b01-a57f-3cfdc99c5930"]
+new [description:"cours de logique" end:"1620055953" entry:"1620048800" modified:"1620055955" status:"deleted" until:"1620079200" uuid:"c148e77e-a3b4-4b01-a57f-3cfdc99c5930"]
+---
+time 1620057184
+old [description:"technique cours d'appuie" entry:"1620048896" modified:"1620048896" status:"pending" uuid:"6c7b3f50-aac5-402e-bf42-64b223d685f6"]
+new [description:"technique cours d'appuie" end:"1620057184" entry:"1620048896" modified:"1620057184" status:"completed" uuid:"6c7b3f50-aac5-402e-bf42-64b223d685f6"]
+---
