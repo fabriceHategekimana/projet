@@ -7,41 +7,35 @@ Nous avons différentes approches pour l'évaluation de la sémantique d'un lang
 
 Ce travail de bachelor est une tentative pour créer un outil capable de faire une évaluation opérationnelle de la sémantique d'un langage.
 
-# Motivation: 
+## l'outil
 
-**Ce que nous voulons:**
-
-	- Étude de langage
-	- Sémantique opérationnelle
-	 
-**Créer un outil pour:**
-
-	- Définir la sémantique d'un langage
-	- En voir ses dérivations
-
-
-## Outil
-
-### langage:
-	- Syntaxe simplifiée pour la définition de langage
-	- Utilisation de PLY en tant que lexer/parser
+L'outil se résume à un petit langage inspiré des règles pour le calcul des séquents et d'une arithmétique basée sur une notation préfixée. Ce langage permet simplement de géré les nombres, les booléens, les chaînes de caractère et les listes.
+L'outil est aussi entouré d'un petit "debuger" pour voir pas à pas le parcours d'exécution et pour le visualiser sous la forme d'un graphe.
 	
-### interface
-	- CLI -> GUI
-	- Outils de debbuging qui prévient l'utilisateur
-	- Visualisation par graphe
-
 # Présentation de l'outil
 ## langage
 
+Le langage de l'outils peut se diviser en trois couches:
+
+### Le langage natif:
+Est basé sur une notation abstraite basée sur la forme d'une arbre. Ainsi une opération est représenté par un nom suivit d'éléments contenu dans une parenthèse. L'arrité d'un opérateur est juste le nombre d'éléments que cet opérateur peut contenir. Ce langage natif contient les éléments de bases pour gérer:
+- les nombres
+- les booléens
+- les chaînes de caractère
+- les listes
+
+### Les règles d'expression
+Au dessus du langage natif, l'outil peut comprendre et utiliser des règles de transition pour transformer une expression et en retourner sa valeur. Une rèlge est composée en deux parties:
+
+#### Les prémisses
+Contient un ensemble de test logique, est de dérivation mis en conjonction.  
+Un test logique est composé d'un membre de gauche (qui peut être une expression à developper) et d'un membre de droite qui est un terminal (un type fini) à comparer. Ces deux membres sont séparés par un comparateur logique.  
+Une dérivation est composée d'un membre de gauche (qui peut être une exempleion à developper) est un membre de droite qui est une variable. Les deux membres sont séparés d'une flèche qui indique que le developpement de la parie de gauche sera assigné à la partie de droite.
+
+#### La conclusion
+Contient deux membres. Le membre de gauche est en fait l'entête de la règle, c'est une expression composé de terminaux et de variables. Le membre de droite soit une expression composé de terminaux ou de non-terminaux, soit un terminal. 
+
 ![langage_ensemble_shema](images/langage_ensemble_shema.png){ width=50% }
-
-
-## langage natif
-### Tree-based abstract syntaxe
-
-![abstract_syntaxe](images/abstract_syntaxe.png)
-
 
 ### Arithmétique simple
 - addition **add(a,b)**   
@@ -64,20 +58,15 @@ liste: [], [1,2,3], ...
 - retrait  **pop(l2)**  => 6  
 - retrait  **pop(l2, 0)**  => 4  
 
-
 ## Autre exemple
 
 ![](images/definition_python.png){ width=40% }
 
 ### Traduction
 ```javascript
-modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
+modify(Tab,Pt,1) -> TabP -- <Tab,Pt,+> => <TabP,Pt>
 ```
 
-### Réalité
-```javascript
--- <Tab,Pt>plus => <modify(Tab,Pt,1),Pt>
-```
 
 ## autres détails
 
@@ -222,3 +211,7 @@ inspiré de vis.js
 4. présentation de l'outils
 5. documentation de l'outils
 6. conclusions
+
+TODO
+glossaire:
+- comparateurs logique

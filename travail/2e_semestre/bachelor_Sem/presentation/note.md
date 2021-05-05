@@ -1,4 +1,5 @@
 ----
+python -m pip freeze 
 
 # Motivation: 
 
@@ -176,7 +177,7 @@ Program{
 ## 12.05.21
 - écriture de la documentation (suite)
 - faire tester l'outil
-- gestions d'erreur
+- réécriture du code
 
 ## 19.05.21
 - écriture de la documentation (suite)
