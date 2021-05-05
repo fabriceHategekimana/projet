@@ -826,3 +826,15 @@ time 1620057184
 old [description:"technique cours d'appuie" entry:"1620048896" modified:"1620048896" status:"pending" uuid:"6c7b3f50-aac5-402e-bf42-64b223d685f6"]
 new [description:"technique cours d'appuie" end:"1620057184" entry:"1620048896" modified:"1620057184" status:"completed" uuid:"6c7b3f50-aac5-402e-bf42-64b223d685f6"]
 ---
+time 1620114992
+old [description:"révisions" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"16fca25c-2745-471e-8a11-b18d9eca8e49"]
+new [description:"révisions" end:"1620114992" entry:"1620048800" modified:"1620114992" status:"deleted" until:"1620079200" uuid:"16fca25c-2745-471e-8a11-b18d9eca8e49"]
+---
+time 1620114992
+old [description:"projet informatique" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"9db524c8-0edc-4e5a-9724-ebbbcadc3a29"]
+new [description:"projet informatique" end:"1620114992" entry:"1620048800" modified:"1620114992" status:"deleted" until:"1620079200" uuid:"9db524c8-0edc-4e5a-9724-ebbbcadc3a29"]
+---
+time 1620114992
+old [description:"satom" entry:"1620048800" modified:"1620048800" status:"pending" until:"1620079200" uuid:"cba038d3-8cb6-4877-a9ca-b053018e228a"]
+new [description:"satom" end:"1620114992" entry:"1620048800" modified:"1620114992" status:"deleted" until:"1620079200" uuid:"cba038d3-8cb6-4877-a9ca-b053018e228a"]
+---

@@ -231,3 +231,6 @@
 {"description":"Ce qu'un conducteur de louange doit savoir","end":"20210503T153212Z","entry":"20210503T133320Z","modified":"20210503T153214Z","status":"deleted","until":"20210503T220000Z","uuid":"383f0477-9223-42f4-856c-ec1157867d7a"}
 {"description":"cours de logique","end":"20210503T153233Z","entry":"20210503T133320Z","modified":"20210503T153235Z","status":"deleted","until":"20210503T220000Z","uuid":"c148e77e-a3b4-4b01-a57f-3cfdc99c5930"}
 {"description":"technique cours d'appuie","end":"20210503T155304Z","entry":"20210503T133456Z","modified":"20210503T155304Z","status":"completed","uuid":"6c7b3f50-aac5-402e-bf42-64b223d685f6"}
+{"description":"révisions","end":"20210504T075632Z","entry":"20210503T133320Z","modified":"20210504T075632Z","status":"deleted","until":"20210503T220000Z","uuid":"16fca25c-2745-471e-8a11-b18d9eca8e49"}
+{"description":"projet informatique","end":"20210504T075632Z","entry":"20210503T133320Z","modified":"20210504T075632Z","status":"deleted","until":"20210503T220000Z","uuid":"9db524c8-0edc-4e5a-9724-ebbbcadc3a29"}
+{"description":"satom","end":"20210504T075632Z","entry":"20210503T133320Z","modified":"20210504T075632Z","status":"deleted","until":"20210503T220000Z","uuid":"cba038d3-8cb6-4877-a9ca-b053018e228a"}

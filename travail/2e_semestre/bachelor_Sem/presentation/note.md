@@ -27,18 +27,6 @@
 
 ----
 
-# Actuellement
-
-## developpement
-	- [ ] redéfinition + clarification de la grammaire
-	- [ ] gérer les erreurs (recursion depth, confusion variables/noms,...)
-	- [ ] module d'aide à la correction des erreurs
-
-## rédaction
-	- [ ] documentation (structure du projet)
-
-----
-
 # langage
 
 ![langage_ensemble_shema](images/langage_ensemble_shema.png){ width=50% }
@@ -86,220 +74,122 @@ liste: [], [1,2,3], ...
 
 ## Traduction Idéale
 ```javascript
-modify(Tab,Pt,1) = TabP -- <Tab,Pt,+> => <TabP,Pt>
-```
-
-## Réalité
-```javascript
--- <Tab,Pt>plus => <modify(Tab,Pt,1),Pt>
+modify(Tab,Pt,1) -> TabP -- <Tab,Pt,+> => <TabP,Pt>
 ```
 
 ----
 
-# détails
-
-## Nombres:
-	- Le langage supporte actuellement les nombres relatifs
-
-## Booléens:
-	- Le langage supporte les booléens (True et False)
-
-## Liste:
-	- Ne peut contenir que des nombres/variables/booléens
-
-## Variable:
-	- Doit obligatoirement commencer par une majuscule
-
-## fonction:
-	- Doit obligatoirement commencer par une minuscule
-
-----
-
-# architecture
+# actuellement (1)
 
 ![architecture](images/architecture.png)
 
 ----
 
-# factorielle.fa
+# actuellement (2)
 
-## règles
-\myRule{}{fact(1)}{1}
-\myRule{N>1}{fact(N)}{mul(N,fact(sub(N,1)))}
+- repository github
+- domaine augmenté (chaines de charactères)
+- workflow écriture-exécution
 
-## traduction
+----
+
+# Github
+
+![github](images/github.png)
+
+----
+
+# Domaine augmenté
+
+## Types acceptés
+- **nombres**
+- **booléens**
+- **chaines de caractères**
+
+----
+
+# forme plus souple
+
+## forme simple
 ```javascript
--- fact(1) = 1  
-N > 1 -- fact(N) = mul(N,fact(sub(N,1)))
+-- estPair(0) -> true.
 ```
 
-----
-
-# len.fa
-
-## règles
-\myRule{}{len([])}{0}
-\myRule{L \rightarrow Lp, Lp \in list}{Len(L)}{add(1,len(removeLast(Lp)))}
-
-## traduction
+## forme une ligne
 ```javascript
--- len([]) = 0  
-L->Lp, Lp in list -- len(L) = add(1,len(removeLast(Lp)))
+estPair(N) == true, estPair(div(N,2)) -- divisibleParQuatre(N) -> True.
 ```
 
-----
-
-# max.fa
-
-## règles
-\myRule{A \rightarrow Ap, B \rightarrow Bp, Bp >= Ap}{max(A,B)}{Bp}
-\myRule{A \rightarrow Ap, B \rightarrow Bp, Ap >= Bp}{max(A,B)}{Ap}
-\myRule{}{maxL([])}{0}
-\myRule{}{maxL(L)}{max(pop(L), maxL(removeLast(L)))}
-
-## traduction
+## forme multiligne
 ```javascript
-A -> Ap, B -> Bp, Bp >= Ap -- max(A,B) = Bp
-A -> Ap, B -> Bp, Ap >= Bp -- max(A,B) = Ap
--- maxL([]) = 0
--- maxL(L) = max(pop(L), maxL(removeLast(L)))
+estPair(N) == true, estPair(div(N,2))
+--
+divisibleParQuatre(N) -> True.
 ```
 
 ----
 
-# Syntaxe State (du domaine sémantique)
+# Commentaires
 
-## State
-```sql
-<e1,...,en>
-```
-
-## State x inst
-```sql
-<e1,...,en>inst
-```
-
-## Transition
-```
-<e1,...,en>inst -> <i1,...,in>
-```
-
-----
-
-# Le compteur
-
-## règles
-\myRule{Compteur \in number}{<Compteur>plus}{<add(Compteur,1)>}
-\myRule{Compteur \in number}{<Compteur>plus}{<sub(Compteur,1)>}
-
-## traduction
+## actuellement multiligne
 ```javascript
-Compteur in number -- <Compteur>plus = <add(Compteur,1)>
-Compteur in number -- <Compteur>moins = <sub(Compteur,1)>
-
+/*Ceci est un commentaire*/
+-- ami(pierre,jean).
+-- ami(jean,pierre). /*Ceci est un commentaire*/
 ```
 
 ----
 
-# Le point
+# section du programme
 
-## règles
-\myRule{}{<X,Y>gauche}{<sub(X,1),Y>}
-\myRule{}{<X,Y>droite}{<add(X,1),Y>}
-\myRule{}{<X,Y>bas}{<X,sub(Y,1)>}
-\myRule{}{<X,Y>haut}{<X,add(Y,1)>}
-
-## traduction
+## En bas de chaque fichier .fa
 ```javascript
--- <X,Y>gauche = <sub(X,1),Y>
--- <X,Y>droite = <add(X,1),Y>
--- <X,Y>bas = <X,sub(Y,1)>
--- <X,Y>haut = <X,add(Y,1)>
+Program{ 
+	<val1,val2,val3>
+	inst1;;inst2;;
+	inst3;;
+	inst4;;
+}
 ```
 
 ----
 
-# mode debug
+# Debug mode
 
-## Principe:
-Un peu similaire au trace de prolog.
-Le but est de permettre à l'utilisateur de voir pas à pas le developpement de son programme pour trouver les failles.
-
-## Permet de:
-- voir l'état de l'exécution
-- voir les règles applicables
-- visualiser le parcours d'exécution
-- (faire des test)
+**step**: execute the next step (rule selection or rule application)  
+**state**: display the actual state of the execution (still ugly and need to be improved)  
+**display**: show with a graph (in your browser) the execution of the rules.  
+**end**: execute the code until the end (warning, if there is an infinit loop, it won't stop util you press ctrl+c)  
+**set exp**: set a new expression to be executed.  
+**set state**: set a new state to be executed.  
 
 ----
 
-## Instructions
+# graphe
 
-- import [path]: importe un fichier [nom].fa
-- set exp [exp]: donne une expression à évaluer
-- set state [state] : donne un état à évaluer
-- step: va à l'étape suivante
-- end: poursuit l'exécution jusqu'au bout
-- state: voir l'état courant du système d'évaluation
-
-----
-
-# Interface (visualisation par graphe)
-
-## pyvis
-![pyvis](images/pyvis.png)
-
-inspiré de vis.js
-
-----
-
-# outils de visualisation
-
-## Affichage
-	NetworkX + pyvis + vis.js
-	
-----
-
-# Problèmes
-## algorithme d'évaluation
-	- récursif vs boucle
-	- granularité de l'évaluation
-	
-## Dans les premisses
-	Mauvaise évaluation des expressions
-
-----
-
-# Document
-
-## Structures:
-1. principes de base
-2. motivation
-3. principes et concepts théorique
-4. présentation de l'outils
-5. documentation de l'outils
-6. conclusions
+![couleurs](images/couleurs_graphes.png)
 
 ----
 
 # Pour la suite
 
-## 21.04.21
-- interface du système de dérivation (suite) 
-- système de gestion des erreurs
-- écriture de la documentation (suite)
-
-## 28.04.21
-- système de gestion des erreurs (suite)
-- faire tester l'outil
-- écriture de la documentation (suite)
-	
-## 05.05.21
-- écriture de la documentation (suite)
-- faire tester l'outil
-- système de gestion des erreurs (suite)
-
 ## 12.05.21
 - écriture de la documentation (suite)
 - faire tester l'outil
-- (développement d'un système de preuve)
+- gestions d'erreur
+
+## 19.05.21
+- écriture de la documentation (suite)
+- faire tester l'outil
+- gestions d'erreur
+
+## 26.05.21
+- écriture de la documentation (suite)
+- faire tester l'outil
+- gestions d'erreur
+
+## 02.06.21
+- écriture de la documentation (suite)
+- faire tester l'outil
+- gestions d'erreur
+

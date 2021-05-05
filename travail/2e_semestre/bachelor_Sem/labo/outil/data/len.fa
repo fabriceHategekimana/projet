@@ -1,2 +1,0 @@
--- len([]) -> 0
-L->Lp, Lp in list -- len(L) -> add(1,len(removeLast(Lp)))

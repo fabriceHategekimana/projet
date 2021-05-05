@@ -41,3 +41,7 @@
 
 ## 12.05.21
 - Paufinement de la documentation
+
+16
+23
+30
