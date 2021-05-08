@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #333333;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "white"}, "id": "key", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "key", "shape": "image"}, {"font": {"color": "white"}, "id": "multi_match", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "multi_match", "shape": "image"}, {"font": {"color": "white"}, "id": "lt", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "lt", "shape": "image"}, {"font": {"color": "white"}, "id": "tab", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "tab", "shape": "image"}, {"font": {"color": "white"}, "id": "term", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "term", "shape": "image"}, {"font": {"color": "white"}, "id": "number", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "number", "shape": "image"}, {"font": {"color": "white"}, "id": "range_label", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "range_label", "shape": "image"}, {"font": {"color": "white"}, "id": "lte", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "lte", "shape": "image"}, {"font": {"color": "white"}, "id": "value", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "value", "shape": "image"}, {"font": {"color": "white"}, "id": "match_all", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "match_all", "shape": "image"}, {"font": {"color": "white"}, "id": "gte", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "gte", "shape": "image"}, {"font": {"color": "white"}, "id": "gt", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "gt", "shape": "image"}, {"font": {"color": "white"}, "id": "query_string", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "query_string", "shape": "image"}, {"font": {"color": "white"}, "id": "void", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "void", "shape": "image"}, {"font": {"color": "white"}, "id": "query", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "query", "shape": "image"}, {"font": {"color": "white"}, "id": "range", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "range", "shape": "image"}, {"font": {"color": "white"}, "id": "match", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "match", "shape": "image"}, {"font": {"color": "white"}, "id": "string", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "string", "shape": "image"}, {"font": {"color": "white"}, "id": "fields", "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FRond_bleu_ciel.png%2F120px-Rond_bleu_ciel.png\u0026f=1\u0026nofb=1", "label": "fields", "shape": "image"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "#5019c3", "from": "query", "label": "obj", "to": "match_all"}, {"arrows": "to", "color": "#5019c3", "from": "query", "label": "obj", "to": "match"}, {"arrows": "to", "color": "#5019c3", "from": "query", "label": "obj", "to": "multi_match"}, {"arrows": "to", "color": "#5019c3", "from": "query", "label": "obj", "to": "query_string"}, {"arrows": "to", "color": "#5019c3", "from": "match_all", "label": "obj", "to": "void"}, {"arrows": "to", "color": "#5019c3", "from": "match", "label": "obj", "to": "key"}, {"arrows": "to", "color": "#b882b7", "from": "key", "label": "link", "to": "value"}, {"arrows": "to", "color": "#293ed1", "from": "value", "label": "type", "to": "string"}, {"arrows": "to", "color": "#293ed1", "from": "value", "label": "type", "to": "number"}, {"arrows": "to", "color": "#293ed1", "from": "value", "label": "type", "to": "tab"}, {"arrows": "to", "color": "#5019c3", "from": "multi_match", "label": "obj", "to": "query"}, {"arrows": "to", "color": "#5019c3", "from": "multi_match", "label": "obj", "to": "fields"}, {"arrows": "to", "color": "#5019c3", "from": "query_string", "label": "obj", "to": "query"}, {"arrows": "to", "color": "#5019c3", "from": "query", "label": "obj", "to": "term"}, {"arrows": "to", "color": "#5019c3", "from": "query", "label": "obj", "to": "range"}, {"arrows": "to", "color": "#5019c3", "from": "range", "label": "obj", "to": "range_label"}, {"arrows": "to", "color": "#11882", "from": "range_label", "label": "comparator", "to": "gte"}, {"arrows": "to", "color": "#11882", "from": "range_label", "label": "comparator", "to": "gt"}, {"arrows": "to", "color": "#11882", "from": "range_label", "label": "comparator", "to": "lte"}, {"arrows": "to", "color": "#11882", "from": "range_label", "label": "comparator", "to": "lt"}, {"arrows": "to", "color": "#b882b7", "from": "gte", "label": "link", "to": "number"}, {"arrows": "to", "color": "#b882b7", "from": "gt", "label": "link", "to": "number"}, {"arrows": "to", "color": "#b882b7", "from": "lte", "label": "link", "to": "number"}, {"arrows": "to", "color": "#b882b7", "from": "lt", "label": "link", "to": "number"}, {"arrows": "to", "color": "#5019c3", "from": "term", "label": "obj", "to": "key"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"manipulation": {"enabled": true}, "physics": {"enabled": false}, "interaction": {"multiselect": true, "navigationButtons": true}, "configure": {"enabled": true, "filter": "layout,physics", "showButton": true}, "edges": {"smooth": {"enabled": false}}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

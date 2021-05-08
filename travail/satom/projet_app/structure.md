@@ -8,13 +8,13 @@ ItemTypes:
   - EntityTypes
     - EntityType:
       - PropertyTypes:
-	- PropertyType:
-	  - PossibleValues
+		- PropertyType:
+		  - PossibleValues
   - LinkTypes:
     - LinkType:
       - PropertyTypes:
-	- PropertyType:
-	  - PossibleValues
+		- PropertyType:
+		  - PossibleValues
 
 ## EntityType
 - Description

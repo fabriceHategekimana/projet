@@ -1,0 +1,1 @@
+A&&is&&company &and& A&&raised_amount&&B &part& B&&>&&500000 &part& *

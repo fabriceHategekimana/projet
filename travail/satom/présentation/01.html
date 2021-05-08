@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>01</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="/home/fabrice/note/mvp.css" />
+</head>
+<body>
+<h1 id="si2ren-direct-query">Si2ren direct query</h1>
+<figure>
+<img src="images/maxresdefault.jpg" alt="maxresdefault" /><figcaption>maxresdefault</figcaption>
+</figure>
+<h1 id="goal">Goal:</h1>
+<ul>
+<li>Build a module that alow us to do direct queries from ANB to Siren.</li>
+<li>Develop a methodology and a workflow of the system (documentation, tools, expertise)</li>
+</ul>
+<h1 id="actually">Actually</h1>
+<h2 id="done">Done</h2>
+<ul>
+<li>beginning of a road map with date</li>
+</ul>
+<h2 id="beginning-of-the-project-starting-point">Beginning of the project (starting point)</h2>
+<ul>
+<li>General documentation (situation)</li>
+</ul>
+<h1 id="siren-queries-langage">Siren queries langage</h1>
+<ul>
+<li>Extention of elastic search search API</li>
+<li>JSON instruction (REST API like query)</li>
+<li>Based on a abstract tree syntax</li>
+</ul>
+<h1 id="elastic-search">Elastic search</h1>
+<figure>
+<img src="images/elastic_search.png" alt="elastic_search" /><figcaption>elastic_search</figcaption>
+</figure>
+<h1 id="query-dsl">Query DSL</h1>
+<p>Elasticsearch provides a full Query DSL (Domain Specific Language) based on JSON to define queries. Think of the Query DSL as an AST (Abstract Syntax Tree) of queries, consisting of two types of clauses:</p>
+<ul>
+<li>Leaf query clauses</li>
+<li>Compound query clauses</li>
+</ul>
+<h1 id="abstract-syntax-tree">Abstract syntax tree</h1>
+<figure>
+<img src="images/ast.png" alt="ast" /><figcaption>ast</figcaption>
+</figure>
+<h1 id="siren-dashboard">Siren Dashboard</h1>
+<figure>
+<img src="images/siren_dashboard.png" alt="siren_dashboard" /><figcaption>siren_dashboard</figcaption>
+</figure>
+<h1 id="suite">Suite</h1>
+<h2 id="query-api">Query API</h2>
+<p>From row to client</p>
+<h2 id="anb-form">ANB form</h2>
+<p>Create a new endpoint, port and service</p>
+<h2 id="predicat">Predicat</h2>
+<p>Develop a translator for predicat</p>
+</body>
+</html>
