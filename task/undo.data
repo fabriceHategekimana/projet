@@ -846,3 +846,7 @@ time 1620321493
 old [description:"optimisation environnement de travail" entry:"1620055904" modified:"1620055904" status:"pending" uuid:"66eea23e-96fc-403a-b656-da93a6cef974"]
 new [description:"optimisation environnement de travail" end:"1620321493" entry:"1620055904" modified:"1620321493" status:"completed" uuid:"66eea23e-96fc-403a-b656-da93a6cef974"]
 ---
+time 1620595363
+old [description:"alléluia papa Ingrid" due:"1620021600" entry:"1619888505" modified:"1619888505" status:"pending" uuid:"e0331f8e-a42f-4f25-94b0-6e8fcfb9074d"]
+new [description:"alléluia papa Ingrid" due:"1620021600" end:"1620595363" entry:"1619888505" modified:"1620595363" status:"completed" uuid:"e0331f8e-a42f-4f25-94b0-6e8fcfb9074d"]
+---

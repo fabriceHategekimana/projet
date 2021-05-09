@@ -236,3 +236,4 @@
 {"description":"satom","end":"20210504T075632Z","entry":"20210503T133320Z","modified":"20210504T075632Z","status":"deleted","until":"20210503T220000Z","uuid":"cba038d3-8cb6-4877-a9ca-b053018e228a"}
 {"description":"technique présentation","end":"20210506T171807Z","entry":"20210503T133501Z","modified":"20210506T171807Z","status":"completed","uuid":"d604ae31-a9e4-443e-8d2f-7b037bd4f3d2"}
 {"description":"optimisation environnement de travail","end":"20210506T171813Z","entry":"20210503T153144Z","modified":"20210506T171813Z","status":"completed","uuid":"66eea23e-96fc-403a-b656-da93a6cef974"}
+{"description":"alléluia papa Ingrid","due":"20210503T060000Z","end":"20210509T212243Z","entry":"20210501T170145Z","modified":"20210509T212243Z","status":"completed","uuid":"e0331f8e-a42f-4f25-94b0-6e8fcfb9074d"}
