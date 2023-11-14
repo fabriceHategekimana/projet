@@ -6,4 +6,6 @@ int main() {
    return 0;
 }
 
-void master_function();
+void master_function(){
+	printf("conflit");
+}
