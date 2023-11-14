@@ -2,8 +2,9 @@
 void hello_world();
 
 int main() {
-   printf("Hello, world!");
    return 0;
 }
 
-void master_function();
+void master_function(){
+	printf("conflit");
+}
